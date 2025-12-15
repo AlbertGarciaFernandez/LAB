@@ -1,0 +1,8 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="100" height="100" rx="18" fill="#0B0B0B" stroke="#00E6A2" stroke-width="3"/>
+
+  <text x="60" y="75" text-anchor="middle" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="40" font-weight="700" fill="#00E6A2">
+    HNTR
+  </text>
+</svg>
