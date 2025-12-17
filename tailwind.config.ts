@@ -21,14 +21,19 @@ const config: Config = {
         "radial-gradient-mask":
           "radial-gradient(circle, transparent 0%, transparent 40%, #0B0B0B 80%)",
       },
+      animation: {
+        "pan-slow": "background-pan 45s linear infinite alternate",
+        shimmer: "shimmer 3s linear infinite",
+      },
       keyframes: {
         "background-pan": {
           "0%": { backgroundPosition: "0% 0%" },
           "100%": { backgroundPosition: "100% 100%" },
         },
-      },
-      animation: {
-        "pan-slow": "background-pan 45s linear infinite alternate",
+        shimmer: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],

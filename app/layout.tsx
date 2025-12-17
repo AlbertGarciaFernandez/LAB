@@ -34,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body>
         <div className="bg-near-black text-white min-h-screen font-sans">
+          <div className="bg-noise" />
           {children}
         </div>
       </body>

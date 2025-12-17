@@ -6,13 +6,25 @@ export default function HeroBackgroundOrnaments() {
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       {/* Glow verde */}
-      <div className="absolute -top-40 right-[-10rem] h-[420px] w-[420px] rounded-full bg-hunter-green/20 blur-[90px]" />
+      <motion.div
+        animate={{ opacity: [0.15, 0.25, 0.15], scale: [1, 1.1, 1] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -top-40 right-[-10rem] h-[420px] w-[420px] rounded-full bg-hunter-green/20 blur-[90px]"
+      />
 
       {/* Cuadrado redondeado técnico */}
       <motion.svg
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 0.45, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+        animate={{
+          opacity: 0.45,
+          y: [0, -10, 0],
+          rotate: [0, 5, 0]
+        }}
+        transition={{
+          opacity: { duration: 0.8, delay: 0.1 },
+          y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 10, repeat: Infinity, ease: "easeInOut" }
+        }}
         className="absolute -left-16 top-10 hidden h-40 w-40 text-hunter-green md:block"
         viewBox="0 0 160 160"
         fill="none"
@@ -48,8 +60,16 @@ export default function HeroBackgroundOrnaments() {
       {/* Triángulo */}
       <motion.svg
         initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 0.4, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+        animate={{
+          opacity: 0.4,
+          y: [0, 15, 0],
+          rotate: [0, -5, 0]
+        }}
+        transition={{
+          opacity: { duration: 0.9, delay: 0.2 },
+          y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 12, repeat: Infinity, ease: "easeInOut" }
+        }}
         className="absolute right-6 top-32 h-28 w-28 text-hunter-orange md:right-24 md:top-24"
         viewBox="0 0 120 120"
         fill="none"
@@ -71,8 +91,16 @@ export default function HeroBackgroundOrnaments() {
       {/* Círculo tipo crosshair */}
       <motion.svg
         initial={{ opacity: 0, x: 15 }}
-        animate={{ opacity: 0.35, x: 0 }}
-        transition={{ duration: 0.9, delay: 0.25, ease: "easeOut" }}
+        animate={{
+          opacity: 0.35,
+          x: [0, 10, 0],
+          scale: [1, 1.05, 1]
+        }}
+        transition={{
+          opacity: { duration: 0.9, delay: 0.25 },
+          x: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+          scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+        }}
         className="absolute bottom-10 left-10 hidden h-32 w-32 text-hunter-green md:block"
         viewBox="0 0 140 140"
         fill="none"
@@ -123,8 +151,16 @@ export default function HeroBackgroundOrnaments() {
       {/* Marca HNTR */}
       <motion.svg
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 0.5, scale: 1 }}
-        transition={{ duration: 0.9, delay: 0.35, ease: "easeOut" }}
+        animate={{
+          opacity: 0.5,
+          scale: [1, 1.05, 1],
+          rotate: [0, 2, 0]
+        }}
+        transition={{
+          opacity: { duration: 0.9, delay: 0.35 },
+          scale: { duration: 9, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 15, repeat: Infinity, ease: "easeInOut" }
+        }}
         className="absolute bottom-[-3rem] right-[-3rem] h-40 w-40 text-hunter-green/60"
         viewBox="0 0 180 180"
         fill="none"

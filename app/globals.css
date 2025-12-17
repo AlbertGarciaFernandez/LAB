@@ -15,10 +15,12 @@ body {
 }
 
 @keyframes pulse-slow {
+
   0%,
   100% {
     opacity: 0.15;
   }
+
   50% {
     opacity: 0.05;
   }
@@ -38,6 +40,20 @@ body {
   /* Usamos un SVG como URL. Este SVG crea círculos, cuadrados y triángulos */
   background-image: url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpath id='a' d='M0 0h50v50H0z'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd' opacity='.1'%3E%3Cg fill='%231F1F1F'%3E%3Cuse xlink:href='%23a' x='50' y='50'/%3E%3Cuse xlink:href='%23a' x='150' y='0'/%3E%3Cuse xlink:href='%23a' x='350' y='100'/%3E%3C/g%3E%3Crect fill='%231F1F1F' x='200' y='250' width='80' height='80' opacity='.2'/%3E%3Cpath d='M400 300L450 350L350 350Z' fill='%231F1F1F' opacity='.3'/%3E%3Ccircle fill='%231F1F1F' cx='550' cy='500' r='30' opacity='.1'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
-  background-size: 300px; /* Tamaño de la celda de repetición */
+  background-size: 300px;
+  /* Tamaño de la celda de repetición */
   /* La animación 'pan-slow' definida en tailwind.config moverá este fondo */
+}
+
+/* Base64 Noise Texture for AI/Cyberpunk feel */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opactiy='1'/%3E%3C/svg%3E");
 }

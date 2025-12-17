@@ -58,7 +58,7 @@ const TheLabSection: React.FC = () => {
       number: "Case Study 01 / AI Product",
       title: "Product Accelerator: AI-Powered Productivity App",
       description:
-        "Liderazgo integral del desarrollo frontend y la propiedad del producto (Product Ownership) de una aplicación web de productividad impulsada por IA. El desafío fue crear una arquitectura que pudiera escalar, integrando modelos de Machine Learning y APIs de terceros (OpenAI) para ofrecer una experiencia de usuario personalizada y de alto rendimiento.",
+        "Led the frontend development and Product Ownership of an AI-powered productivity web application. The challenge was to create a scalable architecture, integrating Machine Learning models and third-party APIs (OpenAI) to deliver a personalized, high-performance user experience.",
       tags: [
         "Next.js",
         "TypeScript",
@@ -68,17 +68,17 @@ const TheLabSection: React.FC = () => {
         "Jest",
       ],
       results: [
-        "Arquitectura Frontend definida con React, Next.js y TypeScript, enfocada en escalabilidad y mantenibilidad.",
-        "Integración de características impulsadas por IA a través de las APIs de OpenAI y endpoints personalizados para experiencias personalizadas.",
-        "Monitoreo constante del rendimiento (Lighthouse, Core Web Vitals) y pruebas robustas (Jest) para asegurar una UX optimizada.",
-        "Definición de visión, hoja de ruta y criterios de aceptación, alineando la ejecución técnica con los objetivos de negocio.",
+        "Defined Frontend Architecture with React, Next.js, and TypeScript, focused on scalability and maintainability.",
+        "Integrated AI-driven features via OpenAI APIs and custom endpoints for personalized experiences.",
+        "Constant performance monitoring (Lighthouse, Core Web Vitals) and robust testing (Jest) to ensure optimized UX.",
+        "Defined vision, roadmap, and acceptance criteria, aligning technical execution with business objectives.",
       ],
     },
     {
       number: "Case Study 02 / E-commerce",
       title: "Basic-Fit: High-Traffic E-commerce Migration (SFCC)",
       description:
-        "Lideré el proceso de migración de la web de Basic-Fit a la plataforma Salesforce Commerce Cloud (SFCC), una migración crítica que afectaba a soluciones de cara al consumidor en múltiples plataformas. El objetivo fue asegurar una transición fluida y mejorar la experiencia del usuario final, el rendimiento y el SEO.",
+        "Led the migration process of the Basic-Fit website to the Salesforce Commerce Cloud (SFCC) platform, a critical migration affecting consumer-facing solutions across multiple platforms. The goal was to ensure a smooth transition and improve the end-user experience, performance, and SEO.",
       tags: [
         "SFCC",
         "E-commerce",
@@ -88,10 +88,22 @@ const TheLabSection: React.FC = () => {
         "SEO Strategy",
       ],
       results: [
-        "Liderazgo en la migración a Salesforce Commerce Cloud, manteniendo una alta calidad de experiencia de usuario.",
-        "Implementación de A/B testing para componentes clave, logrando mejores resultados en la conversión.",
-        "Desarrollo de plantillas personalizadas dentro de SFCC y conversión de conceptos de diseño en sitios web funcionales y responsive.",
-        "Aplicación de mejores prácticas de la industria para código seguro, escalable y con herramientas de análisis integradas.",
+        "Lead the migration to Salesforce Commerce Cloud, maintaining high user experience quality.",
+        "Implemented A/B testing for key components, achieving better conversion results.",
+        "Developed custom templates within SFCC and converted design concepts into functional, responsive websites.",
+        "Applied industry best practices for secure, scalable code with integrated analytics tools.",
+      ],
+    },
+    {
+      number: "Case Study 03 / Track Record",
+      title: "Empowering Digital Growth: 15+ Success Stories",
+      description:
+        "Over our years of experience, we have empowered more than 15 companies to elevate their web presence, applications, and e-commerce platforms. We don't just build; we optimize for growth and scalability.",
+      tags: ["Consulting", "Architecture", "Scaling", "Mentorship"],
+      results: [
+        "Partnered with diverse clients from startups to enterprises.",
+        "Successfully delivered scalable solutions in E-commerce, SaaS, and AI.",
+        "Improved performance, SEO, and conversion rates across all partner portfolios.",
       ],
     },
   ];
@@ -102,7 +114,7 @@ const TheLabSection: React.FC = () => {
       className="py-20 md:py-40 bg-near-black text-white px-4 md:px-8"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 tracking-tight">
+        <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-center mb-8 text-white">
           <span className="text-hunter-orange">03.</span> The Lab
         </h2>
         <p className="text-center text-xl text-gray-400 mb-20 max-w-3xl mx-auto">

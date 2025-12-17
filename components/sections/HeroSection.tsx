@@ -5,6 +5,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
+import { ScrambleText } from "../ui/ScrambleText";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -27,35 +28,45 @@ const itemVariants = {
 
 const HeroSection: React.FC = () => {
   return (
-    //<section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20">
-    <section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20">
+    <section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20 overflow-hidden">
       <HeroBackgroundOrnaments />
-      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-6 py-16 relative z-10">
         <motion.div
-          className="z-10 max-w-6xl text-center space-y-6"
+          className="text-center space-y-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.p
-            className="text-sm uppercase tracking-widest text-hunter-orange font-mono"
+          <motion.div
+            className="text-sm md:text-base uppercase tracking-widest text-hunter-orange font-mono mb-4"
             variants={itemVariants}
           >
-            [ Frontend Tech Lead, Product-Oriented Engineer ]
-          </motion.p>
+            <span className="opacity-80">[ </span>
+            <ScrambleText
+              text="AI Automation , Frontend Engineer , Product-mindset"
+              delay={0.5}
+              className="inline-block"
+            />
+            <span className="opacity-80"> ]</span>
+          </motion.div>
 
           <motion.h1
             className="text-5xl md:text-8xl font-extrabold leading-none tracking-tighter"
             variants={itemVariants}
           >
             Building High-
-            <span className="text-hunter-green">Performance</span>
-            Digital Products that{" "}
-            <span className="text-hunter-green">Scale</span>.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-green animate-shimmer bg-[length:200%_100%]">
+              Performance
+            </span>
+            <br className="hidden md:block" /> Digital Products that{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-green animate-shimmer bg-[length:200%_100%]" style={{ animationDelay: "1s" }}>
+              Scale
+            </span>
+            .
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto pt-6"
+            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto pt-6 leading-relaxed"
             variants={itemVariants}
           >
             CodeHunter Lab operates at the intersection of deep technical
@@ -64,13 +75,15 @@ const HeroSection: React.FC = () => {
           </motion.p>
 
           <motion.div
-            className="flex justify-center space-x-6 pt-10"
+            className="flex flex-col md:flex-row justify-center items-center gap-6 pt-10"
             variants={itemVariants}
           >
-            <button className="px-10 py-4 text-near-black bg-hunter-green font-bold rounded-lg transition duration-300 hover:bg-hunter-green/90 shadow-xl shadow-hunter-green/30">
-              Initialize Project
+            <button className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,230,162,0.3)] hover:shadow-[0_0_40px_rgba(0,230,162,0.6)]">
+              <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
+              <span className="relative z-10">Initialize Project</span>
             </button>
-            <button className="px-10 py-4 text-hunter-orange border-2 border-hunter-orange bg-transparent font-semibold rounded-lg transition duration-300 hover:bg-hunter-orange/10">
+
+            <button className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)]">
               View Case Studies
             </button>
           </motion.div>
