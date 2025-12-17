@@ -29,7 +29,7 @@ export const ContactForm: React.FC = () => {
         };
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/albert@codehunterlab.com", {
+            const response = await fetch("https://formsubmit.co/ajax/fdcaf086cf2933714fd96d0622e5525b", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
