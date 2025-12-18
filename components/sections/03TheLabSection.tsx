@@ -1,6 +1,7 @@
 // components/sections/TheLabSection.tsx
 
 import React from "react";
+import Link from "next/link";
 
 interface ProjectCardProps {
   number: string;
@@ -129,9 +130,9 @@ const TheLabSection: React.FC = () => {
         </div>
 
         <div className="text-center pt-20">
-          <button className="px-8 py-3 text-near-black bg-hunter-green font-bold rounded-lg transition duration-300 hover:bg-hunter-green/90 shadow-lg shadow-hunter-green/30">
+          <Link href="#contact" className="px-8 py-3 text-near-black bg-hunter-green font-bold rounded-lg transition duration-300 hover:bg-hunter-green/90 shadow-lg shadow-hunter-green/30 inline-block">
             Discuss Your Challenge
-          </button>
+          </Link>
         </div>
       </div>
     </section>

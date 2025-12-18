@@ -3,6 +3,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
 import { ScrambleText } from "../ui/ScrambleText";
@@ -78,14 +79,14 @@ const HeroSection: React.FC = () => {
             className="flex flex-col md:flex-row justify-center items-center gap-6 pt-10"
             variants={itemVariants}
           >
-            <button className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,230,162,0.3)] hover:shadow-[0_0_40px_rgba(0,230,162,0.6)]">
+            <Link href="#contact" className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,230,162,0.3)] hover:shadow-[0_0_40px_rgba(0,230,162,0.6)] inline-block">
               <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
               <span className="relative z-10">Initialize Project</span>
-            </button>
+            </Link>
 
-            <button className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)]">
+            <Link href="#work" className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)] inline-block">
               View Case Studies
-            </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
