@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
             <span className="opacity-80">[ </span>
             <ScrambleText
               text="AI Automation , Frontend Engineer , Product-mindset"
-              delay={0.5}
+              delay={0.85}
               className="inline-block"
             />
             <span className="opacity-80"> ]</span>

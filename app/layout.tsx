@@ -8,6 +8,10 @@ import Footer from "../components/layout/Footer";
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
 
+export const viewport = {
+  themeColor: "#0B0B0B",
+};
+
 export const metadata: Metadata = {
   title: "CodeHunter Lab | Precision Engineering for Scalable Digital Products",
   description:
@@ -23,7 +27,6 @@ export const metadata: Metadata = {
     "Product Owner",
     "CodeHunter Lab",
   ],
-  themeColor: "#0B0B0B",
 };
 
 export default function RootLayout({
