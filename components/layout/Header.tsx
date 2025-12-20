@@ -8,11 +8,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   const navItems = [
-    { name: "Expertise", href: "#expertise", label: "Expertise" },
-    { name: "The Lab", href: "#work", label: "The Lab" },
-    { name: "Bio", href: "#about", label: "Bio" },
-    { name: "Stack", href: "#stack", label: "Stack" },
-    { name: "Process", href: "#process-contact", label: "Process" },
+    { name: "Expertise", href: "/#expertise", label: "Expertise" },
+    { name: "The Lab", href: "/#work", label: "The Lab" },
+    { name: "Bio", href: "/#about", label: "Bio" },
+    { name: "Stack", href: "/#stack", label: "Stack" },
+    { name: "Process", href: "/#process-contact", label: "Process" },
   ];
 
   return (
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-1">
             <ul className="flex items-center space-x-1 bg-surface-dark/50 rounded-full px-2 py-1 border border-white/5">
               {navItems.map((item) => (
                 <li key={item.name}>
@@ -69,13 +69,85 @@ const Header: React.FC = () => {
             </ul>
           </nav>
 
-          {/* CTA */}
-          <div className="hidden md:block">
+          {/* CTAs */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* AI Consulting Button with Premium Tracing Animation */}
+            <Link href="/ai-consulting" className="relative group px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.25em] text-white overflow-hidden rounded-lg transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]">
+              {/* Animated Background Shimmer on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-hunter-green/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] pointer-events-none" />
+
+              <motion.span
+                className="relative z-10 transition-colors duration-300 group-hover:text-hunter-green"
+              >
+                AI Consulting
+              </motion.span>
+
+              {/* Tracing Border SVG with Gradient */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
+                <defs>
+                  <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="transparent" />
+                    <stop offset="50%" stopColor="#00E6A2" />
+                    <stop offset="100%" stopColor="transparent" />
+                  </linearGradient>
+                </defs>
+
+                {/* Background Shadow/Glow following the path */}
+                <motion.rect
+                  x="0.5"
+                  y="0.5"
+                  width="calc(100% - 1px)"
+                  height="calc(100% - 1px)"
+                  rx="8"
+                  fill="none"
+                  stroke="url(#borderGradient)"
+                  strokeWidth="4"
+                  initial={{ pathLength: 0.3, pathOffset: 0 }}
+                  animate={{ pathOffset: 1 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  className="opacity-20 group-hover:opacity-60 transition-opacity"
+                />
+
+                {/* Main Tracing Line */}
+                <motion.rect
+                  x="0.5"
+                  y="0.5"
+                  width="calc(100% - 1px)"
+                  height="calc(100% - 1px)"
+                  rx="8"
+                  fill="none"
+                  stroke="#00E6A2"
+                  strokeWidth="1.5"
+                  initial={{ pathLength: 0.15, pathOffset: 0 }}
+                  animate={{ pathOffset: 1 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  style={{
+                    filter: "drop-shadow(0 0 6px #00E6A2)"
+                  }}
+                />
+
+                {/* Static Faint Border */}
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="calc(100% - 1px)"
+                  height="calc(100% - 1px)"
+                  rx="8"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.12)"
+                  strokeWidth="1"
+                />
+              </svg>
+
+              {/* Ambient Glow behind the button */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-hunter-green/[0.03] blur-xl pointer-events-none" />
+            </Link>
+
             <motion.a
-              href="#contact"
+              href="/#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-near-black bg-hunter-orange rounded-full overflow-hidden group shadow-[0_0_0_0_rgba(255,122,60,0)] hover:shadow-[0_0_20px_rgba(255,122,60,0.4)] transition-shadow duration-300"
+              className="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-near-black bg-hunter-orange rounded-lg overflow-hidden group shadow-[0_0_0_0_rgba(255,122,60,0)] hover:shadow-[0_0_20px_rgba(255,122,60,0.4)] transition-shadow duration-300"
             >
               <span className="relative z-10">Let&apos;s Work</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
@@ -139,9 +211,23 @@ const Header: React.FC = () => {
                 transition={{ delay: 0.6 }}
               >
                 <Link
-                  href="#contact"
+                  href="/ai-consulting"
                   onClick={() => setOpen(false)}
-                  className="px-8 py-3 bg-hunter-orange text-near-black font-bold uppercase rounded-full mt-4 inline-block"
+                  className="px-8 py-3 text-hunter-green border border-hunter-green font-bold uppercase rounded-full mt-4 inline-block tracking-[0.2em] text-sm"
+                >
+                  AI Consulting
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+              >
+                <Link
+                  href="/#contact"
+                  onClick={() => setOpen(false)}
+                  className="px-8 py-3 bg-hunter-orange text-near-black font-bold uppercase rounded-full mt-2 inline-block"
                 >
                   Let&apos;s Work
                 </Link>

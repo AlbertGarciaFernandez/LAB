@@ -4,203 +4,80 @@ import { motion } from "framer-motion";
 
 export default function HeroBackgroundOrnaments() {
   return (
-    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-      {/* Glow verde */}
-      <motion.div
-        animate={{ opacity: [0.15, 0.25, 0.15], scale: [1, 1.1, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-40 right-[-10rem] h-[420px] w-[420px] rounded-full bg-hunter-green/20 blur-[90px]"
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-near-black">
+      {/* Refined Radial Glows */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-hunter-green/10 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-hunter-orange/5 rounded-full blur-[140px] mix-blend-screen" />
+
+      {/* Modern Technical Grid */}
+      <div
+        className="absolute inset-0 opacity-[0.15]"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+          maskImage: 'radial-gradient(circle at 50% 50%, black, transparent 80%)'
+        }}
       />
 
-      {/* Cuadrado redondeado técnico */}
+      {/* Animated Elements */}
+      <div className="absolute inset-0">
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[20%] left-[15%] h-[1px] w-[300px] bg-gradient-to-r from-transparent via-hunter-green/40 to-transparent"
+        />
+        <motion.div
+          animate={{
+            y: [0, 20, 0],
+            opacity: [0.1, 0.3, 0.1]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute bottom-[30%] right-[10%] h-[1px] w-[400px] bg-gradient-to-r from-transparent via-hunter-orange/30 to-transparent"
+        />
+      </div>
+
+      {/* Technical SVG Symbols */}
       <motion.svg
-        initial={{ opacity: 0, y: 20 }}
-        animate={{
-          opacity: 0.45,
-          y: [0, -10, 0],
-          rotate: [0, 5, 0]
-        }}
-        transition={{
-          opacity: { duration: 0.8, delay: 0.1 },
-          y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-          rotate: { duration: 10, repeat: Infinity, ease: "easeInOut" }
-        }}
-        className="absolute -left-16 top-10 hidden h-40 w-40 text-hunter-green md:block"
-        viewBox="0 0 160 160"
-        fill="none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ duration: 1.5 }}
+        className="absolute left-10 top-20 h-64 w-64 text-hunter-green/20"
+        viewBox="0 0 200 200"
       >
-        <rect
-          x="10"
-          y="10"
-          width="140"
-          height="140"
-          rx="28"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-        <rect
-          x="35"
-          y="35"
-          width="90"
-          height="90"
-          rx="18"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          opacity="0.4"
-        />
-        <path
-          d="M30 130L130 30"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeDasharray="6 8"
-          opacity="0.5"
-        />
+        <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
+        <circle cx="100" cy="100" r="40" stroke="currentColor" strokeWidth="1" />
+        <path d="M100 20 V180 M20 100 H180" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
       </motion.svg>
 
-      {/* Triángulo */}
-      <motion.svg
-        initial={{ opacity: 0, y: -10 }}
-        animate={{
-          opacity: 0.4,
-          y: [0, 15, 0],
-          rotate: [0, -5, 0]
-        }}
-        transition={{
-          opacity: { duration: 0.9, delay: 0.2 },
-          y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
-          rotate: { duration: 12, repeat: Infinity, ease: "easeInOut" }
-        }}
-        className="absolute right-6 top-32 h-28 w-28 text-hunter-orange md:right-24 md:top-24"
-        viewBox="0 0 120 120"
-        fill="none"
-      >
-        <path
-          d="M60 15L103 95H17L60 15Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinejoin="round"
+      {/* Ambient Floating Particles (Geometric) */}
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={i}
+          animate={{
+            y: [0, -40, 0],
+            x: [0, 20, 0],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 15 + i * 2,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute border border-white/10 rounded-sm"
+          style={{
+            top: `${20 + i * 15}%`,
+            left: `${10 + i * 20}%`,
+            width: `${10 + i * 5}px`,
+            height: `${10 + i * 5}px`,
+          }}
         />
-        <path
-          d="M60 40L82 82H38L60 40Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          opacity="0.5"
-        />
-      </motion.svg>
-
-      {/* Círculo tipo crosshair */}
-      <motion.svg
-        initial={{ opacity: 0, x: 15 }}
-        animate={{
-          opacity: 0.35,
-          x: [0, 10, 0],
-          scale: [1, 1.05, 1]
-        }}
-        transition={{
-          opacity: { duration: 0.9, delay: 0.25 },
-          x: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-          scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
-        }}
-        className="absolute bottom-10 left-10 hidden h-32 w-32 text-hunter-green md:block"
-        viewBox="0 0 140 140"
-        fill="none"
-      >
-        <circle cx="70" cy="70" r="40" stroke="currentColor" strokeWidth="2" />
-        <circle
-          cx="70"
-          cy="70"
-          r="18"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          opacity="0.5"
-        />
-        <line
-          x1="70"
-          y1="20"
-          x2="70"
-          y2="40"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <line
-          x1="70"
-          y1="100"
-          x2="70"
-          y2="120"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <line
-          x1="20"
-          y1="70"
-          x2="40"
-          y2="70"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <line
-          x1="100"
-          y1="70"
-          x2="120"
-          y2="70"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-      </motion.svg>
-
-      {/* Marca HNTR */}
-      <motion.svg
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{
-          opacity: 0.5,
-          scale: [1, 1.05, 1],
-          rotate: [0, 2, 0]
-        }}
-        transition={{
-          opacity: { duration: 0.9, delay: 0.35 },
-          scale: { duration: 9, repeat: Infinity, ease: "easeInOut" },
-          rotate: { duration: 15, repeat: Infinity, ease: "easeInOut" }
-        }}
-        className="absolute bottom-[-3rem] right-[-3rem] h-40 w-40 text-hunter-green/60"
-        viewBox="0 0 180 180"
-        fill="none"
-      >
-        <rect
-          x="30"
-          y="30"
-          width="120"
-          height="120"
-          rx="26"
-          transform="rotate(45 90 90)"
-          stroke="currentColor"
-          strokeWidth="2"
-          opacity="0.75"
-        />
-
-        <text
-          x="50%"
-          y="54%"
-          textAnchor="middle"
-          fontFamily="var(--font-space-grotesk, system-ui, sans-serif)"
-          fontSize="28"
-          fontWeight="700"
-          fill="#00E6A2"
-        >
-          HNTR
-        </text>
-
-        <text
-          x="50%"
-          y="72%"
-          textAnchor="middle"
-          fontFamily="var(--font-inter, system-ui, sans-serif)"
-          fontSize="9"
-          letterSpacing="0.3em"
-          fill="#FF7A3C"
-        >
-          LAB
-        </text>
-      </motion.svg>
+      ))}
     </div>
   );
 }

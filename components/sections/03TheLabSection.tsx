@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
 
       <h4 className="text-lg font-semibold text-hunter-green mb-3">
-        Resultados Clave:
+        Key Results:
       </h4>
       <ul className="text-gray-400 space-y-2 list-disc pl-5">
         {results.map((result, index) => (
