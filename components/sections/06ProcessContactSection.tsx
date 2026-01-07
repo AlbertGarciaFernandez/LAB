@@ -97,7 +97,7 @@ const ProcessContactSection: React.FC = () => {
         <div className="h-1 bg-surface-dark w-1/2 mx-auto my-20 rounded-full"></div>
 
         {/* 06.2 Contact / CTA Section (Final Call to Action) */}
-        <div id="contact" className="relative">
+        <div id="contact" className="relative scroll-mt-32">
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 text-white">
               Ready to <span className="text-hunter-orange">Accelerate?</span>

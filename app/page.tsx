@@ -8,6 +8,7 @@ import TheLabSection from "../components/sections/03TheLabSection";
 import BioSection from "../components/sections/04BioSection";
 import StackSection from "../components/sections/05StackSection";
 import ProcessContactSection from "../components/sections/06ProcessContactSection";
+import Footer from "../components/layout/Footer";
 
 const Home = () => {
     return (
@@ -22,7 +23,6 @@ const Home = () => {
                 <StackSection />
                 <ProcessContactSection />
             </main>
-            {/* Footer iría aquí */}
         </div>
     );
 };

@@ -10,6 +10,7 @@ const projectTypes = [
     "Strategic Consulting",
 ];
 
+
 export const ContactForm: React.FC = () => {
     const [selectedType, setSelectedType] = useState<string | null>(null);
     const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -21,7 +22,12 @@ export const ContactForm: React.FC = () => {
         const formData = new FormData(e.currentTarget);
         const data = {
             name: formData.get("name"),
+            company: formData.get("company"),
+            role: formData.get("role"),
+            budget: formData.get("budget"),
             email: formData.get("email"),
+            phone: formData.get("phone"),
+            ai_goal: formData.get("ai_goal"),
             message: formData.get("message"),
             project_type: selectedType || "Not Specified",
             _subject: "New Lead from CodeHunter Lab",
@@ -87,8 +93,8 @@ export const ContactForm: React.FC = () => {
                                 type="button"
                                 onClick={() => setSelectedType(type)}
                                 className={`px-6 py-3 rounded-full text-sm font-display font-medium transition-all duration-300 border backdrop-blur-sm ${selectedType === type
-                                        ? "bg-hunter-orange text-near-black border-hunter-orange shadow-[0_0_20px_rgba(255,122,60,0.3)]"
-                                        : "bg-white/5 border-white/10 text-gray-400 hover:border-white/30 hover:text-white"
+                                    ? "bg-hunter-orange text-near-black border-hunter-orange shadow-[0_0_20px_rgba(255,122,60,0.3)]"
+                                    : "bg-white/5 border-white/10 text-gray-400 hover:border-white/30 hover:text-white"
                                     }`}
                             >
                                 {type}
@@ -106,6 +112,7 @@ export const ContactForm: React.FC = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12">
+                        {/* Full Name */}
                         <div className="group relative">
                             <input
                                 type="text"
@@ -119,9 +126,65 @@ export const ContactForm: React.FC = () => {
                                 htmlFor="name"
                                 className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
                             >
-                                Name or Alias
+                                Full Name *
                             </label>
                         </div>
+
+                        {/* Company */}
+                        <div className="group relative">
+                            <input
+                                type="text"
+                                name="company"
+                                id="company"
+                                required
+                                className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
+                                placeholder=" "
+                            />
+                            <label
+                                htmlFor="company"
+                                className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
+                            >
+                                Company *
+                            </label>
+                        </div>
+
+                        {/* Role */}
+                        <div className="group relative">
+                            <input
+                                type="text"
+                                name="role"
+                                id="role"
+                                required
+                                className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
+                                placeholder=" "
+                            />
+                            <label
+                                htmlFor="role"
+                                className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
+                            >
+                                Role / Title *
+                            </label>
+                        </div>
+
+                        {/* Budget / Goal Input */}
+                        <div className="group relative">
+                            <input
+                                type="text"
+                                name="budget"
+                                id="budget"
+                                required
+                                className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
+                                placeholder=" "
+                            />
+                            <label
+                                htmlFor="budget"
+                                className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
+                            >
+                                Approximate Budget / Goal *
+                            </label>
+                        </div>
+
+                        {/* Email */}
                         <div className="group relative">
                             <input
                                 type="email"
@@ -135,18 +198,55 @@ export const ContactForm: React.FC = () => {
                                 htmlFor="email"
                                 className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
                             >
-                                Email Address
+                                Corporate Email *
+                            </label>
+                        </div>
+
+                        {/* Phone */}
+                        <div className="group relative">
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                required
+                                className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
+                                placeholder=" "
+                            />
+                            <label
+                                htmlFor="phone"
+                                className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
+                            >
+                                Phone *
                             </label>
                         </div>
                     </div>
 
+                    {/* AI Improvement Goal */}
+                    <div className="group relative">
+                        <input
+                            type="text"
+                            name="ai_goal"
+                            id="ai_goal"
+                            required
+                            className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
+                            placeholder=" "
+                        />
+                        <label
+                            htmlFor="ai_goal"
+                            className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
+                        >
+                            What would you like to improve with AI? *
+                        </label>
+                    </div>
+
+                    {/* Mission Brief / Challenge */}
                     <div className="group relative">
                         <textarea
                             name="message"
                             id="message"
                             rows={1}
                             required
-                            className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 resize-none peer"
+                            className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 resize-none peer max-h-60 overflow-y-auto custom-scrollbar"
                             placeholder=" "
                             onInput={(e) => {
                                 e.currentTarget.style.height = 'auto';
@@ -157,7 +257,7 @@ export const ContactForm: React.FC = () => {
                             htmlFor="message"
                             className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
                         >
-                            Mission Brief / Challenge
+                            Briefly describe your main challenges or areas to optimize... *
                         </label>
                     </div>
                 </div>

@@ -203,4 +203,68 @@ export const TechIcons = {
             />
         </svg>
     ),
+    NodeJS: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M12 2L4 6.5V17.5L12 22L20 17.5V6.5L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+            <path d="M12 2V22" stroke="currentColor" strokeWidth="1" />
+            <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1" />
+        </svg>
+    ),
+    NestJS: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+            <path d="M12 6L7 9V15L12 18L17 15V9L12 6Z" fill="currentColor" fillOpacity="0.5" />
+        </svg>
+    ),
+    PostgreSQL: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M12 2C7.58 2 4 5.58 4 10C4 14.42 7.58 18 12 18C13.1 18 14.15 17.78 15.1 17.38L19 21L21 19L17.38 15.1C17.78 14.15 18 13.1 18 12C18 7.58 14.42 4 12 4V2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        </svg>
+    ),
+    N8N: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <circle cx="7" cy="7" r="3" stroke="currentColor" strokeWidth="2" />
+            <circle cx="17" cy="17" r="3" stroke="currentColor" strokeWidth="2" />
+            <path d="M10 7H14L14 17H10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    ),
+    OpenAI: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M12 2C10.9 2 10 2.9 10 4V6H14V4C14 2.9 13.1 2 12 2Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M12 22C13.1 22 14 21.1 14 20V18H10V20C10 21.1 10.9 22 12 22Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M4 10C2.9 10 2 10.9 2 12C2 13.1 2.9 14 4 14H6V10H4Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M20 10H18V14H20C21.1 14 22 13.1 22 12C22 10.9 21.1 10 20 10Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M8 8L6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M18 18L16 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M16 8L18 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M6 18L8 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+    ),
+    REST: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="2" />
+            <path d="M6 12H18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M6 8H10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M6 16H14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+    ),
+    AIAgents: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <circle cx="18" cy="6" r="3" stroke="currentColor" strokeWidth="2" />
+        </svg>
+    ),
+    RAG: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M4 4H10V10H4V4Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M14 4H20V10H14V4Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M4 14H10V20H4V14Z" stroke="currentColor" strokeWidth="2" />
+            <path d="M14 14H20L17 20L14 14Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+            <path d="M10 7H14" stroke="currentColor" strokeWidth="2" />
+            <path d="M10 17H14" stroke="currentColor" strokeWidth="2" />
+            <path d="M7 10V14" stroke="currentColor" strokeWidth="2" />
+            <path d="M17 10V14" stroke="currentColor" strokeWidth="2" />
+        </svg>
+    ),
 };

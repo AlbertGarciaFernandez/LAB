@@ -42,13 +42,13 @@ const HeroSection: React.FC = () => {
             className="text-sm md:text-base uppercase tracking-widest text-hunter-orange font-mono mb-4"
             variants={itemVariants}
           >
-            <span className="opacity-80">[ </span>
+            <span className="opacity-80">{"["}&nbsp;</span>
             <ScrambleText
               text="AI Automation , Frontend Engineer , Product-mindset"
               delay={0.85}
-              className="inline-block"
+              className="inline"
             />
-            <span className="opacity-80"> ]</span>
+            <span className="opacity-80">&nbsp;{"]"}</span>
           </motion.div>
 
           <motion.h1

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Calculator, AlertCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -29,11 +30,11 @@ const ROICalculator = () => {
     };
 
     return (
-        <section id="roi-calculator" className="py-32 px-6 bg-near-black relative overflow-hidden border-t border-white/5">
+        <section id="roi-calculator" className="py-32 px-6 bg-near-black relative overflow-hidden border-t border-white/5 z-20">
             {/* Background Decor */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-hunter-green/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-20">
                 {/* Lado Izquierdo */}
                 <div className="space-y-8">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase">
@@ -78,7 +79,7 @@ const ROICalculator = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="relative bg-surface-dark/50 backdrop-blur-sm border border-white/10 rounded-3xl p-10 shadow-2xl"
+                    className="relative bg-surface-dark/50 backdrop-blur-sm border border-white/10 rounded-3xl p-10 shadow-2xl z-30"
                 >
                     <div className="space-y-10 mb-12">
                         {/* Slider 1 */}
@@ -141,10 +142,10 @@ const ROICalculator = () => {
                         <p className="text-gray-500 text-xs font-medium tracking-wide">
                             This capital could be re-invested into growth or R&D.
                         </p>
-                        <button className="w-full py-5 bg-hunter-green text-near-black font-black uppercase tracking-widest text-xs rounded-xl transition-all hover:scale-[1.02] hover:bg-white shadow-[0_0_30px_rgba(0,230,162,0.2)] flex items-center justify-center gap-3 group">
+                        <Link href="/#contact" className="w-full py-5 bg-hunter-green text-near-black font-black uppercase tracking-widest text-xs rounded-xl transition-all hover:scale-[1.02] hover:bg-white shadow-[0_0_30px_rgba(0,230,162,0.2)] flex items-center justify-center gap-3 group">
                             Stop the leakage. Audit now.
                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>
