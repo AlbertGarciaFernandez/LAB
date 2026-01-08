@@ -36,7 +36,7 @@ const AIConsultingPage = () => {
     const t = useTranslations("AIConsulting");
 
     return (
-        <div className="bg-near-black min-h-screen">
+        <div className="bg-near-black min-h-screen overflow-x-hidden">
             <Header />
             <main>
                 {/* 1. Hero Section */}

@@ -129,7 +129,7 @@ const TopAgentsSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-32 px-6 lg:px-8 max-w-7xl mx-auto relative cursor-default">
+        <section className="py-32 px-6 lg:px-8 max-w-7xl mx-auto relative cursor-default overflow-hidden">
             {/* Ambient Background */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-hunter-green/5 rounded-full blur-[120px] pointer-events-none -z-10" />
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-hunter-orange/5 rounded-full blur-[100px] pointer-events-none -z-10" />
@@ -174,7 +174,7 @@ const TopAgentsSection: React.FC = () => {
                         <div className={`absolute inset-0 rounded-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl ${agent.bg}`} />
 
                         {/* Card Content */}
-                        <div className={`relative h-full bg-surface-dark/60 backdrop-blur-xl border border-white/10 rounded-[38px] p-8 flex flex-col overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-2xl ${agent.hoverGlow}`}>
+                        <div className={`relative h-full bg-surface-dark/60 backdrop-blur-xl border border-white/10 rounded-[38px] p-6 md:p-8 flex flex-col overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-2xl ${agent.hoverGlow}`}>
 
                             {/* Header: Icon & Role */}
                             <div className="flex justify-between items-start mb-8">
