@@ -1,20 +1,22 @@
 // components/layout/Header.tsx
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const t = useTranslations("Header");
 
   const navItems = [
-    { name: "Expertise", href: "/#expertise", label: "Expertise" },
-    { name: "The Lab", href: "/#work", label: "The Lab" },
-    { name: "Bio", href: "/#about", label: "Bio" },
-    { name: "Stack", href: "/#stack", label: "Stack" },
-    { name: "Process", href: "/#process-contact", label: "Process" },
+    { name: t("nav.Expertise"), href: "/#expertise", label: "Expertise" },
+    { name: t("nav.TheLab"), href: "/#work", label: "The Lab" },
+    { name: t("nav.Bio"), href: "/#about", label: "Bio" },
+    { name: t("nav.Stack"), href: "/#stack", label: "Stack" },
+    { name: t("nav.Process"), href: "/#process-contact", label: "Process" },
   ];
 
   useEffect(() => {
@@ -45,7 +47,6 @@ const Header: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center h-24 px-4 md:px-8">
           {/* Logo and Brand Name */}
-          {/* Logo and Brand Name - Enchanted */}
           <Link href="/" className="flex items-center gap-3 group relative z-50">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -109,7 +110,7 @@ const Header: React.FC = () => {
             <Link href="/ai-consulting" className="relative inline-flex h-10 overflow-hidden rounded-full p-[1px] focus:outline-none group hover:scale-105 transition-transform duration-300">
               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00E6A2_0%,#0B0B0B_50%,#00E6A2_100%)] opacity-70" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-6 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white backdrop-blur-3xl transition-all group-hover:bg-near-black/80 group-hover:text-hunter-green">
-                AI Consulting
+                {t("cta.AIConsulting")}
               </span>
             </Link>
 
@@ -117,7 +118,7 @@ const Header: React.FC = () => {
             <Link href="/#contact" className="relative inline-flex h-10 overflow-hidden rounded-full p-[1px] focus:outline-none group hover:scale-105 transition-transform duration-300">
               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF7A3C_0%,#0B0B0B_50%,#FF7A3C_100%)] opacity-70" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-6 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white backdrop-blur-3xl transition-all group-hover:bg-hunter-orange group-hover:text-near-black">
-                Let&apos;s Work
+                {t("cta.LetsWork")}
               </span>
             </Link>
           </div>
@@ -201,7 +202,7 @@ const Header: React.FC = () => {
                   onClick={() => setOpen(false)}
                   className="px-8 py-3 text-hunter-green border border-hunter-green font-bold uppercase rounded-full mt-4 inline-block tracking-[0.2em] text-sm"
                 >
-                  AI Consulting
+                  {t("cta.AIConsulting")}
                 </Link>
               </motion.div>
 
@@ -215,7 +216,7 @@ const Header: React.FC = () => {
                   onClick={() => setOpen(false)}
                   className="px-8 py-3 bg-hunter-orange text-near-black font-bold uppercase rounded-full mt-2 inline-block"
                 >
-                  Let&apos;s Work
+                  {t("cta.LetsWork")}
                 </Link>
               </motion.div>
             </nav>

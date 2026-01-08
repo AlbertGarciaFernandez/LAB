@@ -1,0 +1,464 @@
+{
+    "Header": {
+        "nav": {
+            "Expertise": "Expertise",
+            "TheLab": "The Lab",
+            "Bio": "Bio",
+            "Stack": "Stack",
+            "Process": "Process"
+        },
+        "cta": {
+            "AIConsulting": "AI Consulting",
+            "LetsWork": "Let's Work"
+        }
+    },
+    "Hero": {
+        "subHeader": "AI Automation , Frontend Engineer , Product-mindset",
+        "title": {
+            "part1": "Building High-",
+            "highlight1": "Performance",
+            "part2": "Digital Products that",
+            "highlight2": "Scale"
+        },
+        "description": "CodeHunter Lab operates at the intersection of deep technical engineering, product strategy, and user-centric design to accelerate your digital roadmap.",
+        "cta": {
+            "initialize": "Initialize Project",
+            "caseStudies": "View Case Studies"
+        }
+    },
+    "Footer": {
+        "brandDescription": "Architecting the future of enterprise automation and AI-driven workflows.",
+        "Expertise": {
+            "title": "Expertise",
+            "items": {
+                "AIAgents": "AI Agents",
+                "n8nMigration": "n8n Migration",
+                "SystemArchitecture": "System Architecture",
+                "CustomLLMs": "Custom LLMs"
+            }
+        },
+        "Navigation": {
+            "title": "Navigation",
+            "items": {
+                "AIConsulting": "AI Consulting",
+                "OurWork": "Our Work",
+                "Calculator": "Calculator",
+                "Contact": "Contact"
+            }
+        },
+        "Availability": {
+            "nextOpening": "Next Opening: {date}",
+            "title": "Ready to scale?",
+            "subtitle": "Booking architecture audits for Q1.",
+            "button": "Drop a Line"
+        },
+        "Copyright": {
+            "rights": "CodeHunter Lab.",
+            "location": "Leiden, Netherlands",
+            "developedBy": "Developed by"
+        }
+    },
+    "Expertise": {
+        "title": {
+            "part1": "Core Expertise &",
+            "part2": "Strategic Pillars"
+        },
+        "subtitle": "Hunting the balance between clean code, UX and real impact.",
+        "pillars": {
+            "frontend": {
+                "title": "Frontend Architecture",
+                "micro": "Scalable, maintainable systems built for long-term impact.",
+                "heading": "Building scalable, maintainable and high-impact web applications.",
+                "paragraphs": {
+                    "0": "We design and lead the development of scalable, maintainable, and high-impact web applications. Our work is rooted in modern frontend architecture, with hands-on expertise in React, Next.js, and TypeScript, focused on long-term scalability, performance, and developer experience.",
+                    "1": "This is not just about writing code, but about making architectural decisions that reduce complexity, scale teams, and support evolving product needs."
+                },
+                "bullets": {
+                    "0": "Component-driven architectures (React, Next.js)",
+                    "1": "Scalability & maintainability by design",
+                    "2": "Code quality, testing strategies and sustainability",
+                    "3": "Performance-first mindset from day one"
+                }
+            },
+            "ecommerce": {
+                "title": "Ecommerce & Performance",
+                "micro": "Revenue-critical platforms optimised for speed and conversion.",
+                "heading": "Revenue-critical platforms optimised for speed, UX and conversion.",
+                "paragraphs": {
+                    "0": "We specialise in revenue-critical ecommerce platforms, where performance, UX, and reliability directly impact conversion and business outcomes.",
+                    "1": "From leading complex Salesforce Commerce Cloud (SFCC) migrations to optimising existing Shopify and custom stacks, our focus is on building fast, accessible, and conversion-friendly user journeys."
+                },
+                "bullets": {
+                    "0": "SFCC migration leadership and frontend architecture",
+                    "1": "Core Web Vitals & Lighthouse optimisation",
+                    "2": "UX, accessibility (WCAG 2.1) and SEO-minded performance",
+                    "3": "A/B testing and data-informed optimisation loops",
+                    "4": "Turning performance into measurable business impact"
+                }
+            },
+            "product": {
+                "title": "Product Strategy & AI",
+                "micro": "Business goals translated into clear technical decisions.",
+                "heading": "Bridging product goals with technical execution.",
+                "paragraphs": {
+                    "0": "We bridge the gap between engineering execution and product strategy. By combining technical leadership with product thinking, we translate business goals into clear roadmaps, technical decisions, and scalable solutions.",
+                    "1": "We have led the product ownership and engineering of AI-powered applications, integrating OpenAI APIs to accelerate workflows, reduce noise, and improve decision-making across teams."
+                },
+                "bullets": {
+                    "0": "Product discovery, roadmapping and prioritisation",
+                    "1": "AI integration using OpenAI APIs and custom tooling",
+                    "2": "Agile / Scrum leadership and stakeholder alignment",
+                    "3": "Engineering decisions grounded in real constraints"
+                }
+            },
+            "automation": {
+                "title": "AI Automation",
+                "micro": "Intelligent workflows that remove friction and manual work.",
+                "heading": "Automating the boring, amplifying the meaningful.",
+                "paragraphs": {
+                    "0": "We design and implement AI-powered automation workflows that reduce manual work, speed up decision-making, and improve operational efficiency across product and engineering teams.",
+                    "1": "Using tools like n8n, custom scripts and API integrations, we connect platforms, data sources and AI models to create intelligent pipelines tailored to real business needs — not over-engineered experiments."
+                },
+                "bullets": {
+                    "0": "Automated content and data pipelines",
+                    "1": "AI-assisted QA, analysis and reporting",
+                    "2": "Workflow orchestration across teams and tools",
+                    "3": "Reducing operational overhead through automation",
+                    "4": "Turning raw data into actionable insights"
+                }
+            },
+            "leadership": {
+                "title": "Technical Leadership",
+                "micro": "Clear ownership, alignment and senior decision-making.",
+                "heading": "Aligning product, design and engineering around impact.",
+                "paragraphs": {
+                    "0": "We work closely with designers, product managers, and backend teams to align technical execution with product vision. Our role often sits at the intersection of architecture, delivery, and decision-making — ensuring teams move fast without sacrificing quality."
+                },
+                "bullets": {
+                    "0": "Cross-functional collaboration at a senior level",
+                    "1": "Clear communication and ownership of decisions",
+                    "2": "Reducing friction between product, design and engineering",
+                    "3": "Sustainable delivery over short-term hacks"
+                }
+            },
+            "delivery": {
+                "title": "Delivery & Risk",
+                "micro": "Predictable delivery in complex, high-impact environments.",
+                "heading": "Predictable delivery in complex, high-impact environments.",
+                "paragraphs": {
+                    "0": "We focus on predictable, high-quality delivery in complex technical environments. By applying proven engineering practices, we reduce technical risk, avoid costly rework, and ensure that products scale reliably over time.",
+                    "1": "This includes making pragmatic trade-offs, managing technical debt consciously, and building systems that are easy to evolve rather than fragile to change."
+                },
+                "bullets": {
+                    "0": "Clear delivery planning and scope definition",
+                    "1": "Quality standards, testing strategies and reviews",
+                    "2": "Conscious technical debt management",
+                    "3": "Risk mitigation in performance-critical systems",
+                    "4": "Long-term maintainability over quick hacks"
+                }
+            }
+        },
+        "ui": {
+            "selected": "Currently selected",
+            "readMore": "Read more",
+            "indexLabel": "{number} · {title}"
+        }
+    },
+    "TheLab": {
+        "title": "The Lab",
+        "subtitle": "Engineered solutions and strategic project leadership that delivered measurable business impact.",
+        "projects": {
+            "0": {
+                "number": "Case Study 01 / AI Product",
+                "title": "Product Accelerator: AI-Powered Productivity App",
+                "description": "Led the frontend development and Product Ownership of an AI-powered productivity web application. The challenge was to create a scalable architecture, integrating Machine Learning models and third-party APIs (OpenAI) to deliver a personalized, high-performance user experience.",
+                "results": {
+                    "0": "Defined Frontend Architecture with React, Next.js, and TypeScript, focused on scalability and maintainability.",
+                    "1": "Integrated AI-driven features via OpenAI APIs and custom endpoints for personalized experiences.",
+                    "2": "Constant performance monitoring (Lighthouse, Core Web Vitals) and robust testing (Jest) to ensure optimized UX.",
+                    "3": "Defined vision, roadmap, and acceptance criteria, aligning technical execution with business objectives."
+                }
+            },
+            "1": {
+                "number": "Case Study 02 / E-commerce",
+                "title": "Basic-Fit: High-Traffic E-commerce Migration (SFCC)",
+                "description": "Led the migration process of the Basic-Fit website to the Salesforce Commerce Cloud (SFCC) platform, a critical migration affecting consumer-facing solutions across multiple platforms. The goal was to ensure a smooth transition and improve the end-user experience, performance, and SEO.",
+                "results": {
+                    "0": "Lead the migration to Salesforce Commerce Cloud, maintaining high user experience quality.",
+                    "1": "Implemented A/B testing for key components, achieving better conversion results.",
+                    "2": "Developed custom templates within SFCC and converted design concepts into functional, responsive websites.",
+                    "3": "Applied industry best practices for secure, scalable code with integrated analytics tools."
+                }
+            },
+            "2": {
+                "number": "Case Study 03 / Track Record",
+                "title": "Empowering Digital Growth: 15+ Success Stories",
+                "description": "Over our years of experience, we have empowered more than 15 companies to elevate their web presence, applications, and e-commerce platforms. We don't just build; we optimize for growth and scalability.",
+                "results": {
+                    "0": "Partnered with diverse clients from startups to enterprises.",
+                    "1": "Successfully delivered scalable solutions in E-commerce, SaaS, and AI.",
+                    "2": "Improved performance, SEO, and conversion rates across all partner portfolios."
+                }
+            }
+        },
+        "cta": "Discuss Your Challenge"
+    },
+    "Bio": {
+        "bgText": "THE ENGINEER",
+        "title": {
+            "part1": "THE",
+            "part2": "ENGINEER"
+        },
+        "description": {
+            "p1": {
+                "part1": "I love being able to",
+                "highlight": "help",
+                "part2": "and improve people's lives."
+            },
+            "p2": {
+                "part1": "Using my experience to make life",
+                "highlight1": "easier",
+                "part2": ", creating tools, and contributing my",
+                "highlight2": "art & ideas",
+                "part3": "to meaningful projects."
+            }
+        },
+        "stats": {
+            "years": "Years Exp.",
+            "focus": "Focus",
+            "impact": "Impact",
+            "impactValue": "15+ Companies"
+        },
+        "passionCard": {
+            "label": "Passion",
+            "quote": "\"Code is just the medium. Impact is the goal.\""
+        }
+    },
+    "Stack": {
+        "subtitle": "Powering The Lab",
+        "title": "Technology Stack"
+    },
+    "Process": {
+        "title": {
+            "prefix": "06.",
+            "text": "Partnership & Process"
+        },
+        "subtitle": {
+            "part1": "We adapt to you. A",
+            "highlight": "collaborative approach",
+            "part2": "focused on listening, creating, and improving your efficiency."
+        },
+        "steps": {
+            "0": {
+                "title": "Discovery & Listening",
+                "description": "We start by listening. No assumptions. We dive deep into your business context to understand your true needs—whether it's an AI integration, a platform migration, or a custom app."
+            },
+            "1": {
+                "title": "Tailored Strategy",
+                "description": "We don't force-fit technologies. We design a solution adapted to YOU. From AI automation to scalable infrastructure, we create a roadmap that solves your specific challenges."
+            },
+            "2": {
+                "title": "Agile Implementation",
+                "description": "Building with purpose. We implement efficient, scalable solutions without disrupting your operations. We adapt to your workflows, ensuring a smooth and transparent delivery."
+            },
+            "3": {
+                "title": "Evolution & Efficiency",
+                "description": "It doesn't end at launch. We help you optimize and refine your digital ecosystem, turning data into efficiency and ensuring your solution evolves with your business."
+            }
+        },
+        "cta": {
+            "title": {
+                "text": "Ready to",
+                "highlight": "Accelerate?"
+            },
+            "description": {
+                "part1": "If you need help with a project, infrastructure, creating an app, or want to automatize with",
+                "highlight": "AI",
+                "part2": "— contact us."
+            }
+        }
+    },
+    "AIConsulting": {
+        "Hero": {
+            "badge": "AI Consulting & Automation",
+            "title": {
+                "part1": "End-to-End",
+                "part2": "AI Systems",
+                "highlight": "That Scale."
+            },
+            "description": "The market is noisy. We move beyond chat interfaces to build <strong class='text-white'>Agentic Workflows</strong>—intelligent systems that execute tasks, make decisions, and drive your business forward.",
+            "cta": "Get Your Audit",
+            "whyUs": {
+                "title": {
+                    "part1": "Profitability",
+                    "highlight": "Over Novelty."
+                },
+                "description": "Most companies waste months on isolated AI \"experiments\" that don't talk to their database. We act as your Strategic AI Architect, focusing on ROI first.",
+                "list": {
+                    "0": "Clarity amidst Technical Chaos",
+                    "1": "Execution, Not Just Strategy",
+                    "2": "Value-Based Impact & ROI"
+                },
+                "systemStatus": {
+                    "label": "System Status",
+                    "value": "OPTIMIZED",
+                    "efficiencyLabel": "Efficiency",
+                    "efficiencyValue": "+320%",
+                    "tooltip": "REAL-TIME MONITORING"
+                }
+            }
+        },
+        "Banner": {
+            "badge": "AI & Process Automation",
+            "title": "Stop Experimenting.",
+            "highlight": "Start Scaling.",
+            "description": "Most companies are just \"playing\" with AI. We architect autonomous systems that integrate seamlessly with your existing stack to slash overhead and drive pure profit margins.",
+            "cta1": "Explore The Lab",
+            "cta2": "Calculate ROI",
+            "cards": {
+                "0": {
+                    "title": "Autonomous Agents",
+                    "desc": "Deploy 24/7 AI staff for Sales & Ops."
+                },
+                "1": {
+                    "title": "Workflow Orchestration",
+                    "desc": "Replace manual data entry with n8n."
+                },
+                "2": {
+                    "title": "Value-Driven Architecture",
+                    "desc": "We sell recurring efficiency, not hours."
+                }
+            }
+        },
+        "ROICalculator": {
+            "badge": "Efficiency Audit",
+            "title": "How much is",
+            "highlight": "Inefficiency",
+            "subtitle": "costing you?",
+            "description": "Manual workflows are a silent tax on your revenue. Estimate how much capital you're burning on tasks that an AI Agent could handle for a fraction of the cost.",
+            "realityCard": {
+                "title": "The Modern Reality",
+                "description": "With rising labor costs, paying specialists for repetitive data entry is common but financially unsustainable. Automation is now a competitive survival strategy."
+            },
+            "inputs": {
+                "employees": "Manual Task Force",
+                "employeesUnit": "People",
+                "hours": "Weekly Busywork (per person)",
+                "hoursUnit": "Hours",
+                "rate": "Avg. Hourly Rate (Loaded)",
+                "rateUnit": "/hr"
+            },
+            "results": {
+                "monthly": "Monthly Waste",
+                "annual": "Annual Savings",
+                "note": "This capital could be re-invested into growth or R&D.",
+                "cta": "Stop the leakage. Audit now."
+            }
+        },
+        "TopAgents": {
+            "badge": "Digital Workforce",
+            "title": "Automate Sales, Operations,",
+            "highlight": "& Marketing with AI.",
+            "description": "Stop hiring for repetitive tasks. Deploy specialized AI Agents that work 24/7, integrate with your tools, and deliver scalable results.",
+            "agents": {
+                "leo": {
+                    "role": "AI Sales Agent",
+                    "description": "Your elite sales rep that never sleeps. LEO engages leads instantly, qualifies opportunities, and books meetings 24/7.",
+                    "capabilities": [
+                        "Instant Lead Response (Web/WA)",
+                        "Context-Aware Qualification",
+                        "Auto-Scheduling Meetings",
+                        "Smart Follow-up Sequences",
+                        "Human Handoff Protocols"
+                    ],
+                    "benefit": "Scale revenue, not headcount.",
+                    "cta": "Deploy LEO"
+                },
+                "atlas": {
+                    "role": "AI Virtual Assistant",
+                    "description": "The operational backbone of your business. ATLAS orchestrates workflows, manages chaotic admin, and keeps your team focused.",
+                    "capabilities": [
+                        "Inbox & Calendar Zero",
+                        "Workflow Orchestration",
+                        "Document Processing",
+                        "Client Onboarding",
+                        "Error-Free Data Entry"
+                    ],
+                    "benefit": "Eliminate operational drag.",
+                    "cta": "Deploy ATLAS"
+                },
+                "orion": {
+                    "role": "AI Marketing Director",
+                    "description": "Data-driven marketing precision. ORION analyzes performance, optimizes campaigns, and uncovers hidden growth opportunities.",
+                    "capabilities": [
+                        "Real-time ROI Analysis",
+                        "Campaign Optimization",
+                        "Trend Spotting & Analysis",
+                        "Content Strategy Insights",
+                        "Competitor Monitoring"
+                    ],
+                    "benefit": "Marketing that drives profit.",
+                    "cta": "Deploy ORION"
+                }
+            },
+            "bottleneck": {
+                "badge": "Problem",
+                "title": "The Bottleneck",
+                "subtitle": "Why manual scaling fails.",
+                "list": [
+                    "Leads rotting in the inbox",
+                    "Chaotic, manual scheduling",
+                    "Marketing without data",
+                    "Burned out teams"
+                ],
+                "resultLabel": "Result",
+                "resultValue": "Business Stagnation"
+            },
+            "advantage": {
+                "badge": "Solution",
+                "title": "Agent Advantage",
+                "subtitle": "Why AI wins.",
+                "list": [
+                    "Instant 24/7 Response",
+                    "Perfect Execution",
+                    "Data-Driven Decisions",
+                    "Scalable Workforce"
+                ],
+                "resultLabel": "Result",
+                "resultValue": "Exponential Growth"
+            },
+            "diagram": {
+                "title": "Syncs With Your Ecosystem",
+                "capture": "Capture",
+                "process": "Process",
+                "optimize": "Optimize",
+                "worksWith": "WORKS WITH:"
+            }
+        },
+        "Migration": {
+            "badge": "System Evolution",
+            "title": "From Chaos to",
+            "highlight": "Control",
+            "legacy": {
+                "title": "Legacy Manual Ops",
+                "desc": "Expensive per-task billing.<br />Fragile, hard to scale.<br />Data privacy concerns.",
+                "tag": "High Friction"
+            },
+            "optimized": {
+                "tag": "Recommended",
+                "title": "Optimized Core",
+                "desc": "Self-hosted n8n infrastructure.<br />Unlimited executions.<br />Full data sovereignty.",
+                "latencyLabel": "LATENCY",
+                "latencyValue": "4ms",
+                "costLabel": "COST",
+                "costValue": "FIXED"
+            },
+            "action": {
+                "title": "Start Automating",
+                "desc": "Ready to reclaim your time?<br />Initialize your project today.",
+                "cta1": "Initialize",
+                "cta2": "Consulting"
+            }
+        }
+    }
+}

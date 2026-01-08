@@ -5,73 +5,7 @@ import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { Zap, Activity, BarChart3, ArrowRight, CheckCircle2, Sparkles, ChevronRight, AlertOctagon } from "lucide-react";
 import { useState, useEffect } from "react";
-
-// Agent Data
-const agents = [
-    {
-        id: "leo",
-        name: "LEO",
-        role: "AI Sales Agent",
-        icon: Zap,
-        description: "Your elite sales rep that never sleeps. LEO engages leads instantly, qualifies opportunities, and books meetings 24/7.",
-        capabilities: [
-            "Instant Lead Response (Web/WA)",
-            "Context-Aware Qualification",
-            "Auto-Scheduling Meetings",
-            "Smart Follow-up Sequences",
-            "Human Handoff Protocols"
-        ],
-        benefit: "Scale revenue, not headcount.",
-        color: "text-hunter-orange",
-        bg: "bg-hunter-orange/10",
-        border: "border-hunter-orange/20",
-        glow: "shadow-[0_0_50px_rgba(255,122,60,0.15)]",
-        hoverGlow: "group-hover:shadow-[0_0_80px_rgba(255,122,60,0.3)]",
-        btnGradient: "from-hunter-orange to-[#FF9A70]"
-    },
-    {
-        id: "atlas",
-        name: "ATLAS",
-        role: "AI Virtual Assistant",
-        icon: Activity,
-        description: "The operational backbone of your business. ATLAS orchestrates workflows, manages chaotic admin, and keeps your team focused.",
-        capabilities: [
-            "Inbox & Calendar Zero",
-            "Workflow Orchestration",
-            "Document Processing",
-            "Client Onboarding",
-            "Error-Free Data Entry"
-        ],
-        benefit: "Eliminate operational drag.",
-        color: "text-blue-400",
-        bg: "bg-blue-400/10",
-        border: "border-blue-400/20",
-        glow: "shadow-[0_0_50px_rgba(96,165,250,0.15)]",
-        hoverGlow: "group-hover:shadow-[0_0_80px_rgba(96,165,250,0.3)]",
-        btnGradient: "from-blue-400 to-blue-300"
-    },
-    {
-        id: "orion",
-        name: "ORION",
-        role: "AI Marketing Director",
-        icon: BarChart3,
-        description: "Data-driven marketing precision. ORION analyzes performance, optimizes campaigns, and uncovers hidden growth opportunities.",
-        capabilities: [
-            "Real-time ROI Analysis",
-            "Campaign Optimization",
-            "Trend Spotting & Analysis",
-            "Content Strategy Insights",
-            "Competitor Monitoring"
-        ],
-        benefit: "Marketing that drives profit.",
-        color: "text-hunter-green",
-        bg: "bg-hunter-green/10",
-        border: "border-hunter-green/20",
-        glow: "shadow-[0_0_50px_rgba(0,230,162,0.15)]",
-        hoverGlow: "group-hover:shadow-[0_0_80px_rgba(0,230,162,0.3)]",
-        btnGradient: "from-hunter-green to-[#33FFBC]"
-    }
-];
+import { useTranslations } from "next-intl";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -122,6 +56,78 @@ const TypingEffect = ({ words }: { words: string[] }) => {
 };
 
 const TopAgentsSection: React.FC = () => {
+    const t = useTranslations("AIConsulting.TopAgents");
+
+    // Agent Data
+    const agents = [
+        {
+            id: "leo",
+            name: "LEO",
+            role: t("agents.leo.role"),
+            icon: Zap,
+            description: t("agents.leo.description"),
+            capabilities: [
+                t("agents.leo.capabilities.0"),
+                t("agents.leo.capabilities.1"),
+                t("agents.leo.capabilities.2"),
+                t("agents.leo.capabilities.3"),
+                t("agents.leo.capabilities.4")
+            ],
+            benefit: t("agents.leo.benefit"),
+            cta: t("agents.leo.cta"),
+            color: "text-hunter-orange",
+            bg: "bg-hunter-orange/10",
+            border: "border-hunter-orange/20",
+            glow: "shadow-[0_0_50px_rgba(255,122,60,0.15)]",
+            hoverGlow: "group-hover:shadow-[0_0_80px_rgba(255,122,60,0.3)]",
+            btnGradient: "from-hunter-orange to-[#FF9A70]"
+        },
+        {
+            id: "atlas",
+            name: "ATLAS",
+            role: t("agents.atlas.role"),
+            icon: Activity,
+            description: t("agents.atlas.description"),
+            capabilities: [
+                t("agents.atlas.capabilities.0"),
+                t("agents.atlas.capabilities.1"),
+                t("agents.atlas.capabilities.2"),
+                t("agents.atlas.capabilities.3"),
+                t("agents.atlas.capabilities.4")
+            ],
+            benefit: t("agents.atlas.benefit"),
+            cta: t("agents.atlas.cta"),
+            color: "text-blue-400",
+            bg: "bg-blue-400/10",
+            border: "border-blue-400/20",
+            glow: "shadow-[0_0_50px_rgba(96,165,250,0.15)]",
+            hoverGlow: "group-hover:shadow-[0_0_80px_rgba(96,165,250,0.3)]",
+            btnGradient: "from-blue-400 to-blue-300"
+        },
+        {
+            id: "orion",
+            name: "ORION",
+            role: t("agents.orion.role"),
+            icon: BarChart3,
+            description: t("agents.orion.description"),
+            capabilities: [
+                t("agents.orion.capabilities.0"),
+                t("agents.orion.capabilities.1"),
+                t("agents.orion.capabilities.2"),
+                t("agents.orion.capabilities.3"),
+                t("agents.orion.capabilities.4")
+            ],
+            benefit: t("agents.orion.benefit"),
+            cta: t("agents.orion.cta"),
+            color: "text-hunter-green",
+            bg: "bg-hunter-green/10",
+            border: "border-hunter-green/20",
+            glow: "shadow-[0_0_50px_rgba(0,230,162,0.15)]",
+            hoverGlow: "group-hover:shadow-[0_0_80px_rgba(0,230,162,0.3)]",
+            btnGradient: "from-hunter-green to-[#33FFBC]"
+        }
+    ];
+
     return (
         <section className="py-32 px-6 lg:px-8 max-w-7xl mx-auto relative cursor-default">
             {/* Ambient Background */}
@@ -138,18 +144,18 @@ const TopAgentsSection: React.FC = () => {
             >
                 <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-[10px] font-bold tracking-[0.2em] uppercase backdrop-blur-md">
                     <Sparkles size={12} className="text-hunter-green" />
-                    Digital Workforce
+                    {t("badge")}
                 </motion.div>
 
                 <motion.h2 variants={itemVariants} className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
-                    Automate Sales, Operations, <br />
+                    {t("title")} <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-orange">
-                        & Marketing with AI.
+                        {t("highlight")}
                     </span>
                 </motion.h2>
 
                 <motion.p variants={itemVariants} className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
-                    Stop hiring for repetitive tasks. Deploy specialized AI Agents that work 24/7, integrate with your tools, and deliver scalable results.
+                    {t("description")}
                 </motion.p>
             </motion.div>
 
@@ -212,7 +218,7 @@ const TopAgentsSection: React.FC = () => {
                                 </p>
                                 <Link href="/#contact" className="block transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                     <div className={`w-full py-3 rounded-xl bg-gradient-to-r ${agent.btnGradient} text-near-black font-bold text-center flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-lg`}>
-                                        Deploy {agent.name} <ChevronRight size={16} />
+                                        {agent.cta} <ChevronRight size={16} />
                                     </div>
                                 </Link>
                             </div>
@@ -248,24 +254,24 @@ const TopAgentsSection: React.FC = () => {
                         <div className="relative z-10">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/10 text-red-400 text-[10px] font-bold tracking-widest uppercase mb-6">
                                 <AlertOctagon size={12} />
-                                Problem
+                                {t("bottleneck.badge")}
                             </div>
 
-                            <h3 className="text-3xl font-black text-white mb-2">The Bottleneck</h3>
-                            <p className="text-gray-500 text-sm mb-10">Why manual scaling fails.</p>
+                            <h3 className="text-3xl font-black text-white mb-2">{t("bottleneck.title")}</h3>
+                            <p className="text-gray-500 text-sm mb-10">{t("bottleneck.subtitle")}</p>
 
                             <ul className="space-y-6">
-                                {["Leads rotting in the inbox", "Chaotic, manual scheduling", "Marketing without data", "Burned out teams"].map((item, i) => (
+                                {["0", "1", "2", "3"].map((key, i) => (
                                     <li key={i} className="flex items-center gap-4 text-gray-400 group-hover:text-red-200/80 transition-colors duration-300">
                                         <div className="w-1.5 h-1.5 rounded-full bg-red-500/50" />
-                                        {item}
+                                        {t(`bottleneck.list.${key}`)}
                                     </li>
                                 ))}
                             </ul>
 
                             <div className="mt-12 p-4 rounded-xl bg-red-500/5 border border-red-500/10">
-                                <div className="text-red-500 text-[10px] font-mono uppercase tracking-widest mb-1">Result</div>
-                                <div className="text-white font-bold tracking-tight">Business Stagnation</div>
+                                <div className="text-red-500 text-[10px] font-mono uppercase tracking-widest mb-1">{t("bottleneck.resultLabel")}</div>
+                                <div className="text-white font-bold tracking-tight">{t("bottleneck.resultValue")}</div>
                             </div>
                         </div>
                     </div>
@@ -278,19 +284,19 @@ const TopAgentsSection: React.FC = () => {
                         <div className="relative z-10">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/10 text-hunter-green text-[10px] font-bold tracking-widest uppercase mb-6">
                                 <Sparkles size={12} />
-                                Solution
+                                {t("advantage.badge")}
                             </div>
 
-                            <h3 className="text-3xl font-black text-white mb-2">Agent Advantage</h3>
-                            <p className="text-gray-500 text-sm mb-10">Why AI wins.</p>
+                            <h3 className="text-3xl font-black text-white mb-2">{t("advantage.title")}</h3>
+                            <p className="text-gray-500 text-sm mb-10">{t("advantage.subtitle")}</p>
 
                             <ul className="space-y-6">
-                                {["Instant 24/7 Response", "Perfect Execution", "Data-Driven Decisions", "Scalable Workforce"].map((item, i) => (
+                                {["0", "1", "2", "3"].map((key, i) => (
                                     <li key={i} className="flex items-center gap-4 text-white font-medium" style={{ transitionDelay: `${i * 50}ms` }}>
                                         <div className="w-5 h-5 rounded-full bg-hunter-green/20 flex items-center justify-center">
                                             <CheckCircle2 size={12} className="text-hunter-green" />
                                         </div>
-                                        {item}
+                                        {t(`advantage.list.${key}`)}
                                     </li>
                                 ))}
                             </ul>
@@ -298,8 +304,8 @@ const TopAgentsSection: React.FC = () => {
                             <div className="mt-12 p-4 rounded-xl bg-hunter-green/10 border border-hunter-green/20 relative overflow-hidden">
                                 <div className="absolute inset-0 bg-hunter-green/5 animate-pulse" />
                                 <div className="relative z-10">
-                                    <div className="text-hunter-green text-[10px] font-mono uppercase tracking-widest mb-1">Result</div>
-                                    <div className="text-white font-bold tracking-tight">Exponential Growth</div>
+                                    <div className="text-hunter-green text-[10px] font-mono uppercase tracking-widest mb-1">{t("advantage.resultLabel")}</div>
+                                    <div className="text-white font-bold tracking-tight">{t("advantage.resultValue")}</div>
                                 </div>
                             </div>
                         </div>
@@ -313,7 +319,7 @@ const TopAgentsSection: React.FC = () => {
                     className="relative p-12 lg:p-16 rounded-[40px] border border-white/5 bg-surface-dark/50 overflow-hidden text-center backdrop-blur-sm"
                 >
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent opacity-50 pointer-events-none" />
-                    <h3 className="text-3xl font-black text-white mb-16 relative z-10">Syncs With Your Ecosystem</h3>
+                    <h3 className="text-3xl font-black text-white mb-16 relative z-10">{t("diagram.title")}</h3>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
                         {/* Live Data Stream Line (Background) */}
@@ -322,7 +328,7 @@ const TopAgentsSection: React.FC = () => {
                         <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative z-10 shadow-xl">
                             <div className="absolute -top-1 -right-1 w-3 h-3 bg-hunter-orange rounded-full animate-ping opacity-50" />
                             <Zap className="text-hunter-orange" size={24} />
-                            <span className="text-white font-bold text-lg">Capture</span>
+                            <span className="text-white font-bold text-lg">{t("diagram.capture")}</span>
                         </div>
 
                         <div className="relative z-10">
@@ -347,7 +353,7 @@ const TopAgentsSection: React.FC = () => {
 
                         <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative z-10 shadow-xl">
                             <Activity className="text-blue-400" size={24} />
-                            <span className="text-white font-bold text-lg">Process</span>
+                            <span className="text-white font-bold text-lg">{t("diagram.process")}</span>
                         </div>
 
                         <div className="relative z-10">
@@ -373,12 +379,12 @@ const TopAgentsSection: React.FC = () => {
                         <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative z-10 shadow-xl">
                             <div className="absolute -top-1 -right-1 w-3 h-3 bg-hunter-green rounded-full animate-ping opacity-50" />
                             <BarChart3 className="text-hunter-green" size={24} />
-                            <span className="text-white font-bold text-lg">Optimize</span>
+                            <span className="text-white font-bold text-lg">{t("diagram.optimize")}</span>
                         </div>
                     </div>
 
                     <div className="mt-16 text-gray-500 text-sm font-mono uppercase tracking-widest flex items-center justify-center gap-2">
-                        <span>WORKS WITH:</span>
+                        <span>{t("diagram.worksWith")}</span>
                         <TypingEffect words={["CRM", "EMAIL", "WHATSAPP", "SLACK", "INTERNAL TOOLS"]} />
                     </div>
                 </motion.div>

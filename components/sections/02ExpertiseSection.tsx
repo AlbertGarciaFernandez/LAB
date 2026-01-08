@@ -5,6 +5,7 @@
 import React, { useState } from "react";
 import AnimatedSection from "../layout/AnimatedSection";
 import { motion, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type PillarId =
   | "frontend"
@@ -25,123 +26,123 @@ type Pillar = {
   bullets: string[];
 };
 
-const pillars: Pillar[] = [
-  {
-    id: "frontend",
-    indexLabel: "01 · Frontend Architecture & Engineering",
-    title: "Frontend Architecture",
-    micro: "Scalable, maintainable systems built for long-term impact.",
-    icon: "{01}",
-    heading:
-      "Building scalable, maintainable and high-impact web applications.",
-    paragraphs: [
-      "We design and lead the development of scalable, maintainable, and high-impact web applications. Our work is rooted in modern frontend architecture, with hands-on expertise in React, Next.js, and TypeScript, focused on long-term scalability, performance, and developer experience.",
-      "This is not just about writing code, but about making architectural decisions that reduce complexity, scale teams, and support evolving product needs.",
-    ],
-    bullets: [
-      "Component-driven architectures (React, Next.js)",
-      "Scalability & maintainability by design",
-      "Code quality, testing strategies and sustainability",
-      "Performance-first mindset from day one",
-    ],
-  },
-  {
-    id: "ecommerce",
-    indexLabel: "02 · Ecommerce & Performance-Critical Platforms",
-    title: "Ecommerce & Performance",
-    micro: "Revenue-critical platforms optimised for speed and conversion.",
-    icon: "{02}",
-    heading:
-      "Revenue-critical platforms optimised for speed, UX and conversion.",
-    paragraphs: [
-      "We specialise in revenue-critical ecommerce platforms, where performance, UX, and reliability directly impact conversion and business outcomes.",
-      "From leading complex Salesforce Commerce Cloud (SFCC) migrations to optimising existing Shopify and custom stacks, our focus is on building fast, accessible, and conversion-friendly user journeys.",
-    ],
-    bullets: [
-      "SFCC migration leadership and frontend architecture",
-      "Core Web Vitals & Lighthouse optimisation",
-      "UX, accessibility (WCAG 2.1) and SEO-minded performance",
-      "A/B testing and data-informed optimisation loops",
-      "Turning performance into measurable business impact",
-    ],
-  },
-  {
-    id: "product",
-    indexLabel: "03 · Product Strategy & AI Integration",
-    title: "Product Strategy & AI",
-    micro: "Business goals translated into clear technical decisions.",
-    icon: "{03}",
-    heading: "Bridging product goals with technical execution.",
-    paragraphs: [
-      "We bridge the gap between engineering execution and product strategy. By combining technical leadership with product thinking, we translate business goals into clear roadmaps, technical decisions, and scalable solutions.",
-      "We have led the product ownership and engineering of AI-powered applications, integrating OpenAI APIs to accelerate workflows, reduce noise, and improve decision-making across teams.",
-    ],
-    bullets: [
-      "Product discovery, roadmapping and prioritisation",
-      "AI integration using OpenAI APIs and custom tooling",
-      "Agile / Scrum leadership and stakeholder alignment",
-      "Engineering decisions grounded in real constraints",
-    ],
-  },
-  {
-    id: "automation",
-    indexLabel: "04 · AI Automation & Intelligent Workflows",
-    title: "AI Automation",
-    micro: "Intelligent workflows that remove friction and manual work.",
-    icon: "{04}",
-    heading: "Automating the boring, amplifying the meaningful.",
-    paragraphs: [
-      "We design and implement AI-powered automation workflows that reduce manual work, speed up decision-making, and improve operational efficiency across product and engineering teams.",
-      "Using tools like n8n, custom scripts and API integrations, we connect platforms, data sources and AI models to create intelligent pipelines tailored to real business needs — not over-engineered experiments.",
-    ],
-    bullets: [
-      "Automated content and data pipelines",
-      "AI-assisted QA, analysis and reporting",
-      "Workflow orchestration across teams and tools",
-      "Reducing operational overhead through automation",
-      "Turning raw data into actionable insights",
-    ],
-  },
-  {
-    id: "leadership",
-    indexLabel: "05 · Collaboration & Technical Leadership",
-    title: "Technical Leadership",
-    micro: "Clear ownership, alignment and senior decision-making.",
-    icon: "{05}",
-    heading: "Aligning product, design and engineering around impact.",
-    paragraphs: [
-      "We work closely with designers, product managers, and backend teams to align technical execution with product vision. Our role often sits at the intersection of architecture, delivery, and decision-making — ensuring teams move fast without sacrificing quality.",
-    ],
-    bullets: [
-      "Cross-functional collaboration at a senior level",
-      "Clear communication and ownership of decisions",
-      "Reducing friction between product, design and engineering",
-      "Sustainable delivery over short-term hacks",
-    ],
-  },
-  {
-    id: "delivery",
-    indexLabel: "06 · Delivery, Quality & Risk Management",
-    title: "Delivery & Risk",
-    micro: "Predictable delivery in complex, high-impact environments.",
-    icon: "{06}",
-    heading: "Predictable delivery in complex, high-impact environments.",
-    paragraphs: [
-      "We focus on predictable, high-quality delivery in complex technical environments. By applying proven engineering practices, we reduce technical risk, avoid costly rework, and ensure that products scale reliably over time.",
-      "This includes making pragmatic trade-offs, managing technical debt consciously, and building systems that are easy to evolve rather than fragile to change.",
-    ],
-    bullets: [
-      "Clear delivery planning and scope definition",
-      "Quality standards, testing strategies and reviews",
-      "Conscious technical debt management",
-      "Risk mitigation in performance-critical systems",
-      "Long-term maintainability over quick hacks",
-    ],
-  },
-];
-
 const ExpertiseSection: React.FC = () => {
+  const t = useTranslations("Expertise");
   const [activeId, setActiveId] = useState<PillarId>("frontend");
+
+  const pillars: Pillar[] = [
+    {
+      id: "frontend",
+      indexLabel: t("ui.indexLabel", { number: "01", title: t("pillars.frontend.title") }),
+      title: t("pillars.frontend.title"),
+      micro: t("pillars.frontend.micro"),
+      icon: "{01}",
+      heading: t("pillars.frontend.heading"),
+      paragraphs: [
+        t("pillars.frontend.paragraphs.0"),
+        t("pillars.frontend.paragraphs.1"),
+      ],
+      bullets: [
+        t("pillars.frontend.bullets.0"),
+        t("pillars.frontend.bullets.1"),
+        t("pillars.frontend.bullets.2"),
+        t("pillars.frontend.bullets.3"),
+      ],
+    },
+    {
+      id: "ecommerce",
+      indexLabel: t("ui.indexLabel", { number: "02", title: t("pillars.ecommerce.title") }),
+      title: t("pillars.ecommerce.title"),
+      micro: t("pillars.ecommerce.micro"),
+      icon: "{02}",
+      heading: t("pillars.ecommerce.heading"),
+      paragraphs: [
+        t("pillars.ecommerce.paragraphs.0"),
+        t("pillars.ecommerce.paragraphs.1"),
+      ],
+      bullets: [
+        t("pillars.ecommerce.bullets.0"),
+        t("pillars.ecommerce.bullets.1"),
+        t("pillars.ecommerce.bullets.2"),
+        t("pillars.ecommerce.bullets.3"),
+        t("pillars.ecommerce.bullets.4"),
+      ],
+    },
+    {
+      id: "product",
+      indexLabel: t("ui.indexLabel", { number: "03", title: t("pillars.product.title") }),
+      title: t("pillars.product.title"),
+      micro: t("pillars.product.micro"),
+      icon: "{03}",
+      heading: t("pillars.product.heading"),
+      paragraphs: [
+        t("pillars.product.paragraphs.0"),
+        t("pillars.product.paragraphs.1"),
+      ],
+      bullets: [
+        t("pillars.product.bullets.0"),
+        t("pillars.product.bullets.1"),
+        t("pillars.product.bullets.2"),
+        t("pillars.product.bullets.3"),
+      ],
+    },
+    {
+      id: "automation",
+      indexLabel: t("ui.indexLabel", { number: "04", title: t("pillars.automation.title") }),
+      title: t("pillars.automation.title"),
+      micro: t("pillars.automation.micro"),
+      icon: "{04}",
+      heading: t("pillars.automation.heading"),
+      paragraphs: [
+        t("pillars.automation.paragraphs.0"),
+        t("pillars.automation.paragraphs.1"),
+      ],
+      bullets: [
+        t("pillars.automation.bullets.0"),
+        t("pillars.automation.bullets.1"),
+        t("pillars.automation.bullets.2"),
+        t("pillars.automation.bullets.3"),
+        t("pillars.automation.bullets.4"),
+      ],
+    },
+    {
+      id: "leadership",
+      indexLabel: t("ui.indexLabel", { number: "05", title: t("pillars.leadership.title") }),
+      title: t("pillars.leadership.title"),
+      micro: t("pillars.leadership.micro"),
+      icon: "{05}",
+      heading: t("pillars.leadership.heading"),
+      paragraphs: [
+        t("pillars.leadership.paragraphs.0"),
+      ],
+      bullets: [
+        t("pillars.leadership.bullets.0"),
+        t("pillars.leadership.bullets.1"),
+        t("pillars.leadership.bullets.2"),
+        t("pillars.leadership.bullets.3"),
+      ],
+    },
+    {
+      id: "delivery",
+      indexLabel: t("ui.indexLabel", { number: "06", title: t("pillars.delivery.title") }),
+      title: t("pillars.delivery.title"),
+      micro: t("pillars.delivery.micro"),
+      icon: "{06}",
+      heading: t("pillars.delivery.heading"),
+      paragraphs: [
+        t("pillars.delivery.paragraphs.0"),
+        t("pillars.delivery.paragraphs.1"),
+      ],
+      bullets: [
+        t("pillars.delivery.bullets.0"),
+        t("pillars.delivery.bullets.1"),
+        t("pillars.delivery.bullets.2"),
+        t("pillars.delivery.bullets.3"),
+        t("pillars.delivery.bullets.4"),
+      ],
+    },
+  ];
+
   const activePillar = pillars.find((p) => p.id === activeId) ?? pillars[0];
 
   return (
@@ -151,11 +152,11 @@ const ExpertiseSection: React.FC = () => {
     >
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-4 text-center text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-          <span className="text-hunter-green">02.</span> Core Expertise &
-          <br className="hidden md:block" /> Strategic Pillars
+          <span className="text-hunter-green">02.</span> {t("title.part1")}
+          <br className="hidden md:block" /> {t("title.part2")}
         </h2>
         <p className="mx-auto mb-6 max-w-3xl text-center text-xl text-gray-400">
-          Hunting the balance between clean code, UX and real impact.
+          {t("subtitle")}
         </p>
 
         {/* Layout principal: izquierda grid, derecha detalle */}
@@ -174,6 +175,7 @@ const ExpertiseSection: React.FC = () => {
                   isFirst={isFirst}
                   onClick={() => setActiveId(pillar.id)}
                   index={i}
+                  t={t}
                 />
               );
             })}
@@ -223,12 +225,14 @@ function SpotlightCard({
   isFirst,
   onClick,
   index,
+  t,
 }: {
   pillar: Pillar;
   activeId: PillarId;
   isFirst: boolean;
   onClick: () => void;
   index: number;
+  t: any;
 }) {
   const isActive = pillar.id === activeId;
   const mouseX = useMotionValue(0);
@@ -306,7 +310,7 @@ function SpotlightCard({
         className={`relative mt-4 inline-flex items-center text-[11px] font-medium transition-colors ${isActive ? "text-hunter-orange" : "text-hunter-green/80 group-hover:text-hunter-green"
           }`}
       >
-        {isActive ? "Currently selected" : "Read more"}
+        {isActive ? t("ui.selected") : t("ui.readMore")}
         <span className="ml-1 translate-y-[1px] text-xs">
           {isActive ? "●" : "↗"}
         </span>

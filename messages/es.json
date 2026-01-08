@@ -1,0 +1,464 @@
+{
+    "Header": {
+        "nav": {
+            "Expertise": "Expertise",
+            "TheLab": "The Lab",
+            "Bio": "Bio",
+            "Stack": "Stack",
+            "Process": "Proceso"
+        },
+        "cta": {
+            "AIConsulting": "Consultoría IA",
+            "LetsWork": "Hablemos"
+        }
+    },
+    "Hero": {
+        "subHeader": "Automatización IA , Frontend Engineer , Product-mindset",
+        "title": {
+            "part1": "Creamos Productos Digitales de",
+            "highlight1": "Alto Rendimiento",
+            "part2": "que",
+            "highlight2": "Escalan"
+        },
+        "description": "CodeHunter Lab fusiona ingeniería técnica avanzada, estrategia de producto y diseño centrado en el usuario para acelerar tu hoja de ruta digital.",
+        "cta": {
+            "initialize": "Iniciar Proyecto",
+            "caseStudies": "Ver Casos de Éxito"
+        }
+    },
+    "Footer": {
+        "brandDescription": "Arquitectando el futuro de la automatización empresarial y flujos de trabajo con IA.",
+        "Expertise": {
+            "title": "Expertise",
+            "items": {
+                "AIAgents": "Agentes IA",
+                "n8nMigration": "Migración n8n",
+                "SystemArchitecture": "Arquitectura de Sistemas",
+                "CustomLLMs": "LLMs Personalizados"
+            }
+        },
+        "Navigation": {
+            "title": "Navegación",
+            "items": {
+                "AIConsulting": "Consultoría IA",
+                "OurWork": "Nuestro Trabajo",
+                "Calculator": "Calculadora ROI",
+                "Contact": "Contacto"
+            }
+        },
+        "Availability": {
+            "nextOpening": "Próxima Disponibilidad: {date}",
+            "title": "¿Listo para escalar?",
+            "subtitle": "Agendando auditorías de arquitectura para el Q1.",
+            "button": "Contactar"
+        },
+        "Copyright": {
+            "rights": "CodeHunter Lab.",
+            "location": "Leiden, Países Bajos",
+            "developedBy": "Desarrollado por"
+        }
+    },
+    "Expertise": {
+        "title": {
+            "part1": "Expertise Central y",
+            "part2": "Pilares Estratégicos"
+        },
+        "subtitle": "El equilibrio entre código limpio, UX impecable e impacto real.",
+        "pillars": {
+            "frontend": {
+                "title": "Arquitectura Frontend",
+                "micro": "Sistemas robustos construidos para durar.",
+                "heading": "Aplicaciones web escalables, mantenibles y de alto impacto.",
+                "paragraphs": {
+                    "0": "Diseñamos y lideramos el desarrollo de aplicaciones web de alto calibre. Nuestra base es una arquitectura moderna (React, Next.js, TypeScript), enfocada obsesivamente en la escalabilidad a largo plazo, el rendimiento y la experiencia de desarrollo.",
+                    "1": "No escribimos código por escribir. Tomamos decisiones arquitectónicas que eliminan la complejidad, permiten escalar equipos y se adaptan a la evolución de tu producto."
+                },
+                "bullets": {
+                    "0": "Arquitectura basada en componentes (React, Next.js)",
+                    "1": "Escalabilidad y mantenibilidad desde el diseño",
+                    "2": "Calidad de código y estrategias de testing sostenibles",
+                    "3": "Obsesión por el rendimiento (Performance-first)"
+                }
+            },
+            "ecommerce": {
+                "title": "Ecommerce y Performance",
+                "micro": "Plataformas críticas optimizadas para facturar.",
+                "heading": "Velocidad, UX y conversión para plataformas críticas.",
+                "paragraphs": {
+                    "0": "Nos especializamos en plataformas donde cada milisegundo cuenta. Cuando el rendimiento y la fiabilidad impactan directamente en la facturación, nosotros entramos en juego.",
+                    "1": "Desde migraciones complejas de Salesforce Commerce Cloud (SFCC) hasta la optimización extrema de Shopify y stacks a medida. Construimos journeys de usuario rápidos, accesibles y diseñados para convertir."
+                },
+                "bullets": {
+                    "0": "Liderazgo en migraciones SFCC y arquitectura",
+                    "1": "Optimización de Core Web Vitals y Lighthouse",
+                    "2": "UX, accesibilidad (WCAG 2.1) y SEO técnico",
+                    "3": "A/B testing y optimización basada en datos",
+                    "4": "Transformamos rendimiento en ingresos"
+                }
+            },
+            "product": {
+                "title": "Estrategia de Producto e IA",
+                "micro": "Objetivos de negocio, traducidos a código.",
+                "heading": "Uniendo visión de producto con ejecución técnica.",
+                "paragraphs": {
+                    "0": "Eliminamos la brecha entre ingeniería y negocio. Combinamos liderazgo técnico con visión de producto para traducir objetivos comerciales en roadmaps claros y soluciones técnicas viables.",
+                    "1": "Lideramos la ingeniería de aplicaciones potenciadas por IA, integrando APIs de OpenAI para acelerar flujos, reducir ruido y potenciar la toma de decisiones estratégica."
+                },
+                "bullets": {
+                    "0": "Discovery, roadmap y priorización de producto",
+                    "1": "Integración de IA (OpenAI) y herramientas a medida",
+                    "2": "Liderazgo Ágil y alineación con stakeholders",
+                    "3": "Ingeniería realista basada en restricciones reales"
+                }
+            },
+            "automation": {
+                "title": "Automatización IA",
+                "micro": "Flujos inteligentes que eliminan el trabajo manual.",
+                "heading": "Automatiza lo aburrido. Potencia lo importante.",
+                "paragraphs": {
+                    "0": "Diseñamos flujos de automatización con IA que erradican el trabajo manual repetitivo, aceleran decisiones y disparan la eficiencia operativa.",
+                    "1": "Con herramientas como n8n, scripts a medida e integraciones API, conectamos tu ecosistema de datos para crear pipelines inteligentes que resuelven problemas reales. Nada de experimentos sobre-ingenierizados."
+                },
+                "bullets": {
+                    "0": "Pipelines automatizados de datos y contenido",
+                    "1": "QA, análisis y reportes asistidos por IA",
+                    "2": "Orquestación de flujos entre equipos",
+                    "3": "Reducción drástica de carga operativa",
+                    "4": "Convierte datos brutos en insights accionables"
+                }
+            },
+            "leadership": {
+                "title": "Liderazgo Técnico",
+                "micro": "Claridad, alineación y decisiones senior.",
+                "heading": "Alineando producto, diseño e ingeniería.",
+                "paragraphs": {
+                    "0": "Colaboramos estrechamente con diseño, producto y backend para asegurar que la ejecución técnica cumpla con la visión. Operamos en la intersección de arquitectura, entrega y estrategia, asegurando velocidad sin sacrificar calidad."
+                },
+                "bullets": {
+                    "0": "Colaboración cross-functional de alto nivel",
+                    "1": "Comunicación clara y ownership total",
+                    "2": "Eliminamos la fricción entre áreas",
+                    "3": "Entrega sostenible, sin deuda técnica innecesaria"
+                }
+            },
+            "delivery": {
+                "title": "Entrega y Riesgo",
+                "micro": "Resultados predecibles en entornos complejos.",
+                "heading": "Entrega predecible cuando hay mucho en juego.",
+                "paragraphs": {
+                    "0": "Nos enfocamos en la entrega predecible y de calidad. Aplicamos ingeniería probada para reducir riesgos, evitar retrabajo y asegurar que tu producto escale sin romperse.",
+                    "1": "Sabemos hacer trade-offs pragmáticos, gestionamos la deuda técnica de forma consciente y construimos sistemas evolutivos, no frágiles."
+                },
+                "bullets": {
+                    "0": "Planificación clara y definición de alcance",
+                    "1": "Estándares de calidad y testing riguroso",
+                    "2": "Gestión consciente de deuda técnica",
+                    "3": "Mitigación de riesgos en sistemas críticos",
+                    "4": "Mantenibilidad a largo plazo vs parches rápidos"
+                }
+            }
+        },
+        "ui": {
+            "selected": "Seleccionado",
+            "readMore": "Leer más",
+            "indexLabel": "{number} · {title}"
+        }
+    },
+    "TheLab": {
+        "title": "The Lab",
+        "subtitle": "Soluciones de ingeniería y liderazgo estratégico con impacto de negocio medible.",
+        "projects": {
+            "0": {
+                "number": "Case Study 01 / Producto IA",
+                "title": "Acelerador de Producto: App de Productividad IA",
+                "description": "Liderazgo integral en frontend y Producto para una app de productividad con IA. El reto: crear una arquitectura escalable integrando modelos de ML y OpenAI para ofrecer una experiencia personalizada y ultra-rápida.",
+                "results": {
+                    "0": "Arquitectura Frontend en React, Next.js y TypeScript diseñada para escalar.",
+                    "1": "Integración de funciones IA vía OpenAI para hiper-personalización.",
+                    "2": "Monitoreo continuo (Lighthouse, Core Web Vitals) y suite de tests (Jest).",
+                    "3": "Definición de visión y roadmap, alineando técnica y negocio."
+                }
+            },
+            "1": {
+                "number": "Case Study 02 / E-commerce",
+                "title": "Basic-Fit: Migración E-commerce Masiva (SFCC)",
+                "description": "Liderazgo en la migración crítica del sitio de Basic-Fit a Salesforce Commerce Cloud. Un proyecto de alto riesgo afectando a múltiples países. El objetivo: transición sin fricción, mejora de UX, rendimiento y SEO.",
+                "results": {
+                    "0": "Migración exitosa a SFCC manteniendo la calidad de UX.",
+                    "1": "Implementación de A/B testing con mejoras directas en conversión.",
+                    "2": "Desarrollo de templates personalizados en SFCC y diseño responsivo.",
+                    "3": "Código seguro, escalable y con analítica integrada."
+                }
+            },
+            "2": {
+                "number": "Case Study 03 / Track Record",
+                "title": "Impulsando el Crecimiento Digital: +15 Éxitos",
+                "description": "Más de 15 empresas han confiado en nosotros para elevar su presencia digital. Desde startups hasta grandes corporaciones. No solo construimos software; optimizamos para el crecimiento.",
+                "results": {
+                    "0": "Partnership con clientes diversos, desde startups a enterprise.",
+                    "1": "Soluciones escalables entregadas en E-commerce, SaaS e IA.",
+                    "2": "Mejora del rendimiento, SEO y conversión."
+                }
+            }
+        },
+        "cta": "Hablemos de tu Reto"
+    },
+    "Bio": {
+        "bgText": "EL INGENIERO",
+        "title": {
+            "part1": "EL",
+            "part2": "INGENIERO"
+        },
+        "description": {
+            "p1": {
+                "part1": "Me mueve",
+                "highlight": "ayudar",
+                "part2": "y mejorar la vida de las personas."
+            },
+            "p2": {
+                "part1": "Uso mi experiencia para",
+                "highlight1": "simplificar",
+                "part2": "lo complejo, crear herramientas útiles y aportar mi",
+                "highlight2": "visión",
+                "part3": "a proyectos con propósito."
+            }
+        },
+        "stats": {
+            "years": "Años Exp.",
+            "focus": "Foco",
+            "impact": "Impacto",
+            "impactValue": "15+ Empresas"
+        },
+        "passionCard": {
+            "label": "Pasión",
+            "quote": "\"El código es el medio. El impacto es la meta.\""
+        }
+    },
+    "Stack": {
+        "subtitle": "Motor de The Lab",
+        "title": "Stack Tecnológico"
+    },
+    "Process": {
+        "title": {
+            "prefix": "06.",
+            "text": "Partnership y Proceso"
+        },
+        "subtitle": {
+            "part1": "Nos adaptamos a ti. Un",
+            "highlight": "enfoque colaborativo",
+            "part2": "donde escuchamos, creamos y maximizamos tu eficiencia."
+        },
+        "steps": {
+            "0": {
+                "title": "Te escuchamos",
+                "description": "Empezamos escuchando. Cero suposiciones. Nos sumergimos en tu negocio para entender qué necesitas realmente: ¿Integración de IA? ¿Migración crítica? ¿O una app desde cero?"
+            },
+            "1": {
+                "title": "Estrategia a Medida",
+                "description": "No vendemos recetas prefabricadas. Diseñamos TU solución. Desde automatización con IA hasta infraestructura robusta, creamos el roadmap exacto para tus desafíos."
+            },
+            "2": {
+                "title": "Implementación Ágil",
+                "description": "Ejecución con propósito. Implementamos soluciones escalables sin romper tus operaciones actuales. Nos integramos en tus flujos para una entrega transparente y fluida."
+            },
+            "3": {
+                "title": "Evolución Continua",
+                "description": "El lanzamiento es solo el principio. Te ayudamos a optimizar y refinar tu ecosistema digital, convirtiendo datos en eficiencia y asegurando que tu tecnología crezca con tu negocio."
+            }
+        },
+        "cta": {
+            "title": {
+                "text": "¿Listo para",
+                "highlight": "Acelerar?"
+            },
+            "description": {
+                "part1": "Si necesitas ayuda con un proyecto, infraestructura, desarrollo de apps o automatización con",
+                "highlight": "IA",
+                "part2": "— contáctanos."
+            }
+        }
+    },
+    "AIConsulting": {
+        "Hero": {
+            "badge": "Consultoría y Automatización IA",
+            "title": {
+                "part1": "Sistemas IA",
+                "part2": "End-to-End",
+                "highlight": "que Escalan."
+            },
+            "description": "Hay demasiado ruido ahí fuera. Vamos más allá del chat para construirte <strong class='text-white'>Flujos de Trabajo Agénticos</strong>—sistemas inteligentes que ejecutan tareas, toman decisiones y hacen avanzar tu negocio.",
+            "cta": "Auditoría Gratuita",
+            "whyUs": {
+                "title": {
+                    "part1": "Rentabilidad",
+                    "highlight": "Sobre Novedad."
+                },
+                "description": "La mayoría pierde meses en \"experimentos\" de IA aislados que no conectan con sus datos. Actuamos como tu Arquitecto Estratégico de IA, priorizando el ROI.",
+                "list": {
+                    "0": "Claridad en el Caos Técnico",
+                    "1": "Ejecución, No Solo Estrategia",
+                    "2": "Impacto Basado en Valor y ROI"
+                },
+                "systemStatus": {
+                    "label": "Estado del Sistema",
+                    "value": "OPTIMIZADO",
+                    "efficiencyLabel": "Eficiencia",
+                    "efficiencyValue": "+320%",
+                    "tooltip": "MONITOREO EN TIEMPO REAL"
+                }
+            }
+        },
+        "Banner": {
+            "badge": "IA y Automatización de Procesos",
+            "title": "Deja de Experimentar.",
+            "highlight": "Empieza a Escalar.",
+            "description": "La mayoría solo \"juega\" con la IA. Nosotros diseñamos sistemas autónomos que se integran en tu stack para eliminar costes superfluos y disparar tu margen de beneficio.",
+            "cta1": "Explora The Lab",
+            "cta2": "Calcula tu ROI",
+            "cards": {
+                "0": {
+                    "title": "Agentes Autónomos",
+                    "desc": "Personal de IA 24/7 para Ventas y Ops."
+                },
+                "1": {
+                    "title": "Orquestación",
+                    "desc": "Adiós a la entrada manual de datos con n8n."
+                },
+                "2": {
+                    "title": "Arquitectura de Valor",
+                    "desc": "Vendemos eficiencia recurrente, no horas."
+                }
+            }
+        },
+        "ROICalculator": {
+            "badge": "Auditoría de Eficiencia",
+            "title": "¿Cuánto te cuesta la",
+            "highlight": "Ineficiencia?",
+            "subtitle": "",
+            "description": "Los procesos manuales son un impuesto silencioso a tu facturación. Calcula cuánto capital quemas en tareas que un Agente IA haría por una fracción del coste.",
+            "realityCard": {
+                "title": "La Realidad Hoy",
+                "description": "Con costes laborales al alza, pagar a especialistas por picar datos no es sostenible. La automatización ya no es un lujo, es supervivencia."
+            },
+            "inputs": {
+                "employees": "Equipo Manual",
+                "employeesUnit": "Personas",
+                "hours": "Horas Repetitivas/Semana (por persona)",
+                "hoursUnit": "Horas",
+                "rate": "Coste Hora Promedio",
+                "rateUnit": "/hora"
+            },
+            "results": {
+                "monthly": "Desperdicio Mensual",
+                "annual": "Ahorro Anual Potencial",
+                "note": "Capital reinvertible en crecimiento o I+D.",
+                "cta": "Detén la fuga. Audita ahora."
+            }
+        },
+        "TopAgents": {
+            "badge": "Fuerza Laboral Digital",
+            "title": "Automatiza Ventas, Operaciones",
+            "highlight": "y Marketing con IA.",
+            "description": "Deja de contratar para tareas repetitivas. Despliega Agentes IA especializados que trabajan 24/7, se integran con tus herramientas y entregan resultados que escalan.",
+            "agents": {
+                "leo": {
+                    "role": "Agente de Ventas IA",
+                    "description": "Tu comercial de élite que nunca duerme. LEO atiende leads al instante, cualifica oportunidades y cierra reuniones 24/7.",
+                    "capabilities": [
+                        "Respuesta Instantánea (Web/WhatsApp)",
+                        "Cualificación Inteligente",
+                        "Agendamiento Automático",
+                        "Seguimiento Persistente",
+                        "Handoff a Humanos cuando es necesario"
+                    ],
+                    "benefit": "Escala ingresos, no personal.",
+                    "cta": "Desplegar LEO"
+                },
+                "atlas": {
+                    "role": "Asistente Virtual IA",
+                    "description": "Tu columna vertebral operativa. ATLAS orquesta flujos, pone orden en el caos administrativo y mantiene a tu equipo centrado en lo importante.",
+                    "capabilities": [
+                        "Inbox Zero y Calendario al día",
+                        "Orquestación de Workflows",
+                        "Procesamiento de Documentos",
+                        "Onboarding de Clientes",
+                        "Entry de Datos sin errores"
+                    ],
+                    "benefit": "Elimina la fricción operativa.",
+                    "cta": "Desplegar ATLAS"
+                },
+                "orion": {
+                    "role": "Director de Marketing IA",
+                    "description": "Precisión basada en datos. ORION analiza rendimiento, optimiza campañas y detecta oportunidades de crecimiento invisibles para el ojo humano.",
+                    "capabilities": [
+                        "Análisis de ROI en Tiempo Real",
+                        "Optimización de Campañas",
+                        "Detección de Tencencias",
+                        "Estrategia de Contenido",
+                        "Monitoreo de Competencia"
+                    ],
+                    "benefit": "Marketing que genera beneficios.",
+                    "cta": "Desplegar ORION"
+                }
+            },
+            "bottleneck": {
+                "badge": "El Problema",
+                "title": "El Cuello de Botella",
+                "subtitle": "Por qué escalar a mano falla.",
+                "list": [
+                    "Leads enfriándose en el inbox",
+                    "Agendas caóticas",
+                    "Marketing a ciegas",
+                    "Equipos quemados (Burnout)"
+                ],
+                "resultLabel": "Resultado",
+                "resultValue": "Estancamiento"
+            },
+            "advantage": {
+                "badge": "La Solución",
+                "title": "La Ventaja Agéntica",
+                "subtitle": "Por qué gana la IA.",
+                "list": [
+                    "Respuesta inmediata 24/7",
+                    "Ejecución perfecta",
+                    "Decisiones por datos",
+                    "Fuerza laboral infinita"
+                ],
+                "resultLabel": "Resultado",
+                "resultValue": "Crecimiento Exponencial"
+            },
+            "diagram": {
+                "title": "Sincronizado con tu Ecosistema",
+                "capture": "Captura",
+                "process": "Procesa",
+                "optimize": "Optimiza",
+                "worksWith": "INTEGRA CON:"
+            }
+        },
+        "Migration": {
+            "badge": "Evolución del Sistema",
+            "title": "Del Caos al",
+            "highlight": "Control Total",
+            "legacy": {
+                "title": "Ops Manuales (Legacy)",
+                "desc": "Coste por tarea impredecible.<br />Frágil y difícil de escalar.<br />Datos expuestos y dispersos.",
+                "tag": "Alta Fricción"
+            },
+            "optimized": {
+                "tag": "Recomendado",
+                "title": "Núcleo Optimizado",
+                "desc": "Infraestructura n8n propia.<br />Ejecuciones ilimitadas.<br />Tus datos, tus reglas.",
+                "latencyLabel": "LATENCIA",
+                "latencyValue": "4ms",
+                "costLabel": "COSTE",
+                "costValue": "FIJO"
+            },
+            "action": {
+                "title": "Empieza a Automatizar",
+                "desc": "¿Listo para recuperar tu tiempo?<br />Inicializa tu proyecto hoy.",
+                "cta1": "Inicializar",
+                "cta2": "Consultoría"
+            }
+        }
+    }
+}

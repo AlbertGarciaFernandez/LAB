@@ -7,6 +7,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ContactForm } from "../ui/ContactForm";
+import { useTranslations } from "next-intl";
 
 interface ProcessStepProps {
   step: string;
@@ -14,34 +15,32 @@ interface ProcessStepProps {
   description: string;
 }
 
-const processSteps: ProcessStepProps[] = [
-  {
-    step: "01",
-    title: "Discovery & Listening",
-    description:
-      "We start by listening. No assumptions. We dive deep into your business context to understand your true needs—whether it's an AI integration, a platform migration, or a custom app.",
-  },
-  {
-    step: "02",
-    title: "Tailored Strategy",
-    description:
-      "We don't force-fit technologies. We design a solution adapted to YOU. From AI automation to scalable infrastructure, we create a roadmap that solves your specific challenges.",
-  },
-  {
-    step: "03",
-    title: "Agile Implementation",
-    description:
-      "Building with purpose. We implement efficient, scalable solutions without disrupting your operations. We adapt to your workflows, ensuring a smooth and transparent delivery.",
-  },
-  {
-    step: "04",
-    title: "Evolution & Efficiency",
-    description:
-      "It doesn't end at launch. We help you optimize and refine your digital ecosystem, turning data into efficiency and ensuring your solution evolves with your business.",
-  },
-];
-
 const ProcessContactSection: React.FC = () => {
+  const t = useTranslations("Process");
+
+  const processSteps: ProcessStepProps[] = [
+    {
+      step: "01",
+      title: t("steps.0.title"),
+      description: t("steps.0.description"),
+    },
+    {
+      step: "02",
+      title: t("steps.1.title"),
+      description: t("steps.1.description"),
+    },
+    {
+      step: "03",
+      title: t("steps.2.title"),
+      description: t("steps.2.description"),
+    },
+    {
+      step: "04",
+      title: t("steps.3.title"),
+      description: t("steps.3.description"),
+    },
+  ];
+
   return (
     <section
       id="process-contact"
@@ -56,10 +55,10 @@ const ProcessContactSection: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-center mb-8 text-white">
-            <span className="text-hunter-green">06.</span> Partnership {"&"} Process
+            <span className="text-hunter-green">{t("title.prefix")}</span> {t("title.text")}
           </h2>
           <p className="text-center text-xl text-gray-400 mb-20 max-w-3xl mx-auto leading-relaxed">
-            We adapt to you. A <span className="text-white font-semibold">collaborative approach</span> focused on listening, creating, and improving your efficiency.
+            {t("subtitle.part1")} <span className="text-white font-semibold">{t("subtitle.highlight")}</span> {t("subtitle.part2")}
           </p>
         </motion.div>
 
@@ -100,10 +99,10 @@ const ProcessContactSection: React.FC = () => {
         <div id="contact" className="relative scroll-mt-32">
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 text-white">
-              Ready to <span className="text-hunter-orange">Accelerate?</span>
+              {t("cta.title.text")} <span className="text-hunter-orange">{t("cta.title.highlight")}</span>
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-              If you need help with a project, infrastructure, creating an app, or want to automatize with <span className="text-white font-semibold">AI</span> — contact us.
+              {t("cta.description.part1")} <span className="text-white font-semibold">{t("cta.description.highlight")}</span> {t("cta.description.part2")}
             </p>
           </div>
 

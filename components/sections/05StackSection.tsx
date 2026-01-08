@@ -5,6 +5,7 @@
 import React from "react";
 import { InfiniteLoop } from "../ui/InfiniteLoop";
 import { TechIcons } from "../ui/TechIcons";
+import { useTranslations } from "next-intl";
 
 interface StackItem {
   id: string;
@@ -45,6 +46,8 @@ const PremiumTechBadge = ({ item }: { item: StackItem }) => (
 );
 
 const StackSection: React.FC = () => {
+  const t = useTranslations("Stack");
+
   return (
     <section id="stack" className="py-20 bg-near-black relative overflow-hidden border-t border-white/5">
       {/* Ambient Glows */}
@@ -52,10 +55,10 @@ const StackSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center relative z-10">
         <p className="text-hunter-green text-[10px] font-bold uppercase tracking-[0.3em] mb-4">
-          Powering The Lab
+          {t("subtitle")}
         </p>
         <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter uppercase opacity-90">
-          Technology Stack
+          {t("title")}
         </h2>
       </div>
 

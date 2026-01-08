@@ -3,10 +3,11 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { motion } from "framer-motion";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
 import { ScrambleText } from "../ui/ScrambleText";
+import { useTranslations } from "next-intl";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,6 +29,8 @@ const itemVariants = {
 };
 
 const HeroSection: React.FC = () => {
+  const t = useTranslations("Hero");
+
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20 overflow-hidden">
       <HeroBackgroundOrnaments />
@@ -44,7 +47,7 @@ const HeroSection: React.FC = () => {
           >
             <span className="opacity-80">{"["}&nbsp;</span>
             <ScrambleText
-              text="AI Automation , Frontend Engineer , Product-mindset"
+              text={t("subHeader")}
               delay={0.85}
               className="inline"
             />
@@ -55,13 +58,13 @@ const HeroSection: React.FC = () => {
             className="text-5xl md:text-8xl font-extrabold leading-none tracking-tighter"
             variants={itemVariants}
           >
-            Building High-
+            {t("title.part1")}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-green animate-shimmer bg-[length:200%_100%]">
-              Performance
+              {t("title.highlight1")}
             </span>
-            <br className="hidden md:block" /> Digital Products that{" "}
+            <br className="hidden md:block" /> {t("title.part2")}{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-green animate-shimmer bg-[length:200%_100%]" style={{ animationDelay: "1s" }}>
-              Scale
+              {t("title.highlight2")}
             </span>
             .
           </motion.h1>
@@ -70,9 +73,7 @@ const HeroSection: React.FC = () => {
             className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto pt-6 leading-relaxed"
             variants={itemVariants}
           >
-            CodeHunter Lab operates at the intersection of deep technical
-            engineering, product strategy, and user-centric design to accelerate
-            your digital roadmap.
+            {t("description")}
           </motion.p>
 
           <motion.div
@@ -81,11 +82,11 @@ const HeroSection: React.FC = () => {
           >
             <Link href="#contact" className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,230,162,0.3)] hover:shadow-[0_0_40px_rgba(0,230,162,0.6)] inline-block">
               <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
-              <span className="relative z-10">Initialize Project</span>
+              <span className="relative z-10">{t("cta.initialize")}</span>
             </Link>
 
             <Link href="#work" className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)] inline-block">
-              View Case Studies
+              {t("cta.caseStudies")}
             </Link>
           </motion.div>
         </motion.div>

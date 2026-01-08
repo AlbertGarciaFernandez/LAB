@@ -1,9 +1,11 @@
 import React from "react";
-import Link from "next/link";
-import { Linkedin, Mail, ArrowUpRight, Github, Twitter } from "lucide-react";
+import { Link } from "@/navigation";
+import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
+    const t = useTranslations("Footer");
 
     return (
         <footer className="relative bg-near-black pt-24 pb-12 px-6 overflow-hidden">
@@ -21,7 +23,7 @@ const Footer: React.FC = () => {
                             </h3>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            Architecting the future of enterprise automation and AI-driven workflows.
+                            {t("brandDescription")}
                         </p>
                         <div className="flex gap-4">
                             <a
@@ -43,12 +45,17 @@ const Footer: React.FC = () => {
 
                     {/* Services */}
                     <div>
-                        <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Expertise</h4>
+                        <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">{t("Expertise.title")}</h4>
                         <ul className="space-y-4">
-                            {['AI Agents', 'n8n Migration', 'System Architecture', 'Custom LLMs'].map((item) => (
-                                <li key={item}>
-                                    <a href="#services" className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
-                                        {item}
+                            {[
+                                { key: "AIAgents", href: "#services" },
+                                { key: "n8nMigration", href: "#services" },
+                                { key: "SystemArchitecture", href: "#services" },
+                                { key: "CustomLLMs", href: "#services" }
+                            ].map((item) => (
+                                <li key={item.key}>
+                                    <a href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
+                                        {t(`Expertise.items.${item.key}`)}
                                         <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                                     </a>
                                 </li>
@@ -58,17 +65,17 @@ const Footer: React.FC = () => {
 
                     {/* Navigation */}
                     <div>
-                        <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Navigation</h4>
+                        <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">{t("Navigation.title")}</h4>
                         <ul className="space-y-4">
                             {[
-                                { name: 'AI Consulting', href: '/ai-consulting' },
-                                { name: 'Our Work', href: '/#work' },
-                                { name: 'Calculator', href: '/ai-consulting#calculator' },
-                                { name: 'Contact', href: '/#contact' }
+                                { key: 'AIConsulting', href: '/ai-consulting' },
+                                { key: 'OurWork', href: '/#work' },
+                                { key: 'Calculator', href: '/ai-consulting#calculator' },
+                                { key: 'Contact', href: '/#contact' }
                             ].map((item) => (
-                                <li key={item.name}>
+                                <li key={item.key}>
                                     <Link href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors">
-                                        {item.name}
+                                        {t(`Navigation.items.${item.key}`)}
                                     </Link>
                                 </li>
                             ))}
@@ -79,15 +86,15 @@ const Footer: React.FC = () => {
                     <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-2 h-2 rounded-full bg-hunter-green animate-pulse" />
-                            <span className="text-[10px] font-bold text-hunter-green uppercase tracking-[0.2em]">Next Opening: Feb 2026</span>
+                            <span className="text-[10px] font-bold text-hunter-green uppercase tracking-[0.2em]">{t("Availability.nextOpening", { date: "Feb 2026" })}</span>
                         </div>
-                        <h4 className="text-white font-bold text-lg mb-2">Ready to scale?</h4>
-                        <p className="text-gray-400 text-xs mb-6">Booking architecture audits for Q1.</p>
+                        <h4 className="text-white font-bold text-lg mb-2">{t("Availability.title")}</h4>
+                        <p className="text-gray-400 text-xs mb-6">{t("Availability.subtitle")}</p>
                         <a
                             href="mailto:albert@codehunterlab.com"
                             className="block w-full py-3 bg-hunter-orange/10 border border-hunter-orange/20 text-hunter-orange text-center rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-hunter-orange hover:text-near-black transition-all"
                         >
-                            Drop a Line
+                            {t("Availability.button")}
                         </a>
                     </div>
                 </div>
@@ -96,15 +103,15 @@ const Footer: React.FC = () => {
                 <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
                         <p className="text-[11px] text-gray-500 font-medium uppercase tracking-widest">
-                            &copy; {currentYear} CodeHunter Lab.
+                            &copy; {currentYear} {t("Copyright.rights")}
                         </p>
                         <div className="flex gap-4">
-                            <span className="text-[11px] font-bold text-hunter-green/80 uppercase tracking-widest">Leiden, Netherlands</span>
+                            <span className="text-[11px] font-bold text-hunter-green/80 uppercase tracking-widest">{t("Copyright.location")}</span>
                         </div>
                     </div>
 
                     <div className="text-[11px] text-gray-500 font-medium uppercase tracking-[0.2em]">
-                        Developed by <span className="text-gray-300 font-bold hover:text-hunter-orange transition-colors cursor-default">Albert Garcia</span>
+                        {t("Copyright.developedBy")} <span className="text-gray-300 font-bold hover:text-hunter-orange transition-colors cursor-default">Albert Garcia</span>
                     </div>
                 </div>
             </div>

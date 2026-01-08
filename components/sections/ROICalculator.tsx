@@ -4,8 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Calculator, AlertCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const ROICalculator = () => {
+    const t = useTranslations("AIConsulting.ROICalculator");
     const [employees, setEmployees] = useState(5);
     const [hoursPerWeek, setHoursPerWeek] = useState(10);
     const [hourlyRate, setHourlyRate] = useState(65);
@@ -39,18 +41,16 @@ const ROICalculator = () => {
                 <div className="space-y-8">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase">
                         <Calculator size={14} />
-                        Efficiency Audit
+                        {t("badge")}
                     </div>
 
                     <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9]">
-                        How much is <br />
-                        <span className="text-hunter-orange">Inefficiency</span> costing you?
+                        {t("title")} <br />
+                        <span className="text-hunter-orange">{t("highlight")}</span> {t("subtitle")}
                     </h2>
 
                     <p className="text-xl text-gray-400 leading-relaxed max-w-xl">
-                        Manual workflows are a silent tax on your revenue.
-                        Estimate how much capital you're burning on tasks that an
-                        AI Agent could handle for a fraction of the cost.
+                        {t("description")}
                     </p>
 
                     <motion.div
@@ -63,11 +63,9 @@ const ROICalculator = () => {
                         <div className="flex items-start gap-5 relative z-10">
                             <AlertCircle className="text-hunter-green shrink-0 mt-1" size={28} />
                             <div>
-                                <h4 className="text-white font-bold text-xl tracking-tight">The Modern Reality</h4>
+                                <h4 className="text-white font-bold text-xl tracking-tight">{t("realityCard.title")}</h4>
                                 <p className="text-sm text-gray-400 mt-2 leading-relaxed">
-                                    With rising labor costs, paying specialists for repetitive data entry
-                                    is common but financially unsustainable. Automation is now a
-                                    competitive survival strategy.
+                                    {t("realityCard.description")}
                                 </p>
                             </div>
                         </div>
@@ -85,8 +83,8 @@ const ROICalculator = () => {
                         {/* Slider 1 */}
                         <div className="space-y-4">
                             <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-gray-400">
-                                <span>Manual Task Force</span>
-                                <span className="text-hunter-green">{employees} People</span>
+                                <span>{t("inputs.employees")}</span>
+                                <span className="text-hunter-green">{employees} {t("inputs.employeesUnit")}</span>
                             </div>
                             <input
                                 type="range" min="1" max="50" step="1"
@@ -98,8 +96,8 @@ const ROICalculator = () => {
                         {/* Slider 2 */}
                         <div className="space-y-4">
                             <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-gray-400">
-                                <span>Weekly Busywork (per person)</span>
-                                <span className="text-hunter-green">{hoursPerWeek} Hours</span>
+                                <span>{t("inputs.hours")}</span>
+                                <span className="text-hunter-green">{hoursPerWeek} {t("inputs.hoursUnit")}</span>
                             </div>
                             <input
                                 type="range" min="1" max="40" step="1"
@@ -111,8 +109,8 @@ const ROICalculator = () => {
                         {/* Slider 3 */}
                         <div className="space-y-4">
                             <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-gray-400">
-                                <span>Avg. Hourly Rate (Loaded)</span>
-                                <span className="text-hunter-green">€{hourlyRate}/hr</span>
+                                <span>{t("inputs.rate")}</span>
+                                <span className="text-hunter-green">€{hourlyRate}{t("inputs.rateUnit")}</span>
                             </div>
                             <input
                                 type="range" min="20" max="200" step="5"
@@ -128,11 +126,11 @@ const ROICalculator = () => {
 
                         <div className="grid grid-cols-2 gap-10 text-center relative z-10">
                             <div className="space-y-1 border-r border-white/10 pr-5">
-                                <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold">Monthly Waste</p>
+                                <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold">{t("results.monthly")}</p>
                                 <p className="text-3xl font-black text-white tracking-tighter">{formatCurrency(monthlySavings)}</p>
                             </div>
                             <div className="space-y-1">
-                                <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">Annual Savings</p>
+                                <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">{t("results.annual")}</p>
                                 <p className="text-3xl font-black text-hunter-green tracking-tighter">{formatCurrency(annualSavings)}</p>
                             </div>
                         </div>
@@ -140,10 +138,10 @@ const ROICalculator = () => {
 
                     <div className="mt-10 text-center space-y-6">
                         <p className="text-gray-500 text-xs font-medium tracking-wide">
-                            This capital could be re-invested into growth or R&D.
+                            {t("results.note")}
                         </p>
                         <Link href="/#contact" className="w-full py-5 bg-hunter-green text-near-black font-black uppercase tracking-widest text-xs rounded-xl transition-all hover:scale-[1.02] hover:bg-white shadow-[0_0_30px_rgba(0,230,162,0.2)] flex items-center justify-center gap-3 group">
-                            Stop the leakage. Audit now.
+                            {t("results.cta")}
                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>

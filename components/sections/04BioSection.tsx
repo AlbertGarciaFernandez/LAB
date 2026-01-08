@@ -1,21 +1,26 @@
+// components/sections/BioSection.tsx
+
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const BioSection: React.FC = () => {
+  const t = useTranslations("Bio");
+
   const experienceStats = [
     {
-      label: "Years Exp.",
+      label: t("stats.years"),
       value: "4+",
     },
     {
-      label: "Focus",
+      label: t("stats.focus"),
       value: "Product / FE",
     },
     {
-      label: "Impact",
-      value: "15+ Companies",
+      label: t("stats.impact"),
+      value: t("stats.impactValue"),
     },
   ];
 
@@ -27,7 +32,7 @@ const BioSection: React.FC = () => {
       {/* Background massive text decoration */}
       <div className="absolute top-10 left-0 w-full overflow-hidden pointer-events-none opacity-[0.03]">
         <h2 className="text-[12rem] md:text-[20rem] font-black text-white leading-none whitespace-nowrap">
-          THE ENGINEER
+          {t("bgText")}
         </h2>
       </div>
 
@@ -41,7 +46,7 @@ const BioSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-r from-hunter-green to-emerald-600">
-              THE <br /> ENGINEER
+              {t("title.part1")} <br /> {t("title.part2")}
             </h2>
           </motion.div>
 
@@ -53,10 +58,10 @@ const BioSection: React.FC = () => {
             className="space-y-6"
           >
             <p className="text-2xl md:text-3xl font-medium leading-relaxed text-gray-200">
-              I love being able to <span className="text-hunter-orange">help</span> and improve people&apos;s lives.
+              {t("description.p1.part1")} <span className="text-hunter-orange">{t("description.p1.highlight")}</span> {t("description.p1.part2")}
             </p>
             <p className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light">
-              Using my experience to make life <span className="text-hunter-green font-semibold">easier</span>, creating tools, and contributing my <span className="text-white font-serif italic">art & ideas</span> to meaningful projects.
+              {t("description.p2.part1")} <span className="text-hunter-green font-semibold">{t("description.p2.highlight1")}</span>{t("description.p2.part2")} <span className="text-white font-serif italic">{t("description.p2.highlight2")}</span> {t("description.p2.part3")}
             </p>
 
             <div className="pt-8 flex flex-wrap gap-8">
@@ -71,10 +76,6 @@ const BioSection: React.FC = () => {
         </div>
 
         {/* Right: The "Visual" or Abstract representation (Optional or kept simple) */}
-        {/* Replacing the old stats card with something more minimal/integrated or just removing the right col if the left is massive. */}
-        {/* Let's keep the right side for a visual element or just centered if we want. 
-            Actually, let's make the right side a decorative code block or abstract shape to balance.
-        */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -87,8 +88,8 @@ const BioSection: React.FC = () => {
             <div className="absolute inset-12 border border-white/5 rounded-full animate-spin-slow" style={{ animationDuration: '15s' }}></div>
 
             <div className="text-center p-8 backdrop-blur-sm bg-near-black/50 rounded-2xl border border-white/10">
-              <p className="font-mono text-sm text-hunter-green mb-2">&lt;Passion /&gt;</p>
-              <p className="italic text-gray-400">"Code is just the medium. Impact is the goal."</p>
+              <p className="font-mono text-sm text-hunter-green mb-2">&lt;{t("passionCard.label")} /&gt;</p>
+              <p className="italic text-gray-400">{t("passionCard.quote")}</p>
             </div>
           </div>
         </motion.div>
