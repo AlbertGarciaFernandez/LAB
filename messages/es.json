@@ -469,5 +469,453 @@
                 "cta2": "Consultoría"
             }
         }
+    },
+    "SoftwareLeiden": {
+        "Hero": {
+            "badge": "BASADO EN LEIDEN :: ESTÁNDARES GLOBALES",
+            "title": {
+                "part1": "Desarrollo de Software",
+                "highlight": "Reimaginado."
+            },
+            "description": "¿Buscas una <strong>empresa de software en Leiden</strong>? Combinamos la agilidad de un <strong>consultor IT</strong> local con los estándares de ingeniería de Silicon Valley. Sin relleno, solo código que funciona.",
+            "cta": {
+                "coffee": "Quedamos para un Café",
+                "services": "Ver Expertise"
+            }
+        },
+        "Services": {
+            "web": {
+                "title": "Apps Web Full-Stack",
+                "description": "Dashboards personalizados, plataformas SaaS y herramientas internas con Next.js y Supabase. Rápido, seguro y escalable."
+            },
+            "ai": {
+                "title": "Desarrollo IA Híbrido",
+                "description": "No solo creamos apps; creamos <strong>sistemas inteligentes</strong>. Integramos agentes IA, chatbots y automatización directamente en tu software."
+            },
+            "ecommerce": {
+                "title": "E-Commerce y Escala",
+                "description": "Soluciones de e-commerce de alto rendimiento que soportan picos de tráfico y se integran con tu inventario y ERP."
+            }
+        },
+        "Process": {
+            "title": "Cómo Construimos",
+            "steps": {
+                "0": {
+                    "title": "Arquitectura Primero",
+                    "desc": "No adivinamos. Mapeamos tu capacidad de datos y flujos antes de escribir una sola línea de código."
+                },
+                "1": {
+                    "title": "Iteración Rápida",
+                    "desc": "Entregamos rápido. Verás progresos cada semana, no cada mes. Sin cajas negras."
+                },
+                "2": {
+                    "title": "Traspaso Local",
+                    "desc": "Formamos a tu equipo aquí en Leiden. Eres dueño del código, la IP y la infraestructura."
+                }
+            }
+        },
+        "Local": {
+            "title": "¿Por qué trabajar con un desarrollador local en Leiden?",
+            "cards": {
+                "face": {
+                    "title": "Colaboración Cara a Cara",
+                    "description": "Nada supera sentarse a una mesa para diseñar arquitecturas complejas. Estamos disponibles para workshops en <strong>Leiden</strong>, <strong>La Haya</strong> y <strong>Amsterdam</strong>."
+                },
+                "market": {
+                    "title": "Comprensión del Mercado Holandés",
+                    "description": "Entendemos el ecosistema local, métodos de pago (iDEAL) y la cultura de negocios. Hablamos <strong>Tecnología</strong> y <strong>Negocios</strong>."
+                }
+            },
+            "hq": "Leiden HQ"
+        },
+        "FAQ": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Todo lo que necesitas saber sobre trabajar con una empresa de software en Leiden.",
+            "questions": [
+                {
+                    "q": "¿Cuánto tiempo tarda un proyecto de software típico?",
+                    "a": "Depende del alcance, pero un MVP (Producto Mínimo Viable) suele tardar entre 6 y 12 semanas. Enfatizamos la arquitectura primero para que la velocidad no comprometa la calidad."
+                },
+                {
+                    "q": "¿Podéis integrar IA en mi software actual?",
+                    "a": "Sí. Nos especializamos en desarrollo de IA híbrida, lo que significa que podemos crear agentes de IA personalizados que se comuniquen con tus bases de datos y APIs actuales."
+                },
+                {
+                    "q": "¿Soy el dueño del código una vez finalizado el proyecto?",
+                    "a": "Absolutamente. Posees el 100% de la propiedad intelectual (IP), el código fuente y la infraestructura. Sin dependencia del proveedor."
+                },
+                {
+                    "q": "¿Ofrecéis mantenimiento y soporte después del lanzamiento?",
+                    "a": "Sí, ofrecemos paquetes de soporte flexibles aquí en Zuid-Holland para asegurar que tus sistemas sigan siendo seguros y escalables mientras tu negocio crece."
+                }
+            ]
+        },
+        "SEO": {
+            "keywords": "desarrollo de software Leiden, apps web a medida Zuid-Holland, consultor IT Holanda, desarrollador React Leiden, integración IA Leiden, empresa software Randstad",
+            "extendedDesc": "Como desarrollador de software líder en Leiden, ayudamos a empresas en todo Zuid-Holland a modernizar su stack tecnológico. Ya sea que necesites una app web basada en React o una automatización compleja con IA, nuestro equipo entrega soluciones de alto rendimiento desde el corazón de la 'Sleutelstad'."
+        }
+    },
+    "ITSystemIntegration": {
+        "Hero": {
+            "badge": "CONSULTOR IT PAÍSES BAJOS",
+            "title": {
+                "part1": "Conecta tus",
+                "highlight": "Sistemas Fragmentados"
+            },
+            "description": "Somos la <strong>empresa de integración de software</strong> que hace que tus apps hablen entre sí. Conecta tu <strong>CRM</strong>, <strong>ERP</strong> y <strong>Herramientas Internas</strong> para eliminar errores.",
+            "cta": "Hablemos de tu Integración"
+        },
+        "Diagram": {
+            "source": {
+                "title": "Silos de Datos",
+                "desc": "Airtable / SQL / Excel"
+            },
+            "engine": {
+                "title": "Motor de Integración",
+                "desc": "n8n / API a Medida"
+            },
+            "outcome": {
+                "title": "Workflow Unificado",
+                "desc": "Sincronización Auto"
+            }
+        },
+        "Services": {
+            "api": {
+                "title": "Desarrollo de APIs a Medida",
+                "desc": "Creamos APIs seguras y documentadas para exponer tus datos legacy a apps modernas web y móviles."
+            },
+            "legacy": {
+                "title": "Modernización Legacy",
+                "desc": "No reescribas todo tu monolito. Lo envolvemos en una capa de API moderna para extender su vida útil."
+            },
+            "sync": {
+                "title": "Sincronización en Tiempo Real",
+                "desc": "Mantén HubSpot, Salesforce y tu ERP en perfecta armonía con arquitecturas orientadas a eventos."
+            }
+        },
+        "FAQ": {
+            "title": "Preguntas de Integración",
+            "subtitle": "Consultas habituales sobre cómo conectar tus sistemas de negocio.",
+            "questions": [
+                {
+                    "q": "¿Qué es la integración de sistemas?",
+                    "a": "Es el proceso de conectar diferentes subsistemas (como tu CRM, ERP y pasarelas de pago) en una unidad única y cohesiva donde los datos fluyen automáticamente."
+                },
+                {
+                    "q": "¿Utilizáis herramientas de automatización como n8n o Make.com?",
+                    "a": "Sí. Somos expertos en n8n y Make, pero también construimos puentes API a medida cuando las herramientas comerciales alcanzan sus límites."
+                },
+                {
+                    "q": "¿Cómo gestionáis la seguridad de los datos durante la integración?",
+                    "a": "Priorizamos la soberanía de los datos. A menudo desplegamos motores de integración auto-alojados para que tus datos comerciales sensibles nunca salgan de tu infraestructura."
+                }
+            ]
+        }
+    },
+    "InternalTools": {
+        "Hero": {
+            "badge": "DESARROLLO DE HERRAMIENTAS INTERNAS",
+            "title": {
+                "part1": "Tu Negocio,",
+                "highlight": "A Tu Manera"
+            },
+            "description": "El software estándar nunca encaja perfecto. Creamos <strong>herramientas internas a medida</strong> que se adaptan exactamente a tus flujos. Escapa del <strong>caos de las hojas de cálculo</strong>.",
+            "cta": "Empezar a Crear"
+        },
+        "Comparison": {
+            "title": "¿Por qué a Medida vs Low-Code?",
+            "custom": {
+                "title": "Desarrollo a Medida (Nuestro Método)",
+                "points": [
+                    "Sin cuotas mensuales por usuario",
+                    "UI/UX totalmente flexible",
+                    "Eres dueño del código fuente",
+                    "Escalabilidad ilimitada"
+                ]
+            },
+            "lowcode": {
+                "title": "Low-Code Genérico",
+                "points": [
+                    "Costes de escalado caros",
+                    "Interfaces rígidas y toscas",
+                    "Dependencia del proveedor (Lock-in)",
+                    "Tech de rendimiento limitado"
+                ]
+            }
+        },
+        "Tools": {
+            "dashboards": {
+                "title": "Dashboards Operativos",
+                "desc": "Visualización en tiempo real de KPIs, inventario y lógica. Controla la salud de tu negocio de un vistazo."
+            },
+            "portals": {
+                "title": "Portales de Cliente",
+                "desc": "Áreas seguras para que tus clientes suban documentos, sigan estados y se comuniquen."
+            },
+            "resource": {
+                "title": "Gestión de Recursos",
+                "desc": "Planificadores drag-and-drop adaptados a la estructura y turnos de tu equipo específico."
+            }
+        },
+        "FAQ": {
+            "title": "FAQ de Herramientas Internas",
+            "subtitle": "Deja de pelear con tu software. Empieza a construir lo que necesitas.",
+            "questions": [
+                {
+                    "q": "¿Por qué construir una herramienta interna a medida en lugar de usar Retool o Appsmith?",
+                    "a": "Para muchos negocios, las tarifas por usuario de las plataformas low-code se convierten en un coste oculto masivo a medida que creces. Nuestras herramientas no tienen cuotas mensuales por usuario y ofrecen flexibilidad total."
+                },
+                {
+                    "q": "¿Puede mi herramienta interna sincronizarse con Excel o Google Sheets?",
+                    "a": "Sí. Normalmente ayudamos a las empresas a pasar de hojas de cálculo a una base de datos real (como Supabase o PostgreSQL) manteniendo las hojas como respaldo si es necesario."
+                }
+            ]
+        }
+    },
+    "AIAutomationNL": {
+        "Hero": {
+            "badge": "AGENCIA IA LEIDEN Y PAÍSES BAJOS",
+            "title": {
+                "part1": "Automatización",
+                "highlight": "IA Práctica",
+                "sub": "para Negocios en Crecimiento"
+            },
+            "description": "Deja de ahogarte en tareas administrativas. Desplegamos <span class=\"text-white font-medium\">Agentes IA</span> y <span class=\"text-white font-medium\">workflows automatizados</span> que impactan directamente en tu cuenta de resultados. Desde <strong>Leiden</strong> para el mundo.",
+            "cta": {
+                "primary": "Reserva una Llamada",
+                "secondary": "Ver Soluciones IA"
+            }
+        },
+        "Agents": {
+            "title": {
+                "part1": "Despliega tu",
+                "highlight": "Fuerza Laboral Digital"
+            },
+            "whatsapp": {
+                "title": "Agentes IA en WhatsApp",
+                "desc": "Atención al cliente 24/7 y cualificación de leads directamente en WhatsApp. Habla como un humano, conoce tu negocio y agenda citas automáticamente.",
+                "points": [
+                    "Cero tiempos de espera",
+                    "Conexión con tu CRM",
+                    "98% de precisión en intención"
+                ]
+            },
+            "voice": {
+                "title": "Bots de Voz con IA",
+                "desc": "El futuro de las llamadas comerciales y soporte. Nuestros agentes de voz realistas pueden manejar cientos de llamadas simultáneas para cualificar leads.",
+                "points": [
+                    "Latencia humana <500ms",
+                    "Filtro de spam y leads no cualificados",
+                    "Soporte multi-idioma"
+                ]
+            },
+            "automation": {
+                "title": "Automatización de Workflows (n8n)",
+                "desc": "Somos el \"pegamento\" entre tus aplicaciones. Usando <strong>n8n</strong> y <strong>Make.com</strong>, automatizamos la entrada de datos, facturación y reportes.",
+                "points": [
+                    "Adiós al copiar y pegar",
+                    "Operaciones sin errores",
+                    "Integraciones de API a medida"
+                ]
+            },
+            "label": {
+                "capabilities": "Capacidades",
+                "popular": "POPULAR"
+            }
+        },
+        "ROI": {
+            "title": {
+                "part1": "No vendemos \"Tecnología\".",
+                "part2": "Vendemos",
+                "highlight": "Impacto en Ingresos."
+            },
+            "description": "La automatización no es solo ahorrar tiempo; es escalar sin aumentar la plantilla.",
+            "cards": {
+                "0": {
+                    "label": "AHORRO DE COSTES",
+                    "value": "40%",
+                    "desc": "Reducción media de costes operativos para nuestros clientes en los primeros 3 meses automatizando tareas manuales."
+                },
+                "1": {
+                    "label": "VALOR DE VIDA (LTV)",
+                    "value": "3x",
+                    "desc": "Respuestas más rápidas significan clientes más felices. Nuestros agentes IA responden al instante, mejorando la retención."
+                }
+            }
+        },
+        "Trust": {
+            "dont": {
+                "title": {
+                    "part1": "Lo que",
+                    "highlight": "NO",
+                    "part2": "hacemos"
+                },
+                "points": [
+                    "No vendemos \"botones mágicos\" que no hacen nada. La automatización real requiere lógica.",
+                    "No complicamos problemas simples con hype. Si un Excel funciona, te lo diremos."
+                ]
+            },
+            "do": {
+                "title": {
+                    "part1": "Lo que",
+                    "highlight": "SÍ"
+                },
+                "points": [
+                    "Construimos sistemas que posees y controlas. Sin pesadillas de dependencia del proveedor.",
+                    "Soporte local aquí en <strong>Zuid-Holland</strong>. Somos un socio, no un trabajador temporal."
+                ]
+            }
+        },
+        "SEO": {
+            "footer": "Agencia líder en automatización de IA con sede en Leiden, sirviendo al mercado de los Países Bajos y global. Especialistas en flujos n8n, APIs de WhatsApp Business y Agentes de Voz IA. Contacta con nosotros para consultoría de IA en Zuid-Holland.",
+            "keywords": "agencia IA Leiden, consultoría IA Holanda, bots de WhatsApp para empresas NL, agentes de voz IA Randstad, experto en automatización n8n, estrategia ROI IA, agentes de ventas automatizados",
+            "faq": {
+                "title": "FAQ de Automatización IA",
+                "questions": [
+                    {
+                        "q": "¿Qué es un Agente de IA?",
+                        "a": "Un Agente de IA es un software que puede percibir su entorno, razonar sobre él y tomar acciones para lograr un objetivo. A diferencia de un chatbot simple, puede ejecutar tareas como reservar citas o actualizar tu CRM."
+                    },
+                    {
+                        "q": "¿Cuánto puede ahorrar la automatización de IA a mi negocio?",
+                        "a": "En promedio, nuestros clientes ven una reducción del 40% en los costos de soporte al cliente y un impulso significativo en los tiempos de respuesta de leads, lo que a menudo conduce a un aumento de más del 20% en los ingresos totales."
+                    }
+                ]
+            }
+        }
+    },
+    "ExpertisePages": {
+        "AIAgents": {
+            "Hero": {
+                "badge": "DESARROLLO DE AGENTES IA",
+                "title": {
+                    "part1": "Tu Fuerza Laboral",
+                    "highlight": "Digital 24/7"
+                },
+                "description": "Imagina un equipo de soporte que nunca duerme, nunca se queja y escala al instante. Construimos **Agentes IA** que gestionan atención al cliente, ventas y citas de forma autónoma.",
+                "cta": "Desplegar Agente"
+            },
+            "Features": {
+                "title": "¿Por qué Agentes?",
+                "cards": [
+                    {
+                        "title": "Respuesta Instantánea",
+                        "desc": "Responde a leads en < 2 segundos. La velocidad genera ingresos."
+                    },
+                    {
+                        "title": "Escala Infinita",
+                        "desc": "Gestiona 1 o 10.000 conversaciones simultáneas sin coste extra."
+                    },
+                    {
+                        "title": "Memoria Perfecta",
+                        "desc": "Los agentes recuerdan cada detalle de cada conversación, para siempre."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "Desarrollo de Agentes IA Países Bajos | Automatización 24/7",
+                "description": "Despliega agentes IA a medida para soporte y ventas. Agencia IA top en Holanda para bots de WhatsApp y Voz.",
+                "keywords": "desarrollo agentes ia, fuerza laboral digital, automatización whatsapp empresas, atención cliente ia nl"
+            }
+        },
+        "n8nMigration": {
+            "Hero": {
+                "badge": "CONSULTORÍA Y MIGRACIÓN N8N",
+                "title": {
+                    "part1": "Escapa del",
+                    "highlight": "Impuesto Zapier"
+                },
+                "description": "¿Pagas miles por automatizaciones simples? Migramos tus flujos caóticos de Zapier/Make a **n8n**, dándote propiedad, privacidad y ejecución ilimitada por una fracción del coste.",
+                "cta": "Empezar Migración"
+            },
+            "Features": {
+                "title": "¿Por qué Migrar?",
+                "cards": [
+                    {
+                        "title": "Control de Costes",
+                        "desc": "Deja de pagar por tarea. Ejecuta flujos complejos en tu propio servidor."
+                    },
+                    {
+                        "title": "Privacidad de Datos",
+                        "desc": "Mantén los datos sensibles en tu infraestructura, cumpliendo GDPR."
+                    },
+                    {
+                        "title": "Lógica Compleja",
+                        "desc": "Construye flujos sofisticados que Zapier simplemente no puede manejar."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "Consultoría y Migración n8n Países Bajos | Alternativa a Zapier",
+                "description": "Expertos en n8n en Holanda. Migramos workflows de Zapier y Make a n8n para mejor rendimiento y menores costes.",
+                "keywords": "consultor n8n holanda, migrar zapier a n8n, experto automatización workflows, automatización auto-alojada"
+            }
+        },
+        "SystemArchitecture": {
+            "Hero": {
+                "badge": "DISEÑO DE ARQUITECTURA DE SISTEMAS",
+                "title": {
+                    "part1": "Cimientos para el",
+                    "highlight": "Hiper-Crecimiento"
+                },
+                "description": "El código espagueti mata startups. Diseñamos **Arquitecturas de Sistemas** robustas y escalables usando Next.js y Microservicios que pueden manejar millones de usuarios sin colapsar.",
+                "cta": "Auditar tu Stack"
+            },
+            "Features": {
+                "title": "Arquitectura Primero",
+                "cards": [
+                    {
+                        "title": "Escalabilidad",
+                        "desc": "Sistemas diseñados para crecer contigo, desde el MVP a la IPO."
+                    },
+                    {
+                        "title": "Mantenibilidad",
+                        "desc": "Patrones limpios y documentados que cualquier desarrollador puede entender."
+                    },
+                    {
+                        "title": "Rendimiento",
+                        "desc": "Consultas optimizadas y edge caching para cargas de <100ms."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "Consultor Arquitectura Software Países Bajos | Sistemas React Escalables",
+                "description": "Arquitectos de sistemas senior en Leiden. Diseñamos arquitecturas Next.js y cloud escalables para empresas tecnológicas ambiciosas.",
+                "keywords": "arquitecto sistemas holanda, consultoría rendimiento react, diseño software escalable, auditoría deuda técnica"
+            }
+        },
+        "CustomLLMs": {
+            "Hero": {
+                "badge": "DESARROLLO DE LLM A MEDIDA",
+                "title": {
+                    "part1": "Tu Negocio,",
+                    "highlight": "Tu Cerebro"
+                },
+                "description": "ChatGPT genérico no es suficiente. Entrenamos **LLMs a Medida** con tus datos propietarios, creando un modelo IA que habla tu idioma y conoce tus secretos—de forma segura.",
+                "cta": "Entrenar Modelo"
+            },
+            "Features": {
+                "title": "Más allá de GPT-4",
+                "cards": [
+                    {
+                        "title": "Seguridad de Datos",
+                        "desc": "Ejecuta modelos open-source (Llama 3, Mistral) en servidores privados."
+                    },
+                    {
+                        "title": "Experto de Dominio",
+                        "desc": "Modelos entrenados específicamente en tus documentos legales, médicos o técnicos."
+                    },
+                    {
+                        "title": "Eficiencia de Costes",
+                        "desc": "Modelos más pequeños y especializados a menudo superan a los gigantes y caros."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "Desarrollo y Fine-Tuning LLM Países Bajos",
+                "description": "Construye modelos IA privados para tu empresa. Hacemos fine-tuning de Llama y Mistral para casos de uso específicos en Holanda.",
+                "keywords": "desarrollo llm a medida, fine-tuning modelos ia, servidor ia privado, implementación llama 3 empresa"
+            }
+        }
     }
 }

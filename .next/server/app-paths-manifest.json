@@ -1,4 +1,11 @@
 {
-  "/[locale]/ai-consulting/page": "app/[locale]/ai-consulting/page.js",
-  "/[locale]/page": "app/[locale]/page.js"
+  "/[locale]/ai-automation-consulting-netherlands/page": "app/[locale]/ai-automation-consulting-netherlands/page.js",
+  "/[locale]/it-system-integration/page": "app/[locale]/it-system-integration/page.js",
+  "/[locale]/services/custom-internal-tools-development/page": "app/[locale]/services/custom-internal-tools-development/page.js",
+  "/[locale]/software-development-leiden/page": "app/[locale]/software-development-leiden/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/expertise/ai-agents-automation/page": "app/[locale]/expertise/ai-agents-automation/page.js",
+  "/[locale]/expertise/n8n-migration-consulting/page": "app/[locale]/expertise/n8n-migration-consulting/page.js",
+  "/[locale]/expertise/system-architecture-design/page": "app/[locale]/expertise/system-architecture-design/page.js",
+  "/[locale]/expertise/custom-llm-development/page": "app/[locale]/expertise/custom-llm-development/page.js"
 }

@@ -7,8 +7,8 @@ import { getMessages } from "next-intl/server";
 import CookieConsent from "@/components/ui/CookieConsent";
 
 
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
+//const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+//const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
 
 export const viewport = {
   themeColor: "#0B0B0B",
@@ -40,7 +40,7 @@ export default async function RootLayout({
 }>) {
   const messages = await getMessages();
   return (
-    <html lang={locale} className={`${sans.variable} ${mono.variable}`}>
+    <html lang={locale} className="sans mono">
       <body>
         <NextIntlClientProvider messages={messages}>
           <div className="bg-near-black text-white min-h-screen font-sans">

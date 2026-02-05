@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/[locale]/ai-consulting/page": [
+    "/[locale]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/ai-consulting/page.js"
+      "static/chunks/app/[locale]/page.js"
     ],
     "/[locale]/layout": [
       "static/chunks/webpack.js",
@@ -11,10 +11,25 @@
       "static/css/app/[locale]/layout.css",
       "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/page": [
+    "/[locale]/ai-automation-consulting-netherlands/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/page.js"
+      "static/chunks/app/[locale]/ai-automation-consulting-netherlands/page.js"
+    ],
+    "/[locale]/it-system-integration/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/it-system-integration/page.js"
+    ],
+    "/[locale]/software-development-leiden/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/software-development-leiden/page.js"
+    ],
+    "/[locale]/services/custom-internal-tools-development/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/services/custom-internal-tools-development/page.js"
     ]
   }
 }

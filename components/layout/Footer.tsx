@@ -48,16 +48,16 @@ const Footer: React.FC = () => {
                         <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">{t("Expertise.title")}</h4>
                         <ul className="space-y-4">
                             {[
-                                { key: "AIAgents", href: "#services" },
-                                { key: "n8nMigration", href: "#services" },
-                                { key: "SystemArchitecture", href: "#services" },
-                                { key: "CustomLLMs", href: "#services" }
+                                { key: "AIAgents", href: "/expertise/ai-agents-automation" },
+                                { key: "n8nMigration", href: "/expertise/n8n-migration-consulting" },
+                                { key: "SystemArchitecture", href: "/expertise/system-architecture-design" },
+                                { key: "CustomLLMs", href: "/expertise/custom-llm-development" }
                             ].map((item) => (
                                 <li key={item.key}>
-                                    <a href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
+                                    <Link href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
                                         {t(`Expertise.items.${item.key}`)}
                                         <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

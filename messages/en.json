@@ -469,5 +469,453 @@
                 "cta2": "Consulting"
             }
         }
+    },
+    "SoftwareLeiden": {
+        "Hero": {
+            "badge": "LEIDEN BASED :: GLOBAL STANDARDS",
+            "title": {
+                "part1": "Software Development",
+                "highlight": "Reimagined."
+            },
+            "description": "Looking for a <strong>software company in Leiden</strong>? We combine the agility of a local <strong>IT consultant</strong> with the engineering standards of Silicon Valley. No bloat, just code that works.",
+            "cta": {
+                "coffee": "Meet for Coffee",
+                "services": "View Expertise"
+            }
+        },
+        "Services": {
+            "web": {
+                "title": "Full-Stack Web Apps",
+                "description": "Custom dashboards, SaaS platforms, and internal tools built with Next.js and Supabase. Fast, secure, and scalable."
+            },
+            "ai": {
+                "title": "Hybrid AI Development",
+                "description": "We don't just build apps; we build <strong>intelligent systems</strong>. Embed AI agents, chatbots, and automation directly into your software."
+            },
+            "ecommerce": {
+                "title": "E-Commerce & Scale",
+                "description": "High-performance e-commerce solutions that handle traffic spikes and integrate seamlessly with your inventory and ERP."
+            }
+        },
+        "Process": {
+            "title": "How We Build",
+            "steps": {
+                "0": {
+                    "title": "Architecture First",
+                    "desc": "We don't guess. We map out your data capability and flows before writing a single line of code."
+                },
+                "1": {
+                    "title": "Rapid Iteration",
+                    "desc": "We ship fast. You see progress every week, not every month. No black boxes."
+                },
+                "2": {
+                    "title": "Local Handoff",
+                    "desc": "We train your team here in Leiden. You own the code, the IP, and the infrastructure."
+                }
+            }
+        },
+        "Local": {
+            "title": "Why work with a local Leiden developer?",
+            "cards": {
+                "face": {
+                    "title": "Face-to-Face Collaboration",
+                    "description": "Nothing beats sitting down at a table to map out complex architecture. We are available for on-site workshops in <strong>Leiden</strong>, <strong>Den Haag</strong>, and <strong>Amsterdam</strong>."
+                },
+                "market": {
+                    "title": "Dutch Market Understanding",
+                    "description": "We understand the local ecosystem, payment methods (iDEAL), and business culture. We speak <strong>Tech</strong> and <strong>Business</strong>."
+                }
+            },
+            "hq": "Leiden HQ"
+        },
+        "FAQ": {
+            "title": "Common Questions",
+            "subtitle": "Everything you need to know about working with a software company in Leiden.",
+            "questions": [
+                {
+                    "q": "How long does a typical software project take?",
+                    "a": "It depends on the scope, but an MVP (Minimum Viable Product) usually takes 6 to 12 weeks. We emphasize 'Architecture First' to ensure speed doesn't compromise quality."
+                },
+                {
+                    "q": "Can you integrate AI into my existing software?",
+                    "a": "Yes. We specialize in 'Hybrid AI Development', meaning we can build custom AI agents and automation layers that talk to your current databases and APIs."
+                },
+                {
+                    "q": "Do I own the code once the project is finished?",
+                    "a": "Absolutely. You own 100% of the Intellectual Property (IP), source code, and infrastructure. No vendor lock-in."
+                },
+                {
+                    "q": "Do you offer maintenance and support after launch?",
+                    "a": "Yes, we offer flexible support packages here in Zuid-Holland to ensure your systems remain secure and scalable as your business grows."
+                }
+            ]
+        },
+        "SEO": {
+            "keywords": "software development Leiden, custom web apps Zuid-Holland, IT consultant Netherlands, React developer Leiden, AI integration Leiden, software company Randstad",
+            "extendedDesc": "As a leading software developer in Leiden, we help businesses across Zuid-Holland modernize their tech stack. Whether you need a React-based web app or complex AI automation, our team delivers high-performance solutions from the heart of the Sleutelstad."
+        }
+    },
+    "ITSystemIntegration": {
+        "Hero": {
+            "badge": "IT CONSULTANT NETHERLANDS",
+            "title": {
+                "part1": "Connect Your",
+                "highlight": "Fragmented Systems"
+            },
+            "description": "We are the <strong>software integration company</strong> that makes your apps talk to each other. Connect your <strong>CRM</strong>, <strong>ERP</strong>, and <strong>Internal Tools</strong> to eliminate errors and save time.",
+            "cta": "Discuss Your Integration"
+        },
+        "Diagram": {
+            "source": {
+                "title": "Data Silos",
+                "desc": "Airtable / SQL / Excel"
+            },
+            "engine": {
+                "title": "Integration Engine",
+                "desc": "n8n / Custom API"
+            },
+            "outcome": {
+                "title": "Unified Workflow",
+                "desc": "Automated Sync"
+            }
+        },
+        "Services": {
+            "api": {
+                "title": "Custom API Development",
+                "desc": "We build secure, documented APIs to expose your legacy data to modern web/mobile apps."
+            },
+            "legacy": {
+                "title": "Legacy Modernization",
+                "desc": "Don't rewrite your entire monolith. We wrap it in a modern API layer to extend its life."
+            },
+            "sync": {
+                "title": "Real-Time Sync",
+                "desc": "Keep your HubSpot, Salesforce, and ERP in perfect harmony using event-driven architectures."
+            }
+        },
+        "FAQ": {
+            "title": "Integration FAQ",
+            "subtitle": "Common questions about connecting your business systems.",
+            "questions": [
+                {
+                    "q": "What is system integration?",
+                    "a": "It's the process of connecting different sub-systems (like your CRM, ERP, and payment gateways) into a single, cohesive unit where data flows automatically."
+                },
+                {
+                    "q": "Do you use automation tools like n8n or Make.com?",
+                    "a": "Yes. We are experts in n8n and Make, but we also build custom API bridges when 'off-the-shelf' tools hit their limits."
+                },
+                {
+                    "q": "How do you handle data security during integration?",
+                    "a": "We prioritize data sovereignty. We often deploy self-hosted integration engines so your sensitive business data never leaves your infrastructure."
+                }
+            ]
+        }
+    },
+    "InternalTools": {
+        "Hero": {
+            "badge": "INTERNAL TOOLS DEVELOPMENT",
+            "title": {
+                "part1": "Your Business,",
+                "highlight": "Run Your Way"
+            },
+            "description": "Off-the-shelf software never fits perfectly. We build standard-compliant <strong>custom internal tools</strong> that map exactly to your unique workflows. Escape the <strong>spreadsheet chaos</strong>.",
+            "cta": "Start Building"
+        },
+        "Comparison": {
+            "title": "Why Custom vs Low-Code?",
+            "custom": {
+                "title": "Custom Dev (Our Way)",
+                "points": [
+                    "No per-user monthly fees",
+                    "Full flexible UI/UX",
+                    "You own the source code",
+                    "Unlimited scalability"
+                ]
+            },
+            "lowcode": {
+                "title": "Generic Low-Code",
+                "points": [
+                    "Expensive scaling costs",
+                    "Rigid, clunky interfaces",
+                    "Vendor lock-in",
+                    "Performance ceilings"
+                ]
+            }
+        },
+        "Tools": {
+            "dashboards": {
+                "title": "Operations Dashboards",
+                "desc": "Real-time visualization of KPIs, inventory, and logic. See your business health at a glance."
+            },
+            "portals": {
+                "title": "Client Portals",
+                "desc": "Secure areas for your clients to upload documents, track status, and communicate."
+            },
+            "resource": {
+                "title": "Resource Management",
+                "desc": "Drag-and-drop schedulers tailored to your specific team structure and shifts."
+            }
+        },
+        "FAQ": {
+            "title": "Internal Tools FAQ",
+            "subtitle": "Stop fighting your software. Start building what you need.",
+            "questions": [
+                {
+                    "q": "Why build a custom internal tool instead of using Retool or Appsmith?",
+                    "a": "For many businesses, low-code per-user fees become a massive hidden cost as you grow. Our custom-built tools have zero monthly user fees and 100% flexibility."
+                },
+                {
+                    "q": "Can my internal tool sync with Excel or Google Sheets?",
+                    "a": "Yes. We usually help businesses graduate from sheets to a real database (like Supabase or PostgreSQL) while keeping the sheets as a backup or input method if needed."
+                }
+            ]
+        }
+    },
+    "AIAutomationNL": {
+        "Hero": {
+            "badge": "AI AGENCY LEIDEN & NETHERLANDS",
+            "title": {
+                "part1": "Practical",
+                "highlight": "AI Automation",
+                "sub": "for Growing Businesses"
+            },
+            "description": "Stop drowning in admin work. We deploy <span class=\"text-white font-medium\">AI Agents</span> and <span class=\"text-white font-medium\">automated workflows</span> that actually impact your bottom line. From <strong>Leiden</strong> to the world.",
+            "cta": {
+                "primary": "Book a Discovery Call",
+                "secondary": "See AI Solutions"
+            }
+        },
+        "Agents": {
+            "title": {
+                "part1": "Deploy Your",
+                "highlight": "Digital Workforce"
+            },
+            "whatsapp": {
+                "title": "WhatsApp AI Agents",
+                "desc": "24/7 Customer Support and Lead Qualification directly in WhatsApp. It talks like a human, knows your business, and books appointments automatically.",
+                "points": [
+                    "Zero wait times",
+                    "Connects to CRM",
+                    "98% intent accuracy"
+                ]
+            },
+            "voice": {
+                "title": "AI Voice Call Bots",
+                "desc": "The future of cold calling and inbound support. Our realistic AI voice agents can handle hundreds of calls simultaneously to qualify leads or route support.",
+                "points": [
+                    "<500ms Human-like latency",
+                    "Filter spam/unqualified leads",
+                    "Multi-language support"
+                ]
+            },
+            "automation": {
+                "title": "Workflow Automation (n8n)",
+                "desc": "We act as the \"glue\" between your apps. Using <strong>n8n</strong> and <strong>Make.com</strong>, we automate repetitive data entry, invoicing, and reporting.",
+                "points": [
+                    "No more copy-pasting",
+                    "Error-free operations",
+                    "Custom API Integrations"
+                ]
+            },
+            "label": {
+                "capabilities": "Capabilities",
+                "popular": "POPULAR"
+            }
+        },
+        "ROI": {
+            "title": {
+                "part1": "We don't sell \"Tech\".",
+                "part2": "We sell",
+                "highlight": "Revenue Impact."
+            },
+            "description": "Automation isn't just about saving time; it's about scaling without increasing headcount.",
+            "cards": {
+                "0": {
+                    "label": "COST SAVINGS",
+                    "value": "40%",
+                    "desc": "Average reduction in operational costs for our clients in the first 3 months by automating manual data entry and basic support."
+                },
+                "1": {
+                    "label": "LIFETIME VALUE",
+                    "value": "3x",
+                    "desc": "Faster response times mean happier customers. Our AI agents respond instantly, increasing customer retention and LTV."
+                }
+            }
+        },
+        "Trust": {
+            "dont": {
+                "title": {
+                    "part1": "What we",
+                    "highlight": "DON'T",
+                    "part2": "do"
+                },
+                "points": [
+                    "We don't sell \"magic buttons\" that do nothing. Real automation requires logic and structure.",
+                    "We don't overcomplicate simple problems with hype. If a spreadsheet works, we'll tell you."
+                ]
+            },
+            "do": {
+                "title": {
+                    "part1": "What we",
+                    "highlight": "DO"
+                },
+                "points": [
+                    "Build systems that you own and control. No vendor lock-in nightmares.",
+                    "Provide local support here in <strong>Zuid-Holland</strong>. We are a partner, not a gig worker."
+                ]
+            }
+        },
+        "SEO": {
+            "footer": "Leading AI Automation Agency based in Leiden, serving the Netherlands and global markets. Specializing in n8n workflows, WhatsApp Business APIs, and Voice AI Agents. Contact us for AI consulting in Zuid-Holland.",
+            "keywords": "AI agency Leiden, AI consulting Netherlands, WhatsApp bots for business NL, Voice AI agents Randstad, n8n automation expert, AI ROI strategy, automated sales agents",
+            "faq": {
+                "title": "AI Automation FAQ",
+                "questions": [
+                    {
+                        "q": "What is an AI Agent?",
+                        "a": "An AI Agent is a piece of software that can perceive its environment, reason about it, and take actions to achieve a goal. Unlike a simple chatbot, it can execute tasks like booking appointments or updating your CRM."
+                    },
+                    {
+                        "q": "How much can AI automation save my business?",
+                        "a": "On average, our clients see a 40% reduction in customer support costs and a significant boost in lead response times, often leading to a 20%+ increase in top-line revenue."
+                    }
+                ]
+            }
+        }
+    },
+    "ExpertisePages": {
+        "AIAgents": {
+            "Hero": {
+                "badge": "AI AGENT DEVELOPMENT",
+                "title": {
+                    "part1": "Your 24/7",
+                    "highlight": "Digital Workforce"
+                },
+                "description": "Imagine a support team that never sleeps, never complains, and scales instantly. We build **AI Agents** that handle customer service, sales qualification, and appointment setting autonomously.",
+                "cta": "Deploy Your Agent"
+            },
+            "Features": {
+                "title": "Why Agents?",
+                "cards": [
+                    {
+                        "title": "Instant Response",
+                        "desc": "Respond to leads in < 2 seconds. Speed leads to revenue."
+                    },
+                    {
+                        "title": "Infinite Scale",
+                        "desc": "Handle 1 or 10,000 concurrent conversations without extra cost."
+                    },
+                    {
+                        "title": "Perfect Recall",
+                        "desc": "Agents remember every detail of every conversation, forever."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "AI Agent Development Netherlands | 24/7 Automation",
+                "description": "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
+                "keywords": "ai agent development, digital workforce, whatsapp automation business, ai customer service nl"
+            }
+        },
+        "n8nMigration": {
+            "Hero": {
+                "badge": "WORKFLOW MIGRATION & CONSULTING",
+                "title": {
+                    "part1": "Escape the",
+                    "highlight": "Zapier Tax"
+                },
+                "description": "Paying thousands for simple automations? We migrate your chaotic Zapier/Make workflows to **n8n**, giving you ownership, privacy, and unlimited execution power for a fraction of the cost.",
+                "cta": "Start Migration"
+            },
+            "Features": {
+                "title": "Why Migrate?",
+                "cards": [
+                    {
+                        "title": "Cost Control",
+                        "desc": "Stop paying per-task. Run complex flows on your own server."
+                    },
+                    {
+                        "title": "Data Privacy",
+                        "desc": "Keep sensitive client data on your own infrastructure, GDPR compliant."
+                    },
+                    {
+                        "title": "Complex Logic",
+                        "desc": "Build sophisticated workflows that Zapier simply can't handle."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "n8n Consulting & Migration Services | Zapier Alternative",
+                "description": "Expert n8n consultants in the Netherlands. We migrate tailored workflows from Zapier and Make to n8n for better performance and lower costs.",
+                "keywords": "n8n consultant netherlands, migrate from zapier to n8n, workflow automation expert, self-hosted automation"
+            }
+        },
+        "SystemArchitecture": {
+            "Hero": {
+                "badge": "SYSTEM ARCHITECTURE DESIGN",
+                "title": {
+                    "part1": "Foundation for",
+                    "highlight": "Hyper-Growth"
+                },
+                "description": "Spaghetti code kills startups. We design robust, scalable **System Architectures** using Next.js and Microservices that can handle millions of users without collapsing.",
+                "cta": "Audit Your Stack"
+            },
+            "Features": {
+                "title": "Architecture First",
+                "cards": [
+                    {
+                        "title": "Scalability",
+                        "desc": "Systems designed to grow with you, from MVP to IPO."
+                    },
+                    {
+                        "title": "Maintainability",
+                        "desc": "Clean, documented patterns that any developer can jump into."
+                    },
+                    {
+                        "title": "Performance",
+                        "desc": "Optimized database queries and edge caching for sub-100ms loads."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "Software Architecture Consultant Netherlands | Scalable React Systems",
+                "description": "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
+                "keywords": "system architect netherlands, react performance consulting, scalable software design, tech debt audit"
+            }
+        },
+        "CustomLLMs": {
+            "Hero": {
+                "badge": "CUSTOM LLM DEVELOPMENT",
+                "title": {
+                    "part1": "Your Business,",
+                    "highlight": "Your Brain"
+                },
+                "description": "Generic ChatGPT isn't enough. We fine-tune **Custom LLMs** on your proprietary data, creating an AI model that speaks your language and knows your secrets—securely.",
+                "cta": "Train Your Model"
+            },
+            "Features": {
+                "title": "Beyond GPT-4",
+                "cards": [
+                    {
+                        "title": "Data Security",
+                        "desc": "Run open-source models (Llama 3, Mistral) on private servers."
+                    },
+                    {
+                        "title": "Domain Expert",
+                        "desc": "Models trained specifically on your legal, medical, or tech documents."
+                    },
+                    {
+                        "title": "Cost Efficiency",
+                        "desc": "Smaller, specialized models often outperform giant, expensive ones."
+                    }
+                ]
+            },
+            "SEO": {
+                "title": "Custom LLM Development & Fine-Tuning Netherlands",
+                "description": "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
+                "keywords": "custom llm development, fine-tuning ai models, private ai server, llama 3 business implementation"
+            }
+        }
     }
 }
