@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { motion, useAnimation } from "framer-motion";
 import { Zap, Activity, BarChart3, ArrowRight, CheckCircle2, Sparkles, ChevronRight, AlertOctagon } from "lucide-react";
 import { useState, useEffect } from "react";

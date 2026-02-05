@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Bot, TrendingUp, Zap, ArrowRight, BrainCircuit } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from "@/navigation";
 import { useTranslations } from 'next-intl';
 
 const AIBanner = () => {

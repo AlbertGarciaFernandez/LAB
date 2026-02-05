@@ -46,6 +46,15 @@
                 "Contact": "Contacto"
             }
         },
+        "Solutions": {
+            "title": "Soluciones",
+            "items": {
+                "AIAutomation": "Automatización IA NL",
+                "ITIntegration": "Integración IT",
+                "SoftwareLeiden": "Software Leiden",
+                "InternalTools": "Herramientas Internas"
+            }
+        },
         "Availability": {
             "nextOpening": "Próxima Disponibilidad: {date}",
             "title": "¿Listo para escalar?",

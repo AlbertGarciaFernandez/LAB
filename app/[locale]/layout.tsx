@@ -4,6 +4,8 @@ import "@/app/globals.css";
 import Footer from "@/components/layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import CookieConsent from "@/components/ui/CookieConsent";
+
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
@@ -45,8 +47,32 @@ export default async function RootLayout({
             <div className="bg-noise" />
             {children}
             <Footer />
+            <CookieConsent />
           </div>
         </NextIntlClientProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "CodeHunter Lab",
+              url: "https://codehunterlab.com",
+              logo: "https://codehunterlab.com/logo.png",
+              sameAs: [
+                "https://www.linkedin.com/company/codehunter-lab",
+                "https://github.com/codehunter-lab",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+31-6-2940-5122",
+                contactType: "customer service",
+                areaServed: "NL",
+                availableLanguage: ["English", "Spanish", "Dutch"],
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );

@@ -105,17 +105,17 @@ const Header: React.FC = () => {
           </nav>
 
           {/* CTAs */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             {/* AI Consulting Button - Enchanted Version */}
-            <Link href="/ai-consulting" className="relative inline-flex h-10 overflow-hidden rounded-full p-[1px] focus:outline-none group hover:scale-105 transition-transform duration-300">
+            <Link href="/ai-consulting" className="relative inline-flex h-9 md:h-10 overflow-hidden rounded-full p-[1px] focus:outline-none group hover:scale-105 transition-transform duration-300">
               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00E6A2_0%,#0B0B0B_50%,#00E6A2_100%)] opacity-70" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-6 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white backdrop-blur-3xl transition-all group-hover:bg-near-black/80 group-hover:text-hunter-green">
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-4 md:px-6 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.15em] md:tracking-[0.25em] text-white backdrop-blur-3xl transition-all group-hover:bg-near-black/80 group-hover:text-hunter-green">
                 {t("cta.AIConsulting")}
               </span>
             </Link>
 
             {/* Let's Work Button - Enchanted Version */}
-            <Link href="/#contact" className="relative inline-flex h-10 overflow-hidden rounded-full p-[1px] focus:outline-none group hover:scale-105 transition-transform duration-300">
+            <Link href="/#contact" className="hidden md:inline-flex relative h-10 overflow-hidden rounded-full p-[1px] focus:outline-none group hover:scale-105 transition-transform duration-300">
               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF7A3C_0%,#0B0B0B_50%,#FF7A3C_100%)] opacity-70" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-6 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white backdrop-blur-3xl transition-all group-hover:bg-hunter-orange group-hover:text-near-black">
                 {t("cta.LetsWork")}

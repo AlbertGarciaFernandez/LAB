@@ -46,6 +46,15 @@
                 "Contact": "Contact"
             }
         },
+        "Solutions": {
+            "title": "Solutions",
+            "items": {
+                "AIAutomation": "AI Automation NL",
+                "ITIntegration": "IT Integration",
+                "SoftwareLeiden": "Software Leiden",
+                "InternalTools": "Internal Tools"
+            }
+        },
         "Availability": {
             "nextOpening": "Next Opening: {date}",
             "title": "Ready to scale?",

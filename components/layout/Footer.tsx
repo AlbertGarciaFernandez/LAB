@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-hunter-orange/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
                     {/* Brand Section */}
                     <div className="space-y-6 col-span-1 lg:col-span-1">
                         <Link href="/" className="group inline-block">
@@ -58,6 +58,26 @@ const Footer: React.FC = () => {
                                         {t(`Expertise.items.${item.key}`)}
                                         <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                                     </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Solutions */}
+                    <div>
+                        <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-8">{t("Solutions.title")}</h4>
+                        <ul className="space-y-4">
+                            {[
+                                { key: "AIAutomation", href: "/ai-automation-consulting-netherlands" },
+                                { key: "ITIntegration", href: "/it-system-integration" },
+                                { key: "SoftwareLeiden", href: "/software-development-leiden" },
+                                { key: "InternalTools", href: "/services/custom-internal-tools-development" }
+                            ].map((item) => (
+                                <li key={item.key}>
+                                    <Link href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
+                                        {t(`Solutions.items.${item.key}`)}
+                                        <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
