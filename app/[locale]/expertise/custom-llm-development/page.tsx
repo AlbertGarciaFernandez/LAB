@@ -6,17 +6,57 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 
-export const metadata: Metadata = {
-    title: "Custom LLM Development & Fine-Tuning Netherlands",
-    description: "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
-    keywords: ["custom llm development", "fine-tuning ai models", "private ai server", "llama 3 business implementation"],
-};
+const baseUrl = "https://www.codehunterlab.com";
+const path = "/expertise/custom-llm-development";
 
-export default function CustomLLMPage() {
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const { locale } = params;
+    return {
+        title: "Custom LLM Development & Fine-Tuning Netherlands",
+        description: "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
+        keywords: ["custom llm development", "fine-tuning ai models", "private ai server", "llama 3 business implementation"],
+        alternates: {
+            canonical: `${baseUrl}/${locale}${path}`,
+            languages: {
+                en: `${baseUrl}/en${path}`,
+                es: `${baseUrl}/es${path}`,
+                "x-default": `${baseUrl}/en${path}`,
+            },
+        },
+        openGraph: {
+            title: "Custom LLM Development & Fine-Tuning Netherlands",
+            description: "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
+            url: `${baseUrl}/${locale}${path}`,
+            siteName: "CodeHunter Lab",
+            type: "website",
+            locale: locale === "es" ? "es_ES" : "en_US",
+        },
+    };
+}
+
+export default function CustomLLMPage({ params: { locale } }: { params: { locale: string } }) {
     const t = useTranslations("ExpertisePages.CustomLLMs");
+
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `https://www.codehunterlab.com/${locale}` },
+            { "@type": "ListItem", "position": 2, "name": "Expertise", "item": `https://www.codehunterlab.com/${locale}/expertise` },
+            { "@type": "ListItem", "position": 3, "name": "Custom LLM Development", "item": `https://www.codehunterlab.com/${locale}/expertise/custom-llm-development` }
+        ]
+    };
 
     return (
         <main className="relative min-h-screen bg-near-black text-white overflow-hidden">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <div className="bg-noise" />
             <HeroBackgroundOrnaments />
 

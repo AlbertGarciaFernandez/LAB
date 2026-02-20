@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://codehunterlab.com/sitemap.xml',
+        sitemap: 'https://www.codehunterlab.com/sitemap.xml',
     }
 }

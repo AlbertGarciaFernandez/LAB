@@ -7,14 +7,40 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { Check } from "lucide-react";
 import * as motion from "framer-motion/client";
 
-export const metadata: Metadata = {
-    title: "Software Development Company Leiden | Hybrid AI & Web Apps",
-    description: "Your local software development partner in Leiden. We build custom web apps, scalable e-commerce solutions, and provide expert IT consulting in Zuid-Holland.",
-    keywords: ["software company Leiden", "IT consultant Leiden", "web development Leiden", "software developer Netherlands", "AI integration Leiden", "maatwerk software leiden", "app ontwikkelaar leiden"],
-};
+const baseUrl = "https://www.codehunterlab.com";
+const path = "/software-development-leiden";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const { locale } = params;
+    return {
+        title: "Software Development Company Leiden | Hybrid AI & Web Apps",
+        description: "Your local software development partner in Leiden. We build custom web apps, scalable e-commerce solutions, and provide expert IT consulting in Zuid-Holland.",
+        keywords: ["software company Leiden", "IT consultant Leiden", "web development Leiden", "software developer Netherlands", "AI integration Leiden", "maatwerk software leiden", "app ontwikkelaar leiden"],
+        alternates: {
+            canonical: `${baseUrl}/${locale}${path}`,
+            languages: {
+                en: `${baseUrl}/en${path}`,
+                es: `${baseUrl}/es${path}`,
+                "x-default": `${baseUrl}/en${path}`,
+            },
+        },
+        openGraph: {
+            title: "Software Development Company Leiden | Hybrid AI & Web Apps",
+            description: "Your local software development partner in Leiden. We build custom web apps, scalable e-commerce solutions, and provide expert IT consulting in Zuid-Holland.",
+            url: `${baseUrl}/${locale}${path}`,
+            siteName: "CodeHunter Lab",
+            type: "website",
+            locale: locale === "es" ? "es_ES" : "en_US",
+        },
+    };
+}
 
 
-export default function SoftwareDevelopmentLeiden() {
+export default function SoftwareDevelopmentLeiden({ params: { locale } }: { params: { locale: string } }) {
     const t = useTranslations("SoftwareLeiden");
 
     const jsonLd = {
@@ -26,7 +52,7 @@ export default function SoftwareDevelopmentLeiden() {
         "author": {
             "@type": "Organization",
             "name": "CodeHunter Lab",
-            "url": "https://codehunterlab.com"
+            "url": "https://www.codehunterlab.com"
         },
         "description": "Premium software development services in Leiden, specialized in React, Next.js and AI integration.",
         "offers": {
@@ -43,11 +69,24 @@ export default function SoftwareDevelopmentLeiden() {
         }
     };
 
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `https://www.codehunterlab.com/${locale}` },
+            { "@type": "ListItem", "position": 2, "name": "Software Development Leiden", "item": `https://www.codehunterlab.com/${locale}/software-development-leiden` }
+        ]
+    };
+
     return (
         <main className="relative min-h-screen bg-near-black text-white overflow-hidden">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
 
             <div className="bg-noise" />

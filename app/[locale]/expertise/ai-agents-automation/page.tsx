@@ -6,17 +6,57 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 
-export const metadata: Metadata = {
-    title: "AI Agent Development Netherlands | 24/7 Automation",
-    description: "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
-    keywords: ["ai agent development", "digital workforce", "whatsapp automation business", "ai customer service nl"],
-};
+const baseUrl = "https://www.codehunterlab.com";
+const path = "/expertise/ai-agents-automation";
 
-export default function AIAgentsPage() {
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const { locale } = params;
+    return {
+        title: "AI Agent Development Netherlands | 24/7 Automation",
+        description: "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
+        keywords: ["ai agent development", "digital workforce", "whatsapp automation business", "ai customer service nl"],
+        alternates: {
+            canonical: `${baseUrl}/${locale}${path}`,
+            languages: {
+                en: `${baseUrl}/en${path}`,
+                es: `${baseUrl}/es${path}`,
+                "x-default": `${baseUrl}/en${path}`,
+            },
+        },
+        openGraph: {
+            title: "AI Agent Development Netherlands | 24/7 Automation",
+            description: "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
+            url: `${baseUrl}/${locale}${path}`,
+            siteName: "CodeHunter Lab",
+            type: "website",
+            locale: locale === "es" ? "es_ES" : "en_US",
+        },
+    };
+}
+
+export default function AIAgentsPage({ params: { locale } }: { params: { locale: string } }) {
     const t = useTranslations("ExpertisePages.AIAgents");
+
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `https://www.codehunterlab.com/${locale}` },
+            { "@type": "ListItem", "position": 2, "name": "Expertise", "item": `https://www.codehunterlab.com/${locale}/expertise` },
+            { "@type": "ListItem", "position": 3, "name": "AI Agents Automation", "item": `https://www.codehunterlab.com/${locale}/expertise/ai-agents-automation` }
+        ]
+    };
 
     return (
         <main className="relative min-h-screen bg-near-black text-white overflow-hidden">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <div className="bg-noise" />
             <HeroBackgroundOrnaments />
 

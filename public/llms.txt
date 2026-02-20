@@ -1,0 +1,38 @@
+# CodeHunter Lab
+
+> AI automation consultancy and software development studio based in Leiden, Netherlands.
+> We build autonomous AI systems, custom web applications, and workflow automation for growing businesses.
+
+## About
+
+CodeHunter Lab is a technical consultancy specializing in:
+- AI agent development (WhatsApp bots, voice agents, sales automation)
+- Workflow automation with n8n (migrating from Zapier/Make)
+- Custom software development (React, Next.js, TypeScript)
+- IT system integration (APIs, CRMs, ERPs)
+- Custom internal tools and admin dashboards
+- LLM fine-tuning and private AI deployments
+
+Based in Leiden, Zuid-Holland. Serving clients across the Netherlands and internationally.
+
+## Services
+
+- [AI Consulting](https://www.codehunterlab.com/en/ai-consulting)
+- [AI Automation Consulting Netherlands](https://www.codehunterlab.com/en/ai-automation-consulting-netherlands)
+- [IT System Integration](https://www.codehunterlab.com/en/it-system-integration)
+- [Software Development Leiden](https://www.codehunterlab.com/en/software-development-leiden)
+- [Custom Internal Tools](https://www.codehunterlab.com/en/services/custom-internal-tools-development)
+
+## Expertise
+
+- [AI Agents & Automation](https://www.codehunterlab.com/en/expertise/ai-agents-automation)
+- [n8n Migration Consulting](https://www.codehunterlab.com/en/expertise/n8n-migration-consulting)
+- [System Architecture Design](https://www.codehunterlab.com/en/expertise/system-architecture-design)
+- [Custom LLM Development](https://www.codehunterlab.com/en/expertise/custom-llm-development)
+
+## Contact
+
+- Phone: +31-6-2940-5122
+- Location: Leiden, Netherlands
+- Languages: English, Spanish, Dutch
+- LinkedIn: https://www.linkedin.com/company/codehunter-lab

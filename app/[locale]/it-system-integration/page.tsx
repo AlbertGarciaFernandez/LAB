@@ -6,14 +6,80 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 
-export const metadata: Metadata = {
-    title: "IT System Integration Services Netherlands | API & CRM Connection",
-    description: "Expert IT integration consultant in the Netherlands. We connect APIs, CRMs, ERPs, and build internal tools to streamline operations in Leiden, Amsterdam and Rotterdam.",
-    keywords: ["IT consultant Netherlands", "software integration company", "API integration services", "CRM integration", "ERP consulting", "n8n automation netherlands", "system architect nl"],
-};
+const baseUrl = "https://www.codehunterlab.com";
+const path = "/it-system-integration";
 
-export default function ITSystemIntegration() {
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const { locale } = params;
+    return {
+        title: "IT System Integration Services Netherlands | API & CRM Connection",
+        description: "Expert IT integration consultant in the Netherlands. We connect APIs, CRMs, ERPs, and build internal tools to streamline operations in Leiden, Amsterdam and Rotterdam.",
+        keywords: ["IT consultant Netherlands", "software integration company", "API integration services", "CRM integration", "ERP consulting", "n8n automation netherlands", "system architect nl"],
+        alternates: {
+            canonical: `${baseUrl}/${locale}${path}`,
+            languages: {
+                en: `${baseUrl}/en${path}`,
+                es: `${baseUrl}/es${path}`,
+                "x-default": `${baseUrl}/en${path}`,
+            },
+        },
+        openGraph: {
+            title: "IT System Integration Services Netherlands | API & CRM Connection",
+            description: "Expert IT integration consultant in the Netherlands. We connect APIs, CRMs, ERPs, and build internal tools to streamline operations in Leiden, Amsterdam and Rotterdam.",
+            url: `${baseUrl}/${locale}${path}`,
+            siteName: "CodeHunter Lab",
+            type: "website",
+            locale: locale === "es" ? "es_ES" : "en_US",
+        },
+    };
+}
+
+export default function ITSystemIntegration({ params: { locale } }: { params: { locale: string } }) {
     const t = useTranslations("ITSystemIntegration");
+
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `https://www.codehunterlab.com/${locale}` },
+            { "@type": "ListItem", "position": 2, "name": "IT System Integration", "item": `https://www.codehunterlab.com/${locale}/it-system-integration` }
+        ]
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is system integration?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It's the process of connecting different sub-systems (like your CRM, ERP, and payment gateways) into a single, cohesive unit where data flows automatically."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you use automation tools like n8n or Make.com?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We are experts in n8n and Make, but we also build custom API bridges when 'off-the-shelf' tools hit their limits."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle data security during integration?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We prioritize data sovereignty. We often deploy self-hosted integration engines so your sensitive business data never leaves your infrastructure."
+                }
+            }
+        ]
+    };
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -22,7 +88,7 @@ export default function ITSystemIntegration() {
         "provider": {
             "@type": "Organization",
             "name": "CodeHunter Lab",
-            "url": "https://codehunterlab.com"
+            "url": "https://www.codehunterlab.com"
         },
         "areaServed": ["Netherlands", "Leiden", "Amsterdam", "Rotterdam"],
         "description": "Connecting disparate software systems (CRM, ERP, APIs) into a unified, automated workflow.",
@@ -42,6 +108,14 @@ export default function ITSystemIntegration() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
 
             <div className="bg-noise" />

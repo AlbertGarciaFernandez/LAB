@@ -6,17 +6,57 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 
-export const metadata: Metadata = {
-    title: "Software Architecture Consultant Netherlands | Scalable React Systems",
-    description: "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
-    keywords: ["system architect netherlands", "react performance consulting", "scalable software design", "tech debt audit"],
-};
+const baseUrl = "https://www.codehunterlab.com";
+const path = "/expertise/system-architecture-design";
 
-export default function SystemArchitecturePage() {
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const { locale } = params;
+    return {
+        title: "Software Architecture Consultant Netherlands | Scalable React Systems",
+        description: "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
+        keywords: ["system architect netherlands", "react performance consulting", "scalable software design", "tech debt audit"],
+        alternates: {
+            canonical: `${baseUrl}/${locale}${path}`,
+            languages: {
+                en: `${baseUrl}/en${path}`,
+                es: `${baseUrl}/es${path}`,
+                "x-default": `${baseUrl}/en${path}`,
+            },
+        },
+        openGraph: {
+            title: "Software Architecture Consultant Netherlands | Scalable React Systems",
+            description: "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
+            url: `${baseUrl}/${locale}${path}`,
+            siteName: "CodeHunter Lab",
+            type: "website",
+            locale: locale === "es" ? "es_ES" : "en_US",
+        },
+    };
+}
+
+export default function SystemArchitecturePage({ params: { locale } }: { params: { locale: string } }) {
     const t = useTranslations("ExpertisePages.SystemArchitecture");
+
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `https://www.codehunterlab.com/${locale}` },
+            { "@type": "ListItem", "position": 2, "name": "Expertise", "item": `https://www.codehunterlab.com/${locale}/expertise` },
+            { "@type": "ListItem", "position": 3, "name": "System Architecture Design", "item": `https://www.codehunterlab.com/${locale}/expertise/system-architecture-design` }
+        ]
+    };
 
     return (
         <main className="relative min-h-screen bg-near-black text-white overflow-hidden">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <div className="bg-noise" />
             <HeroBackgroundOrnaments />
 

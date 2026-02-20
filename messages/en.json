@@ -849,6 +849,124 @@
                 "title": "n8n Consulting & Migration Services | Zapier Alternative",
                 "description": "Expert n8n consultants in the Netherlands. We migrate tailored workflows from Zapier and Make to n8n for better performance and lower costs.",
                 "keywords": "n8n consultant netherlands, migrate from zapier to n8n, workflow automation expert, self-hosted automation"
+            },
+            "Process": {
+                "title": "How the Migration Works",
+                "subtitle": "From Zapier chaos to self-hosted control in 4 steps.",
+                "steps": [
+                    {
+                        "number": "01",
+                        "title": "Workflow Audit",
+                        "desc": "We map every existing Zapier or Make workflow — triggers, actions, error paths, and hidden logic. Nothing gets lost in translation."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Architecture Design",
+                        "desc": "We design your new n8n architecture: self-hosted server, credential management, environment setup, and workflow structure."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Migration & Testing",
+                        "desc": "We rebuild each workflow in n8n with improved logic, better error handling, and parallel execution where possible. Full testing before cutover."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Handoff & Documentation",
+                        "desc": "You get full ownership: documented workflows, a trained team, and optional ongoing support. No vendor dependency, ever."
+                    }
+                ]
+            },
+            "Comparison": {
+                "title": "n8n vs The Competition",
+                "zapier": {
+                    "name": "Zapier",
+                    "cons": [
+                        "Pay per task (costs explode at scale)",
+                        "Limited logic complexity",
+                        "Data leaves your infrastructure",
+                        "Vendor lock-in"
+                    ]
+                },
+                "make": {
+                    "name": "Make.com",
+                    "cons": [
+                        "Pay per operation",
+                        "Complex pricing tiers",
+                        "No self-hosting option",
+                        "Limited enterprise features"
+                    ]
+                },
+                "n8n": {
+                    "name": "n8n (Our Choice)",
+                    "pros": [
+                        "Unlimited executions on your server",
+                        "Full code flexibility with JS/Python nodes",
+                        "GDPR-compliant: data stays on-premise",
+                        "One-time setup, zero recurring SaaS fees"
+                    ]
+                }
+            },
+            "UseCases": {
+                "title": "What We Migrate",
+                "subtitle": "Any workflow that runs on Zapier or Make can run better on n8n.",
+                "cases": [
+                    {
+                        "icon": "🤝",
+                        "title": "CRM Automation",
+                        "desc": "Lead scoring, contact enrichment, deal stage updates, and follow-up sequences synced across HubSpot, Pipedrive, or Salesforce."
+                    },
+                    {
+                        "icon": "📧",
+                        "title": "Email & Marketing",
+                        "desc": "Behavioral email triggers, list segmentation, campaign tracking, and multi-channel outreach coordinated in real-time."
+                    },
+                    {
+                        "icon": "📊",
+                        "title": "Reporting & Analytics",
+                        "desc": "Automated dashboards pulling from multiple data sources, scheduled reports delivered to Slack or email every morning."
+                    },
+                    {
+                        "icon": "🛒",
+                        "title": "Ecommerce Operations",
+                        "desc": "Order processing, inventory sync, customer notifications, and return handling across Shopify, WooCommerce, or custom stores."
+                    },
+                    {
+                        "icon": "🧾",
+                        "title": "Finance & Invoicing",
+                        "desc": "Invoice generation, payment reconciliation, expense categorization, and accounting system sync — fully automated."
+                    },
+                    {
+                        "icon": "🔗",
+                        "title": "API Integrations",
+                        "desc": "Connect any two systems that have an API. If it has a webhook or REST endpoint, we can automate it."
+                    }
+                ]
+            },
+            "FAQ": {
+                "title": "Common Questions",
+                "items": [
+                    {
+                        "q": "How long does a migration take?",
+                        "a": "Most migrations take 1-3 weeks depending on the number and complexity of workflows. Simple setups (under 10 workflows) can be live in 5 days."
+                    },
+                    {
+                        "q": "Do I need my own server to run n8n?",
+                        "a": "Yes. We recommend a VPS (like Hetzner or DigitalOcean) for €5-15/month. We handle the full server setup, SSL, backups, and monitoring as part of the migration."
+                    },
+                    {
+                        "q": "What happens to my existing Zapier workflows during migration?",
+                        "a": "Nothing. We build the n8n version in parallel and only switch over after full testing. Your Zapier workflows keep running until you approve the cutover."
+                    },
+                    {
+                        "q": "Can you add new logic that Zapier could not handle?",
+                        "a": "Absolutely. n8n supports full JavaScript/Python code nodes, complex branching, sub-workflows, and API calls that Zapier simply cannot execute. We often improve workflows significantly during migration."
+                    }
+                ]
+            },
+            "CTA": {
+                "title": "Ready to Cut Your Automation Bill?",
+                "subtitle": "Get a free workflow audit. We will show you exactly what you can save by migrating to n8n.",
+                "button": "Get Free Audit"
             }
         },
         "SystemArchitecture": {

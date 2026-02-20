@@ -6,14 +6,63 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 
-export const metadata: Metadata = {
-    title: "Custom Internal Tools Development | Automate Business Processes",
-    description: "Expert developer of custom internal tools, admin panels, and operation dashboards. Scale your business without per-user fees in the Netherlands.",
-    keywords: ["build internal tools for business", "custom admin panel development", "workflow automation consulting", "replace excel with app", "internal software developer nl", " maatwerk software ontwikkeling"],
-};
+const baseUrl = "https://www.codehunterlab.com";
+const path = "/services/custom-internal-tools-development";
 
-export default function CustomInternalTools() {
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const { locale } = params;
+    return {
+        title: "Custom Internal Tools Development | Automate Business Processes",
+        description: "Expert developer of custom internal tools, admin panels, and operation dashboards. Scale your business without per-user fees in the Netherlands.",
+        keywords: ["build internal tools for business", "custom admin panel development", "workflow automation consulting", "replace excel with app", "internal software developer nl", "maatwerk software ontwikkeling"],
+        alternates: {
+            canonical: `${baseUrl}/${locale}${path}`,
+            languages: {
+                en: `${baseUrl}/en${path}`,
+                es: `${baseUrl}/es${path}`,
+                "x-default": `${baseUrl}/en${path}`,
+            },
+        },
+        openGraph: {
+            title: "Custom Internal Tools Development | Automate Business Processes",
+            description: "Expert developer of custom internal tools, admin panels, and operation dashboards. Scale your business without per-user fees in the Netherlands.",
+            url: `${baseUrl}/${locale}${path}`,
+            siteName: "CodeHunter Lab",
+            type: "website",
+            locale: locale === "es" ? "es_ES" : "en_US",
+        },
+    };
+}
+
+export default function CustomInternalTools({ params: { locale } }: { params: { locale: string } }) {
     const t = useTranslations("InternalTools");
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Why build a custom internal tool instead of using Retool or Appsmith?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For many businesses, low-code per-user fees become a massive hidden cost as you grow. Our custom-built tools have zero monthly user fees and 100% flexibility."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can my internal tool sync with Excel or Google Sheets?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We usually help businesses graduate from sheets to a real database (like Supabase or PostgreSQL) while keeping the sheets as a backup or input method if needed."
+                }
+            }
+        ]
+    };
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -22,7 +71,7 @@ export default function CustomInternalTools() {
         "provider": {
             "@type": "Organization",
             "name": "CodeHunter Lab",
-            "url": "https://codehunterlab.com"
+            "url": "https://www.codehunterlab.com"
         },
         "description": "Designing and building custom software to solve internal operational bottlenecks without vendor lock-in.",
         "areaServed": "Netherlands",
@@ -32,11 +81,29 @@ export default function CustomInternalTools() {
         }
     };
 
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `https://www.codehunterlab.com/${locale}` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `https://www.codehunterlab.com/${locale}/services` },
+            { "@type": "ListItem", "position": 3, "name": "Custom Internal Tools", "item": `https://www.codehunterlab.com/${locale}/services/custom-internal-tools-development` }
+        ]
+    };
+
     return (
         <main className="relative min-h-screen bg-near-black text-white overflow-hidden">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
 
             <div className="bg-noise" />
