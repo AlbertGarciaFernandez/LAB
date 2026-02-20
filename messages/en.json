@@ -1035,5 +1035,44 @@
                 "keywords": "custom llm development, fine-tuning ai models, private ai server, llama 3 business implementation"
             }
         }
+    },
+    "Testimonials": {
+        "badge": "CLIENT RESULTS",
+        "title": "What Our Clients Say",
+        "subtitle": "Real outcomes from real projects.",
+        "items": [
+            {
+                "quote": "CodeHunter Lab migrated all our Zapier workflows to n8n in under two weeks. Our monthly automation bill dropped from €600 to €12. The new setup handles 10x more volume without breaking a sweat.",
+                "name": "Daan van der Berg",
+                "role": "Co-Founder",
+                "company": "GrowthStack BV",
+                "initials": "DB",
+                "color": "green"
+            },
+            {
+                "quote": "We deployed an AI voice agent for inbound leads and it now handles 80% of first-contact qualification. Our sales team only talks to prospects that are already warmed up. ROI in month one.",
+                "name": "Sofia Martínez",
+                "role": "Head of Sales",
+                "company": "Veloce Commerce",
+                "initials": "SM",
+                "color": "orange"
+            },
+            {
+                "quote": "The frontend architecture they designed for our SaaS platform cut our load time in half and our developer onboarding from days to hours. Clean, documented, maintainable — exactly what we needed.",
+                "name": "Lars Koopmans",
+                "role": "CTO",
+                "company": "Nexora SaaS",
+                "initials": "LK",
+                "color": "green"
+            },
+            {
+                "quote": "We replaced a patchwork of spreadsheets and manual processes with a custom internal dashboard. The tool paid for itself in saved admin hours within the first month of use.",
+                "name": "Emma de Boer",
+                "role": "Operations Manager",
+                "company": "LogiFlow NL",
+                "initials": "EB",
+                "color": "orange"
+            }
+        ]
     }
 }

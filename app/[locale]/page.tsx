@@ -7,6 +7,7 @@ import ExpertiseSection from "@/components/sections/02ExpertiseSection";
 import TheLabSection from "@/components/sections/03TheLabSection";
 import BioSection from "@/components/sections/04BioSection";
 import StackSection from "@/components/sections/05StackSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ProcessContactSection from "@/components/sections/06ProcessContactSection";
 import Footer from "@/components/layout/Footer";
 
@@ -21,6 +22,7 @@ const Home = () => {
                 <TheLabSection />
                 <BioSection />
                 <StackSection />
+                <TestimonialsSection />
                 <ProcessContactSection />
             </main>
         </div>

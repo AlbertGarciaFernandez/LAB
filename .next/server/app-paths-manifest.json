@@ -1,7 +1,8 @@
 {
   "/[locale]/services/custom-internal-tools-development/page": "app/[locale]/services/custom-internal-tools-development/page.js",
-  "/[locale]/software-development-leiden/page": "app/[locale]/software-development-leiden/page.js",
-  "/[locale]/expertise/system-architecture-design/page": "app/[locale]/expertise/system-architecture-design/page.js",
   "/[locale]/expertise/n8n-migration-consulting/page": "app/[locale]/expertise/n8n-migration-consulting/page.js",
-  "/[locale]/expertise/custom-llm-development/page": "app/[locale]/expertise/custom-llm-development/page.js"
+  "/[locale]/expertise/system-architecture-design/page": "app/[locale]/expertise/system-architecture-design/page.js",
+  "/[locale]/expertise/custom-llm-development/page": "app/[locale]/expertise/custom-llm-development/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/ai-consulting/page": "app/[locale]/ai-consulting/page.js"
 }

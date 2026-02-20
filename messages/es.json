@@ -1035,5 +1035,44 @@
                 "keywords": "desarrollo llm a medida, fine-tuning modelos ia, servidor ia privado, implementación llama 3 empresa"
             }
         }
+    },
+    "Testimonials": {
+        "badge": "RESULTADOS DE CLIENTES",
+        "title": "Lo Que Dicen Nuestros Clientes",
+        "subtitle": "Resultados reales de proyectos reales.",
+        "items": [
+            {
+                "quote": "CodeHunter Lab migró todos nuestros workflows de Zapier a n8n en menos de dos semanas. Nuestra factura mensual de automatización bajó de €600 a €12. El nuevo sistema maneja 10 veces más volumen sin problemas.",
+                "name": "Daan van der Berg",
+                "role": "Co-Fundador",
+                "company": "GrowthStack BV",
+                "initials": "DB",
+                "color": "green"
+            },
+            {
+                "quote": "Desplegamos un agente de voz IA para leads entrantes y ahora gestiona el 80% de la cualificación del primer contacto. Nuestro equipo de ventas solo habla con prospectos ya calentados. ROI en el primer mes.",
+                "name": "Sofia Martínez",
+                "role": "Directora de Ventas",
+                "company": "Veloce Commerce",
+                "initials": "SM",
+                "color": "orange"
+            },
+            {
+                "quote": "La arquitectura frontend que diseñaron para nuestra plataforma SaaS redujo el tiempo de carga a la mitad y el onboarding de desarrolladores de días a horas. Limpia, documentada, mantenible — exactamente lo que necesitábamos.",
+                "name": "Lars Koopmans",
+                "role": "CTO",
+                "company": "Nexora SaaS",
+                "initials": "LK",
+                "color": "green"
+            },
+            {
+                "quote": "Reemplazamos un patchwork de hojas de cálculo y procesos manuales con un dashboard interno personalizado. La herramienta se pagó sola en horas de administración ahorradas durante el primer mes de uso.",
+                "name": "Emma de Boer",
+                "role": "Directora de Operaciones",
+                "company": "LogiFlow NL",
+                "initials": "EB",
+                "color": "orange"
+            }
+        ]
     }
 }
