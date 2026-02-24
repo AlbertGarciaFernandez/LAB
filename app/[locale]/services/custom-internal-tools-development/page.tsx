@@ -237,10 +237,11 @@ export default function CustomInternalTools({ params: { locale } }: { params: { 
 
             <footer className="py-20 bg-black/40 border-t border-white/5 relative z-10">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <div className="flex flex-wrap justify-center gap-6 opacity-30 text-[12px] font-mono uppercase tracking-[0.2em] text-gray-400">
-                        <span>No Monthly Fees</span>
+                    <div className="flex flex-wrap justify-center items-center gap-4 opacity-60 text-[13px] font-mono uppercase tracking-[0.2em] text-gray-400">
                         <span>Zero Vendor Lock-In</span>
+                        <span className="text-gray-600">·</span>
                         <span>Scalable Architecture</span>
+                        <span className="text-gray-600">·</span>
                         <span>Enterprise Ready</span>
                     </div>
                 </div>

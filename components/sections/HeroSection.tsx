@@ -5,6 +5,7 @@
 import React from "react";
 import { Link } from "@/navigation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
 import { ScrambleText } from "../ui/ScrambleText";
 import { useTranslations } from "next-intl";
@@ -41,6 +42,32 @@ const HeroSection: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
+          {/* Logo */}
+          <motion.div
+            className="flex justify-center mb-2"
+            variants={itemVariants}
+          >
+            <motion.div
+              className="relative"
+              animate={{ scale: [1, 1.08, 1] }}
+              transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
+            >
+              <motion.div
+                className="absolute -inset-3 bg-hunter-green/10 rounded-full blur-xl"
+                animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.15, 1] }}
+                transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
+              />
+              <Image
+                src="/codehunter.logo.bg.png"
+                alt="CodeHunter Lab Logo"
+                width={80}
+                height={80}
+                className="relative z-10 w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-[0_0_20px_rgba(0,230,162,0.5)]"
+                priority
+              />
+            </motion.div>
+          </motion.div>
+
           <motion.div
             className="text-sm md:text-base uppercase tracking-widest text-hunter-orange font-mono mb-4"
             variants={itemVariants}

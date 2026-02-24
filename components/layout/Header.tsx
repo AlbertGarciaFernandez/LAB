@@ -130,11 +130,11 @@ const Header: React.FC = () => {
               <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-[150%] group-hover:translate-y-[150%] transition-transform duration-700 ease-in-out" />
 
               <Image
-                src="/logo-hntr.svg"
-                alt="HNTR – CodeHunter Lab"
-                width={28}
-                height={28}
-                className="relative z-10 w-7 h-7 object-contain drop-shadow-[0_0_8px_rgba(0,230,162,0.4)]"
+                src="/codehunter.logo.bg.png"
+                alt="CodeHunter Lab Logo"
+                width={32}
+                height={32}
+                className="relative z-10 w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(0,230,162,0.4)]"
                 priority
               />
             </motion.div>

@@ -22,6 +22,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = params;
   return {
+    icons: {
+      icon: "/codehunter.logo.png",
+      shortcut: "/codehunter.logo.png",
+      apple: "/codehunter.logo.png",
+    },
     title: "Next.js & React Development Agency Netherlands | CodeHunter Lab",
     description:
       "Next.js & React development agency in Leiden, Netherlands. We build scalable web applications, AI automation systems, and custom software for startups and enterprises. Book a free consultation.",
