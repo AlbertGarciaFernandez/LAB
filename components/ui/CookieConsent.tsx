@@ -56,7 +56,7 @@ export default function CookieConsent() {
                                     onClick={handleDecline}
                                     className="rounded-full p-1 text-white/50 hover:bg-white/10 hover:text-white transition-colors"
                                 >
-                                    <X className="h-5 w-5" />
+                                    <XIcon className="h-5 w-5" />
                                     <span className="sr-only">Close</span>
                                 </button>
                             </div>
