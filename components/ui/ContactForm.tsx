@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const projectTypes = [
     "Web App / Product",
@@ -119,6 +119,8 @@ export const ContactForm: React.FC = () => {
                                 name="name"
                                 id="name"
                                 required
+                                autoComplete="name"
+                                aria-required="true"
                                 className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
                                 placeholder=" "
                             />
@@ -166,22 +168,30 @@ export const ContactForm: React.FC = () => {
                             </label>
                         </div>
 
-                        {/* Budget / Goal Input */}
+                        {/* Budget / Goal Dropdown */}
                         <div className="group relative">
-                            <input
-                                type="text"
+                            <select
                                 name="budget"
                                 id="budget"
                                 required
-                                className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
-                                placeholder=" "
-                            />
+                                defaultValue=""
+                                className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors appearance-none cursor-pointer peer [&>option]:bg-near-black [&>option]:text-white"
+                            >
+                                <option value="" disabled hidden></option>
+                                <option value="< €5k">Under €5k</option>
+                                <option value="€5k – €15k">€5k – €15k</option>
+                                <option value="€15k – €30k">€15k – €30k</option>
+                                <option value="€30k – €60k">€30k – €60k</option>
+                                <option value="> €60k">Over €60k</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                            </select>
                             <label
                                 htmlFor="budget"
                                 className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
                             >
-                                Approximate Budget / Goal *
+                                Approximate Budget *
                             </label>
+                            <span className="absolute right-0 top-4 text-gray-500 pointer-events-none">▾</span>
                         </div>
 
                         {/* Email */}
@@ -191,6 +201,8 @@ export const ContactForm: React.FC = () => {
                                 name="email"
                                 id="email"
                                 required
+                                autoComplete="email"
+                                aria-required="true"
                                 className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
                                 placeholder=" "
                             />
@@ -208,15 +220,15 @@ export const ContactForm: React.FC = () => {
                                 type="tel"
                                 name="phone"
                                 id="phone"
-                                required
+                                autoComplete="tel"
                                 className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-hunter-green transition-colors placeholder:text-gray-600 peer"
                                 placeholder=" "
                             />
                             <label
                                 htmlFor="phone"
-                                className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 pointer-events-none"
+                                className="absolute left-0 top-4 text-gray-500 text-xl transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-gray-400 pointer-events-none"
                             >
-                                Phone *
+                                Phone
                             </label>
                         </div>
                     </div>
@@ -262,6 +274,9 @@ export const ContactForm: React.FC = () => {
                     </div>
                 </div>
 
+                {/* Honeypot antispam – hidden from real users */}
+                <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
                 {/* Submit Button */}
                 <div className="flex justify-center pt-8">
                     <motion.button
@@ -273,7 +288,7 @@ export const ContactForm: React.FC = () => {
                     >
                         <span className="relative z-10 flex items-center gap-3">
                             {formState === "submitting" ? "Transmitting..." : "Initialize Sequence"}
-                            {!formState && (
+                            {formState !== "submitting" && (
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             )}
                         </span>

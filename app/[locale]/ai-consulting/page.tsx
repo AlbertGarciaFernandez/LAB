@@ -4,8 +4,8 @@ import React from 'react';
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import {
-    Cpu, FileCode2, ArrowRight, Zap, Check
-} from 'lucide-react';
+    Cpu, FileCode, ArrowRight, Lightning, CheckIcon
+} from '@phosphor-icons/react/dist/ssr';
 import Header from "@/components/layout/Header";
 import ROICalculator from '@/components/sections/ROICalculator';
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
@@ -102,7 +102,7 @@ const AIConsultingPage = () => {
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-4 text-white/90 font-medium">
                                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-hunter-green/10 flex items-center justify-center border border-hunter-green/20">
-                                            <Check className="text-hunter-green" size={14} />
+                                            <CheckIcon className="text-hunter-green" size={14} />
                                         </div>
                                         {item}
                                     </li>
@@ -188,7 +188,7 @@ const AIConsultingPage = () => {
                                     <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
 
                                     <div className="w-16 h-16 mb-6 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
-                                        <Zap className="text-orange-500" size={32} />
+                                        <Lightning className="text-orange-500" size={32} />
                                     </div>
 
                                     <h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-white transition-colors">{t("Migration.legacy.title")}</h3>

@@ -4,6 +4,7 @@ import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
+import Header from "@/components/layout/Header";
 
 const baseUrl = "https://www.codehunterlab.com";
 const path = "/ai-automation-consulting-netherlands";
@@ -102,6 +103,8 @@ export default function AIAutomationNetherlands({ params: { locale } }: { params
     };
 
     return (
+        <>
+        <Header />
         <main className="relative min-h-screen bg-near-black text-white overflow-hidden">
             <script
                 type="application/ld+json"
@@ -315,5 +318,6 @@ export default function AIAutomationNetherlands({ params: { locale } }: { params
             </section>
 
         </main>
+        </>
     );
 }

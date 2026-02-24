@@ -267,4 +267,62 @@ export const TechIcons = {
             <path d="M17 10V14" stroke="currentColor" strokeWidth="2" />
         </svg>
     ),
+    Vercel: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" {...props}>
+            <path d="M12 2L22 20H2L12 2Z" fill="currentColor" />
+        </svg>
+    ),
+    Python: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M8 5C8 4 8.9 3 11 3H13C15.1 3 16 4 16 5V10H8V5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+            <path d="M16 19C16 20 15.1 21 13 21H11C8.9 21 8 20 8 19V14H16V19Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+            <path d="M8 10H5C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14H8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M16 10H19C20.1 10 21 10.9 21 12C21 13.1 20.1 14 19 14H16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <circle cx="11" cy="7" r="1" fill="currentColor" />
+            <circle cx="13" cy="17" r="1" fill="currentColor" />
+        </svg>
+    ),
+    Docker: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <rect x="3" y="9" width="4" height="3" rx="0.5" stroke="currentColor" strokeWidth="1.5" />
+            <rect x="8" y="9" width="4" height="3" rx="0.5" stroke="currentColor" strokeWidth="1.5" />
+            <rect x="13" y="9" width="4" height="3" rx="0.5" stroke="currentColor" strokeWidth="1.5" />
+            <rect x="8" y="5" width="4" height="3" rx="0.5" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M2 13.5C2 16.5 5 18 8.5 18H15C18.5 18 22 16.5 22 13.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M17 9V8C18.5 8 19.5 7 20 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+    ),
+    Prisma: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M12 2L20 19H4L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+            <path d="M12 2L7 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+    ),
+    LangChain: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M9 9H6C4.3 9 3 10.3 3 12C3 13.7 4.3 15 6 15H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M15 9H18C19.7 9 21 10.3 21 12C21 13.7 19.7 15 18 15H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M9 12H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+    ),
+    Anthropic: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M12 3L22 21H2L12 3Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+            <path d="M8.5 16H15.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+    ),
+    Redis: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <ellipse cx="12" cy="6" rx="9" ry="3" stroke="currentColor" strokeWidth="2" />
+            <path d="M3 6V18" stroke="currentColor" strokeWidth="2" />
+            <path d="M21 6V18" stroke="currentColor" strokeWidth="2" />
+            <ellipse cx="12" cy="18" rx="9" ry="3" stroke="currentColor" strokeWidth="2" />
+            <path d="M3 12C3 13.657 7.03 15 12 15C16.97 15 21 13.657 21 12" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+    ),
+    Stripe: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg viewBox="0 0 24 24" fill="none" {...props}>
+            <path d="M17 8C17 8 15 6 12 6C9 6 7 7.5 7 9.5C7 11.5 9 12.5 12 13C15 13.5 17 14.5 17 16.5C17 18.5 15 20 12 20C9 20 7 18 7 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+    ),
 };

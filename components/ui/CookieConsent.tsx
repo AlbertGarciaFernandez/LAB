@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cookie, X } from "lucide-react";
+import { Cookie, XIcon } from "@phosphor-icons/react/dist/ssr";
 
 
 export default function CookieConsent() {

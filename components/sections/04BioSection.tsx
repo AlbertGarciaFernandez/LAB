@@ -12,11 +12,11 @@ const BioSection: React.FC = () => {
   const experienceStats = [
     {
       label: t("stats.years"),
-      value: "4+",
+      value: t("stats.yearsValue"),
     },
     {
       label: t("stats.focus"),
-      value: "Product / FE",
+      value: t("stats.focusValue"),
     },
     {
       label: t("stats.impact"),

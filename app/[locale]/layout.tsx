@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
 import "@/app/globals.css";
 import Footer from "@/components/layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
@@ -23,18 +22,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = params;
   return {
-    title: "CodeHunter Lab | Precision Engineering for Scalable Digital Products",
+    title: "Next.js & React Development Agency Netherlands | CodeHunter Lab",
     description:
-      "Senior Frontend Engineering, Product Strategy, and High-Performance Ecommerce Solutions. A technical consultancy specializing in Next.js, React, and SFCC Migrations.",
+      "Next.js & React development agency in Leiden, Netherlands. We build scalable web applications, AI automation systems, and custom software for startups and enterprises. Book a free consultation.",
     keywords: [
-      "Frontend Lead",
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Framer Motion",
-      "SFCC",
-      "Ecommerce",
-      "Product Owner",
+      "Next.js development agency",
+      "React consulting Netherlands",
+      "frontend architecture consulting",
+      "AI automation agency Netherlands",
+      "software development company Netherlands",
+      "web development agency Leiden",
+      "hire Next.js developers",
+      "React development services",
+      "TypeScript consulting",
+      "frontend consultancy Netherlands",
       "CodeHunter Lab",
     ],
     alternates: {
@@ -46,9 +47,9 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: "CodeHunter Lab | Precision Engineering for Scalable Digital Products",
+      title: "Next.js & React Development Agency Netherlands | CodeHunter Lab",
       description:
-        "Senior Frontend Engineering, Product Strategy, and High-Performance Ecommerce Solutions. A technical consultancy specializing in Next.js, React, and SFCC Migrations.",
+        "Next.js & React development agency in Leiden, Netherlands. We build scalable web applications, AI automation systems, and custom software for startups and enterprises. Book a free consultation.",
       url: `${baseUrl}/${locale}`,
       siteName: "CodeHunter Lab",
       type: "website",
@@ -58,15 +59,15 @@ export async function generateMetadata({
           url: `${baseUrl}/${locale}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: "CodeHunter Lab | Precision Engineering for Scalable Digital Products",
+          alt: "Next.js & React Development Agency Netherlands | CodeHunter Lab",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "CodeHunter Lab | Precision Engineering for Scalable Digital Products",
+      title: "Next.js & React Development Agency Netherlands | CodeHunter Lab",
       description:
-        "Senior Frontend Engineering, Product Strategy, and High-Performance Ecommerce Solutions. A technical consultancy specializing in Next.js, React, and SFCC Migrations.",
+        "Next.js & React development agency in Leiden, Netherlands. We build scalable web applications, AI automation systems, and custom software for startups and enterprises.",
       images: [`${baseUrl}/${locale}/opengraph-image`],
     },
   };

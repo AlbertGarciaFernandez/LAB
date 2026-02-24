@@ -5,6 +5,7 @@ import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
+import Header from "@/components/layout/Header";
 
 const baseUrl = "https://www.codehunterlab.com";
 const path = "/it-system-integration";
@@ -104,6 +105,8 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
     };
 
     return (
+        <>
+        <Header />
         <main className="relative min-h-screen bg-near-black text-white overflow-hidden">
             <script
                 type="application/ld+json"
@@ -272,6 +275,7 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
                 </div>
             </footer>
         </main>
+        </>
     );
 }
 

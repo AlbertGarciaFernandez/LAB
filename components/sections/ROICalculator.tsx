@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from "@/navigation";
-import { Calculator, AlertCircle, ArrowRight } from 'lucide-react';
+import { Calculator, WarningCircle, ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -61,7 +61,7 @@ const ROICalculator = () => {
                     >
                         <div className="absolute top-0 left-0 w-1 h-full bg-hunter-green group-hover:w-full transition-all duration-500 opacity-20" />
                         <div className="flex items-start gap-5 relative z-10">
-                            <AlertCircle className="text-hunter-green shrink-0 mt-1" size={28} />
+                            <WarningCircle className="text-hunter-green shrink-0 mt-1" size={28} />
                             <div>
                                 <h4 className="text-white font-bold text-xl tracking-tight">{t("realityCard.title")}</h4>
                                 <p className="text-sm text-gray-400 mt-2 leading-relaxed">

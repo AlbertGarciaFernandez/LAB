@@ -1,1078 +1,2407 @@
 {
-    "Header": {
-        "nav": {
-            "Expertise": "Expertise",
-            "TheLab": "The Lab",
-            "Bio": "Bio",
-            "Stack": "Stack",
-            "Process": "Process"
-        },
-        "cta": {
-            "AIConsulting": "AI Consulting",
-            "LetsWork": "Let's Work"
-        }
+  "Header": {
+    "nav": {
+      "Services": "Services",
+      "Expertise": "Expertise",
+      "Industries": "Industries",
+      "TheLab": "The Lab",
+      "Bio": "Bio",
+      "Process": "Process",
+      "services": {
+        "AIConsulting": "AI Consulting",
+        "ReactConsulting": "React Consulting",
+        "NextJS": "Next.js Development",
+        "ITIntegration": "IT System Integration",
+        "CustomTools": "Custom Internal Tools"
+      },
+      "expertise": {
+        "AIAgents": "AI Agents & Automation",
+        "CustomLLM": "Custom LLM Development",
+        "SystemArch": "System Architecture",
+        "N8nMigration": "n8n Migration Consulting"
+      },
+      "industries": {
+        "AIConsultingNL": "AI Consulting Netherlands",
+        "DentalNL": "Dental Clinic Automation",
+        "AestheticNL": "Aesthetic Clinic Automation",
+        "PhysiotherapyNL": "Physiotherapy Automation",
+        "VeterinaryNL": "Veterinary Clinic Automation",
+        "AccountingNL": "Accounting Firm Automation",
+        "RealEstateNL": "Real Estate Automation"
+      }
     },
-    "Hero": {
-        "subHeader": "AI Automation , Frontend Engineer , Product-mindset",
-        "title": {
-            "part1": "Building High-",
-            "highlight1": "Performance",
-            "part2": "Digital Products that",
-            "highlight2": "Scale"
-        },
-        "description": "CodeHunter Lab operates at the intersection of deep technical engineering, product strategy, and user-centric design to accelerate your digital roadmap.",
-        "cta": {
-            "initialize": "Initialize Project",
-            "caseStudies": "View Case Studies"
-        }
+    "cta": {
+      "AIConsulting": "AI Consulting",
+      "LetsWork": "Let's Work"
+    }
+  },
+  "Hero": {
+    "subHeader": "AI Consulting · Workflow Automation · Web Engineering",
+    "title": {
+      "part1": "We Build ",
+      "highlight1": "AI Systems",
+      "part2": "That Run Your ",
+      "highlight2": "Operations"
     },
-    "Footer": {
-        "brandDescription": "Architecting the future of enterprise automation and AI-driven workflows.",
-        "Expertise": {
-            "title": "Expertise",
-            "items": {
-                "AIAgents": "AI Agents",
-                "n8nMigration": "n8n Migration",
-                "SystemArchitecture": "System Architecture",
-                "CustomLLMs": "Custom LLMs"
-            }
-        },
-        "Navigation": {
-            "title": "Navigation",
-            "items": {
-                "AIConsulting": "AI Consulting",
-                "OurWork": "Our Work",
-                "Calculator": "Calculator",
-                "Contact": "Contact"
-            }
-        },
-        "Solutions": {
-            "title": "Solutions",
-            "items": {
-                "AIAutomation": "AI Automation NL",
-                "ITIntegration": "IT Integration",
-                "SoftwareLeiden": "Software Leiden",
-                "InternalTools": "Internal Tools"
-            }
-        },
-        "Availability": {
-            "nextOpening": "Next Opening: {date}",
-            "title": "Ready to scale?",
-            "subtitle": "Booking architecture audits for Q1.",
-            "button": "Drop a Line"
-        },
-        "Copyright": {
-            "rights": "CodeHunter Lab.",
-            "location": "Leiden, Netherlands",
-            "developedBy": "Developed by"
-        }
+    "description": "CodeHunter Lab designs and deploys production-grade AI automation for companies ready to move beyond experiments. Agentic workflows, custom integrations, and real systems in your stack — not demos.",
+    "cta": {
+      "initialize": "Book an AI Strategy Call",
+      "caseStudies": "See How We Work"
+    }
+  },
+  "Footer": {
+    "brandDescription": "Architecting the future of enterprise automation and AI-driven workflows.",
+    "Services": {
+      "title": "Services",
+      "items": {
+        "AIConsulting": "AI Consulting",
+        "ReactConsulting": "React Consulting",
+        "NextJS": "Next.js Agency",
+        "ITIntegration": "IT Integration",
+        "InternalTools": "Internal Tools"
+      }
     },
     "Expertise": {
-        "title": {
-            "part1": "Core Expertise &",
-            "part2": "Strategic Pillars"
+      "title": "Expertise",
+      "items": {
+        "AIAgents": "AI Agents",
+        "n8nMigration": "n8n Migration",
+        "SystemArchitecture": "System Architecture",
+        "CustomLLMs": "Custom LLMs"
+      }
+    },
+    "Industries": {
+      "title": "Industries",
+      "items": {
+        "AIAutomationNL": "AI Automation NL",
+        "DentalNL": "Dental Clinic NL",
+        "AestheticNL": "Aesthetic Clinic NL",
+        "PhysiotherapyNL": "Physiotherapy NL",
+        "VeterinaryNL": "Veterinary Automation",
+        "AccountingNL": "Accounting Automation",
+        "RealEstateNL": "Real Estate Automation"
+      }
+    },
+    "Availability": {
+      "nextOpening": "Next Opening: {date}",
+      "title": "Ready to scale?",
+      "subtitle": "Booking architecture audits for Q1 2026.",
+      "button": "Drop a Line"
+    },
+    "Copyright": {
+      "rights": "CodeHunter Lab.",
+      "locationLeiden": "Leiden, Netherlands",
+      "locationSpain": "Spain / Remote",
+      "developedBy": "Developed by"
+    },
+    "Solutions": {
+      "title": "Solutions",
+      "items": {
+        "AIAutomation": "AI Automation NL",
+        "ITIntegration": "IT System Integration",
+        "SoftwareLeiden": "Software Dev Leiden",
+        "InternalTools": "Custom Internal Tools",
+        "VeterinaryNL": "Veterinary Automation",
+        "AccountingNL": "Accounting Automation",
+        "RealEstateNL": "Real Estate Automation"
+      }
+    },
+    "Navigation": {
+      "title": "Navigate",
+      "items": {
+        "AIConsulting": "AI Consulting",
+        "OurWork": "Our Work",
+        "Calculator": "ROI Calculator",
+        "Contact": "Contact"
+      }
+    }
+  },
+  "Expertise": {
+    "title": {
+      "part1": "Core Expertise &",
+      "part2": "Strategic Pillars"
+    },
+    "subtitle": "Hunting the balance between clean code, UX and real impact.",
+    "pillars": {
+      "frontend": {
+        "title": "Frontend Architecture",
+        "micro": "Scalable, maintainable systems built for long-term impact.",
+        "heading": "Building scalable, maintainable and high-impact web applications.",
+        "paragraphs": {
+          "0": "We design and lead the development of scalable, maintainable, and high-impact web applications. Our work is rooted in modern frontend architecture, with hands-on expertise in React, Next.js, and TypeScript, focused on long-term scalability, performance, and developer experience.",
+          "1": "This is not just about writing code, but about making architectural decisions that reduce complexity, scale teams, and support evolving product needs."
         },
-        "subtitle": "Hunting the balance between clean code, UX and real impact.",
-        "pillars": {
-            "frontend": {
-                "title": "Frontend Architecture",
-                "micro": "Scalable, maintainable systems built for long-term impact.",
-                "heading": "Building scalable, maintainable and high-impact web applications.",
-                "paragraphs": {
-                    "0": "We design and lead the development of scalable, maintainable, and high-impact web applications. Our work is rooted in modern frontend architecture, with hands-on expertise in React, Next.js, and TypeScript, focused on long-term scalability, performance, and developer experience.",
-                    "1": "This is not just about writing code, but about making architectural decisions that reduce complexity, scale teams, and support evolving product needs."
-                },
-                "bullets": {
-                    "0": "Component-driven architectures (React, Next.js)",
-                    "1": "Scalability & maintainability by design",
-                    "2": "Code quality, testing strategies and sustainability",
-                    "3": "Performance-first mindset from day one"
-                }
-            },
-            "ecommerce": {
-                "title": "Ecommerce & Performance",
-                "micro": "Revenue-critical platforms optimised for speed and conversion.",
-                "heading": "Revenue-critical platforms optimised for speed, UX and conversion.",
-                "paragraphs": {
-                    "0": "We specialise in revenue-critical ecommerce platforms, where performance, UX, and reliability directly impact conversion and business outcomes.",
-                    "1": "From leading complex Salesforce Commerce Cloud (SFCC) migrations to optimising existing Shopify and custom stacks, our focus is on building fast, accessible, and conversion-friendly user journeys."
-                },
-                "bullets": {
-                    "0": "SFCC migration leadership and frontend architecture",
-                    "1": "Core Web Vitals & Lighthouse optimisation",
-                    "2": "UX, accessibility (WCAG 2.1) and SEO-minded performance",
-                    "3": "A/B testing and data-informed optimisation loops",
-                    "4": "Turning performance into measurable business impact"
-                }
-            },
-            "product": {
-                "title": "Product Strategy & AI",
-                "micro": "Business goals translated into clear technical decisions.",
-                "heading": "Bridging product goals with technical execution.",
-                "paragraphs": {
-                    "0": "We bridge the gap between engineering execution and product strategy. By combining technical leadership with product thinking, we translate business goals into clear roadmaps, technical decisions, and scalable solutions.",
-                    "1": "We have led the product ownership and engineering of AI-powered applications, integrating OpenAI APIs to accelerate workflows, reduce noise, and improve decision-making across teams."
-                },
-                "bullets": {
-                    "0": "Product discovery, roadmapping and prioritisation",
-                    "1": "AI integration using OpenAI APIs and custom tooling",
-                    "2": "Agile / Scrum leadership and stakeholder alignment",
-                    "3": "Engineering decisions grounded in real constraints"
-                }
-            },
-            "automation": {
-                "title": "AI Automation",
-                "micro": "Intelligent workflows that remove friction and manual work.",
-                "heading": "Automating the boring, amplifying the meaningful.",
-                "paragraphs": {
-                    "0": "We design and implement AI-powered automation workflows that reduce manual work, speed up decision-making, and improve operational efficiency across product and engineering teams.",
-                    "1": "Using tools like n8n, custom scripts and API integrations, we connect platforms, data sources and AI models to create intelligent pipelines tailored to real business needs — not over-engineered experiments."
-                },
-                "bullets": {
-                    "0": "Automated content and data pipelines",
-                    "1": "AI-assisted QA, analysis and reporting",
-                    "2": "Workflow orchestration across teams and tools",
-                    "3": "Reducing operational overhead through automation",
-                    "4": "Turning raw data into actionable insights"
-                }
-            },
-            "leadership": {
-                "title": "Technical Leadership",
-                "micro": "Clear ownership, alignment and senior decision-making.",
-                "heading": "Aligning product, design and engineering around impact.",
-                "paragraphs": {
-                    "0": "We work closely with designers, product managers, and backend teams to align technical execution with product vision. Our role often sits at the intersection of architecture, delivery, and decision-making — ensuring teams move fast without sacrificing quality."
-                },
-                "bullets": {
-                    "0": "Cross-functional collaboration at a senior level",
-                    "1": "Clear communication and ownership of decisions",
-                    "2": "Reducing friction between product, design and engineering",
-                    "3": "Sustainable delivery over short-term hacks"
-                }
-            },
-            "delivery": {
-                "title": "Delivery & Risk",
-                "micro": "Predictable delivery in complex, high-impact environments.",
-                "heading": "Predictable delivery in complex, high-impact environments.",
-                "paragraphs": {
-                    "0": "We focus on predictable, high-quality delivery in complex technical environments. By applying proven engineering practices, we reduce technical risk, avoid costly rework, and ensure that products scale reliably over time.",
-                    "1": "This includes making pragmatic trade-offs, managing technical debt consciously, and building systems that are easy to evolve rather than fragile to change."
-                },
-                "bullets": {
-                    "0": "Clear delivery planning and scope definition",
-                    "1": "Quality standards, testing strategies and reviews",
-                    "2": "Conscious technical debt management",
-                    "3": "Risk mitigation in performance-critical systems",
-                    "4": "Long-term maintainability over quick hacks"
-                }
-            }
-        },
-        "ui": {
-            "selected": "Currently selected",
-            "readMore": "Read more",
-            "indexLabel": "{number} · {title}"
+        "bullets": {
+          "0": "Component-driven architectures (React, Next.js)",
+          "1": "Scalability & maintainability by design",
+          "2": "Code quality, testing strategies and sustainability",
+          "3": "Performance-first mindset from day one"
         }
-    },
-    "TheLab": {
-        "title": "The Lab",
-        "subtitle": "Engineered solutions and strategic project leadership that delivered measurable business impact.",
-        "projects": {
-            "0": {
-                "number": "Case Study 01 / AI Product",
-                "title": "Product Accelerator: AI-Powered Productivity App",
-                "description": "Led the frontend development and Product Ownership of an AI-powered productivity web application. The challenge was to create a scalable architecture, integrating Machine Learning models and third-party APIs (OpenAI) to deliver a personalized, high-performance user experience.",
-                "results": {
-                    "0": "Defined Frontend Architecture with React, Next.js, and TypeScript, focused on scalability and maintainability.",
-                    "1": "Integrated AI-driven features via OpenAI APIs and custom endpoints for personalized experiences.",
-                    "2": "Constant performance monitoring (Lighthouse, Core Web Vitals) and robust testing (Jest) to ensure optimized UX.",
-                    "3": "Defined vision, roadmap, and acceptance criteria, aligning technical execution with business objectives."
-                }
-            },
-            "1": {
-                "number": "Case Study 02 / E-commerce",
-                "title": "Basic-Fit: High-Traffic E-commerce Migration (SFCC)",
-                "description": "Led the migration process of the Basic-Fit website to the Salesforce Commerce Cloud (SFCC) platform, a critical migration affecting consumer-facing solutions across multiple platforms. The goal was to ensure a smooth transition and improve the end-user experience, performance, and SEO.",
-                "results": {
-                    "0": "Lead the migration to Salesforce Commerce Cloud, maintaining high user experience quality.",
-                    "1": "Implemented A/B testing for key components, achieving better conversion results.",
-                    "2": "Developed custom templates within SFCC and converted design concepts into functional, responsive websites.",
-                    "3": "Applied industry best practices for secure, scalable code with integrated analytics tools."
-                }
-            },
-            "2": {
-                "number": "Case Study 03 / Track Record",
-                "title": "Empowering Digital Growth: 15+ Success Stories",
-                "description": "Over our years of experience, we have empowered more than 15 companies to elevate their web presence, applications, and e-commerce platforms. We don't just build; we optimize for growth and scalability.",
-                "results": {
-                    "0": "Partnered with diverse clients from startups to enterprises.",
-                    "1": "Successfully delivered scalable solutions in E-commerce, SaaS, and AI.",
-                    "2": "Improved performance, SEO, and conversion rates across all partner portfolios."
-                }
-            }
+      },
+      "ecommerce": {
+        "title": "Ecommerce & Performance",
+        "micro": "Revenue-critical platforms optimised for speed and conversion.",
+        "heading": "Revenue-critical platforms optimised for speed, UX and conversion.",
+        "paragraphs": {
+          "0": "We specialise in revenue-critical ecommerce platforms, where performance, UX, and reliability directly impact conversion and business outcomes.",
+          "1": "From leading complex Salesforce Commerce Cloud (SFCC) migrations to optimising existing Shopify and custom stacks, our focus is on building fast, accessible, and conversion-friendly user journeys."
         },
-        "cta": "Discuss Your Challenge"
-    },
-    "Bio": {
-        "bgText": "THE ENGINEER",
-        "title": {
-            "part1": "THE",
-            "part2": "ENGINEER"
-        },
-        "description": {
-            "p1": {
-                "part1": "I love being able to",
-                "highlight": "help",
-                "part2": "and improve people's lives."
-            },
-            "p2": {
-                "part1": "Using my experience to make life",
-                "highlight1": "easier",
-                "part2": ", creating tools, and contributing my",
-                "highlight2": "art & ideas",
-                "part3": "to meaningful projects."
-            }
-        },
-        "stats": {
-            "years": "Years Exp.",
-            "focus": "Focus",
-            "impact": "Impact",
-            "impactValue": "15+ Companies"
-        },
-        "passionCard": {
-            "label": "Passion",
-            "quote": "\"Code is just the medium. Impact is the goal.\""
+        "bullets": {
+          "0": "SFCC migration leadership and frontend architecture",
+          "1": "Core Web Vitals & Lighthouse optimisation",
+          "2": "UX, accessibility (WCAG 2.1) and SEO-minded performance",
+          "3": "A/B testing and data-informed optimisation loops",
+          "4": "Turning performance into measurable business impact"
         }
+      },
+      "product": {
+        "title": "Product Strategy & AI",
+        "micro": "Business goals translated into clear technical decisions.",
+        "heading": "Bridging product goals with technical execution.",
+        "paragraphs": {
+          "0": "We bridge the gap between engineering execution and product strategy. By combining technical leadership with product thinking, we translate business goals into clear roadmaps, technical decisions, and scalable solutions.",
+          "1": "We have led the product ownership and engineering of AI-powered applications, integrating OpenAI APIs to accelerate workflows, reduce noise, and improve decision-making across teams."
+        },
+        "bullets": {
+          "0": "Product discovery, roadmapping and prioritisation",
+          "1": "AI integration using OpenAI APIs and custom tooling",
+          "2": "Agile / Scrum leadership and stakeholder alignment",
+          "3": "Engineering decisions grounded in real constraints"
+        }
+      },
+      "automation": {
+        "title": "AI Automation",
+        "micro": "Intelligent workflows that remove friction and manual work.",
+        "heading": "Automating the boring, amplifying the meaningful.",
+        "paragraphs": {
+          "0": "We design and implement AI-powered automation workflows that reduce manual work, speed up decision-making, and improve operational efficiency across product and engineering teams.",
+          "1": "Using tools like n8n, custom scripts and API integrations, we connect platforms, data sources and AI models to create intelligent pipelines tailored to real business needs — not over-engineered experiments."
+        },
+        "bullets": {
+          "0": "Automated content and data pipelines",
+          "1": "AI-assisted QA, analysis and reporting",
+          "2": "Workflow orchestration across teams and tools",
+          "3": "Reducing operational overhead through automation",
+          "4": "Turning raw data into actionable insights"
+        }
+      },
+      "leadership": {
+        "title": "Technical Leadership",
+        "micro": "Clear ownership, alignment and senior decision-making.",
+        "heading": "Aligning product, design and engineering around impact.",
+        "paragraphs": {
+          "0": "We work closely with designers, product managers, and backend teams to align technical execution with product vision. Our role often sits at the intersection of architecture, delivery, and decision-making — ensuring teams move fast without sacrificing quality."
+        },
+        "bullets": {
+          "0": "Cross-functional collaboration at a senior level",
+          "1": "Clear communication and ownership of decisions",
+          "2": "Reducing friction between product, design and engineering",
+          "3": "Sustainable delivery over short-term hacks"
+        }
+      },
+      "delivery": {
+        "title": "Delivery & Risk",
+        "micro": "Predictable delivery in complex, high-impact environments.",
+        "heading": "Predictable delivery in complex, high-impact environments.",
+        "paragraphs": {
+          "0": "We focus on predictable, high-quality delivery in complex technical environments. By applying proven engineering practices, we reduce technical risk, avoid costly rework, and ensure that products scale reliably over time.",
+          "1": "This includes making pragmatic trade-offs, managing technical debt consciously, and building systems that are easy to evolve rather than fragile to change."
+        },
+        "bullets": {
+          "0": "Clear delivery planning and scope definition",
+          "1": "Quality standards, testing strategies and reviews",
+          "2": "Conscious technical debt management",
+          "3": "Risk mitigation in performance-critical systems",
+          "4": "Long-term maintainability over quick hacks"
+        }
+      }
     },
-    "Stack": {
-        "subtitle": "Powering The Lab",
-        "title": "Technology Stack"
+    "ui": {
+      "selected": "Currently selected",
+      "readMore": "Read more",
+      "indexLabel": "{number} · {title}"
+    }
+  },
+  "TheLab": {
+    "title": "The Lab",
+    "subtitle": "Engineered solutions and strategic project leadership that delivered measurable business impact.",
+    "projects": {
+      "0": {
+        "number": "Case Study 01 / AI Product",
+        "title": "Product Accelerator: AI-Powered Productivity App",
+        "description": "Led the frontend development and Product Ownership of an AI-powered productivity web application. The challenge was to create a scalable architecture, integrating Machine Learning models and third-party APIs (OpenAI) to deliver a personalized, high-performance user experience.",
+        "results": {
+          "0": "Defined Frontend Architecture with React, Next.js, and TypeScript, focused on scalability and maintainability.",
+          "1": "Integrated AI-driven features via OpenAI APIs and custom endpoints for personalized experiences.",
+          "2": "Constant performance monitoring (Lighthouse, Core Web Vitals) and robust testing (Jest) to ensure optimized UX.",
+          "3": "Defined vision, roadmap, and acceptance criteria, aligning technical execution with business objectives."
+        }
+      },
+      "1": {
+        "number": "Case Study 02 / E-commerce",
+        "title": "Basic-Fit: High-Traffic E-commerce Migration (SFCC)",
+        "description": "Led the migration process of the Basic-Fit website to the Salesforce Commerce Cloud (SFCC) platform, a critical migration affecting consumer-facing solutions across multiple platforms. The goal was to ensure a smooth transition and improve the end-user experience, performance, and SEO.",
+        "results": {
+          "0": "Lead the migration to Salesforce Commerce Cloud, maintaining high user experience quality.",
+          "1": "Implemented A/B testing for key components, achieving better conversion results.",
+          "2": "Developed custom templates within SFCC and converted design concepts into functional, responsive websites.",
+          "3": "Applied industry best practices for secure, scalable code with integrated analytics tools."
+        }
+      },
+      "2": {
+        "number": "Case Study 03 / Track Record",
+        "title": "Empowering Digital Growth: 15+ Success Stories",
+        "description": "Over our years of experience, we have empowered more than 15 companies to elevate their web presence, applications, and e-commerce platforms. We don't just build; we optimize for growth and scalability.",
+        "results": {
+          "0": "Partnered with diverse clients from startups to enterprises.",
+          "1": "Successfully delivered scalable solutions in E-commerce, SaaS, and AI.",
+          "2": "Improved performance, SEO, and conversion rates across all partner portfolios."
+        }
+      }
+    },
+    "cta": "Discuss Your Challenge"
+  },
+  "Bio": {
+    "bgText": "THE STUDIO",
+    "title": {
+      "part1": "THE",
+      "part2": "STUDIO"
+    },
+    "description": {
+      "p1": {
+        "part1": "We are an engineering-first",
+        "highlight": "AI consulting studio",
+        "part2": "based in Leiden, Netherlands."
+      },
+      "p2": {
+        "part1": "We design, build, and deploy AI automation that",
+        "highlight1": "runs in production",
+        "part2": "— not in a sandbox. We partner with CTOs, founders, and",
+        "highlight2": "operations leaders",
+        "part3": "across Europe."
+      }
+    },
+    "stats": {
+      "years": "Years Delivering",
+      "yearsValue": "4+",
+      "focus": "Primary Focus",
+      "focusValue": "AI / Engineering",
+      "impact": "Companies Served",
+      "impactValue": "15+"
+    },
+    "passionCard": {
+      "label": "Principle",
+      "quote": "\"We don't just advise. We ship.\""
+    }
+  },
+  "Stack": {
+    "subtitle": "Powering The Lab",
+    "title": "Technology Stack"
+  },
+  "Process": {
+    "title": {
+      "prefix": "06.",
+      "text": "How We Engage"
+    },
+    "subtitle": {
+      "part1": "Three ways to work with us — from a focused",
+      "highlight": "architecture audit",
+      "part2": "to an ongoing engineering partnership."
+    },
+    "steps": {
+      "0": {
+        "title": "Architecture Audit",
+        "description": "We map your current operations, identify the highest-ROI automation opportunities, and deliver a prioritized implementation roadmap. Fixed scope, one week. No commitment beyond the audit."
+      },
+      "1": {
+        "title": "Implementation Sprint",
+        "description": "We design, build, and deploy one fully operational AI system or automation workflow. Defined scope, fixed price, 4–8 weeks. You own the code and the infrastructure."
+      },
+      "2": {
+        "title": "Live in Production",
+        "description": "We don't hand off a demo. We deploy to your infrastructure, integrate with your existing tools and data sources, and validate that the system runs under real conditions."
+      },
+      "3": {
+        "title": "Ongoing Partner",
+        "description": "We act as your embedded AI engineering team — shipping new systems, maintaining live automation, and expanding your infrastructure as your business grows."
+      }
+    },
+    "cta": {
+      "title": {
+        "text": "Ready to",
+        "highlight": "Start Automating?"
+      },
+      "description": {
+        "part1": "Book a 30-minute strategy call. We'll review your workflows, identify the highest-impact opportunities, and tell you honestly what's worth building — with",
+        "highlight": "no sales pitch",
+        "part2": "."
+      }
+    }
+  },
+  "AIConsulting": {
+    "Hero": {
+      "badge": "AI Consulting · Production Systems",
+      "title": {
+        "part1": "From Pilot",
+        "part2": "To Production",
+        "highlight": "AI Systems."
+      },
+      "description": "Most AI projects fail between proof of concept and production. We close that gap — designing and deploying <strong class='text-white'>agentic workflows</strong> that integrate with your real stack, run on your infrastructure, and deliver measurable results.",
+      "cta": "Book an AI Strategy Call",
+      "whyUs": {
+        "title": {
+          "part1": "Implementation,",
+          "highlight": "Not Just Strategy."
+        },
+        "description": "Most consultants deliver a roadmap and leave. We stay until it ships. Every engagement ends with a live system running in your infrastructure — not a slide deck.",
+        "list": {
+          "0": "Production systems, not sandbox experiments",
+          "1": "Integrated with your existing stack and data",
+          "2": "Clear ROI — estimated before we start, measured after"
+        },
+        "systemStatus": {
+          "label": "System Status",
+          "value": "LIVE",
+          "efficiencyLabel": "Avg. Client ROI",
+          "efficiencyValue": "+40%",
+          "tooltip": "PRODUCTION MONITORING"
+        }
+      }
+    },
+    "Banner": {
+      "badge": "AI Systems · Production Grade",
+      "title": "Your AI Pilot",
+      "highlight": "Never Shipped.",
+      "description": "Most companies have AI experiments sitting in a sandbox. We build systems that run in production — connected to your CRM, your data, and your team's real workflows.",
+      "cta1": "Book an AI Strategy Call",
+      "cta2": "Estimate Your ROI",
+      "cards": {
+        "0": {
+          "title": "Production AI Systems",
+          "desc": "Not demos. Live automation deployed on your infrastructure."
+        },
+        "1": {
+          "title": "Workflow Orchestration",
+          "desc": "Self-hosted n8n: full data control, unlimited executions, fixed cost."
+        },
+        "2": {
+          "title": "ROI Before We Start",
+          "desc": "Every engagement begins with a clear cost-benefit analysis."
+        }
+      }
+    },
+    "ROICalculator": {
+      "badge": "Efficiency Audit",
+      "title": "How much is",
+      "highlight": "Inefficiency",
+      "subtitle": "costing you?",
+      "description": "Manual workflows are a silent tax on your revenue. Estimate how much capital you're burning on tasks that an AI Agent could handle for a fraction of the cost.",
+      "realityCard": {
+        "title": "The Modern Reality",
+        "description": "With rising labor costs, paying specialists for repetitive data entry is common but financially unsustainable. Automation is now a competitive survival strategy."
+      },
+      "inputs": {
+        "employees": "Manual Task Force",
+        "employeesUnit": "People",
+        "hours": "Weekly Busywork (per person)",
+        "hoursUnit": "Hours",
+        "rate": "Avg. Hourly Rate (Loaded)",
+        "rateUnit": "/hr"
+      },
+      "results": {
+        "monthly": "Monthly Waste",
+        "annual": "Annual Savings",
+        "note": "This capital could be re-invested into growth or R&D.",
+        "cta": "Stop the leakage. Audit now."
+      }
+    },
+    "TopAgents": {
+      "badge": "Digital Workforce",
+      "title": "Automate Sales, Operations,",
+      "highlight": "& Marketing with AI.",
+      "description": "Stop hiring for repetitive tasks. Deploy specialized AI Agents that work 24/7, integrate with your tools, and deliver scalable results.",
+      "agents": {
+        "leo": {
+          "role": "AI Sales Agent",
+          "description": "Your elite sales rep that never sleeps. LEO engages leads instantly, qualifies opportunities, and books meetings 24/7.",
+          "capabilities": [
+            "Instant Lead Response (Web/WA)",
+            "Context-Aware Qualification",
+            "Auto-Scheduling Meetings",
+            "Smart Follow-up Sequences",
+            "Human Handoff Protocols"
+          ],
+          "benefit": "Scale revenue, not headcount.",
+          "cta": "Deploy LEO"
+        },
+        "atlas": {
+          "role": "AI Virtual Assistant",
+          "description": "The operational backbone of your business. ATLAS orchestrates workflows, manages chaotic admin, and keeps your team focused.",
+          "capabilities": [
+            "Inbox & Calendar Zero",
+            "Workflow Orchestration",
+            "Document Processing",
+            "Client Onboarding",
+            "Error-Free Data Entry"
+          ],
+          "benefit": "Eliminate operational drag.",
+          "cta": "Deploy ATLAS"
+        },
+        "orion": {
+          "role": "AI Marketing Director",
+          "description": "Data-driven marketing precision. ORION analyzes performance, optimizes campaigns, and uncovers hidden growth opportunities.",
+          "capabilities": [
+            "Real-time ROI Analysis",
+            "Campaign Optimization",
+            "Trend Spotting & Analysis",
+            "Content Strategy Insights",
+            "Competitor Monitoring"
+          ],
+          "benefit": "Marketing that drives profit.",
+          "cta": "Deploy ORION"
+        }
+      },
+      "bottleneck": {
+        "badge": "Problem",
+        "title": "The Bottleneck",
+        "subtitle": "Why manual scaling fails.",
+        "list": [
+          "Leads rotting in the inbox",
+          "Chaotic, manual scheduling",
+          "Marketing without data",
+          "Burned out teams"
+        ],
+        "resultLabel": "Result",
+        "resultValue": "Business Stagnation"
+      },
+      "advantage": {
+        "badge": "Solution",
+        "title": "Agent Advantage",
+        "subtitle": "Why AI wins.",
+        "list": [
+          "Instant 24/7 Response",
+          "Perfect Execution",
+          "Data-Driven Decisions",
+          "Scalable Workforce"
+        ],
+        "resultLabel": "Result",
+        "resultValue": "Exponential Growth"
+      },
+      "diagram": {
+        "title": "Syncs With Your Ecosystem",
+        "capture": "Capture",
+        "process": "Process",
+        "optimize": "Optimize",
+        "worksWith": "WORKS WITH:"
+      }
+    },
+    "Migration": {
+      "badge": "How We Engage",
+      "title": "Choose Your",
+      "highlight": "Starting Point",
+      "legacy": {
+        "title": "Architecture Audit",
+        "desc": "Map your automation opportunities.<br />Prioritized implementation roadmap.<br />Fixed scope, delivered in one week.",
+        "tag": "1 Week"
+      },
+      "optimized": {
+        "tag": "Most Common",
+        "title": "Implementation Sprint",
+        "desc": "One live AI system deployed.<br />Integrated with your existing stack.<br />Fixed price, 4–8 weeks.",
+        "latencyLabel": "SCOPE",
+        "latencyValue": "FIXED",
+        "costLabel": "CODE",
+        "costValue": "YOURS"
+      },
+      "action": {
+        "title": "Ongoing Partner",
+        "desc": "Your embedded AI engineering team.<br />Ship, maintain, and scale — continuously.",
+        "cta1": "Book a Strategy Call",
+        "cta2": "Email Us Directly"
+      }
+    }
+  },
+  "SoftwareLeiden": {
+    "Hero": {
+      "badge": "LEIDEN BASED :: GLOBAL STANDARDS",
+      "title": {
+        "part1": "Software Development",
+        "highlight": "Reimagined."
+      },
+      "description": "Looking for a <strong>software company in Leiden</strong>? We combine the agility of a local <strong>IT consultant</strong> with the engineering standards of Silicon Valley. No bloat, just code that works.",
+      "cta": {
+        "coffee": "Meet for Coffee",
+        "services": "View Expertise"
+      }
+    },
+    "Services": {
+      "web": {
+        "title": "Full-Stack Web Apps",
+        "description": "Custom dashboards, SaaS platforms, and internal tools built with Next.js and Supabase. Fast, secure, and scalable."
+      },
+      "ai": {
+        "title": "Hybrid AI Development",
+        "description": "We don't just build apps; we build <strong>intelligent systems</strong>. Embed AI agents, chatbots, and automation directly into your software."
+      },
+      "ecommerce": {
+        "title": "E-Commerce & Scale",
+        "description": "High-performance e-commerce solutions that handle traffic spikes and integrate seamlessly with your inventory and ERP."
+      }
     },
     "Process": {
-        "title": {
-            "prefix": "06.",
-            "text": "Partnership & Process"
+      "title": "How We Build",
+      "steps": {
+        "0": {
+          "title": "Architecture First",
+          "desc": "We don't guess. We map out your data capability and flows before writing a single line of code."
         },
-        "subtitle": {
-            "part1": "We adapt to you. A",
-            "highlight": "collaborative approach",
-            "part2": "focused on listening, creating, and improving your efficiency."
+        "1": {
+          "title": "Rapid Iteration",
+          "desc": "We ship fast. You see progress every week, not every month. No black boxes."
         },
-        "steps": {
-            "0": {
-                "title": "Discovery & Listening",
-                "description": "We start by listening. No assumptions. We dive deep into your business context to understand your true needs—whether it's an AI integration, a platform migration, or a custom app."
-            },
-            "1": {
-                "title": "Tailored Strategy",
-                "description": "We don't force-fit technologies. We design a solution adapted to YOU. From AI automation to scalable infrastructure, we create a roadmap that solves your specific challenges."
-            },
-            "2": {
-                "title": "Agile Implementation",
-                "description": "Building with purpose. We implement efficient, scalable solutions without disrupting your operations. We adapt to your workflows, ensuring a smooth and transparent delivery."
-            },
-            "3": {
-                "title": "Evolution & Efficiency",
-                "description": "It doesn't end at launch. We help you optimize and refine your digital ecosystem, turning data into efficiency and ensuring your solution evolves with your business."
-            }
-        },
-        "cta": {
-            "title": {
-                "text": "Ready to",
-                "highlight": "Accelerate?"
-            },
-            "description": {
-                "part1": "If you need help with a project, infrastructure, creating an app, or want to automatize with",
-                "highlight": "AI",
-                "part2": "— contact us."
-            }
+        "2": {
+          "title": "Local Handoff",
+          "desc": "We train your team here in Leiden. You own the code, the IP, and the infrastructure."
         }
+      }
     },
-    "AIConsulting": {
-        "Hero": {
-            "badge": "AI Consulting & Automation",
-            "title": {
-                "part1": "End-to-End",
-                "part2": "AI Systems",
-                "highlight": "That Scale."
-            },
-            "description": "The market is noisy. We move beyond chat interfaces to build <strong class='text-white'>Agentic Workflows</strong>—intelligent systems that execute tasks, make decisions, and drive your business forward.",
-            "cta": "Get Your Audit",
-            "whyUs": {
-                "title": {
-                    "part1": "Profitability",
-                    "highlight": "Over Novelty."
-                },
-                "description": "Most companies waste months on isolated AI \"experiments\" that don't talk to their database. We act as your Strategic AI Architect, focusing on ROI first.",
-                "list": {
-                    "0": "Clarity amidst Technical Chaos",
-                    "1": "Execution, Not Just Strategy",
-                    "2": "Value-Based Impact & ROI"
-                },
-                "systemStatus": {
-                    "label": "System Status",
-                    "value": "OPTIMIZED",
-                    "efficiencyLabel": "Efficiency",
-                    "efficiencyValue": "+320%",
-                    "tooltip": "REAL-TIME MONITORING"
-                }
-            }
+    "Local": {
+      "title": "Why work with a local Leiden developer?",
+      "cards": {
+        "face": {
+          "title": "Face-to-Face Collaboration",
+          "description": "Nothing beats sitting down at a table to map out complex architecture. We are available for on-site workshops in <strong>Leiden</strong>, <strong>Den Haag</strong>, and <strong>Amsterdam</strong>."
         },
-        "Banner": {
-            "badge": "AI & Process Automation",
-            "title": "Stop Experimenting.",
-            "highlight": "Start Scaling.",
-            "description": "Most companies are just \"playing\" with AI. We architect autonomous systems that integrate seamlessly with your existing stack to slash overhead and drive pure profit margins.",
-            "cta1": "Explore The Lab",
-            "cta2": "Calculate ROI",
-            "cards": {
-                "0": {
-                    "title": "Autonomous Agents",
-                    "desc": "Deploy 24/7 AI staff for Sales & Ops."
-                },
-                "1": {
-                    "title": "Workflow Orchestration",
-                    "desc": "Replace manual data entry with n8n."
-                },
-                "2": {
-                    "title": "Value-Driven Architecture",
-                    "desc": "We sell recurring efficiency, not hours."
-                }
-            }
-        },
-        "ROICalculator": {
-            "badge": "Efficiency Audit",
-            "title": "How much is",
-            "highlight": "Inefficiency",
-            "subtitle": "costing you?",
-            "description": "Manual workflows are a silent tax on your revenue. Estimate how much capital you're burning on tasks that an AI Agent could handle for a fraction of the cost.",
-            "realityCard": {
-                "title": "The Modern Reality",
-                "description": "With rising labor costs, paying specialists for repetitive data entry is common but financially unsustainable. Automation is now a competitive survival strategy."
-            },
-            "inputs": {
-                "employees": "Manual Task Force",
-                "employeesUnit": "People",
-                "hours": "Weekly Busywork (per person)",
-                "hoursUnit": "Hours",
-                "rate": "Avg. Hourly Rate (Loaded)",
-                "rateUnit": "/hr"
-            },
-            "results": {
-                "monthly": "Monthly Waste",
-                "annual": "Annual Savings",
-                "note": "This capital could be re-invested into growth or R&D.",
-                "cta": "Stop the leakage. Audit now."
-            }
-        },
-        "TopAgents": {
-            "badge": "Digital Workforce",
-            "title": "Automate Sales, Operations,",
-            "highlight": "& Marketing with AI.",
-            "description": "Stop hiring for repetitive tasks. Deploy specialized AI Agents that work 24/7, integrate with your tools, and deliver scalable results.",
-            "agents": {
-                "leo": {
-                    "role": "AI Sales Agent",
-                    "description": "Your elite sales rep that never sleeps. LEO engages leads instantly, qualifies opportunities, and books meetings 24/7.",
-                    "capabilities": [
-                        "Instant Lead Response (Web/WA)",
-                        "Context-Aware Qualification",
-                        "Auto-Scheduling Meetings",
-                        "Smart Follow-up Sequences",
-                        "Human Handoff Protocols"
-                    ],
-                    "benefit": "Scale revenue, not headcount.",
-                    "cta": "Deploy LEO"
-                },
-                "atlas": {
-                    "role": "AI Virtual Assistant",
-                    "description": "The operational backbone of your business. ATLAS orchestrates workflows, manages chaotic admin, and keeps your team focused.",
-                    "capabilities": [
-                        "Inbox & Calendar Zero",
-                        "Workflow Orchestration",
-                        "Document Processing",
-                        "Client Onboarding",
-                        "Error-Free Data Entry"
-                    ],
-                    "benefit": "Eliminate operational drag.",
-                    "cta": "Deploy ATLAS"
-                },
-                "orion": {
-                    "role": "AI Marketing Director",
-                    "description": "Data-driven marketing precision. ORION analyzes performance, optimizes campaigns, and uncovers hidden growth opportunities.",
-                    "capabilities": [
-                        "Real-time ROI Analysis",
-                        "Campaign Optimization",
-                        "Trend Spotting & Analysis",
-                        "Content Strategy Insights",
-                        "Competitor Monitoring"
-                    ],
-                    "benefit": "Marketing that drives profit.",
-                    "cta": "Deploy ORION"
-                }
-            },
-            "bottleneck": {
-                "badge": "Problem",
-                "title": "The Bottleneck",
-                "subtitle": "Why manual scaling fails.",
-                "list": [
-                    "Leads rotting in the inbox",
-                    "Chaotic, manual scheduling",
-                    "Marketing without data",
-                    "Burned out teams"
-                ],
-                "resultLabel": "Result",
-                "resultValue": "Business Stagnation"
-            },
-            "advantage": {
-                "badge": "Solution",
-                "title": "Agent Advantage",
-                "subtitle": "Why AI wins.",
-                "list": [
-                    "Instant 24/7 Response",
-                    "Perfect Execution",
-                    "Data-Driven Decisions",
-                    "Scalable Workforce"
-                ],
-                "resultLabel": "Result",
-                "resultValue": "Exponential Growth"
-            },
-            "diagram": {
-                "title": "Syncs With Your Ecosystem",
-                "capture": "Capture",
-                "process": "Process",
-                "optimize": "Optimize",
-                "worksWith": "WORKS WITH:"
-            }
-        },
-        "Migration": {
-            "badge": "System Evolution",
-            "title": "From Chaos to",
-            "highlight": "Control",
-            "legacy": {
-                "title": "Legacy Manual Ops",
-                "desc": "Expensive per-task billing.<br />Fragile, hard to scale.<br />Data privacy concerns.",
-                "tag": "High Friction"
-            },
-            "optimized": {
-                "tag": "Recommended",
-                "title": "Optimized Core",
-                "desc": "Self-hosted n8n infrastructure.<br />Unlimited executions.<br />Full data sovereignty.",
-                "latencyLabel": "LATENCY",
-                "latencyValue": "4ms",
-                "costLabel": "COST",
-                "costValue": "FIXED"
-            },
-            "action": {
-                "title": "Start Automating",
-                "desc": "Ready to reclaim your time?<br />Initialize your project today.",
-                "cta1": "Initialize",
-                "cta2": "Consulting"
-            }
+        "market": {
+          "title": "Dutch Market Understanding",
+          "description": "We understand the local ecosystem, payment methods (iDEAL), and business culture. We speak <strong>Tech</strong> and <strong>Business</strong>."
         }
+      },
+      "hq": "Leiden HQ"
     },
-    "SoftwareLeiden": {
-        "Hero": {
-            "badge": "LEIDEN BASED :: GLOBAL STANDARDS",
-            "title": {
-                "part1": "Software Development",
-                "highlight": "Reimagined."
-            },
-            "description": "Looking for a <strong>software company in Leiden</strong>? We combine the agility of a local <strong>IT consultant</strong> with the engineering standards of Silicon Valley. No bloat, just code that works.",
-            "cta": {
-                "coffee": "Meet for Coffee",
-                "services": "View Expertise"
-            }
+    "FAQ": {
+      "title": "Common Questions",
+      "subtitle": "Everything you need to know about working with a software company in Leiden.",
+      "questions": [
+        {
+          "q": "How long does a typical software project take?",
+          "a": "It depends on the scope, but an MVP (Minimum Viable Product) usually takes 6 to 12 weeks. We emphasize 'Architecture First' to ensure speed doesn't compromise quality."
         },
-        "Services": {
-            "web": {
-                "title": "Full-Stack Web Apps",
-                "description": "Custom dashboards, SaaS platforms, and internal tools built with Next.js and Supabase. Fast, secure, and scalable."
-            },
-            "ai": {
-                "title": "Hybrid AI Development",
-                "description": "We don't just build apps; we build <strong>intelligent systems</strong>. Embed AI agents, chatbots, and automation directly into your software."
-            },
-            "ecommerce": {
-                "title": "E-Commerce & Scale",
-                "description": "High-performance e-commerce solutions that handle traffic spikes and integrate seamlessly with your inventory and ERP."
-            }
+        {
+          "q": "Can you integrate AI into my existing software?",
+          "a": "Yes. We specialize in 'Hybrid AI Development', meaning we can build custom AI agents and automation layers that talk to your current databases and APIs."
         },
-        "Process": {
-            "title": "How We Build",
-            "steps": {
-                "0": {
-                    "title": "Architecture First",
-                    "desc": "We don't guess. We map out your data capability and flows before writing a single line of code."
-                },
-                "1": {
-                    "title": "Rapid Iteration",
-                    "desc": "We ship fast. You see progress every week, not every month. No black boxes."
-                },
-                "2": {
-                    "title": "Local Handoff",
-                    "desc": "We train your team here in Leiden. You own the code, the IP, and the infrastructure."
-                }
-            }
+        {
+          "q": "Do I own the code once the project is finished?",
+          "a": "Absolutely. You own 100% of the Intellectual Property (IP), source code, and infrastructure. No vendor lock-in."
         },
-        "Local": {
-            "title": "Why work with a local Leiden developer?",
-            "cards": {
-                "face": {
-                    "title": "Face-to-Face Collaboration",
-                    "description": "Nothing beats sitting down at a table to map out complex architecture. We are available for on-site workshops in <strong>Leiden</strong>, <strong>Den Haag</strong>, and <strong>Amsterdam</strong>."
-                },
-                "market": {
-                    "title": "Dutch Market Understanding",
-                    "description": "We understand the local ecosystem, payment methods (iDEAL), and business culture. We speak <strong>Tech</strong> and <strong>Business</strong>."
-                }
-            },
-            "hq": "Leiden HQ"
-        },
-        "FAQ": {
-            "title": "Common Questions",
-            "subtitle": "Everything you need to know about working with a software company in Leiden.",
-            "questions": [
-                {
-                    "q": "How long does a typical software project take?",
-                    "a": "It depends on the scope, but an MVP (Minimum Viable Product) usually takes 6 to 12 weeks. We emphasize 'Architecture First' to ensure speed doesn't compromise quality."
-                },
-                {
-                    "q": "Can you integrate AI into my existing software?",
-                    "a": "Yes. We specialize in 'Hybrid AI Development', meaning we can build custom AI agents and automation layers that talk to your current databases and APIs."
-                },
-                {
-                    "q": "Do I own the code once the project is finished?",
-                    "a": "Absolutely. You own 100% of the Intellectual Property (IP), source code, and infrastructure. No vendor lock-in."
-                },
-                {
-                    "q": "Do you offer maintenance and support after launch?",
-                    "a": "Yes, we offer flexible support packages here in Zuid-Holland to ensure your systems remain secure and scalable as your business grows."
-                }
-            ]
-        },
-        "SEO": {
-            "keywords": "software development Leiden, custom web apps Zuid-Holland, IT consultant Netherlands, React developer Leiden, AI integration Leiden, software company Randstad",
-            "extendedDesc": "As a leading software developer in Leiden, we help businesses across Zuid-Holland modernize their tech stack. Whether you need a React-based web app or complex AI automation, our team delivers high-performance solutions from the heart of the Sleutelstad."
+        {
+          "q": "Do you offer maintenance and support after launch?",
+          "a": "Yes, we offer flexible support packages here in Zuid-Holland to ensure your systems remain secure and scalable as your business grows."
         }
+      ]
     },
-    "ITSystemIntegration": {
-        "Hero": {
-            "badge": "IT CONSULTANT NETHERLANDS",
-            "title": {
-                "part1": "Connect Your",
-                "highlight": "Fragmented Systems"
-            },
-            "description": "We are the <strong>software integration company</strong> that makes your apps talk to each other. Connect your <strong>CRM</strong>, <strong>ERP</strong>, and <strong>Internal Tools</strong> to eliminate errors and save time.",
-            "cta": "Discuss Your Integration"
-        },
-        "Diagram": {
-            "source": {
-                "title": "Data Silos",
-                "desc": "Airtable / SQL / Excel"
-            },
-            "engine": {
-                "title": "Integration Engine",
-                "desc": "n8n / Custom API"
-            },
-            "outcome": {
-                "title": "Unified Workflow",
-                "desc": "Automated Sync"
-            }
-        },
-        "Services": {
-            "api": {
-                "title": "Custom API Development",
-                "desc": "We build secure, documented APIs to expose your legacy data to modern web/mobile apps."
-            },
-            "legacy": {
-                "title": "Legacy Modernization",
-                "desc": "Don't rewrite your entire monolith. We wrap it in a modern API layer to extend its life."
-            },
-            "sync": {
-                "title": "Real-Time Sync",
-                "desc": "Keep your HubSpot, Salesforce, and ERP in perfect harmony using event-driven architectures."
-            }
-        },
-        "FAQ": {
-            "title": "Integration FAQ",
-            "subtitle": "Common questions about connecting your business systems.",
-            "questions": [
-                {
-                    "q": "What is system integration?",
-                    "a": "It's the process of connecting different sub-systems (like your CRM, ERP, and payment gateways) into a single, cohesive unit where data flows automatically."
-                },
-                {
-                    "q": "Do you use automation tools like n8n or Make.com?",
-                    "a": "Yes. We are experts in n8n and Make, but we also build custom API bridges when 'off-the-shelf' tools hit their limits."
-                },
-                {
-                    "q": "How do you handle data security during integration?",
-                    "a": "We prioritize data sovereignty. We often deploy self-hosted integration engines so your sensitive business data never leaves your infrastructure."
-                }
-            ]
-        }
-    },
-    "InternalTools": {
-        "Hero": {
-            "badge": "INTERNAL TOOLS DEVELOPMENT",
-            "title": {
-                "part1": "Your Business,",
-                "highlight": "Run Your Way"
-            },
-            "description": "Off-the-shelf software never fits perfectly. We build standard-compliant <strong>custom internal tools</strong> that map exactly to your unique workflows. Escape the <strong>spreadsheet chaos</strong>.",
-            "cta": "Start Building"
-        },
-        "Comparison": {
-            "title": "Why Custom vs Low-Code?",
-            "custom": {
-                "title": "Custom Dev (Our Way)",
-                "points": [
-                    "No per-user monthly fees",
-                    "Full flexible UI/UX",
-                    "You own the source code",
-                    "Unlimited scalability"
-                ]
-            },
-            "lowcode": {
-                "title": "Generic Low-Code",
-                "points": [
-                    "Expensive scaling costs",
-                    "Rigid, clunky interfaces",
-                    "Vendor lock-in",
-                    "Performance ceilings"
-                ]
-            }
-        },
-        "Tools": {
-            "dashboards": {
-                "title": "Operations Dashboards",
-                "desc": "Real-time visualization of KPIs, inventory, and logic. See your business health at a glance."
-            },
-            "portals": {
-                "title": "Client Portals",
-                "desc": "Secure areas for your clients to upload documents, track status, and communicate."
-            },
-            "resource": {
-                "title": "Resource Management",
-                "desc": "Drag-and-drop schedulers tailored to your specific team structure and shifts."
-            }
-        },
-        "FAQ": {
-            "title": "Internal Tools FAQ",
-            "subtitle": "Stop fighting your software. Start building what you need.",
-            "questions": [
-                {
-                    "q": "Why build a custom internal tool instead of using Retool or Appsmith?",
-                    "a": "For many businesses, low-code per-user fees become a massive hidden cost as you grow. Our custom-built tools have zero monthly user fees and 100% flexibility."
-                },
-                {
-                    "q": "Can my internal tool sync with Excel or Google Sheets?",
-                    "a": "Yes. We usually help businesses graduate from sheets to a real database (like Supabase or PostgreSQL) while keeping the sheets as a backup or input method if needed."
-                }
-            ]
-        }
-    },
-    "AIAutomationNL": {
-        "Hero": {
-            "badge": "AI AGENCY LEIDEN & NETHERLANDS",
-            "title": {
-                "part1": "Practical",
-                "highlight": "AI Automation",
-                "sub": "for Growing Businesses"
-            },
-            "description": "Stop drowning in admin work. We deploy <span class=\"text-white font-medium\">AI Agents</span> and <span class=\"text-white font-medium\">automated workflows</span> that actually impact your bottom line. From <strong>Leiden</strong> to the world.",
-            "cta": {
-                "primary": "Book a Discovery Call",
-                "secondary": "See AI Solutions"
-            }
-        },
-        "Agents": {
-            "title": {
-                "part1": "Deploy Your",
-                "highlight": "Digital Workforce"
-            },
-            "whatsapp": {
-                "title": "WhatsApp AI Agents",
-                "desc": "24/7 Customer Support and Lead Qualification directly in WhatsApp. It talks like a human, knows your business, and books appointments automatically.",
-                "points": [
-                    "Zero wait times",
-                    "Connects to CRM",
-                    "98% intent accuracy"
-                ]
-            },
-            "voice": {
-                "title": "AI Voice Call Bots",
-                "desc": "The future of cold calling and inbound support. Our realistic AI voice agents can handle hundreds of calls simultaneously to qualify leads or route support.",
-                "points": [
-                    "<500ms Human-like latency",
-                    "Filter spam/unqualified leads",
-                    "Multi-language support"
-                ]
-            },
-            "automation": {
-                "title": "Workflow Automation (n8n)",
-                "desc": "We act as the \"glue\" between your apps. Using <strong>n8n</strong> and <strong>Make.com</strong>, we automate repetitive data entry, invoicing, and reporting.",
-                "points": [
-                    "No more copy-pasting",
-                    "Error-free operations",
-                    "Custom API Integrations"
-                ]
-            },
-            "label": {
-                "capabilities": "Capabilities",
-                "popular": "POPULAR"
-            }
-        },
-        "ROI": {
-            "title": {
-                "part1": "We don't sell \"Tech\".",
-                "part2": "We sell",
-                "highlight": "Revenue Impact."
-            },
-            "description": "Automation isn't just about saving time; it's about scaling without increasing headcount.",
-            "cards": {
-                "0": {
-                    "label": "COST SAVINGS",
-                    "value": "40%",
-                    "desc": "Average reduction in operational costs for our clients in the first 3 months by automating manual data entry and basic support."
-                },
-                "1": {
-                    "label": "LIFETIME VALUE",
-                    "value": "3x",
-                    "desc": "Faster response times mean happier customers. Our AI agents respond instantly, increasing customer retention and LTV."
-                }
-            }
-        },
-        "Trust": {
-            "dont": {
-                "title": {
-                    "part1": "What we",
-                    "highlight": "DON'T",
-                    "part2": "do"
-                },
-                "points": [
-                    "We don't sell \"magic buttons\" that do nothing. Real automation requires logic and structure.",
-                    "We don't overcomplicate simple problems with hype. If a spreadsheet works, we'll tell you."
-                ]
-            },
-            "do": {
-                "title": {
-                    "part1": "What we",
-                    "highlight": "DO"
-                },
-                "points": [
-                    "Build systems that you own and control. No vendor lock-in nightmares.",
-                    "Provide local support here in <strong>Zuid-Holland</strong>. We are a partner, not a gig worker."
-                ]
-            }
-        },
-        "SEO": {
-            "footer": "Leading AI Automation Agency based in Leiden, serving the Netherlands and global markets. Specializing in n8n workflows, WhatsApp Business APIs, and Voice AI Agents. Contact us for AI consulting in Zuid-Holland.",
-            "keywords": "AI agency Leiden, AI consulting Netherlands, WhatsApp bots for business NL, Voice AI agents Randstad, n8n automation expert, AI ROI strategy, automated sales agents",
-            "faq": {
-                "title": "AI Automation FAQ",
-                "questions": [
-                    {
-                        "q": "What is an AI Agent?",
-                        "a": "An AI Agent is a piece of software that can perceive its environment, reason about it, and take actions to achieve a goal. Unlike a simple chatbot, it can execute tasks like booking appointments or updating your CRM."
-                    },
-                    {
-                        "q": "How much can AI automation save my business?",
-                        "a": "On average, our clients see a 40% reduction in customer support costs and a significant boost in lead response times, often leading to a 20%+ increase in top-line revenue."
-                    }
-                ]
-            }
-        }
-    },
-    "ExpertisePages": {
-        "AIAgents": {
-            "Hero": {
-                "badge": "AI AGENT DEVELOPMENT",
-                "title": {
-                    "part1": "Your 24/7",
-                    "highlight": "Digital Workforce"
-                },
-                "description": "Imagine a support team that never sleeps, never complains, and scales instantly. We build **AI Agents** that handle customer service, sales qualification, and appointment setting autonomously.",
-                "cta": "Deploy Your Agent"
-            },
-            "Features": {
-                "title": "Why Agents?",
-                "cards": [
-                    {
-                        "title": "Instant Response",
-                        "desc": "Respond to leads in < 2 seconds. Speed leads to revenue."
-                    },
-                    {
-                        "title": "Infinite Scale",
-                        "desc": "Handle 1 or 10,000 concurrent conversations without extra cost."
-                    },
-                    {
-                        "title": "Perfect Recall",
-                        "desc": "Agents remember every detail of every conversation, forever."
-                    }
-                ]
-            },
-            "SEO": {
-                "title": "AI Agent Development Netherlands | 24/7 Automation",
-                "description": "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
-                "keywords": "ai agent development, digital workforce, whatsapp automation business, ai customer service nl"
-            }
-        },
-        "n8nMigration": {
-            "Hero": {
-                "badge": "WORKFLOW MIGRATION & CONSULTING",
-                "title": {
-                    "part1": "Escape the",
-                    "highlight": "Zapier Tax"
-                },
-                "description": "Paying thousands for simple automations? We migrate your chaotic Zapier/Make workflows to **n8n**, giving you ownership, privacy, and unlimited execution power for a fraction of the cost.",
-                "cta": "Start Migration"
-            },
-            "Features": {
-                "title": "Why Migrate?",
-                "cards": [
-                    {
-                        "title": "Cost Control",
-                        "desc": "Stop paying per-task. Run complex flows on your own server."
-                    },
-                    {
-                        "title": "Data Privacy",
-                        "desc": "Keep sensitive client data on your own infrastructure, GDPR compliant."
-                    },
-                    {
-                        "title": "Complex Logic",
-                        "desc": "Build sophisticated workflows that Zapier simply can't handle."
-                    }
-                ]
-            },
-            "SEO": {
-                "title": "n8n Consulting & Migration Services | Zapier Alternative",
-                "description": "Expert n8n consultants in the Netherlands. We migrate tailored workflows from Zapier and Make to n8n for better performance and lower costs.",
-                "keywords": "n8n consultant netherlands, migrate from zapier to n8n, workflow automation expert, self-hosted automation"
-            },
-            "Process": {
-                "title": "How the Migration Works",
-                "subtitle": "From Zapier chaos to self-hosted control in 4 steps.",
-                "steps": [
-                    {
-                        "number": "01",
-                        "title": "Workflow Audit",
-                        "desc": "We map every existing Zapier or Make workflow — triggers, actions, error paths, and hidden logic. Nothing gets lost in translation."
-                    },
-                    {
-                        "number": "02",
-                        "title": "Architecture Design",
-                        "desc": "We design your new n8n architecture: self-hosted server, credential management, environment setup, and workflow structure."
-                    },
-                    {
-                        "number": "03",
-                        "title": "Migration & Testing",
-                        "desc": "We rebuild each workflow in n8n with improved logic, better error handling, and parallel execution where possible. Full testing before cutover."
-                    },
-                    {
-                        "number": "04",
-                        "title": "Handoff & Documentation",
-                        "desc": "You get full ownership: documented workflows, a trained team, and optional ongoing support. No vendor dependency, ever."
-                    }
-                ]
-            },
-            "Comparison": {
-                "title": "n8n vs The Competition",
-                "zapier": {
-                    "name": "Zapier",
-                    "cons": [
-                        "Pay per task (costs explode at scale)",
-                        "Limited logic complexity",
-                        "Data leaves your infrastructure",
-                        "Vendor lock-in"
-                    ]
-                },
-                "make": {
-                    "name": "Make.com",
-                    "cons": [
-                        "Pay per operation",
-                        "Complex pricing tiers",
-                        "No self-hosting option",
-                        "Limited enterprise features"
-                    ]
-                },
-                "n8n": {
-                    "name": "n8n (Our Choice)",
-                    "pros": [
-                        "Unlimited executions on your server",
-                        "Full code flexibility with JS/Python nodes",
-                        "GDPR-compliant: data stays on-premise",
-                        "One-time setup, zero recurring SaaS fees"
-                    ]
-                }
-            },
-            "UseCases": {
-                "title": "What We Migrate",
-                "subtitle": "Any workflow that runs on Zapier or Make can run better on n8n.",
-                "cases": [
-                    {
-                        "icon": "🤝",
-                        "title": "CRM Automation",
-                        "desc": "Lead scoring, contact enrichment, deal stage updates, and follow-up sequences synced across HubSpot, Pipedrive, or Salesforce."
-                    },
-                    {
-                        "icon": "📧",
-                        "title": "Email & Marketing",
-                        "desc": "Behavioral email triggers, list segmentation, campaign tracking, and multi-channel outreach coordinated in real-time."
-                    },
-                    {
-                        "icon": "📊",
-                        "title": "Reporting & Analytics",
-                        "desc": "Automated dashboards pulling from multiple data sources, scheduled reports delivered to Slack or email every morning."
-                    },
-                    {
-                        "icon": "🛒",
-                        "title": "Ecommerce Operations",
-                        "desc": "Order processing, inventory sync, customer notifications, and return handling across Shopify, WooCommerce, or custom stores."
-                    },
-                    {
-                        "icon": "🧾",
-                        "title": "Finance & Invoicing",
-                        "desc": "Invoice generation, payment reconciliation, expense categorization, and accounting system sync — fully automated."
-                    },
-                    {
-                        "icon": "🔗",
-                        "title": "API Integrations",
-                        "desc": "Connect any two systems that have an API. If it has a webhook or REST endpoint, we can automate it."
-                    }
-                ]
-            },
-            "FAQ": {
-                "title": "Common Questions",
-                "items": [
-                    {
-                        "q": "How long does a migration take?",
-                        "a": "Most migrations take 1-3 weeks depending on the number and complexity of workflows. Simple setups (under 10 workflows) can be live in 5 days."
-                    },
-                    {
-                        "q": "Do I need my own server to run n8n?",
-                        "a": "Yes. We recommend a VPS (like Hetzner or DigitalOcean) for €5-15/month. We handle the full server setup, SSL, backups, and monitoring as part of the migration."
-                    },
-                    {
-                        "q": "What happens to my existing Zapier workflows during migration?",
-                        "a": "Nothing. We build the n8n version in parallel and only switch over after full testing. Your Zapier workflows keep running until you approve the cutover."
-                    },
-                    {
-                        "q": "Can you add new logic that Zapier could not handle?",
-                        "a": "Absolutely. n8n supports full JavaScript/Python code nodes, complex branching, sub-workflows, and API calls that Zapier simply cannot execute. We often improve workflows significantly during migration."
-                    }
-                ]
-            },
-            "CTA": {
-                "title": "Ready to Cut Your Automation Bill?",
-                "subtitle": "Get a free workflow audit. We will show you exactly what you can save by migrating to n8n.",
-                "button": "Get Free Audit"
-            }
-        },
-        "SystemArchitecture": {
-            "Hero": {
-                "badge": "SYSTEM ARCHITECTURE DESIGN",
-                "title": {
-                    "part1": "Foundation for",
-                    "highlight": "Hyper-Growth"
-                },
-                "description": "Spaghetti code kills startups. We design robust, scalable **System Architectures** using Next.js and Microservices that can handle millions of users without collapsing.",
-                "cta": "Audit Your Stack"
-            },
-            "Features": {
-                "title": "Architecture First",
-                "cards": [
-                    {
-                        "title": "Scalability",
-                        "desc": "Systems designed to grow with you, from MVP to IPO."
-                    },
-                    {
-                        "title": "Maintainability",
-                        "desc": "Clean, documented patterns that any developer can jump into."
-                    },
-                    {
-                        "title": "Performance",
-                        "desc": "Optimized database queries and edge caching for sub-100ms loads."
-                    }
-                ]
-            },
-            "SEO": {
-                "title": "Software Architecture Consultant Netherlands | Scalable React Systems",
-                "description": "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
-                "keywords": "system architect netherlands, react performance consulting, scalable software design, tech debt audit"
-            }
-        },
-        "CustomLLMs": {
-            "Hero": {
-                "badge": "CUSTOM LLM DEVELOPMENT",
-                "title": {
-                    "part1": "Your Business,",
-                    "highlight": "Your Brain"
-                },
-                "description": "Generic ChatGPT isn't enough. We fine-tune **Custom LLMs** on your proprietary data, creating an AI model that speaks your language and knows your secrets—securely.",
-                "cta": "Train Your Model"
-            },
-            "Features": {
-                "title": "Beyond GPT-4",
-                "cards": [
-                    {
-                        "title": "Data Security",
-                        "desc": "Run open-source models (Llama 3, Mistral) on private servers."
-                    },
-                    {
-                        "title": "Domain Expert",
-                        "desc": "Models trained specifically on your legal, medical, or tech documents."
-                    },
-                    {
-                        "title": "Cost Efficiency",
-                        "desc": "Smaller, specialized models often outperform giant, expensive ones."
-                    }
-                ]
-            },
-            "SEO": {
-                "title": "Custom LLM Development & Fine-Tuning Netherlands",
-                "description": "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
-                "keywords": "custom llm development, fine-tuning ai models, private ai server, llama 3 business implementation"
-            }
-        }
-    },
-    "Testimonials": {
-        "badge": "CLIENT RESULTS",
-        "title": "What Our Clients Say",
-        "subtitle": "Real outcomes from real projects.",
-        "items": [
-            {
-                "quote": "CodeHunter Lab migrated all our Zapier workflows to n8n in under two weeks. Our monthly automation bill dropped from €600 to €12. The new setup handles 10x more volume without breaking a sweat.",
-                "name": "Daan van der Berg",
-                "role": "Co-Founder",
-                "company": "GrowthStack BV",
-                "initials": "DB",
-                "color": "green"
-            },
-            {
-                "quote": "We deployed an AI voice agent for inbound leads and it now handles 80% of first-contact qualification. Our sales team only talks to prospects that are already warmed up. ROI in month one.",
-                "name": "Sofia Martínez",
-                "role": "Head of Sales",
-                "company": "Veloce Commerce",
-                "initials": "SM",
-                "color": "orange"
-            },
-            {
-                "quote": "The frontend architecture they designed for our SaaS platform cut our load time in half and our developer onboarding from days to hours. Clean, documented, maintainable — exactly what we needed.",
-                "name": "Lars Koopmans",
-                "role": "CTO",
-                "company": "Nexora SaaS",
-                "initials": "LK",
-                "color": "green"
-            },
-            {
-                "quote": "We replaced a patchwork of spreadsheets and manual processes with a custom internal dashboard. The tool paid for itself in saved admin hours within the first month of use.",
-                "name": "Emma de Boer",
-                "role": "Operations Manager",
-                "company": "LogiFlow NL",
-                "initials": "EB",
-                "color": "orange"
-            }
-        ]
+    "SEO": {
+      "keywords": "software development Leiden, custom web apps Zuid-Holland, IT consultant Netherlands, React developer Leiden, AI integration Leiden, software company Randstad",
+      "extendedDesc": "As a leading software developer in Leiden, we help businesses across Zuid-Holland modernize their tech stack. Whether you need a React-based web app or complex AI automation, our team delivers high-performance solutions from the heart of the Sleutelstad."
     }
+  },
+  "ITSystemIntegration": {
+    "Hero": {
+      "badge": "IT CONSULTANT NETHERLANDS",
+      "title": {
+        "part1": "Connect Your",
+        "highlight": "Fragmented Systems"
+      },
+      "description": "We are the <strong>software integration company</strong> that makes your apps talk to each other. Connect your <strong>CRM</strong>, <strong>ERP</strong>, and <strong>Internal Tools</strong> to eliminate errors and save time.",
+      "cta": "Discuss Your Integration"
+    },
+    "Diagram": {
+      "source": {
+        "title": "Data Silos",
+        "desc": "Airtable / SQL / Excel"
+      },
+      "engine": {
+        "title": "Integration Engine",
+        "desc": "n8n / Custom API"
+      },
+      "outcome": {
+        "title": "Unified Workflow",
+        "desc": "Automated Sync"
+      }
+    },
+    "Services": {
+      "api": {
+        "title": "Custom API Development",
+        "desc": "We build secure, documented APIs to expose your legacy data to modern web/mobile apps."
+      },
+      "legacy": {
+        "title": "Legacy Modernization",
+        "desc": "Don't rewrite your entire monolith. We wrap it in a modern API layer to extend its life."
+      },
+      "sync": {
+        "title": "Real-Time Sync",
+        "desc": "Keep your HubSpot, Salesforce, and ERP in perfect harmony using event-driven architectures."
+      }
+    },
+    "FAQ": {
+      "title": "Integration FAQ",
+      "subtitle": "Common questions about connecting your business systems.",
+      "questions": [
+        {
+          "q": "What is system integration?",
+          "a": "It's the process of connecting different sub-systems (like your CRM, ERP, and payment gateways) into a single, cohesive unit where data flows automatically."
+        },
+        {
+          "q": "Do you use automation tools like n8n or Make.com?",
+          "a": "Yes. We are experts in n8n and Make, but we also build custom API bridges when 'off-the-shelf' tools hit their limits."
+        },
+        {
+          "q": "How do you handle data security during integration?",
+          "a": "We prioritize data sovereignty. We often deploy self-hosted integration engines so your sensitive business data never leaves your infrastructure."
+        }
+      ]
+    }
+  },
+  "InternalTools": {
+    "Hero": {
+      "badge": "INTERNAL TOOLS DEVELOPMENT",
+      "title": {
+        "part1": "Your Business,",
+        "highlight": "Run Your Way"
+      },
+      "description": "Off-the-shelf software never fits perfectly. We build standard-compliant <strong>custom internal tools</strong> that map exactly to your unique workflows. Escape the <strong>spreadsheet chaos</strong>.",
+      "cta": "Start Building"
+    },
+    "Comparison": {
+      "title": "Why Custom vs Low-Code?",
+      "custom": {
+        "title": "Custom Dev (Our Way)",
+        "points": [
+          "No per-user monthly fees",
+          "Full flexible UI/UX",
+          "You own the source code",
+          "Unlimited scalability"
+        ]
+      },
+      "lowcode": {
+        "title": "Generic Low-Code",
+        "points": [
+          "Expensive scaling costs",
+          "Rigid, clunky interfaces",
+          "Vendor lock-in",
+          "Performance ceilings"
+        ]
+      }
+    },
+    "Tools": {
+      "dashboards": {
+        "title": "Operations Dashboards",
+        "desc": "Real-time visualization of KPIs, inventory, and logic. See your business health at a glance."
+      },
+      "portals": {
+        "title": "Client Portals",
+        "desc": "Secure areas for your clients to upload documents, track status, and communicate."
+      },
+      "resource": {
+        "title": "Resource Management",
+        "desc": "Drag-and-drop schedulers tailored to your specific team structure and shifts."
+      }
+    },
+    "FAQ": {
+      "title": "Internal Tools FAQ",
+      "subtitle": "Stop fighting your software. Start building what you need.",
+      "questions": [
+        {
+          "q": "Why build a custom internal tool instead of using Retool or Appsmith?",
+          "a": "For many businesses, low-code per-user fees become a massive hidden cost as you grow. Our custom-built tools have zero monthly user fees and 100% flexibility."
+        },
+        {
+          "q": "Can my internal tool sync with Excel or Google Sheets?",
+          "a": "Yes. We usually help businesses graduate from sheets to a real database (like Supabase or PostgreSQL) while keeping the sheets as a backup or input method if needed."
+        }
+      ]
+    }
+  },
+  "AIAutomationNL": {
+    "Hero": {
+      "badge": "AI AGENCY LEIDEN & NETHERLANDS",
+      "title": {
+        "part1": "Practical",
+        "highlight": "AI Automation",
+        "sub": "for Growing Businesses"
+      },
+      "description": "Stop drowning in admin work. We deploy <span class=\"text-white font-medium\">AI Agents</span> and <span class=\"text-white font-medium\">automated workflows</span> that actually impact your bottom line. From <strong>Leiden</strong> to the world.",
+      "cta": {
+        "primary": "Book a Discovery Call",
+        "secondary": "See AI Solutions"
+      }
+    },
+    "Agents": {
+      "title": {
+        "part1": "Deploy Your",
+        "highlight": "Digital Workforce"
+      },
+      "whatsapp": {
+        "title": "WhatsApp AI Agents",
+        "desc": "24/7 Customer Support and Lead Qualification directly in WhatsApp. It talks like a human, knows your business, and books appointments automatically.",
+        "points": [
+          "Zero wait times",
+          "Connects to CRM",
+          "98% intent accuracy"
+        ]
+      },
+      "voice": {
+        "title": "AI Voice Call Bots",
+        "desc": "The future of cold calling and inbound support. Our realistic AI voice agents can handle hundreds of calls simultaneously to qualify leads or route support.",
+        "points": [
+          "<500ms Human-like latency",
+          "Filter spam/unqualified leads",
+          "Multi-language support"
+        ]
+      },
+      "automation": {
+        "title": "Workflow Automation (n8n)",
+        "desc": "We act as the \"glue\" between your apps. Using <strong>n8n</strong> and <strong>Make.com</strong>, we automate repetitive data entry, invoicing, and reporting.",
+        "points": [
+          "No more copy-pasting",
+          "Error-free operations",
+          "Custom API Integrations"
+        ]
+      },
+      "label": {
+        "capabilities": "Capabilities",
+        "popular": "POPULAR"
+      }
+    },
+    "ROI": {
+      "title": {
+        "part1": "We don't sell \"Tech\".",
+        "part2": "We sell",
+        "highlight": "Revenue Impact."
+      },
+      "description": "Automation isn't just about saving time; it's about scaling without increasing headcount.",
+      "cards": {
+        "0": {
+          "label": "COST SAVINGS",
+          "value": "40%",
+          "desc": "Average reduction in operational costs for our clients in the first 3 months by automating manual data entry and basic support."
+        },
+        "1": {
+          "label": "LIFETIME VALUE",
+          "value": "3x",
+          "desc": "Faster response times mean happier customers. Our AI agents respond instantly, increasing customer retention and LTV."
+        }
+      }
+    },
+    "Trust": {
+      "dont": {
+        "title": {
+          "part1": "What we",
+          "highlight": "DON'T",
+          "part2": "do"
+        },
+        "points": [
+          "We don't sell \"magic buttons\" that do nothing. Real automation requires logic and structure.",
+          "We don't overcomplicate simple problems with hype. If a spreadsheet works, we'll tell you."
+        ]
+      },
+      "do": {
+        "title": {
+          "part1": "What we",
+          "highlight": "DO"
+        },
+        "points": [
+          "Build systems that you own and control. No vendor lock-in nightmares.",
+          "Provide local support here in <strong>Zuid-Holland</strong>. We are a partner, not a gig worker."
+        ]
+      }
+    },
+    "SEO": {
+      "footer": "Leading AI Automation Agency based in Leiden, serving the Netherlands and global markets. Specializing in n8n workflows, WhatsApp Business APIs, and Voice AI Agents. Contact us for AI consulting in Zuid-Holland.",
+      "keywords": "AI agency Leiden, AI consulting Netherlands, WhatsApp bots for business NL, Voice AI agents Randstad, n8n automation expert, AI ROI strategy, automated sales agents",
+      "faq": {
+        "title": "AI Automation FAQ",
+        "questions": [
+          {
+            "q": "What is an AI Agent?",
+            "a": "An AI Agent is a piece of software that can perceive its environment, reason about it, and take actions to achieve a goal. Unlike a simple chatbot, it can execute tasks like booking appointments or updating your CRM."
+          },
+          {
+            "q": "How much can AI automation save my business?",
+            "a": "On average, our clients see a 40% reduction in customer support costs and a significant boost in lead response times, often leading to a 20%+ increase in top-line revenue."
+          }
+        ]
+      }
+    }
+  },
+  "ExpertisePages": {
+    "AIAgents": {
+      "Hero": {
+        "badge": "AI AGENT DEVELOPMENT",
+        "title": {
+          "part1": "Your 24/7",
+          "highlight": "Digital Workforce"
+        },
+        "description": "Imagine a support team that never sleeps, never complains, and scales instantly. We build **AI Agents** that handle customer service, sales qualification, and appointment setting autonomously.",
+        "cta": "Deploy Your Agent"
+      },
+      "Features": {
+        "title": "Why Agents?",
+        "cards": [
+          {
+            "title": "Instant Response",
+            "desc": "Respond to leads in < 2 seconds. Speed leads to revenue."
+          },
+          {
+            "title": "Infinite Scale",
+            "desc": "Handle 1 or 10,000 concurrent conversations without extra cost."
+          },
+          {
+            "title": "Perfect Recall",
+            "desc": "Agents remember every detail of every conversation, forever."
+          }
+        ]
+      },
+      "SEO": {
+        "title": "AI Agent Development Netherlands | 24/7 Automation",
+        "description": "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
+        "keywords": "ai agent development, digital workforce, whatsapp automation business, ai customer service nl"
+      }
+    },
+    "n8nMigration": {
+      "Hero": {
+        "badge": "WORKFLOW MIGRATION & CONSULTING",
+        "title": {
+          "part1": "Escape the",
+          "highlight": "Zapier Tax"
+        },
+        "description": "Paying thousands for simple automations? We migrate your chaotic Zapier/Make workflows to **n8n**, giving you ownership, privacy, and unlimited execution power for a fraction of the cost.",
+        "cta": "Start Migration"
+      },
+      "Features": {
+        "title": "Why Migrate?",
+        "cards": [
+          {
+            "title": "Cost Control",
+            "desc": "Stop paying per-task. Run complex flows on your own server."
+          },
+          {
+            "title": "Data Privacy",
+            "desc": "Keep sensitive client data on your own infrastructure, GDPR compliant."
+          },
+          {
+            "title": "Complex Logic",
+            "desc": "Build sophisticated workflows that Zapier simply can't handle."
+          }
+        ]
+      },
+      "SEO": {
+        "title": "n8n Consulting & Migration Services | Zapier Alternative",
+        "description": "Expert n8n consultants in the Netherlands. We migrate tailored workflows from Zapier and Make to n8n for better performance and lower costs.",
+        "keywords": "n8n consultant netherlands, migrate from zapier to n8n, workflow automation expert, self-hosted automation"
+      },
+      "Process": {
+        "title": "How the Migration Works",
+        "subtitle": "From Zapier chaos to self-hosted control in 4 steps.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Workflow Audit",
+            "desc": "We map every existing Zapier or Make workflow — triggers, actions, error paths, and hidden logic. Nothing gets lost in translation."
+          },
+          {
+            "number": "02",
+            "title": "Architecture Design",
+            "desc": "We design your new n8n architecture: self-hosted server, credential management, environment setup, and workflow structure."
+          },
+          {
+            "number": "03",
+            "title": "Migration & Testing",
+            "desc": "We rebuild each workflow in n8n with improved logic, better error handling, and parallel execution where possible. Full testing before cutover."
+          },
+          {
+            "number": "04",
+            "title": "Handoff & Documentation",
+            "desc": "You get full ownership: documented workflows, a trained team, and optional ongoing support. No vendor dependency, ever."
+          }
+        ]
+      },
+      "Comparison": {
+        "title": "n8n vs The Competition",
+        "zapier": {
+          "name": "Zapier",
+          "cons": [
+            "Pay per task (costs explode at scale)",
+            "Limited logic complexity",
+            "Data leaves your infrastructure",
+            "Vendor lock-in"
+          ]
+        },
+        "make": {
+          "name": "Make.com",
+          "cons": [
+            "Pay per operation",
+            "Complex pricing tiers",
+            "No self-hosting option",
+            "Limited enterprise features"
+          ]
+        },
+        "n8n": {
+          "name": "n8n (Our Choice)",
+          "pros": [
+            "Unlimited executions on your server",
+            "Full code flexibility with JS/Python nodes",
+            "GDPR-compliant: data stays on-premise",
+            "One-time setup, zero recurring SaaS fees"
+          ]
+        }
+      },
+      "UseCases": {
+        "title": "What We Migrate",
+        "subtitle": "Any workflow that runs on Zapier or Make can run better on n8n.",
+        "cases": [
+          {
+            "icon": "🤝",
+            "title": "CRM Automation",
+            "desc": "Lead scoring, contact enrichment, deal stage updates, and follow-up sequences synced across HubSpot, Pipedrive, or Salesforce."
+          },
+          {
+            "icon": "📧",
+            "title": "Email & Marketing",
+            "desc": "Behavioral email triggers, list segmentation, campaign tracking, and multi-channel outreach coordinated in real-time."
+          },
+          {
+            "icon": "📊",
+            "title": "Reporting & Analytics",
+            "desc": "Automated dashboards pulling from multiple data sources, scheduled reports delivered to Slack or email every morning."
+          },
+          {
+            "icon": "🛒",
+            "title": "Ecommerce Operations",
+            "desc": "Order processing, inventory sync, customer notifications, and return handling across Shopify, WooCommerce, or custom stores."
+          },
+          {
+            "icon": "🧾",
+            "title": "Finance & Invoicing",
+            "desc": "Invoice generation, payment reconciliation, expense categorization, and accounting system sync — fully automated."
+          },
+          {
+            "icon": "🔗",
+            "title": "API Integrations",
+            "desc": "Connect any two systems that have an API. If it has a webhook or REST endpoint, we can automate it."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "Common Questions",
+        "items": [
+          {
+            "q": "How long does a migration take?",
+            "a": "Most migrations take 1-3 weeks depending on the number and complexity of workflows. Simple setups (under 10 workflows) can be live in 5 days."
+          },
+          {
+            "q": "Do I need my own server to run n8n?",
+            "a": "Yes. We recommend a VPS (like Hetzner or DigitalOcean) for €5-15/month. We handle the full server setup, SSL, backups, and monitoring as part of the migration."
+          },
+          {
+            "q": "What happens to my existing Zapier workflows during migration?",
+            "a": "Nothing. We build the n8n version in parallel and only switch over after full testing. Your Zapier workflows keep running until you approve the cutover."
+          },
+          {
+            "q": "Can you add new logic that Zapier could not handle?",
+            "a": "Absolutely. n8n supports full JavaScript/Python code nodes, complex branching, sub-workflows, and API calls that Zapier simply cannot execute. We often improve workflows significantly during migration."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "Ready to Cut Your Automation Bill?",
+        "subtitle": "Get a free workflow audit. We will show you exactly what you can save by migrating to n8n.",
+        "button": "Get Free Audit"
+      }
+    },
+    "SystemArchitecture": {
+      "Hero": {
+        "badge": "SYSTEM ARCHITECTURE DESIGN",
+        "title": {
+          "part1": "Foundation for",
+          "highlight": "Hyper-Growth"
+        },
+        "description": "Spaghetti code kills startups. We design robust, scalable **System Architectures** using Next.js and Microservices that can handle millions of users without collapsing.",
+        "cta": "Audit Your Stack"
+      },
+      "Features": {
+        "title": "Architecture First",
+        "cards": [
+          {
+            "title": "Scalability",
+            "desc": "Systems designed to grow with you, from MVP to IPO."
+          },
+          {
+            "title": "Maintainability",
+            "desc": "Clean, documented patterns that any developer can jump into."
+          },
+          {
+            "title": "Performance",
+            "desc": "Optimized database queries and edge caching for sub-100ms loads."
+          }
+        ]
+      },
+      "SEO": {
+        "title": "Software Architecture Consultant Netherlands | Scalable React Systems",
+        "description": "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
+        "keywords": "system architect netherlands, react performance consulting, scalable software design, tech debt audit"
+      }
+    },
+    "CustomLLMs": {
+      "Hero": {
+        "badge": "CUSTOM LLM DEVELOPMENT",
+        "title": {
+          "part1": "Your Business,",
+          "highlight": "Your Brain"
+        },
+        "description": "Generic ChatGPT isn't enough. We fine-tune **Custom LLMs** on your proprietary data, creating an AI model that speaks your language and knows your secrets—securely.",
+        "cta": "Train Your Model"
+      },
+      "Features": {
+        "title": "Beyond GPT-4",
+        "cards": [
+          {
+            "title": "Data Security",
+            "desc": "Run open-source models (Llama 3, Mistral) on private servers."
+          },
+          {
+            "title": "Domain Expert",
+            "desc": "Models trained specifically on your legal, medical, or tech documents."
+          },
+          {
+            "title": "Cost Efficiency",
+            "desc": "Smaller, specialized models often outperform giant, expensive ones."
+          }
+        ]
+      },
+      "SEO": {
+        "title": "Custom LLM Development & Fine-Tuning Netherlands",
+        "description": "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
+        "keywords": "custom llm development, fine-tuning ai models, private ai server, llama 3 business implementation"
+      }
+    }
+  },
+  "NextJsAgency": {
+    "Hero": {
+      "badge": "NEXT.JS DEVELOPMENT AGENCY :: NETHERLANDS",
+      "title": {
+        "part1": "Next.js Development",
+        "highlight": "That Scales."
+      },
+      "description": "Looking to <strong>hire Next.js developers</strong>? We are a specialized <strong>Next.js development agency</strong> in the Netherlands, building high-performance web applications with React, TypeScript, and AI integration.",
+      "cta": {
+        "primary": "Start Your Project",
+        "secondary": "View Our Work"
+      }
+    },
+    "Services": {
+      "ssr": {
+        "title": "SSR & SSG Architecture",
+        "description": "We build Next.js apps optimized for Core Web Vitals. Server-Side Rendering and Static Generation tailored to your content and traffic patterns."
+      },
+      "migration": {
+        "title": "Next.js Migration",
+        "description": "Migrating from Create React App, Gatsby, or a custom webpack setup? We handle the full migration with zero downtime and improved performance."
+      },
+      "fullstack": {
+        "title": "Full-Stack Next.js",
+        "description": "From API Routes to App Router and server components — we build complete full-stack applications with database, auth, and deployment."
+      }
+    },
+    "WhyUs": {
+      "title": "Why choose a specialist?",
+      "points": [
+        {
+          "title": "Deep Framework Knowledge",
+          "desc": "We know every Next.js API — App Router, Server Components, Streaming, Route Handlers, and Middleware."
+        },
+        {
+          "title": "Performance-First",
+          "desc": "Every project targets 90+ Lighthouse scores. We don't ship slow code."
+        },
+        {
+          "title": "TypeScript by Default",
+          "desc": "Full type-safety from day one. No runtime surprises."
+        },
+        {
+          "title": "Dutch Market",
+          "desc": "Based in Leiden, serving clients in Amsterdam, Rotterdam, and Den Haag."
+        }
+      ]
+    },
+    "Process": {
+      "title": "How We Build",
+      "steps": {
+        "0": {
+          "title": "Discovery & Architecture",
+          "desc": "We define the data model, routing strategy, and rendering approach before writing any code."
+        },
+        "1": {
+          "title": "Rapid Development",
+          "desc": "Two-week sprints with live staging previews. You see progress every week."
+        },
+        "2": {
+          "title": "Performance Audit",
+          "desc": "Every deployment goes through Core Web Vitals testing and Lighthouse analysis."
+        },
+        "3": {
+          "title": "Handoff & Docs",
+          "desc": "You get full ownership: repo, CI/CD pipeline, and inline documentation."
+        }
+      }
+    },
+    "FAQ": {
+      "title": "Next.js FAQ",
+      "subtitle": "Common questions about working with a Next.js development agency.",
+      "questions": [
+        {
+          "q": "What is the difference between Next.js and React?",
+          "a": "React is a UI library. Next.js is a full framework built on React that adds SSR, SSG, file-based routing, API routes, image optimization, and much more. For most production web applications, Next.js is the right choice."
+        },
+        {
+          "q": "Should I use the App Router or Pages Router?",
+          "a": "For new projects, we always recommend the App Router (introduced in Next.js 13+). It supports React Server Components, streaming, and nested layouts — critical for modern, scalable web apps."
+        },
+        {
+          "q": "Can you migrate our existing React app to Next.js?",
+          "a": "Yes, and it's one of our most common engagements. We migrate Create React App, Vite, and Gatsby projects to Next.js with improved SEO, performance, and developer experience."
+        },
+        {
+          "q": "How long does a typical Next.js project take?",
+          "a": "A standard web application takes 6 to 10 weeks from architecture to launch. Complex platforms with custom backends or e-commerce integrations may take 3 to 6 months."
+        }
+      ]
+    },
+    "SEO": {
+      "keywords": "Next.js development agency Netherlands, hire Next.js developer, Next.js consulting Netherlands, React Next.js agency Leiden, Next.js App Router specialist, server components consulting",
+      "extendedDesc": "As a dedicated Next.js development agency in Leiden, we build production-grade web applications for businesses across the Netherlands. Our team specializes in the latest Next.js features including App Router, React Server Components, and edge rendering. Contact us for a free Next.js architecture review."
+    }
+  },
+  "ReactConsulting": {
+    "Hero": {
+      "badge": "REACT CONSULTING SERVICES :: NETHERLANDS",
+      "title": {
+        "part1": "React Architecture",
+        "highlight": "Done Right."
+      },
+      "description": "Senior <strong>React consulting services</strong> for teams that want to scale without the chaos. We audit, refactor, and architect React codebases for <strong>long-term maintainability</strong>.",
+      "cta": {
+        "primary": "Book Architecture Audit",
+        "secondary": "See Case Studies"
+      }
+    },
+    "Services": {
+      "audit": {
+        "title": "Codebase Audit",
+        "description": "We deep-dive into your React codebase, identify anti-patterns, performance bottlenecks, and scalability risks — and give you a concrete action plan."
+      },
+      "architecture": {
+        "title": "Architecture Design",
+        "description": "From state management strategy (Zustand, Context, TanStack Query) to component patterns and folder structure — we design for team scale."
+      },
+      "migration": {
+        "title": "React Upgrade & Migration",
+        "description": "React 18 concurrent features, legacy class component migration, or moving from Create React App to Vite. We handle complex migrations safely."
+      }
+    },
+    "Comparison": {
+      "title": "Consultancy vs. Hiring",
+      "consulting": {
+        "title": "React Consulting (Our Model)",
+        "points": [
+          "Senior expertise from day one",
+          "No hiring overhead or notice periods",
+          "Architecture + execution, not just advice",
+          "Transfer knowledge to your team"
+        ]
+      },
+      "hiring": {
+        "title": "Traditional Hiring",
+        "points": [
+          "3-6 months to hire and onboard",
+          "Hidden costs (benefits, taxes, equipment)",
+          "Risk of cultural or skill mismatch",
+          "Slower for short-term projects"
+        ]
+      }
+    },
+    "Process": {
+      "title": "Our Engagement Model",
+      "steps": {
+        "0": {
+          "title": "1-Hour Discovery",
+          "desc": "We understand your stack, team size, and the specific bottleneck you're facing."
+        },
+        "1": {
+          "title": "Architecture Audit",
+          "desc": "2-3 day deep analysis of your repo. You get a written report with priorities."
+        },
+        "2": {
+          "title": "Sprint Execution",
+          "desc": "We implement the critical fixes or architect the new structure alongside your team."
+        },
+        "3": {
+          "title": "Knowledge Transfer",
+          "desc": "Documentation, team workshop, and a recorded walkthrough so your team can maintain it."
+        }
+      }
+    },
+    "FAQ": {
+      "title": "React Consulting FAQ",
+      "subtitle": "Common questions about our React architecture consulting services.",
+      "questions": [
+        {
+          "q": "What does a React architecture audit include?",
+          "a": "A full audit covers: component structure and reusability, state management patterns, performance profiling (React DevTools, Lighthouse), bundle analysis, and testing coverage. You receive a written report within 5 business days."
+        },
+        {
+          "q": "Do you work with existing teams or only greenfield projects?",
+          "a": "We specialize in joining existing teams and codebases. We focus on improving what's there, not rewriting from scratch, unless the technical debt makes rewriting the right call."
+        },
+        {
+          "q": "What React state management libraries do you recommend?",
+          "a": "For server state, TanStack Query (React Query). For lightweight global state, Zustand. For complex UI state, Jotai. We avoid Redux unless there's a strong legacy reason to keep it."
+        },
+        {
+          "q": "Can you help us improve Core Web Vitals on a React SPA?",
+          "a": "Yes. SPAs often have poor LCP and CLS scores. We implement code splitting, lazy loading, bundle optimization, and often recommend a move to Next.js for SSR benefits."
+        }
+      ]
+    },
+    "SEO": {
+      "keywords": "React consulting Netherlands, React architecture consultant, hire React developer Netherlands, React codebase audit, React refactoring services, senior React developer Leiden",
+      "extendedDesc": "CodeHunter Lab provides senior React consulting services to teams across the Netherlands. From codebase audits to full architecture redesigns, we help engineering teams scale their React applications without the chaos. Our consultants have shipped React apps for e-commerce, SaaS, and fintech clients across Amsterdam, Rotterdam, and Leiden."
+    }
+  },
+  "Testimonials": {
+    "badge": "CLIENT OUTCOMES",
+    "title": "What Clients Measure After We Ship",
+    "subtitle": "Real results from production systems — no demos, no vanity metrics.",
+    "items": [
+      {
+        "quote": "CodeHunter Lab migrated all our Zapier workflows to n8n in under two weeks. Our monthly automation bill dropped from €600 to €12. The new setup handles 10x more volume without breaking a sweat.",
+        "name": "Daan van der Berg",
+        "role": "Co-Founder",
+        "company": "GrowthStack BV",
+        "initials": "DB",
+        "color": "green"
+      },
+      {
+        "quote": "We deployed an AI voice agent for inbound leads and it now handles 80% of first-contact qualification. Our sales team only talks to prospects that are already warmed up. ROI in month one.",
+        "name": "Sofia Martínez",
+        "role": "Head of Sales",
+        "company": "Veloce Commerce",
+        "initials": "SM",
+        "color": "orange"
+      },
+      {
+        "quote": "The frontend architecture they designed for our SaaS platform cut our load time in half and our developer onboarding from days to hours. Clean, documented, maintainable — exactly what we needed.",
+        "name": "Lars Koopmans",
+        "role": "CTO",
+        "company": "Nexora SaaS",
+        "initials": "LK",
+        "color": "green"
+      },
+      {
+        "quote": "We replaced a patchwork of spreadsheets and manual processes with a custom internal dashboard. The tool paid for itself in saved admin hours within the first month of use.",
+        "name": "Emma de Boer",
+        "role": "Operations Manager",
+        "company": "LogiFlow NL",
+        "initials": "EB",
+        "color": "orange"
+      }
+    ]
+  },
+  "DentalClinic": {
+    "Hero": {
+      "badge": "DENTAL CLINIC AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "Your Practice Loses",
+        "highlight": "Thousands Monthly",
+        "part2": "to Manual Admin"
+      },
+      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for dental clinics in the Netherlands — reducing no-shows, automating patient communication, and connecting your practice software to the tools your team actually uses. No generic software. No vendor lock-in.",
+      "cta": {
+        "primary": "Book a Free Practice Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "The Real Cost of Running a Dental Practice in 2026",
+      "items": [
+        {
+          "emoji": "📅",
+          "title": "No-shows & last-minute cancellations",
+          "desc": "A missed implant or orthodontics appointment costs €150–€400 in lost revenue. If your reminder system is a front desk call the day before, you are leaving money on the table every single week."
+        },
+        {
+          "emoji": "📞",
+          "title": "Your staff is an expensive answering machine",
+          "desc": "Scheduling calls, rescheduling requests, treatment plan follow-ups — your assistants spend 2–3 hours per day on communication that automation handles in seconds."
+        },
+        {
+          "emoji": "📊",
+          "title": "You don't know where your patients come from",
+          "desc": "Is it Google? A referral? Instagram? Without tracking from ad click to booked appointment, your marketing budget is a guess you cannot optimize."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Patient recall is reactive, not systematic",
+          "desc": "Patients missing for 6, 12, or 18 months represent significant revenue. Most practices have no automated system to re-engage them at the right moment."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Your systems don't talk to each other",
+          "desc": "Practice management, accounting, marketing emails, WhatsApp — four separate islands. Every data transfer is a manual step and a potential error."
+        },
+        {
+          "emoji": "💬",
+          "title": "Treatment plans stall between consult and booking",
+          "desc": "A patient consults about veneers or aligners, leaves without booking, and gets followed up with nothing. That lead is often lost to a faster competitor."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "What We Build for Dental Practices",
+      "subtitle": "We are not a software vendor. We build and integrate the systems your practice already owns — or needs — so they work together automatically.",
+      "items": [
+        {
+          "emoji": "💬",
+          "title": "Automated Patient Communication",
+          "desc": "We connect your practice management system (Exquise, ISOS, Dentrix, or any API-accessible platform) to WhatsApp Business API, SMS, and email. Appointment confirmations, reminders at 48h and 2h, post-treatment check-ins — all triggered automatically from your schedule data.",
+          "result": "30–50% reduction in no-shows within 60 days."
+        },
+        {
+          "emoji": "🎯",
+          "title": "CRM for Patient Acquisition & Retention",
+          "desc": "We build or integrate a CRM layer that tracks every new patient inquiry from first touch (Google Ad, website form, Instagram DM) to booked appointment to lifetime value. Know exactly which marketing channel produces the best patients.",
+          "result": "Full visibility from lead source to revenue."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Lead-to-Booking Automation",
+          "desc": "When someone fills out your contact form asking about implants or Invisalign, they receive an instant personalised response, a booking link, and a 3-step follow-up if they don't book. Runs without your team lifting a finger.",
+          "result": "60–80% faster response time. Higher consult-to-booking conversion."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Patient Recall Campaigns",
+          "desc": "Every 6 months, patients overdue for a check-up or hygiene appointment receive a targeted, personalized message via their preferred channel. Re-engagement campaigns for inactive patients run automatically on a schedule you control.",
+          "result": "Consistent appointment fill rate without relying on front desk memory."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboard & Reporting",
+          "desc": "One dashboard: new patient acquisition by source, appointment fill rate, no-show rate, recall campaign performance, and revenue per treatment type. Updated in real time. Accessible on your phone.",
+          "result": "Decisions based on data, not gut feeling."
+        },
+        {
+          "emoji": "⭐",
+          "title": "Google Reviews Automation",
+          "desc": "After every completed appointment, patients receive a satisfaction message. Positive responses are guided to leave a Google review with a direct link. Critical feedback is routed privately to the practice manager.",
+          "result": "Review volume grows passively — zero manual effort required."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "What This Looks Like in Practice",
+      "items": [
+        {
+          "num": "01",
+          "title": "New Patient Inquiry Automation",
+          "desc": "Patient clicks your Google Ad → fills out the 'Book Consultation' form → instantly receives a WhatsApp message with available slots → books in 2 minutes → confirmation synced to your practice calendar. Your front desk only sees confirmed appointments."
+        },
+        {
+          "num": "02",
+          "title": "48-Hour No-Show Prevention",
+          "desc": "A patient has a 90-minute crown appointment on Thursday. On Tuesday morning, they automatically receive a WhatsApp reminder with a one-tap confirm or reschedule option. If they reschedule, the slot is immediately offered to your waitlist."
+        },
+        {
+          "num": "03",
+          "title": "Waitlist Auto-Fill",
+          "desc": "A cancellation comes in at 10:00 AM. Your waitlist system automatically texts the next 3 patients on the waitlist. The first to confirm gets the slot. Your afternoon stays full — without a single phone call from your team."
+        },
+        {
+          "num": "04",
+          "title": "Treatment Plan Follow-Up",
+          "desc": "Patient receives a plan for dental implants. They leave without booking. Three days later, they receive a case-specific follow-up answering common hesitations and offering a 10-minute call with your treatment coordinator — automatically triggered, personalized by treatment type."
+        },
+        {
+          "num": "05",
+          "title": "Six-Month Recall Campaign",
+          "desc": "Every patient who completed a hygiene appointment 5 months ago receives a proactive recall message. Non-responders get a second message 2 weeks later. Patients who book are removed from the sequence. Patients who decline are logged."
+        },
+        {
+          "num": "06",
+          "title": "Google Reviews After Every Appointment",
+          "desc": "After a completed appointment, patients receive a short satisfaction message. Positive responses are guided to Google Reviews with a direct link. This runs for every appointment, every day, without manual effort from your team."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Transparent Pricing — No Hidden Costs",
+      "points": [
+        {
+          "title": "Custom integrations, not template workflows",
+          "desc": "We build direct API integrations between your actual systems. If your practice management software has an API, we connect to it. Every solution is specific to your setup — not a Zapier template."
+        },
+        {
+          "title": "No lock-in — clear, predictable costs",
+          "desc": "Everything we build is yours. No proprietary tools that vanish if you stop. Some solutions include an optional monthly tech maintenance retainer — always disclosed upfront, never a surprise. When we deploy a managed CRM, marketing automation, or lead management platform as part of your solution, that platform license is always separate, transparent, and managed by us — no hidden markup."
+        },
+        {
+          "title": "GDPR and AVG compliant by design",
+          "desc": "Patient data is sensitive. We build with Dutch data protection law as a hard constraint, not an afterthought. Self-hosted options available for complete data sovereignty."
+        },
+        {
+          "title": "Long-term partner, not a one-time project",
+          "desc": "We onboard you, go live, and stay. Ongoing optimization, new automations as your practice grows, and a direct line to our engineering team — always."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Common Questions",
+      "subtitle": "What dental clinic owners ask before getting started.",
+      "questions": [
+        {
+          "q": "Does this work with our existing practice management software?",
+          "a": "We integrate with any platform that has an API or structured data export — including Exquise, ISOS, Dentrix, and most modern practice systems. We map your specific setup in the audit call before any work starts."
+        },
+        {
+          "q": "Is patient data handled safely and GDPR compliant?",
+          "a": "Yes. All automations are built with AVG/GDPR compliance as a hard requirement. We can run pipelines on self-hosted infrastructure for full data sovereignty. Patient data never passes through third-party systems without appropriate agreements in place."
+        },
+        {
+          "q": "How long does it take to go live?",
+          "a": "For a standard setup — appointment reminders, lead intake automation, and a reporting dashboard — we typically go live within 3–4 weeks from kickoff. Complex CRM integrations may take longer depending on your existing systems."
+        },
+        {
+          "q": "Do you replace our current software or work alongside it?",
+          "a": "We work alongside your existing systems. We do not ask you to replace your practice management software. We build integration layers that connect what you already have and fill the gaps your current tools don't cover."
+        },
+        {
+          "q": "What does it cost?",
+          "a": "Every practice is different. We scope the project after the free audit and provide a fixed-price proposal — no hourly billing, no surprise invoices. We discuss your budget and goals on the audit call."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Ready to automate your practice?",
+      "title": "Book Your Free Practice Audit",
+      "desc": "We review your current systems, identify the 3 highest-ROI automation opportunities specific to your clinic, and give you a clear technical roadmap — no commitment required.",
+      "button": "Book Free Practice Audit",
+      "subtext": "Available for practices in the Netherlands. Current onboarding capacity: Q2 2026. Questions? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "dental clinic automation Netherlands, tandartspraktijk automatisering, dental appointment reminders Netherlands, dental CRM integration, no-show reduction dental practice, patient recall system Netherlands, WhatsApp patient communication dental, dental practice management software integration",
+      "extendedDesc": "CodeHunter Lab builds custom automation and integration systems for dental clinics across the Netherlands. From appointment reminder workflows and patient recall campaigns to full CRM integration and lead-to-booking automation, we help dental practices reduce no-shows, improve patient retention, and grow revenue without adding administrative headcount. Based in Leiden, serving practices in Amsterdam, Rotterdam, Den Haag, Utrecht, and beyond."
+    }
+  },
+  "PhysiotherapyClinic": {
+    "Hero": {
+      "badge": "PHYSIOTHERAPY PRACTICE AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "Your Physiotherapy Practice",
+        "highlight": "Has a Systems Problem.",
+        "part2": "Your Patients Feel It Too"
+      },
+      "description": "CodeHunter Lab builds <strong>automation and integration systems</strong> for physiotherapy practices in the Netherlands — connecting referral intake, scheduling, patient communication, and reporting into one coherent workflow. So your therapists focus on treating patients, not chasing paperwork.",
+      "cta": {
+        "primary": "Book a Free Practice Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "Where Your Practice Is Bleeding Time and Revenue",
+      "items": [
+        {
+          "emoji": "📄",
+          "title": "Referral intake is still manual",
+          "desc": "A referral arrives via Zorgdomein or fax. Someone at reception transcribes, calls the patient, finds a therapist, schedules the intake, and enters data. That is 15–25 minutes per referral — hours every day."
+        },
+        {
+          "emoji": "🚶",
+          "title": "Patients drop out mid-treatment",
+          "desc": "A patient completes 4 of 10 sessions and stops coming without formally ending care. Your calendar has phantom bookings, your therapist loses time, and the patient's outcome suffers."
+        },
+        {
+          "emoji": "📞",
+          "title": "Reminders still rely on phone calls",
+          "desc": "Your front desk calls or texts patients individually. There is no systematic confirmation flow. No-shows arrive as surprises, not predictable problems with automated solutions."
+        },
+        {
+          "emoji": "📈",
+          "title": "No per-therapist retention analytics",
+          "desc": "Some therapists retain patients through full treatment plans. Others lose patients after session 2. Without per-therapist data, you cannot identify or coach the gap."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Marketing spend has no attribution",
+          "desc": "You may be running Google Ads or using a marketing agency. But without tracking from ad click to booked intake to completed treatment, you are optimizing completely blind."
+        },
+        {
+          "emoji": "🏥",
+          "title": "Insurance pre-authorization creates delays",
+          "desc": "For treatments requiring vergoeding confirmation, chasing insurance status is a manual, repetitive task that blocks scheduling and frustrates patients before their first appointment."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Systems That Match How a Modern Practice Should Run",
+      "subtitle": "We build directly into your referral flow, scheduling logic, and insurance processes — automating the specific bottlenecks in your specific setup.",
+      "items": [
+        {
+          "emoji": "📋",
+          "title": "Referral Intake Automation",
+          "desc": "We build an intake pipeline that pulls referral data from Zorgdomein, web forms, or GP email — creates a patient record in your practice management system, sends a welcome message, and pre-populates a scheduling link. All without a single manual step.",
+          "result": "Referral-to-first-appointment time cut from 48 hours to under 4 hours."
+        },
+        {
+          "emoji": "💬",
+          "title": "Appointment Reminders with Confirmation",
+          "desc": "Every appointment triggers an automated reminder sequence: 48 hours before via WhatsApp or SMS, with one-tap confirm or reschedule. Cancellations trigger automatic waitlist outreach. Your therapists arrive to confirmed, prepared patients.",
+          "result": "30–45% reduction in no-shows. Fewer empty slots."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Drop-Out Detection & Re-Engagement",
+          "desc": "If a patient misses two consecutive appointments without communication, they enter a re-engagement flow: a personal check-in from their therapist (sent automatically), a rebooking link, and if no response, a care handoff notification to the practice manager.",
+          "result": "Recover 20–35% of patients who would otherwise quietly drop treatment."
+        },
+        {
+          "emoji": "📊",
+          "title": "Patient Outcome Tracking & NPS",
+          "desc": "At the end of a treatment plan, patients automatically receive a short outcome questionnaire and NPS score request. Results feed into a practice dashboard by therapist, treatment type, and referral source.",
+          "result": "Objective data for quality improvement and insurance reporting."
+        },
+        {
+          "emoji": "📈",
+          "title": "Practice Analytics Dashboard",
+          "desc": "One unified dashboard: session volume by therapist, treatment plan completion rates, new patient source attribution, insurance claim status, and monthly revenue trend. Replaces manual spreadsheets and end-of-month guesswork.",
+          "result": "Management decisions in minutes, not days."
+        },
+        {
+          "emoji": "🏥",
+          "title": "Insurance Verification Workflow",
+          "desc": "Automation triggers an insurance check for new patients requiring vergoeding verification → sends status updates to patient and reception → flags unverified cases before the first appointment date. Prevents last-minute billing surprises.",
+          "result": "Fewer billing disputes. Faster patient onboarding."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "What This Looks Like Day-to-Day",
+      "items": [
+        {
+          "num": "01",
+          "title": "Zorgdomein Referral to Booked Intake",
+          "desc": "GP sends referral via Zorgdomein → automation parses patient details → creates record in your practice management system → sends patient a welcome WhatsApp with intake questionnaire and booking URL → patient books their own intake slot → confirmation synced to therapist's calendar. Reception touches nothing."
+        },
+        {
+          "num": "02",
+          "title": "Insurance Verification Workflow",
+          "desc": "New patient requires vergoeding verification. Automation triggers insurance check → sends status update to patient and reception → flags unverified cases to the practice manager before the first appointment date → prevents last-minute billing surprises."
+        },
+        {
+          "num": "03",
+          "title": "Treatment Adherence Follow-Up",
+          "desc": "Patient has an 8-session plan. After session 4, they go quiet. Automation detects the gap → sends a personalized check-in from their therapist's name → if no response in 48 hours, notifies the practice manager → re-engagement option offered with direct rebooking link."
+        },
+        {
+          "num": "04",
+          "title": "Waitlist Management",
+          "desc": "A 9:00 AM appointment is cancelled at 8:30 PM the evening before. The next 3 patients on the waitlist receive an automated offer for the slot. First to confirm gets it. Therapist's morning stays productive — no phone calls required."
+        },
+        {
+          "num": "05",
+          "title": "GP Referral Relationship Automation",
+          "desc": "Practices generating repeat referrals from specific GPs receive a quarterly automated summary email: patient outcomes, treatment completion rates, and a referral thank-you. Builds referral relationships systematically rather than depending on personal contact."
+        },
+        {
+          "num": "06",
+          "title": "Post-Treatment Review Request",
+          "desc": "On the final session of a treatment plan, the patient receives an automated satisfaction message. Positive responses are guided to Google Reviews. Critical feedback is routed privately to the practice manager. Review volume grows passively."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Built for How Your Practice Actually Works",
+      "points": [
+        {
+          "title": "We integrate with your existing practice management software",
+          "desc": "Intramed, Physiosoftware, FysioRoadmap — if it has an API or structured export, we connect to it. We do not ask you to change systems. We build around what works."
+        },
+        {
+          "title": "AVG and patient data sensitive by design",
+          "desc": "All automation pipelines are designed with Dutch data protection law as a hard constraint. Patient data stays within compliant boundaries. Self-hosted options available for complete data sovereignty."
+        },
+        {
+          "title": "Built for your workflow, not a template",
+          "desc": "We map your actual referral flow, scheduling logic, and insurance processes — then automate the specific bottlenecks in your specific setup. No copy-paste solution."
+        },
+        {
+          "title": "We stay with you as you grow",
+          "desc": "Adding a second location, a new therapist, or a new service line? Your systems scale with you. We monitor, optimize, and expand your automation stack on an ongoing basis."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Common Questions",
+      "subtitle": "What physiotherapy practice owners ask before getting started.",
+      "questions": [
+        {
+          "q": "Does this work with Intramed, Physiosoftware, or FysioRoadmap?",
+          "a": "Yes. We integrate with any practice management platform that has an API or structured data export. We map your specific system during the audit call before any work starts."
+        },
+        {
+          "q": "Can you integrate with Zorgdomein referrals?",
+          "a": "Yes. We build intake pipelines that pull and process incoming referral data from Zorgdomein, GP email, or any structured referral source — automatically creating patient records and triggering the intake sequence."
+        },
+        {
+          "q": "Is this GDPR/AVG compliant for patient data?",
+          "a": "All automation pipelines are designed with Dutch data protection law as a hard constraint. We can run on self-hosted infrastructure for complete data sovereignty. Patient data never passes through third-party systems without appropriate agreements."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "A standard setup — referral intake automation, appointment reminders, and drop-out detection — typically goes live within 3–5 weeks. More complex integrations like insurance verification workflows may take longer depending on your current systems."
+        },
+        {
+          "q": "We already have practice management software. Do we need to replace it?",
+          "a": "No. We work alongside your existing systems and build integration layers that connect what you already have. You keep your current setup and we fill the automation gaps around it."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Let's map the 3 hours a day your practice is wasting",
+      "title": "Book Your Free Practice Audit",
+      "desc": "We map your current intake-to-discharge workflow, identify the highest-impact automation opportunities, and give you a concrete plan — specific to your software stack and patient volume.",
+      "button": "Book Free Practice Audit",
+      "subtext": "Serving physiotherapy practices across the Netherlands. Current onboarding capacity: Q2 2026. Questions? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "fysiotherapie praktijk automatisering, physiotherapy clinic automation Netherlands, Zorgdomein integration, physiotherapy appointment reminder system, patient drop-out prevention physiotherapy, fysiotherapie CRM Nederland, practice management software integration Netherlands, physiotherapy referral intake automation",
+      "extendedDesc": "CodeHunter Lab builds custom automation and integration systems for physiotherapy practices across the Netherlands. From Zorgdomein referral intake automation and appointment reminder workflows to treatment adherence tracking and insurance verification, we help fysiotherapie practices reduce admin time, recover dropping patients, and make data-driven management decisions. Based in Leiden, serving practices in Amsterdam, Rotterdam, Den Haag, Utrecht, and across the Netherlands."
+    }
+  },
+  "AestheticClinic": {
+    "Hero": {
+      "badge": "AESTHETIC & COSMETIC CLINIC AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "Your Aesthetic Clinic Generates Leads.",
+        "highlight": "Your Systems",
+        "part2": "Lose Them"
+      },
+      "description": "CodeHunter Lab builds the <strong>CRM, lead nurturing, and booking automation</strong> infrastructure that converts high-intent inquiries into confirmed treatments — automatically. For aesthetic, cosmetic, and dermatology clinics in the Netherlands that want to grow without adding administrative headcount.",
+      "cta": {
+        "primary": "Book a Free Clinic Growth Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "Why Your Marketing Spend Isn't Converting the Way It Should",
+      "items": [
+        {
+          "emoji": "⚡",
+          "title": "Slow response kills high-intent leads",
+          "desc": "A prospect inquiring about laser, Botox, or a rhinoplasty consult is comparison-shopping. If your response takes more than 30 minutes, 40% of those inquiries have already booked elsewhere."
+        },
+        {
+          "emoji": "📅",
+          "title": "Consultation no-shows destroy your funnel",
+          "desc": "Aesthetic consultations are therapist-intensive. A no-show wastes 45–90 minutes of billable time. Without an automated confirmation and pre-consultation flow, no-show rates average 15–25%."
+        },
+        {
+          "emoji": "💬",
+          "title": "High-value treatment leads go cold",
+          "desc": "A patient consults about a full face treatment or body contouring package, leaves without committing, and receives one follow-up call that goes to voicemail. That is a €500–€5,000 treatment that evaporated."
+        },
+        {
+          "emoji": "📊",
+          "title": "You don't know your actual marketing ROI",
+          "desc": "Your clinic may be running Google Ads, Meta campaigns, and influencer partnerships. But without attribution from ad click to booked consult to completed treatment, you cannot know which channel produces your best patients."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Treatment package upsells happen by chance",
+          "desc": "Post-treatment follow-up, package upgrade offers, maintenance reminders — handled inconsistently, relying on individual staff memory rather than a system that runs automatically."
+        },
+        {
+          "emoji": "👥",
+          "title": "Patient retention is poor despite high satisfaction",
+          "desc": "Aesthetic patients who are satisfied are highly likely to return — but only if asked at the right time. Most clinics have no systematic re-engagement workflow. Retention is passive and unpredictable."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "The Infrastructure That Turns Your Marketing Into Bookings",
+      "subtitle": "We build the CRM, lead nurturing, and automation systems that connect your marketing to confirmed revenue — custom, scalable, and owned entirely by you.",
+      "items": [
+        {
+          "emoji": "⚡",
+          "title": "Lead Response Automation — Under 5 Minutes",
+          "desc": "We connect your website forms, Instagram DMs, and WhatsApp Business to a unified lead intake pipeline. Every new inquiry receives an instant, personalized response with treatment-specific information and a direct booking link — regardless of the time of day.",
+          "result": "Response time from hours to under 5 minutes. Higher consult conversion rate."
+        },
+        {
+          "emoji": "📅",
+          "title": "Consultation Confirmation & Pre-Treatment Prep",
+          "desc": "Once a consult is booked, the patient enters an automated preparation sequence: confirmation, 48-hour reminder, pre-treatment guidelines for the specific procedure, consent form link, and a preparation checklist. Patients arrive informed and ready.",
+          "result": "30–50% reduction in no-shows. Shorter, more efficient consultations."
+        },
+        {
+          "emoji": "💌",
+          "title": "Post-Consult Nurture Sequences",
+          "desc": "Patients who consult but don't immediately book enter a segmented nurture sequence: content specific to the treatment they enquired about, social proof messages, a time-limited follow-up offer, and a direct rebooking link. Runs for 30–60 days.",
+          "result": "20–40% of cold consult leads convert within 30 days."
+        },
+        {
+          "emoji": "📊",
+          "title": "Full Funnel Attribution & Marketing Dashboard",
+          "desc": "We build tracking from your ad platforms (Google, Meta) through your CRM to your booking and revenue data. One dashboard: cost per lead by channel, cost per booked consult, cost per completed treatment, and patient lifetime value.",
+          "result": "Marketing budget decisions based on actual revenue data, not vanity metrics."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Retention & Upsell Automation",
+          "desc": "After every completed treatment, patients automatically enter a retention workflow: a satisfaction check-in, a follow-up appointment recommendation timed to the treatment, a loyalty or package offer, and a referral incentive request.",
+          "result": "Increased average patient lifetime value. Predictable recurring revenue."
+        },
+        {
+          "emoji": "🤖",
+          "title": "AI Consultation Assistant",
+          "desc": "For high-volume clinics, we deploy a custom AI assistant for your website and WhatsApp — trained on your treatment portfolio, pricing bands, and FAQ content. Handles pre-qualification and guides prospects to book. Available 24/7.",
+          "result": "Leads captured and qualified outside business hours — no staff overhead."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Concrete Examples From Inquiry to Retained Patient",
+      "items": [
+        {
+          "num": "01",
+          "title": "Instagram DM to Booked Consultation",
+          "desc": "Prospect DMs your Instagram asking about lip fillers → automation detects intent → sends instant response with treatment overview, price range, and consultation booking link → prospect books directly in the message thread → confirmation synced to your booking system → pre-consultation sequence starts automatically."
+        },
+        {
+          "num": "02",
+          "title": "Consult No-Show Prevention",
+          "desc": "Patient books a 60-minute rhinoplasty consultation. Automation sends: booking confirmation with calendar invite → treatment-specific preparation guide 5 days before → reminder with one-tap confirm or reschedule 48 hours before → final reminder 2 hours before. No-show rate drops from 20% to under 8%."
+        },
+        {
+          "num": "03",
+          "title": "High-Value Lead Recovery",
+          "desc": "Patient consulted about a full-face treatment package (€3,200 value). Left without booking. Day 3: WhatsApp with before/after results. Day 7: FAQ addressing common hesitations. Day 14: limited-availability booking offer. Day 21: final soft close. 1 in 3 of these leads converts."
+        },
+        {
+          "num": "04",
+          "title": "Post-Treatment Maintenance Reminder",
+          "desc": "Patient completes Botox treatment. Automation notes the date → 10 weeks later, patient receives a 'time for your touch-up' message with a direct booking link → if they book, sequence ends → if not, second reminder at 12 weeks → no response routes to front desk for personal follow-up."
+        },
+        {
+          "num": "05",
+          "title": "Marketing Attribution in Real Time",
+          "desc": "You run a Google Ad for 'laser hair removal Amsterdam.' Prospect clicks → fills consultation request → CRM logs the campaign and keyword → patient completes treatment → your dashboard shows: cost per acquisition €47, average revenue €380. You scale the campaign with confidence."
+        },
+        {
+          "num": "06",
+          "title": "Patient Referral Program Automation",
+          "desc": "30 days after a successful treatment, patient receives: 'Refer a friend and you both receive €50 off your next treatment.' If they share the referral link and a friend books, both discounts are applied automatically. Referral source tracked in CRM. No manual voucher management."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Why Aesthetic Clinics Choose an Engineering Partner Over a Marketing Agency",
+      "points": [
+        {
+          "title": "We work at the system level, not the campaign level",
+          "desc": "We integrate your booking platform, CRM, ad data, WhatsApp, and practice tools into a coherent system — the kind of work that most agencies cannot do because it requires real engineering."
+        },
+        {
+          "title": "No lock-in — transparent, predictable costs",
+          "desc": "Your systems run on infrastructure you own or control. Everything we build continues to run if we part ways. Some solutions include an optional monthly tech maintenance retainer. Where integrated CRM, lead nurturing, or marketing automation platforms are part of the solution, licensing fees are always separate, disclosed upfront, and never marked up silently."
+        },
+        {
+          "title": "Built for high-ticket, high-touch service businesses",
+          "desc": "Aesthetic clinic patients are not e-commerce buyers. The lead cycle is longer, the relationship matters more, and communication must feel personal even when automated. We build for that nuance."
+        },
+        {
+          "title": "AVG compliant, data-sensitive by design",
+          "desc": "Treatment history, consent records, before/after media — your patient data is sensitive. We build pipelines with proper access controls, data handling policies, and AVG compliance from day one."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Common Questions",
+      "subtitle": "What aesthetic clinic owners ask before getting started.",
+      "questions": [
+        {
+          "q": "Can you integrate with our current booking system (e.g. Planfy, Timely, Jane App)?",
+          "a": "Yes. We integrate with any booking platform that has an API or webhook support. We map your specific tools during the free audit call. If your current system has limitations, we advise on alternatives without forcing a migration."
+        },
+        {
+          "q": "Can lead nurture sequences be personalized by treatment type?",
+          "a": "Yes. Sequences are fully segmented by treatment interest. A prospect who enquired about Botox receives different content than one who asked about body contouring or laser treatments. Personalization is built in from the start."
+        },
+        {
+          "q": "How does Instagram DM automation work without violating Meta's terms?",
+          "a": "We use the official Meta Business API for WhatsApp and Instagram DM automation — fully compliant with Meta's terms of service. No scraping, no third-party workarounds. All automations run through approved, official channels."
+        },
+        {
+          "q": "Is patient data (treatment history, consent forms) handled safely?",
+          "a": "Yes. All data pipelines are built with AVG/GDPR compliance as a hard requirement. We do not pass sensitive patient data through non-compliant third parties. Self-hosted options are available for clinics requiring full data sovereignty."
+        },
+        {
+          "q": "What does this typically cost?",
+          "a": "We scope the project after the free audit and provide a fixed-price proposal — no hourly billing. Engagements range from a focused automation setup to full CRM and attribution infrastructure. We discuss your budget and goals on the audit call."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "How many high-value leads is your clinic losing each month?",
+      "title": "Book Your Free Clinic Growth Audit",
+      "desc": "We review your current lead handling, consult conversion, and patient retention workflow — and show you exactly where automated systems would have the highest revenue impact.",
+      "button": "Book Free Clinic Growth Audit",
+      "subtext": "For aesthetic, cosmetic, and dermatology clinics in the Netherlands. Current onboarding capacity: Q2 2026. Questions? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "aesthetic clinic automation Netherlands, cosmetic clinic CRM Netherlands, lead nurturing aesthetic clinic, dermatology clinic booking automation, cosmetic clinic marketing ROI, beauty clinic WhatsApp automation, patient retention aesthetic clinic, kliniek automatisering Nederland",
+      "extendedDesc": "CodeHunter Lab builds custom CRM, lead nurturing, and booking automation systems for aesthetic, cosmetic, and dermatology clinics across the Netherlands. From instant lead response automation and post-consult nurture sequences to full funnel attribution dashboards and AI consultation assistants, we help aesthetic clinics convert more inquiries into booked treatments and retain patients for long-term revenue. Based in Leiden, serving clinics in Amsterdam, Rotterdam, Den Haag, Utrecht, and across the Netherlands."
+    }
+  },
+  "VeterinaryClinic": {
+    "Hero": {
+      "badge": "VETERINARY CLINIC AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "Your Practice Loses",
+        "highlight": "Revenue Daily",
+        "part2": "to Manual Workflows"
+      },
+      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for veterinary clinics in the Netherlands — reducing no-shows, automating pet owner communication, and connecting your practice software to the tools your team actually uses. No generic software. No vendor lock-in.",
+      "cta": {
+        "primary": "Book a Free Practice Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "The Real Cost of Running a Veterinary Practice in 2026",
+      "items": [
+        {
+          "emoji": "📅",
+          "title": "No-shows & last-minute cancellations",
+          "desc": "A missed surgery or specialist appointment costs €150–€500 in lost revenue. If your reminder system is a phone call the day before, you are leaving money on the table every single week."
+        },
+        {
+          "emoji": "📞",
+          "title": "Your staff is an expensive answering machine",
+          "desc": "Scheduling calls, vaccination reminders, post-surgery check-ins — your assistants spend 2–3 hours per day on communication that automation handles in seconds."
+        },
+        {
+          "emoji": "📊",
+          "title": "You don't know where your new clients come from",
+          "desc": "Is it Google? A referral? Instagram? Without tracking from ad click to booked appointment, your marketing budget is a guess you cannot optimize."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Annual pet health recalls are reactive, not systematic",
+          "desc": "Pets overdue for vaccinations, dental checks, or annual exams represent significant revenue. Most practices have no automated system to re-engage owners at the right moment."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Your systems don't talk to each other",
+          "desc": "Practice management, accounting, marketing emails, WhatsApp — four separate islands. Every data transfer is a manual step and a potential error."
+        },
+        {
+          "emoji": "💬",
+          "title": "Post-consultation follow-ups fall through the cracks",
+          "desc": "A pet owner leaves after a complex procedure without receiving post-care instructions automatically. That lack of follow-up hurts both outcomes and reviews."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "What We Build for Veterinary Practices",
+      "subtitle": "We are not a software vendor. We build and integrate the systems your practice already owns — or needs — so they work together automatically.",
+      "items": [
+        {
+          "emoji": "💬",
+          "title": "Automated Pet Owner Communication",
+          "desc": "We connect your practice management system (Animana, VetSoft, or any API-accessible platform) to WhatsApp Business API, SMS, and email. Appointment confirmations, reminders at 48h and 2h, post-treatment check-ins — all triggered automatically from your schedule data.",
+          "result": "30–50% reduction in no-shows within 60 days."
+        },
+        {
+          "emoji": "🎯",
+          "title": "CRM for Client Acquisition & Retention",
+          "desc": "We build or integrate a CRM layer that tracks every new client inquiry from first touch (Google Ad, website form, referral) to booked appointment to lifetime value. Know exactly which marketing channel produces the best clients.",
+          "result": "Full visibility from lead source to revenue."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Lead-to-Booking Automation",
+          "desc": "When someone fills out your contact form asking about a specific treatment, they receive an instant personalised response, a booking link, and a 3-step follow-up if they don't book. Runs without your team lifting a finger.",
+          "result": "60–80% faster response time. Higher inquiry-to-booking conversion."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Pet Health Recall Campaigns",
+          "desc": "Every 6–12 months, pets overdue for vaccinations or annual checks generate a targeted, personalized message to their owner via their preferred channel. Re-engagement campaigns run automatically on a schedule you control.",
+          "result": "Consistent appointment fill rate without relying on front desk memory."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboard & Reporting",
+          "desc": "One dashboard: new client acquisition by source, appointment fill rate, no-show rate, recall campaign performance, and revenue per treatment type. Updated in real time. Accessible on your phone.",
+          "result": "Decisions based on data, not gut feeling."
+        },
+        {
+          "emoji": "⭐",
+          "title": "Google Reviews Automation",
+          "desc": "After every completed appointment, pet owners receive a satisfaction message. Positive responses are guided to leave a Google review with a direct link. Critical feedback is routed privately to the practice manager.",
+          "result": "Review volume grows passively — zero manual effort required."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "What This Looks Like in Practice",
+      "items": [
+        {
+          "num": "01",
+          "title": "New Client Inquiry Automation",
+          "desc": "Pet owner clicks your Google Ad → fills out the contact form → instantly receives a WhatsApp message with available slots → books in 2 minutes → confirmation synced to your practice calendar. Your front desk only sees confirmed appointments."
+        },
+        {
+          "num": "02",
+          "title": "Vaccination Recall Campaign",
+          "desc": "Your system identifies every pet overdue for a core vaccination → sends a personalized WhatsApp or email → includes a one-click booking link → appointment booked without any staff involvement. Runs monthly, automatically."
+        },
+        {
+          "num": "03",
+          "title": "Post-Surgery Follow-Up",
+          "desc": "48 hours after a procedure → automated check-in message sent to the owner → if they report concerns, a notification goes to the vet → if all is well, a review request is triggered. Hands-free aftercare that builds trust."
+        },
+        {
+          "num": "04",
+          "title": "No-Show Prevention",
+          "desc": "72 hours before appointment → confirmation request sent → owner confirms or reschedules via WhatsApp → if no response after 24h → automated follow-up call scheduled for front desk. Fewer gaps in your diary."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Why Veterinary Practices Choose CodeHunter Lab",
+      "points": [
+        {
+          "title": "We speak veterinary practice, not just tech",
+          "desc": "We understand Animana, VetSoft, and the operational reality of a busy clinic. We don't impose a generic solution — we map your actual workflow and automate the pain points your team complains about daily."
+        },
+        {
+          "title": "No lock-in. You own everything.",
+          "desc": "Every automation we build runs on open platforms (n8n, HubSpot, WhatsApp Business API). No proprietary black boxes. No monthly license fees to us after delivery. The system is yours."
+        },
+        {
+          "title": "Built for the Dutch veterinary market",
+          "desc": "We are based in Leiden and know the Dutch healthcare landscape. GDPR-compliant by design. Dutch-language patient communications available. Local market context built in."
+        },
+        {
+          "title": "Measurable ROI from month one",
+          "desc": "We track no-show rates, recall campaign conversion, and new client acquisition before and after. You see the exact revenue impact of every automation we deploy — not just activity metrics."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know before booking your free audit.",
+      "questions": [
+        {
+          "q": "Do you work with Animana and VetSoft?",
+          "a": "Yes. We integrate with any practice management system that has an API or data export capability, including Animana and VetSoft. In cases where direct API access is limited, we use secure data sync methods to connect your system with our automation layer."
+        },
+        {
+          "q": "Is this GDPR compliant?",
+          "a": "Absolutely. All pet owner data is processed according to GDPR regulations. We use EU-based infrastructure, implement data minimization principles, and include proper consent mechanisms in all communication flows."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "A standard automation package (appointment reminders + recall campaigns + lead-to-booking) typically takes 3–5 weeks from kickoff to go-live. More complex integrations with custom dashboards may take 6–8 weeks."
+        },
+        {
+          "q": "What does it cost?",
+          "a": "We scope each project individually based on your practice size, existing systems, and automation goals. Most veterinary clinic automation projects start between €3,500 and €8,000. Book a free audit to get an accurate estimate."
+        },
+        {
+          "q": "Will my staff need training?",
+          "a": "Minimal. The entire point is to reduce what your staff needs to do manually. We provide a handover session and documentation. Day-to-day, the system runs itself — your team only intervenes when a human decision is actually needed."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Free Practice Automation Audit",
+      "title": "Ready to Stop Losing Revenue to Manual Admin?",
+      "desc": "Book a free 45-minute audit. We will map your current workflow, identify the top 3 automation opportunities, and give you a clear ROI estimate — no obligation.",
+      "button": "Book Your Free Audit",
+      "subtext": "No commitment. No sales pitch. Just a clear picture of what automation can do for your practice."
+    },
+    "SEO": {
+      "extendedDesc": "CodeHunter Lab specializes in veterinary clinic automation systems across the Netherlands, including Amsterdam, Rotterdam, Den Haag, Utrecht, Leiden, Haarlem, Eindhoven, and Groningen. Our custom automation platforms connect practice management software like Animana and VetSoft with WhatsApp Business API, CRM systems, and marketing tools to eliminate manual admin, reduce no-shows, and grow practice revenue through systematic pet owner communication and recall automation.",
+      "keywords": "veterinary clinic automation Netherlands, dierenkliniek automatisering, vet appointment automation, Animana integration, VetSoft automation, pet owner WhatsApp automation, veterinary CRM Netherlands, dierenarts digitalisering, veterinary no-show reduction, pet recall automation Netherlands"
+    }
+  },
+  "AccountingFirm": {
+    "Hero": {
+      "badge": "ACCOUNTING FIRM AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "Your Firm Loses Hours",
+        "highlight": "Every Week",
+        "part2": "to Repetitive Admin"
+      },
+      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for accounting firms in the Netherlands — automating invoice processing, client onboarding, deadline reminders, and financial reporting. No generic software. No vendor lock-in.",
+      "cta": {
+        "primary": "Book a Free Firm Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "The Real Cost of Running an Accounting Firm in 2026",
+      "items": [
+        {
+          "emoji": "📄",
+          "title": "Manual invoice processing eats billable hours",
+          "desc": "Your team manually enters invoices, checks VAT codes, and exports to Exact Online or Twinfield. Each manual step is time your accountants could spend on advisory work that actually generates margin."
+        },
+        {
+          "emoji": "📅",
+          "title": "Tax deadlines managed by spreadsheets and memory",
+          "desc": "Missed deadlines mean penalties for clients — and damaged trust for your firm. Without automated deadline tracking and client reminders, you are one busy month away from a costly mistake."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Client onboarding is slow and inconsistent",
+          "desc": "A new client takes 2–3 weeks to onboard because forms, KYC checks, and document requests are handled manually and inconsistently across your team."
+        },
+        {
+          "emoji": "📊",
+          "title": "Reporting takes days instead of minutes",
+          "desc": "Monthly management reports require pulling data from multiple systems, reformatting in Excel, and emailing manually. Automation delivers real-time dashboards instead."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Your tools don't talk to each other",
+          "desc": "Exact Online, your CRM, email, and client portal are disconnected. Every handoff between systems is a manual step and a potential data error."
+        },
+        {
+          "emoji": "💬",
+          "title": "Follow-up on outstanding documents falls through the cracks",
+          "desc": "You wait weeks for clients to send bank statements or receipts. Without automated reminders, your team ends up chasing manually — a poor use of specialist time."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "What We Build for Accounting Firms",
+      "subtitle": "We are not a software vendor. We build and integrate the systems your firm already owns — or needs — so they work together automatically.",
+      "items": [
+        {
+          "emoji": "📄",
+          "title": "Invoice Processing Automation",
+          "desc": "We connect your document intake (email, client portal, scan) to Exact Online or Twinfield via API. Invoices are automatically categorized, VAT codes applied, and entries posted — your accountants review exceptions, not every line.",
+          "result": "80% reduction in manual invoice entry time."
+        },
+        {
+          "emoji": "📅",
+          "title": "Deadline & Compliance Reminder System",
+          "desc": "We build a deadline engine that tracks every client's BTW, Vpb, and IB filing dates. Automated reminders go to clients (requesting documents) and to your team (internal alerts) — weeks in advance, not days.",
+          "result": "Zero missed deadlines. Clients prepared on time."
+        },
+        {
+          "emoji": "🚀",
+          "title": "Client Onboarding Automation",
+          "desc": "New client agreement signed → automated KYC document request sent → completion tracked → welcome email with portal access → account set up in your systems. Your team only touches exceptions.",
+          "result": "Onboarding time from 3 weeks to 3 days."
+        },
+        {
+          "emoji": "📊",
+          "title": "Real-Time Reporting Dashboards",
+          "desc": "We connect Exact Online, Twinfield, or Moneybird to a live dashboard showing P&L, cash flow, outstanding debtors, and VAT position for every client. Updated automatically. Accessible anytime.",
+          "result": "Management reports in seconds, not days."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Document Request & Chase Automation",
+          "desc": "When a client document is overdue (bank statement, receipt batch, contract), an automated sequence is triggered: reminder email on day 1, WhatsApp on day 5, escalation on day 10. Your team is notified only if the chase fails.",
+          "result": "Document turnaround time cut by 60%."
+        },
+        {
+          "emoji": "💼",
+          "title": "CRM & Client Communication Hub",
+          "desc": "We connect your client database to a CRM that tracks every interaction, upcoming renewal, and upsell opportunity. Annual account reviews, service upgrade offers, and satisfaction check-ins go out automatically.",
+          "result": "Higher client retention and increased average revenue per client."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "What This Looks Like in Practice",
+      "items": [
+        {
+          "num": "01",
+          "title": "Month-End Close Automation",
+          "desc": "Last day of month → system checks all clients for missing documents → automated chase sequences start → Exact Online entries are pre-populated from incoming invoices → your team reviews a clean exception report rather than chasing and entering data manually."
+        },
+        {
+          "num": "02",
+          "title": "BTW Deadline Sequence",
+          "desc": "6 weeks before BTW deadline → client receives document request checklist → 3 weeks before → second reminder if documents outstanding → 1 week before → internal alert to assigned accountant → all tracked automatically, no manual follow-up required."
+        },
+        {
+          "num": "03",
+          "title": "New Client Onboarding Flow",
+          "desc": "Client signs engagement letter → automated email sends KYC form and document checklist → completed documents verified → Exact Online account created → welcome pack delivered → onboarding marked complete in CRM. Fully automated from signature to active client."
+        },
+        {
+          "num": "04",
+          "title": "Annual Account Review Trigger",
+          "desc": "12 months after onboarding → system generates account summary → sends to assigned accountant for review → personalised review invitation sent to client → meeting booked via calendar link → upsell opportunities flagged based on client profile."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Why Accounting Firms Choose CodeHunter Lab",
+      "points": [
+        {
+          "title": "We know Exact Online, Twinfield, and Moneybird",
+          "desc": "We have direct API experience with the accounting platforms used by Dutch firms. We integrate your existing stack — no migration, no disruption to your current workflows."
+        },
+        {
+          "title": "No lock-in. You own everything.",
+          "desc": "Every automation we build runs on open platforms (n8n, HubSpot, Make). No proprietary black boxes. No monthly license fees to us after delivery. The system is yours to maintain or extend."
+        },
+        {
+          "title": "GDPR and NBA compliant by design",
+          "desc": "Client financial data is processed with EU-based infrastructure. We implement proper data access controls, audit trails, and retention policies aligned with Dutch accounting regulations."
+        },
+        {
+          "title": "Measurable ROI from month one",
+          "desc": "We track billable hours recovered, document turnaround time, onboarding duration, and missed deadline rate before and after. You see the exact value of every automation we deploy."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know before booking your free audit.",
+      "questions": [
+        {
+          "q": "Do you integrate with Exact Online?",
+          "a": "Yes. We have direct API integration experience with Exact Online, Twinfield, and Moneybird. We can automate invoice processing, client account creation, and reporting feeds directly within your existing platform."
+        },
+        {
+          "q": "Is client financial data secure?",
+          "a": "Absolutely. All automation runs on EU-based infrastructure. We implement role-based access controls, encrypted data transfer, and audit logging. All solutions are designed to meet GDPR and Dutch accounting data requirements."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "A standard accounting automation package (invoice automation + deadline reminders + document chase) typically takes 4–6 weeks from kickoff to go-live. Full onboarding and reporting automation may take 8–10 weeks."
+        },
+        {
+          "q": "What does it cost?",
+          "a": "We scope each project individually based on your firm size, existing systems, and automation goals. Most accounting firm projects start between €5,000 and €12,000. Book a free audit to get an accurate estimate."
+        },
+        {
+          "q": "Will this disrupt our current workflow?",
+          "a": "No. We map your existing workflow first and build automation around it. Your team keeps working the way they work — the automation removes the manual steps, it doesn't replace your process."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Free Firm Automation Audit",
+      "title": "Ready to Recover Billable Hours Lost to Admin?",
+      "desc": "Book a free 45-minute audit. We will map your current workflow, identify the top 3 automation opportunities, and give you a clear ROI estimate — no obligation.",
+      "button": "Book Your Free Audit",
+      "subtext": "No commitment. No sales pitch. Just a clear picture of what automation can do for your firm."
+    },
+    "SEO": {
+      "extendedDesc": "CodeHunter Lab specializes in accounting firm automation systems across the Netherlands, including Amsterdam, Rotterdam, Den Haag, Utrecht, Leiden, and Eindhoven. Our custom automation platforms connect accounting software like Exact Online, Twinfield, and Moneybird with CRM systems, client portals, and communication tools to eliminate manual admin, automate compliance deadlines, and help accounting firms recover billable hours through systematic workflow automation.",
+      "keywords": "accounting firm automation Netherlands, accountantskantoor automatisering, Exact Online integration, Twinfield automation, invoice processing automation Netherlands, BTW deadline automation, client onboarding automation accounting, financial reporting automation Netherlands, boekhouding automatisering, accountancy workflow automation"
+    }
+  },
+  "RealEstateAgency": {
+    "Hero": {
+      "badge": "REAL ESTATE AGENCY AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "Your Agency Loses Deals",
+        "highlight": "Every Week",
+        "part2": "to Slow Follow-Up"
+      },
+      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for real estate agencies in the Netherlands — automating lead follow-up, viewing scheduling, property listings, and client communication. No generic CRM. No vendor lock-in.",
+      "cta": {
+        "primary": "Book a Free Agency Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "The Real Cost of Running a Real Estate Agency in 2026",
+      "items": [
+        {
+          "emoji": "📞",
+          "title": "Leads go cold before you follow up",
+          "desc": "A potential buyer fills out a Funda inquiry at 10pm. If they don't hear from you until 9am the next day, they've already contacted two other agencies. Speed wins deals in the Dutch housing market."
+        },
+        {
+          "emoji": "🏠",
+          "title": "Viewing schedules are a coordination nightmare",
+          "desc": "Scheduling viewings across multiple properties, multiple buyers, and multiple sellers involves dozens of emails and calls per week — all manual, all error-prone."
+        },
+        {
+          "emoji": "📊",
+          "title": "You have no visibility into your sales pipeline",
+          "desc": "How many active leads do you have? How many viewings this week? How many offers pending? Without a real-time dashboard, your pipeline lives in email threads and memory."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Seller communication is inconsistent",
+          "desc": "Sellers expect weekly updates on their property. Without a systematic process, updates slip — and sellers call you instead of the other way around."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Funda, your CRM, and your email aren't connected",
+          "desc": "Leads from Funda need to be manually entered into your CRM. Every step between platforms is a data risk and a time cost."
+        },
+        {
+          "emoji": "💬",
+          "title": "Post-sale follow-up is nonexistent",
+          "desc": "After closing, buyers and sellers hear nothing. That silence means no referrals, no reviews, and no repeat business — three revenue streams left on the table."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "What We Build for Real Estate Agencies",
+      "subtitle": "We are not a software vendor. We build and integrate the systems your agency already owns — or needs — so they work together automatically.",
+      "items": [
+        {
+          "emoji": "⚡",
+          "title": "Instant Lead Response Automation",
+          "desc": "Every Funda inquiry, website form, or ad click triggers an instant personalised response via WhatsApp or email — with the property details, available viewing slots, and a booking link. Response time goes from hours to seconds.",
+          "result": "3–5x higher inquiry-to-viewing conversion rate."
+        },
+        {
+          "emoji": "📅",
+          "title": "Viewing Scheduling Automation",
+          "desc": "Buyers self-book viewings via a smart scheduling link that checks property availability, agent availability, and seller preferences simultaneously. Confirmations, reminders, and post-viewing follow-ups all automated.",
+          "result": "80% reduction in scheduling coordination time."
+        },
+        {
+          "emoji": "🏠",
+          "title": "Property Listing Syndication",
+          "desc": "New property listed → automatically formatted and posted to Funda, your website, and social media with consistent descriptions, photos, and metadata. Updates cascade automatically when details change.",
+          "result": "Listings live in minutes, not hours."
+        },
+        {
+          "emoji": "📊",
+          "title": "Sales Pipeline Dashboard",
+          "desc": "One dashboard: active leads by source, viewings this week, offers pending, time-to-close by property type, and revenue forecast. Updated in real time. Accessible from your phone during client meetings.",
+          "result": "Full pipeline visibility for every agent."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Seller Update Automation",
+          "desc": "Every week, sellers receive an automated update: number of inquiries received, viewings conducted, feedback summary, and current market position. Keeps sellers informed without consuming agent time.",
+          "result": "Sellers stay engaged. Fewer inbound 'how is it going?' calls."
+        },
+        {
+          "emoji": "⭐",
+          "title": "Post-Sale Review & Referral System",
+          "desc": "30 days after closing, buyers and sellers receive a satisfaction message. Positive responses are guided to Google and Funda reviews. Referral requests go to their network. All automated, all tracked.",
+          "result": "Consistent review growth and referral pipeline."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "What This Looks Like in Practice",
+      "items": [
+        {
+          "num": "01",
+          "title": "Funda Inquiry to Booked Viewing",
+          "desc": "Buyer sends Funda inquiry at 10pm → instant WhatsApp response with property info and booking link → buyer selects viewing slot → seller notified → agent calendar updated → reminder sent 24h before viewing → post-viewing feedback request sent automatically."
+        },
+        {
+          "num": "02",
+          "title": "New Listing to Market in Minutes",
+          "desc": "Agent uploads property details and photos → automation formats the listing → posts to Funda, website, and social media → email blast sent to matched buyers in CRM → viewing requests start arriving before the morning coffee."
+        },
+        {
+          "num": "03",
+          "title": "Weekly Seller Update Flow",
+          "desc": "Every Monday → system pulls last week's activity data (inquiries, viewings, feedback) → generates personalised report → sends to seller via email and WhatsApp → seller replies with any questions → agent is notified only if a response is needed."
+        },
+        {
+          "num": "04",
+          "title": "Post-Sale Referral Engine",
+          "desc": "30 days after closing → personalised congratulations message sent → satisfaction survey included → positive responders get a Google review link → neutral/negative feedback routed to agency manager → 60 days later → referral request sent to buyer's network."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Why Real Estate Agencies Choose CodeHunter Lab",
+      "points": [
+        {
+          "title": "We know the Dutch property market",
+          "desc": "We understand Funda, the Dutch buyer journey, and the competitive pressure of the Netherlands housing market. We build automation that fits how Dutch agencies actually operate — not generic real estate CRM templates."
+        },
+        {
+          "title": "No lock-in. You own everything.",
+          "desc": "Every automation we build runs on open platforms (n8n, HubSpot, WhatsApp Business API). No proprietary black boxes. No monthly license fees to us after delivery. The system is yours."
+        },
+        {
+          "title": "Built for speed — because speed wins in NL",
+          "desc": "The Dutch property market moves fast. Our lead response automation is designed to put you in contact with serious buyers within seconds of inquiry — before your competitors even see the notification."
+        },
+        {
+          "title": "Measurable ROI from month one",
+          "desc": "We track inquiry-to-viewing conversion, time-to-response, viewing fill rate, and post-sale review volume before and after. You see the exact revenue impact of every automation we deploy."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know before booking your free audit.",
+      "questions": [
+        {
+          "q": "Do you integrate with Funda?",
+          "a": "Yes. We connect Funda inquiries to your CRM and communication workflows via API and webhook integration. Every Funda lead is automatically entered, categorized, and followed up without manual data entry."
+        },
+        {
+          "q": "Which CRM systems do you work with?",
+          "a": "We integrate with HubSpot, Pipedrive, Salesforce, and most API-accessible CRM platforms. If your agency uses a property-specific CRM, we assess integration options during the free audit."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "A standard real estate automation package (lead response + viewing scheduling + seller updates) typically takes 3–5 weeks from kickoff to go-live. Full pipeline dashboard and listing syndication may take 6–8 weeks."
+        },
+        {
+          "q": "What does it cost?",
+          "a": "We scope each project individually based on your agency size, existing systems, and automation goals. Most real estate agency projects start between €4,000 and €10,000. Book a free audit to get an accurate estimate."
+        },
+        {
+          "q": "Will my agents need to change how they work?",
+          "a": "Minimal change. The automation handles the repetitive coordination work — responses, reminders, scheduling, updates. Your agents still own the client relationship and negotiations. They just spend more time on those instead of admin."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Free Agency Automation Audit",
+      "title": "Ready to Stop Losing Deals to Slow Follow-Up?",
+      "desc": "Book a free 45-minute audit. We will map your current lead and viewing workflow, identify the top 3 automation opportunities, and give you a clear ROI estimate — no obligation.",
+      "button": "Book Your Free Audit",
+      "subtext": "No commitment. No sales pitch. Just a clear picture of what automation can do for your agency."
+    },
+    "SEO": {
+      "extendedDesc": "CodeHunter Lab specializes in real estate agency automation systems across the Netherlands, including Amsterdam, Rotterdam, Den Haag, Utrecht, Leiden, Haarlem, Eindhoven, and Groningen. Our custom automation platforms connect Funda, CRM systems, WhatsApp Business API, and marketing tools to eliminate slow lead follow-up, automate viewing scheduling, syndicate property listings, and build systematic seller communication — helping Dutch real estate agencies close more deals with less admin.",
+      "keywords": "real estate automation Netherlands, makelaar automatisering Nederland, Funda integration automation, real estate CRM Netherlands, property lead automation, viewing scheduling automation Netherlands, real estate WhatsApp automation, makelaar CRM systeem, Dutch property market automation, real estate agency Netherlands"
+    }
+  }
 }

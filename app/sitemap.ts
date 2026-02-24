@@ -13,6 +13,14 @@ const routeMeta: Record<string, { lastModified: string; priority: number; change
     '/expertise/n8n-migration-consulting':         { lastModified: '2026-02-20', priority: 0.7,  changeFrequency: 'monthly' },
     '/expertise/system-architecture-design':       { lastModified: '2026-02-05', priority: 0.7,  changeFrequency: 'monthly' },
     '/expertise/custom-llm-development':           { lastModified: '2026-02-05', priority: 0.7,  changeFrequency: 'monthly' },
+    '/nextjs-development-agency':                          { lastModified: '2026-02-23', priority: 0.9,  changeFrequency: 'weekly' },
+    '/react-consulting':                                   { lastModified: '2026-02-23', priority: 0.9,  changeFrequency: 'weekly' },
+    '/dental-clinic-automation-netherlands':               { lastModified: '2026-02-24', priority: 0.9,  changeFrequency: 'weekly' },
+    '/physiotherapy-clinic-automation-netherlands':        { lastModified: '2026-02-24', priority: 0.9,  changeFrequency: 'weekly' },
+    '/aesthetic-clinic-automation-netherlands':            { lastModified: '2026-02-24', priority: 0.9,  changeFrequency: 'weekly' },
+    '/veterinary-clinic-automation-netherlands':           { lastModified: '2026-02-24', priority: 0.9,  changeFrequency: 'weekly' },
+    '/accounting-firm-automation-netherlands':             { lastModified: '2026-02-24', priority: 0.9,  changeFrequency: 'weekly' },
+    '/real-estate-automation-netherlands':                 { lastModified: '2026-02-24', priority: 0.9,  changeFrequency: 'weekly' },
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

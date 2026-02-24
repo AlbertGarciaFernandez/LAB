@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from "@/navigation";
 import { motion, useAnimation } from "framer-motion";
-import { Zap, Activity, BarChart3, ArrowRight, CheckCircle2, Sparkles, ChevronRight, AlertOctagon } from "lucide-react";
+import { Lightning, Pulse, ChartBar, ArrowRight, CheckCircle, Sparkle, CaretRight, WarningOctagon, CheckIcon } from "@phosphor-icons/react/dist/ssr";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
@@ -64,7 +64,7 @@ const TopAgentsSection: React.FC = () => {
             id: "leo",
             name: "LEO",
             role: t("agents.leo.role"),
-            icon: Zap,
+            icon: Lightning,
             description: t("agents.leo.description"),
             capabilities: [
                 t("agents.leo.capabilities.0"),
@@ -86,7 +86,7 @@ const TopAgentsSection: React.FC = () => {
             id: "atlas",
             name: "ATLAS",
             role: t("agents.atlas.role"),
-            icon: Activity,
+            icon: Pulse,
             description: t("agents.atlas.description"),
             capabilities: [
                 t("agents.atlas.capabilities.0"),
@@ -108,7 +108,7 @@ const TopAgentsSection: React.FC = () => {
             id: "orion",
             name: "ORION",
             role: t("agents.orion.role"),
-            icon: BarChart3,
+            icon: ChartBar,
             description: t("agents.orion.description"),
             capabilities: [
                 t("agents.orion.capabilities.0"),
@@ -143,7 +143,7 @@ const TopAgentsSection: React.FC = () => {
                 className="text-center mb-24 max-w-4xl mx-auto"
             >
                 <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-[10px] font-bold tracking-[0.2em] uppercase backdrop-blur-md">
-                    <Sparkles size={12} className="text-hunter-green" />
+                    <Sparkle size={12} className="text-hunter-green" />
                     {t("badge")}
                 </motion.div>
 
@@ -205,7 +205,7 @@ const TopAgentsSection: React.FC = () => {
                             <div className="space-y-3 mb-8 flex-grow">
                                 {agent.capabilities.map((cap, idx) => (
                                     <div key={idx} className="flex items-center gap-3 group/item">
-                                        <CheckCircle2 size={16} className={`shrink-0 ${agent.color} opacity-50 group-hover/item:opacity-100 transition-opacity`} />
+                                        <CheckCircle size={16} className={`shrink-0 ${agent.color} opacity-50 group-hover/item:opacity-100 transition-opacity`} />
                                         <span className="text-sm text-gray-400 group-hover/item:text-white transition-colors">{cap}</span>
                                     </div>
                                 ))}
@@ -218,7 +218,7 @@ const TopAgentsSection: React.FC = () => {
                                 </p>
                                 <Link href="/#contact" className="block transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                     <div className={`w-full py-3 rounded-xl bg-gradient-to-r ${agent.btnGradient} text-near-black font-bold text-center flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-lg`}>
-                                        {agent.cta} <ChevronRight size={16} />
+                                        {agent.cta} <CaretRight size={16} />
                                     </div>
                                 </Link>
                             </div>
@@ -253,7 +253,7 @@ const TopAgentsSection: React.FC = () => {
 
                         <div className="relative z-10">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/10 text-red-400 text-[10px] font-bold tracking-widest uppercase mb-6">
-                                <AlertOctagon size={12} />
+                                <WarningOctagon size={12} />
                                 {t("bottleneck.badge")}
                             </div>
 
@@ -283,7 +283,7 @@ const TopAgentsSection: React.FC = () => {
 
                         <div className="relative z-10">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/10 text-hunter-green text-[10px] font-bold tracking-widest uppercase mb-6">
-                                <Sparkles size={12} />
+                                <Sparkle size={12} />
                                 {t("advantage.badge")}
                             </div>
 
@@ -294,7 +294,7 @@ const TopAgentsSection: React.FC = () => {
                                 {["0", "1", "2", "3"].map((key, i) => (
                                     <li key={i} className="flex items-center gap-4 text-white font-medium" style={{ transitionDelay: `${i * 50}ms` }}>
                                         <div className="w-5 h-5 rounded-full bg-hunter-green/20 flex items-center justify-center">
-                                            <CheckCircle2 size={12} className="text-hunter-green" />
+                                            <CheckCircle size={12} className="text-hunter-green" />
                                         </div>
                                         {t(`advantage.list.${key}`)}
                                     </li>
@@ -327,7 +327,7 @@ const TopAgentsSection: React.FC = () => {
 
                         <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative z-10 shadow-xl">
                             <div className="absolute -top-1 -right-1 w-3 h-3 bg-hunter-orange rounded-full animate-ping opacity-50" />
-                            <Zap className="text-hunter-orange" size={24} />
+                            <Lightning className="text-hunter-orange" size={24} />
                             <span className="text-white font-bold text-lg">{t("diagram.capture")}</span>
                         </div>
 
@@ -352,7 +352,7 @@ const TopAgentsSection: React.FC = () => {
                         </div>
 
                         <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative z-10 shadow-xl">
-                            <Activity className="text-blue-400" size={24} />
+                            <Pulse className="text-blue-400" size={24} />
                             <span className="text-white font-bold text-lg">{t("diagram.process")}</span>
                         </div>
 
@@ -378,7 +378,7 @@ const TopAgentsSection: React.FC = () => {
 
                         <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative z-10 shadow-xl">
                             <div className="absolute -top-1 -right-1 w-3 h-3 bg-hunter-green rounded-full animate-ping opacity-50" />
-                            <BarChart3 className="text-hunter-green" size={24} />
+                            <ChartBar className="text-hunter-green" size={24} />
                             <span className="text-white font-bold text-lg">{t("diagram.optimize")}</span>
                         </div>
                     </div>
