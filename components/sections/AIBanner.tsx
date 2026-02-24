@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Robot, TrendUp, Lightning, ArrowRight, Brain } from '@phosphor-icons/react/dist/ssr';
+import { RobotIcon, TrendUpIcon, LightningIcon, ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 import { Link } from "@/navigation";
 import { useTranslations } from 'next-intl';
 
@@ -27,7 +27,7 @@ const AIBanner = () => {
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-8 relative z-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A2E26] border border-[#2D4A3E] text-[#00E6A0] text-[10px] font-bold tracking-widest uppercase shadow-[0_0_10px_rgba(0,230,160,0.1)]">
-              <Lightning size={12} weight="fill" />
+              <LightningIcon size={12} weight="fill" />
               <span>{t("badge")}</span>
             </div>
 
@@ -46,7 +46,7 @@ const AIBanner = () => {
             <div className="flex flex-col sm:flex-row gap-5">
               <Link href="/ai-consulting" className="group inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-black transition-all duration-300 bg-[#00E6A0] rounded-lg hover:bg-[#00cc8e] hover:shadow-[0_0_30px_rgba(0,230,160,0.3)]">
                 {t("cta1")}
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRightIcon className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link href="/ai-consulting#roi-calculator" className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-[#FF7A3C] transition-all duration-300 bg-transparent border border-[#FF7A3C]/30 rounded-lg hover:bg-[#FF7A3C]/10 hover:border-[#FF7A3C] hover:text-[#FF7A3C]">
                 {t("cta2")}
@@ -58,9 +58,9 @@ const AIBanner = () => {
           <div className="lg:w-5/12 w-full relative z-10">
             <div className="grid gap-4">
               {[
-                { title: t("cards.0.title"), desc: t("cards.0.desc"), icon: Robot },
-                { title: t("cards.1.title"), desc: t("cards.1.desc"), icon: Lightning },
-                { title: t("cards.2.title"), desc: t("cards.2.desc"), icon: TrendUp },
+                { title: t("cards.0.title"), desc: t("cards.0.desc"), icon: RobotIcon },
+                { title: t("cards.1.title"), desc: t("cards.1.desc"), icon: LightningIcon },
+                { title: t("cards.2.title"), desc: t("cards.2.desc"), icon: TrendUpIcon },
               ].map((item, idx) => (
                 <div key={idx} className="group flex items-center gap-5 p-6 rounded-2xl bg-[#0F0F0F] border border-white/5 hover:border-[#00E6A0]/30 transition-all duration-300">
                   <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#131313] border border-white/5 flex items-center justify-center text-[#00E6A0] group-hover:bg-[#00E6A0]/10 group-hover:border-[#00E6A0]/20 transition-all duration-300">

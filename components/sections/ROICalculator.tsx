@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from "@/navigation";
-import { Calculator, WarningCircle, ArrowRight } from '@phosphor-icons/react/dist/ssr';
+import { CalculatorIcon, WarningCircleIcon, ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -40,7 +40,7 @@ const ROICalculator = () => {
                 {/* Lado Izquierdo */}
                 <div className="space-y-8">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase">
-                        <Calculator size={14} />
+                        <CalculatorIcon size={14} />
                         {t("badge")}
                     </div>
 
@@ -61,7 +61,7 @@ const ROICalculator = () => {
                     >
                         <div className="absolute top-0 left-0 w-1 h-full bg-hunter-green group-hover:w-full transition-all duration-500 opacity-20" />
                         <div className="flex items-start gap-5 relative z-10">
-                            <WarningCircle className="text-hunter-green shrink-0 mt-1" size={28} />
+                            <WarningCircleIcon className="text-hunter-green shrink-0 mt-1" size={28} />
                             <div>
                                 <h4 className="text-white font-bold text-xl tracking-tight">{t("realityCard.title")}</h4>
                                 <p className="text-sm text-gray-400 mt-2 leading-relaxed">
@@ -142,7 +142,7 @@ const ROICalculator = () => {
                         </p>
                         <Link href="/#contact" className="w-full py-5 bg-hunter-green text-near-black font-black uppercase tracking-widest text-xs rounded-xl transition-all hover:scale-[1.02] hover:bg-white shadow-[0_0_30px_rgba(0,230,162,0.2)] flex items-center justify-center gap-3 group">
                             {t("results.cta")}
-                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                            <ArrowRightIcon size={18} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
                 </motion.div>

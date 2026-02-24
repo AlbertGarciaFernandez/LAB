@@ -3,12 +3,12 @@
 import React, { useRef } from "react";
 import { useTranslations } from "next-intl";
 import {
-  CalendarCheck,
+  CalendarCheckIcon,
   WhatsappLogoIcon,
   ClockClockwiseIcon,
-  Funnel,
-  ArrowsClockwise,
-  ChartLineUp,
+  FunnelIcon,
+  ArrowsClockwiseIcon,
+  ChartLineUpIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import {
   motion,
@@ -18,12 +18,12 @@ import {
 } from "framer-motion";
 
 const icons = [
-  CalendarCheck,
+  CalendarCheckIcon,
   WhatsappLogoIcon,
   ClockClockwiseIcon,
-  Funnel,
-  ArrowsClockwise,
-  ChartLineUp,
+  FunnelIcon,
+  ArrowsClockwiseIcon,
+  ChartLineUpIcon,
 ];
 
 const containerVariants = {

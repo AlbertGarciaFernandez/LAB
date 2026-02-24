@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cookie, XIcon } from "@phosphor-icons/react/dist/ssr";
+import { CookieIcon, XIcon } from "@phosphor-icons/react/dist/ssr";
 
 
 export default function CookieConsent() {
@@ -46,7 +46,7 @@ export default function CookieConsent() {
                             <div className="flex items-start justify-between gap-4">
                                 <div className="flex items-center gap-3">
                                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10">
-                                        <Cookie className="h-5 w-5 text-purple-400" />
+                                        <CookieIcon className="h-5 w-5 text-purple-400" />
                                     </div>
                                     <h3 className="text-lg font-bold text-white font-display">
                                         Cookies & Magic

@@ -2403,5 +2403,37 @@
       "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para agencias inmobiliarias en los Países Bajos, incluyendo Ámsterdam, Róterdam, La Haya, Utrecht, Leiden, Haarlem, Eindhoven y Groninga. Nuestras plataformas de automatización personalizadas conectan Funda, sistemas CRM, WhatsApp Business API y herramientas de marketing para eliminar el seguimiento lento de leads, automatizar la programación de visitas, sindicar publicaciones de propiedades y construir comunicación sistemática con vendedores.",
       "keywords": "automatización agencia inmobiliaria Países Bajos, makelaar automatisering Nederland, integración Funda automatización, CRM inmobiliario Países Bajos, automatización leads inmobiliaria, automatización visitas inmobiliaria Países Bajos, WhatsApp automatización makelaar, sistema CRM makelaar"
     }
+  },
+  "QuickWins": {
+    "badge": "Casos de Uso · Herramientas Probadas",
+    "title": "Herramientas que se",
+    "highlight": "Pagan Solas.",
+    "subtitle": "Automatizaciones reales que hemos construido y desplegado para clientes de distintos sectores — listas para arrancar.",
+    "cards": [
+      {
+        "title": "Reservas + Follow-up",
+        "desc": "Sistema de reservas automatizado con secuencias de seguimiento post-visita integradas."
+      },
+      {
+        "title": "WhatsApp 24/7",
+        "desc": "Agente IA que responde, cualifica leads y agenda citas por WhatsApp — sin parar."
+      },
+      {
+        "title": "Optimizar Calendario",
+        "desc": "Gestión inteligente que elimina no-shows y rellena huecos automáticamente."
+      },
+      {
+        "title": "Lead Nurturing",
+        "desc": "Secuencias de email y WhatsApp que convierten leads fríos en clientes con cita."
+      },
+      {
+        "title": "CRM Auto-sync",
+        "desc": "CRM, facturación y calendario siempre sincronizados — sin introducir datos a mano."
+      },
+      {
+        "title": "Informes Automáticos",
+        "desc": "Informes de rendimiento semanales entregados automáticamente en tu email o Slack."
+      }
+    ]
   }
 }

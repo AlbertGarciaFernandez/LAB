@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import {
-    Cpu, FileCode, ArrowRight, Lightning, CheckIcon
+    CpuIcon, ArrowRightIcon, LightningIcon, CheckIcon
 } from '@phosphor-icons/react/dist/ssr';
 import Header from "@/components/layout/Header";
 import ROICalculator from '@/components/sections/ROICalculator';
@@ -72,7 +72,7 @@ const AIConsultingPage = () => {
                                 <Link href="#roi-calculator" className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden inline-flex items-center gap-2">
                                     <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
                                     <span className="relative z-10">{t("Hero.cta")}</span>
-                                    <ArrowRight className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    <ArrowRightIcon className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
                                 </Link>
                             </motion.div>
                         </motion.div>
@@ -188,7 +188,7 @@ const AIConsultingPage = () => {
                                     <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
 
                                     <div className="w-16 h-16 mb-6 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
-                                        <Lightning className="text-orange-500" size={32} />
+                                        <LightningIcon className="text-orange-500" size={32} />
                                     </div>
 
                                     <h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-white transition-colors">{t("Migration.legacy.title")}</h3>
@@ -213,7 +213,7 @@ const AIConsultingPage = () => {
                                     </div>
 
                                     <div className="w-20 h-20 mb-6 rounded-2xl bg-hunter-green flex items-center justify-center shadow-[0_0_30px_rgba(0,230,162,0.3)]">
-                                        <Cpu className="text-near-black" size={40} />
+                                        <CpuIcon className="text-near-black" size={40} />
                                     </div>
 
                                     <h3 className="text-2xl font-black text-white mb-2">{t("Migration.optimized.title")}</h3>
@@ -242,7 +242,7 @@ const AIConsultingPage = () => {
                                     <div className="absolute inset-0 bg-gradient-to-b from-hunter-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
 
                                     <div className="w-16 h-16 mb-6 rounded-2xl bg-hunter-orange/10 border border-hunter-orange/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                        <ArrowRight className="text-hunter-orange" size={32} />
+                                        <ArrowRightIcon className="text-hunter-orange" size={32} />
                                     </div>
 
                                     <h3 className="text-xl font-bold text-white mb-2">{t("Migration.action.title")}</h3>

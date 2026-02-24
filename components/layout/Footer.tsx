@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@/navigation";
-import { LinkedinLogo, Envelope, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { LinkedinLogoIcon, EnvelopeIcon, ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { useTranslations } from "next-intl";
 
 const Footer: React.FC = () => {
@@ -32,13 +32,13 @@ const Footer: React.FC = () => {
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-hunter-green hover:bg-hunter-green/10 transition-all duration-300"
                             >
-                                <LinkedinLogo size={20} />
+                                <LinkedinLogoIcon size={20} />
                             </a>
                             <a
                                 href="mailto:albert@codehunterlab.com"
                                 className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-hunter-orange hover:bg-hunter-orange/10 transition-all duration-300"
                             >
-                                <Envelope size={20} />
+                                <EnvelopeIcon size={20} />
                             </a>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                                 <li key={item.key}>
                                     <Link href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
                                         {t(`Services.items.${item.key}`)}
-                                        <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                                        <ArrowUpRightIcon size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                                     </Link>
                                 </li>
                             ))}
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                                 <li key={item.key}>
                                     <Link href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
                                         {t(`Expertise.items.${item.key}`)}
-                                        <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                                        <ArrowUpRightIcon size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                                     </Link>
                                 </li>
                             ))}
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
                                 <li key={item.key}>
                                     <Link href={item.href} className="text-gray-500 hover:text-white text-sm transition-colors flex items-center group gap-2">
                                         {t(`Industries.items.${item.key}`)}
-                                        <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                                        <ArrowUpRightIcon size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                                     </Link>
                                 </li>
                             ))}

@@ -371,7 +371,7 @@
     "Banner": {
       "badge": "AI Systems · Production Grade",
       "title": "Your AI Pilot",
-      "highlight": "Never Shipped.",
+      "highlight": "Ready to Sail.",
       "description": "Most companies have AI experiments sitting in a sandbox. We build systems that run in production — connected to your CRM, your data, and your team's real workflows.",
       "cta1": "Book an AI Strategy Call",
       "cta2": "Estimate Your ROI",
@@ -633,7 +633,7 @@
     "Services": {
       "api": {
         "title": "Custom API Development",
-        "desc": "We build secure, documented APIs to expose your legacy data to modern web/mobile apps."
+        "desc": "We build secure, documented APIs to bridge your legacy data with modern web and mobile apps."
       },
       "legacy": {
         "title": "Legacy Modernization",
@@ -843,7 +843,7 @@
           "part1": "Your 24/7",
           "highlight": "Digital Workforce"
         },
-        "description": "Imagine a support team that never sleeps, never complains, and scales instantly. We build **AI Agents** that handle customer service, sales qualification, and appointment setting autonomously.",
+        "description": "Imagine a support team that never sleeps, never complains, and scales instantly. We build <strong>AI Agents</strong> that handle customer service, sales qualification, and appointment setting autonomously.",
         "cta": "Deploy Your Agent"
       },
       "Features": {
@@ -876,7 +876,7 @@
           "part1": "Escape the",
           "highlight": "Zapier Tax"
         },
-        "description": "Paying thousands for simple automations? We migrate your chaotic Zapier/Make workflows to **n8n**, giving you ownership, privacy, and unlimited execution power for a fraction of the cost.",
+        "description": "Paying thousands for simple automations? We migrate your chaotic Zapier/Make workflows to <strong>n8n</strong>, giving you ownership, privacy, and unlimited execution power for a fraction of the cost.",
         "cta": "Start Migration"
       },
       "Features": {
@@ -1027,7 +1027,7 @@
           "part1": "Foundation for",
           "highlight": "Hyper-Growth"
         },
-        "description": "Spaghetti code kills startups. We design robust, scalable **System Architectures** using Next.js and Microservices that can handle millions of users without collapsing.",
+        "description": "Spaghetti code kills startups. We design robust, scalable <strong>System Architectures</strong> using Next.js and Microservices that can handle millions of users without collapsing.",
         "cta": "Audit Your Stack"
       },
       "Features": {
@@ -1060,7 +1060,7 @@
           "part1": "Your Business,",
           "highlight": "Your Brain"
         },
-        "description": "Generic ChatGPT isn't enough. We fine-tune **Custom LLMs** on your proprietary data, creating an AI model that speaks your language and knows your secrets—securely.",
+        "description": "Generic ChatGPT isn't enough. We fine-tune <strong>Custom LLMs</strong> on your proprietary data, creating an AI model that speaks your language and knows your secrets—securely.",
         "cta": "Train Your Model"
       },
       "Features": {
@@ -1130,8 +1130,8 @@
           "desc": "Full type-safety from day one. No runtime surprises."
         },
         {
-          "title": "Dutch Market",
-          "desc": "Based in Leiden, serving clients in Amsterdam, Rotterdam, and Den Haag."
+          "title": "Dutch & Spanish Market",
+          "desc": "Based in Leiden, Netherlands, serving clients across Amsterdam, Rotterdam, and Den Haag. Also specialised in the Spanish market. We work fully remote with teams across Europe."
         }
       ]
     },
@@ -1226,7 +1226,7 @@
         "points": [
           "3-6 months to hire and onboard",
           "Hidden costs (benefits, taxes, equipment)",
-          "Risk of cultural or skill mismatch",
+          "Time-consuming hiring and onboarding process",
           "Slower for short-term projects"
         ]
       }
@@ -2403,5 +2403,37 @@
       "extendedDesc": "CodeHunter Lab specializes in real estate agency automation systems across the Netherlands, including Amsterdam, Rotterdam, Den Haag, Utrecht, Leiden, Haarlem, Eindhoven, and Groningen. Our custom automation platforms connect Funda, CRM systems, WhatsApp Business API, and marketing tools to eliminate slow lead follow-up, automate viewing scheduling, syndicate property listings, and build systematic seller communication — helping Dutch real estate agencies close more deals with less admin.",
       "keywords": "real estate automation Netherlands, makelaar automatisering Nederland, Funda integration automation, real estate CRM Netherlands, property lead automation, viewing scheduling automation Netherlands, real estate WhatsApp automation, makelaar CRM systeem, Dutch property market automation, real estate agency Netherlands"
     }
+  },
+  "QuickWins": {
+    "badge": "Use Cases · Proven Tools",
+    "title": "Tools That Pay",
+    "highlight": "For Themselves.",
+    "subtitle": "Real automations we've built and deployed for clients across industries — ready to ship.",
+    "cards": [
+      {
+        "title": "Booking + Follow-up",
+        "desc": "Automated reservation system with post-visit nurturing sequences built in."
+      },
+      {
+        "title": "WhatsApp 24/7",
+        "desc": "AI agent that replies, qualifies leads, and books appointments via WhatsApp — around the clock."
+      },
+      {
+        "title": "Calendar Optimiser",
+        "desc": "Smart scheduling that eliminates no-shows and fills gaps automatically."
+      },
+      {
+        "title": "Lead Nurturing",
+        "desc": "Multi-step email and WhatsApp sequences that turn cold leads into booked clients."
+      },
+      {
+        "title": "CRM Auto-sync",
+        "desc": "Keep your CRM, invoicing, and calendar in perfect sync — zero manual entry."
+      },
+      {
+        "title": "Reporting Autopilot",
+        "desc": "Weekly performance reports delivered automatically to your inbox or Slack."
+      }
+    ]
   }
 }

@@ -5,6 +5,7 @@ import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import Header from "@/components/layout/Header";
+import * as motion from "framer-motion/client";
 
 const baseUrl = "https://www.codehunterlab.com";
 const path = "/ai-automation-consulting-netherlands";
@@ -124,12 +125,18 @@ export default function AIAutomationNetherlands({ params: { locale } }: { params
 
             {/* Hero Section */}
             <section className="relative px-6 py-24 md:py-32 max-w-7xl mx-auto flex flex-col items-center text-center z-10">
-                <div className="mb-6 inline-block rounded-full bg-hunter-green/10 px-4 py-1.5 text-sm font-mono text-hunter-green border border-hunter-green/20 backdrop-blur-md animate-pulse-slow">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="mb-8 inline-block rounded-full bg-hunter-green/10 px-4 py-1.5 text-xs md:text-sm font-mono text-hunter-green border border-hunter-green/20 backdrop-blur-md"
+                >
                     <ScrambleText text={t("Hero.badge")} />
-                </div>
+                </motion.div>
 
-                <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight mb-8">
-                    {t("Hero.title.part1")} <span className="text-gradient-enchanted neon-glow-green">{t("Hero.title.highlight")}</span> <br />
+                <h1 className="text-4xl md:text-7xl font-black tracking-tighter mb-8 leading-[0.95]">
+                    {t("Hero.title.part1")} <br />
+                    <span className="text-gradient-enchanted neon-glow-green">{t("Hero.title.highlight")}</span> <br />
                     <span className="text-2xl md:text-5xl font-light text-gray-300">{t("Hero.title.sub")}</span>
                 </h1>
 
