@@ -6,6 +6,24 @@ import { Link, usePathname } from "@/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import {
+  LightningIcon,
+  AtomIcon,
+  StackIcon,
+  PlugsConnectedIcon,
+  WrenchIcon,
+  RobotIcon,
+  BrainIcon,
+  TreeStructureIcon,
+  ArrowsClockwiseIcon,
+  GlobeIcon,
+  ToothIcon,
+  SparkleIcon,
+  HeartbeatIcon,
+  PawPrintIcon,
+  ChartBarIcon,
+  HouseIcon,
+} from "@phosphor-icons/react/dist/ssr";
 
 const ChevronDown: React.FC<{ open?: boolean }> = ({ open }) => (
   <motion.svg
@@ -41,34 +59,34 @@ const Header: React.FC = () => {
       name: t("nav.Services"),
       key: "services",
       items: [
-        { name: t("nav.services.AIConsulting"), href: "/ai-consulting", icon: "⚡" },
-        { name: t("nav.services.ReactConsulting"), href: "/react-consulting", icon: "⚛️" },
-        { name: t("nav.services.NextJS"), href: "/nextjs-development-agency", icon: "▲" },
-        { name: t("nav.services.ITIntegration"), href: "/it-system-integration", icon: "🔗" },
-        { name: t("nav.services.CustomTools"), href: "/services/custom-internal-tools-development", icon: "🛠" },
+        { name: t("nav.services.AIConsulting"), href: "/ai-consulting", icon: <LightningIcon size={16} /> },
+        { name: t("nav.services.ReactConsulting"), href: "/react-consulting", icon: <AtomIcon size={16} /> },
+        { name: t("nav.services.NextJS"), href: "/nextjs-development-agency", icon: <StackIcon size={16} /> },
+        { name: t("nav.services.ITIntegration"), href: "/it-system-integration", icon: <PlugsConnectedIcon size={16} /> },
+        { name: t("nav.services.CustomTools"), href: "/services/custom-internal-tools-development", icon: <WrenchIcon size={16} /> },
       ],
     },
     {
       name: t("nav.Expertise"),
       key: "expertise",
       items: [
-        { name: t("nav.expertise.AIAgents"), href: "/expertise/ai-agents-automation", icon: "🤖" },
-        { name: t("nav.expertise.CustomLLM"), href: "/expertise/custom-llm-development", icon: "🧠" },
-        { name: t("nav.expertise.SystemArch"), href: "/expertise/system-architecture-design", icon: "🏗" },
-        { name: t("nav.expertise.N8nMigration"), href: "/expertise/n8n-migration-consulting", icon: "🔄" },
+        { name: t("nav.expertise.AIAgents"), href: "/expertise/ai-agents-automation", icon: <RobotIcon size={16} /> },
+        { name: t("nav.expertise.CustomLLM"), href: "/expertise/custom-llm-development", icon: <BrainIcon size={16} /> },
+        { name: t("nav.expertise.SystemArch"), href: "/expertise/system-architecture-design", icon: <TreeStructureIcon size={16} /> },
+        { name: t("nav.expertise.N8nMigration"), href: "/expertise/n8n-migration-consulting", icon: <ArrowsClockwiseIcon size={16} /> },
       ],
     },
     {
       name: t("nav.Industries"),
       key: "industries",
       items: [
-        { name: t("nav.industries.AIConsultingNL"), href: "/ai-automation-consulting-netherlands", icon: "🇳🇱" },
-        { name: t("nav.industries.DentalNL"), href: "/dental-clinic-automation-netherlands", icon: "🦷" },
-        { name: t("nav.industries.AestheticNL"), href: "/aesthetic-clinic-automation-netherlands", icon: "✨" },
-        { name: t("nav.industries.PhysiotherapyNL"), href: "/physiotherapy-clinic-automation-netherlands", icon: "💪" },
-        { name: t("nav.industries.VeterinaryNL"), href: "/veterinary-clinic-automation-netherlands", icon: "🐾" },
-        { name: t("nav.industries.AccountingNL"), href: "/accounting-firm-automation-netherlands", icon: "📊" },
-        { name: t("nav.industries.RealEstateNL"), href: "/real-estate-automation-netherlands", icon: "🏠" },
+        { name: t("nav.industries.AIConsultingNL"), href: "/ai-automation-consulting-netherlands", icon: <GlobeIcon size={16} /> },
+        { name: t("nav.industries.DentalNL"), href: "/dental-clinic-automation-netherlands", icon: <ToothIcon size={16} /> },
+        { name: t("nav.industries.AestheticNL"), href: "/aesthetic-clinic-automation-netherlands", icon: <SparkleIcon size={16} /> },
+        { name: t("nav.industries.PhysiotherapyNL"), href: "/physiotherapy-clinic-automation-netherlands", icon: <HeartbeatIcon size={16} /> },
+        { name: t("nav.industries.VeterinaryNL"), href: "/veterinary-clinic-automation-netherlands", icon: <PawPrintIcon size={16} /> },
+        { name: t("nav.industries.AccountingNL"), href: "/accounting-firm-automation-netherlands", icon: <ChartBarIcon size={16} /> },
+        { name: t("nav.industries.RealEstateNL"), href: "/real-estate-automation-netherlands", icon: <HouseIcon size={16} /> },
       ],
     },
   ];
