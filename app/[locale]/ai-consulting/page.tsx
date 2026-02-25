@@ -4,11 +4,13 @@ import React from 'react';
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import {
-    CpuIcon, ArrowRightIcon, LightningIcon, CheckIcon
+    CpuIcon, ArrowRightIcon, LightningIcon, CheckIcon, CaretDownIcon,
+    RobotIcon, ArrowsClockwiseIcon, ShareNetworkIcon, SquaresFourIcon, BrainIcon,
+    ShieldCheckIcon, PlugsConnectedIcon,
 } from '@phosphor-icons/react/dist/ssr';
 import Header from "@/components/layout/Header";
 import ROICalculator from '@/components/sections/ROICalculator';
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import TopAgentsSection from "@/components/sections/TopAgentsSection";
 import AnimatedSection from "@/components/layout/AnimatedSection";
 
@@ -32,8 +34,48 @@ const itemVariants = {
 };
 
 
+const faqs = [
+    {
+        q: "What does an AI consulting engagement cost?",
+        a: "Scope varies significantly, so we don't publish fixed rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements are scoped monthly. We provide a detailed estimate after the initial strategy call — before you commit to anything.",
+    },
+    {
+        q: "How long does a typical project take?",
+        a: "AI Strategy Sprint: 1–2 weeks. Implementation Projects: 4–8 weeks from scoping to deployment, depending on how many systems are involved and their integration complexity. We set realistic timelines at scoping and don't revise them unless requirements change materially.",
+    },
+    {
+        q: "What do you need from us to get started?",
+        a: "A clear description of the problem you want to solve and access to the relevant systems — CRM credentials, API documentation, or similar. We don't require weeks of onboarding. A focused discovery call is usually enough to scope accurately.",
+    },
+    {
+        q: "How do you handle our data and privacy?",
+        a: "GDPR compliance is a baseline, not an option. We define data handling at scoping: what data flows through the system, where it's stored, and who has access. For sensitive industries or regulated data, we can work with on-premise or private cloud deployments.",
+    },
+    {
+        q: "Does the AI integrate with our existing tools?",
+        a: "Yes — integration with your existing stack is a core requirement, not a feature. We have experience integrating with HubSpot, Salesforce, Pipedrive, WhatsApp Business API, Slack, common ERPs, and custom APIs. If you use it, we've likely connected to it or can.",
+    },
+    {
+        q: "Do you work with companies outside the Netherlands?",
+        a: "Yes. We're based in Leiden but work with clients across Europe and internationally. All engagements can run fully remotely.",
+    },
+    {
+        q: "What happens after deployment?",
+        a: "Implementation Projects include 30 days of post-deployment support. Ongoing Partner engagements cover continuous maintenance and development. For completed one-time projects, we provide full documentation and a handover session so your team can operate the system independently.",
+    },
+    {
+        q: "Can you build on top of tools we already use, like Make or Zapier?",
+        a: "Yes. We frequently migrate clients from Zapier or Make to more robust, cost-effective stacks — or extend automations they've already started. We recommend based on your volume, budget, and maintenance capacity, not on what's convenient for us.",
+    },
+    {
+        q: "What if we're not sure which AI use case to start with?",
+        a: "That's exactly what the AI Strategy Sprint is for. We map your operations, rank automation opportunities by ROI, and hand you a prioritized roadmap. You leave with a clear implementation plan — whether you work with us to build it or take it in-house.",
+    },
+];
+
 const AIConsultingPage = () => {
     const t = useTranslations("AIConsulting");
+    const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
     return (
         <div className="bg-near-black min-h-screen overflow-x-hidden">
@@ -144,14 +186,140 @@ const AIConsultingPage = () => {
                     </div>
                 </section>
 
-                {/* 2. Top Agents Section */}
+                {/* 2. Who This Is For */}
+                <AnimatedSection className="py-16 px-6 lg:px-8 border-b border-white/5">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid lg:grid-cols-2 gap-12 items-start">
+                            <div>
+                                <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
+                                    {t("WhoItsFor.badge")}
+                                </div>
+                                <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter leading-tight">
+                                    {t("WhoItsFor.title")} <span className="text-hunter-green">{t("WhoItsFor.highlight")}</span>
+                                </h2>
+                                <p className="mt-4 text-gray-400 text-base leading-relaxed max-w-md">
+                                    {t("WhoItsFor.description")}
+                                </p>
+                            </div>
+                            <ul className="space-y-3 lg:pt-4">
+                                {(t.raw("WhoItsFor.items") as string[]).map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3">
+                                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-hunter-green/10 border border-hunter-green/20 flex items-center justify-center mt-0.5">
+                                            <CheckIcon className="text-hunter-green" size={11} />
+                                        </div>
+                                        <span className="text-gray-300 text-sm leading-relaxed">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </AnimatedSection>
+
+                {/* 3. What We Build */}
+                <AnimatedSection className="py-20 px-6 lg:px-8 border-b border-white/5">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-12">
+                            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase mb-4">
+                                {t("WhatWeBuildInline.badge")}
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter">
+                                {t("WhatWeBuildInline.title")}{" "}
+                                <span className="text-hunter-green">{t("WhatWeBuildInline.highlight")}</span>
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {(t.raw("WhatWeBuildInline.services") as { title: string; desc: string; label: string; href: string }[]).map(({ title, desc, label, href }, i) => {
+                                const icons = [RobotIcon, ArrowsClockwiseIcon, ShareNetworkIcon, SquaresFourIcon, BrainIcon];
+                                const Icon = icons[i];
+                                return (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.45, delay: i * 0.07 }}
+                                >
+                                    <Link
+                                        href={href}
+                                        className="group flex flex-col gap-4 p-6 rounded-2xl bg-surface-dark/40 border border-white/5 hover:border-hunter-green/30 hover:bg-surface-dark/70 transition-all duration-300 h-full"
+                                    >
+                                        <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-hunter-green/10 border border-hunter-green/20 flex items-center justify-center group-hover:bg-hunter-green/20 transition-colors">
+                                            <Icon className="text-hunter-green" size={20} />
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-white font-bold text-sm mb-1.5 tracking-tight">{title}</h3>
+                                            <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+                                        </div>
+                                        <div className="flex items-center gap-1.5 text-hunter-green text-xs font-semibold mt-auto pt-2 border-t border-white/5">
+                                            <span>{label}</span>
+                                            <ArrowRightIcon size={12} className="transition-transform group-hover:translate-x-1" />
+                                        </div>
+                                    </Link>
+                                </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </AnimatedSection>
+
+                {/* 4. Top Agents Section */}
                 <TopAgentsSection />
 
 
-                {/* 3. ROI Calculator */}
+                {/* 5. ROI Calculator */}
                 <ROICalculator />
 
-                {/* 4. Migration Journey & CTA */}
+                {/* 6. Use Cases */}
+                <AnimatedSection className="py-20 px-6 lg:px-8 border-t border-white/5">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-12">
+                            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-orange/10 border border-hunter-orange/20 text-hunter-orange text-[10px] font-bold tracking-[0.2em] uppercase mb-4">
+                                {t("UseCases.badge")}
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter">
+                                {t("UseCases.title")}{" "}
+                                <span className="text-hunter-orange">{t("UseCases.highlight")}</span>
+                            </h2>
+                            <p className="mt-4 text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
+                                {t("UseCases.subtitle")}
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {(t.raw("UseCases.items") as { number: string; title: string; problem: string; solution: string; outcome: string }[]).map((uc, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.45, delay: i * 0.1 }}
+                                    className="flex flex-col gap-5 p-7 rounded-2xl bg-surface-dark/40 border border-white/5 hover:border-hunter-orange/20 transition-all duration-300"
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-hunter-orange font-black text-xs font-mono">{uc.number}</span>
+                                        <h3 className="text-white font-bold text-base tracking-tight leading-snug">{uc.title}</h3>
+                                    </div>
+                                    <div className="space-y-3 flex-1">
+                                        <div>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">{t("UseCases.labels.problem")}</span>
+                                            <p className="mt-1 text-gray-400 text-sm leading-relaxed">{uc.problem}</p>
+                                        </div>
+                                        <div>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">{t("UseCases.labels.solution")}</span>
+                                            <p className="mt-1 text-gray-400 text-sm leading-relaxed">{uc.solution}</p>
+                                        </div>
+                                    </div>
+                                    <div className="pt-4 border-t border-white/5">
+                                        <span className="text-[10px] font-bold uppercase tracking-widest text-hunter-orange">{t("UseCases.labels.outcome")}</span>
+                                        <p className="mt-1 text-white text-sm font-medium leading-relaxed">{uc.outcome}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </AnimatedSection>
+
+                {/* 7. Migration Journey & CTA */}
                 <AnimatedSection className="py-24 relative overflow-hidden">
                     {/* Background Ambience */}
                     <div className="absolute inset-0 bg-surface-dark/10" />
@@ -261,6 +429,123 @@ const AIConsultingPage = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+
+                {/* 8. Technical Credibility */}
+                <AnimatedSection className="py-20 px-6 lg:px-8 border-t border-white/5">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-12">
+                            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase mb-4">
+                                {t("TechCredibility.badge")}
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter">
+                                {t("TechCredibility.title")}{" "}
+                                <span className="text-hunter-green">{t("TechCredibility.highlight")}</span>
+                            </h2>
+                            <p className="mt-4 text-gray-400 text-base max-w-2xl mx-auto leading-relaxed">
+                                {t("TechCredibility.subtitle")}
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {(t.raw("TechCredibility.items") as { title: string; desc: string }[]).map(({ title, desc }, i) => {
+                                const icons = [PlugsConnectedIcon, CheckIcon, LightningIcon, ShieldCheckIcon, ArrowsClockwiseIcon, BrainIcon];
+                                const Icon = icons[i];
+                                return (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 16 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: i * 0.07 }}
+                                    className="flex gap-4 p-6 rounded-xl bg-surface-dark/30 border border-white/5 hover:border-hunter-green/20 hover:bg-surface-dark/50 transition-all duration-300"
+                                >
+                                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-hunter-green/10 border border-hunter-green/20 flex items-center justify-center mt-0.5">
+                                        <Icon className="text-hunter-green" size={18} />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-white font-bold text-sm mb-1.5">{title}</h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+                                    </div>
+                                </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </AnimatedSection>
+
+                {/* 9. FAQ */}
+                <AnimatedSection className="py-24 px-6 lg:px-8">
+                    <div className="max-w-3xl mx-auto">
+                        <div className="text-center mb-14">
+                            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase mb-4">
+                                FAQ
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter">
+                                Frequently Asked <span className="text-hunter-green">Questions</span>
+                            </h2>
+                        </div>
+
+                        <div className="space-y-2">
+                            {faqs.map((faq, i) => (
+                                <div
+                                    key={i}
+                                    className="border border-white/5 rounded-xl overflow-hidden bg-near-black/60 hover:border-white/10 transition-colors"
+                                >
+                                    <button
+                                        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                        aria-expanded={openFaq === i}
+                                    >
+                                        <span className="text-white font-semibold text-sm md:text-base leading-snug">
+                                            {faq.q}
+                                        </span>
+                                        <CaretDownIcon
+                                            className={`flex-shrink-0 text-hunter-green transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
+                                            size={18}
+                                        />
+                                    </button>
+                                    <motion.div
+                                        initial={false}
+                                        animate={openFaq === i ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                                        className="overflow-hidden"
+                                    >
+                                        <p className="px-6 pb-5 text-gray-400 text-sm leading-relaxed">
+                                            {faq.a}
+                                        </p>
+                                    </motion.div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Final CTA */}
+                        <div className="mt-16 text-center space-y-4">
+                            <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter">
+                                Book a Free <span className="text-hunter-green">AI Strategy Call</span>
+                            </h2>
+                            <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
+                                Talk to a senior engineer — not a sales rep. In 30 minutes, we&apos;ll map your highest-impact automation opportunity and tell you honestly whether it&apos;s worth building.
+                            </p>
+                            <div className="flex flex-col sm:flex-row justify-center gap-3 pt-2">
+                                <Link
+                                    href="/#contact"
+                                    className="relative group px-8 py-3 text-near-black font-bold rounded-lg overflow-hidden inline-flex items-center justify-center gap-2"
+                                >
+                                    <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
+                                    <span className="relative z-10">Book AI Strategy Call</span>
+                                    <ArrowRightIcon className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                </Link>
+                                <a
+                                    href="mailto:albert@codehunterlab.com"
+                                    className="px-8 py-3 bg-transparent border border-white/10 text-white font-semibold text-sm rounded-lg hover:bg-white/5 transition-colors inline-flex items-center justify-center"
+                                >
+                                    Email Us Directly
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </AnimatedSection>
+
             </main>
 
 

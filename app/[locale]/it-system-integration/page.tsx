@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "IT System Integration Services Netherlands | API & CRM Connection",
+        title: "IT System Integration Netherlands — CodeHunter Lab",
         description: "Expert IT integration consultant in the Netherlands. We connect APIs, CRMs, ERPs, and build internal tools to streamline operations in Leiden, Amsterdam and Rotterdam.",
         keywords: ["IT consultant Netherlands", "software integration company", "API integration services", "CRM integration", "ERP consulting", "n8n automation netherlands", "system architect nl"],
         alternates: {
@@ -29,7 +29,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "IT System Integration Services Netherlands | API & CRM Connection",
+            title: "IT System Integration Netherlands — CodeHunter Lab",
             description: "Expert IT integration consultant in the Netherlands. We connect APIs, CRMs, ERPs, and build internal tools to streamline operations in Leiden, Amsterdam and Rotterdam.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
@@ -239,6 +239,34 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
                 </div>
             </section>
 
+            {/* Process */}
+            <section className="py-24 relative z-10 border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">{t("Process.title")}</h2>
+                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t("Process.subtitle")}</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {t.raw("Process.steps").map((step: any, idx: number) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="flex gap-6 p-8 rounded-2xl border border-white/5 bg-white/2 hover:border-blue-500/20 transition-colors"
+                            >
+                                <span className="text-4xl font-black text-blue-400/30 font-mono shrink-0">{step.number}</span>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2 text-white">{step.title}</h3>
+                                    <p className="text-gray-400 leading-relaxed">{step.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* FAQ Section */}
             <section className="py-32 relative z-10 max-w-4xl mx-auto px-6 border-t border-white/5">
                 <div className="text-center mb-16">
@@ -261,16 +289,29 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
                 </div>
             </section>
 
-            <footer className="py-20 bg-black/40 border-t border-white/5 relative z-10">
+            {/* CTA */}
+            <section className="py-24 relative z-10 border-t border-white/5 text-center">
+                <div className="max-w-3xl mx-auto px-6">
+                    <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">{t("CTA.title")}</h2>
+                    <p className="text-gray-400 text-lg mb-10">{t("CTA.subtitle")}</p>
+                    <Link
+                        href="/ai-consulting"
+                        className="inline-block px-10 py-5 bg-blue-600 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-blue-500 hover:scale-105 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+                    >
+                        {t("CTA.button")}
+                    </Link>
+                </div>
+            </section>
+
+            <footer className="py-12 bg-black/40 border-t border-white/5 relative z-10">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <div className="flex flex-wrap justify-center gap-6 opacity-30 text-[10px] font-mono uppercase tracking-[0.3em] text-gray-400">
-                        <span>Hubspot</span>
-                        <span>Salesforce</span>
-                        <span>SAP</span>
-                        <span>Airtable</span>
-                        <span>SQL</span>
-                        <span>n8n</span>
-                        <span>Make.com</span>
+                    <p className="text-gray-600 text-sm max-w-4xl mx-auto leading-relaxed italic">
+                        {t("SEO.description")}
+                    </p>
+                    <div className="mt-8 flex flex-wrap justify-center gap-4 opacity-20 text-[10px] font-mono uppercase tracking-widest text-gray-400">
+                        {t("SEO.keywords").split(",").map((kw: string) => (
+                            <span key={kw}>{kw.trim()}</span>
+                        ))}
                     </div>
                 </div>
             </footer>

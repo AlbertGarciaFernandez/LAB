@@ -1,38 +1,63 @@
 # CodeHunter Lab
 
-> AI automation consultancy and software development studio based in Leiden, Netherlands.
-> We build autonomous AI systems, custom web applications, and workflow automation for growing businesses.
+> AI consulting and automation agency based in Leiden, Netherlands.
+> We design, build, and deploy AI agents, workflow automation, and custom integrations for businesses ready to move beyond pilots — production systems, not demos.
 
 ## About
 
-CodeHunter Lab is a technical consultancy specializing in:
-- AI agent development (WhatsApp bots, voice agents, sales automation)
-- Workflow automation with n8n (migrating from Zapier/Make)
-- Custom software development (React, Next.js, TypeScript)
-- IT system integration (APIs, CRMs, ERPs)
+CodeHunter Lab is an engineering-first AI consulting studio. We close the gap between AI proof of concept and production by building systems that integrate with your existing stack and run under real conditions.
+
+Primary capabilities:
+- AI consulting and strategy (discovery, scoping, roadmaps)
+- AI agent development (WhatsApp bots, voice agents, sales and qualification agents)
+- Workflow automation with n8n (migrating from Zapier/Make, custom pipelines)
+- AI system integration (CRMs, ERPs, APIs, databases)
 - Custom internal tools and admin dashboards
 - LLM fine-tuning and private AI deployments
 
+Supporting capabilities:
+- Custom web application development (React, Next.js, TypeScript)
+- IT system integration (APIs, legacy modernization)
+- System architecture design
+
 Based in Leiden, Zuid-Holland. Serving clients across the Netherlands and internationally.
+
+## Engagement Models
+
+- **AI Strategy Sprint** (1–2 weeks): Workflow audit, automation opportunity map (prioritized by ROI), technical architecture proposal, budget and timeline estimate.
+- **AI Implementation Project** (4–8 weeks): One live AI system deployed to your infrastructure. Full stack integration, documentation, and 30-day post-deployment support. Fixed scope, fixed price. You own the code.
+- **Ongoing AI Partner** (monthly): Embedded AI engineering team. New automations, maintenance, and continuous scaling. Senior engineers, direct access.
 
 ## Services
 
 - [AI Consulting](https://www.codehunterlab.com/en/ai-consulting)
 - [AI Automation Consulting Netherlands](https://www.codehunterlab.com/en/ai-automation-consulting-netherlands)
 - [IT System Integration](https://www.codehunterlab.com/en/it-system-integration)
-- [Software Development Leiden](https://www.codehunterlab.com/en/software-development-leiden)
 - [Custom Internal Tools](https://www.codehunterlab.com/en/services/custom-internal-tools-development)
+- [React Consulting](https://www.codehunterlab.com/en/react-consulting)
+- [Next.js Development Agency](https://www.codehunterlab.com/en/nextjs-development-agency)
+- [Software Development Leiden](https://www.codehunterlab.com/en/software-development-leiden)
 
 ## Expertise
 
 - [AI Agents & Automation](https://www.codehunterlab.com/en/expertise/ai-agents-automation)
+- [Custom LLM Development](https://www.codehunterlab.com/en/expertise/custom-llm-development)
 - [n8n Migration Consulting](https://www.codehunterlab.com/en/expertise/n8n-migration-consulting)
 - [System Architecture Design](https://www.codehunterlab.com/en/expertise/system-architecture-design)
-- [Custom LLM Development](https://www.codehunterlab.com/en/expertise/custom-llm-development)
+
+## Industries (Netherlands)
+
+- [Accounting Firm Automation Netherlands](https://www.codehunterlab.com/en/accounting-firm-automation-netherlands)
+- [Real Estate Automation Netherlands](https://www.codehunterlab.com/en/real-estate-automation-netherlands)
+- [Dental Clinic Automation Netherlands](https://www.codehunterlab.com/en/dental-clinic-automation-netherlands)
+- [Aesthetic Clinic Automation Netherlands](https://www.codehunterlab.com/en/aesthetic-clinic-automation-netherlands)
+- [Physiotherapy Clinic Automation Netherlands](https://www.codehunterlab.com/en/physiotherapy-clinic-automation-netherlands)
+- [Veterinary Clinic Automation Netherlands](https://www.codehunterlab.com/en/veterinary-clinic-automation-netherlands)
 
 ## Contact
 
 - Phone: +31-6-2940-5122
+- Email: albert@codehunterlab.com
 - Location: Leiden, Netherlands
 - Languages: English, Spanish, Dutch
 - LinkedIn: https://www.linkedin.com/company/codehunter-lab

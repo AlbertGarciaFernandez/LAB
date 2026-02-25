@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Software Architecture Consultant Netherlands | Scalable React Systems",
+        title: "System Architecture Design Netherlands — CodeHunter Lab",
         description: "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
         keywords: ["system architect netherlands", "react performance consulting", "scalable software design", "tech debt audit"],
         alternates: {
@@ -29,7 +29,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Software Architecture Consultant Netherlands | Scalable React Systems",
+            title: "System Architecture Design Netherlands — CodeHunter Lab",
             description: "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
@@ -126,8 +126,69 @@ export default function SystemArchitecturePage({ params: { locale } }: { params:
                 </div>
             </section>
 
+            {/* Process */}
+            <section className="py-24 relative z-10 border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">{t("Process.title")}</h2>
+                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t("Process.subtitle")}</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {t.raw("Process.steps").map((step: any, idx: number) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="flex gap-6 p-8 rounded-2xl border border-white/5 bg-white/2 hover:border-hunter-orange/20 transition-colors"
+                            >
+                                <span className="text-4xl font-black text-hunter-orange/30 font-mono shrink-0">{step.number}</span>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2 text-white">{step.title}</h3>
+                                    <p className="text-gray-400 leading-relaxed">{step.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Use Cases */}
+            <section className="py-24 relative z-10 border-t border-white/5 bg-near-black/50">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">{t("UseCases.title")}</h2>
+                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t("UseCases.subtitle")}</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {t.raw("UseCases.cases").map((c: any, idx: number) => (
+                            <GlassCard key={idx} hoverEffect={true} glowColor="orange" className="p-8">
+                                <span className="text-3xl mb-4 block">{c.icon}</span>
+                                <h3 className="text-lg font-bold mb-2 text-white">{c.title}</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">{c.desc}</p>
+                            </GlassCard>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-24 relative z-10 border-t border-white/5 text-center">
+                <div className="max-w-3xl mx-auto px-6">
+                    <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">{t("CTA.title")}</h2>
+                    <p className="text-gray-400 text-lg mb-10">{t("CTA.subtitle")}</p>
+                    <Link
+                        href="/ai-consulting"
+                        className="px-10 py-5 bg-hunter-orange text-black font-black uppercase tracking-widest text-sm rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,122,60,0.4)]"
+                    >
+                        {t("CTA.button")}
+                    </Link>
+                </div>
+            </section>
+
             {/* SEO Footer */}
-            <footer className="py-20 bg-black/40 border-t border-white/5 relative z-10 overflow-hidden">
+            <footer className="py-12 bg-black/40 border-t border-white/5 relative z-10 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <p className="text-gray-600 text-sm max-w-4xl mx-auto leading-relaxed italic">
                         {t("SEO.description")}

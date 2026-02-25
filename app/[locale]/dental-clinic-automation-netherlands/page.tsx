@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Dental Clinic Automation Netherlands | Appointment & CRM Systems | CodeHunter Lab",
+        title: "Dental Clinic Automation Netherlands — CodeHunter Lab",
         description: "Reduce no-shows, automate patient communication, and connect your practice software. Custom automation systems for dental clinics in the Netherlands. Based in Leiden.",
         keywords: [
             "dental clinic automation Netherlands",
@@ -41,7 +41,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Dental Clinic Automation Netherlands | CodeHunter Lab",
+            title: "Dental Clinic Automation Netherlands — CodeHunter Lab",
             description: "Custom automation systems for dental clinics in the Netherlands — reducing no-shows, automating patient communication, and connecting your practice software.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",

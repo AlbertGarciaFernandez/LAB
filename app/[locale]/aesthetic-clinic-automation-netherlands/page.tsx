@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Aesthetic & Cosmetic Clinic Automation Netherlands | CRM & Lead Nurturing | CodeHunter Lab",
+        title: "Aesthetic Clinic Automation Netherlands — CodeHunter Lab",
         description: "Convert more aesthetic clinic inquiries into booked treatments. Custom CRM, lead nurturing, and booking automation for cosmetic and dermatology clinics in the Netherlands.",
         keywords: [
             "aesthetic clinic automation Netherlands",
@@ -41,7 +41,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Aesthetic & Cosmetic Clinic Automation Netherlands | CodeHunter Lab",
+            title: "Aesthetic Clinic Automation Netherlands — CodeHunter Lab",
             description: "Turn more aesthetic clinic inquiries into booked treatments with custom CRM, lead nurturing, and booking automation systems. Built for cosmetic and dermatology clinics in the Netherlands.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",

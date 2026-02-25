@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Real Estate Agency Automation Netherlands | Lead & CRM Systems | CodeHunter Lab",
+        title: "Real Estate Automation Netherlands — CodeHunter Lab",
         description: "Automate lead follow-up, property listings, and client communication. Custom automation systems for real estate agencies in the Netherlands. Based in Leiden.",
         keywords: [
             "real estate automation Netherlands",
@@ -41,7 +41,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Real Estate Agency Automation Netherlands | CodeHunter Lab",
+            title: "Real Estate Automation Netherlands — CodeHunter Lab",
             description: "Custom automation systems for real estate agencies in the Netherlands — lead follow-up, property listings, and client communication on autopilot.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",

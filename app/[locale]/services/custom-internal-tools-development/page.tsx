@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Custom Internal Tools Development | Automate Business Processes",
+        title: "Custom Internal Tools Development — CodeHunter Lab",
         description: "Expert developer of custom internal tools, admin panels, and operation dashboards. Scale your business without per-user fees in the Netherlands.",
         keywords: ["build internal tools for business", "custom admin panel development", "workflow automation consulting", "replace excel with app", "internal software developer nl", "maatwerk software ontwikkeling"],
         alternates: {
@@ -29,7 +29,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Custom Internal Tools Development | Automate Business Processes",
+            title: "Custom Internal Tools Development — CodeHunter Lab",
             description: "Expert developer of custom internal tools, admin panels, and operation dashboards. Scale your business without per-user fees in the Netherlands.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
@@ -193,6 +193,9 @@ export default function CustomInternalTools({ params: { locale } }: { params: { 
             {/* Tools We Build Grid */}
             <section className="py-32 relative z-10">
                 <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">{t("Tools.title")}</h2>
+                    </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         <GlassCard className="p-10 hover:bg-white/[0.02]" hoverEffect={true} glowColor="orange">
                             <div className="text-5xl mb-8">📊</div>
@@ -209,6 +212,34 @@ export default function CustomInternalTools({ params: { locale } }: { params: { 
                             <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">{t("Tools.resource.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed">{t("Tools.resource.desc")}</p>
                         </GlassCard>
+                    </div>
+                </div>
+            </section>
+
+            {/* Process */}
+            <section className="py-24 relative z-10 border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">{t("Process.title")}</h2>
+                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t("Process.subtitle")}</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {t.raw("Process.steps").map((step: any, idx: number) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="flex gap-6 p-8 rounded-2xl border border-white/5 bg-white/2 hover:border-purple-500/20 transition-colors"
+                            >
+                                <span className="text-4xl font-black text-purple-400/30 font-mono shrink-0">{step.number}</span>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2 text-white">{step.title}</h3>
+                                    <p className="text-gray-400 leading-relaxed">{step.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -235,14 +266,29 @@ export default function CustomInternalTools({ params: { locale } }: { params: { 
                 </div>
             </section>
 
-            <footer className="py-20 bg-black/40 border-t border-white/5 relative z-10">
+            {/* CTA */}
+            <section className="py-24 relative z-10 border-t border-white/5 bg-near-black/50 text-center">
+                <div className="max-w-3xl mx-auto px-6">
+                    <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">{t("CTA.title")}</h2>
+                    <p className="text-gray-400 text-lg mb-10">{t("CTA.subtitle")}</p>
+                    <Link
+                        href="/ai-consulting"
+                        className="inline-block px-10 py-5 bg-purple-600 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-purple-500 hover:scale-105 transition-all shadow-[0_0_30px_rgba(168,85,247,0.3)]"
+                    >
+                        {t("CTA.button")}
+                    </Link>
+                </div>
+            </section>
+
+            <footer className="py-12 bg-black/40 border-t border-white/5 relative z-10">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <div className="flex flex-wrap justify-center items-center gap-4 opacity-60 text-[13px] font-mono uppercase tracking-[0.2em] text-gray-400">
-                        <span>Zero Vendor Lock-In</span>
-                        <span className="text-gray-600">·</span>
-                        <span>Scalable Architecture</span>
-                        <span className="text-gray-600">·</span>
-                        <span>Enterprise Ready</span>
+                    <p className="text-gray-600 text-sm max-w-4xl mx-auto leading-relaxed italic">
+                        {t("SEO.description")}
+                    </p>
+                    <div className="mt-8 flex flex-wrap justify-center gap-4 opacity-20 text-[10px] font-mono uppercase tracking-widest text-gray-400">
+                        {t("SEO.keywords").split(",").map((kw: string) => (
+                            <span key={kw}>{kw.trim()}</span>
+                        ))}
                     </div>
                 </div>
             </footer>

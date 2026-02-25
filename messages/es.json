@@ -36,14 +36,14 @@
     }
   },
   "Hero": {
-    "subHeader": "Consultoría IA · Automatización · Ingeniería Web",
+    "subHeader": "Consultoría IA · Automatización IA · Sistemas de Producción",
     "title": {
-      "part1": "Construimos ",
-      "highlight1": "Sistemas IA",
-      "part2": "Que Automatizan ",
-      "highlight2": "Tu Negocio"
+      "part1": "Consultoría IA & ",
+      "highlight1": "Automatización",
+      "part2": "Que Llega a ",
+      "highlight2": "Producción"
     },
-    "description": "CodeHunter Lab diseña y despliega automatización IA de nivel productivo para empresas listas para ir más allá de los experimentos. Flujos agénticos, integraciones a medida y sistemas reales en tu stack — no demos.",
+    "description": "Diseñamos, construimos y desplegamos sistemas IA para empresas listas para ir más allá de los experimentos — conectados a tu stack, tus datos y los flujos reales de tu equipo.",
     "cta": {
       "initialize": "Reservar Llamada de Estrategia IA",
       "caseStudies": "Ver Cómo Trabajamos"
@@ -85,7 +85,7 @@
     "Availability": {
       "nextOpening": "Próxima Disponibilidad: {date}",
       "title": "¿Listo para escalar?",
-      "subtitle": "Agendando auditorías de arquitectura para el Q1 2026.",
+      "subtitle": "Agendando llamadas de descubrimiento para el Q2 2026.",
       "button": "Contactar"
     },
     "Copyright": {
@@ -116,12 +116,74 @@
       }
     }
   },
+  "WhatWeBuild": {
+    "badge": "Qué Construimos",
+    "title": {
+      "part1": "Cinco Formas de Poner",
+      "highlight": "la IA a Trabajar"
+    },
+    "subtitle": "Cada proyecto parte de un resultado claro. Esto es lo que construimos.",
+    "cta": "Explorar Consultoría IA",
+    "services": [
+      {
+        "title": "Agentes IA",
+        "desc": "Agentes autónomos para cualificación de leads, atención al cliente y operaciones — conectados a tus herramientas y activos 24/7.",
+        "link": "Agentes IA & Automatización"
+      },
+      {
+        "title": "Automatización de Flujos",
+        "desc": "Sustituye procesos manuales por pipelines automatizados. Enrutamiento de leads, procesamiento de documentos, sincronización de CRM.",
+        "link": "Automatización IA Países Bajos"
+      },
+      {
+        "title": "Integración de Sistemas IA",
+        "desc": "Conecta la IA a los sistemas que ya usas. Gestionamos la capa de integración entre modelos IA y tu stack existente.",
+        "link": "Integración de Sistemas IT"
+      },
+      {
+        "title": "Herramientas Internas con IA",
+        "desc": "Dashboards y herramientas administrativas a medida que eliminan el trabajo interno repetitivo.",
+        "link": "Herramientas Internas"
+      },
+      {
+        "title": "LLMs Personalizados",
+        "desc": "Modelos de lenguaje privados entrenados para tu dominio. Clasificación de documentos, generación de respuestas, base de conocimiento interna.",
+        "link": "Desarrollo de LLM Personalizado"
+      }
+    ]
+  },
+  "IndustriesSection": {
+    "badge": "Industrias",
+    "title": {
+      "part1": "Automatización para",
+      "highlight": "Tu Sector"
+    },
+    "subtitle": "Hemos automatizado operaciones en sectores de servicio intensivo y regulados en los Países Bajos.",
+    "viewAll": "Ver Todas las Industrias",
+    "industries": [
+      {
+        "title": "Contabilidad y Finanzas",
+        "desc": "Automatiza la captación de clientes, el procesamiento de documentos, flujos fiscales e informes de cumplimiento. Menos admin, mismo equipo.",
+        "link": "Automatización Contable"
+      },
+      {
+        "title": "Inmobiliaria",
+        "desc": "Cualificación de leads, enrutamiento de consultas, procesamiento de contratos y seguimiento automatizado de clientes.",
+        "link": "Automatización Inmobiliaria"
+      },
+      {
+        "title": "Salud y Clínicas",
+        "desc": "Reserva de citas, seguimiento de pacientes y reducción de carga administrativa para clínicas dentales, estéticas y de fisioterapia.",
+        "link": "Automatización de Clínicas"
+      }
+    ]
+  },
   "Expertise": {
     "title": {
       "part1": "Expertise Central y",
       "part2": "Pilares Estratégicos"
     },
-    "subtitle": "El equilibrio entre código limpio, UX impecable e impacto real.",
+    "subtitle": "Sistemas con IA en primer plano, ingeniería de producción y flujos que eliminan el trabajo manual.",
     "pillars": {
       "frontend": {
         "title": "Arquitectura Frontend",
@@ -304,35 +366,35 @@
       "text": "Cómo Trabajamos"
     },
     "subtitle": {
-      "part1": "Tres formas de colaborar — desde una",
-      "highlight": "auditoría de arquitectura",
-      "part2": "hasta una colaboración de ingeniería continua."
+      "part1": "Desde una llamada de descubrimiento de 30 minutos hasta un",
+      "highlight": "sistema vivo en tu stack",
+      "part2": "— cuatro pasos, sin ambigüedad."
     },
     "steps": {
       "0": {
-        "title": "Auditoría de Arquitectura",
-        "description": "Mapeamos tus operaciones actuales, identificamos las oportunidades de automatización con mayor ROI y entregamos un roadmap de implementación priorizado. Alcance fijo, una semana. Sin compromiso adicional."
+        "title": "Llamada de Descubrimiento",
+        "description": "Revisamos tus flujos, identificamos las oportunidades de automatización con mayor ROI y te damos una valoración honesta de qué vale la pena construir. 30 minutos, sin coste, sin discurso de ventas."
       },
       "1": {
-        "title": "Sprint de Implementación",
-        "description": "Diseñamos, construimos y desplegamos un sistema IA o flujo de automatización completamente operativo. Alcance definido, precio fijo, 4–8 semanas. El código es tuyo."
+        "title": "Alcance y Roadmap",
+        "description": "Definimos los entregables, los requisitos de integración y el calendario. Alcance fijo, precio fijo — sin sorpresas a mitad del proyecto. Sabes exactamente qué recibes antes de que empecemos."
       },
       "2": {
-        "title": "En Producción",
-        "description": "No entregamos una demo. Desplegamos en tu infraestructura, integramos con tus herramientas y datos reales, y validamos que el sistema funciona bajo condiciones reales."
+        "title": "Construcción e Integración",
+        "description": "Construimos el sistema y lo conectamos a tu stack actual — CRM, herramientas de comunicación, bases de datos. Sin despliegues en sandbox. Todo corre contra datos reales desde el primer día."
       },
       "3": {
-        "title": "Partner Continuo",
-        "description": "Actuamos como tu equipo de ingeniería IA embebido — desplegando nuevos sistemas, manteniendo la automatización en vivo y escalando tu infraestructura a medida que crece tu negocio."
+        "title": "Despliegue y Traspaso",
+        "description": "Desplegamos en tu infraestructura y entregamos documentación completa. El código es tuyo. Soporte continuo disponible si necesitas un partner de ingeniería a largo plazo."
       }
     },
     "cta": {
       "title": {
-        "text": "¿Listo para",
-        "highlight": "Automatizar?"
+        "text": "¿Listo para Construir",
+        "highlight": "Tu Primer Sistema IA?"
       },
       "description": {
-        "part1": "Reserva una llamada de estrategia de 30 minutos. Revisaremos tus flujos, identificaremos las oportunidades de mayor impacto y te diremos con honestidad qué vale la pena construir — sin",
+        "part1": "Reserva una llamada de estrategia de 30 minutos. Mapearemos tu oportunidad de automatización de mayor impacto y definiremos un camino claro hacia producción — sin",
         "highlight": "discurso de ventas",
         "part2": "."
       }
@@ -342,11 +404,11 @@
     "Hero": {
       "badge": "Consultoría IA · Sistemas de Producción",
       "title": {
-        "part1": "Del Piloto",
-        "part2": "A Producción",
-        "highlight": "Sistemas IA."
+        "part1": "Consultoría IA",
+        "part2": "para Empresas",
+        "highlight": "Listas para Producción."
       },
-      "description": "La mayoría de proyectos IA fracasan entre la prueba de concepto y la producción. Cerramos esa brecha — diseñando y desplegando <strong class='text-white'>flujos de trabajo agénticos</strong> que se integran en tu stack real, corren en tu infraestructura y entregan resultados medibles.",
+      "description": "La mayoría de proyectos IA fracasan entre la prueba de concepto y la producción. Cerramos esa brecha — diseñando y desplegando <strong class='text-white'>agentes IA, flujos automatizados e integraciones</strong> que corren en producción, no en una prueba de concepto.",
       "cta": "Reservar Llamada de Estrategia IA",
       "whyUs": {
         "title": {
@@ -472,7 +534,7 @@
           "Equipos al límite del agotamiento"
         ],
         "resultLabel": "Resultado",
-        "resultValue": "Estancamiento"
+        "resultValue": "Ingresos en Riesgo"
       },
       "advantage": {
         "badge": "La Solución",
@@ -480,12 +542,12 @@
         "subtitle": "Por qué gana la IA.",
         "list": [
           "Respuesta inmediata 24/7",
-          "Ejecución perfecta",
-          "Decisiones por datos",
-          "Fuerza laboral escalable"
+          "Ejecución consistente",
+          "Decisiones basadas en datos",
+          "Escala sin aumentar plantilla"
         ],
         "resultLabel": "Resultado",
-        "resultValue": "Crecimiento Exponencial"
+        "resultValue": "Escala Operativa"
       },
       "diagram": {
         "title": "Sincronizado con tu Ecosistema",
@@ -496,29 +558,146 @@
       }
     },
     "Migration": {
-      "badge": "Cómo Trabajamos",
+      "badge": "Modelos de Colaboración",
       "title": "Elige Tu",
-      "highlight": "Punto de Entrada",
+      "highlight": "Modelo de Colaboración",
       "legacy": {
-        "title": "Auditoría de Arquitectura",
-        "desc": "Mapea tus oportunidades de automatización.<br />Roadmap de implementación priorizado.<br />Alcance fijo, entregado en una semana.",
-        "tag": "1 Semana"
+        "title": "Sprint de Estrategia IA",
+        "desc": "Auditoría de flujos + mapa de oportunidades de automatización.<br />Propuesta de arquitectura técnica.<br />Estimación de presupuesto y plazos.<br />Alcance fijo, 1–2 semanas.",
+        "tag": "1–2 Semanas"
       },
       "optimized": {
         "tag": "Más Común",
-        "title": "Sprint de Implementación",
-        "desc": "Un sistema IA desplegado en producción.<br />Integrado con tu stack existente.<br />Precio fijo, 4–8 semanas.",
+        "title": "Implementación IA",
+        "desc": "Un sistema IA desplegado en tu infraestructura.<br />Integración completa + documentación.<br />Precio fijo, 4–8 semanas. El código es tuyo.",
         "latencyLabel": "ALCANCE",
         "latencyValue": "FIJO",
         "costLabel": "CÓDIGO",
         "costValue": "TUYO"
       },
       "action": {
-        "title": "Partner Continuo",
-        "desc": "Tu equipo de ingeniería IA embebido.<br />Despliega, mantén y escala — sin parar.",
+        "title": "Partner IA Continuo",
+        "desc": "Tu equipo de ingeniería IA embebido.<br />Nuevas automatizaciones, mantenimiento y escala — mensualmente.<br />Ingenieros senior, acceso directo.",
         "cta1": "Reservar Llamada de Estrategia",
         "cta2": "Escríbenos Directamente"
       }
+    },
+    "WhoItsFor": {
+      "badge": "Para Quién Es",
+      "title": "Esto Es Para Ti",
+      "highlight": "Si...",
+      "description": "Trabajamos con fundadores, CTOs y responsables de operaciones que ya superaron la fase de \"¿deberíamos probar IA?\" y necesitan un socio técnico que construya y despliegue.",
+      "items": [
+        "Has probado herramientas de IA pero no las has conectado a operaciones reales",
+        "Estás dedicando tiempo a tareas que deberían ejecutarse automáticamente",
+        "Necesitas un socio que construya y despliegue, no solo que asesore",
+        "Quieres reducir la carga manual sin contratar para trabajo repetitivo",
+        "Necesitas IA que se integre con tu CRM, ERP o stack existente",
+        "Operas en los Países Bajos o internacionalmente y necesitas ingeniería senior"
+      ]
+    },
+    "WhatWeBuildInline": {
+      "badge": "Qué Construimos",
+      "title": "Cinco Sistemas IA que",
+      "highlight": "Llevamos a Producción",
+      "services": [
+        {
+          "title": "Agentes de Ventas y Cualificación IA",
+          "desc": "Responden a leads 24/7, cualifican según tus criterios, reservan reuniones y hacen el traspaso con contexto completo.",
+          "label": "Agentes y Automatización IA",
+          "href": "/expertise/ai-agents-automation"
+        },
+        {
+          "title": "Automatización de Flujos y Operaciones",
+          "desc": "Automatiza procesamiento de documentos, agendas, sincronización de CRM y flujos de aprobación en n8n o pipelines personalizados.",
+          "label": "Automatización IA Países Bajos",
+          "href": "/ai-automation-consulting-netherlands"
+        },
+        {
+          "title": "Integración de Sistemas IA",
+          "desc": "Conecta IA a tu CRM, ERP, bases de datos y plataformas de comunicación mediante integraciones API correctas.",
+          "label": "Integración de Sistemas IT",
+          "href": "/it-system-integration"
+        },
+        {
+          "title": "Herramientas Internas con IA",
+          "desc": "Dashboards y herramientas de administración personalizadas que eliminan el trabajo interno repetitivo y la reconciliación de datos.",
+          "label": "Herramientas Internas Personalizadas",
+          "href": "/services/custom-internal-tools-development"
+        },
+        {
+          "title": "Despliegues LLM Personalizados",
+          "desc": "Modelos de lenguaje privados ajustados para clasificación, generación de respuestas y recuperación de conocimiento interno.",
+          "label": "Desarrollo LLM Personalizado",
+          "href": "/expertise/custom-llm-development"
+        }
+      ]
+    },
+    "UseCases": {
+      "badge": "Casos de Uso",
+      "title": "Lo Que las Empresas",
+      "highlight": "Automatizan Primero",
+      "subtitle": "Estos son los puntos de partida con mayor ROI que vemos en todos los sectores — cada uno entra en producción en semanas, no trimestres.",
+      "labels": {
+        "problem": "Problema",
+        "solution": "Solución",
+        "outcome": "Resultado"
+      },
+      "items": [
+        {
+          "number": "01",
+          "title": "Cualificar Leads Sin Contratar",
+          "problem": "Los comerciales pasan horas persiguiendo leads no cualificados y escribiendo emails de seguimiento que deberían automatizarse.",
+          "solution": "Un agente IA gestiona las consultas entrantes 24/7 — cualifica según tus criterios, hace preguntas de seguimiento y reserva reuniones para los leads que pasan el filtro.",
+          "outcome": "Reuniones cualificadas reservadas automáticamente. Los comerciales solo hablan con prospectos listos para decidir."
+        },
+        {
+          "number": "02",
+          "title": "Eliminar Reportes Manuales",
+          "problem": "Los equipos de operaciones o finanzas dedican horas cada semana a extraer datos de múltiples sistemas para construir los mismos informes.",
+          "solution": "Pipelines automatizados recopilan, transforman y entregan informes estructurados a Slack, email o un dashboard — según programa, sin intervención humana.",
+          "outcome": "Horas de trabajo semanal en informes eliminadas. Los datos están siempre actualizados, nunca con retraso."
+        },
+        {
+          "number": "03",
+          "title": "Automatizar la Incorporación de Clientes",
+          "problem": "Cada nuevo cliente desencadena una secuencia manual de emails, solicitudes de documentos, actualizaciones en el CRM y traspasos internos.",
+          "solution": "Una automatización se activa al cerrar el contrato: envía secuencias de bienvenida, solicita documentos, crea registros de proyecto y notifica a las personas correctas automáticamente.",
+          "outcome": "La incorporación se completa en horas en lugar de días. Sin traspasos perdidos, sin perseguir a nadie."
+        }
+      ]
+    },
+    "TechCredibility": {
+      "badge": "Cómo Construimos",
+      "title": "Estándares de Producción,",
+      "highlight": "No Prototipos",
+      "subtitle": "Cada sistema que entregamos cumple seis requisitos innegociables. No son argumentos de venta — son requisitos base para código que funciona en producción.",
+      "items": [
+        {
+          "title": "Integrado",
+          "desc": "Se conecta a tu CRM, ERP, bases de datos y APIs existentes — sin necesidad de cambiar de plataforma."
+        },
+        {
+          "title": "Mantenible",
+          "desc": "Código limpio y documentado con separación clara de responsabilidades. Tu equipo puede extenderlo sin nosotros."
+        },
+        {
+          "title": "Observable",
+          "desc": "Cada automatización incluye logging, alertas de error y dashboards de estado para que sepas cuándo algo falla antes que tus clientes."
+        },
+        {
+          "title": "Seguro por Defecto",
+          "desc": "Gestión de datos conforme al RGPD, credenciales cifradas, controles de acceso y despliegue privado opcional para sectores regulados."
+        },
+        {
+          "title": "Independiente de Infraestructura",
+          "desc": "Funciona en tu nube preferida, on-premise o híbrido. Construimos para tu entorno, no para el nuestro."
+        },
+        {
+          "title": "Listo para el Traspaso",
+          "desc": "Documentación técnica completa, un runbook y una sesión de entrega. Tú eres el propietario del sistema — con o sin nosotros."
+        }
+      ]
     }
   },
   "SoftwareLeiden": {
@@ -644,6 +823,32 @@
         "desc": "Mantén HubSpot, Salesforce y tu ERP en perfecta armonía con arquitecturas orientadas a eventos."
       }
     },
+    "Process": {
+      "title": "Cómo Integramos tus Sistemas",
+      "subtitle": "Un enfoque estructurado para que nada se rompa y nada se olvide.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Auditoría de Integración",
+          "desc": "Inventario de todas tus apps, APIs y formatos de datos. Identificamos cada traspaso manual, cada copia-pega y cada cuello de botella en tu flujo de datos actual."
+        },
+        {
+          "number": "02",
+          "title": "Diseño de Arquitectura",
+          "desc": "Diagrama de flujo de datos, selección del patrón de integración (event-driven, polling, webhooks), estrategia de gestión de errores y modelo de seguridad — todo documentado antes de construir."
+        },
+        {
+          "number": "03",
+          "title": "Construcción y Pruebas",
+          "desc": "Conectores API, workflows n8n o puentes a medida construidos en paralelo a tus sistemas en producción. Pruebas end-to-end completas antes del paso. Cero tiempo de inactividad en producción."
+        },
+        {
+          "number": "04",
+          "title": "Monitoreo y Traspaso",
+          "desc": "Dashboards, alertas y runbooks configurados para que tu equipo pueda operar y diagnosticar la integración de forma independiente. Documentación completa incluida."
+        }
+      ]
+    },
     "FAQ": {
       "title": "Preguntas de Integración",
       "subtitle": "Consultas habituales sobre cómo conectar tus sistemas de negocio.",
@@ -661,6 +866,15 @@
           "a": "Priorizamos la soberanía de los datos. A menudo desplegamos motores de integración auto-alojados para que tus datos comerciales sensibles nunca salgan de tu infraestructura."
         }
       ]
+    },
+    "CTA": {
+      "title": "¿Listo para Conectar tus Sistemas?",
+      "subtitle": "Auditoría de integración gratuita. Mapeamos tus flujos de datos actuales, identificamos el mayor cuello de botella y proponemos una solución concreta. Sin compromiso.",
+      "button": "Reservar Auditoría de Integración Gratuita"
+    },
+    "SEO": {
+      "description": "CodeHunter Lab está especializada en integración de sistemas IT para empresas en los Países Bajos. Conectamos CRMs, ERPs, bases de datos y APIs personalizadas usando n8n, puentes API a medida y arquitecturas orientadas a eventos. Con sede en Leiden, atendemos empresas en Ámsterdam, Róterdam y Den Haag.",
+      "keywords": "integración sistemas IT países bajos, empresa integración API leiden, consultor n8n países bajos, integración CRM ERP, empresa integración software ámsterdam"
     }
   },
   "InternalTools": {
@@ -695,6 +909,7 @@
       }
     },
     "Tools": {
+      "title": "Qué Construimos",
       "dashboards": {
         "title": "Dashboards Operativos",
         "desc": "Visualización en tiempo real de KPIs, inventario y lógica. Controla la salud de tu negocio de un vistazo."
@@ -707,6 +922,32 @@
         "title": "Gestión de Recursos",
         "desc": "Planificadores drag-and-drop adaptados a la estructura y turnos de tu equipo específico."
       }
+    },
+    "Process": {
+      "title": "Cómo Construimos tu Herramienta",
+      "subtitle": "Desde la auditoría del workflow hasta la herramienta en producción — sin sorpresas ni bloat.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Auditoría del Workflow",
+          "desc": "Mapeamos tu proceso actual: qué herramientas usas, dónde se atascan los datos y en qué invierte más tiempo tu equipo. Los puntos de dolor se convierten en el spec."
+        },
+        {
+          "number": "02",
+          "title": "Diseño y Modelo de Datos",
+          "desc": "Wireframes, esquema de base de datos y contratos de API acordados antes de escribir una línea de código. Apruebas el diseño antes de que construyamos."
+        },
+        {
+          "number": "03",
+          "title": "Desarrollo Iterativo",
+          "desc": "Sprints de dos semanas con previsualizaciones en staging en directo. Tu equipo prueba la herramienta real, no un prototipo. El feedback se incorpora en el siguiente sprint."
+        },
+        {
+          "number": "04",
+          "title": "Lanzamiento y Traspaso",
+          "desc": "Desplegado en tu infraestructura. Documentación completa, formación de administradores y 30 días de soporte post-lanzamiento incluidos. Eres dueño del código."
+        }
+      ]
     },
     "FAQ": {
       "title": "FAQ de Herramientas Internas",
@@ -721,6 +962,15 @@
           "a": "Sí. Normalmente ayudamos a las empresas a pasar de hojas de cálculo a una base de datos real (como Supabase o PostgreSQL) manteniendo las hojas como respaldo si es necesario."
         }
       ]
+    },
+    "CTA": {
+      "title": "¿Listo para Reemplazar tus Hojas de Cálculo?",
+      "subtitle": "Sesión de scoping gratuita. Mapeamos tu workflow, proponemos una solución y estimamos plazos y costes. Sin compromiso.",
+      "button": "Reservar Llamada de Scoping Gratuita"
+    },
+    "SEO": {
+      "description": "CodeHunter Lab construye herramientas internas a medida, paneles de administración y portales de operaciones para empresas en los Países Bajos. Reemplazamos hojas de cálculo y plataformas low-code caras con software personalizado que posees completamente — sin tarifas por usuario, sin dependencia del proveedor. Con sede en Leiden.",
+      "keywords": "herramientas internas a medida países bajos, desarrollador herramientas internas leiden, desarrollo panel administración, reemplazar retool appsmith, maatwerk software ontwikkeling"
     }
   },
   "AIAutomationNL": {
@@ -817,6 +1067,51 @@
         ]
       }
     },
+    "Industries": {
+      "badge": "Por Sector",
+      "title": "Automatización Diseñada para",
+      "highlight": "Tu Sector",
+      "subtitle": "Cada sector tiene flujos de trabajo, software y requisitos de cumplimiento diferentes. Construimos automatización específica para cómo opera tu negocio realmente.",
+      "cta": "Ver detalles del sector",
+      "items": [
+        {
+          "emoji": "🧾",
+          "title": "Despachos Contables",
+          "desc": "Automatiza el procesamiento de facturas, la captación de clientes y los informes financieros. Se integra con Exact Online, Twinfield y Moneybird.",
+          "href": "/accounting-firm-automation-netherlands"
+        },
+        {
+          "emoji": "🏠",
+          "title": "Agencias Inmobiliarias",
+          "desc": "Automatiza el seguimiento de leads, las actualizaciones de listados de propiedades y la comunicación con clientes.",
+          "href": "/real-estate-automation-netherlands"
+        },
+        {
+          "emoji": "🦷",
+          "title": "Clínicas Dentales",
+          "desc": "Reduce las ausencias con recordatorios automáticos, optimiza la captación de pacientes y conecta el software de tu consulta.",
+          "href": "/dental-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "💆",
+          "title": "Clínicas Estéticas",
+          "desc": "Convierte más consultas en tratamientos reservados con automatización de CRM y nurturing personalizado de leads.",
+          "href": "/aesthetic-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "🏃",
+          "title": "Clínicas de Fisioterapia",
+          "desc": "Automatiza la gestión de derivaciones, la programación de citas y la detección de abandono de pacientes.",
+          "href": "/physiotherapy-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "🐾",
+          "title": "Clínicas Veterinarias",
+          "desc": "Reduce las ausencias, automatiza la comunicación con dueños de mascotas y sincroniza citas con el software de tu clínica.",
+          "href": "/veterinary-clinic-automation-netherlands"
+        }
+      ]
+    },
     "SEO": {
       "footer": "Agencia líder en automatización de IA con sede en Leiden, sirviendo al mercado de los Países Bajos y global. Especialistas en flujos n8n, APIs de WhatsApp Business y Agentes de Voz IA. Contacta con nosotros para consultoría de IA en Zuid-Holland.",
       "keywords": "agencia IA Leiden, consultoría IA Holanda, bots de WhatsApp para empresas NL, agentes de voz IA Randstad, experto en automatización n8n, estrategia ROI IA, agentes de ventas automatizados",
@@ -862,6 +1157,98 @@
             "desc": "Los agentes recuerdan cada detalle de cada conversación, para siempre."
           }
         ]
+      },
+      "Process": {
+        "title": "Cómo Desplegamos Tu Agente",
+        "subtitle": "Del caso de uso a producción en 4 pasos.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Descubrimiento y Alcance",
+            "desc": "Mapeamos el caso de uso: qué gestiona el agente, qué sistemas toca, cómo es una conversación exitosa y cuándo escala a un humano."
+          },
+          {
+            "number": "02",
+            "title": "Diseño e Ingeniería de Prompts",
+            "desc": "Diseñamos el comportamiento del agente, restricciones, tono y rutas de escalado. Probamos casos extremos antes de escribir una sola línea de código de integración."
+          },
+          {
+            "number": "03",
+            "title": "Integración y Pruebas",
+            "desc": "Conectamos a tu CRM, plataforma de comunicación (WhatsApp, chat web, voz) y fuentes de datos. Lanzamiento controlado con modo sombra antes del despliegue completo."
+          },
+          {
+            "number": "04",
+            "title": "Despliegue y Monitoreo",
+            "desc": "Despliegue en producción con observabilidad: calidad de respuestas, tasas de escalado, métricas de conversión y revisión mensual de rendimiento."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "Qué Construimos",
+        "subtitle": "Cada agente está diseñado específicamente para una función de negocio concreta.",
+        "cases": [
+          {
+            "icon": "🎯",
+            "title": "Cualificación de Leads",
+            "desc": "Formula preguntas de descubrimiento, cualifica según tus criterios y reserva reuniones automáticamente — 24/7."
+          },
+          {
+            "icon": "💬",
+            "title": "Soporte al Cliente",
+            "desc": "Responde FAQs, gestiona estados de pedidos y procesa solicitudes habituales sin intervención humana."
+          },
+          {
+            "icon": "📅",
+            "title": "Reserva de Citas",
+            "desc": "Disponible en WhatsApp o web. Reserva, confirma y envía recordatorios directamente a tu sistema de calendario."
+          },
+          {
+            "icon": "🔄",
+            "title": "Nurturing de Leads",
+            "desc": "Secuencias de seguimiento automáticas para leads fríos. Cadencias personalizadas según el historial de conversación."
+          },
+          {
+            "icon": "🧑‍💼",
+            "title": "Onboarding de Clientes",
+            "desc": "Guía a nuevos clientes en el proceso, recopila documentos requeridos y responde preguntas de incorporación automáticamente."
+          },
+          {
+            "icon": "📊",
+            "title": "Operaciones Internas",
+            "desc": "Responde preguntas de RRHH, extrae documentos de política, gestiona solicitudes de vacaciones o tickets de helpdesk interno."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "Preguntas Frecuentes",
+        "items": [
+          {
+            "q": "¿Cuál es la diferencia entre un agente IA y un chatbot?",
+            "a": "Un chatbot sigue un árbol de decisión fijo. Un agente IA razona con el contexto, toma acciones en múltiples pasos (como consultar el CRM, reservar una reunión o enviar un email) y gestiona entradas que un chatbot no podría manejar."
+          },
+          {
+            "q": "¿En qué plataformas puede funcionar el agente?",
+            "a": "API de WhatsApp Business, widgets de chat web, voz (llamadas entrantes y salientes), Slack, email e interfaces personalizadas. Construimos para el canal que usan tus clientes."
+          },
+          {
+            "q": "¿Cuánto tarda el despliegue?",
+            "a": "Un agente enfocado en un solo canal suele ir de alcance a producción en 2–4 semanas. Agentes multicanal con integraciones complejas tardan 4–8 semanas."
+          },
+          {
+            "q": "¿Qué pasa cuando el agente no puede responder?",
+            "a": "El escalado está diseñado en cada agente que construimos. Cuando la confianza está por debajo del umbral o el usuario solicita un humano, el agente transfiere con el contexto completo de la conversación."
+          },
+          {
+            "q": "¿Es conforme al RGPD?",
+            "a": "Sí. Definimos el tratamiento de datos en el alcance: qué fluye por el agente, dónde se almacena y durante cuánto tiempo. El despliegue on-premise está disponible para sectores sensibles."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "¿Listo para Desplegar Tu Primer Agente?",
+        "subtitle": "Reserva una llamada de estrategia gratuita. Definiremos el agente con mayor impacto y te diremos exactamente qué puede automatizar.",
+        "button": "Reservar Llamada de Estrategia Gratuita"
       },
       "SEO": {
         "title": "Desarrollo de Agentes IA Países Bajos | Automatización 24/7",
@@ -1047,6 +1434,73 @@
           }
         ]
       },
+      "Process": {
+        "title": "Cómo Trabajamos",
+        "subtitle": "Mejoras de arquitectura entregadas sin detener tu negocio.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Auditoría del Stack",
+            "desc": "Revisamos tu codebase, infraestructura, dependencias y cuellos de botella. Identificamos deuda técnica, puntos únicos de fallo y restricciones de escalado."
+          },
+          {
+            "number": "02",
+            "title": "Propuesta de Arquitectura",
+            "desc": "Diseñamos el estado objetivo: límites de componentes, flujo de datos, contratos de API, diagrama de infraestructura y un plan de migración sin reescrituras de golpe."
+          },
+          {
+            "number": "03",
+            "title": "Prueba de Concepto",
+            "desc": "Construimos primero el cambio arquitectónico de mayor riesgo para validar suposiciones antes de comprometerse a la implementación completa."
+          },
+          {
+            "number": "04",
+            "title": "Implementación por Fases",
+            "desc": "Desplegamos cambios de forma incremental con cobertura de tests completa. Migraciones sin tiempo de inactividad. Tu sistema permanece activo en todo momento."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "Dónde Ayudamos",
+        "subtitle": "Trabajo de arquitectura que entrega resultados medibles, no solo diagramas.",
+        "cases": [
+          {
+            "icon": "🏗️",
+            "title": "Remediación de Deuda Técnica",
+            "desc": "Desenreda codebases fuertemente acoplados. Define interfaces limpias, extrae dominios y reduce el coste de cada cambio futuro."
+          },
+          {
+            "icon": "📈",
+            "title": "Escalado para el Crecimiento",
+            "desc": "Optimización de base de datos, estrategia de caché, configuración CDN y escalado horizontal — diseñados para tu próximo 10x."
+          },
+          {
+            "icon": "🔀",
+            "title": "Monolito a Servicios",
+            "desc": "Migra de monolito a servicios al ritmo adecuado. Prevenimos la trampa del monolito distribuido en la que caen la mayoría de los equipos."
+          },
+          {
+            "icon": "⚡",
+            "title": "Optimización de Rendimiento",
+            "desc": "Cargas de página por debajo de 100ms. Estrategia de server components, edge caching, bundle splitting y optimización de consultas."
+          },
+          {
+            "icon": "☁️",
+            "title": "Infraestructura Cloud",
+            "desc": "Arquitectura AWS, GCP o Hetzner diseñada para eficiencia de costes, fiabilidad y cumplimiento normativo."
+          },
+          {
+            "icon": "🤖",
+            "title": "Integración de Sistemas IA",
+            "desc": "Añade IA a sistemas existentes sin desestabilizarlos. Capas de servicio limpias, estrategias de fallback y observabilidad completa."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "Empieza con una Auditoría Gratuita del Stack",
+        "subtitle": "Revisamos tu arquitectura actual y entregamos una lista priorizada de mejoras — con estimaciones de esfuerzo e impacto. Sin compromiso.",
+        "button": "Reservar Auditoría Gratuita del Stack"
+      },
       "SEO": {
         "title": "Consultor Arquitectura Software Países Bajos | Sistemas React Escalables",
         "description": "Arquitectos de sistemas senior en Leiden. Diseñamos arquitecturas Next.js y cloud escalables para empresas tecnológicas ambiciosas.",
@@ -1079,6 +1533,98 @@
             "desc": "Modelos más pequeños y especializados a menudo superan a los gigantes y caros."
           }
         ]
+      },
+      "Process": {
+        "title": "De los Datos al Modelo Desplegado",
+        "subtitle": "Modelos de IA privados construidos con tus datos, ejecutándose en tu infraestructura.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Definición del Caso de Uso",
+            "desc": "Definimos qué debe hacer el modelo, con qué datos entrenará y cómo se mide el éxito — objetivos de precisión, latencia y coste por consulta acordados desde el inicio."
+          },
+          {
+            "number": "02",
+            "title": "Preparación de Datos",
+            "desc": "Limpiamos, estructuramos y formateamos tus datos de entrenamiento. Construimos conjuntos de instrucciones, pares de preferencia o corpus de dominio según el enfoque de fine-tuning."
+          },
+          {
+            "number": "03",
+            "title": "Fine-Tuning y Evaluación",
+            "desc": "Entrenamos sobre Llama 3, Mistral u otros modelos base de código abierto. Evaluamos contra benchmarks y tus casos de prueba específicos antes de cualquier despliegue."
+          },
+          {
+            "number": "04",
+            "title": "Despliegue Privado",
+            "desc": "Desplegamos en tu infraestructura usando vLLM u Ollama. Ningún dato sale jamás de tu entorno. Documentación completa y traspaso incluidos."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "Qué Construimos",
+        "subtitle": "Modelos especializados que superan a la IA de propósito general en tu dominio.",
+        "cases": [
+          {
+            "icon": "📄",
+            "title": "Inteligencia Documental",
+            "desc": "Extrae, clasifica y resume contratos, facturas e informes — entrenado en tus formatos de documento específicos."
+          },
+          {
+            "icon": "🧠",
+            "title": "Base de Conocimiento Interna",
+            "desc": "Responde preguntas de empleados sobre documentos de empresa, SOPs y wikis. Respuestas precisas y fundamentadas con citas de fuentes."
+          },
+          {
+            "icon": "🎧",
+            "title": "IA de Atención al Cliente",
+            "desc": "Entrenado en tu conocimiento de producto, políticas e historial de soporte. Conoce tu negocio — no solo datos web generales."
+          },
+          {
+            "icon": "⚖️",
+            "title": "Legal y Cumplimiento",
+            "desc": "Entrenado en jurisprudencia, regulaciones y políticas internas. Detecta riesgos en contratos y genera sugerencias de cláusulas automáticamente."
+          },
+          {
+            "icon": "🏥",
+            "title": "Médico y Clínico",
+            "desc": "Resumen de notas clínicas y asistencia de codificación compatible con GDPR, ejecutándose completamente on-premise sin llamadas a APIs externas."
+          },
+          {
+            "icon": "💻",
+            "title": "Generación de Código",
+            "desc": "Fine-tuned en las convenciones de tu codebase, librerías internas y patrones de arquitectura. Genera código que se ajusta a tus estándares."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "Preguntas Frecuentes",
+        "items": [
+          {
+            "q": "¿Cuál es la diferencia entre fine-tuning y RAG?",
+            "a": "RAG recupera documentos relevantes en el momento de la consulta y los pasa a un modelo general. El fine-tuning cambia los pesos del modelo para que internalice el conocimiento del dominio. Generalmente recomendamos RAG para bases de conocimiento y fine-tuning para tareas de tono, formato y razonamiento especializado."
+          },
+          {
+            "q": "¿Con qué modelos base trabajáis?",
+            "a": "Principalmente Llama 3, Mistral y Qwen — modelos de código abierto que pueden desplegarse de forma privada. También trabajamos con Claude y GPT-4 para pipelines RAG donde el hosting en cloud es aceptable."
+          },
+          {
+            "q": "¿Cuántos datos necesito para el fine-tuning?",
+            "a": "Para fine-tuning de instrucciones, normalmente son suficientes 500–5.000 ejemplos de alta calidad. La calidad importa más que la cantidad. Te ayudamos a construir el dataset si no tienes uno listo."
+          },
+          {
+            "q": "¿Cómo se despliega el modelo?",
+            "a": "En tu infraestructura usando vLLM u Ollama según la escala. Nos encargamos de la configuración del servidor, los endpoints de API, la autenticación y el monitoreo. Obtienes propiedad completa y documentación."
+          },
+          {
+            "q": "¿Es compatible con GDPR?",
+            "a": "Sí. Todo el entrenamiento e inferencia ocurre dentro de tu entorno. Ningún dato se envía a APIs de IA de terceros durante la inferencia. Documentamos el linaje de datos y las políticas de retención en el scoping."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "¿Listo para Construir tu IA Privada?",
+        "subtitle": "Reserva una llamada estratégica gratuita. Evaluaremos tu caso de uso, recomendaremos el enfoque adecuado y definiremos una implementación que se ajuste a tus datos y presupuesto.",
+        "button": "Reservar Llamada Estratégica Gratuita"
       },
       "SEO": {
         "title": "Desarrollo y Fine-Tuning LLM Países Bajos",
@@ -1178,6 +1724,12 @@
         }
       ]
     },
+    "CTA": {
+      "badge": "¿Listo para construir?",
+      "title": "Inicia tu Proyecto Next.js",
+      "subtitle": "Consultoría de arquitectura gratuita. Mapeamos tu stack, plazos y costes — sin compromiso.",
+      "button": "Reservar Consultoría Gratuita"
+    },
     "SEO": {
       "keywords": "agencia desarrollo Next.js Países Bajos, contratar desarrollador Next.js, consultoría Next.js Países Bajos, agencia React Next.js Leiden, especialista Next.js App Router",
       "extendedDesc": "Como agencia de desarrollo Next.js dedicada en Leiden, construimos aplicaciones web de nivel producción para empresas en los Países Bajos. Nuestro equipo se especializa en las últimas características de Next.js incluyendo App Router, React Server Components y edge rendering. Contáctanos para una revisión de arquitectura Next.js gratuita."
@@ -1273,6 +1825,12 @@
           "a": "Sí. Las SPAs suelen tener puntuaciones LCP y CLS pobres. Implementamos code splitting, lazy loading, optimización de bundle y frecuentemente recomendamos un cambio a Next.js para beneficios de SSR."
         }
       ]
+    },
+    "CTA": {
+      "badge": "Sesión gratuita de 1 hora",
+      "title": "Reserva tu Auditoría React",
+      "subtitle": "Revisamos tu codebase, identificamos los 3 problemas principales y te damos un plan de acción claro — aunque nunca trabajemos juntos.",
+      "button": "Reservar Auditoría Gratuita"
     },
     "SEO": {
       "keywords": "consultoría React Países Bajos, consultor arquitectura React, contratar desarrollador React Países Bajos, auditoría código React, servicios refactorización React, desarrollador React senior Leiden",

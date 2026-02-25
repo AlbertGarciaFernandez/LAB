@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "AI Consulting & Automation Agency | CodeHunter Lab";
+export const alt = "AI Consulting Netherlands — CodeHunter Lab";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -27,34 +27,35 @@ export default function Image() {
                 <div
                     style={{
                         position: "absolute",
-                        top: -100,
-                        right: -100,
-                        width: 500,
-                        height: 500,
+                        top: -80,
+                        right: -80,
+                        width: 600,
+                        height: 600,
                         borderRadius: "50%",
-                        background: "rgba(0, 255, 136, 0.08)",
-                        filter: "blur(80px)",
+                        background: "rgba(0, 255, 136, 0.10)",
+                        filter: "blur(100px)",
                     }}
                 />
                 {/* Orange glow bottom-left */}
                 <div
                     style={{
                         position: "absolute",
-                        bottom: -100,
-                        left: -100,
+                        bottom: -80,
+                        left: -80,
                         width: 400,
                         height: 400,
                         borderRadius: "50%",
-                        background: "rgba(255, 107, 0, 0.06)",
+                        background: "rgba(255, 107, 0, 0.07)",
                         filter: "blur(80px)",
                     }}
                 />
 
-                {/* Tag */}
+                {/* Badge */}
                 <div
                     style={{
                         display: "flex",
                         alignItems: "center",
+                        gap: 8,
                         background: "rgba(0, 255, 136, 0.08)",
                         border: "1px solid rgba(0, 255, 136, 0.2)",
                         borderRadius: 999,
@@ -62,37 +63,59 @@ export default function Image() {
                         marginBottom: 32,
                     }}
                 >
-                    <span style={{ color: "#00ff88", fontSize: 14, letterSpacing: 2 }}>
-                        CODEHUNTER LAB
+                    <div
+                        style={{
+                            width: 8,
+                            height: 8,
+                            borderRadius: "50%",
+                            background: "#00ff88",
+                        }}
+                    />
+                    <span style={{ color: "#00ff88", fontSize: 13, letterSpacing: 3, fontWeight: 700 }}>
+                        AI CONSULTING NETHERLANDS
                     </span>
                 </div>
 
                 {/* Headline */}
                 <div
                     style={{
-                        fontSize: 56,
-                        fontWeight: 700,
+                        fontSize: 58,
+                        fontWeight: 900,
                         color: "#ffffff",
-                        lineHeight: 1.1,
-                        marginBottom: 24,
-                        maxWidth: 800,
+                        lineHeight: 1.05,
+                        marginBottom: 28,
+                        maxWidth: 820,
+                        letterSpacing: "-2px",
                     }}
                 >
-                    AI Consulting & Automation That{" "}
-                    <span style={{ color: "#00ff88" }}>Ships to Production.</span>
+                    AI Consulting for Companies{" "}
+                    <span style={{ color: "#00ff88" }}>Ready to Ship.</span>
                 </div>
 
-                {/* Description */}
+                {/* Three service pills */}
                 <div
                     style={{
-                        fontSize: 22,
-                        color: "#9ca3af",
-                        maxWidth: 700,
-                        lineHeight: 1.5,
-                        marginBottom: 48,
+                        display: "flex",
+                        gap: 12,
+                        marginBottom: 44,
                     }}
                 >
-                    AI Agents · Workflow Automation · System Integration · Leiden, Netherlands
+                    {["AI Strategy Sprint", "AI Implementation", "Ongoing AI Partner"].map((label) => (
+                        <div
+                            key={label}
+                            style={{
+                                padding: "8px 20px",
+                                borderRadius: 8,
+                                border: "1px solid rgba(255,255,255,0.1)",
+                                background: "rgba(255,255,255,0.04)",
+                                color: "#9ca3af",
+                                fontSize: 14,
+                                fontWeight: 500,
+                            }}
+                        >
+                            {label}
+                        </div>
+                    ))}
                 </div>
 
                 {/* Bottom bar */}
@@ -112,7 +135,7 @@ export default function Image() {
                         }}
                     />
                     <span style={{ color: "#6b7280", fontSize: 16 }}>
-                        www.codehunterlab.com
+                        codehunterlab.com/ai-consulting
                     </span>
                 </div>
             </div>

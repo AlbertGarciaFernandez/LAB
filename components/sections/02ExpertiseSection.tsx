@@ -28,15 +28,34 @@ type Pillar = {
 
 const ExpertiseSection: React.FC = () => {
   const t = useTranslations("Expertise");
-  const [activeId, setActiveId] = useState<PillarId>("frontend");
+  const [activeId, setActiveId] = useState<PillarId>("automation");
 
   const pillars: Pillar[] = [
     {
+      id: "automation",
+      indexLabel: t("ui.indexLabel", { number: "01", title: t("pillars.automation.title") }),
+      title: t("pillars.automation.title"),
+      micro: t("pillars.automation.micro"),
+      icon: "{01}",
+      heading: t("pillars.automation.heading"),
+      paragraphs: [
+        t("pillars.automation.paragraphs.0"),
+        t("pillars.automation.paragraphs.1"),
+      ],
+      bullets: [
+        t("pillars.automation.bullets.0"),
+        t("pillars.automation.bullets.1"),
+        t("pillars.automation.bullets.2"),
+        t("pillars.automation.bullets.3"),
+        t("pillars.automation.bullets.4"),
+      ],
+    },
+    {
       id: "frontend",
-      indexLabel: t("ui.indexLabel", { number: "01", title: t("pillars.frontend.title") }),
+      indexLabel: t("ui.indexLabel", { number: "02", title: t("pillars.frontend.title") }),
       title: t("pillars.frontend.title"),
       micro: t("pillars.frontend.micro"),
-      icon: "{01}",
+      icon: "{02}",
       heading: t("pillars.frontend.heading"),
       paragraphs: [
         t("pillars.frontend.paragraphs.0"),
@@ -47,25 +66,6 @@ const ExpertiseSection: React.FC = () => {
         t("pillars.frontend.bullets.1"),
         t("pillars.frontend.bullets.2"),
         t("pillars.frontend.bullets.3"),
-      ],
-    },
-    {
-      id: "ecommerce",
-      indexLabel: t("ui.indexLabel", { number: "02", title: t("pillars.ecommerce.title") }),
-      title: t("pillars.ecommerce.title"),
-      micro: t("pillars.ecommerce.micro"),
-      icon: "{02}",
-      heading: t("pillars.ecommerce.heading"),
-      paragraphs: [
-        t("pillars.ecommerce.paragraphs.0"),
-        t("pillars.ecommerce.paragraphs.1"),
-      ],
-      bullets: [
-        t("pillars.ecommerce.bullets.0"),
-        t("pillars.ecommerce.bullets.1"),
-        t("pillars.ecommerce.bullets.2"),
-        t("pillars.ecommerce.bullets.3"),
-        t("pillars.ecommerce.bullets.4"),
       ],
     },
     {
@@ -87,22 +87,22 @@ const ExpertiseSection: React.FC = () => {
       ],
     },
     {
-      id: "automation",
-      indexLabel: t("ui.indexLabel", { number: "04", title: t("pillars.automation.title") }),
-      title: t("pillars.automation.title"),
-      micro: t("pillars.automation.micro"),
+      id: "ecommerce",
+      indexLabel: t("ui.indexLabel", { number: "04", title: t("pillars.ecommerce.title") }),
+      title: t("pillars.ecommerce.title"),
+      micro: t("pillars.ecommerce.micro"),
       icon: "{04}",
-      heading: t("pillars.automation.heading"),
+      heading: t("pillars.ecommerce.heading"),
       paragraphs: [
-        t("pillars.automation.paragraphs.0"),
-        t("pillars.automation.paragraphs.1"),
+        t("pillars.ecommerce.paragraphs.0"),
+        t("pillars.ecommerce.paragraphs.1"),
       ],
       bullets: [
-        t("pillars.automation.bullets.0"),
-        t("pillars.automation.bullets.1"),
-        t("pillars.automation.bullets.2"),
-        t("pillars.automation.bullets.3"),
-        t("pillars.automation.bullets.4"),
+        t("pillars.ecommerce.bullets.0"),
+        t("pillars.ecommerce.bullets.1"),
+        t("pillars.ecommerce.bullets.2"),
+        t("pillars.ecommerce.bullets.3"),
+        t("pillars.ecommerce.bullets.4"),
       ],
     },
     {

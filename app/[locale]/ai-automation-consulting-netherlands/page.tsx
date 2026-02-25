@@ -289,6 +289,50 @@ export default function AIAutomationNetherlands({ params: { locale } }: { params
                 </div>
             </section>
 
+            {/* Industries Section */}
+            <section className="py-20 relative z-10 border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase mb-4">
+                            {t("Industries.badge")}
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
+                            {t("Industries.title")} <span className="text-gradient-enchanted">{t("Industries.highlight")}</span>
+                        </h2>
+                        <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                            {t("Industries.subtitle")}
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {(t.raw("Industries.items") as { emoji: string; title: string; desc: string; href: string }[]).map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: i * 0.07 }}
+                            >
+                                <Link
+                                    href={item.href}
+                                    className="group flex flex-col gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-hunter-green/30 hover:bg-white/[0.07] transition-all duration-300 h-full"
+                                >
+                                    <div className="text-3xl">{item.emoji}</div>
+                                    <div className="flex-1">
+                                        <h3 className="text-white font-bold text-base mb-2 tracking-tight">{item.title}</h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 text-hunter-green text-xs font-semibold pt-3 border-t border-white/5">
+                                        <span>{t("Industries.cta")}</span>
+                                        <span className="transition-transform group-hover:translate-x-1">→</span>
+                                    </div>
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* FAQ Section */}
             <section className="py-32 relative z-10 max-w-4xl mx-auto px-6 border-t border-white/5">
                 <div className="text-center mb-16">

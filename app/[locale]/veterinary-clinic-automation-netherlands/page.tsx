@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Veterinary Clinic Automation Netherlands | Appointment & CRM Systems | CodeHunter Lab",
+        title: "Veterinary Clinic Automation Netherlands — CodeHunter Lab",
         description: "Reduce no-shows, automate pet owner communication, and connect your practice software. Custom automation systems for veterinary clinics in the Netherlands. Based in Leiden.",
         keywords: [
             "veterinary clinic automation Netherlands",
@@ -41,7 +41,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Veterinary Clinic Automation Netherlands | CodeHunter Lab",
+            title: "Veterinary Clinic Automation Netherlands — CodeHunter Lab",
             description: "Custom automation systems for veterinary clinics in the Netherlands — reducing no-shows, automating pet owner communication, and connecting your practice software.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",

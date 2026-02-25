@@ -36,14 +36,14 @@
     }
   },
   "Hero": {
-    "subHeader": "AI Consulting · Workflow Automation · Web Engineering",
+    "subHeader": "AI Consulting · AI Automation · Production Systems",
     "title": {
-      "part1": "We Build ",
-      "highlight1": "AI Systems",
-      "part2": "That Run Your ",
-      "highlight2": "Operations"
+      "part1": "AI Consulting & ",
+      "highlight1": "Automation",
+      "part2": "That Ships to ",
+      "highlight2": "Production"
     },
-    "description": "CodeHunter Lab designs and deploys production-grade AI automation for companies ready to move beyond experiments. Agentic workflows, custom integrations, and real systems in your stack — not demos.",
+    "description": "We design, build, and deploy AI systems for companies ready to move beyond experiments — connected to your stack, your data, and your team's actual workflows.",
     "cta": {
       "initialize": "Book an AI Strategy Call",
       "caseStudies": "See How We Work"
@@ -85,7 +85,7 @@
     "Availability": {
       "nextOpening": "Next Opening: {date}",
       "title": "Ready to scale?",
-      "subtitle": "Booking architecture audits for Q1 2026.",
+      "subtitle": "Booking discovery calls for Q2 2026.",
       "button": "Drop a Line"
     },
     "Copyright": {
@@ -116,12 +116,74 @@
       }
     }
   },
+  "WhatWeBuild": {
+    "badge": "What We Build",
+    "title": {
+      "part1": "Five Ways to Put",
+      "highlight": "AI to Work"
+    },
+    "subtitle": "Every engagement starts with a clear outcome. Here's what we actually build.",
+    "cta": "Explore AI Consulting",
+    "services": [
+      {
+        "title": "AI Agents",
+        "desc": "Autonomous agents for sales qualification, customer service, and operations — connected to your tools and running 24/7.",
+        "link": "AI Agents & Automation"
+      },
+      {
+        "title": "Workflow Automation",
+        "desc": "Replace manual processes with automated pipelines. Lead routing, document processing, CRM sync, and scheduling.",
+        "link": "AI Automation Netherlands"
+      },
+      {
+        "title": "AI System Integration",
+        "desc": "Connect AI to the systems you already run. We handle the integration layer between AI models and your existing stack.",
+        "link": "IT System Integration"
+      },
+      {
+        "title": "Internal AI Tools",
+        "desc": "Custom dashboards and admin tools that eliminate repetitive internal work. Built for your team's actual workflow.",
+        "link": "Custom Internal Tools"
+      },
+      {
+        "title": "Custom LLM Deployments",
+        "desc": "Private language models fine-tuned for your domain. Document classification, response generation, knowledge retrieval.",
+        "link": "Custom LLM Development"
+      }
+    ]
+  },
+  "IndustriesSection": {
+    "badge": "Industries",
+    "title": {
+      "part1": "Automation Built for",
+      "highlight": "Your Industry"
+    },
+    "subtitle": "We've automated operations across service-heavy, regulated industries in the Netherlands.",
+    "viewAll": "View All Industries",
+    "industries": [
+      {
+        "title": "Accounting & Finance",
+        "desc": "Automate client intake, document processing, tax prep workflows, and compliance reporting. Less admin, same team.",
+        "link": "Accounting Firm Automation"
+      },
+      {
+        "title": "Real Estate",
+        "desc": "Lead qualification, property inquiry routing, contract document processing, and automated client follow-up.",
+        "link": "Real Estate Automation"
+      },
+      {
+        "title": "Healthcare & Clinics",
+        "desc": "Appointment booking, patient follow-up, and admin load reduction for dental, aesthetic, and physiotherapy practices.",
+        "link": "Clinic Automation"
+      }
+    ]
+  },
   "Expertise": {
     "title": {
       "part1": "Core Expertise &",
       "part2": "Strategic Pillars"
     },
-    "subtitle": "Hunting the balance between clean code, UX and real impact.",
+    "subtitle": "AI-first systems, production-grade engineering, and workflows that eliminate manual work.",
     "pillars": {
       "frontend": {
         "title": "Frontend Architecture",
@@ -301,38 +363,38 @@
   "Process": {
     "title": {
       "prefix": "06.",
-      "text": "How We Engage"
+      "text": "How We Work"
     },
     "subtitle": {
-      "part1": "Three ways to work with us — from a focused",
-      "highlight": "architecture audit",
-      "part2": "to an ongoing engineering partnership."
+      "part1": "From a 30-minute discovery call to a",
+      "highlight": "live system in your stack",
+      "part2": "— four steps, no ambiguity."
     },
     "steps": {
       "0": {
-        "title": "Architecture Audit",
-        "description": "We map your current operations, identify the highest-ROI automation opportunities, and deliver a prioritized implementation roadmap. Fixed scope, one week. No commitment beyond the audit."
+        "title": "Discovery Call",
+        "description": "We review your workflows, identify the highest-ROI automation opportunities, and give you an honest assessment of what's worth building. 30 minutes, free, no sales pitch."
       },
       "1": {
-        "title": "Implementation Sprint",
-        "description": "We design, build, and deploy one fully operational AI system or automation workflow. Defined scope, fixed price, 4–8 weeks. You own the code and the infrastructure."
+        "title": "Scoping & Roadmap",
+        "description": "We define deliverables, integration requirements, and timeline. Fixed scope, fixed price — no surprises mid-project. You know exactly what you're getting before we start."
       },
       "2": {
-        "title": "Live in Production",
-        "description": "We don't hand off a demo. We deploy to your infrastructure, integrate with your existing tools and data sources, and validate that the system runs under real conditions."
+        "title": "Build & Integrate",
+        "description": "We build the system and connect it to your existing stack — CRM, communication tools, databases. No sandbox deployments. Everything runs against real data from day one."
       },
       "3": {
-        "title": "Ongoing Partner",
-        "description": "We act as your embedded AI engineering team — shipping new systems, maintaining live automation, and expanding your infrastructure as your business grows."
+        "title": "Deploy & Handoff",
+        "description": "We deploy to your infrastructure and hand over full documentation. You own the code. Ongoing support available if you need a long-term engineering partner."
       }
     },
     "cta": {
       "title": {
         "text": "Ready to",
-        "highlight": "Start Automating?"
+        "highlight": "Build Your First AI System?"
       },
       "description": {
-        "part1": "Book a 30-minute strategy call. We'll review your workflows, identify the highest-impact opportunities, and tell you honestly what's worth building — with",
+        "part1": "Book a 30-minute strategy call. We'll map your highest-impact automation opportunity and scope a clear path to production — with",
         "highlight": "no sales pitch",
         "part2": "."
       }
@@ -342,11 +404,11 @@
     "Hero": {
       "badge": "AI Consulting · Production Systems",
       "title": {
-        "part1": "From Pilot",
-        "part2": "To Production",
-        "highlight": "AI Systems."
+        "part1": "AI Consulting",
+        "part2": "for Companies",
+        "highlight": "Ready to Ship."
       },
-      "description": "Most AI projects fail between proof of concept and production. We close that gap — designing and deploying <strong class='text-white'>agentic workflows</strong> that integrate with your real stack, run on your infrastructure, and deliver measurable results.",
+      "description": "Most AI projects fail between proof of concept and production. We close that gap — designing and deploying <strong class='text-white'>AI agents, automated workflows, and integrations</strong> that run in production, not in a proof of concept.",
       "cta": "Book an AI Strategy Call",
       "whyUs": {
         "title": {
@@ -472,7 +534,7 @@
           "Burned out teams"
         ],
         "resultLabel": "Result",
-        "resultValue": "Business Stagnation"
+        "resultValue": "Revenue at Risk"
       },
       "advantage": {
         "badge": "Solution",
@@ -480,12 +542,12 @@
         "subtitle": "Why AI wins.",
         "list": [
           "Instant 24/7 Response",
-          "Perfect Execution",
+          "Consistent Execution",
           "Data-Driven Decisions",
-          "Scalable Workforce"
+          "Scalable Without Headcount"
         ],
         "resultLabel": "Result",
-        "resultValue": "Exponential Growth"
+        "resultValue": "Operational Scale"
       },
       "diagram": {
         "title": "Syncs With Your Ecosystem",
@@ -496,29 +558,146 @@
       }
     },
     "Migration": {
-      "badge": "How We Engage",
+      "badge": "Engagement Models",
       "title": "Choose Your",
-      "highlight": "Starting Point",
+      "highlight": "Engagement Model",
       "legacy": {
-        "title": "Architecture Audit",
-        "desc": "Map your automation opportunities.<br />Prioritized implementation roadmap.<br />Fixed scope, delivered in one week.",
-        "tag": "1 Week"
+        "title": "AI Strategy Sprint",
+        "desc": "Workflow audit + automation opportunity map.<br />Technical architecture proposal.<br />Budget & timeline estimate.<br />Fixed scope, 1–2 weeks.",
+        "tag": "1–2 Weeks"
       },
       "optimized": {
         "tag": "Most Common",
-        "title": "Implementation Sprint",
-        "desc": "One live AI system deployed.<br />Integrated with your existing stack.<br />Fixed price, 4–8 weeks.",
+        "title": "AI Implementation",
+        "desc": "One live AI system deployed to your infrastructure.<br />Full stack integration + documentation.<br />Fixed price, 4–8 weeks. Code is yours.",
         "latencyLabel": "SCOPE",
         "latencyValue": "FIXED",
         "costLabel": "CODE",
         "costValue": "YOURS"
       },
       "action": {
-        "title": "Ongoing Partner",
-        "desc": "Your embedded AI engineering team.<br />Ship, maintain, and scale — continuously.",
+        "title": "Ongoing AI Partner",
+        "desc": "Your embedded AI engineering team.<br />New automations, maintenance & scale — monthly.<br />Senior engineers, direct access.",
         "cta1": "Book a Strategy Call",
         "cta2": "Email Us Directly"
       }
+    },
+    "WhoItsFor": {
+      "badge": "Who It's For",
+      "title": "This Is For You",
+      "highlight": "If...",
+      "description": "We work with founders, CTOs, and operations leaders who are past the \"should we try AI?\" stage and need a technical partner to build and ship.",
+      "items": [
+        "You've tested AI tools but haven't connected them to real operations",
+        "You're spending time on tasks that should run automatically",
+        "You need a partner who builds and deploys, not just advises",
+        "You want to reduce manual workload without hiring for repetitive work",
+        "You need AI that integrates with your existing CRM, ERP, or stack",
+        "You operate in the Netherlands or internationally and need senior engineering"
+      ]
+    },
+    "WhatWeBuildInline": {
+      "badge": "What We Build",
+      "title": "Five AI Systems We",
+      "highlight": "Ship to Production",
+      "services": [
+        {
+          "title": "AI Sales & Qualification Agents",
+          "desc": "Respond to leads 24/7, qualify on your criteria, book meetings, and hand off with full context.",
+          "label": "AI Agents & Automation",
+          "href": "/expertise/ai-agents-automation"
+        },
+        {
+          "title": "Workflow & Operations Automation",
+          "desc": "Automate document processing, scheduling, CRM sync, and approval flows on n8n or custom pipelines.",
+          "label": "AI Automation Netherlands",
+          "href": "/ai-automation-consulting-netherlands"
+        },
+        {
+          "title": "AI System Integration",
+          "desc": "Connect AI to your CRM, ERP, databases, and communication platforms via proper API integrations.",
+          "label": "IT System Integration",
+          "href": "/it-system-integration"
+        },
+        {
+          "title": "Internal AI Tools",
+          "desc": "Custom dashboards and admin tools that eliminate repetitive internal work and data reconciliation.",
+          "label": "Custom Internal Tools",
+          "href": "/services/custom-internal-tools-development"
+        },
+        {
+          "title": "Custom LLM Deployments",
+          "desc": "Private language models fine-tuned for classification, response generation, and internal knowledge retrieval.",
+          "label": "Custom LLM Development",
+          "href": "/expertise/custom-llm-development"
+        }
+      ]
+    },
+    "UseCases": {
+      "badge": "Use Cases",
+      "title": "What Companies Actually",
+      "highlight": "Automate First",
+      "subtitle": "These are the highest-ROI starting points we see across industries — each one runs in production within weeks, not quarters.",
+      "labels": {
+        "problem": "Problem",
+        "solution": "Solution",
+        "outcome": "Outcome"
+      },
+      "items": [
+        {
+          "number": "01",
+          "title": "Qualifying Leads Without Hiring",
+          "problem": "Sales reps spend hours chasing unqualified leads and writing follow-up emails that should be automated.",
+          "solution": "An AI agent handles inbound inquiries 24/7 — qualifies on your criteria, asks follow-up questions, and books meetings for leads who pass.",
+          "outcome": "Qualified meetings booked automatically. Sales reps only speak to decision-ready prospects."
+        },
+        {
+          "number": "02",
+          "title": "Eliminating Manual Reporting",
+          "problem": "Operations or finance teams spend hours each week pulling data from multiple systems to build the same reports.",
+          "solution": "Automated pipelines collect, transform, and deliver structured reports to Slack, email, or a dashboard — on schedule, without human input.",
+          "outcome": "Hours of weekly reporting work eliminated. Data is always current, never late."
+        },
+        {
+          "number": "03",
+          "title": "Automating Client Onboarding",
+          "problem": "New clients trigger a manual sequence of emails, document requests, CRM updates, and internal handoffs — every time.",
+          "solution": "A workflow automation triggers on deal close: sends welcome sequences, requests documents, creates project records, and notifies the right people automatically.",
+          "outcome": "Onboarding completes in hours instead of days. No dropped handoffs, no manual chasing."
+        }
+      ]
+    },
+    "TechCredibility": {
+      "badge": "How We Build",
+      "title": "Production Standards,",
+      "highlight": "Not Prototypes",
+      "subtitle": "Every system we ship meets six non-negotiables. These aren't feature selling points — they're baseline requirements for code that runs in production.",
+      "items": [
+        {
+          "title": "Integrated",
+          "desc": "Connects to your existing CRM, ERP, databases, and APIs — no re-platforming required."
+        },
+        {
+          "title": "Maintainable",
+          "desc": "Clean, documented code with clear separation of concerns. Your team can extend it without us."
+        },
+        {
+          "title": "Observable",
+          "desc": "Every automation includes logging, error alerting, and status dashboards so you know when something breaks before your clients do."
+        },
+        {
+          "title": "Secure by Default",
+          "desc": "GDPR-compliant data handling, encrypted credentials, access controls, and optional private deployment for regulated industries."
+        },
+        {
+          "title": "Infrastructure-Agnostic",
+          "desc": "Runs on your preferred cloud, on-premise, or hybrid. We build for your environment, not ours."
+        },
+        {
+          "title": "Handover-Ready",
+          "desc": "Full technical documentation, a runbook, and a handover session. You own the system — with or without us."
+        }
+      ]
     }
   },
   "SoftwareLeiden": {
@@ -644,6 +823,32 @@
         "desc": "Keep your HubSpot, Salesforce, and ERP in perfect harmony using event-driven architectures."
       }
     },
+    "Process": {
+      "title": "How We Integrate Your Systems",
+      "subtitle": "A structured approach so nothing breaks and nothing is forgotten.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Integration Audit",
+          "desc": "Inventory of all your apps, APIs, and data formats. We identify every manual hand-off, every copy-paste, and every bottleneck in your current data flow."
+        },
+        {
+          "number": "02",
+          "title": "Architecture Design",
+          "desc": "Data flow diagram, integration pattern selection (event-driven, polling, webhooks), error handling strategy, and security model — all documented before build."
+        },
+        {
+          "number": "03",
+          "title": "Build & Test",
+          "desc": "API connectors, n8n workflows, or custom bridges built in parallel with your live systems. Full end-to-end testing before cutover. Zero production downtime."
+        },
+        {
+          "number": "04",
+          "title": "Monitor & Handover",
+          "desc": "Dashboards, alerts, and runbooks set up so your team can operate and troubleshoot the integration independently. Full documentation included."
+        }
+      ]
+    },
     "FAQ": {
       "title": "Integration FAQ",
       "subtitle": "Common questions about connecting your business systems.",
@@ -661,6 +866,15 @@
           "a": "We prioritize data sovereignty. We often deploy self-hosted integration engines so your sensitive business data never leaves your infrastructure."
         }
       ]
+    },
+    "CTA": {
+      "title": "Ready to Connect Your Systems?",
+      "subtitle": "Free integration audit. We map your current data flows, identify the biggest bottleneck, and propose a specific solution. No commitment required.",
+      "button": "Book a Free Integration Audit"
+    },
+    "SEO": {
+      "description": "CodeHunter Lab specializes in IT system integration for businesses across the Netherlands. We connect CRMs, ERPs, databases, and custom APIs using n8n, custom API bridges, and event-driven architectures. Based in Leiden, serving companies across Amsterdam, Rotterdam, and Den Haag.",
+      "keywords": "IT system integration netherlands, API integration company leiden, n8n consultant netherlands, CRM ERP integration, software integration company amsterdam"
     }
   },
   "InternalTools": {
@@ -695,6 +909,7 @@
       }
     },
     "Tools": {
+      "title": "What We Build",
       "dashboards": {
         "title": "Operations Dashboards",
         "desc": "Real-time visualization of KPIs, inventory, and logic. See your business health at a glance."
@@ -707,6 +922,32 @@
         "title": "Resource Management",
         "desc": "Drag-and-drop schedulers tailored to your specific team structure and shifts."
       }
+    },
+    "Process": {
+      "title": "How We Build Your Tool",
+      "subtitle": "From workflow audit to live tool — no surprises, no bloat.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Workflow Audit",
+          "desc": "We map your current process: what tools you use, where data gets stuck, and what your team spends the most time on. Pain points become the spec."
+        },
+        {
+          "number": "02",
+          "title": "Design & Data Model",
+          "desc": "Wireframes, database schema, and API contracts are agreed before a line of code is written. You approve the design before we build."
+        },
+        {
+          "number": "03",
+          "title": "Iterative Development",
+          "desc": "Two-week sprints with live staging previews. Your team tests the real tool, not a prototype. Feedback is incorporated in the next sprint."
+        },
+        {
+          "number": "04",
+          "title": "Launch & Handover",
+          "desc": "Deployed to your infrastructure. Full documentation, admin training, and 30-day post-launch support included. You own the code."
+        }
+      ]
     },
     "FAQ": {
       "title": "Internal Tools FAQ",
@@ -721,6 +962,15 @@
           "a": "Yes. We usually help businesses graduate from sheets to a real database (like Supabase or PostgreSQL) while keeping the sheets as a backup or input method if needed."
         }
       ]
+    },
+    "CTA": {
+      "title": "Ready to Replace Your Spreadsheets?",
+      "subtitle": "Free scoping session. We map your workflow, propose a solution, and estimate timeline and cost. No commitment required.",
+      "button": "Book a Free Scoping Call"
+    },
+    "SEO": {
+      "description": "CodeHunter Lab builds custom internal tools, admin dashboards, and operations portals for businesses across the Netherlands. We replace spreadsheets and expensive low-code platforms with tailored software you fully own — no per-user fees, no vendor lock-in. Based in Leiden.",
+      "keywords": "custom internal tools netherlands, internal tool developer leiden, admin dashboard development, replace retool appsmith, maatwerk software ontwikkeling"
     }
   },
   "AIAutomationNL": {
@@ -817,6 +1067,51 @@
         ]
       }
     },
+    "Industries": {
+      "badge": "By Industry",
+      "title": "Automation Built for",
+      "highlight": "Your Sector",
+      "subtitle": "Every industry has different workflows, software, and compliance requirements. We build automation specific to how your business actually operates.",
+      "cta": "View industry details",
+      "items": [
+        {
+          "emoji": "🧾",
+          "title": "Accounting Firms",
+          "desc": "Automate invoice processing, client intake, and financial reporting. Integrates with Exact Online, Twinfield, and Moneybird.",
+          "href": "/accounting-firm-automation-netherlands"
+        },
+        {
+          "emoji": "🏠",
+          "title": "Real Estate Agencies",
+          "desc": "Automate lead follow-up, property listing updates, and client communication across portals.",
+          "href": "/real-estate-automation-netherlands"
+        },
+        {
+          "emoji": "🦷",
+          "title": "Dental Clinics",
+          "desc": "Reduce no-shows with automated reminders, streamline patient intake, and connect your practice software.",
+          "href": "/dental-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "💆",
+          "title": "Aesthetic Clinics",
+          "desc": "Convert more inquiries into booked treatments with CRM automation and personalised lead nurturing.",
+          "href": "/aesthetic-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "🏃",
+          "title": "Physiotherapy Practices",
+          "desc": "Automate referral intake, appointment scheduling, and patient drop-out detection.",
+          "href": "/physiotherapy-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "🐾",
+          "title": "Veterinary Clinics",
+          "desc": "Reduce no-shows, automate pet owner communication, and sync appointments with your practice software.",
+          "href": "/veterinary-clinic-automation-netherlands"
+        }
+      ]
+    },
     "SEO": {
       "footer": "Leading AI Automation Agency based in Leiden, serving the Netherlands and global markets. Specializing in n8n workflows, WhatsApp Business APIs, and Voice AI Agents. Contact us for AI consulting in Zuid-Holland.",
       "keywords": "AI agency Leiden, AI consulting Netherlands, WhatsApp bots for business NL, Voice AI agents Randstad, n8n automation expert, AI ROI strategy, automated sales agents",
@@ -862,6 +1157,98 @@
             "desc": "Agents remember every detail of every conversation, forever."
           }
         ]
+      },
+      "Process": {
+        "title": "How We Deploy Your Agent",
+        "subtitle": "From use case to live production in 4 steps.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Discovery & Scoping",
+            "desc": "Map the use case: what the agent handles, which systems it touches, what a successful conversation looks like, and where it escalates to a human."
+          },
+          {
+            "number": "02",
+            "title": "Design & Prompt Engineering",
+            "desc": "Engineer the agent's behavior, guardrails, tone, and escalation paths. We test edge cases before a single line of integration code is written."
+          },
+          {
+            "number": "03",
+            "title": "Integration & Testing",
+            "desc": "Connect to your CRM, communication platform (WhatsApp, web chat, voice), and data sources. Controlled rollout with shadow mode before full launch."
+          },
+          {
+            "number": "04",
+            "title": "Deploy & Monitor",
+            "desc": "Production deployment with observability: response quality, escalation rates, conversion metrics, and a monthly performance review."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "What We Build",
+        "subtitle": "Every agent is purpose-built for a specific business function.",
+        "cases": [
+          {
+            "icon": "🎯",
+            "title": "Sales Qualification",
+            "desc": "Ask discovery questions, qualify leads on your criteria, and book calendar meetings automatically — 24/7."
+          },
+          {
+            "icon": "💬",
+            "title": "Customer Support",
+            "desc": "Answer product FAQs, handle order status, and process common requests without human intervention."
+          },
+          {
+            "icon": "📅",
+            "title": "Appointment Booking",
+            "desc": "Available on WhatsApp or web. Books, confirms, and sends reminders directly to your calendar system."
+          },
+          {
+            "icon": "🔄",
+            "title": "Lead Nurturing",
+            "desc": "Automated follow-up sequences for cold leads. Personalized cadences based on previous conversation history."
+          },
+          {
+            "icon": "🧑‍💼",
+            "title": "Client Onboarding",
+            "desc": "Guide new clients through setup, collect required documents, and answer onboarding questions automatically."
+          },
+          {
+            "icon": "📊",
+            "title": "Internal Operations",
+            "desc": "Answer HR questions, surface company policy documents, manage time-off requests, or handle internal helpdesk tickets."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "Common Questions",
+        "items": [
+          {
+            "q": "What's the difference between an AI agent and a chatbot?",
+            "a": "A chatbot follows a fixed decision tree. An AI agent reasons through context, takes multi-step actions (like looking up CRM data, booking a meeting, or sending an email), and handles novel inputs a chatbot would fail on."
+          },
+          {
+            "q": "Which platforms can the agent run on?",
+            "a": "WhatsApp Business API, web chat widgets, voice (inbound and outbound calls), Slack, email, and custom interfaces. We build for whatever channel your customers use."
+          },
+          {
+            "q": "How long does deployment take?",
+            "a": "A focused single-channel agent typically goes from scoping to production in 2–4 weeks. Multi-channel agents with complex integrations take 4–8 weeks."
+          },
+          {
+            "q": "What happens when the agent can't answer?",
+            "a": "Escalation is designed into every agent we build. When confidence is below threshold or the user requests a human, the agent hands off gracefully — with full conversation context passed to your team."
+          },
+          {
+            "q": "Is the data GDPR compliant?",
+            "a": "Yes. We define data handling at scoping: what flows through the agent, where it's stored, and for how long. On-premise deployment is available for sensitive industries."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "Ready to Deploy Your First Agent?",
+        "subtitle": "Book a free strategy call. We'll scope your highest-impact agent and tell you exactly what it can automate.",
+        "button": "Book a Free Strategy Call"
       },
       "SEO": {
         "title": "AI Agent Development Netherlands | 24/7 Automation",
@@ -1047,6 +1434,73 @@
           }
         ]
       },
+      "Process": {
+        "title": "How We Work",
+        "subtitle": "Architecture improvements delivered without stopping your business.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Stack Audit",
+            "desc": "Review your codebase, infrastructure, dependencies, and bottlenecks. Identify tech debt, single points of failure, and scaling constraints."
+          },
+          {
+            "number": "02",
+            "title": "Architecture Proposal",
+            "desc": "Design the target state: component boundaries, data flow, API contracts, infrastructure diagram, and a migration path with no big-bang rewrites."
+          },
+          {
+            "number": "03",
+            "title": "Proof of Concept",
+            "desc": "Build the highest-risk architectural change first to validate assumptions before committing to full implementation."
+          },
+          {
+            "number": "04",
+            "title": "Phased Implementation",
+            "desc": "Roll out changes incrementally with full test coverage. Zero-downtime migrations. Your system stays live throughout."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "Where We Help",
+        "subtitle": "Architecture work that delivers measurable outcomes, not just diagrams.",
+        "cases": [
+          {
+            "icon": "🏗️",
+            "title": "Tech Debt Remediation",
+            "desc": "Untangle tightly coupled codebases. Define clean interfaces, extract domains, and reduce the cost of every future change."
+          },
+          {
+            "icon": "📈",
+            "title": "Scaling for Growth",
+            "desc": "Database optimization, caching strategy, CDN configuration, and horizontal scaling — designed for your next 10x."
+          },
+          {
+            "icon": "🔀",
+            "title": "Monolith to Services",
+            "desc": "Migrate from monolith to services at the right pace. We prevent the distributed monolith trap most teams fall into."
+          },
+          {
+            "icon": "⚡",
+            "title": "Performance Optimization",
+            "desc": "Sub-100ms page loads. Server component strategy, edge caching, bundle splitting, and query optimization."
+          },
+          {
+            "icon": "☁️",
+            "title": "Cloud Infrastructure",
+            "desc": "AWS, GCP, or Hetzner architecture designed for cost efficiency, reliability, and compliance requirements."
+          },
+          {
+            "icon": "🤖",
+            "title": "AI System Integration",
+            "desc": "Add AI to existing systems without destabilising them. Clean service layers, fallback strategies, and full observability."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "Start with a Free Stack Audit",
+        "subtitle": "We review your current architecture and deliver a prioritised list of improvements — with effort and impact estimates. No commitment required.",
+        "button": "Book a Free Stack Audit"
+      },
       "SEO": {
         "title": "Software Architecture Consultant Netherlands | Scalable React Systems",
         "description": "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
@@ -1079,6 +1533,98 @@
             "desc": "Smaller, specialized models often outperform giant, expensive ones."
           }
         ]
+      },
+      "Process": {
+        "title": "From Data to Deployed Model",
+        "subtitle": "Private AI models built on your data, running on your infrastructure.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Use Case Definition",
+            "desc": "Define what the model must do, what data it will train on, and how success is measured — accuracy, latency, and cost per query targets agreed upfront."
+          },
+          {
+            "number": "02",
+            "title": "Data Preparation",
+            "desc": "Clean, structure, and format your training data. Build instruction datasets, preference pairs, or domain corpora depending on the fine-tuning approach."
+          },
+          {
+            "number": "03",
+            "title": "Fine-Tuning & Evaluation",
+            "desc": "Train on Llama 3, Mistral, or other open-source base models. Evaluate against benchmarks and your specific test cases before any deployment."
+          },
+          {
+            "number": "04",
+            "title": "Private Deployment",
+            "desc": "Deploy on your infrastructure using vLLM or Ollama. No data ever leaves your environment. Full documentation and handover included."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "What We Build",
+        "subtitle": "Specialised models that outperform general-purpose AI on your domain.",
+        "cases": [
+          {
+            "icon": "📄",
+            "title": "Document Intelligence",
+            "desc": "Extract, classify, and summarise from contracts, invoices, and reports — trained on your specific document formats."
+          },
+          {
+            "icon": "🧠",
+            "title": "Internal Knowledge Base",
+            "desc": "Answer employee questions from company docs, SOPs, and wikis. Accurate, grounded answers with source citations."
+          },
+          {
+            "icon": "🎧",
+            "title": "Customer Service AI",
+            "desc": "Trained on your product knowledge, policies, and support history. Knows your business — not just general web data."
+          },
+          {
+            "icon": "⚖️",
+            "title": "Legal & Compliance",
+            "desc": "Trained on case law, regulations, and internal policies. Flag risks in contracts and draft clause suggestions automatically."
+          },
+          {
+            "icon": "🏥",
+            "title": "Medical & Clinical",
+            "desc": "GDPR-compliant clinical note summarisation and coding assistance, running fully on-premise with no external API calls."
+          },
+          {
+            "icon": "💻",
+            "title": "Code Generation",
+            "desc": "Fine-tuned on your codebase conventions, internal libraries, and architecture patterns. Generates code that fits your standards."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "Common Questions",
+        "items": [
+          {
+            "q": "What's the difference between fine-tuning and RAG?",
+            "a": "RAG retrieves relevant documents at query time and passes them to a general model. Fine-tuning changes the model's weights so it internalises domain knowledge. We typically recommend RAG for knowledge bases and fine-tuning for tone, format, and specialised reasoning tasks."
+          },
+          {
+            "q": "What base models do you work with?",
+            "a": "Primarily Llama 3, Mistral, and Qwen — open-source models that can be deployed privately. We also work with Claude and GPT-4 for RAG pipelines where cloud hosting is acceptable."
+          },
+          {
+            "q": "How much data do I need for fine-tuning?",
+            "a": "For instruction fine-tuning, 500–5,000 high-quality examples are typically sufficient. Quality matters more than quantity. We help you build the dataset if you don't have one ready."
+          },
+          {
+            "q": "How is the model deployed?",
+            "a": "On your infrastructure using vLLM or Ollama depending on scale. We handle server setup, API endpoint configuration, authentication, and monitoring. You get full ownership and documentation."
+          },
+          {
+            "q": "Is this GDPR compliant?",
+            "a": "Yes. All training and inference happens within your environment. No data is sent to third-party AI APIs during inference. We document data lineage and retention policies at scoping."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "Ready to Build Your Private AI?",
+        "subtitle": "Book a free strategy call. We'll assess your use case, recommend the right approach, and scope an implementation that fits your data and budget.",
+        "button": "Book a Free Strategy Call"
       },
       "SEO": {
         "title": "Custom LLM Development & Fine-Tuning Netherlands",
@@ -1178,6 +1724,12 @@
         }
       ]
     },
+    "CTA": {
+      "badge": "Ready to build?",
+      "title": "Start Your Next.js Project",
+      "subtitle": "Free architecture consultation. We map out your stack, timeline, and costs — no strings attached.",
+      "button": "Book Free Consultation"
+    },
     "SEO": {
       "keywords": "Next.js development agency Netherlands, hire Next.js developer, Next.js consulting Netherlands, React Next.js agency Leiden, Next.js App Router specialist, server components consulting",
       "extendedDesc": "As a dedicated Next.js development agency in Leiden, we build production-grade web applications for businesses across the Netherlands. Our team specializes in the latest Next.js features including App Router, React Server Components, and edge rendering. Contact us for a free Next.js architecture review."
@@ -1273,6 +1825,12 @@
           "a": "Yes. SPAs often have poor LCP and CLS scores. We implement code splitting, lazy loading, bundle optimization, and often recommend a move to Next.js for SSR benefits."
         }
       ]
+    },
+    "CTA": {
+      "badge": "Free 1-hour session",
+      "title": "Book Your React Audit",
+      "subtitle": "We review your codebase, identify the top 3 issues, and give you a clear action plan — even if we never work together.",
+      "button": "Book Free Audit"
     },
     "SEO": {
       "keywords": "React consulting Netherlands, React architecture consultant, hire React developer Netherlands, React codebase audit, React refactoring services, senior React developer Leiden",

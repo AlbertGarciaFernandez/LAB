@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Accounting Firm Automation Netherlands | Invoice & CRM Systems | CodeHunter Lab",
+        title: "Accounting Firm Automation Netherlands — CodeHunter Lab",
         description: "Automate invoice processing, client communication, and financial reporting. Custom automation systems for accounting firms in the Netherlands. Based in Leiden.",
         keywords: [
             "accounting firm automation Netherlands",
@@ -41,7 +41,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Accounting Firm Automation Netherlands | CodeHunter Lab",
+            title: "Accounting Firm Automation Netherlands — CodeHunter Lab",
             description: "Custom automation systems for accounting firms in the Netherlands — invoice processing, client communication, and financial reporting on autopilot.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",

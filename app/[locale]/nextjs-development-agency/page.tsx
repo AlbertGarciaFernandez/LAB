@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Next.js Development Agency Netherlands | React & TypeScript | CodeHunter Lab",
+        title: "Next.js Development Agency Netherlands — CodeHunter Lab",
         description: "Hire expert Next.js developers in the Netherlands. We build high-performance web apps with App Router, React Server Components, and TypeScript. Based in Leiden, serving Amsterdam & Rotterdam.",
         keywords: [
             "Next.js development agency",
@@ -39,7 +39,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Next.js Development Agency Netherlands | React & TypeScript | CodeHunter Lab",
+            title: "Next.js Development Agency Netherlands — CodeHunter Lab",
             description: "Hire expert Next.js developers in the Netherlands. We build high-performance web apps with App Router, React Server Components, and TypeScript. Based in Leiden.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
@@ -250,16 +250,14 @@ export default function NextJsDevelopmentAgency({ params: { locale } }: { params
             <section className="py-24 relative z-10">
                 <div className="max-w-3xl mx-auto px-6 text-center">
                     <GlassCard className="p-16 border-hunter-green/20 bg-hunter-green/5" hoverEffect={false}>
-                        <p className="text-sm font-mono text-hunter-green uppercase tracking-widest mb-6">Ready to build?</p>
-                        <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tighter uppercase">Start Your Next.js Project</h2>
-                        <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                            Free architecture consultation. We map out your stack, timeline, and costs — no strings attached.
-                        </p>
+                        <p className="text-sm font-mono text-hunter-green uppercase tracking-widest mb-6">{t("CTA.badge")}</p>
+                        <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tighter uppercase">{t("CTA.title")}</h2>
+                        <p className="text-gray-400 text-lg mb-10 leading-relaxed">{t("CTA.subtitle")}</p>
                         <Link
-                            href="/#contact"
+                            href="/ai-consulting"
                             className="inline-block px-12 py-5 bg-hunter-green text-black font-black uppercase tracking-widest text-sm rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(0,230,162,0.4)]"
                         >
-                            Book Free Consultation
+                            {t("CTA.button")}
                         </Link>
                     </GlassCard>
                 </div>

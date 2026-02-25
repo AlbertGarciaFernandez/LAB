@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "React Consulting Services Netherlands | Architecture & Audit | CodeHunter Lab",
+        title: "React Consulting Netherlands — CodeHunter Lab",
         description: "Senior React consulting in the Netherlands. Codebase audits, architecture design, and React migrations. We join your team and fix the hard problems. Based in Leiden.",
         keywords: [
             "React consulting Netherlands",
@@ -39,7 +39,7 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "React Consulting Services Netherlands | Architecture & Audit | CodeHunter Lab",
+            title: "React Consulting Netherlands — CodeHunter Lab",
             description: "Senior React consulting in the Netherlands. Codebase audits, architecture design, and React migrations. We join your team and fix the hard problems. Based in Leiden.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
@@ -232,16 +232,18 @@ export default function ReactConsulting({ params: { locale } }: { params: { loca
 
             {/* Process Section */}
             <section className="py-32 relative z-10">
-                <div className="max-w-4xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-6">
                     <h2 className="text-4xl md:text-6xl font-black mb-16 tracking-tighter uppercase text-center">{t("Process.title")}</h2>
-                    <div className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {[0, 1, 2, 3].map((step) => (
-                            <GlassCard key={step} className="p-8 border-l-4 border-l-hunter-orange group hover:bg-white/[0.02] transition-colors" hoverEffect={false}>
-                                <div className="flex justify-between items-start mb-4">
-                                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">{t(`Process.steps.${step}.title`)}</h3>
-                                    <span className="text-hunter-orange font-mono text-xl opacity-30">0{step + 1}</span>
+                            <GlassCard key={step} className="p-8 flex gap-6" hoverEffect={true} glowColor="orange">
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-hunter-orange/10 flex items-center justify-center border border-hunter-orange/30">
+                                    <span className="text-hunter-orange font-mono text-sm font-black">0{step + 1}</span>
                                 </div>
-                                <p className="text-gray-400 text-lg leading-relaxed">{t(`Process.steps.${step}.desc`)}</p>
+                                <div>
+                                    <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tight">{t(`Process.steps.${step}.title`)}</h3>
+                                    <p className="text-gray-400 leading-relaxed">{t(`Process.steps.${step}.desc`)}</p>
+                                </div>
                             </GlassCard>
                         ))}
                     </div>
@@ -271,16 +273,14 @@ export default function ReactConsulting({ params: { locale } }: { params: { loca
             <section className="py-24 relative z-10">
                 <div className="max-w-3xl mx-auto px-6 text-center">
                     <GlassCard className="p-16 border-hunter-orange/20 bg-hunter-orange/5" hoverEffect={false}>
-                        <p className="text-sm font-mono text-hunter-orange uppercase tracking-widest mb-6">Free 1-hour session</p>
-                        <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tighter uppercase">Book Your Audit</h2>
-                        <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                            We review your codebase, identify the top 3 issues, and give you a clear action plan — even if we never work together.
-                        </p>
+                        <p className="text-sm font-mono text-hunter-orange uppercase tracking-widest mb-6">{t("CTA.badge")}</p>
+                        <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tighter uppercase">{t("CTA.title")}</h2>
+                        <p className="text-gray-400 text-lg mb-10 leading-relaxed">{t("CTA.subtitle")}</p>
                         <Link
-                            href="/#contact"
+                            href="/ai-consulting"
                             className="inline-block px-12 py-5 bg-hunter-orange text-black font-black uppercase tracking-widest text-sm rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,122,60,0.4)]"
                         >
-                            Book Free Audit
+                            {t("CTA.button")}
                         </Link>
                     </GlassCard>
                 </div>
