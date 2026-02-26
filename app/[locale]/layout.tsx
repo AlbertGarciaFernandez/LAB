@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import CookieConsent from "@/components/ui/CookieConsent";
+import GoogleAnalyticsConditional from "@/components/analytics/GoogleAnalyticsConditional";
 
 
 //const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -94,6 +95,7 @@ export default async function RootLayout({
             {children}
             <Footer />
             <CookieConsent />
+            <GoogleAnalyticsConditional />
           </div>
         </NextIntlClientProvider>
         <script
