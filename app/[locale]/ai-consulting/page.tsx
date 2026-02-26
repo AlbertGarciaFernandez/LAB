@@ -478,10 +478,10 @@ const AIConsultingPage = () => {
                     <div className="max-w-3xl mx-auto">
                         <div className="text-center mb-14">
                             <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase mb-4">
-                                FAQ
+                                AI CONSULTING FAQ
                             </div>
                             <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter">
-                                Frequently Asked <span className="text-hunter-green">Questions</span>
+                                AI Consulting <span className="text-hunter-green">FAQ — Netherlands</span>
                             </h2>
                         </div>
 

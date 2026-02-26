@@ -559,8 +559,8 @@
     },
     "Migration": {
       "badge": "Modelos de Colaboración",
-      "title": "Elige Tu",
-      "highlight": "Modelo de Colaboración",
+      "title": "Planes de Consultoría IA",
+      "highlight": "para Cada Etapa",
       "legacy": {
         "title": "Sprint de Estrategia IA",
         "desc": "Auditoría de flujos + mapa de oportunidades de automatización.<br />Propuesta de arquitectura técnica.<br />Estimación de presupuesto y plazos.<br />Alcance fijo, 1–2 semanas.",
@@ -584,8 +584,8 @@
     },
     "WhoItsFor": {
       "badge": "Para Quién Es",
-      "title": "Esto Es Para Ti",
-      "highlight": "Si...",
+      "title": "Servicios de Consultoría IA",
+      "highlight": "para Tu Negocio",
       "description": "Trabajamos con fundadores, CTOs y responsables de operaciones que ya superaron la fase de \"¿deberíamos probar IA?\" y necesitan un socio técnico que construya y despliegue.",
       "items": [
         "Has probado herramientas de IA pero no las has conectado a operaciones reales",
@@ -1157,7 +1157,7 @@
         "cta": "Desplegar Agente"
       },
       "Features": {
-        "title": "¿Por qué Agentes?",
+        "title": "¿Por qué Agentes IA?",
         "cards": [
           {
             "title": "Respuesta Instantánea",
@@ -1200,7 +1200,7 @@
         ]
       },
       "UseCases": {
-        "title": "Qué Construimos",
+        "title": "Casos de Uso de Agentes IA",
         "subtitle": "Cada agente está diseñado específicamente para una función de negocio concreta.",
         "cases": [
           {
@@ -1236,7 +1236,7 @@
         ]
       },
       "FAQ": {
-        "title": "Preguntas Frecuentes",
+        "title": "FAQ de Agentes IA",
         "items": [
           {
             "q": "¿Cuál es la diferencia entre un agente IA y un chatbot?",
@@ -1282,7 +1282,7 @@
         "cta": "Empezar Migración"
       },
       "Features": {
-        "title": "¿Por qué Migrar?",
+        "title": "¿Por qué Migrar a n8n?",
         "cards": [
           {
             "title": "Control de Costes",
@@ -1396,7 +1396,7 @@
         ]
       },
       "FAQ": {
-        "title": "Preguntas Frecuentes",
+        "title": "FAQ de Migración n8n",
         "items": [
           {
             "q": "¿Cuánto tarda una migración?",
@@ -1433,7 +1433,7 @@
         "cta": "Auditar tu Stack"
       },
       "Features": {
-        "title": "Arquitectura Primero",
+        "title": "Principios de Arquitectura de Sistemas",
         "cards": [
           {
             "title": "Escalabilidad",
@@ -1450,7 +1450,7 @@
         ]
       },
       "Process": {
-        "title": "Cómo Trabajamos",
+        "title": "Proceso de Diseño de Arquitectura",
         "subtitle": "Mejoras de arquitectura entregadas sin detener tu negocio.",
         "steps": [
           {
@@ -1476,7 +1476,7 @@
         ]
       },
       "UseCases": {
-        "title": "Dónde Ayudamos",
+        "title": "Casos de Uso de Arquitectura de Sistemas",
         "subtitle": "Trabajo de arquitectura que entrega resultados medibles, no solo diagramas.",
         "cases": [
           {
@@ -1533,7 +1533,7 @@
         "cta": "Entrenar Modelo"
       },
       "Features": {
-        "title": "Más allá de GPT-4",
+        "title": "¿Por qué Crear un LLM Personalizado?",
         "cards": [
           {
             "title": "Seguridad de Datos",
@@ -1576,7 +1576,7 @@
         ]
       },
       "UseCases": {
-        "title": "Qué Construimos",
+        "title": "Casos de Uso de LLM Personalizado",
         "subtitle": "Modelos especializados que superan a la IA de propósito general en tu dominio.",
         "cases": [
           {
@@ -1612,7 +1612,7 @@
         ]
       },
       "FAQ": {
-        "title": "Preguntas Frecuentes",
+        "title": "FAQ de Desarrollo de LLM Personalizado",
         "items": [
           {
             "q": "¿Cuál es la diferencia entre fine-tuning y RAG?",

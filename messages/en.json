@@ -559,8 +559,8 @@
     },
     "Migration": {
       "badge": "Engagement Models",
-      "title": "Choose Your",
-      "highlight": "Engagement Model",
+      "title": "AI Consulting Plans",
+      "highlight": "for Every Stage",
       "legacy": {
         "title": "AI Strategy Sprint",
         "desc": "Workflow audit + automation opportunity map.<br />Technical architecture proposal.<br />Budget & timeline estimate.<br />Fixed scope, 1–2 weeks.",
@@ -584,8 +584,8 @@
     },
     "WhoItsFor": {
       "badge": "Who It's For",
-      "title": "This Is For You",
-      "highlight": "If...",
+      "title": "AI Consulting Services",
+      "highlight": "for Your Business",
       "description": "We work with founders, CTOs, and operations leaders who are past the \"should we try AI?\" stage and need a technical partner to build and ship.",
       "items": [
         "You've tested AI tools but haven't connected them to real operations",
@@ -1157,7 +1157,7 @@
         "cta": "Deploy Your Agent"
       },
       "Features": {
-        "title": "Why Agents?",
+        "title": "Why AI Agents?",
         "cards": [
           {
             "title": "Instant Response",
@@ -1200,7 +1200,7 @@
         ]
       },
       "UseCases": {
-        "title": "What We Build",
+        "title": "AI Agent Use Cases",
         "subtitle": "Every agent is purpose-built for a specific business function.",
         "cases": [
           {
@@ -1236,7 +1236,7 @@
         ]
       },
       "FAQ": {
-        "title": "Common Questions",
+        "title": "AI Agent Development FAQ",
         "items": [
           {
             "q": "What's the difference between an AI agent and a chatbot?",
@@ -1282,7 +1282,7 @@
         "cta": "Start Migration"
       },
       "Features": {
-        "title": "Why Migrate?",
+        "title": "Why Migrate to n8n?",
         "cards": [
           {
             "title": "Cost Control",
@@ -1396,7 +1396,7 @@
         ]
       },
       "FAQ": {
-        "title": "Common Questions",
+        "title": "n8n Migration FAQ",
         "items": [
           {
             "q": "How long does a migration take?",
@@ -1433,7 +1433,7 @@
         "cta": "Audit Your Stack"
       },
       "Features": {
-        "title": "Architecture First",
+        "title": "System Architecture Principles",
         "cards": [
           {
             "title": "Scalability",
@@ -1450,7 +1450,7 @@
         ]
       },
       "Process": {
-        "title": "How We Work",
+        "title": "Architecture Design Process",
         "subtitle": "Architecture improvements delivered without stopping your business.",
         "steps": [
           {
@@ -1476,7 +1476,7 @@
         ]
       },
       "UseCases": {
-        "title": "Where We Help",
+        "title": "System Architecture Use Cases",
         "subtitle": "Architecture work that delivers measurable outcomes, not just diagrams.",
         "cases": [
           {
@@ -1533,7 +1533,7 @@
         "cta": "Train Your Model"
       },
       "Features": {
-        "title": "Beyond GPT-4",
+        "title": "Why Build a Custom LLM?",
         "cards": [
           {
             "title": "Data Security",
@@ -1576,7 +1576,7 @@
         ]
       },
       "UseCases": {
-        "title": "What We Build",
+        "title": "Custom LLM Use Cases",
         "subtitle": "Specialised models that outperform general-purpose AI on your domain.",
         "cases": [
           {
@@ -1612,7 +1612,7 @@
         ]
       },
       "FAQ": {
-        "title": "Common Questions",
+        "title": "Custom LLM Development FAQ",
         "items": [
           {
             "q": "What's the difference between fine-tuning and RAG?",
