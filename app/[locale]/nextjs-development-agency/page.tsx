@@ -4,7 +4,7 @@ import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { CheckIcon } from "@phosphor-icons/react/dist/ssr";
+import { CheckIcon, LightningIcon, ArrowsClockwiseIcon, StackIcon } from "@phosphor-icons/react/dist/ssr";
 import * as motion from "framer-motion/client";
 import Header from "@/components/layout/Header";
 
@@ -169,19 +169,19 @@ export default function NextJsDevelopmentAgency({ params: { locale } }: { params
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid md:grid-cols-3 gap-8">
                         <GlassCard hoverEffect={true} glowColor="green" className="p-10 flex flex-col h-full">
-                            <div className="w-14 h-14 rounded-2xl bg-hunter-green/10 flex items-center justify-center text-3xl mb-8 border border-hunter-green/20">⚡</div>
+                            <div className="w-14 h-14 rounded-2xl bg-hunter-green/10 flex items-center justify-center mb-8 border border-hunter-green/20"><LightningIcon size={28} className="text-hunter-green" /></div>
                             <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">{t("Services.ssr.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.ssr.description")}</p>
                         </GlassCard>
 
                         <GlassCard hoverEffect={true} glowColor="green" className="p-10 border-hunter-green/30 bg-hunter-green/5 flex flex-col h-full shadow-[0_0_50px_rgba(0,230,162,0.1)]">
-                            <div className="w-14 h-14 rounded-2xl bg-hunter-green/20 flex items-center justify-center text-3xl mb-8 border border-hunter-green/40">🔄</div>
+                            <div className="w-14 h-14 rounded-2xl bg-hunter-green/20 flex items-center justify-center mb-8 border border-hunter-green/40"><ArrowsClockwiseIcon size={28} className="text-hunter-green" /></div>
                             <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">{t("Services.migration.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.migration.description")}</p>
                         </GlassCard>
 
                         <GlassCard hoverEffect={true} glowColor="green" className="p-10 flex flex-col h-full">
-                            <div className="w-14 h-14 rounded-2xl bg-hunter-green/10 flex items-center justify-center text-3xl mb-8 border border-hunter-green/20">🏗️</div>
+                            <div className="w-14 h-14 rounded-2xl bg-hunter-green/10 flex items-center justify-center mb-8 border border-hunter-green/20"><StackIcon size={28} className="text-hunter-green" /></div>
                             <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">{t("Services.fullstack.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.fullstack.description")}</p>
                         </GlassCard>

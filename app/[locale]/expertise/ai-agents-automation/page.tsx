@@ -6,6 +6,9 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 import Header from "@/components/layout/Header";
+import { TargetIcon, ChatCircleDotsIcon, CalendarCheckIcon, FunnelIcon, HandshakeIcon, ChartBarIcon } from "@phosphor-icons/react/dist/ssr";
+
+const useCaseIcons = [TargetIcon, ChatCircleDotsIcon, CalendarCheckIcon, FunnelIcon, HandshakeIcon, ChartBarIcon];
 
 const baseUrl = "https://www.codehunterlab.com";
 const path = "/expertise/ai-agents-automation";
@@ -162,13 +165,16 @@ export default function AIAgentsPage({ params: { locale } }: { params: { locale:
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t("UseCases.subtitle")}</p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {t.raw("UseCases.cases").map((c: any, idx: number) => (
-                            <GlassCard key={idx} hoverEffect={true} glowColor="green" className="p-8">
-                                <span className="text-3xl mb-4 block">{c.icon}</span>
-                                <h3 className="text-lg font-bold mb-2 text-white">{c.title}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">{c.desc}</p>
-                            </GlassCard>
-                        ))}
+                        {t.raw("UseCases.cases").map((c: any, idx: number) => {
+                            const Icon = useCaseIcons[idx];
+                            return (
+                                <GlassCard key={idx} hoverEffect={true} glowColor="green" className="p-8">
+                                    {Icon && <Icon size={32} className="mb-4 text-hunter-green" />}
+                                    <h3 className="text-lg font-bold mb-2 text-white">{c.title}</h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed">{c.desc}</p>
+                                </GlassCard>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

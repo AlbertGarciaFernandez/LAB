@@ -793,7 +793,10 @@
         "highlight": "Fragmented Systems"
       },
       "description": "We are the <strong>software integration company</strong> that makes your apps talk to each other. Connect your <strong>CRM</strong>, <strong>ERP</strong>, and <strong>Internal Tools</strong> to eliminate errors and save time.",
-      "cta": "Discuss Your Integration"
+      "cta": {
+        "primary": "Discuss Your Integration",
+        "secondary": "See How It Works"
+      }
     },
     "Diagram": {
       "source": {
@@ -858,8 +861,8 @@
           "a": "It's the process of connecting different sub-systems (like your CRM, ERP, and payment gateways) into a single, cohesive unit where data flows automatically."
         },
         {
-          "q": "Do you use automation tools like n8n or Make.com?",
-          "a": "Yes. We are experts in n8n and Make, but we also build custom API bridges when 'off-the-shelf' tools hit their limits."
+          "q": "Do you use n8n for automation?",
+          "a": "Yes, n8n is our primary automation platform. For more complex scenarios we write custom code — Node.js or Python integrations — depending on what the project actually needs."
         },
         {
           "q": "How do you handle data security during integration?",
@@ -867,7 +870,19 @@
         }
       ]
     },
+    "WhyUs": {
+      "title": "Integration That Actually Works",
+      "without": {
+        "title": "Without Integration",
+        "points": ["Manual copy-paste between apps", "Data always out of sync", "Hours wasted on admin tasks", "Human errors in critical records", "No visibility into your data flows"]
+      },
+      "with": {
+        "title": "With CodeHunter Lab",
+        "points": ["Data flows automatically 24/7", "Single source of truth across all apps", "Your team focuses on real work", "Validated data, zero manual errors", "Full monitoring, alerts and audit trail"]
+      }
+    },
     "CTA": {
+      "badge": "FREE INTEGRATION AUDIT",
       "title": "Ready to Connect Your Systems?",
       "subtitle": "Free integration audit. We map your current data flows, identify the biggest bottleneck, and propose a specific solution. No commitment required.",
       "button": "Book a Free Integration Audit"

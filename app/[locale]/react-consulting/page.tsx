@@ -4,7 +4,7 @@ import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { CheckIcon, XIcon } from "@phosphor-icons/react/dist/ssr";
+import { CheckIcon, XIcon, MagnifyingGlassIcon, TreeStructureIcon, ArrowsClockwiseIcon } from "@phosphor-icons/react/dist/ssr";
 import * as motion from "framer-motion/client";
 import Header from "@/components/layout/Header";
 
@@ -172,19 +172,19 @@ export default function ReactConsulting({ params: { locale } }: { params: { loca
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid md:grid-cols-3 gap-8">
                         <GlassCard hoverEffect={true} glowColor="orange" className="p-10 flex flex-col h-full">
-                            <div className="w-14 h-14 rounded-2xl bg-hunter-orange/10 flex items-center justify-center text-3xl mb-8 border border-hunter-orange/20">🔍</div>
+                            <div className="w-14 h-14 rounded-2xl bg-hunter-orange/10 flex items-center justify-center mb-8 border border-hunter-orange/20"><MagnifyingGlassIcon size={28} className="text-hunter-orange" /></div>
                             <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">{t("Services.audit.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.audit.description")}</p>
                         </GlassCard>
 
                         <GlassCard hoverEffect={true} glowColor="orange" className="p-10 border-hunter-orange/30 bg-hunter-orange/5 flex flex-col h-full shadow-[0_0_50px_rgba(255,122,60,0.1)]">
-                            <div className="w-14 h-14 rounded-2xl bg-hunter-orange/20 flex items-center justify-center text-3xl mb-8 border border-hunter-orange/40">🏗️</div>
+                            <div className="w-14 h-14 rounded-2xl bg-hunter-orange/20 flex items-center justify-center mb-8 border border-hunter-orange/40"><TreeStructureIcon size={28} className="text-hunter-orange" /></div>
                             <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">{t("Services.architecture.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.architecture.description")}</p>
                         </GlassCard>
 
                         <GlassCard hoverEffect={true} glowColor="orange" className="p-10 flex flex-col h-full">
-                            <div className="w-14 h-14 rounded-2xl bg-hunter-orange/10 flex items-center justify-center text-3xl mb-8 border border-hunter-orange/20">🔄</div>
+                            <div className="w-14 h-14 rounded-2xl bg-hunter-orange/10 flex items-center justify-center mb-8 border border-hunter-orange/20"><ArrowsClockwiseIcon size={28} className="text-hunter-orange" /></div>
                             <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">{t("Services.migration.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.migration.description")}</p>
                         </GlassCard>

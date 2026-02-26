@@ -6,6 +6,16 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 import Header from "@/components/layout/Header";
+import {
+    DatabaseIcon,
+    GearSixIcon,
+    RocketIcon,
+    PlugIcon,
+    BuildingsIcon,
+    ArrowsClockwiseIcon,
+    CheckIcon,
+    XIcon,
+} from "@phosphor-icons/react/dist/ssr";
 
 const baseUrl = "https://www.codehunterlab.com";
 const path = "/it-system-integration";
@@ -54,32 +64,11 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
     const faqJsonLd = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is system integration?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It's the process of connecting different sub-systems (like your CRM, ERP, and payment gateways) into a single, cohesive unit where data flows automatically."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do you use automation tools like n8n or Make.com?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. We are experts in n8n and Make, but we also build custom API bridges when 'off-the-shelf' tools hit their limits."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do you handle data security during integration?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We prioritize data sovereignty. We often deploy self-hosted integration engines so your sensitive business data never leaves your infrastructure."
-                }
-            }
-        ]
+        "mainEntity": (t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a },
+        })),
     };
 
     const jsonLd = {
@@ -103,6 +92,9 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
             ]
         }
     };
+
+    const withoutPoints = t.raw("WhyUs.without.points") as string[];
+    const withPoints = t.raw("WhyUs.with.points") as string[];
 
     return (
         <>
@@ -151,22 +143,41 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="max-w-2xl text-lg md:text-2xl text-gray-400 mb-12 leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+                    className="max-w-2xl text-lg md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") as string }}
                 />
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
+                    className="flex flex-col sm:flex-row gap-5"
                 >
                     <Link
                         href="/#contact"
                         className="px-10 py-5 bg-blue-600 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-blue-500 hover:scale-105 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)]"
                     >
-                        {t("Hero.cta")}
+                        {t("Hero.cta.primary")}
+                    </Link>
+                    <Link
+                        href="#services"
+                        className="px-10 py-5 bg-white/5 border border-white/10 backdrop-blur-xl text-white font-bold uppercase tracking-widest text-sm rounded-full hover:bg-white/10 transition-all"
+                    >
+                        {t("Hero.cta.secondary")}
                     </Link>
                 </motion.div>
+            </section>
+
+            {/* Tech Stack Marquee */}
+            <section className="py-12 border-y border-white/5 bg-near-black/50 backdrop-blur-sm relative z-10 overflow-hidden">
+                <div className="flex space-x-12 animate-marquee whitespace-nowrap opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                    {["n8n", "REST APIs", "GraphQL", "Webhooks", "HubSpot", "Salesforce", "PostgreSQL", "Airtable", "Node.js", "Python"].map((tech) => (
+                        <span key={tech} className="text-2xl md:text-3xl font-black tracking-tighter text-white uppercase italic">{tech}</span>
+                    ))}
+                    {["n8n", "REST APIs", "GraphQL", "Webhooks", "HubSpot", "Salesforce", "PostgreSQL", "Airtable", "Node.js", "Python"].map((tech) => (
+                        <span key={`${tech}-2`} className="text-2xl md:text-3xl font-black tracking-tighter text-white uppercase italic">{tech}</span>
+                    ))}
+                </div>
             </section>
 
             {/* Visual Workflow Section */}
@@ -182,20 +193,20 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
                             className="relative z-10 w-full md:w-1/3"
                         >
                             <GlassCard className="p-10 text-center border-white/5 hover:border-blue-500/30 transition-colors" hoverEffect={true} glowColor="green">
-                                <div className="text-5xl mb-6">📊</div>
+                                <div className="mb-6"><DatabaseIcon size={48} className="text-white/60" /></div>
                                 <h3 className="text-2xl font-black mb-3 uppercase tracking-tight">{t("Diagram.source.title")}</h3>
                                 <p className="text-gray-400 font-medium">{t("Diagram.source.desc")}</p>
                             </GlassCard>
                         </motion.div>
 
-                        {/* Engine Hook */}
+                        {/* Engine */}
                         <motion.div
                             animate={{ scale: [1, 1.05, 1], rotate: [0, 2, -2, 0] }}
                             transition={{ duration: 4, repeat: Infinity }}
                             className="relative z-20 w-full md:w-1/3"
                         >
                             <GlassCard className="p-10 text-center border-blue-500/30 bg-blue-500/5 shadow-[0_0_50px_rgba(59,130,246,0.1)]" hoverEffect={true} glowColor="green">
-                                <div className="text-5xl mb-6">⚙️</div>
+                                <div className="mb-6"><GearSixIcon size={48} className="text-blue-400" /></div>
                                 <h3 className="text-2xl font-black mb-3 uppercase tracking-tight text-blue-400">{t("Diagram.engine.title")}</h3>
                                 <p className="text-blue-200/60 font-mono text-sm">{t("Diagram.engine.desc")}</p>
                             </GlassCard>
@@ -207,7 +218,7 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
                             className="relative z-10 w-full md:w-1/3"
                         >
                             <GlassCard className="p-10 text-center border-white/5 hover:border-purple-500/30 transition-colors" hoverEffect={true} glowColor="green">
-                                <div className="text-5xl mb-6">🚀</div>
+                                <div className="mb-6"><RocketIcon size={48} className="text-white/60" /></div>
                                 <h3 className="text-2xl font-black mb-3 uppercase tracking-tight">{t("Diagram.outcome.title")}</h3>
                                 <p className="text-gray-400 font-medium">{t("Diagram.outcome.desc")}</p>
                             </GlassCard>
@@ -217,52 +228,95 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
             </section>
 
             {/* Core Services */}
-            <section className="py-32 max-w-7xl mx-auto px-6">
-                <div className="grid md:grid-cols-3 gap-8">
-                    <GlassCard className="p-10 border-white/5 hover:bg-white/[0.02]" hoverEffect={true} glowColor="green">
-                        <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-3xl mb-8 border border-blue-500/20">🔌</div>
-                        <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">{t("Services.api.title")}</h3>
-                        <p className="text-gray-400 text-lg leading-relaxed">{t("Services.api.desc")}</p>
-                    </GlassCard>
+            <section id="services" className="py-32 relative z-10">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <GlassCard className="p-10 flex flex-col h-full border-white/5 hover:bg-white/[0.02]" hoverEffect={true} glowColor="green">
+                            <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-8 border border-blue-500/20"><PlugIcon size={28} className="text-blue-400" /></div>
+                            <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">{t("Services.api.title")}</h3>
+                            <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.api.desc")}</p>
+                        </GlassCard>
 
-                    <GlassCard className="p-10 border-white/5 hover:bg-white/[0.02]" hoverEffect={true} glowColor="green">
-                        <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-3xl mb-8 border border-indigo-500/20">🏗️</div>
-                        <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">{t("Services.legacy.title")}</h3>
-                        <p className="text-gray-400 text-lg leading-relaxed">{t("Services.legacy.desc")}</p>
-                    </GlassCard>
+                        <GlassCard className="p-10 flex flex-col h-full border-blue-500/30 bg-blue-500/5 shadow-[0_0_50px_rgba(59,130,246,0.1)]" hoverEffect={true} glowColor="green">
+                            <div className="w-14 h-14 rounded-2xl bg-indigo-500/20 flex items-center justify-center mb-8 border border-indigo-500/40"><BuildingsIcon size={28} className="text-indigo-400" /></div>
+                            <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">{t("Services.legacy.title")}</h3>
+                            <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.legacy.desc")}</p>
+                        </GlassCard>
 
-                    <GlassCard className="p-10 border-white/5 hover:bg-white/[0.02]" hoverEffect={true} glowColor="green">
-                        <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-3xl mb-8 border border-purple-500/20">🔄</div>
-                        <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">{t("Services.sync.title")}</h3>
-                        <p className="text-gray-400 text-lg leading-relaxed">{t("Services.sync.desc")}</p>
-                    </GlassCard>
+                        <GlassCard className="p-10 flex flex-col h-full border-white/5 hover:bg-white/[0.02]" hoverEffect={true} glowColor="green">
+                            <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-8 border border-purple-500/20"><ArrowsClockwiseIcon size={28} className="text-purple-400" /></div>
+                            <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">{t("Services.sync.title")}</h3>
+                            <p className="text-gray-400 text-lg leading-relaxed flex-grow">{t("Services.sync.desc")}</p>
+                        </GlassCard>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Us — Before vs After */}
+            <section className="py-24 bg-surface-dark/30 relative z-10 border-y border-white/5">
+                <div className="max-w-5xl mx-auto px-6">
+                    <h2 className="text-4xl md:text-6xl font-black mb-16 tracking-tighter uppercase text-center">{t("WhyUs.title")}</h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <GlassCard className="p-10 bg-white/[0.02]" hoverEffect={false}>
+                            <div className="flex items-center gap-3 mb-8">
+                                <span className="w-3 h-3 rounded-full bg-gray-500" />
+                                <h3 className="text-2xl font-black text-white/70 uppercase tracking-tight">{t("WhyUs.without.title")}</h3>
+                            </div>
+                            <ul className="space-y-4">
+                                {withoutPoints.map((point, idx) => (
+                                    <li key={idx} className="flex items-start gap-4">
+                                        <XIcon className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                                        <span className="text-gray-400 text-lg">{point}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </GlassCard>
+
+                        <GlassCard className="p-10 border-blue-500/30 bg-blue-500/5" hoverEffect={false}>
+                            <div className="flex items-center gap-3 mb-8">
+                                <span className="w-3 h-3 rounded-full bg-blue-400" />
+                                <h3 className="text-2xl font-black text-white uppercase tracking-tight">{t("WhyUs.with.title")}</h3>
+                            </div>
+                            <ul className="space-y-4">
+                                {withPoints.map((point, idx) => (
+                                    <li key={idx} className="flex items-start gap-4">
+                                        <CheckIcon className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                                        <span className="text-gray-300 text-lg">{point}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </GlassCard>
+                    </div>
                 </div>
             </section>
 
             {/* Process */}
-            <section className="py-24 relative z-10 border-t border-white/5">
+            <section className="py-32 relative z-10">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">{t("Process.title")}</h2>
-                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t("Process.subtitle")}</p>
-                    </div>
+                    <h2 className="text-4xl md:text-6xl font-black mb-16 tracking-tighter uppercase text-center">{t("Process.title")}</h2>
                     <div className="grid md:grid-cols-2 gap-8">
-                        {t.raw("Process.steps").map((step: any, idx: number) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="flex gap-6 p-8 rounded-2xl border border-white/5 bg-white/2 hover:border-blue-500/20 transition-colors"
-                            >
-                                <span className="text-4xl font-black text-blue-400/30 font-mono shrink-0">{step.number}</span>
-                                <div>
-                                    <h3 className="text-xl font-bold mb-2 text-white">{step.title}</h3>
-                                    <p className="text-gray-400 leading-relaxed">{step.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                        {[0, 1, 2, 3].map((idx) => {
+                            const step = (t.raw("Process.steps") as Array<{ number: string; title: string; desc: string }>)[idx];
+                            return (
+                                <motion.div
+                                    key={idx}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                >
+                                    <GlassCard className="p-8 flex gap-6" hoverEffect={true} glowColor="green">
+                                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/30">
+                                            <span className="text-blue-400 font-mono text-sm font-black">{step.number}</span>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tight">{step.title}</h3>
+                                            <p className="text-gray-400 leading-relaxed">{step.desc}</p>
+                                        </div>
+                                    </GlassCard>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -275,10 +329,10 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
                 </div>
 
                 <div className="space-y-6">
-                    {t.raw("FAQ.questions").map((item: any, idx: number) => (
-                        <GlassCard key={idx} className="p-8 group" hoverEffect={true} glowColor="green">
+                    {(t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item, idx) => (
+                        <GlassCard key={idx} className="p-8 group cursor-default" hoverEffect={true} glowColor="green">
                             <h3 className="text-2xl font-bold mb-4 text-white flex gap-4 items-center">
-                                <span className="text-blue-500 group-hover:translate-x-1 transition-transform">→</span>
+                                <span className="text-blue-400 group-hover:rotate-90 transition-transform">→</span>
                                 {item.q}
                             </h3>
                             <p className="text-gray-400 text-lg leading-relaxed pl-10 border-l border-white/10">
@@ -290,16 +344,19 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
             </section>
 
             {/* CTA */}
-            <section className="py-24 relative z-10 border-t border-white/5 text-center">
-                <div className="max-w-3xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">{t("CTA.title")}</h2>
-                    <p className="text-gray-400 text-lg mb-10">{t("CTA.subtitle")}</p>
-                    <Link
-                        href="/ai-consulting"
-                        className="inline-block px-10 py-5 bg-blue-600 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-blue-500 hover:scale-105 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)]"
-                    >
-                        {t("CTA.button")}
-                    </Link>
+            <section className="py-24 relative z-10">
+                <div className="max-w-3xl mx-auto px-6 text-center">
+                    <GlassCard className="p-16 border-blue-500/20 bg-blue-500/5" hoverEffect={false}>
+                        <p className="text-sm font-mono text-blue-400 uppercase tracking-widest mb-6">{t("CTA.badge")}</p>
+                        <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tighter uppercase">{t("CTA.title")}</h2>
+                        <p className="text-gray-400 text-lg mb-10 leading-relaxed">{t("CTA.subtitle")}</p>
+                        <Link
+                            href="/#contact"
+                            className="inline-block px-12 py-5 bg-blue-600 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-blue-500 hover:scale-105 transition-all shadow-[0_0_30px_rgba(59,130,246,0.4)]"
+                        >
+                            {t("CTA.button")}
+                        </Link>
+                    </GlassCard>
                 </div>
             </section>
 
@@ -319,4 +376,3 @@ export default function ITSystemIntegration({ params: { locale } }: { params: { 
         </>
     );
 }
-

@@ -4,7 +4,10 @@ import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { CheckIcon } from "@phosphor-icons/react/dist/ssr";
+import { CheckIcon, CalendarXIcon, PhoneIcon, ChartBarIcon, ArrowsClockwiseIcon, PlugsConnectedIcon, ChatCircleDotsIcon, TargetIcon, LightningIcon, StarIcon } from "@phosphor-icons/react/dist/ssr";
+
+const painPointIcons = [CalendarXIcon, PhoneIcon, ChartBarIcon, ArrowsClockwiseIcon, PlugsConnectedIcon, ChatCircleDotsIcon];
+const solutionIcons = [ChatCircleDotsIcon, TargetIcon, LightningIcon, ArrowsClockwiseIcon, ChartBarIcon, StarIcon];
 import * as motion from "framer-motion/client";
 import Header from "@/components/layout/Header";
 
@@ -185,13 +188,16 @@ export default function VeterinaryClinicAutomation({ params: { locale } }: { par
                         {t("PainPoints.title")}
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {(t.raw("PainPoints.items") as Array<{ emoji: string; title: string; desc: string }>).map((item, idx) => (
-                            <GlassCard key={idx} hoverEffect={true} glowColor="none" className="p-8 flex flex-col gap-4">
-                                <div className="text-3xl">{item.emoji}</div>
-                                <h3 className="text-lg font-black text-white uppercase tracking-tight">{item.title}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed flex-grow">{item.desc}</p>
-                            </GlassCard>
-                        ))}
+                        {(t.raw("PainPoints.items") as Array<{ emoji: string; title: string; desc: string }>).map((item, idx) => {
+                            const Icon = painPointIcons[idx];
+                            return (
+                                <GlassCard key={idx} hoverEffect={true} glowColor="none" className="p-8 flex flex-col gap-4">
+                                    {Icon && <Icon size={28} className="text-white/60" />}
+                                    <h3 className="text-lg font-black text-white uppercase tracking-tight">{item.title}</h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed flex-grow">{item.desc}</p>
+                                </GlassCard>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -204,18 +210,21 @@ export default function VeterinaryClinicAutomation({ params: { locale } }: { par
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t("Solutions.subtitle")}</p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {(t.raw("Solutions.items") as Array<{ emoji: string; title: string; desc: string; result: string }>).map((item, idx) => (
-                            <GlassCard key={idx} hoverEffect={true} glowColor="green" className="p-8 flex flex-col gap-4 h-full">
-                                <div className="w-12 h-12 rounded-xl bg-hunter-green/10 border border-hunter-green/20 flex items-center justify-center text-2xl flex-shrink-0">
-                                    {item.emoji}
-                                </div>
-                                <h3 className="text-xl font-black text-white uppercase tracking-tight">{item.title}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed flex-grow">{item.desc}</p>
-                                <div className="mt-auto pt-4 border-t border-white/5">
-                                    <p className="text-hunter-green text-xs font-mono font-bold uppercase tracking-wider">→ {item.result}</p>
-                                </div>
-                            </GlassCard>
-                        ))}
+                        {(t.raw("Solutions.items") as Array<{ emoji: string; title: string; desc: string; result: string }>).map((item, idx) => {
+                            const Icon = solutionIcons[idx];
+                            return (
+                                <GlassCard key={idx} hoverEffect={true} glowColor="green" className="p-8 flex flex-col gap-4 h-full">
+                                    <div className="w-12 h-12 rounded-xl bg-hunter-green/10 border border-hunter-green/20 flex items-center justify-center flex-shrink-0">
+                                        {Icon && <Icon size={24} className="text-hunter-green" />}
+                                    </div>
+                                    <h3 className="text-xl font-black text-white uppercase tracking-tight">{item.title}</h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed flex-grow">{item.desc}</p>
+                                    <div className="mt-auto pt-4 border-t border-white/5">
+                                        <p className="text-hunter-green text-xs font-mono font-bold uppercase tracking-wider">→ {item.result}</p>
+                                    </div>
+                                </GlassCard>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

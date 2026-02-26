@@ -6,6 +6,7 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import Header from "@/components/layout/Header";
 import * as motion from "framer-motion/client";
+import { WhatsappLogoIcon, MicrophoneIcon, LightningIcon } from "@phosphor-icons/react/dist/ssr";
 
 const baseUrl = "https://www.codehunterlab.com";
 const path = "/ai-automation-consulting-netherlands";
@@ -168,7 +169,7 @@ export default function AIAutomationNetherlands({ params: { locale } }: { params
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* WhatsApp Bot */}
                         <GlassCard hoverEffect={true} glowColor="green" className="p-8">
-                            <div className="text-5xl mb-6">💬</div>
+                            <WhatsappLogoIcon size={48} className="mb-6 text-hunter-green" />
                             <h3 className="text-2xl font-bold mb-4 text-white">{t("Agents.whatsapp.title")}</h3>
                             <p className="text-gray-400 mb-6 font-light leading-relaxed">
                                 {t("Agents.whatsapp.desc")}
@@ -186,7 +187,7 @@ export default function AIAutomationNetherlands({ params: { locale } }: { params
                         {/* Voice AI */}
                         <GlassCard hoverEffect={true} glowColor="green" className="p-8 bg-hunter-green/5 border-hunter-green/30 relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-2 bg-hunter-green text-black text-xs font-bold rounded-bl-lg">{t("Agents.label.popular")}</div>
-                            <div className="text-5xl mb-6">🎙️</div>
+                            <MicrophoneIcon size={48} className="mb-6 text-hunter-green" />
                             <h3 className="text-2xl font-bold mb-4 text-white">{t("Agents.voice.title")}</h3>
                             <p className="text-gray-400 mb-6 font-light leading-relaxed">
                                 {t("Agents.voice.desc")}
@@ -203,7 +204,7 @@ export default function AIAutomationNetherlands({ params: { locale } }: { params
 
                         {/* n8n Automation */}
                         <GlassCard hoverEffect={true} glowColor="green" className="p-8">
-                            <div className="text-5xl mb-6">⚡</div>
+                            <LightningIcon size={48} className="mb-6 text-hunter-green" />
                             <h3 className="text-2xl font-bold mb-4 text-white">{t("Agents.automation.title")}</h3>
                             <p className="text-gray-400 mb-6 font-light leading-relaxed" dangerouslySetInnerHTML={{ __html: t.raw("Agents.automation.desc") }} />
                             <div className="border-t border-white/10 pt-4">

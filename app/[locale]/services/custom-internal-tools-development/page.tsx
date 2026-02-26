@@ -6,6 +6,7 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import * as motion from "framer-motion/client";
 import Header from "@/components/layout/Header";
+import { ChartBarIcon, LockKeyIcon, CalendarIcon } from "@phosphor-icons/react/dist/ssr";
 
 const baseUrl = "https://www.codehunterlab.com";
 const path = "/services/custom-internal-tools-development";
@@ -198,17 +199,17 @@ export default function CustomInternalTools({ params: { locale } }: { params: { 
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         <GlassCard className="p-10 hover:bg-white/[0.02]" hoverEffect={true} glowColor="orange">
-                            <div className="text-5xl mb-8">📊</div>
+                            <div className="mb-8"><ChartBarIcon size={48} className="text-purple-400" /></div>
                             <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">{t("Tools.dashboards.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed">{t("Tools.dashboards.desc")}</p>
                         </GlassCard>
                         <GlassCard className="p-10 border-purple-500/20" hoverEffect={true} glowColor="orange">
-                            <div className="text-5xl mb-8">🔐</div>
+                            <div className="mb-8"><LockKeyIcon size={48} className="text-purple-400" /></div>
                             <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">{t("Tools.portals.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed">{t("Tools.portals.desc")}</p>
                         </GlassCard>
                         <GlassCard className="p-10 hover:bg-white/[0.02]" hoverEffect={true} glowColor="orange">
-                            <div className="text-5xl mb-8">📅</div>
+                            <div className="mb-8"><CalendarIcon size={48} className="text-purple-400" /></div>
                             <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">{t("Tools.resource.title")}</h3>
                             <p className="text-gray-400 text-lg leading-relaxed">{t("Tools.resource.desc")}</p>
                         </GlassCard>

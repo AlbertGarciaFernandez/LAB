@@ -793,7 +793,10 @@
         "highlight": "Sistemas Fragmentados"
       },
       "description": "Somos la <strong>empresa de integración de software</strong> que hace que tus apps hablen entre sí. Conecta tu <strong>CRM</strong>, <strong>ERP</strong> y <strong>Herramientas Internas</strong> para eliminar errores.",
-      "cta": "Hablemos de tu Integración"
+      "cta": {
+        "primary": "Hablemos de tu Integración",
+        "secondary": "Ver Cómo Funciona"
+      }
     },
     "Diagram": {
       "source": {
@@ -858,8 +861,8 @@
           "a": "Es el proceso de conectar diferentes subsistemas (como tu CRM, ERP y pasarelas de pago) en una unidad única y cohesiva donde los datos fluyen automáticamente."
         },
         {
-          "q": "¿Utilizan herramientas de automatización como n8n o Make.com?",
-          "a": "Sí. Somos expertos en n8n y Make, pero también construimos puentes API a medida cuando las herramientas comerciales alcanzan sus límites."
+          "q": "¿Utilizan n8n para las automatizaciones?",
+          "a": "Sí, n8n es nuestra plataforma principal de automatización. Para escenarios más complejos escribimos código a medida — integraciones en Node.js o Python — según lo que el proyecto realmente necesite."
         },
         {
           "q": "¿Cómo gestionan la seguridad de los datos durante la integración?",
@@ -867,7 +870,19 @@
         }
       ]
     },
+    "WhyUs": {
+      "title": "Integración que Realmente Funciona",
+      "without": {
+        "title": "Sin Integración",
+        "points": ["Copiar y pegar entre apps manualmente", "Datos siempre desincronizados", "Horas perdidas en tareas administrativas", "Errores humanos en registros críticos", "Sin visibilidad de tus flujos de datos"]
+      },
+      "with": {
+        "title": "Con CodeHunter Lab",
+        "points": ["Los datos fluyen automáticamente 24/7", "Fuente única de verdad en todas tus apps", "Tu equipo se enfoca en trabajo real", "Datos validados, cero errores manuales", "Monitoreo completo, alertas y registro de auditoría"]
+      }
+    },
     "CTA": {
+      "badge": "AUDITORÍA DE INTEGRACIÓN GRATUITA",
       "title": "¿Listo para Conectar tus Sistemas?",
       "subtitle": "Auditoría de integración gratuita. Mapeamos tus flujos de datos actuales, identificamos el mayor cuello de botella y proponemos una solución concreta. Sin compromiso.",
       "button": "Reservar Auditoría de Integración Gratuita"
