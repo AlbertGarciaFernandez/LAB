@@ -1,0 +1,3012 @@
+{
+  "Header": {
+    "nav": {
+      "Services": "Servicios",
+      "Expertise": "Expertise",
+      "Industries": "Industrias",
+      "TheLab": "The Lab",
+      "Bio": "Bio",
+      "Process": "Proceso",
+      "services": {
+        "AIConsulting": "Consultoría IA",
+        "ReactConsulting": "Consultoría React",
+        "NextJS": "Desarrollo Next.js",
+        "ITIntegration": "Integración de Sistemas IT",
+        "CustomTools": "Herramientas Internas"
+      },
+      "expertise": {
+        "AIAgents": "Agentes IA & Automatización",
+        "CustomLLM": "Desarrollo LLM Personalizado",
+        "SystemArch": "Arquitectura de Sistemas",
+        "N8nMigration": "Consultoría Migración n8n"
+      },
+      "industries": {
+        "AIConsultingNL": "Consultoría IA Países Bajos",
+        "DentalNL": "Automatización Clínica Dental",
+        "AestheticNL": "Automatización Clínica Estética",
+        "PhysiotherapyNL": "Automatización Fisioterapia",
+        "VeterinaryNL": "Automatización Clínica Veterinaria",
+        "AccountingNL": "Automatización Despacho Contable",
+        "RealEstateNL": "Automatización Inmobiliaria"
+      }
+    },
+    "cta": {
+      "AIConsulting": "Consultoría IA",
+      "LetsWork": "Hablemos"
+    }
+  },
+  "Hero": {
+    "subHeader": "Consultoría IA · Automatización IA · Sistemas de Producción",
+    "title": {
+      "part1": "Consultoría IA & ",
+      "highlight1": "Automatización",
+      "part2": "Que Llega a ",
+      "highlight2": "Producción"
+    },
+    "description": "Diseñamos, construimos y desplegamos sistemas IA para empresas listas para ir más allá de los experimentos — conectados a tu stack, tus datos y los flujos reales de tu equipo.",
+    "cta": {
+      "initialize": "Reservar Llamada de Estrategia IA",
+      "caseStudies": "Ver Cómo Trabajamos"
+    }
+  },
+  "Footer": {
+    "brandDescription": "Arquitectando el futuro de la automatización empresarial y flujos de trabajo con IA.",
+    "Services": {
+      "title": "Servicios",
+      "items": {
+        "AIConsulting": "Consultoría IA",
+        "ReactConsulting": "Consultoría React",
+        "NextJS": "Agencia Next.js",
+        "ITIntegration": "Integración IT",
+        "InternalTools": "Herramientas Internas"
+      }
+    },
+    "Expertise": {
+      "title": "Expertise",
+      "items": {
+        "AIAgents": "Agentes IA",
+        "n8nMigration": "Migración n8n",
+        "SystemArchitecture": "Arquitectura de Sistemas",
+        "CustomLLMs": "LLMs Personalizados"
+      }
+    },
+    "Industries": {
+      "title": "Industrias",
+      "items": {
+        "AIAutomationNL": "Automatización IA NL",
+        "DentalNL": "Clínica Dental NL",
+        "AestheticNL": "Clínica Estética NL",
+        "PhysiotherapyNL": "Fisioterapia NL",
+        "VeterinaryNL": "Automatización Veterinaria",
+        "AccountingNL": "Automatización Contable",
+        "RealEstateNL": "Automatización Inmobiliaria"
+      }
+    },
+    "Availability": {
+      "nextOpening": "Próxima Disponibilidad: {date}",
+      "title": "¿Listo para escalar?",
+      "subtitle": "Agendando llamadas de descubrimiento para el Q2 2026.",
+      "button": "Contactar"
+    },
+    "Copyright": {
+      "rights": "CodeHunter Lab.",
+      "locationLeiden": "Leiden, Países Bajos",
+      "locationSpain": "España / Remoto",
+      "developedBy": "Desarrollado por"
+    },
+    "Solutions": {
+      "title": "Soluciones",
+      "items": {
+        "AIAutomation": "Automatización IA NL",
+        "ITIntegration": "Integración de Sistemas",
+        "SoftwareLeiden": "Software en Leiden",
+        "InternalTools": "Herramientas Internas",
+        "VeterinaryNL": "Automatización Veterinaria",
+        "AccountingNL": "Automatización Contable",
+        "RealEstateNL": "Automatización Inmobiliaria"
+      }
+    },
+    "Navigation": {
+      "title": "Navegar",
+      "items": {
+        "AIConsulting": "AI Consulting",
+        "OurWork": "Nuestro Trabajo",
+        "Calculator": "Calculadora ROI",
+        "Contact": "Contacto"
+      }
+    }
+  },
+  "WhatWeBuild": {
+    "badge": "Qué Construimos",
+    "title": {
+      "part1": "Cinco Formas de Poner",
+      "highlight": "la IA a Trabajar"
+    },
+    "subtitle": "Cada proyecto parte de un resultado claro. Esto es lo que construimos.",
+    "cta": "Explorar Consultoría IA",
+    "services": [
+      {
+        "title": "Agentes IA",
+        "desc": "Agentes autónomos para cualificación de leads, atención al cliente y operaciones — conectados a tus herramientas y activos 24/7.",
+        "link": "Agentes IA & Automatización"
+      },
+      {
+        "title": "Automatización de Flujos",
+        "desc": "Sustituye procesos manuales por pipelines automatizados. Enrutamiento de leads, procesamiento de documentos, sincronización de CRM.",
+        "link": "Automatización IA Países Bajos"
+      },
+      {
+        "title": "Integración de Sistemas IA",
+        "desc": "Conecta la IA a los sistemas que ya usas. Gestionamos la capa de integración entre modelos IA y tu stack existente.",
+        "link": "Integración de Sistemas IT"
+      },
+      {
+        "title": "Herramientas Internas con IA",
+        "desc": "Dashboards y herramientas administrativas a medida que eliminan el trabajo interno repetitivo.",
+        "link": "Herramientas Internas"
+      },
+      {
+        "title": "LLMs Personalizados",
+        "desc": "Modelos de lenguaje privados entrenados para tu dominio. Clasificación de documentos, generación de respuestas, base de conocimiento interna.",
+        "link": "Desarrollo de LLM Personalizado"
+      }
+    ]
+  },
+  "IndustriesSection": {
+    "badge": "Industrias",
+    "title": {
+      "part1": "Automatización para",
+      "highlight": "Tu Sector"
+    },
+    "subtitle": "Hemos automatizado operaciones en sectores de servicio intensivo y regulados en los Países Bajos.",
+    "viewAll": "Ver Todas las Industrias",
+    "industries": [
+      {
+        "title": "Contabilidad y Finanzas",
+        "desc": "Automatiza la captación de clientes, el procesamiento de documentos, flujos fiscales e informes de cumplimiento. Menos admin, mismo equipo.",
+        "link": "Automatización Contable"
+      },
+      {
+        "title": "Inmobiliaria",
+        "desc": "Cualificación de leads, enrutamiento de consultas, procesamiento de contratos y seguimiento automatizado de clientes.",
+        "link": "Automatización Inmobiliaria"
+      },
+      {
+        "title": "Salud y Clínicas",
+        "desc": "Reserva de citas, seguimiento de pacientes y reducción de carga administrativa para clínicas dentales, estéticas y de fisioterapia.",
+        "link": "Automatización de Clínicas"
+      }
+    ]
+  },
+  "Expertise": {
+    "title": {
+      "part1": "Expertise Central y",
+      "part2": "Pilares Estratégicos"
+    },
+    "subtitle": "Sistemas con IA en primer plano, ingeniería de producción y flujos que eliminan el trabajo manual.",
+    "pillars": {
+      "frontend": {
+        "title": "Arquitectura Frontend",
+        "micro": "Sistemas robustos construidos para durar.",
+        "heading": "Aplicaciones web escalables, mantenibles y de alto impacto.",
+        "paragraphs": {
+          "0": "Diseñamos y lideramos el desarrollo de aplicaciones web de alto calibre. Nuestra base es una arquitectura moderna (React, Next.js, TypeScript), enfocada obsesivamente en la escalabilidad a largo plazo, el rendimiento y la experiencia de desarrollo.",
+          "1": "No escribimos código por escribir. Tomamos decisiones arquitectónicas que eliminan la complejidad, permiten escalar equipos y se adaptan a la evolución de tu producto."
+        },
+        "bullets": {
+          "0": "Arquitectura basada en componentes (React, Next.js)",
+          "1": "Escalabilidad y mantenibilidad desde el diseño",
+          "2": "Calidad de código y estrategias de testing sostenibles",
+          "3": "Obsesión por el rendimiento (Performance-first)"
+        }
+      },
+      "ecommerce": {
+        "title": "Ecommerce y Performance",
+        "micro": "Plataformas críticas optimizadas para facturar.",
+        "heading": "Velocidad, UX y conversión para plataformas críticas.",
+        "paragraphs": {
+          "0": "Nos especializamos en plataformas donde cada milisegundo cuenta. Cuando el rendimiento y la fiabilidad impactan directamente en la facturación, nosotros entramos en juego.",
+          "1": "Desde migraciones complejas de Salesforce Commerce Cloud (SFCC) hasta la optimización extrema de Shopify y stacks a medida. Construimos journeys de usuario rápidos, accesibles y diseñados para convertir."
+        },
+        "bullets": {
+          "0": "Liderazgo en migraciones SFCC y arquitectura",
+          "1": "Optimización de Core Web Vitals y Lighthouse",
+          "2": "UX, accesibilidad (WCAG 2.1) y SEO técnico",
+          "3": "A/B testing y optimización basada en datos",
+          "4": "Transformamos rendimiento en ingresos"
+        }
+      },
+      "product": {
+        "title": "Estrategia de Producto e IA",
+        "micro": "Objetivos de negocio, traducidos a código.",
+        "heading": "Uniendo visión de producto con ejecución técnica.",
+        "paragraphs": {
+          "0": "Eliminamos la brecha entre ingeniería y negocio. Combinamos liderazgo técnico con visión de producto para traducir objetivos comerciales en roadmaps claros y soluciones técnicas viables.",
+          "1": "Lideramos la ingeniería de aplicaciones potenciadas por IA, integrando APIs de OpenAI para acelerar flujos, reducir ruido y potenciar la toma de decisiones estratégica."
+        },
+        "bullets": {
+          "0": "Discovery, roadmap y priorización de producto",
+          "1": "Integración de IA (OpenAI) y herramientas a medida",
+          "2": "Liderazgo Ágil y alineación con stakeholders",
+          "3": "Ingeniería realista basada en restricciones reales"
+        }
+      },
+      "automation": {
+        "title": "Automatización IA",
+        "micro": "Flujos inteligentes que eliminan el trabajo manual.",
+        "heading": "Automatiza lo aburrido. Potencia lo importante.",
+        "paragraphs": {
+          "0": "Diseñamos flujos de automatización con IA que erradican el trabajo manual repetitivo, aceleran decisiones y disparan la eficiencia operativa.",
+          "1": "Con herramientas como n8n, scripts a medida e integraciones API, conectamos tu ecosistema de datos para crear pipelines inteligentes que resuelven problemas reales. Nada de experimentos sobre-ingenierizados."
+        },
+        "bullets": {
+          "0": "Pipelines automatizados de datos y contenido",
+          "1": "QA, análisis y reportes asistidos por IA",
+          "2": "Orquestación de flujos entre equipos",
+          "3": "Reducción drástica de carga operativa",
+          "4": "Convierte datos brutos en insights accionables"
+        }
+      },
+      "leadership": {
+        "title": "Liderazgo Técnico",
+        "micro": "Claridad, alineación y decisiones senior.",
+        "heading": "Alineando producto, diseño e ingeniería.",
+        "paragraphs": {
+          "0": "Colaboramos estrechamente con diseño, producto y backend para asegurar que la ejecución técnica cumpla con la visión. Operamos en la intersección de arquitectura, entrega y estrategia, asegurando velocidad sin sacrificar calidad."
+        },
+        "bullets": {
+          "0": "Colaboración cross-functional de alto nivel",
+          "1": "Comunicación clara y ownership total",
+          "2": "Eliminamos la fricción entre áreas",
+          "3": "Entrega sostenible, sin deuda técnica innecesaria"
+        }
+      },
+      "delivery": {
+        "title": "Entrega y Riesgo",
+        "micro": "Resultados predecibles en entornos complejos.",
+        "heading": "Entrega predecible cuando hay mucho en juego.",
+        "paragraphs": {
+          "0": "Nos enfocamos en la entrega predecible y de calidad. Aplicamos ingeniería probada para reducir riesgos, evitar retrabajo y asegurar que tu producto escale sin romperse.",
+          "1": "Sabemos hacer trade-offs pragmáticos, gestionamos la deuda técnica de forma consciente y construimos sistemas evolutivos, no frágiles."
+        },
+        "bullets": {
+          "0": "Planificación clara y definición de alcance",
+          "1": "Estándares de calidad y testing riguroso",
+          "2": "Gestión consciente de deuda técnica",
+          "3": "Mitigación de riesgos en sistemas críticos",
+          "4": "Mantenibilidad a largo plazo vs parches rápidos"
+        }
+      }
+    },
+    "ui": {
+      "selected": "Seleccionado",
+      "readMore": "Leer más",
+      "indexLabel": "{number} · {title}"
+    }
+  },
+  "TheLab": {
+    "title": "The Lab",
+    "subtitle": "Soluciones de ingeniería y liderazgo estratégico con impacto de negocio medible.",
+    "projects": {
+      "0": {
+        "number": "Case Study 01 / Producto IA",
+        "title": "Acelerador de Producto: App de Productividad IA",
+        "description": "Liderazgo integral en frontend y Producto para una app de productividad con IA. El reto: crear una arquitectura escalable integrando modelos de ML y OpenAI para ofrecer una experiencia personalizada y ultra-rápida.",
+        "results": {
+          "0": "Arquitectura Frontend en React, Next.js y TypeScript diseñada para escalar.",
+          "1": "Integración de funciones IA vía OpenAI para hiper-personalización.",
+          "2": "Monitoreo continuo (Lighthouse, Core Web Vitals) y suite de tests (Jest).",
+          "3": "Definición de visión y roadmap, alineando técnica y negocio."
+        }
+      },
+      "1": {
+        "number": "Case Study 02 / E-commerce",
+        "title": "Basic-Fit: Migración E-commerce Masiva (SFCC)",
+        "description": "Liderazgo en la migración crítica del sitio de Basic-Fit a Salesforce Commerce Cloud. Un proyecto de alto riesgo afectando a múltiples países. El objetivo: transición sin fricción, mejora de UX, rendimiento y SEO.",
+        "results": {
+          "0": "Migración exitosa a SFCC manteniendo la calidad de UX.",
+          "1": "Implementación de A/B testing con mejoras directas en conversión.",
+          "2": "Desarrollo de templates personalizados en SFCC y diseño responsivo.",
+          "3": "Código seguro, escalable y con analítica integrada."
+        }
+      },
+      "2": {
+        "number": "Case Study 03 / Track Record",
+        "title": "Impulsando el Crecimiento Digital: +15 Éxitos",
+        "description": "Más de 15 empresas han confiado en nosotros para elevar su presencia digital. Desde startups hasta grandes corporaciones. No solo construimos software; optimizamos para el crecimiento.",
+        "results": {
+          "0": "Partnership con clientes diversos, desde startups a enterprise.",
+          "1": "Soluciones escalables entregadas en E-commerce, SaaS e IA.",
+          "2": "Mejora del rendimiento, SEO y conversión."
+        }
+      }
+    },
+    "cta": "Hablemos de tu Reto"
+  },
+  "Bio": {
+    "bgText": "EL ESTUDIO",
+    "title": {
+      "part1": "EL",
+      "part2": "ESTUDIO"
+    },
+    "description": {
+      "p1": {
+        "part1": "Somos un",
+        "highlight": "estudio de consultoría IA",
+        "part2": "orientado a la ingeniería, con base en Leiden, Países Bajos."
+      },
+      "p2": {
+        "part1": "Diseñamos, construimos y desplegamos automatización IA que",
+        "highlight1": "funciona en producción",
+        "part2": "— no en un sandbox. Trabajamos con CTOs, fundadores y",
+        "highlight2": "líderes de operaciones",
+        "part3": "en toda Europa."
+      }
+    },
+    "stats": {
+      "years": "Años Entregando",
+      "yearsValue": "4+",
+      "focus": "Enfoque Principal",
+      "focusValue": "IA / Ingeniería",
+      "impact": "Empresas Atendidas",
+      "impactValue": "15+"
+    },
+    "passionCard": {
+      "label": "Principio",
+      "quote": "\"No solo asesoramos. Desplegamos.\""
+    }
+  },
+  "Stack": {
+    "subtitle": "Motor de The Lab",
+    "title": "Stack Tecnológico"
+  },
+  "Process": {
+    "title": {
+      "prefix": "06.",
+      "text": "Cómo Trabajamos"
+    },
+    "subtitle": {
+      "part1": "Desde una llamada de descubrimiento de 30 minutos hasta un",
+      "highlight": "sistema vivo en tu stack",
+      "part2": "— cuatro pasos, sin ambigüedad."
+    },
+    "steps": {
+      "0": {
+        "title": "Llamada de Descubrimiento",
+        "description": "Revisamos tus flujos, identificamos las oportunidades de automatización con mayor ROI y te damos una valoración honesta de qué vale la pena construir. 30 minutos, sin coste, sin discurso de ventas."
+      },
+      "1": {
+        "title": "Alcance y Roadmap",
+        "description": "Definimos los entregables, los requisitos de integración y el calendario. Alcance fijo, precio fijo — sin sorpresas a mitad del proyecto. Sabes exactamente qué recibes antes de que empecemos."
+      },
+      "2": {
+        "title": "Construcción e Integración",
+        "description": "Construimos el sistema y lo conectamos a tu stack actual — CRM, herramientas de comunicación, bases de datos. Sin despliegues en sandbox. Todo corre contra datos reales desde el primer día."
+      },
+      "3": {
+        "title": "Despliegue y Traspaso",
+        "description": "Desplegamos en tu infraestructura y entregamos documentación completa. El código es tuyo. Soporte continuo disponible si necesitas un partner de ingeniería a largo plazo."
+      }
+    },
+    "cta": {
+      "title": {
+        "text": "¿Listo para Construir",
+        "highlight": "Tu Primer Sistema IA?"
+      },
+      "description": {
+        "part1": "Reserva una llamada de estrategia de 30 minutos. Mapearemos tu oportunidad de automatización de mayor impacto y definiremos un camino claro hacia producción — sin",
+        "highlight": "discurso de ventas",
+        "part2": "."
+      }
+    }
+  },
+  "AIConsulting": {
+    "Hero": {
+      "badge": "Consultoría IA · Sistemas de Producción",
+      "title": {
+        "part1": "Consultoría IA",
+        "part2": "para Empresas",
+        "highlight": "Listas para Producción."
+      },
+      "description": "La mayoría de proyectos IA fracasan entre la prueba de concepto y la producción. Cerramos esa brecha — diseñando y desplegando <strong class='text-white'>agentes IA, flujos automatizados e integraciones</strong> que corren en producción, no en una prueba de concepto.",
+      "cta": "Reservar Llamada de Estrategia IA",
+      "whyUs": {
+        "title": {
+          "part1": "Implementación,",
+          "highlight": "No Solo Estrategia."
+        },
+        "description": "La mayoría de consultores entregan un roadmap y se van. Nosotros nos quedamos hasta que está en producción. Cada proyecto termina con un sistema vivo en tu infraestructura — no con una presentación.",
+        "list": {
+          "0": "Sistemas en producción, no experimentos en sandbox",
+          "1": "Integrado con tu stack y datos existentes",
+          "2": "ROI claro — estimado antes de empezar, medido después"
+        },
+        "systemStatus": {
+          "label": "Estado del Sistema",
+          "value": "EN VIVO",
+          "efficiencyLabel": "ROI Promedio Cliente",
+          "efficiencyValue": "+40%",
+          "tooltip": "MONITOREO EN PRODUCCIÓN"
+        }
+      }
+    },
+    "Banner": {
+      "badge": "Sistemas IA · Nivel Producción",
+      "title": "Tu Piloto de IA",
+      "highlight": "Nunca Llegó a Producción.",
+      "description": "La mayoría de empresas tienen experimentos de IA encerrados en un sandbox. Construimos sistemas que corren en producción — conectados a tu CRM, tus datos y los flujos reales de tu equipo.",
+      "cta1": "Reservar Llamada de Estrategia IA",
+      "cta2": "Estimar tu ROI",
+      "cards": {
+        "0": {
+          "title": "Sistemas IA en Producción",
+          "desc": "No demos. Automatización en vivo desplegada en tu infraestructura."
+        },
+        "1": {
+          "title": "Orquestación de Flujos",
+          "desc": "n8n self-hosted: control total de datos, ejecuciones ilimitadas, coste fijo."
+        },
+        "2": {
+          "title": "ROI Antes de Empezar",
+          "desc": "Cada proyecto comienza con un análisis claro de coste-beneficio."
+        }
+      }
+    },
+    "ROICalculator": {
+      "badge": "Auditoría de Eficiencia",
+      "title": "¿Cuánto te cuesta la",
+      "highlight": "Ineficiencia?",
+      "subtitle": "",
+      "description": "Los procesos manuales son un impuesto silencioso a tu facturación. Calcula cuánto capital quemas en tareas que un Agente IA haría por una fracción del coste.",
+      "realityCard": {
+        "title": "La Realidad Hoy",
+        "description": "Con costes laborales al alza, pagar a especialistas por picar datos no es sostenible. La automatización ya no es un lujo, es supervivencia."
+      },
+      "inputs": {
+        "employees": "Equipo Manual",
+        "employeesUnit": "Personas",
+        "hours": "Horas Repetitivas/Semana (por persona)",
+        "hoursUnit": "Horas",
+        "rate": "Coste Hora Promedio",
+        "rateUnit": "/hora"
+      },
+      "results": {
+        "monthly": "Desperdicio Mensual",
+        "annual": "Ahorro Anual Potencial",
+        "note": "Capital reinvertible en crecimiento o I+D.",
+        "cta": "Detén la fuga. Audita ahora."
+      }
+    },
+    "TopAgents": {
+      "badge": "Fuerza Laboral Digital",
+      "title": "Automatiza Ventas, Operaciones",
+      "highlight": "y Marketing con IA.",
+      "description": "Deja de contratar para tareas repetitivas. Despliega Agentes IA especializados que trabajan 24/7, se integran con tus herramientas y entregan resultados que escalan.",
+      "agents": {
+        "leo": {
+          "role": "Agente de Ventas IA",
+          "description": "Tu comercial de élite que nunca duerme. LEO atiende leads al instante, cualifica oportunidades y cierra reuniones 24/7.",
+          "capabilities": [
+            "Respuesta Instantánea (Web/WhatsApp)",
+            "Cualificación Inteligente",
+            "Agendamiento Automático",
+            "Seguimiento Persistente",
+            "Handoff a Humanos cuando es necesario"
+          ],
+          "benefit": "Escala ingresos, no personal.",
+          "cta": "Desplegar LEO"
+        },
+        "atlas": {
+          "role": "Asistente Virtual IA",
+          "description": "Tu columna vertebral operativa. ATLAS orquesta flujos, pone orden en el caos administrativo y mantiene a tu equipo centrado en lo importante.",
+          "capabilities": [
+            "Inbox Zero y Calendario al día",
+            "Orquestación de Workflows",
+            "Procesamiento de Documentos",
+            "Onboarding de Clientes",
+            "Entrada de Datos sin Errores"
+          ],
+          "benefit": "Elimina la fricción operativa.",
+          "cta": "Desplegar ATLAS"
+        },
+        "orion": {
+          "role": "Director de Marketing IA",
+          "description": "Precisión basada en datos. ORION analiza rendimiento, optimiza campañas y detecta oportunidades de crecimiento invisibles para el ojo humano.",
+          "capabilities": [
+            "Análisis de ROI en Tiempo Real",
+            "Optimización de Campañas",
+            "Detección de Tendencias",
+            "Estrategia de Contenido",
+            "Monitoreo de Competencia"
+          ],
+          "benefit": "Marketing que genera beneficios.",
+          "cta": "Desplegar ORION"
+        }
+      },
+      "bottleneck": {
+        "badge": "El Problema",
+        "title": "El Cuello de Botella",
+        "subtitle": "Por qué escalar a mano falla.",
+        "list": [
+          "Leads enfriándose en el inbox",
+          "Agendas caóticas",
+          "Marketing a ciegas",
+          "Equipos al límite del agotamiento"
+        ],
+        "resultLabel": "Resultado",
+        "resultValue": "Ingresos en Riesgo"
+      },
+      "advantage": {
+        "badge": "La Solución",
+        "title": "La Ventaja Agéntica",
+        "subtitle": "Por qué gana la IA.",
+        "list": [
+          "Respuesta inmediata 24/7",
+          "Ejecución consistente",
+          "Decisiones basadas en datos",
+          "Escala sin aumentar plantilla"
+        ],
+        "resultLabel": "Resultado",
+        "resultValue": "Escala Operativa"
+      },
+      "diagram": {
+        "title": "Sincronizado con tu Ecosistema",
+        "capture": "Captura",
+        "process": "Procesa",
+        "optimize": "Optimiza",
+        "worksWith": "INTEGRA CON:"
+      }
+    },
+    "Migration": {
+      "badge": "Modelos de Colaboración",
+      "title": "Planes de Consultoría IA",
+      "highlight": "para Cada Etapa",
+      "legacy": {
+        "title": "Sprint de Estrategia IA",
+        "desc": "Auditoría de flujos + mapa de oportunidades de automatización.<br />Propuesta de arquitectura técnica.<br />Estimación de presupuesto y plazos.<br />Alcance fijo, 1–2 semanas.",
+        "tag": "1–2 Semanas"
+      },
+      "optimized": {
+        "tag": "Más Común",
+        "title": "Implementación IA",
+        "desc": "Un sistema IA desplegado en tu infraestructura.<br />Integración completa + documentación.<br />Precio fijo, 4–8 semanas. El código es tuyo.",
+        "latencyLabel": "ALCANCE",
+        "latencyValue": "FIJO",
+        "costLabel": "CÓDIGO",
+        "costValue": "TUYO"
+      },
+      "action": {
+        "title": "Partner IA Continuo",
+        "desc": "Tu equipo de ingeniería IA embebido.<br />Nuevas automatizaciones, mantenimiento y escala — mensualmente.<br />Ingenieros senior, acceso directo.",
+        "cta1": "Reservar Llamada de Estrategia",
+        "cta2": "Escríbenos Directamente"
+      }
+    },
+    "WhoItsFor": {
+      "badge": "Para Quién Es",
+      "title": "Servicios de Consultoría IA",
+      "highlight": "para Tu Negocio",
+      "description": "Trabajamos con fundadores, CTOs y responsables de operaciones que ya superaron la fase de \"¿deberíamos probar IA?\" y necesitan un socio técnico que construya y despliegue.",
+      "items": [
+        "Has probado herramientas de IA pero no las has conectado a operaciones reales",
+        "Estás dedicando tiempo a tareas que deberían ejecutarse automáticamente",
+        "Necesitas un socio que construya y despliegue, no solo que asesore",
+        "Quieres reducir la carga manual sin contratar para trabajo repetitivo",
+        "Necesitas IA que se integre con tu CRM, ERP o stack existente",
+        "Operas en los Países Bajos o internacionalmente y necesitas ingeniería senior"
+      ]
+    },
+    "WhatWeBuildInline": {
+      "badge": "Qué Construimos",
+      "title": "Cinco Sistemas IA que",
+      "highlight": "Llevamos a Producción",
+      "services": [
+        {
+          "title": "Agentes de Ventas y Cualificación IA",
+          "desc": "Responden a leads 24/7, cualifican según tus criterios, reservan reuniones y hacen el traspaso con contexto completo.",
+          "label": "Agentes y Automatización IA",
+          "href": "/expertise/ai-agents-automation"
+        },
+        {
+          "title": "Automatización de Flujos y Operaciones",
+          "desc": "Automatiza procesamiento de documentos, agendas, sincronización de CRM y flujos de aprobación en n8n o pipelines personalizados.",
+          "label": "Automatización IA Países Bajos",
+          "href": "/ai-automation-consulting-netherlands"
+        },
+        {
+          "title": "Integración de Sistemas IA",
+          "desc": "Conecta IA a tu CRM, ERP, bases de datos y plataformas de comunicación mediante integraciones API correctas.",
+          "label": "Integración de Sistemas IT",
+          "href": "/it-system-integration"
+        },
+        {
+          "title": "Herramientas Internas con IA",
+          "desc": "Dashboards y herramientas de administración personalizadas que eliminan el trabajo interno repetitivo y la reconciliación de datos.",
+          "label": "Herramientas Internas Personalizadas",
+          "href": "/services/custom-internal-tools-development"
+        },
+        {
+          "title": "Despliegues LLM Personalizados",
+          "desc": "Modelos de lenguaje privados ajustados para clasificación, generación de respuestas y recuperación de conocimiento interno.",
+          "label": "Desarrollo LLM Personalizado",
+          "href": "/expertise/custom-llm-development"
+        }
+      ]
+    },
+    "UseCases": {
+      "badge": "Casos de Uso",
+      "title": "Lo Que las Empresas",
+      "highlight": "Automatizan Primero",
+      "subtitle": "Estos son los puntos de partida con mayor ROI que vemos en todos los sectores — cada uno entra en producción en semanas, no trimestres.",
+      "labels": {
+        "problem": "Problema",
+        "solution": "Solución",
+        "outcome": "Resultado"
+      },
+      "items": [
+        {
+          "number": "01",
+          "title": "Cualificar Leads Sin Contratar",
+          "problem": "Los comerciales pasan horas persiguiendo leads no cualificados y escribiendo emails de seguimiento que deberían automatizarse.",
+          "solution": "Un agente IA gestiona las consultas entrantes 24/7 — cualifica según tus criterios, hace preguntas de seguimiento y reserva reuniones para los leads que pasan el filtro.",
+          "outcome": "Reuniones cualificadas reservadas automáticamente. Los comerciales solo hablan con prospectos listos para decidir."
+        },
+        {
+          "number": "02",
+          "title": "Eliminar Reportes Manuales",
+          "problem": "Los equipos de operaciones o finanzas dedican horas cada semana a extraer datos de múltiples sistemas para construir los mismos informes.",
+          "solution": "Pipelines automatizados recopilan, transforman y entregan informes estructurados a Slack, email o un dashboard — según programa, sin intervención humana.",
+          "outcome": "Horas de trabajo semanal en informes eliminadas. Los datos están siempre actualizados, nunca con retraso."
+        },
+        {
+          "number": "03",
+          "title": "Automatizar la Incorporación de Clientes",
+          "problem": "Cada nuevo cliente desencadena una secuencia manual de emails, solicitudes de documentos, actualizaciones en el CRM y traspasos internos.",
+          "solution": "Una automatización se activa al cerrar el contrato: envía secuencias de bienvenida, solicita documentos, crea registros de proyecto y notifica a las personas correctas automáticamente.",
+          "outcome": "La incorporación se completa en horas en lugar de días. Sin traspasos perdidos, sin perseguir a nadie."
+        }
+      ]
+    },
+    "TechCredibility": {
+      "badge": "Cómo Construimos",
+      "title": "Estándares de Producción,",
+      "highlight": "No Prototipos",
+      "subtitle": "Cada sistema que entregamos cumple seis requisitos innegociables. No son argumentos de venta — son requisitos base para código que funciona en producción.",
+      "items": [
+        {
+          "title": "Integrado",
+          "desc": "Se conecta a tu CRM, ERP, bases de datos y APIs existentes — sin necesidad de cambiar de plataforma."
+        },
+        {
+          "title": "Mantenible",
+          "desc": "Código limpio y documentado con separación clara de responsabilidades. Tu equipo puede extenderlo sin nosotros."
+        },
+        {
+          "title": "Observable",
+          "desc": "Cada automatización incluye logging, alertas de error y dashboards de estado para que sepas cuándo algo falla antes que tus clientes."
+        },
+        {
+          "title": "Seguro por Defecto",
+          "desc": "Gestión de datos conforme al RGPD, credenciales cifradas, controles de acceso y despliegue privado opcional para sectores regulados."
+        },
+        {
+          "title": "Independiente de Infraestructura",
+          "desc": "Funciona en tu nube preferida, on-premise o híbrido. Construimos para tu entorno, no para el nuestro."
+        },
+        {
+          "title": "Listo para el Traspaso",
+          "desc": "Documentación técnica completa, un runbook y una sesión de entrega. Tú eres el propietario del sistema — con o sin nosotros."
+        }
+      ]
+    }
+  },
+  "SoftwareLeiden": {
+    "Hero": {
+      "badge": "BASADO EN LEIDEN :: ESTÁNDARES GLOBALES",
+      "title": {
+        "part1": "Desarrollo de Software",
+        "highlight": "Reimaginado."
+      },
+      "description": "¿Buscas una <strong>empresa de software en Leiden</strong>? Combinamos la agilidad de un <strong>consultor IT</strong> local con los estándares de ingeniería de Silicon Valley. Sin relleno, solo código que funciona.",
+      "cta": {
+        "coffee": "Quedamos para un Café",
+        "services": "Ver Expertise"
+      }
+    },
+    "Services": {
+      "web": {
+        "title": "Apps Web Full-Stack",
+        "description": "Dashboards personalizados, plataformas SaaS y herramientas internas con Next.js y Supabase. Rápido, seguro y escalable."
+      },
+      "ai": {
+        "title": "Desarrollo IA Híbrido",
+        "description": "No solo creamos apps; creamos <strong>sistemas inteligentes</strong>. Integramos agentes IA, chatbots y automatización directamente en tu software."
+      },
+      "ecommerce": {
+        "title": "E-Commerce y Escala",
+        "description": "Soluciones de e-commerce de alto rendimiento que soportan picos de tráfico y se integran con tu inventario y ERP."
+      }
+    },
+    "Process": {
+      "title": "Cómo Construimos",
+      "steps": {
+        "0": {
+          "title": "Arquitectura Primero",
+          "desc": "No adivinamos. Mapeamos tu capacidad de datos y flujos antes de escribir una sola línea de código."
+        },
+        "1": {
+          "title": "Iteración Rápida",
+          "desc": "Entregamos rápido. Verás progresos cada semana, no cada mes. Sin cajas negras."
+        },
+        "2": {
+          "title": "Traspaso Local",
+          "desc": "Formamos a tu equipo aquí en Leiden. Eres dueño del código, la IP y la infraestructura."
+        }
+      }
+    },
+    "Local": {
+      "title": "¿Por qué trabajar con un desarrollador local en Leiden?",
+      "cards": {
+        "face": {
+          "title": "Colaboración Cara a Cara",
+          "description": "Nada supera sentarse a una mesa para diseñar arquitecturas complejas. Estamos disponibles para workshops en <strong>Leiden</strong>, <strong>La Haya</strong> y <strong>Ámsterdam</strong>."
+        },
+        "market": {
+          "title": "Comprensión del Mercado Holandés",
+          "description": "Entendemos el ecosistema local, métodos de pago (iDEAL) y la cultura de negocios. Hablamos <strong>Tecnología</strong> y <strong>Negocios</strong>."
+        }
+      },
+      "hq": "Leiden HQ"
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre trabajar con una empresa de software en Leiden.",
+      "questions": [
+        {
+          "q": "¿Cuánto tiempo tarda un proyecto de software típico?",
+          "a": "Depende del alcance, pero un MVP (Producto Mínimo Viable) suele tardar entre 6 y 12 semanas. Enfatizamos la arquitectura primero para que la velocidad no comprometa la calidad."
+        },
+        {
+          "q": "¿Pueden integrar IA en mi software actual?",
+          "a": "Sí. Nos especializamos en desarrollo de IA híbrida, lo que significa que podemos crear agentes de IA personalizados que se comuniquen con tus bases de datos y APIs actuales."
+        },
+        {
+          "q": "¿Soy el dueño del código una vez finalizado el proyecto?",
+          "a": "Absolutamente. Posees el 100% de la propiedad intelectual (IP), el código fuente y la infraestructura. Sin dependencia del proveedor."
+        },
+        {
+          "q": "¿Ofrecen mantenimiento y soporte después del lanzamiento?",
+          "a": "Sí, ofrecemos paquetes de soporte flexibles aquí en Zuid-Holland para asegurar que tus sistemas sigan siendo seguros y escalables mientras tu negocio crece."
+        }
+      ]
+    },
+    "SEO": {
+      "keywords": "desarrollo de software Leiden, apps web a medida Zuid-Holland, consultor IT Holanda, desarrollador React Leiden, integración IA Leiden, empresa software Randstad",
+      "extendedDesc": "Como desarrollador de software líder en Leiden, ayudamos a empresas en todo Zuid-Holland a modernizar su stack tecnológico. Ya sea que necesites una app web basada en React o una automatización compleja con IA, nuestro equipo entrega soluciones de alto rendimiento desde el corazón de la 'Sleutelstad'."
+    }
+  },
+  "ITSystemIntegration": {
+    "Hero": {
+      "badge": "CONSULTOR IT PAÍSES BAJOS",
+      "title": {
+        "part1": "Conecta tus",
+        "highlight": "Sistemas Fragmentados"
+      },
+      "description": "Somos la <strong>empresa de integración de software</strong> que hace que tus apps hablen entre sí. Conecta tu <strong>CRM</strong>, <strong>ERP</strong> y <strong>Herramientas Internas</strong> para eliminar errores.",
+      "cta": {
+        "primary": "Hablemos de tu Integración",
+        "secondary": "Ver Cómo Funciona"
+      }
+    },
+    "Diagram": {
+      "source": {
+        "title": "Silos de Datos",
+        "desc": "Airtable / SQL / Excel"
+      },
+      "engine": {
+        "title": "Motor de Integración",
+        "desc": "n8n / API a Medida"
+      },
+      "outcome": {
+        "title": "Workflow Unificado",
+        "desc": "Sincronización Automática"
+      }
+    },
+    "Services": {
+      "api": {
+        "title": "Desarrollo de APIs a Medida",
+        "desc": "Creamos APIs seguras y documentadas para exponer tus datos legacy a apps modernas web y móviles."
+      },
+      "legacy": {
+        "title": "Modernización Legacy",
+        "desc": "No reescribas todo tu monolito. Lo envolvemos en una capa de API moderna para extender su vida útil."
+      },
+      "sync": {
+        "title": "Sincronización en Tiempo Real",
+        "desc": "Mantén HubSpot, Salesforce y tu ERP en perfecta armonía con arquitecturas orientadas a eventos."
+      }
+    },
+    "Process": {
+      "title": "Cómo Integramos tus Sistemas",
+      "subtitle": "Un enfoque estructurado para que nada se rompa y nada se olvide.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Auditoría de Integración",
+          "desc": "Inventario de todas tus apps, APIs y formatos de datos. Identificamos cada traspaso manual, cada copia-pega y cada cuello de botella en tu flujo de datos actual."
+        },
+        {
+          "number": "02",
+          "title": "Diseño de Arquitectura",
+          "desc": "Diagrama de flujo de datos, selección del patrón de integración (event-driven, polling, webhooks), estrategia de gestión de errores y modelo de seguridad — todo documentado antes de construir."
+        },
+        {
+          "number": "03",
+          "title": "Construcción y Pruebas",
+          "desc": "Conectores API, workflows n8n o puentes a medida construidos en paralelo a tus sistemas en producción. Pruebas end-to-end completas antes del paso. Cero tiempo de inactividad en producción."
+        },
+        {
+          "number": "04",
+          "title": "Monitoreo y Traspaso",
+          "desc": "Dashboards, alertas y runbooks configurados para que tu equipo pueda operar y diagnosticar la integración de forma independiente. Documentación completa incluida."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas de Integración",
+      "subtitle": "Consultas habituales sobre cómo conectar tus sistemas de negocio.",
+      "questions": [
+        {
+          "q": "¿Qué es la integración de sistemas?",
+          "a": "Es el proceso de conectar diferentes subsistemas (como tu CRM, ERP y pasarelas de pago) en una unidad única y cohesiva donde los datos fluyen automáticamente."
+        },
+        {
+          "q": "¿Utilizan n8n para las automatizaciones?",
+          "a": "Sí, n8n es nuestra plataforma principal de automatización. Para escenarios más complejos escribimos código a medida — integraciones en Node.js o Python — según lo que el proyecto realmente necesite."
+        },
+        {
+          "q": "¿Cómo gestionan la seguridad de los datos durante la integración?",
+          "a": "Priorizamos la soberanía de los datos. A menudo desplegamos motores de integración auto-alojados para que tus datos comerciales sensibles nunca salgan de tu infraestructura."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Integración que Realmente Funciona",
+      "without": {
+        "title": "Sin Integración",
+        "points": ["Copiar y pegar entre apps manualmente", "Datos siempre desincronizados", "Horas perdidas en tareas administrativas", "Errores humanos en registros críticos", "Sin visibilidad de tus flujos de datos"]
+      },
+      "with": {
+        "title": "Con CodeHunter Lab",
+        "points": ["Los datos fluyen automáticamente 24/7", "Fuente única de verdad en todas tus apps", "Tu equipo se enfoca en trabajo real", "Datos validados, cero errores manuales", "Monitoreo completo, alertas y registro de auditoría"]
+      }
+    },
+    "CTA": {
+      "badge": "AUDITORÍA DE INTEGRACIÓN GRATUITA",
+      "title": "¿Listo para Conectar tus Sistemas?",
+      "subtitle": "Auditoría de integración gratuita. Mapeamos tus flujos de datos actuales, identificamos el mayor cuello de botella y proponemos una solución concreta. Sin compromiso.",
+      "button": "Reservar Auditoría de Integración Gratuita"
+    },
+    "SEO": {
+      "description": "CodeHunter Lab está especializada en integración de sistemas IT para empresas en los Países Bajos. Conectamos CRMs, ERPs, bases de datos y APIs personalizadas usando n8n, puentes API a medida y arquitecturas orientadas a eventos. Con sede en Leiden, atendemos empresas en Ámsterdam, Róterdam y Den Haag.",
+      "keywords": "integración sistemas IT países bajos, empresa integración API leiden, consultor n8n países bajos, integración CRM ERP, empresa integración software ámsterdam"
+    }
+  },
+  "InternalTools": {
+    "Hero": {
+      "badge": "DESARROLLO DE HERRAMIENTAS INTERNAS",
+      "title": {
+        "part1": "Tu Negocio,",
+        "highlight": "A Tu Manera"
+      },
+      "description": "El software estándar nunca encaja perfecto. Creamos <strong>herramientas internas a medida</strong> que se adaptan exactamente a tus flujos. Escapa del <strong>caos de las hojas de cálculo</strong>.",
+      "cta": "Empezar a Crear"
+    },
+    "Comparison": {
+      "title": "¿Por qué a Medida vs Low-Code?",
+      "custom": {
+        "title": "Desarrollo a Medida (Nuestro Método)",
+        "points": [
+          "Sin cuotas mensuales por usuario",
+          "UI/UX totalmente flexible",
+          "Eres dueño del código fuente",
+          "Escalabilidad ilimitada"
+        ]
+      },
+      "lowcode": {
+        "title": "Low-Code Genérico",
+        "points": [
+          "Costes de escalado caros",
+          "Interfaces rígidas y toscas",
+          "Dependencia del proveedor (Lock-in)",
+          "Techo de rendimiento limitado"
+        ]
+      }
+    },
+    "Tools": {
+      "title": "Qué Construimos",
+      "dashboards": {
+        "title": "Dashboards Operativos",
+        "desc": "Visualización en tiempo real de KPIs, inventario y lógica. Controla la salud de tu negocio de un vistazo."
+      },
+      "portals": {
+        "title": "Portales de Cliente",
+        "desc": "Áreas seguras para que tus clientes suban documentos, sigan estados y se comuniquen."
+      },
+      "resource": {
+        "title": "Gestión de Recursos",
+        "desc": "Planificadores drag-and-drop adaptados a la estructura y turnos de tu equipo específico."
+      }
+    },
+    "Process": {
+      "title": "Cómo Construimos tu Herramienta",
+      "subtitle": "Desde la auditoría del workflow hasta la herramienta en producción — sin sorpresas ni bloat.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Auditoría del Workflow",
+          "desc": "Mapeamos tu proceso actual: qué herramientas usas, dónde se atascan los datos y en qué invierte más tiempo tu equipo. Los puntos de dolor se convierten en el spec."
+        },
+        {
+          "number": "02",
+          "title": "Diseño y Modelo de Datos",
+          "desc": "Wireframes, esquema de base de datos y contratos de API acordados antes de escribir una línea de código. Apruebas el diseño antes de que construyamos."
+        },
+        {
+          "number": "03",
+          "title": "Desarrollo Iterativo",
+          "desc": "Sprints de dos semanas con previsualizaciones en staging en directo. Tu equipo prueba la herramienta real, no un prototipo. El feedback se incorpora en el siguiente sprint."
+        },
+        {
+          "number": "04",
+          "title": "Lanzamiento y Traspaso",
+          "desc": "Desplegado en tu infraestructura. Documentación completa, formación de administradores y 30 días de soporte post-lanzamiento incluidos. Eres dueño del código."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "FAQ de Herramientas Internas",
+      "subtitle": "Deja de pelear con tu software. Empieza a construir lo que necesitas.",
+      "questions": [
+        {
+          "q": "¿Por qué construir una herramienta interna a medida en lugar de usar Retool o Appsmith?",
+          "a": "Para muchos negocios, las tarifas por usuario de las plataformas low-code se convierten en un coste oculto masivo a medida que creces. Nuestras herramientas no tienen cuotas mensuales por usuario y ofrecen flexibilidad total."
+        },
+        {
+          "q": "¿Puede mi herramienta interna sincronizarse con Excel o Google Sheets?",
+          "a": "Sí. Normalmente ayudamos a las empresas a pasar de hojas de cálculo a una base de datos real (como Supabase o PostgreSQL) manteniendo las hojas como respaldo si es necesario."
+        }
+      ]
+    },
+    "CTA": {
+      "title": "¿Listo para Reemplazar tus Hojas de Cálculo?",
+      "subtitle": "Sesión de scoping gratuita. Mapeamos tu workflow, proponemos una solución y estimamos plazos y costes. Sin compromiso.",
+      "button": "Reservar Llamada de Scoping Gratuita"
+    },
+    "SEO": {
+      "description": "CodeHunter Lab construye herramientas internas a medida, paneles de administración y portales de operaciones para empresas en los Países Bajos. Reemplazamos hojas de cálculo y plataformas low-code caras con software personalizado que posees completamente — sin tarifas por usuario, sin dependencia del proveedor. Con sede en Leiden.",
+      "keywords": "herramientas internas a medida países bajos, desarrollador herramientas internas leiden, desarrollo panel administración, reemplazar retool appsmith, maatwerk software ontwikkeling"
+    }
+  },
+  "AIAutomationNL": {
+    "Hero": {
+      "badge": "AGENCIA IA LEIDEN Y PAÍSES BAJOS",
+      "title": {
+        "part1": "Automatización",
+        "highlight": "IA Práctica",
+        "sub": "para Negocios en Crecimiento"
+      },
+      "description": "Deja de ahogarte en tareas administrativas. Desplegamos <span class=\"text-white font-medium\">Agentes IA</span> y <span class=\"text-white font-medium\">workflows automatizados</span> que impactan directamente en tu cuenta de resultados. Desde <strong>Leiden</strong> para el mundo.",
+      "cta": {
+        "primary": "Reserva una Llamada",
+        "secondary": "Ver Soluciones IA"
+      }
+    },
+    "Agents": {
+      "title": {
+        "part1": "Despliega tu",
+        "highlight": "Fuerza Laboral Digital"
+      },
+      "whatsapp": {
+        "title": "Agentes IA en WhatsApp",
+        "desc": "Atención al cliente 24/7 y cualificación de leads directamente en WhatsApp. Habla como un humano, conoce tu negocio y agenda citas automáticamente.",
+        "points": [
+          "Cero tiempos de espera",
+          "Conexión con tu CRM",
+          "98% de precisión en intención"
+        ]
+      },
+      "voice": {
+        "title": "Bots de Voz con IA",
+        "desc": "El futuro de las llamadas comerciales y soporte. Nuestros agentes de voz realistas pueden manejar cientos de llamadas simultáneas para cualificar leads.",
+        "points": [
+          "Latencia humana <500ms",
+          "Filtro de spam y leads no cualificados",
+          "Soporte multi-idioma"
+        ]
+      },
+      "automation": {
+        "title": "Automatización de Workflows (n8n)",
+        "desc": "Somos el \"pegamento\" entre tus aplicaciones. Usando <strong>n8n</strong> y <strong>Make.com</strong>, automatizamos la entrada de datos, facturación y reportes.",
+        "points": [
+          "Adiós al copiar y pegar",
+          "Operaciones sin errores",
+          "Integraciones de API a medida"
+        ]
+      },
+      "label": {
+        "capabilities": "Capacidades",
+        "popular": "POPULAR"
+      }
+    },
+    "ROI": {
+      "title": {
+        "part1": "No vendemos \"Tecnología\".",
+        "part2": "Vendemos",
+        "highlight": "Impacto en Ingresos."
+      },
+      "description": "La automatización no es solo ahorrar tiempo; es escalar sin aumentar la plantilla.",
+      "cards": {
+        "0": {
+          "label": "AHORRO DE COSTES",
+          "value": "40%",
+          "desc": "Reducción media de costes operativos para nuestros clientes en los primeros 3 meses automatizando tareas manuales."
+        },
+        "1": {
+          "label": "VALOR DE VIDA (LTV)",
+          "value": "3x",
+          "desc": "Respuestas más rápidas significan clientes más felices. Nuestros agentes IA responden al instante, mejorando la retención."
+        }
+      }
+    },
+    "Trust": {
+      "dont": {
+        "title": {
+          "part1": "Lo que",
+          "highlight": "NO",
+          "part2": "hacemos"
+        },
+        "points": [
+          "No vendemos \"botones mágicos\" que no hacen nada. La automatización real requiere lógica.",
+          "No complicamos problemas simples con hype. Si un Excel funciona, te lo diremos."
+        ]
+      },
+      "do": {
+        "title": {
+          "part1": "Lo que",
+          "highlight": "SÍ"
+        },
+        "points": [
+          "Construimos sistemas que posees y controlas. Sin pesadillas de dependencia del proveedor.",
+          "Soporte local aquí en <strong>Zuid-Holland</strong>. Somos un socio, no un trabajador temporal."
+        ]
+      }
+    },
+    "Industries": {
+      "badge": "Por Sector",
+      "title": "Automatización Diseñada para",
+      "highlight": "Tu Sector",
+      "subtitle": "Cada sector tiene flujos de trabajo, software y requisitos de cumplimiento diferentes. Construimos automatización específica para cómo opera tu negocio realmente.",
+      "cta": "Ver detalles del sector",
+      "items": [
+        {
+          "emoji": "🧾",
+          "title": "Despachos Contables",
+          "desc": "Automatiza el procesamiento de facturas, la captación de clientes y los informes financieros. Se integra con Exact Online, Twinfield y Moneybird.",
+          "href": "/accounting-firm-automation-netherlands"
+        },
+        {
+          "emoji": "🏠",
+          "title": "Agencias Inmobiliarias",
+          "desc": "Automatiza el seguimiento de leads, las actualizaciones de listados de propiedades y la comunicación con clientes.",
+          "href": "/real-estate-automation-netherlands"
+        },
+        {
+          "emoji": "🦷",
+          "title": "Clínicas Dentales",
+          "desc": "Reduce las ausencias con recordatorios automáticos, optimiza la captación de pacientes y conecta el software de tu consulta.",
+          "href": "/dental-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "💆",
+          "title": "Clínicas Estéticas",
+          "desc": "Convierte más consultas en tratamientos reservados con automatización de CRM y nurturing personalizado de leads.",
+          "href": "/aesthetic-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "🏃",
+          "title": "Clínicas de Fisioterapia",
+          "desc": "Automatiza la gestión de derivaciones, la programación de citas y la detección de abandono de pacientes.",
+          "href": "/physiotherapy-clinic-automation-netherlands"
+        },
+        {
+          "emoji": "🐾",
+          "title": "Clínicas Veterinarias",
+          "desc": "Reduce las ausencias, automatiza la comunicación con dueños de mascotas y sincroniza citas con el software de tu clínica.",
+          "href": "/veterinary-clinic-automation-netherlands"
+        }
+      ]
+    },
+    "SEO": {
+      "footer": "Agencia líder en automatización de IA con sede en Leiden, sirviendo al mercado de los Países Bajos y global. Especialistas en flujos n8n, APIs de WhatsApp Business y Agentes de Voz IA. Contacta con nosotros para consultoría de IA en Zuid-Holland.",
+      "keywords": "agencia IA Leiden, consultoría IA Holanda, bots de WhatsApp para empresas NL, agentes de voz IA Randstad, experto en automatización n8n, estrategia ROI IA, agentes de ventas automatizados",
+      "faq": {
+        "title": "FAQ de Automatización IA",
+        "questions": [
+          {
+            "q": "¿Qué es un Agente de IA?",
+            "a": "Un Agente de IA es un software que puede percibir su entorno, razonar sobre él y tomar acciones para lograr un objetivo. A diferencia de un chatbot simple, puede ejecutar tareas como reservar citas o actualizar tu CRM."
+          },
+          {
+            "q": "¿Cuánto puede ahorrar la automatización de IA a mi negocio?",
+            "a": "En promedio, nuestros clientes ven una reducción del 40% en los costos de soporte al cliente y un impulso significativo en los tiempos de respuesta de leads, lo que a menudo conduce a un aumento de más del 20% en los ingresos totales."
+          }
+        ]
+      }
+    }
+  },
+  "ExpertisePages": {
+    "AIAgents": {
+      "Hero": {
+        "badge": "DESARROLLO DE AGENTES IA",
+        "title": {
+          "part1": "Tu Fuerza Laboral",
+          "highlight": "Digital 24/7"
+        },
+        "description": "Imagina un equipo de soporte que nunca duerme, nunca se queja y escala al instante. Construimos **Agentes IA** que gestionan atención al cliente, ventas y citas de forma autónoma.",
+        "cta": "Desplegar Agente"
+      },
+      "Features": {
+        "title": "¿Por qué Agentes IA?",
+        "cards": [
+          {
+            "title": "Respuesta Instantánea",
+            "desc": "Responde a leads en < 2 segundos. La velocidad genera ingresos."
+          },
+          {
+            "title": "Escala Infinita",
+            "desc": "Gestiona 1 o 10.000 conversaciones simultáneas sin coste extra."
+          },
+          {
+            "title": "Memoria Perfecta",
+            "desc": "Los agentes recuerdan cada detalle de cada conversación, para siempre."
+          }
+        ]
+      },
+      "Process": {
+        "title": "Cómo Desplegamos Tu Agente",
+        "subtitle": "Del caso de uso a producción en 4 pasos.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Descubrimiento y Alcance",
+            "desc": "Mapeamos el caso de uso: qué gestiona el agente, qué sistemas toca, cómo es una conversación exitosa y cuándo escala a un humano."
+          },
+          {
+            "number": "02",
+            "title": "Diseño e Ingeniería de Prompts",
+            "desc": "Diseñamos el comportamiento del agente, restricciones, tono y rutas de escalado. Probamos casos extremos antes de escribir una sola línea de código de integración."
+          },
+          {
+            "number": "03",
+            "title": "Integración y Pruebas",
+            "desc": "Conectamos a tu CRM, plataforma de comunicación (WhatsApp, chat web, voz) y fuentes de datos. Lanzamiento controlado con modo sombra antes del despliegue completo."
+          },
+          {
+            "number": "04",
+            "title": "Despliegue y Monitoreo",
+            "desc": "Despliegue en producción con observabilidad: calidad de respuestas, tasas de escalado, métricas de conversión y revisión mensual de rendimiento."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "Casos de Uso de Agentes IA",
+        "subtitle": "Cada agente está diseñado específicamente para una función de negocio concreta.",
+        "cases": [
+          {
+            "icon": "🎯",
+            "title": "Cualificación de Leads",
+            "desc": "Formula preguntas de descubrimiento, cualifica según tus criterios y reserva reuniones automáticamente — 24/7."
+          },
+          {
+            "icon": "💬",
+            "title": "Soporte al Cliente",
+            "desc": "Responde FAQs, gestiona estados de pedidos y procesa solicitudes habituales sin intervención humana."
+          },
+          {
+            "icon": "📅",
+            "title": "Reserva de Citas",
+            "desc": "Disponible en WhatsApp o web. Reserva, confirma y envía recordatorios directamente a tu sistema de calendario."
+          },
+          {
+            "icon": "🔄",
+            "title": "Nurturing de Leads",
+            "desc": "Secuencias de seguimiento automáticas para leads fríos. Cadencias personalizadas según el historial de conversación."
+          },
+          {
+            "icon": "🧑‍💼",
+            "title": "Onboarding de Clientes",
+            "desc": "Guía a nuevos clientes en el proceso, recopila documentos requeridos y responde preguntas de incorporación automáticamente."
+          },
+          {
+            "icon": "📊",
+            "title": "Operaciones Internas",
+            "desc": "Responde preguntas de RRHH, extrae documentos de política, gestiona solicitudes de vacaciones o tickets de helpdesk interno."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "FAQ de Agentes IA",
+        "items": [
+          {
+            "q": "¿Cuál es la diferencia entre un agente IA y un chatbot?",
+            "a": "Un chatbot sigue un árbol de decisión fijo. Un agente IA razona con el contexto, toma acciones en múltiples pasos (como consultar el CRM, reservar una reunión o enviar un email) y gestiona entradas que un chatbot no podría manejar."
+          },
+          {
+            "q": "¿En qué plataformas puede funcionar el agente?",
+            "a": "API de WhatsApp Business, widgets de chat web, voz (llamadas entrantes y salientes), Slack, email e interfaces personalizadas. Construimos para el canal que usan tus clientes."
+          },
+          {
+            "q": "¿Cuánto tarda el despliegue?",
+            "a": "Un agente enfocado en un solo canal suele ir de alcance a producción en 2–4 semanas. Agentes multicanal con integraciones complejas tardan 4–8 semanas."
+          },
+          {
+            "q": "¿Qué pasa cuando el agente no puede responder?",
+            "a": "El escalado está diseñado en cada agente que construimos. Cuando la confianza está por debajo del umbral o el usuario solicita un humano, el agente transfiere con el contexto completo de la conversación."
+          },
+          {
+            "q": "¿Es conforme al RGPD?",
+            "a": "Sí. Definimos el tratamiento de datos en el alcance: qué fluye por el agente, dónde se almacena y durante cuánto tiempo. El despliegue on-premise está disponible para sectores sensibles."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "¿Listo para Desplegar Tu Primer Agente?",
+        "subtitle": "Reserva una llamada de estrategia gratuita. Definiremos el agente con mayor impacto y te diremos exactamente qué puede automatizar.",
+        "button": "Reservar Llamada de Estrategia Gratuita"
+      },
+      "SEO": {
+        "title": "Desarrollo de Agentes IA Países Bajos | Automatización 24/7",
+        "description": "Despliega agentes IA a medida para soporte y ventas. Agencia IA top en Holanda para bots de WhatsApp y Voz.",
+        "keywords": "desarrollo agentes ia, fuerza laboral digital, automatización whatsapp empresas, atención cliente ia nl"
+      }
+    },
+    "n8nMigration": {
+      "Hero": {
+        "badge": "CONSULTORÍA Y MIGRACIÓN N8N",
+        "title": {
+          "part1": "Escapa del",
+          "highlight": "Impuesto Zapier"
+        },
+        "description": "¿Pagas miles por automatizaciones simples? Migramos tus flujos caóticos de Zapier/Make a **n8n**, dándote propiedad, privacidad y ejecución ilimitada por una fracción del coste.",
+        "cta": "Empezar Migración"
+      },
+      "Features": {
+        "title": "¿Por qué Migrar a n8n?",
+        "cards": [
+          {
+            "title": "Control de Costes",
+            "desc": "Deja de pagar por tarea. Ejecuta flujos complejos en tu propio servidor."
+          },
+          {
+            "title": "Privacidad de Datos",
+            "desc": "Mantén los datos sensibles en tu infraestructura, cumpliendo GDPR."
+          },
+          {
+            "title": "Lógica Compleja",
+            "desc": "Construye flujos sofisticados que Zapier simplemente no puede manejar."
+          }
+        ]
+      },
+      "SEO": {
+        "title": "Consultoría y Migración n8n Países Bajos | Alternativa a Zapier",
+        "description": "Expertos en n8n en Holanda. Migramos workflows de Zapier y Make a n8n para mejor rendimiento y menores costes.",
+        "keywords": "consultor n8n holanda, migrar zapier a n8n, experto automatización workflows, automatización auto-alojada"
+      },
+      "Process": {
+        "title": "Cómo Funciona la Migración",
+        "subtitle": "Del caos de Zapier al control propio en 4 pasos.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Auditoría de Workflows",
+            "desc": "Mapeamos cada workflow existente en Zapier o Make — triggers, acciones, rutas de error y lógica oculta. Nada se pierde en la traducción."
+          },
+          {
+            "number": "02",
+            "title": "Diseño de Arquitectura",
+            "desc": "Diseñamos tu nueva arquitectura n8n: servidor auto-alojado, gestión de credenciales, configuración del entorno y estructura de workflows."
+          },
+          {
+            "number": "03",
+            "title": "Migración y Testing",
+            "desc": "Reconstruimos cada workflow en n8n con lógica mejorada, mejor gestión de errores y ejecución paralela donde sea posible. Testing completo antes del traspaso."
+          },
+          {
+            "number": "04",
+            "title": "Entrega y Documentación",
+            "desc": "Recibes propiedad total: workflows documentados, equipo formado y soporte opcional continuo. Sin dependencia de proveedores, nunca."
+          }
+        ]
+      },
+      "Comparison": {
+        "title": "n8n vs La Competencia",
+        "zapier": {
+          "name": "Zapier",
+          "cons": [
+            "Pago por tarea (costes se disparan a escala)",
+            "Lógica compleja limitada",
+            "Los datos salen de tu infraestructura",
+            "Dependencia del proveedor"
+          ]
+        },
+        "make": {
+          "name": "Make.com",
+          "cons": [
+            "Pago por operación",
+            "Niveles de precios complejos",
+            "Sin opción de auto-alojamiento",
+            "Funcionalidades enterprise limitadas"
+          ]
+        },
+        "n8n": {
+          "name": "n8n (Nuestra Elección)",
+          "pros": [
+            "Ejecuciones ilimitadas en tu servidor",
+            "Flexibilidad total con nodos JS/Python",
+            "Cumple GDPR: los datos permanecen en local",
+            "Configuración única, sin tarifas SaaS recurrentes"
+          ]
+        }
+      },
+      "UseCases": {
+        "title": "Qué Migramos",
+        "subtitle": "Cualquier workflow que funcione en Zapier o Make puede funcionar mejor en n8n.",
+        "cases": [
+          {
+            "icon": "🤝",
+            "title": "Automatización CRM",
+            "desc": "Puntuación de leads, enriquecimiento de contactos, actualizaciones de etapas y secuencias de seguimiento sincronizadas en HubSpot, Pipedrive o Salesforce."
+          },
+          {
+            "icon": "📧",
+            "title": "Email y Marketing",
+            "desc": "Triggers de email por comportamiento, segmentación de listas, seguimiento de campañas y difusión multicanal coordinada en tiempo real."
+          },
+          {
+            "icon": "📊",
+            "title": "Informes y Analítica",
+            "desc": "Dashboards automatizados con datos de múltiples fuentes, informes programados entregados en Slack o email cada mañana."
+          },
+          {
+            "icon": "🛒",
+            "title": "Operaciones Ecommerce",
+            "desc": "Procesamiento de pedidos, sincronización de inventario, notificaciones al cliente y gestión de devoluciones en Shopify, WooCommerce o tiendas personalizadas."
+          },
+          {
+            "icon": "🧾",
+            "title": "Finanzas y Facturación",
+            "desc": "Generación de facturas, conciliación de pagos, categorización de gastos y sincronización contable — completamente automatizados."
+          },
+          {
+            "icon": "🔗",
+            "title": "Integraciones API",
+            "desc": "Conecta cualquier sistema que tenga API. Si tiene webhook o endpoint REST, podemos automatizarlo."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "FAQ de Migración n8n",
+        "items": [
+          {
+            "q": "¿Cuánto tarda una migración?",
+            "a": "La mayoría de migraciones tardan 1-3 semanas según el número y complejidad de los workflows. Configuraciones simples (menos de 10 workflows) pueden estar en marcha en 5 días."
+          },
+          {
+            "q": "¿Necesito mi propio servidor para ejecutar n8n?",
+            "a": "Sí. Recomendamos un VPS (como Hetzner o DigitalOcean) por €5-15/mes. Gestionamos la configuración completa del servidor, SSL, copias de seguridad y monitorización como parte de la migración."
+          },
+          {
+            "q": "¿Qué pasa con mis workflows actuales de Zapier durante la migración?",
+            "a": "Nada. Construimos la versión n8n en paralelo y solo cambiamos tras las pruebas completas. Tus workflows de Zapier siguen funcionando hasta que apruebes el traspaso."
+          },
+          {
+            "q": "¿Pueden añadir lógica nueva que Zapier no podía manejar?",
+            "a": "Absolutamente. n8n soporta nodos de código JavaScript/Python completos, ramificaciones complejas, sub-workflows y llamadas API que Zapier simplemente no puede ejecutar. A menudo mejoramos los workflows significativamente durante la migración."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "¿Listo para Reducir tu Factura de Automatización?",
+        "subtitle": "Obtén una auditoría gratuita de workflows. Te mostraremos exactamente cuánto puedes ahorrar migrando a n8n.",
+        "button": "Obtener Auditoría Gratuita"
+      }
+    },
+    "SystemArchitecture": {
+      "Hero": {
+        "badge": "DISEÑO DE ARQUITECTURA DE SISTEMAS",
+        "title": {
+          "part1": "Cimientos para el",
+          "highlight": "Hiper-Crecimiento"
+        },
+        "description": "El código espagueti mata startups. Diseñamos **Arquitecturas de Sistemas** robustas y escalables usando Next.js y Microservicios que pueden manejar millones de usuarios sin colapsar.",
+        "cta": "Auditar tu Stack"
+      },
+      "Features": {
+        "title": "Principios de Arquitectura de Sistemas",
+        "cards": [
+          {
+            "title": "Escalabilidad",
+            "desc": "Sistemas diseñados para crecer contigo, desde el MVP a la IPO."
+          },
+          {
+            "title": "Mantenibilidad",
+            "desc": "Patrones limpios y documentados que cualquier desarrollador puede entender."
+          },
+          {
+            "title": "Rendimiento",
+            "desc": "Consultas optimizadas y edge caching para cargas de <100ms."
+          }
+        ]
+      },
+      "Process": {
+        "title": "Proceso de Diseño de Arquitectura",
+        "subtitle": "Mejoras de arquitectura entregadas sin detener tu negocio.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Auditoría del Stack",
+            "desc": "Revisamos tu codebase, infraestructura, dependencias y cuellos de botella. Identificamos deuda técnica, puntos únicos de fallo y restricciones de escalado."
+          },
+          {
+            "number": "02",
+            "title": "Propuesta de Arquitectura",
+            "desc": "Diseñamos el estado objetivo: límites de componentes, flujo de datos, contratos de API, diagrama de infraestructura y un plan de migración sin reescrituras de golpe."
+          },
+          {
+            "number": "03",
+            "title": "Prueba de Concepto",
+            "desc": "Construimos primero el cambio arquitectónico de mayor riesgo para validar suposiciones antes de comprometerse a la implementación completa."
+          },
+          {
+            "number": "04",
+            "title": "Implementación por Fases",
+            "desc": "Desplegamos cambios de forma incremental con cobertura de tests completa. Migraciones sin tiempo de inactividad. Tu sistema permanece activo en todo momento."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "Casos de Uso de Arquitectura de Sistemas",
+        "subtitle": "Trabajo de arquitectura que entrega resultados medibles, no solo diagramas.",
+        "cases": [
+          {
+            "icon": "🏗️",
+            "title": "Remediación de Deuda Técnica",
+            "desc": "Desenreda codebases fuertemente acoplados. Define interfaces limpias, extrae dominios y reduce el coste de cada cambio futuro."
+          },
+          {
+            "icon": "📈",
+            "title": "Escalado para el Crecimiento",
+            "desc": "Optimización de base de datos, estrategia de caché, configuración CDN y escalado horizontal — diseñados para tu próximo 10x."
+          },
+          {
+            "icon": "🔀",
+            "title": "Monolito a Servicios",
+            "desc": "Migra de monolito a servicios al ritmo adecuado. Prevenimos la trampa del monolito distribuido en la que caen la mayoría de los equipos."
+          },
+          {
+            "icon": "⚡",
+            "title": "Optimización de Rendimiento",
+            "desc": "Cargas de página por debajo de 100ms. Estrategia de server components, edge caching, bundle splitting y optimización de consultas."
+          },
+          {
+            "icon": "☁️",
+            "title": "Infraestructura Cloud",
+            "desc": "Arquitectura AWS, GCP o Hetzner diseñada para eficiencia de costes, fiabilidad y cumplimiento normativo."
+          },
+          {
+            "icon": "🤖",
+            "title": "Integración de Sistemas IA",
+            "desc": "Añade IA a sistemas existentes sin desestabilizarlos. Capas de servicio limpias, estrategias de fallback y observabilidad completa."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "Empieza con una Auditoría Gratuita del Stack",
+        "subtitle": "Revisamos tu arquitectura actual y entregamos una lista priorizada de mejoras — con estimaciones de esfuerzo e impacto. Sin compromiso.",
+        "button": "Reservar Auditoría Gratuita del Stack"
+      },
+      "SEO": {
+        "title": "Consultor Arquitectura Software Países Bajos | Sistemas React Escalables",
+        "description": "Arquitectos de sistemas senior en Leiden. Diseñamos arquitecturas Next.js y cloud escalables para empresas tecnológicas ambiciosas.",
+        "keywords": "arquitecto sistemas holanda, consultoría rendimiento react, diseño software escalable, auditoría deuda técnica"
+      }
+    },
+    "CustomLLMs": {
+      "Hero": {
+        "badge": "DESARROLLO DE LLM A MEDIDA",
+        "title": {
+          "part1": "Tu Negocio,",
+          "highlight": "Tu Cerebro"
+        },
+        "description": "ChatGPT genérico no es suficiente. Entrenamos **LLMs a Medida** con tus datos propietarios, creando un modelo IA que habla tu idioma y conoce tus secretos—de forma segura.",
+        "cta": "Entrenar Modelo"
+      },
+      "Features": {
+        "title": "¿Por qué Crear un LLM Personalizado?",
+        "cards": [
+          {
+            "title": "Seguridad de Datos",
+            "desc": "Ejecuta modelos open-source (Llama 3, Mistral) en servidores privados."
+          },
+          {
+            "title": "Experto de Dominio",
+            "desc": "Modelos entrenados específicamente en tus documentos legales, médicos o técnicos."
+          },
+          {
+            "title": "Eficiencia de Costes",
+            "desc": "Modelos más pequeños y especializados a menudo superan a los gigantes y caros."
+          }
+        ]
+      },
+      "Process": {
+        "title": "De los Datos al Modelo Desplegado",
+        "subtitle": "Modelos de IA privados construidos con tus datos, ejecutándose en tu infraestructura.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Definición del Caso de Uso",
+            "desc": "Definimos qué debe hacer el modelo, con qué datos entrenará y cómo se mide el éxito — objetivos de precisión, latencia y coste por consulta acordados desde el inicio."
+          },
+          {
+            "number": "02",
+            "title": "Preparación de Datos",
+            "desc": "Limpiamos, estructuramos y formateamos tus datos de entrenamiento. Construimos conjuntos de instrucciones, pares de preferencia o corpus de dominio según el enfoque de fine-tuning."
+          },
+          {
+            "number": "03",
+            "title": "Fine-Tuning y Evaluación",
+            "desc": "Entrenamos sobre Llama 3, Mistral u otros modelos base de código abierto. Evaluamos contra benchmarks y tus casos de prueba específicos antes de cualquier despliegue."
+          },
+          {
+            "number": "04",
+            "title": "Despliegue Privado",
+            "desc": "Desplegamos en tu infraestructura usando vLLM u Ollama. Ningún dato sale jamás de tu entorno. Documentación completa y traspaso incluidos."
+          }
+        ]
+      },
+      "UseCases": {
+        "title": "Casos de Uso de LLM Personalizado",
+        "subtitle": "Modelos especializados que superan a la IA de propósito general en tu dominio.",
+        "cases": [
+          {
+            "icon": "📄",
+            "title": "Inteligencia Documental",
+            "desc": "Extrae, clasifica y resume contratos, facturas e informes — entrenado en tus formatos de documento específicos."
+          },
+          {
+            "icon": "🧠",
+            "title": "Base de Conocimiento Interna",
+            "desc": "Responde preguntas de empleados sobre documentos de empresa, SOPs y wikis. Respuestas precisas y fundamentadas con citas de fuentes."
+          },
+          {
+            "icon": "🎧",
+            "title": "IA de Atención al Cliente",
+            "desc": "Entrenado en tu conocimiento de producto, políticas e historial de soporte. Conoce tu negocio — no solo datos web generales."
+          },
+          {
+            "icon": "⚖️",
+            "title": "Legal y Cumplimiento",
+            "desc": "Entrenado en jurisprudencia, regulaciones y políticas internas. Detecta riesgos en contratos y genera sugerencias de cláusulas automáticamente."
+          },
+          {
+            "icon": "🏥",
+            "title": "Médico y Clínico",
+            "desc": "Resumen de notas clínicas y asistencia de codificación compatible con GDPR, ejecutándose completamente on-premise sin llamadas a APIs externas."
+          },
+          {
+            "icon": "💻",
+            "title": "Generación de Código",
+            "desc": "Fine-tuned en las convenciones de tu codebase, librerías internas y patrones de arquitectura. Genera código que se ajusta a tus estándares."
+          }
+        ]
+      },
+      "FAQ": {
+        "title": "FAQ de Desarrollo de LLM Personalizado",
+        "items": [
+          {
+            "q": "¿Cuál es la diferencia entre fine-tuning y RAG?",
+            "a": "RAG recupera documentos relevantes en el momento de la consulta y los pasa a un modelo general. El fine-tuning cambia los pesos del modelo para que internalice el conocimiento del dominio. Generalmente recomendamos RAG para bases de conocimiento y fine-tuning para tareas de tono, formato y razonamiento especializado."
+          },
+          {
+            "q": "¿Con qué modelos base trabajáis?",
+            "a": "Principalmente Llama 3, Mistral y Qwen — modelos de código abierto que pueden desplegarse de forma privada. También trabajamos con Claude y GPT-4 para pipelines RAG donde el hosting en cloud es aceptable."
+          },
+          {
+            "q": "¿Cuántos datos necesito para el fine-tuning?",
+            "a": "Para fine-tuning de instrucciones, normalmente son suficientes 500–5.000 ejemplos de alta calidad. La calidad importa más que la cantidad. Te ayudamos a construir el dataset si no tienes uno listo."
+          },
+          {
+            "q": "¿Cómo se despliega el modelo?",
+            "a": "En tu infraestructura usando vLLM u Ollama según la escala. Nos encargamos de la configuración del servidor, los endpoints de API, la autenticación y el monitoreo. Obtienes propiedad completa y documentación."
+          },
+          {
+            "q": "¿Es compatible con GDPR?",
+            "a": "Sí. Todo el entrenamiento e inferencia ocurre dentro de tu entorno. Ningún dato se envía a APIs de IA de terceros durante la inferencia. Documentamos el linaje de datos y las políticas de retención en el scoping."
+          }
+        ]
+      },
+      "CTA": {
+        "title": "¿Listo para Construir tu IA Privada?",
+        "subtitle": "Reserva una llamada estratégica gratuita. Evaluaremos tu caso de uso, recomendaremos el enfoque adecuado y definiremos una implementación que se ajuste a tus datos y presupuesto.",
+        "button": "Reservar Llamada Estratégica Gratuita"
+      },
+      "SEO": {
+        "title": "Desarrollo y Fine-Tuning LLM Países Bajos",
+        "description": "Construye modelos IA privados para tu empresa. Hacemos fine-tuning de Llama y Mistral para casos de uso específicos en Holanda.",
+        "keywords": "desarrollo llm a medida, fine-tuning modelos ia, servidor ia privado, implementación llama 3 empresa"
+      }
+    }
+  },
+  "NextJsAgency": {
+    "Hero": {
+      "badge": "AGENCIA DE DESARROLLO NEXT.JS :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Desarrollo Next.js",
+        "highlight": "Que Escala."
+      },
+      "description": "¿Buscas <strong>contratar desarrolladores Next.js</strong>? Somos una <strong>agencia de desarrollo Next.js</strong> especializada en los Países Bajos, construyendo aplicaciones web de alto rendimiento con React, TypeScript e IA.",
+      "cta": {
+        "primary": "Iniciar Proyecto",
+        "secondary": "Ver Nuestro Trabajo"
+      }
+    },
+    "Services": {
+      "ssr": {
+        "title": "Arquitectura SSR y SSG",
+        "description": "Construimos apps Next.js optimizadas para Core Web Vitals. Renderizado en servidor y generación estática adaptados a tus patrones de contenido y tráfico."
+      },
+      "migration": {
+        "title": "Migración a Next.js",
+        "description": "¿Migrando desde Create React App, Gatsby o una configuración webpack personalizada? Gestionamos la migración completa con cero tiempo de inactividad y mejor rendimiento."
+      },
+      "fullstack": {
+        "title": "Next.js Full-Stack",
+        "description": "Desde API Routes hasta App Router y server components — construimos aplicaciones full-stack completas con base de datos, autenticación y despliegue."
+      }
+    },
+    "WhyUs": {
+      "title": "¿Por qué elegir un especialista?",
+      "points": [
+        {
+          "title": "Conocimiento Profundo del Framework",
+          "desc": "Conocemos cada API de Next.js — App Router, Server Components, Streaming, Route Handlers y Middleware."
+        },
+        {
+          "title": "Primero el Rendimiento",
+          "desc": "Cada proyecto apunta a +90 en Lighthouse. No desplegamos código lento."
+        },
+        {
+          "title": "TypeScript por Defecto",
+          "desc": "Tipado completo desde el primer día. Sin sorpresas en tiempo de ejecución."
+        },
+        {
+          "title": "Mercado Holandés",
+          "desc": "Con base en Leiden, sirviendo clientes en Ámsterdam, Róterdam y La Haya."
+        }
+      ]
+    },
+    "Process": {
+      "title": "Cómo Construimos",
+      "steps": {
+        "0": {
+          "title": "Descubrimiento y Arquitectura",
+          "desc": "Definimos el modelo de datos, la estrategia de rutas y el enfoque de renderizado antes de escribir código."
+        },
+        "1": {
+          "title": "Desarrollo Rápido",
+          "desc": "Sprints de dos semanas con previews en staging. Ves progreso cada semana."
+        },
+        "2": {
+          "title": "Auditoría de Rendimiento",
+          "desc": "Cada despliegue pasa por pruebas de Core Web Vitals y análisis de Lighthouse."
+        },
+        "3": {
+          "title": "Traspaso y Documentación",
+          "desc": "Obtienes propiedad total: repositorio, pipeline CI/CD y documentación integrada."
+        }
+      }
+    },
+    "FAQ": {
+      "title": "Preguntas sobre Next.js",
+      "subtitle": "Preguntas frecuentes sobre trabajar con una agencia de desarrollo Next.js.",
+      "questions": [
+        {
+          "q": "¿Cuál es la diferencia entre Next.js y React?",
+          "a": "React es una librería de UI. Next.js es un framework completo construido sobre React que añade SSR, SSG, enrutamiento basado en archivos, API routes, optimización de imágenes y mucho más. Para la mayoría de aplicaciones web en producción, Next.js es la opción correcta."
+        },
+        {
+          "q": "¿Debo usar App Router o Pages Router?",
+          "a": "Para proyectos nuevos, siempre recomendamos el App Router (introducido en Next.js 13+). Soporta React Server Components, streaming y layouts anidados — características críticas para apps web modernas y escalables."
+        },
+        {
+          "q": "¿Pueden migrar nuestra app React existente a Next.js?",
+          "a": "Sí, y es uno de nuestros compromisos más comunes. Migramos proyectos de Create React App, Vite y Gatsby a Next.js con mejor SEO, rendimiento y experiencia de desarrollo."
+        },
+        {
+          "q": "¿Cuánto tarda un proyecto Next.js típico?",
+          "a": "Una aplicación web estándar tarda entre 6 y 10 semanas desde la arquitectura hasta el lanzamiento. Plataformas complejas con backends personalizados o integraciones de e-commerce pueden tardar entre 3 y 6 meses."
+        }
+      ]
+    },
+    "CTA": {
+      "badge": "¿Listo para construir?",
+      "title": "Inicia tu Proyecto Next.js",
+      "subtitle": "Consultoría de arquitectura gratuita. Mapeamos tu stack, plazos y costes — sin compromiso.",
+      "button": "Reservar Consultoría Gratuita"
+    },
+    "SEO": {
+      "keywords": "agencia desarrollo Next.js Países Bajos, contratar desarrollador Next.js, consultoría Next.js Países Bajos, agencia React Next.js Leiden, especialista Next.js App Router",
+      "extendedDesc": "Como agencia de desarrollo Next.js dedicada en Leiden, construimos aplicaciones web de nivel producción para empresas en los Países Bajos. Nuestro equipo se especializa en las últimas características de Next.js incluyendo App Router, React Server Components y edge rendering. Contáctanos para una revisión de arquitectura Next.js gratuita."
+    }
+  },
+  "ReactConsulting": {
+    "Hero": {
+      "badge": "CONSULTORÍA REACT :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Arquitectura React",
+        "highlight": "Bien Hecha."
+      },
+      "description": "<strong>Consultoría React senior</strong> para equipos que quieren escalar sin el caos. Auditamos, refactorizamos y diseñamos arquitecturas React para <strong>mantenibilidad a largo plazo</strong>.",
+      "cta": {
+        "primary": "Reservar Auditoría",
+        "secondary": "Ver Casos de Éxito"
+      }
+    },
+    "Services": {
+      "audit": {
+        "title": "Auditoría de Código",
+        "description": "Analizamos en profundidad tu código React, identificamos anti-patrones, cuellos de botella de rendimiento y riesgos de escalabilidad — y te damos un plan de acción concreto."
+      },
+      "architecture": {
+        "title": "Diseño de Arquitectura",
+        "description": "Desde la estrategia de gestión de estado (Zustand, Context, TanStack Query) hasta patrones de componentes y estructura de carpetas — diseñamos para escalar equipos."
+      },
+      "migration": {
+        "title": "Actualización y Migración React",
+        "description": "Características concurrentes de React 18, migración de class components legados, o paso de Create React App a Vite. Gestionamos migraciones complejas de forma segura."
+      }
+    },
+    "Comparison": {
+      "title": "Consultoría vs. Contratación",
+      "consulting": {
+        "title": "Consultoría React (Nuestro Modelo)",
+        "points": [
+          "Experiencia senior desde el primer día",
+          "Sin overhead de contratación ni periodos de preaviso",
+          "Arquitectura + ejecución, no solo consejos",
+          "Transferencia de conocimiento a tu equipo"
+        ]
+      },
+      "hiring": {
+        "title": "Contratación Tradicional",
+        "points": [
+          "3-6 meses para contratar e incorporar",
+          "Costes ocultos (beneficios, impuestos, equipos)",
+          "Riesgo de desajuste cultural o de habilidades",
+          "Más lento para proyectos a corto plazo"
+        ]
+      }
+    },
+    "Process": {
+      "title": "Nuestro Modelo de Colaboración",
+      "steps": {
+        "0": {
+          "title": "Descubrimiento (1 hora)",
+          "desc": "Entendemos tu stack, tamaño del equipo y el cuello de botella específico."
+        },
+        "1": {
+          "title": "Auditoría de Arquitectura",
+          "desc": "Análisis profundo de 2-3 días de tu repositorio. Recibes un informe escrito con prioridades."
+        },
+        "2": {
+          "title": "Ejecución en Sprint",
+          "desc": "Implementamos las correcciones críticas o diseñamos la nueva estructura junto a tu equipo."
+        },
+        "3": {
+          "title": "Transferencia de Conocimiento",
+          "desc": "Documentación, taller de equipo y walkthrough grabado para que tu equipo pueda mantenerlo."
+        }
+      }
+    },
+    "FAQ": {
+      "title": "Preguntas sobre Consultoría React",
+      "subtitle": "Preguntas frecuentes sobre nuestros servicios de consultoría de arquitectura React.",
+      "questions": [
+        {
+          "q": "¿Qué incluye una auditoría de arquitectura React?",
+          "a": "Una auditoría completa cubre: estructura y reutilización de componentes, patrones de gestión de estado, perfilado de rendimiento (React DevTools, Lighthouse), análisis de bundle y cobertura de testing. Recibes un informe escrito en 5 días hábiles."
+        },
+        {
+          "q": "¿Trabajan con equipos existentes o solo proyectos nuevos?",
+          "a": "Nos especializamos en unirnos a equipos y bases de código existentes. Nos enfocamos en mejorar lo que hay, no en reescribir desde cero, a menos que la deuda técnica haga que reescribir sea la decisión correcta."
+        },
+        {
+          "q": "¿Qué librerías de estado React recomiendan?",
+          "a": "Para estado del servidor, TanStack Query (React Query). Para estado global ligero, Zustand. Para estado UI complejo, Jotai. Evitamos Redux salvo que haya una razón legacy fuerte para mantenerlo."
+        },
+        {
+          "q": "¿Pueden ayudarnos a mejorar los Core Web Vitals en una SPA React?",
+          "a": "Sí. Las SPAs suelen tener puntuaciones LCP y CLS pobres. Implementamos code splitting, lazy loading, optimización de bundle y frecuentemente recomendamos un cambio a Next.js para beneficios de SSR."
+        }
+      ]
+    },
+    "CTA": {
+      "badge": "Sesión gratuita de 1 hora",
+      "title": "Reserva tu Auditoría React",
+      "subtitle": "Revisamos tu codebase, identificamos los 3 problemas principales y te damos un plan de acción claro — aunque nunca trabajemos juntos.",
+      "button": "Reservar Auditoría Gratuita"
+    },
+    "SEO": {
+      "keywords": "consultoría React Países Bajos, consultor arquitectura React, contratar desarrollador React Países Bajos, auditoría código React, servicios refactorización React, desarrollador React senior Leiden",
+      "extendedDesc": "CodeHunter Lab ofrece servicios de consultoría React senior a equipos de toda Holanda. Desde auditorías de código hasta rediseños completos de arquitectura, ayudamos a los equipos de ingeniería a escalar sus aplicaciones React sin el caos. Nuestros consultores han desarrollado apps React para clientes de e-commerce, SaaS y fintech en Ámsterdam, Róterdam y Leiden."
+    }
+  },
+  "Testimonials": {
+    "badge": "RESULTADOS DE CLIENTES",
+    "title": "Qué Miden Los Clientes Después de Que Desplegamos",
+    "subtitle": "Resultados reales de sistemas en producción — sin demos, sin métricas de vanidad.",
+    "items": [
+      {
+        "quote": "CodeHunter Lab migró todos nuestros workflows de Zapier a n8n en menos de dos semanas. Nuestra factura mensual de automatización bajó de €600 a €12. El nuevo sistema maneja 10 veces más volumen sin el menor esfuerzo.",
+        "name": "Daan van der Berg",
+        "role": "Co-Fundador",
+        "company": "GrowthStack BV",
+        "initials": "DB",
+        "color": "green"
+      },
+      {
+        "quote": "Desplegamos un agente de voz IA para leads entrantes y ahora gestiona el 80% de la cualificación del primer contacto. Nuestro equipo de ventas solo habla con prospectos ya calentados. ROI en el primer mes.",
+        "name": "Sofia Martínez",
+        "role": "Directora de Ventas",
+        "company": "Veloce Commerce",
+        "initials": "SM",
+        "color": "orange"
+      },
+      {
+        "quote": "La arquitectura frontend que diseñaron para nuestra plataforma SaaS redujo el tiempo de carga a la mitad y el onboarding de desarrolladores de días a horas. Limpia, documentada, mantenible — exactamente lo que necesitábamos.",
+        "name": "Lars Koopmans",
+        "role": "CTO",
+        "company": "Nexora SaaS",
+        "initials": "LK",
+        "color": "green"
+      },
+      {
+        "quote": "Reemplazamos un patchwork de hojas de cálculo y procesos manuales con un dashboard interno personalizado. La herramienta se pagó sola en horas de administración ahorradas durante el primer mes de uso.",
+        "name": "Emma de Boer",
+        "role": "Directora de Operaciones",
+        "company": "LogiFlow NL",
+        "initials": "EB",
+        "color": "orange"
+      }
+    ]
+  },
+  "DentalClinic": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN CLÍNICA DENTAL :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tu Clínica Dental Pierde",
+        "highlight": "Miles al Mes",
+        "part2": "en Gestión Manual"
+      },
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización personalizados</strong> para clínicas dentales en los Países Bajos — reduciendo ausencias, automatizando la comunicación con pacientes y conectando tu software de gestión. Sin software genérico. Sin dependencia de proveedor.",
+      "cta": {
+        "primary": "Reserva una Auditoría Gratuita",
+        "secondary": "Ver Qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "El Coste Real de Gestionar una Clínica Dental en 2026",
+      "items": [
+        {
+          "emoji": "📅",
+          "title": "Ausencias y cancelaciones de última hora",
+          "desc": "Una cita de implante u ortodoncia perdida supone €150–€400 en ingresos perdidos. Si tu sistema de recordatorios es una llamada de recepción el día anterior, estás perdiendo dinero cada semana."
+        },
+        {
+          "emoji": "📞",
+          "title": "Tu equipo es un contestador automático caro",
+          "desc": "Llamadas de programación, reprogramaciones, seguimientos de planes de tratamiento — tus asistentes gastan 2–3 horas al día en comunicación que la automatización gestiona en segundos."
+        },
+        {
+          "emoji": "📊",
+          "title": "No sabes de dónde vienen tus pacientes",
+          "desc": "¿Es Google? ¿Una derivación? ¿Instagram? Sin seguimiento desde el clic del anuncio hasta la cita reservada, tu presupuesto de marketing es una suposición que no puedes optimizar."
+        },
+        {
+          "emoji": "🔄",
+          "title": "La reactivación de pacientes es reactiva, no sistemática",
+          "desc": "Los pacientes ausentes durante 6, 12 o 18 meses representan ingresos significativos. La mayoría de clínicas no tiene un sistema automatizado para reactivarlos en el momento adecuado."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Tus sistemas no se comunican entre sí",
+          "desc": "Gestión de clínica, contabilidad, emails de marketing, WhatsApp — cuatro islas separadas. Cada transferencia de datos es un paso manual y un posible error."
+        },
+        {
+          "emoji": "💬",
+          "title": "Los planes de tratamiento se detienen entre la consulta y la reserva",
+          "desc": "Un paciente consulta sobre carillas o alineadores, se va sin reservar y no recibe seguimiento. Ese lead se pierde a menudo ante un competidor más rápido."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos para Clínicas Dentales",
+      "subtitle": "No somos un proveedor de software. Construimos e integramos los sistemas que tu clínica ya posee — para que funcionen juntos automáticamente.",
+      "items": [
+        {
+          "emoji": "💬",
+          "title": "Comunicación Automatizada con Pacientes",
+          "desc": "Conectamos tu sistema de gestión (Exquise, ISOS, Dentrix o cualquier plataforma con API) a WhatsApp Business API, SMS y email. Confirmaciones, recordatorios a 48h y 2h, check-ins post-tratamiento — todo activado automáticamente desde tus datos de agenda.",
+          "result": "Reducción del 30–50% en ausencias en 60 días."
+        },
+        {
+          "emoji": "🎯",
+          "title": "CRM para Adquisición y Retención de Pacientes",
+          "desc": "Construimos o integramos un CRM que rastrea cada consulta de nuevo paciente desde el primer contacto hasta el valor de por vida. Sabe exactamente qué canal de marketing produce los mejores pacientes.",
+          "result": "Visibilidad completa desde la fuente del lead hasta los ingresos."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Automatización Lead-a-Reserva",
+          "desc": "Cuando alguien rellena tu formulario preguntando sobre implantes o Invisalign, recibe una respuesta personalizada al instante, un enlace de reserva y una secuencia de seguimiento de 3 pasos si no reserva. Sin que tu equipo mueva un dedo.",
+          "result": "Tiempo de respuesta 60–80% más rápido. Mayor conversión consulta-reserva."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Campañas de Reactivación de Pacientes",
+          "desc": "Cada 6 meses, los pacientes pendientes de revisión o higiene reciben un mensaje personalizado por su canal preferido. Las campañas de reactivación para pacientes inactivos se ejecutan automáticamente con el horario que controlas.",
+          "result": "Tasa de ocupación consistente sin depender de la memoria de recepción."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboard e Informes",
+          "desc": "Un dashboard: adquisición de nuevos pacientes por fuente, tasa de ocupación, tasa de ausencias, rendimiento de campañas de reactivación e ingresos por tipo de tratamiento. Actualizado en tiempo real. Accesible desde tu móvil.",
+          "result": "Decisiones basadas en datos, no en intuición."
+        },
+        {
+          "emoji": "⭐",
+          "title": "Automatización de Reseñas en Google",
+          "desc": "Después de cada cita completada, los pacientes reciben un mensaje de satisfacción. Las respuestas positivas se guían a dejar una reseña en Google. El feedback crítico se redirige privadamente al responsable de la clínica.",
+          "result": "El volumen de reseñas crece de forma pasiva — sin esfuerzo manual."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Cómo Se Ve Esto en la Práctica",
+      "items": [
+        {
+          "num": "01",
+          "title": "Automatización de Consulta de Nuevo Paciente",
+          "desc": "El paciente hace clic en tu anuncio de Google → rellena el formulario 'Reservar Consulta' → recibe instantáneamente un WhatsApp con los horarios disponibles → reserva en 2 minutos → confirmación sincronizada con tu calendario. Tu recepción solo ve citas confirmadas."
+        },
+        {
+          "num": "02",
+          "title": "Prevención de Ausencias 48 Horas Antes",
+          "desc": "Un paciente tiene una cita de corona de 90 minutos el jueves. El martes por la mañana recibe automáticamente un recordatorio de WhatsApp con opción de confirmar o reprogramar con un toque. Si reprograma, el hueco se ofrece inmediatamente a tu lista de espera."
+        },
+        {
+          "num": "03",
+          "title": "Relleno Automático de Lista de Espera",
+          "desc": "Una cancelación llega a las 10:00. Tu sistema de lista de espera envía automáticamente un mensaje a los 3 siguientes pacientes en lista. El primero en confirmar obtiene el hueco. Tu tarde se mantiene completa — sin ninguna llamada de tu equipo."
+        },
+        {
+          "num": "04",
+          "title": "Seguimiento de Plan de Tratamiento",
+          "desc": "El paciente recibe un plan para implantes dentales. Se va sin reservar. Tres días después recibe un seguimiento específico respondiendo dudas comunes y ofreciendo una llamada de 10 minutos con tu coordinador — activado automáticamente, personalizado por tipo de tratamiento."
+        },
+        {
+          "num": "05",
+          "title": "Campaña de Reactivación Semestral",
+          "desc": "Cada paciente que completó una higiene hace 5 meses recibe un mensaje proactivo de reactivación. Los que no responden reciben un segundo mensaje 2 semanas después. Los que reservan salen de la secuencia. Los que rechazan quedan registrados."
+        },
+        {
+          "num": "06",
+          "title": "Reseñas Google Después de Cada Cita",
+          "desc": "Después de una cita completada, los pacientes reciben un breve mensaje de satisfacción. Las respuestas positivas se guían a dejar una reseña en Google con enlace directo. Esto funciona para cada cita, cada día, sin esfuerzo manual de tu equipo."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Precios Transparentes — Sin Costes Ocultos",
+      "points": [
+        {
+          "title": "Integraciones personalizadas, no plantillas",
+          "desc": "Construimos integraciones API directas entre tus sistemas reales. Si tu software de gestión tiene una API, la conectamos. Cada solución es específica para tu configuración — no una plantilla de Zapier."
+        },
+        {
+          "title": "Sin bloqueo — costes claros y predecibles",
+          "desc": "Todo lo que construimos es tuyo. Sin herramientas propietarias que desaparecen si dejas de trabajar con nosotros. Algunas soluciones incluyen un retainer mensual de mantenimiento técnico opcional — siempre comunicado desde el principio, sin sorpresas. Cuando desplegamos una plataforma de CRM, automatización de marketing o gestión de leads como parte de tu solución, esa licencia es siempre independiente, transparente y gestionada por nosotros — sin markup oculto."
+        },
+        {
+          "title": "Cumplimiento GDPR y AVG por diseño",
+          "desc": "Los datos de pacientes son sensibles. Construimos con la ley de protección de datos neerlandesa como restricción fundamental, no como ocurrencia posterior. Opciones autohospedadas disponibles."
+        },
+        {
+          "title": "Socio a largo plazo, no un proyecto puntual",
+          "desc": "Te ponemos en marcha, salimos en vivo y nos quedamos. Optimización continua, nuevas automatizaciones según crece tu clínica y contacto directo con nuestro equipo de ingeniería — siempre."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que los propietarios de clínicas dentales preguntan antes de empezar.",
+      "questions": [
+        {
+          "q": "¿Funciona con nuestro software de gestión actual?",
+          "a": "Nos integramos con cualquier plataforma que tenga API o exportación de datos estructurados — incluyendo Exquise, ISOS, Dentrix y la mayoría de sistemas modernos de gestión. Mapeamos tu configuración específica en la llamada de auditoría."
+        },
+        {
+          "q": "¿Los datos de pacientes se gestionan de forma segura y con cumplimiento GDPR?",
+          "a": "Sí. Todas las automatizaciones se construyen con el cumplimiento AVG/GDPR como requisito fundamental. Podemos ejecutar pipelines en infraestructura autohospedada para soberanía total de datos. Los datos de pacientes nunca pasan por sistemas de terceros sin los acuerdos apropiados."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda en estar operativo?",
+          "a": "Para una configuración estándar — recordatorios de citas, automatización de captación de leads y un dashboard de informes — normalmente estamos en vivo en 3–4 semanas desde el inicio. Las integraciones CRM complejas pueden llevar más tiempo."
+        },
+        {
+          "q": "¿Reemplazan nuestro software actual o trabajan junto a él?",
+          "a": "Trabajamos junto a tus sistemas existentes. No pedimos que reemplaces tu software de gestión de clínica. Construimos capas de integración que conectan lo que ya tienes y llenan los vacíos que tus herramientas actuales no cubren."
+        },
+        {
+          "q": "¿Cuánto cuesta?",
+          "a": "Cada clínica es diferente. Planificamos el proyecto después de la auditoría gratuita y proporcionamos una propuesta a precio fijo — sin facturación por horas, sin facturas sorpresa. Discutiremos tu presupuesto y objetivos en la llamada de auditoría."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "¿Listo para automatizar tu clínica?",
+      "title": "Reserva Tu Auditoría Gratuita",
+      "desc": "Revisamos tus sistemas actuales, identificamos las 3 oportunidades de automatización con mayor ROI específicas para tu clínica y te damos una hoja de ruta técnica clara — sin compromiso.",
+      "button": "Reservar Auditoría Gratuita",
+      "subtext": "Disponible para clínicas en los Países Bajos. Capacidad de incorporación actual: Q2 2026. ¿Preguntas? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "automatización clínica dental Países Bajos, tandartspraktijk automatisering, recordatorios citas dentales Países Bajos, integración CRM dental, reducción ausencias clínica dental, sistema reactivación pacientes, comunicación WhatsApp pacientes dental",
+      "extendedDesc": "CodeHunter Lab construye sistemas personalizados de automatización e integración para clínicas dentales en los Países Bajos. Desde flujos de trabajo de recordatorios de citas y campañas de reactivación de pacientes hasta integración CRM completa y automatización lead-a-reserva, ayudamos a las clínicas dentales a reducir ausencias, mejorar la retención de pacientes y aumentar ingresos. Con sede en Leiden, prestando servicio a clínicas en Ámsterdam, Róterdam, La Haya, Utrecht y más allá."
+    }
+  },
+  "PhysiotherapyClinic": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN CLÍNICA DE FISIOTERAPIA :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tu Clínica de Fisioterapia",
+        "highlight": "Tiene un Problema de Sistemas.",
+        "part2": "Tus Pacientes Lo Notan"
+      },
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización e integración</strong> para clínicas de fisioterapia en los Países Bajos — conectando la recepción de derivaciones, la programación, la comunicación con pacientes y los informes en un flujo de trabajo coherente. Para que tus terapeutas se centren en tratar pacientes, no en perseguir papeleo.",
+      "cta": {
+        "primary": "Reserva una Auditoría Gratuita",
+        "secondary": "Ver Qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "Dónde Tu Clínica Pierde Tiempo e Ingresos",
+      "items": [
+        {
+          "emoji": "📄",
+          "title": "La recepción de derivaciones sigue siendo manual",
+          "desc": "Una derivación llega por Zorgdomein o fax. Alguien en recepción transcribe, llama al paciente, busca un terapeuta, programa la primera visita e introduce los datos. Eso son 15–25 minutos por derivación — horas cada día."
+        },
+        {
+          "emoji": "🚶",
+          "title": "Los pacientes abandonan el tratamiento a mitad",
+          "desc": "Un paciente completa 4 de 10 sesiones y deja de venir sin finalizar formalmente el cuidado. Tu calendario tiene reservas fantasma, tu terapeuta pierde tiempo y el resultado del paciente se ve afectado."
+        },
+        {
+          "emoji": "📞",
+          "title": "Los recordatorios siguen dependiendo de llamadas telefónicas",
+          "desc": "Tu recepción llama o envía mensajes a los pacientes individualmente. No hay un flujo de confirmación sistemático. Las ausencias llegan como sorpresas, no como problemas predecibles con soluciones automatizadas."
+        },
+        {
+          "emoji": "📈",
+          "title": "Sin analíticas de retención por terapeuta",
+          "desc": "Algunos terapeutas retienen a los pacientes durante planes de tratamiento completos. Otros los pierden después de la sesión 2. Sin datos por terapeuta, no puedes identificar ni corregir esa brecha."
+        },
+        {
+          "emoji": "🎯",
+          "title": "El gasto en marketing no tiene atribución",
+          "desc": "Puedes estar ejecutando Google Ads o usando una agencia de marketing. Pero sin seguimiento desde el clic del anuncio hasta la primera visita completada y el tratamiento finalizado, estás optimizando a ciegas."
+        },
+        {
+          "emoji": "🏥",
+          "title": "La preautorización de seguros crea retrasos",
+          "desc": "Para tratamientos que requieren confirmación de vergoeding, perseguir el estado del seguro es una tarea manual y repetitiva que bloquea la programación y frustra a los pacientes antes de su primera cita."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Sistemas Adaptados a Cómo Debería Funcionar una Clínica Moderna",
+      "subtitle": "Construimos directamente dentro de tu flujo de derivaciones, lógica de programación y procesos de seguros — automatizando los cuellos de botella específicos de tu configuración.",
+      "items": [
+        {
+          "emoji": "📋",
+          "title": "Automatización de Recepción de Derivaciones",
+          "desc": "Construimos un pipeline de recepción que extrae datos de derivación de Zorgdomein, formularios web o email del médico — crea un registro de paciente en tu sistema de gestión, envía un mensaje de bienvenida y pre-rellena un enlace de programación. Todo sin un solo paso manual.",
+          "result": "Tiempo de derivación-a-primera-cita reducido de 48 horas a menos de 4 horas."
+        },
+        {
+          "emoji": "💬",
+          "title": "Recordatorios de Citas con Confirmación",
+          "desc": "Cada cita activa una secuencia de recordatorio automatizado: 48 horas antes por WhatsApp o SMS, con opción de confirmar o reprogramar con un toque. Las cancelaciones activan automáticamente el alcance a la lista de espera.",
+          "result": "Reducción del 30–45% en ausencias. Menos huecos vacíos."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Detección de Abandono y Reactivación",
+          "desc": "Si un paciente pierde dos citas consecutivas sin comunicación, entra en un flujo de reactivación: un check-in personal de su terapeuta (enviado automáticamente), un enlace de reserva y si no hay respuesta, una notificación de traspaso al responsable de la clínica.",
+          "result": "Recupera el 20–35% de pacientes que abandonarían el tratamiento silenciosamente."
+        },
+        {
+          "emoji": "📊",
+          "title": "Seguimiento de Resultados y NPS",
+          "desc": "Al final de un plan de tratamiento, los pacientes reciben automáticamente un cuestionario de resultados y solicitud de puntuación NPS. Los resultados alimentan un dashboard por terapeuta, tipo de tratamiento y fuente de derivación.",
+          "result": "Datos objetivos para mejora de calidad e informes de seguros."
+        },
+        {
+          "emoji": "📈",
+          "title": "Dashboard de Analíticas de la Clínica",
+          "desc": "Un dashboard unificado: volumen de sesiones por terapeuta, tasas de finalización de planes de tratamiento, atribución de fuente de nuevos pacientes, estado de reclamaciones de seguros y tendencia de ingresos mensual. Reemplaza hojas de cálculo manuales.",
+          "result": "Decisiones de gestión en minutos, no en días."
+        },
+        {
+          "emoji": "🏥",
+          "title": "Flujo de Trabajo de Verificación de Seguros",
+          "desc": "La automatización activa una verificación de seguro para nuevos pacientes que requieren verificación de vergoeding → envía actualizaciones de estado al paciente y a recepción → marca los casos no verificados antes de la primera cita. Previene sorpresas de facturación.",
+          "result": "Menos disputas de facturación. Incorporación de pacientes más rápida."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Cómo Se Ve Esto en el Día a Día",
+      "items": [
+        {
+          "num": "01",
+          "title": "Derivación Zorgdomein a Primera Visita Reservada",
+          "desc": "El médico envía derivación por Zorgdomein → la automatización analiza los datos del paciente → crea el registro en tu sistema de gestión → envía un WhatsApp de bienvenida con cuestionario de anamnesis y URL de reserva → el paciente reserva su propia cita → confirmación sincronizada con el calendario del terapeuta. Recepción no toca nada."
+        },
+        {
+          "num": "02",
+          "title": "Flujo de Trabajo de Verificación de Seguro",
+          "desc": "Nuevo paciente requiere verificación de vergoeding. La automatización activa la verificación del seguro → envía actualización de estado al paciente y a recepción → marca los casos no verificados al responsable antes de la primera cita → previene sorpresas de facturación de último momento."
+        },
+        {
+          "num": "03",
+          "title": "Seguimiento de Adherencia al Tratamiento",
+          "desc": "El paciente tiene un plan de 8 sesiones. Después de la sesión 4, desaparece. La automatización detecta el vacío → envía un check-in personalizado con el nombre de su terapeuta → si no hay respuesta en 48 horas, notifica al responsable → opción de reactivación ofrecida con enlace de reserva directo."
+        },
+        {
+          "num": "04",
+          "title": "Gestión de Lista de Espera",
+          "desc": "Una cita de las 9:00 se cancela a las 8:30 de la noche anterior. Los 3 siguientes pacientes en la lista de espera reciben una oferta automatizada para el hueco. El primero en confirmar lo obtiene. La mañana del terapeuta se mantiene productiva — sin llamadas requeridas."
+        },
+        {
+          "num": "05",
+          "title": "Automatización de Relación con Médicos Derivadores",
+          "desc": "Las clínicas que generan derivaciones repetidas de médicos específicos reciben un email trimestral automatizado: resultados de pacientes, tasas de finalización del tratamiento y un agradecimiento por las derivaciones. Construye relaciones de derivación sistemáticamente."
+        },
+        {
+          "num": "06",
+          "title": "Solicitud de Reseña Post-Tratamiento",
+          "desc": "En la última sesión de un plan de tratamiento, el paciente recibe un mensaje automatizado de satisfacción. Las respuestas positivas se guían a Google Reviews. El feedback crítico se redirige privadamente al responsable. El volumen de reseñas crece de forma pasiva."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Construido para Cómo Funciona Realmente Tu Clínica",
+      "points": [
+        {
+          "title": "Nos integramos con tu software de gestión existente",
+          "desc": "Intramed, Physiosoftware, FysioRoadmap — si tiene API o exportación estructurada, nos conectamos. No pedimos que cambies de sistema. Construimos alrededor de lo que funciona."
+        },
+        {
+          "title": "AVG y datos de pacientes sensibles por diseño",
+          "desc": "Todos los pipelines de automatización se diseñan con la ley de protección de datos neerlandesa como restricción fundamental. Los datos de pacientes permanecen dentro de límites conformes. Opciones autohospedadas disponibles."
+        },
+        {
+          "title": "Construido para tu flujo de trabajo, no una plantilla",
+          "desc": "Mapeamos tu flujo de derivaciones real, lógica de programación y procesos de seguros — luego automatizamos los cuellos de botella específicos de tu configuración específica. Sin solución de copia-pega."
+        },
+        {
+          "title": "Nos quedamos contigo mientras creces",
+          "desc": "¿Añadiendo una segunda ubicación, un nuevo terapeuta o una nueva línea de servicio? Tus sistemas escalan contigo. Monitorizamos, optimizamos y expandimos tu stack de automatización de forma continua."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que los propietarios de clínicas de fisioterapia preguntan antes de empezar.",
+      "questions": [
+        {
+          "q": "¿Funciona con Intramed, Physiosoftware o FysioRoadmap?",
+          "a": "Sí. Nos integramos con cualquier plataforma de gestión que tenga API o exportación de datos estructurados. Mapeamos tu sistema específico durante la llamada de auditoría antes de que empiece cualquier trabajo."
+        },
+        {
+          "q": "¿Pueden integrar con derivaciones de Zorgdomein?",
+          "a": "Sí. Construimos pipelines de recepción que extraen y procesan datos de derivación entrantes de Zorgdomein, email del médico o cualquier fuente de derivación estructurada — creando automáticamente registros de pacientes y activando la secuencia de recepción."
+        },
+        {
+          "q": "¿Cumple con GDPR/AVG para datos de pacientes?",
+          "a": "Todos los pipelines de automatización se diseñan con la ley de protección de datos neerlandesa como restricción fundamental. Podemos ejecutar en infraestructura autohospedada para soberanía total de datos. Los datos de pacientes nunca pasan por sistemas de terceros sin los acuerdos apropiados."
+        },
+        {
+          "q": "¿Cuánto tiempo lleva la implementación?",
+          "a": "Una configuración estándar — automatización de recepción de derivaciones, recordatorios de citas y detección de abandono — normalmente sale en vivo en 3–5 semanas. Las integraciones más complejas como los flujos de verificación de seguros pueden llevar más tiempo."
+        },
+        {
+          "q": "Ya tenemos software de gestión. ¿Necesitamos reemplazarlo?",
+          "a": "No. Trabajamos junto a tus sistemas existentes y construimos capas de integración que conectan lo que ya tienes. Conservas tu configuración actual y nosotros llenamos los vacíos de automatización a su alrededor."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Mapeemos las 3 horas diarias que desperdicia tu clínica",
+      "title": "Reserva Tu Auditoría Gratuita",
+      "desc": "Mapeamos tu flujo de trabajo actual de recepción a alta, identificamos las oportunidades de automatización de mayor impacto y te damos un plan concreto — específico para tu stack de software y volumen de pacientes.",
+      "button": "Reservar Auditoría Gratuita",
+      "subtext": "Para clínicas de fisioterapia en los Países Bajos. Capacidad de incorporación actual: Q2 2026. ¿Preguntas? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "fysiotherapie praktijk automatisering, automatización clínica fisioterapia Países Bajos, integración Zorgdomein, sistema recordatorios citas fisioterapia, prevención abandono pacientes fisioterapia, fysiotherapie CRM Nederland",
+      "extendedDesc": "CodeHunter Lab construye sistemas personalizados de automatización e integración para clínicas de fisioterapia en los Países Bajos. Desde la automatización de recepción de derivaciones de Zorgdomein y flujos de trabajo de recordatorios de citas hasta el seguimiento de adherencia al tratamiento y verificación de seguros, ayudamos a las clínicas de fisioterapia a reducir el tiempo administrativo y tomar decisiones basadas en datos. Con sede en Leiden."
+    }
+  },
+  "AestheticClinic": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN CLÍNICA ESTÉTICA :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tu Clínica Estética Genera Leads.",
+        "highlight": "Tus Sistemas",
+        "part2": "Los Pierden"
+      },
+      "description": "CodeHunter Lab construye la infraestructura de <strong>CRM, nurturing de leads y automatización de reservas</strong> que convierte consultas de alta intención en tratamientos confirmados — automáticamente. Para clínicas estéticas, cosméticas y de dermatología en los Países Bajos que quieren crecer sin aumentar el personal administrativo.",
+      "cta": {
+        "primary": "Reserva una Auditoría de Crecimiento Gratuita",
+        "secondary": "Ver Qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "Por Qué Tu Gasto en Marketing No Está Convirtiendo Como Debería",
+      "items": [
+        {
+          "emoji": "⚡",
+          "title": "La respuesta lenta mata los leads de alta intención",
+          "desc": "Un prospecto que consulta sobre láser, Botox o una rinoplastia está comparando precios. Si tu respuesta tarda más de 30 minutos, el 40% de esas consultas ya habrá reservado en otro lugar."
+        },
+        {
+          "emoji": "📅",
+          "title": "Las ausencias en consultas destruyen tu embudo",
+          "desc": "Las consultas estéticas son intensivas en tiempo de terapeuta. Una ausencia desperdicia 45–90 minutos de tiempo facturable. Sin un flujo automatizado de confirmación y preparación previa, las tasas de ausencia promedian 15–25%."
+        },
+        {
+          "emoji": "💬",
+          "title": "Los leads de tratamientos de alto valor se enfrían",
+          "desc": "Un paciente consulta sobre un tratamiento facial completo o un paquete de contorno corporal, se va sin comprometerse y recibe una llamada de seguimiento que va al buzón de voz. Ese es un tratamiento de €500–€5.000 que se evaporó."
+        },
+        {
+          "emoji": "📊",
+          "title": "No conoces tu ROI real de marketing",
+          "desc": "Tu clínica puede estar ejecutando Google Ads, campañas de Meta y asociaciones con influencers. Pero sin atribución desde el clic del anuncio hasta el tratamiento completado, no puedes saber qué canal produce tus mejores pacientes."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Las ventas adicionales de paquetes ocurren por casualidad",
+          "desc": "Seguimientos post-tratamiento, ofertas de actualización de paquetes, recordatorios de citas de mantenimiento — gestionados de forma inconsistente, dependiendo de la memoria del personal individual en lugar de un sistema automático."
+        },
+        {
+          "emoji": "👥",
+          "title": "La retención es pobre a pesar de la alta satisfacción",
+          "desc": "Los pacientes estéticos satisfechos tienen alta probabilidad de volver — pero solo si se les pide en el momento adecuado. La mayoría de clínicas no tiene un flujo de reactivación sistemático. La retención es pasiva e impredecible."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "La Infraestructura Que Convierte Tu Marketing en Reservas",
+      "subtitle": "Construimos los sistemas de CRM, nurturing de leads y automatización que conectan tu marketing con ingresos confirmados — personalizados, escalables y de tu propiedad.",
+      "items": [
+        {
+          "emoji": "⚡",
+          "title": "Automatización de Respuesta a Leads — En Menos de 5 Minutos",
+          "desc": "Conectamos tus formularios web, DMs de Instagram y WhatsApp Business a un pipeline unificado de captación de leads. Cada nueva consulta recibe una respuesta instantánea y personalizada con información específica del tratamiento y un enlace de reserva directo — a cualquier hora del día.",
+          "result": "Tiempo de respuesta de horas a menos de 5 minutos. Mayor tasa de conversión a consulta."
+        },
+        {
+          "emoji": "📅",
+          "title": "Confirmación de Consulta y Preparación Pre-Tratamiento",
+          "desc": "Una vez reservada la consulta, el paciente entra en una secuencia de preparación automatizada: confirmación, recordatorio 48 horas antes, guías de preparación específicas del procedimiento, enlace al formulario de consentimiento y checklist de preparación.",
+          "result": "Reducción del 30–50% en ausencias. Consultas más eficientes."
+        },
+        {
+          "emoji": "💌",
+          "title": "Secuencias de Nurturing Post-Consulta",
+          "desc": "Los pacientes que consultan pero no reservan inmediatamente un tratamiento entran en una secuencia de nurturing segmentada: contenido específico al tratamiento que consultaron, mensajes de prueba social, una oferta de seguimiento por tiempo limitado y un enlace de reserva directo.",
+          "result": "El 20–40% de leads de consulta fríos convierte en 30 días."
+        },
+        {
+          "emoji": "📊",
+          "title": "Atribución Completa del Embudo y Dashboard de Marketing",
+          "desc": "Construimos seguimiento desde tus plataformas de anuncios (Google, Meta) a través de tu CRM hasta tus datos de reservas e ingresos. Un dashboard: coste por lead por canal, coste por consulta reservada, coste por tratamiento completado y valor de por vida del paciente.",
+          "result": "Decisiones de presupuesto de marketing basadas en datos reales de ingresos."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Automatización de Retención y Ventas Adicionales",
+          "desc": "Después de cada tratamiento completado, los pacientes entran automáticamente en un flujo de retención: un check-in de satisfacción, una recomendación de cita de seguimiento cronometrada al tratamiento, una oferta de fidelidad o paquete y una solicitud de incentivo de referido.",
+          "result": "Mayor valor de vida promedio del paciente. Ingresos recurrentes predecibles."
+        },
+        {
+          "emoji": "🤖",
+          "title": "Asistente IA de Consulta",
+          "desc": "Para clínicas de alto volumen, desplegamos un asistente IA personalizado para tu web y WhatsApp — entrenado en tu cartera de tratamientos, rangos de precios y contenido de FAQ. Gestiona la pre-cualificación y guía a los prospectos a reservar una consulta. Disponible 24/7.",
+          "result": "Leads captados y cualificados fuera del horario comercial — sin coste de personal."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Ejemplos Concretos Desde la Consulta Hasta el Paciente Retenido",
+      "items": [
+        {
+          "num": "01",
+          "title": "DM de Instagram a Consulta Reservada",
+          "desc": "El prospecto envía un DM a tu Instagram preguntando por rellenos de labios → la automatización detecta la intención → envía respuesta instantánea con descripción del tratamiento, rango de precios y enlace de reserva → el prospecto reserva directamente en el hilo del mensaje → la confirmación se sincroniza con tu sistema de reservas."
+        },
+        {
+          "num": "02",
+          "title": "Prevención de Ausencias en Consultas",
+          "desc": "El paciente reserva una consulta de rinoplastia de 60 minutos. La automatización envía: confirmación con invitación al calendario → guía de preparación específica del tratamiento 5 días antes → recordatorio con confirmación o reprogramación con un toque 48 horas antes → recordatorio final 2 horas antes. La tasa de ausencia baja del 20% a menos del 8%."
+        },
+        {
+          "num": "03",
+          "title": "Recuperación de Leads de Alto Valor",
+          "desc": "El paciente consultó sobre un paquete de tratamiento facial completo (valor €3.200). Se fue sin reservar. Día 3: WhatsApp con resultados antes/después de pacientes similares. Día 7: FAQ sobre el procedimiento. Día 14: oferta de reserva de disponibilidad limitada. Día 21: cierre suave final. 1 de cada 3 de estos leads convierte."
+        },
+        {
+          "num": "04",
+          "title": "Recordatorio de Mantenimiento Post-Tratamiento",
+          "desc": "El paciente completa el tratamiento de Botox. La automatización anota la fecha → 10 semanas después, el paciente recibe un mensaje de 'es hora de tu retoque' con enlace de reserva directo → si reserva, la secuencia termina → si no, segundo recordatorio a las 12 semanas → sin respuesta, ruta al equipo de recepción."
+        },
+        {
+          "num": "05",
+          "title": "Atribución de Marketing en Tiempo Real",
+          "desc": "Ejecutas un anuncio de Google para 'depilación láser Ámsterdam.' El prospecto hace clic → rellena la solicitud de consulta → el CRM registra la campaña y la palabra clave → el paciente completa el tratamiento → tu dashboard muestra: coste por adquisición €47, ingresos promedio €380. Escala la campaña con confianza."
+        },
+        {
+          "num": "06",
+          "title": "Automatización de Programa de Referidos",
+          "desc": "30 días después de un tratamiento exitoso, el paciente recibe: 'Recomienda a un amigo y ambos recibís €50 de descuento en vuestro próximo tratamiento.' Si comparte el enlace de referido y un amigo reserva, ambos descuentos se aplican automáticamente. Fuente de referido registrada en CRM."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué las Clínicas Estéticas Eligen un Socio de Ingeniería Sobre una Agencia de Marketing",
+      "points": [
+        {
+          "title": "Trabajamos a nivel de sistema, no de campaña",
+          "desc": "Integramos tu plataforma de reservas, CRM, datos de anuncios, WhatsApp y herramientas de clínica en un sistema coherente — el tipo de trabajo que la mayoría de agencias no puede hacer porque requiere ingeniería real."
+        },
+        {
+          "title": "Sin bloqueo — costes transparentes y predecibles",
+          "desc": "Tus sistemas funcionan en infraestructura que posees o controlas. Si nos separamos, todo sigue funcionando. Algunas soluciones incluyen un retainer mensual de mantenimiento técnico opcional. Cuando plataformas de CRM, captación de leads o automatización de marketing forman parte de la solución, sus licencias son siempre independientes, comunicadas desde el principio y sin markup oculto."
+        },
+        {
+          "title": "Construido para negocios de servicios de alto valor y alto contacto",
+          "desc": "Los pacientes de clínicas estéticas no son compradores de e-commerce. El ciclo de lead es más largo, la relación importa más y la comunicación debe sentirse personal incluso cuando es automatizada. Construimos teniendo eso en cuenta."
+        },
+        {
+          "title": "Cumplimiento AVG, sensible a datos por diseño",
+          "desc": "Historial de tratamientos, registros de consentimiento, medios antes/después — los datos de tus pacientes son sensibles. Construimos pipelines con controles de acceso apropiados, políticas de gestión de datos y cumplimiento AVG desde el primer día."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que los propietarios de clínicas estéticas preguntan antes de empezar.",
+      "questions": [
+        {
+          "q": "¿Pueden integrar con nuestro sistema de reservas actual (p.ej. Planfy, Timely, Jane App)?",
+          "a": "Sí. Nos integramos con cualquier plataforma de reservas que tenga soporte de API o webhook. Mapeamos tus herramientas específicas durante la llamada de auditoría gratuita. Si tu sistema actual tiene limitaciones, aconsejamos sobre alternativas sin forzar una migración."
+        },
+        {
+          "q": "¿Pueden las secuencias de nurturing personalizarse por tipo de tratamiento?",
+          "a": "Sí. Las secuencias están completamente segmentadas por interés de tratamiento. Un prospecto que consultó sobre Botox recibe contenido diferente al que preguntó sobre contorno corporal o tratamientos láser. La personalización está integrada desde el principio."
+        },
+        {
+          "q": "¿Cómo funciona la automatización de DM de Instagram sin violar los términos de Meta?",
+          "a": "Utilizamos la API oficial de Meta Business para WhatsApp y la automatización de DM de Instagram — totalmente conforme con los términos de servicio de Meta. Sin scraping, sin soluciones alternativas de terceros. Todas las automatizaciones se ejecutan a través de canales oficiales aprobados."
+        },
+        {
+          "q": "¿Los datos de pacientes (historial de tratamientos, formularios de consentimiento) se gestionan de forma segura?",
+          "a": "Sí. Todos los pipelines de datos se construyen con el cumplimiento AVG/GDPR como requisito fundamental. No pasamos datos sensibles de pacientes a través de terceros no conformes. Las opciones autohospedadas están disponibles para clínicas que requieren soberanía total de datos."
+        },
+        {
+          "q": "¿Cuánto suele costar esto?",
+          "a": "Planificamos el proyecto después de la auditoría gratuita y proporcionamos una propuesta a precio fijo — sin facturación por horas. Los compromisos van desde una configuración de automatización enfocada hasta infraestructura completa de CRM y atribución. Discutimos tu presupuesto y objetivos en la llamada de auditoría."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "¿Cuántos leads de alto valor está perdiendo tu clínica cada mes?",
+      "title": "Reserva Tu Auditoría de Crecimiento Gratuita",
+      "desc": "Revisamos tu gestión actual de leads, conversión de consultas y flujo de retención de pacientes — y te mostramos exactamente dónde los sistemas automatizados tendrían el mayor impacto en ingresos.",
+      "button": "Reservar Auditoría de Crecimiento Gratuita",
+      "subtext": "Para clínicas estéticas, cosméticas y de dermatología en los Países Bajos. Capacidad de incorporación actual: Q2 2026. ¿Preguntas? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "automatización clínica estética Países Bajos, CRM clínica cosmética Países Bajos, nurturing leads clínica estética, automatización reservas dermatología, ROI marketing clínica cosmética, automatización WhatsApp clínica belleza, retención pacientes clínica estética",
+      "extendedDesc": "CodeHunter Lab construye sistemas personalizados de CRM, nurturing de leads y automatización de reservas para clínicas estéticas, cosméticas y de dermatología en los Países Bajos. Desde la automatización de respuesta instantánea a leads y secuencias de nurturing post-consulta hasta dashboards de atribución completa del embudo y asistentes IA de consulta, ayudamos a las clínicas estéticas a convertir más consultas en tratamientos reservados. Con sede en Leiden."
+    }
+  },
+  "VeterinaryClinic": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN CLÍNICA VETERINARIA :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tu Clínica Pierde",
+        "highlight": "Ingresos Cada Día",
+        "part2": "por Admin Manual"
+      },
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización personalizados</strong> para clínicas veterinarias en los Países Bajos — reduciendo ausencias, automatizando la comunicación con dueños de mascotas y conectando tu software de gestión con las herramientas que tu equipo usa a diario. Sin software genérico. Sin dependencia de proveedores.",
+      "cta": {
+        "primary": "Reserva una Auditoría Gratuita",
+        "secondary": "Ver qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "PainPoints": {
+      "title": "El Coste Real de Gestionar una Clínica Veterinaria en 2026",
+      "items": [
+        {
+          "emoji": "📅",
+          "title": "Ausencias y cancelaciones de última hora",
+          "desc": "Una cirugía o cita especializada perdida cuesta entre €150 y €500 en ingresos. Si tu sistema de recordatorios es una llamada el día anterior, estás dejando dinero sobre la mesa cada semana."
+        },
+        {
+          "emoji": "📞",
+          "title": "Tu equipo es un contestador automático muy caro",
+          "desc": "Llamadas de agenda, recordatorios de vacunas, revisiones post-cirugía — tus auxiliares pasan 2-3 horas al día en comunicación que la automatización resuelve en segundos."
+        },
+        {
+          "emoji": "📊",
+          "title": "No sabes de dónde vienen tus nuevos clientes",
+          "desc": "¿Es Google? ¿Una recomendación? ¿Instagram? Sin seguimiento desde el clic hasta la cita, tu presupuesto de marketing es una suposición que no puedes optimizar."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Las revisiones anuales son reactivas, no sistemáticas",
+          "desc": "Las mascotas con vacunas o controles anuales pendientes representan ingresos significativos. La mayoría de clínicas no tiene un sistema automático para reconectar con sus dueños en el momento adecuado."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Tus sistemas no se comunican entre sí",
+          "desc": "Gestión de la clínica, contabilidad, emails de marketing, WhatsApp — cuatro islas separadas. Cada transferencia de datos es un paso manual y un posible error."
+        },
+        {
+          "emoji": "💬",
+          "title": "Los seguimientos post-consulta se pierden",
+          "desc": "Un dueño de mascota se va tras un procedimiento complejo sin recibir instrucciones post-cuidado automáticamente. Esa falta de seguimiento afecta tanto a los resultados como a las reseñas."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos para Clínicas Veterinarias",
+      "subtitle": "No somos un proveedor de software. Construimos e integramos los sistemas que tu clínica ya tiene — o necesita — para que funcionen juntos automáticamente.",
+      "items": [
+        {
+          "emoji": "💬",
+          "title": "Comunicación Automatizada con Dueños",
+          "desc": "Conectamos tu sistema de gestión (Animana, VetSoft o cualquier plataforma con API) con WhatsApp Business API, SMS y email. Confirmaciones de cita, recordatorios a 48h y 2h, seguimientos post-tratamiento — todo activado automáticamente desde tus datos de agenda.",
+          "result": "Reducción del 30-50% de ausencias en 60 días."
+        },
+        {
+          "emoji": "🎯",
+          "title": "CRM para Captación y Retención de Clientes",
+          "desc": "Construimos o integramos una capa CRM que rastrea cada nueva consulta desde el primer contacto (anuncio de Google, formulario web, referido) hasta la cita reservada y el valor de por vida.",
+          "result": "Visibilidad completa desde la fuente del lead hasta los ingresos."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Automatización Lead-a-Reserva",
+          "desc": "Cuando alguien rellena tu formulario de contacto, recibe al instante una respuesta personalizada, un enlace de reserva y un seguimiento de 3 pasos si no reserva. Funciona sin que tu equipo mueva un dedo.",
+          "result": "60-80% más rápido en tiempo de respuesta. Mayor conversión de consulta a cita."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Campañas de Recuerdo de Salud Animal",
+          "desc": "Cada 6-12 meses, las mascotas con vacunas o controles pendientes generan un mensaje personalizado a su dueño por su canal preferido. Las campañas de reenganche funcionan automáticamente con un calendario que tú controlas.",
+          "result": "Tasa de citas consistente sin depender de la memoria del mostrador."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboard e Informes",
+          "desc": "Un dashboard: captación de nuevos clientes por origen, tasa de ocupación de citas, tasa de ausencias, rendimiento de campañas de recuerdo e ingresos por tipo de tratamiento. Actualizado en tiempo real. Accesible desde tu móvil.",
+          "result": "Decisiones basadas en datos, no en intuición."
+        },
+        {
+          "emoji": "⭐",
+          "title": "Automatización de Reseñas de Google",
+          "desc": "Tras cada cita completada, el dueño recibe un mensaje de satisfacción. Las respuestas positivas se guían para dejar una reseña en Google con enlace directo. Los comentarios críticos se enrutan de forma privada al responsable de la clínica.",
+          "result": "El volumen de reseñas crece de forma pasiva — sin ningún esfuerzo manual."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Cómo se Ve Esto en la Práctica",
+      "items": [
+        {
+          "num": "01",
+          "title": "Automatización de Nuevas Consultas",
+          "desc": "El dueño hace clic en tu anuncio de Google → rellena el formulario de contacto → recibe al instante un WhatsApp con horarios disponibles → reserva en 2 minutos → confirmación sincronizada con tu calendario de la clínica."
+        },
+        {
+          "num": "02",
+          "title": "Campaña de Recuerdo de Vacunación",
+          "desc": "Tu sistema identifica cada mascota con vacunas pendientes → envía un WhatsApp o email personalizado → incluye un enlace de reserva con un clic → cita reservada sin ninguna intervención del personal. Se ejecuta mensualmente, de forma automática."
+        },
+        {
+          "num": "03",
+          "title": "Seguimiento Post-Cirugía",
+          "desc": "48 horas después de un procedimiento → mensaje automático de seguimiento al dueño → si reporta preocupaciones, llega una notificación al veterinario → si todo va bien, se activa una solicitud de reseña."
+        },
+        {
+          "num": "04",
+          "title": "Prevención de Ausencias",
+          "desc": "72 horas antes de la cita → solicitud de confirmación enviada → el dueño confirma o reagenda por WhatsApp → sin respuesta en 24h → llamada de seguimiento programada automáticamente para recepción."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué las Clínicas Veterinarias Eligen CodeHunter Lab",
+      "points": [
+        {
+          "title": "Hablamos el lenguaje de la clínica veterinaria",
+          "desc": "Entendemos Animana, VetSoft y la realidad operativa de una clínica ocupada. No imponemos una solución genérica — mapeamos tu flujo de trabajo actual y automatizamos los puntos de dolor de los que se queja tu equipo a diario."
+        },
+        {
+          "title": "Sin dependencias. Todo es tuyo.",
+          "desc": "Cada automatización que construimos corre en plataformas abiertas (n8n, HubSpot, WhatsApp Business API). Sin cajas negras propietarias. Sin cuotas mensuales de licencia para nosotros tras la entrega. El sistema es tuyo."
+        },
+        {
+          "title": "Construido para el mercado veterinario holandés",
+          "desc": "Estamos basados en Leiden y conocemos el panorama sanitario holandés. Cumplimiento RGPD por diseño. Comunicaciones en neerlandés disponibles. Contexto del mercado local integrado."
+        },
+        {
+          "title": "ROI medible desde el primer mes",
+          "desc": "Hacemos seguimiento de las tasas de ausencias, conversión de campañas de recuerdo y captación de nuevos clientes antes y después. Ves el impacto exacto en ingresos de cada automatización que desplegamos — no solo métricas de actividad."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber antes de reservar tu auditoría gratuita.",
+      "questions": [
+        {
+          "q": "¿Trabajáis con Animana y VetSoft?",
+          "a": "Sí. Nos integramos con cualquier sistema de gestión de clínicas que tenga API o capacidad de exportación de datos, incluyendo Animana y VetSoft."
+        },
+        {
+          "q": "¿Es compatible con el RGPD?",
+          "a": "Absolutamente. Todos los datos de los dueños de mascotas se procesan de acuerdo con el RGPD. Usamos infraestructura con base en la UE, implementamos principios de minimización de datos e incluimos mecanismos de consentimiento adecuados."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda la implementación?",
+          "a": "Un paquete de automatización estándar suele tardar de 3 a 5 semanas desde el inicio hasta el lanzamiento. Integraciones más complejas con dashboards personalizados pueden tardar 6-8 semanas."
+        },
+        {
+          "q": "¿Cuánto cuesta?",
+          "a": "Calculamos cada proyecto individualmente. La mayoría de proyectos para clínicas veterinarias comienzan entre €3.500 y €8.000. Reserva una auditoría gratuita para obtener una estimación precisa."
+        },
+        {
+          "q": "¿Necesitará formación mi personal?",
+          "a": "Mínima. El objetivo es reducir lo que tu personal necesita hacer manualmente. Ofrecemos una sesión de traspaso y documentación. En el día a día, el sistema se gestiona solo."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Auditoría de Automatización Gratuita",
+      "title": "¿Listo para Dejar de Perder Ingresos por Admin Manual?",
+      "desc": "Reserva una auditoría gratuita de 45 minutos. Mapearemos tu flujo de trabajo actual, identificaremos las 3 mejores oportunidades de automatización y te daremos una estimación clara del ROI — sin compromiso.",
+      "button": "Reserva tu Auditoría Gratuita",
+      "subtext": "Sin compromiso. Sin presión de ventas. Solo una visión clara de lo que la automatización puede hacer por tu clínica."
+    },
+    "SEO": {
+      "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para clínicas veterinarias en los Países Bajos, incluyendo Ámsterdam, Róterdam, La Haya, Utrecht, Leiden, Haarlem, Eindhoven y Groninga.",
+      "keywords": "automatización clínica veterinaria Países Bajos, dierenkliniek automatisering, automatización citas veterinario, integración Animana, automatización VetSoft, WhatsApp automatización veterinario, CRM veterinario Países Bajos, digitalización dierenarts"
+    }
+  },
+  "AccountingFirm": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN DESPACHO CONTABLE :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tu Despacho Pierde Horas",
+        "highlight": "Cada Semana",
+        "part2": "en Admin Repetitivo"
+      },
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización personalizados</strong> para despachos contables en los Países Bajos — automatizando el procesamiento de facturas, la incorporación de clientes, los recordatorios de plazos y la generación de informes financieros. Sin software genérico. Sin dependencia de proveedores.",
+      "cta": {
+        "primary": "Reserva una Auditoría Gratuita",
+        "secondary": "Ver qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés. Sin embargo, también ofrecemos y creamos sistemas en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "PainPoints": {
+      "title": "El Coste Real de Gestionar un Despacho Contable en 2026",
+      "items": [
+        {
+          "emoji": "📄",
+          "title": "El procesamiento manual de facturas consume horas facturables",
+          "desc": "Tu equipo introduce facturas manualmente, comprueba códigos de IVA y exporta a Exact Online o Twinfield. Cada paso manual es tiempo que tus contables podrían dedicar a trabajo de asesoría que realmente genera margen."
+        },
+        {
+          "emoji": "📅",
+          "title": "Los plazos fiscales gestionados con hojas de cálculo y memoria",
+          "desc": "Los plazos incumplidos significan sanciones para los clientes — y confianza dañada para tu despacho. Sin seguimiento automatizado de plazos y recordatorios a clientes, estás a un mes ocupado de un error costoso."
+        },
+        {
+          "emoji": "🔄",
+          "title": "La incorporación de clientes es lenta e inconsistente",
+          "desc": "Un cliente nuevo tarda 2-3 semanas en incorporarse porque los formularios, verificaciones KYC y solicitudes de documentos se gestionan manualmente y de forma inconsistente."
+        },
+        {
+          "emoji": "📊",
+          "title": "Los informes tardan días en lugar de minutos",
+          "desc": "Los informes mensuales de gestión requieren extraer datos de múltiples sistemas, reformatear en Excel y enviar por email manualmente. La automatización entrega dashboards en tiempo real."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Tus herramientas no se comunican entre sí",
+          "desc": "Exact Online, tu CRM, email y portal de clientes están desconectados. Cada transferencia entre sistemas es un paso manual y un posible error de datos."
+        },
+        {
+          "emoji": "💬",
+          "title": "El seguimiento de documentos pendientes se pierde",
+          "desc": "Esperas semanas para que los clientes envíen extractos bancarios o recibos. Sin recordatorios automatizados, tu equipo termina persiguiéndolos manualmente — un mal uso del tiempo especializado."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos para Despachos Contables",
+      "subtitle": "No somos un proveedor de software. Construimos e integramos los sistemas que tu despacho ya tiene — o necesita — para que funcionen juntos automáticamente.",
+      "items": [
+        {
+          "emoji": "📄",
+          "title": "Automatización del Procesamiento de Facturas",
+          "desc": "Conectamos tu entrada de documentos (email, portal, escáner) a Exact Online o Twinfield vía API. Las facturas se categorizan automáticamente, se aplican códigos de IVA y se contabilizan — tus contables revisan excepciones, no cada línea.",
+          "result": "80% de reducción en tiempo de introducción manual."
+        },
+        {
+          "emoji": "📅",
+          "title": "Sistema de Recordatorios de Plazos",
+          "desc": "Construimos un motor de plazos que rastrea las fechas de declaración de BTW, Vpb e IB de cada cliente. Los recordatorios automatizados van a clientes (solicitando documentos) y a tu equipo (alertas internas) — con semanas de antelación.",
+          "result": "Cero plazos incumplidos. Clientes preparados a tiempo."
+        },
+        {
+          "emoji": "🚀",
+          "title": "Automatización de Incorporación de Clientes",
+          "desc": "Cliente firma el acuerdo → solicitud automatizada de documentos KYC → seguimiento de completado → email de bienvenida con acceso al portal → cuenta configurada en tus sistemas. Tu equipo solo gestiona excepciones.",
+          "result": "Incorporación de 3 semanas a 3 días."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboards de Informes en Tiempo Real",
+          "desc": "Conectamos Exact Online, Twinfield o Moneybird a un dashboard en vivo mostrando PyG, flujo de caja, deudores pendientes y posición de IVA para cada cliente. Actualizado automáticamente. Accesible en cualquier momento.",
+          "result": "Informes de gestión en segundos, no en días."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Automatización de Solicitud y Seguimiento de Documentos",
+          "desc": "Cuando un documento de cliente está pendiente, se activa una secuencia automatizada: recordatorio por email el día 1, WhatsApp el día 5, escalada el día 10. Tu equipo solo recibe notificación si el seguimiento falla.",
+          "result": "Tiempo de entrega de documentos reducido un 60%."
+        },
+        {
+          "emoji": "💼",
+          "title": "CRM y Centro de Comunicación con Clientes",
+          "desc": "Conectamos tu base de datos de clientes a un CRM que rastrea cada interacción, renovación próxima y oportunidad de upsell. Las revisiones anuales de cuenta, ofertas de mejora de servicio y verificaciones de satisfacción salen automáticamente.",
+          "result": "Mayor retención de clientes e incremento del ingreso medio por cliente."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Cómo se Ve Esto en la Práctica",
+      "items": [
+        {
+          "num": "01",
+          "title": "Automatización del Cierre Mensual",
+          "desc": "Último día del mes → el sistema verifica todos los clientes por documentos faltantes → se inician secuencias de seguimiento automático → las entradas de Exact Online se pre-rellenan desde las facturas entrantes → tu equipo revisa un informe de excepciones limpio."
+        },
+        {
+          "num": "02",
+          "title": "Secuencia de Plazo BTW",
+          "desc": "6 semanas antes del plazo → cliente recibe lista de verificación de documentos → 3 semanas antes → segundo recordatorio si hay documentos pendientes → 1 semana antes → alerta interna al contable asignado → todo rastreado automáticamente."
+        },
+        {
+          "num": "03",
+          "title": "Flujo de Incorporación de Nuevo Cliente",
+          "desc": "Cliente firma carta de compromiso → email automatizado envía formulario KYC y lista de documentos → documentos verificados → cuenta creada en Exact Online → pack de bienvenida entregado → incorporación marcada como completa en CRM."
+        },
+        {
+          "num": "04",
+          "title": "Activador de Revisión Anual de Cuenta",
+          "desc": "12 meses tras la incorporación → el sistema genera un resumen de cuenta → enviado al contable asignado para revisión → invitación de revisión personalizada enviada al cliente → reunión reservada por enlace de calendario → oportunidades de upsell identificadas."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué los Despachos Contables Eligen CodeHunter Lab",
+      "points": [
+        {
+          "title": "Conocemos Exact Online, Twinfield y Moneybird",
+          "desc": "Tenemos experiencia directa con la API de las plataformas contables utilizadas por los despachos holandeses. Integramos tu stack existente — sin migración, sin disrupciones a tus flujos de trabajo actuales."
+        },
+        {
+          "title": "Sin dependencias. Todo es tuyo.",
+          "desc": "Cada automatización que construimos corre en plataformas abiertas (n8n, HubSpot, Make). Sin cajas negras propietarias. Sin cuotas mensuales de licencia para nosotros tras la entrega. El sistema es tuyo."
+        },
+        {
+          "title": "Cumplimiento RGPD y NBA por diseño",
+          "desc": "Los datos financieros de los clientes se procesan con infraestructura con base en la UE. Implementamos controles de acceso a datos adecuados, registros de auditoría y políticas de retención alineadas con las regulaciones contables holandesas."
+        },
+        {
+          "title": "ROI medible desde el primer mes",
+          "desc": "Hacemos seguimiento de horas facturables recuperadas, tiempo de entrega de documentos, duración de la incorporación y tasa de plazos incumplidos antes y después. Ves el valor exacto de cada automatización que desplegamos."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber antes de reservar tu auditoría gratuita.",
+      "questions": [
+        {
+          "q": "¿Os integráis con Exact Online?",
+          "a": "Sí. Tenemos experiencia directa con la API de Exact Online, Twinfield y Moneybird. Podemos automatizar el procesamiento de facturas, la creación de cuentas de clientes y los feeds de informes directamente dentro de tu plataforma existente."
+        },
+        {
+          "q": "¿Están seguros los datos financieros de los clientes?",
+          "a": "Absolutamente. Toda la automatización corre en infraestructura con base en la UE. Implementamos controles de acceso basados en roles, transferencia de datos cifrada y registro de auditoría. Todas las soluciones están diseñadas para cumplir los requisitos de datos del RGPD y la contabilidad holandesa."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda la implementación?",
+          "a": "Un paquete estándar (automatización de facturas + recordatorios de plazos + seguimiento de documentos) suele tardar de 4 a 6 semanas. La automatización completa de incorporación e informes puede tardar 8-10 semanas."
+        },
+        {
+          "q": "¿Cuánto cuesta?",
+          "a": "Calculamos cada proyecto individualmente. La mayoría de proyectos para despachos contables comienzan entre €5.000 y €12.000. Reserva una auditoría gratuita para obtener una estimación precisa."
+        },
+        {
+          "q": "¿Disrumpirá esto nuestro flujo de trabajo actual?",
+          "a": "No. Mapeamos tu flujo de trabajo existente primero y construimos la automatización alrededor de él. Tu equipo sigue trabajando como trabaja — la automatización elimina los pasos manuales, no reemplaza tu proceso."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Auditoría de Automatización Gratuita",
+      "title": "¿Listo para Recuperar las Horas Facturables Perdidas en Admin?",
+      "desc": "Reserva una auditoría gratuita de 45 minutos. Mapearemos tu flujo de trabajo actual, identificaremos las 3 mejores oportunidades de automatización y te daremos una estimación clara del ROI — sin compromiso.",
+      "button": "Reserva tu Auditoría Gratuita",
+      "subtext": "Sin compromiso. Sin presión de ventas. Solo una visión clara de lo que la automatización puede hacer por tu despacho."
+    },
+    "SEO": {
+      "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para despachos contables en los Países Bajos, incluyendo Ámsterdam, Róterdam, La Haya, Utrecht, Leiden y Eindhoven. Nuestras plataformas de automatización personalizadas conectan software contable como Exact Online, Twinfield y Moneybird con sistemas CRM, portales de clientes y herramientas de comunicación para eliminar la administración manual y automatizar el cumplimiento de plazos.",
+      "keywords": "automatización despacho contable Países Bajos, accountantskantoor automatisering, integración Exact Online, automatización Twinfield, procesamiento facturas automatización, automatización plazos BTW, incorporación clientes automatización contable, informes financieros automatización Países Bajos"
+    }
+  },
+  "RealEstateAgency": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN AGENCIA INMOBILIARIA :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tu Agencia Pierde Operaciones",
+        "highlight": "Cada Semana",
+        "part2": "por Seguimiento Lento"
+      },
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización personalizados</strong> para agencias inmobiliarias en los Países Bajos — automatizando el seguimiento de leads, la programación de visitas, las publicaciones de propiedades y la comunicación con clientes. Sin CRM genérico. Sin dependencia de proveedores.",
+      "cta": {
+        "primary": "Reserva una Auditoría Gratuita",
+        "secondary": "Ver qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés. Sin embargo, también ofrecemos y creamos sistemas en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "PainPoints": {
+      "title": "El Coste Real de Gestionar una Agencia Inmobiliaria en 2026",
+      "items": [
+        {
+          "emoji": "📞",
+          "title": "Los leads se enfrían antes de que hagas el seguimiento",
+          "desc": "Un posible comprador rellena una consulta de Funda a las 22h. Si no recibe respuesta hasta las 9h del día siguiente, ya ha contactado con dos agencias más. La velocidad gana operaciones en el mercado inmobiliario holandés."
+        },
+        {
+          "emoji": "🏠",
+          "title": "Los horarios de visitas son una pesadilla de coordinación",
+          "desc": "Programar visitas en múltiples propiedades, con múltiples compradores y múltiples vendedores implica docenas de emails y llamadas a la semana — todo manual, todo propenso a errores."
+        },
+        {
+          "emoji": "📊",
+          "title": "No tienes visibilidad de tu pipeline de ventas",
+          "desc": "¿Cuántos leads activos tienes? ¿Cuántas visitas esta semana? ¿Cuántas ofertas pendientes? Sin un dashboard en tiempo real, tu pipeline vive en hilos de email y en la memoria."
+        },
+        {
+          "emoji": "🔄",
+          "title": "La comunicación con vendedores es inconsistente",
+          "desc": "Los vendedores esperan actualizaciones semanales sobre su propiedad. Sin un proceso sistemático, las actualizaciones se retrasan — y los vendedores te llaman en lugar de al revés."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Funda, tu CRM y tu email no están conectados",
+          "desc": "Los leads de Funda deben introducirse manualmente en tu CRM. Cada paso entre plataformas es un riesgo de datos y un coste de tiempo."
+        },
+        {
+          "emoji": "💬",
+          "title": "El seguimiento post-venta es inexistente",
+          "desc": "Después del cierre, compradores y vendedores no saben nada de ti. Ese silencio significa no hay referidos, no hay reseñas y no hay negocio repetido — tres fuentes de ingresos dejadas sobre la mesa."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos para Agencias Inmobiliarias",
+      "subtitle": "No somos un proveedor de software. Construimos e integramos los sistemas que tu agencia ya tiene — o necesita — para que funcionen juntos automáticamente.",
+      "items": [
+        {
+          "emoji": "⚡",
+          "title": "Automatización de Respuesta Instantánea a Leads",
+          "desc": "Cada consulta de Funda, formulario web o clic en anuncio activa una respuesta personalizada instantánea por WhatsApp o email — con los detalles de la propiedad, horarios de visita disponibles y enlace de reserva. El tiempo de respuesta pasa de horas a segundos.",
+          "result": "Tasa de conversión consulta-a-visita 3-5 veces mayor."
+        },
+        {
+          "emoji": "📅",
+          "title": "Automatización de Programación de Visitas",
+          "desc": "Los compradores reservan visitas por un enlace inteligente que comprueba simultáneamente la disponibilidad de la propiedad, del agente y las preferencias del vendedor. Confirmaciones, recordatorios y seguimientos post-visita, todo automatizado.",
+          "result": "80% de reducción en tiempo de coordinación de agenda."
+        },
+        {
+          "emoji": "🏠",
+          "title": "Sindicación de Publicaciones de Propiedades",
+          "desc": "Nueva propiedad publicada → formateada automáticamente y publicada en Funda, tu web y redes sociales con descripciones, fotos y metadatos consistentes. Las actualizaciones se propagan automáticamente cuando los detalles cambian.",
+          "result": "Publicaciones en vivo en minutos, no en horas."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboard de Pipeline de Ventas",
+          "desc": "Un dashboard: leads activos por origen, visitas esta semana, ofertas pendientes, tiempo hasta el cierre por tipo de propiedad y previsión de ingresos. Actualizado en tiempo real. Accesible desde tu móvil.",
+          "result": "Visibilidad total del pipeline para cada agente."
+        },
+        {
+          "emoji": "🔁",
+          "title": "Automatización de Actualizaciones a Vendedores",
+          "desc": "Cada semana, los vendedores reciben una actualización automática: número de consultas recibidas, visitas realizadas, resumen de feedback y posición actual en el mercado. Mantiene a los vendedores informados sin consumir tiempo del agente.",
+          "result": "Vendedores comprometidos. Menos llamadas de '¿cómo va?'"
+        },
+        {
+          "emoji": "⭐",
+          "title": "Sistema de Reseñas y Referidos Post-Venta",
+          "desc": "30 días después del cierre, compradores y vendedores reciben un mensaje de satisfacción. Las respuestas positivas se guían a reseñas de Google y Funda. Las solicitudes de referidos van a su red. Todo automatizado, todo rastreado.",
+          "result": "Crecimiento constante de reseñas y pipeline de referidos."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Cómo se Ve Esto en la Práctica",
+      "items": [
+        {
+          "num": "01",
+          "title": "De Consulta Funda a Visita Reservada",
+          "desc": "Comprador envía consulta Funda a las 22h → respuesta instantánea por WhatsApp con info de la propiedad y enlace de reserva → comprador selecciona horario → vendedor notificado → calendario del agente actualizado → recordatorio enviado 24h antes → solicitud de feedback post-visita enviada automáticamente."
+        },
+        {
+          "num": "02",
+          "title": "Nueva Propiedad en el Mercado en Minutos",
+          "desc": "Agente sube detalles y fotos de la propiedad → la automatización formatea la publicación → publica en Funda, web y redes sociales → email masivo enviado a compradores compatibles en el CRM → las solicitudes de visita empiezan a llegar antes del café de la mañana."
+        },
+        {
+          "num": "03",
+          "title": "Flujo de Actualización Semanal al Vendedor",
+          "desc": "Cada lunes → el sistema extrae los datos de actividad de la semana anterior (consultas, visitas, feedback) → genera un informe personalizado → lo envía al vendedor por email y WhatsApp → el vendedor responde si tiene preguntas → el agente solo recibe notificación si se necesita una respuesta."
+        },
+        {
+          "num": "04",
+          "title": "Motor de Referidos Post-Venta",
+          "desc": "30 días tras el cierre → mensaje de felicitación personalizado enviado → encuesta de satisfacción incluida → respuestas positivas reciben enlace de reseña de Google → feedback neutral/negativo enrutado al gerente de la agencia → 60 días después → solicitud de referidos enviada a la red del comprador."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué las Agencias Inmobiliarias Eligen CodeHunter Lab",
+      "points": [
+        {
+          "title": "Conocemos el mercado inmobiliario holandés",
+          "desc": "Entendemos Funda, el recorrido del comprador holandés y la presión competitiva del mercado inmobiliario de los Países Bajos. Construimos automatización que encaja con cómo operan realmente las agencias holandesas — no plantillas genéricas de CRM inmobiliario."
+        },
+        {
+          "title": "Sin dependencias. Todo es tuyo.",
+          "desc": "Cada automatización que construimos corre en plataformas abiertas (n8n, HubSpot, WhatsApp Business API). Sin cajas negras propietarias. Sin cuotas mensuales de licencia para nosotros tras la entrega. El sistema es tuyo."
+        },
+        {
+          "title": "Construido para la velocidad — porque la velocidad gana en NL",
+          "desc": "El mercado inmobiliario holandés se mueve rápido. Nuestra automatización de respuesta a leads está diseñada para contactar con compradores serios en segundos tras la consulta — antes de que tus competidores vean siquiera la notificación."
+        },
+        {
+          "title": "ROI medible desde el primer mes",
+          "desc": "Hacemos seguimiento de la conversión consulta-a-visita, tiempo de respuesta, tasa de ocupación de visitas y volumen de reseñas post-venta antes y después. Ves el impacto exacto en ingresos de cada automatización que desplegamos."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber antes de reservar tu auditoría gratuita.",
+      "questions": [
+        {
+          "q": "¿Os integráis con Funda?",
+          "a": "Sí. Conectamos las consultas de Funda a tus flujos de trabajo de CRM y comunicación mediante integración por API y webhook. Cada lead de Funda se introduce, categoriza y sigue automáticamente sin entrada manual de datos."
+        },
+        {
+          "q": "¿Con qué sistemas CRM trabajáis?",
+          "a": "Nos integramos con HubSpot, Pipedrive, Salesforce y la mayoría de plataformas CRM accesibles por API. Si tu agencia usa un CRM específico para inmobiliarias, evaluamos las opciones de integración durante la auditoría gratuita."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda la implementación?",
+          "a": "Un paquete estándar de automatización inmobiliaria (respuesta a leads + programación de visitas + actualizaciones a vendedores) suele tardar de 3 a 5 semanas. El dashboard completo de pipeline y sindicación de publicaciones pueden tardar 6-8 semanas."
+        },
+        {
+          "q": "¿Cuánto cuesta?",
+          "a": "Calculamos cada proyecto individualmente. La mayoría de proyectos para agencias inmobiliarias comienzan entre €4.000 y €10.000. Reserva una auditoría gratuita para obtener una estimación precisa."
+        },
+        {
+          "q": "¿Tendrán que cambiar de forma de trabajar mis agentes?",
+          "a": "Cambio mínimo. La automatización gestiona el trabajo de coordinación repetitivo — respuestas, recordatorios, agenda, actualizaciones. Tus agentes siguen siendo dueños de la relación con el cliente y las negociaciones. Solo dedican más tiempo a eso en lugar de a la administración."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Auditoría de Automatización Gratuita",
+      "title": "¿Listo para Dejar de Perder Operaciones por Seguimiento Lento?",
+      "desc": "Reserva una auditoría gratuita de 45 minutos. Mapearemos tu flujo de trabajo actual de leads y visitas, identificaremos las 3 mejores oportunidades de automatización y te daremos una estimación clara del ROI — sin compromiso.",
+      "button": "Reserva tu Auditoría Gratuita",
+      "subtext": "Sin compromiso. Sin presión de ventas. Solo una visión clara de lo que la automatización puede hacer por tu agencia."
+    },
+    "SEO": {
+      "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para agencias inmobiliarias en los Países Bajos, incluyendo Ámsterdam, Róterdam, La Haya, Utrecht, Leiden, Haarlem, Eindhoven y Groninga. Nuestras plataformas de automatización personalizadas conectan Funda, sistemas CRM, WhatsApp Business API y herramientas de marketing para eliminar el seguimiento lento de leads, automatizar la programación de visitas, sindicar publicaciones de propiedades y construir comunicación sistemática con vendedores.",
+      "keywords": "automatización agencia inmobiliaria Países Bajos, makelaar automatisering Nederland, integración Funda automatización, CRM inmobiliario Países Bajos, automatización leads inmobiliaria, automatización visitas inmobiliaria Países Bajos, WhatsApp automatización makelaar, sistema CRM makelaar"
+    }
+  },
+  "QuickWins": {
+    "badge": "Casos de Uso · Herramientas Probadas",
+    "title": "Herramientas que se",
+    "highlight": "Pagan Solas.",
+    "subtitle": "Automatizaciones reales que hemos construido y desplegado para clientes de distintos sectores — listas para arrancar.",
+    "cards": [
+      {
+        "title": "Reservas + Follow-up",
+        "desc": "Sistema de reservas automatizado con secuencias de seguimiento post-visita integradas."
+      },
+      {
+        "title": "WhatsApp 24/7",
+        "desc": "Agente IA que responde, cualifica leads y agenda citas por WhatsApp — sin parar."
+      },
+      {
+        "title": "Optimizar Calendario",
+        "desc": "Gestión inteligente que elimina no-shows y rellena huecos automáticamente."
+      },
+      {
+        "title": "Lead Nurturing",
+        "desc": "Secuencias de email y WhatsApp que convierten leads fríos en clientes con cita."
+      },
+      {
+        "title": "CRM Auto-sync",
+        "desc": "CRM, facturación y calendario siempre sincronizados — sin introducir datos a mano."
+      },
+      {
+        "title": "Informes Automáticos",
+        "desc": "Informes de rendimiento semanales entregados automáticamente en tu email o Slack."
+      }
+    ]
+  }
+}

@@ -1,112 +1,100 @@
-// components/sections/StackSection.tsx
+// components/sections/05StackSection.tsx
+
+"use client";
 
 import React from "react";
+import { InfiniteLoop } from "../ui/InfiniteLoop";
+import { TechIcons } from "../ui/TechIcons";
+import { useTranslations } from "next-intl";
 
-// Definición de tipos para una tecnología
-interface Technology {
+interface StackItem {
+  id: string;
   name: string;
-  level: "primary" | "secondary" | "tool";
+  icon: React.ReactNode;
 }
 
-// Datos de las tecnologías agrupadas
-const techStack: { [key: string]: Technology[] } = {
-  "Core Engineering & Architecture": [
-    { name: "Next.js (App Router)", level: "primary" },
-    { name: "React", level: "primary" },
-    { name: "TypeScript", level: "primary" },
-    { name: "JavaScript (ES6+)", level: "tool" },
-    { name: "Server Components", level: "secondary" },
-  ],
-  "E-commerce & Product Focus": [
-    { name: "SFCC (B2C/B2B)", level: "secondary" },
-    { name: "Product Ownership", level: "secondary" },
-    { name: "Shopify", level: "tool" },
-    { name: "UX/Performance Optimization", level: "primary" },
-  ],
-  "Styling, UI/UX & Animation": [
-    { name: "Tailwind CSS", level: "primary" },
-    { name: "Framer Motion", level: "secondary" },
-    { name: "Figma", level: "tool" },
-    { name: "A11Y (WCAG 2.1)", level: "tool" },
-  ],
-  "Testing, APIs & DevOps": [
-    { name: "Jest / RTL", level: "primary" },
-    { name: "GraphQL / REST APIs", level: "secondary" },
-    { name: "Git / GitLab / GitHub", level: "tool" },
-    { name: "CI/CD Pipelines", level: "tool" },
-  ],
-};
+// Consolidate into 2 logical rows for better visual balance
+const rowOne: StackItem[] = [
+  { id: "next", name: "Next.js", icon: <TechIcons.NextJS className="w-6 h-6 text-white" /> },
+  { id: "react", name: "React", icon: <TechIcons.React className="w-6 h-6 text-[#61DAFB]" /> },
+  { id: "ts", name: "TypeScript", icon: <TechIcons.TypeScript className="w-6 h-6 text-[#3178C6]" /> },
+  { id: "python", name: "Python", icon: <TechIcons.Python className="w-6 h-6 text-[#3776AB]" /> },
+  { id: "node", name: "Node.js", icon: <TechIcons.NodeJS className="w-6 h-6 text-[#339933]" /> },
+  { id: "nest", name: "NestJS", icon: <TechIcons.NestJS className="w-6 h-6 text-[#E0234E]" /> },
+  { id: "tailwind", name: "Tailwind", icon: <TechIcons.Tailwind className="w-6 h-6 text-[#38BDF8]" /> },
+  { id: "framer", name: "Motion", icon: <TechIcons.Framer className="w-6 h-6 text-white" /> },
+  { id: "docker", name: "Docker", icon: <TechIcons.Docker className="w-6 h-6 text-[#2496ED]" /> },
+  { id: "vercel", name: "Vercel", icon: <TechIcons.Vercel className="w-6 h-6 text-white" /> },
+  { id: "prisma", name: "Prisma", icon: <TechIcons.Prisma className="w-6 h-6 text-[#5A67D8]" /> },
+];
 
-const getChipStyles = (level: "primary" | "secondary" | "tool") => {
-  switch (level) {
-    case "primary":
-      return "bg-hunter-green/20 text-hunter-green border-hunter-green";
-    case "secondary":
-      return "bg-hunter-orange/20 text-hunter-orange border-hunter-orange";
-    case "tool":
-    default:
-      return "bg-surface-dark/50 text-gray-400 border-gray-600";
-  }
-};
+const rowTwo: StackItem[] = [
+  { id: "openai", name: "OpenAI", icon: <TechIcons.OpenAI className="w-6 h-6 text-white" /> },
+  { id: "anthropic", name: "Anthropic", icon: <TechIcons.Anthropic className="w-6 h-6 text-white" /> },
+  { id: "langchain", name: "LangChain", icon: <TechIcons.LangChain className="w-6 h-6 text-hunter-green" /> },
+  { id: "n8n", name: "n8n", icon: <TechIcons.N8N className="w-6 h-6 text-[#FF6D5A]" /> },
+  { id: "postgres", name: "Postgres", icon: <TechIcons.PostgreSQL className="w-6 h-6 text-[#4169E1]" /> },
+  { id: "redis", name: "Redis", icon: <TechIcons.Redis className="w-6 h-6 text-[#FF4438]" /> },
+  { id: "graphql", name: "GraphQL", icon: <TechIcons.GraphQL className="w-6 h-6 text-[#E10098]" /> },
+  { id: "stripe", name: "Stripe", icon: <TechIcons.Stripe className="w-6 h-6 text-[#635BFF]" /> },
+  { id: "git", name: "GitHub", icon: <TechIcons.Git className="w-6 h-6 text-white" /> },
+  { id: "figma", name: "Figma", icon: <TechIcons.Figma className="w-6 h-6 text-[#F24E1E]" /> },
+  { id: "agents", name: "Agents", icon: <TechIcons.AIAgents className="w-6 h-6 text-hunter-orange" /> },
+];
+
+const PremiumTechBadge = ({ item }: { item: StackItem }) => (
+  <div className="group flex items-center gap-3 px-6 py-4 mx-2 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.08] hover:border-white/[0.15] hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] cursor-default">
+    <div className="opacity-80 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0 scale-90 group-hover:scale-100 transition-transform">
+      {item.icon}
+    </div>
+    <span className="text-sm font-bold text-gray-400 group-hover:text-white tracking-wide transition-colors duration-300">
+      {item.name}
+    </span>
+  </div>
+);
 
 const StackSection: React.FC = () => {
+  const t = useTranslations("Stack");
+
   return (
-    <section
-      id="stack"
-      className="py-20 md:py-32 bg-near-black text-white px-4 md:px-8"
-    >
-      <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 tracking-tight">
-          <span className="text-hunter-orange">05.</span> The{" "}
-          <span className="text-hunter-green">TECH</span> Stack
-        </h2>
-        <p className="text-center text-xl text-gray-400 mb-16 max-w-3xl mx-auto">
-          The modern, high-performance technology ecosystem used to build and
-          scale CodeHunter Lab solutions.
+    <section id="stack" className="py-20 bg-near-black relative overflow-hidden border-t border-white/5">
+      {/* Ambient Glows */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,230,162,0.03),transparent_70%)] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 mb-12 text-center relative z-10">
+        <p className="text-hunter-green text-[10px] font-bold uppercase tracking-[0.3em] mb-4">
+          {t("subtitle")}
         </p>
+        <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter uppercase opacity-90">
+          {t("title")}
+        </h2>
+      </div>
 
-        {/* Grid de Categorías de Tecnología */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {Object.entries(techStack).map(([category, technologies]) => (
-            <div
-              key={category}
-              className="p-6 bg-surface-dark rounded-xl shadow-xl border border-surface-dark hover:border-hunter-green/50 transition duration-300"
-            >
-              <h3 className="text-xl font-bold mb-4 text-white border-b border-gray-700 pb-2">
-                {category}
-              </h3>
+      <div className="flex flex-col gap-6 relative z-10">
+        {/* Row 1: Core Tech - Left */}
+        <div className="relative">
+          {/* Gradient Masks */}
+          <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-near-black to-transparent z-20" />
+          <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-near-black to-transparent z-20" />
 
-              <div className="flex flex-wrap gap-2 pt-2">
-                {technologies.map((tech) => (
-                  <span
-                    key={tech.name}
-                    className={`text-sm font-medium px-3 py-1 rounded-full border transition-all ${getChipStyles(
-                      tech.level
-                    )}`}
-                  >
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+          <InfiniteLoop direction="left" speed={30}>
+            {rowOne.map((item) => (
+              <PremiumTechBadge key={item.id} item={item} />
+            ))}
+          </InfiniteLoop>
         </div>
 
-        {/* Legend / Key */}
-        <div className="flex justify-center space-x-6 mt-16 text-sm">
-          <span className="flex items-center space-x-2 text-hunter-green">
-            <span className="block w-3 h-3 rounded-full bg-hunter-green"></span>
-            <span>Core / Deep Expertise</span>
-          </span>
-          <span className="flex items-center space-x-2 text-hunter-orange">
-            <span className="block w-3 h-3 rounded-full bg-hunter-orange"></span>
-            <span>Strategic / Specialized</span>
-          </span>
-          <span className="flex items-center space-x-2 text-gray-400">
-            <span className="block w-3 h-3 rounded-full bg-gray-600"></span>
-            <span>Standard Tooling</span>
-          </span>
+        {/* Row 2: AI & Infra - Right */}
+        <div className="relative">
+          {/* Gradient Masks */}
+          <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-near-black to-transparent z-20" />
+          <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-near-black to-transparent z-20" />
+
+          <InfiniteLoop direction="right" speed={30}>
+            {rowTwo.map((item) => (
+              <PremiumTechBadge key={item.id} item={item} />
+            ))}
+          </InfiniteLoop>
         </div>
       </div>
     </section>

@@ -3,8 +3,12 @@
 "use client";
 
 import React from "react";
+import { Link } from "@/navigation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
+import { ScrambleText } from "../ui/ScrambleText";
+import { useTranslations } from "next-intl";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,53 +30,91 @@ const itemVariants = {
 };
 
 const HeroSection: React.FC = () => {
+  const t = useTranslations("Hero");
+
   return (
-    //<section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20">
-    <section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20">
+    <section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20 overflow-hidden">
       <HeroBackgroundOrnaments />
-      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-6 py-16 relative z-10">
         <motion.div
-          className="z-10 max-w-6xl text-center space-y-6"
+          className="text-center space-y-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.p
-            className="text-sm uppercase tracking-widest text-hunter-orange font-mono"
+          {/* Logo */}
+          <motion.div
+            className="flex justify-center mb-2"
             variants={itemVariants}
           >
-            [ Frontend Tech Lead, Product-Oriented Engineer ]
-          </motion.p>
+            <motion.div
+              className="relative"
+              animate={{ scale: [1, 1.08, 1] }}
+              transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
+            >
+              <motion.div
+                className="absolute -inset-3 bg-hunter-green/10 rounded-full blur-xl"
+                animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.15, 1] }}
+                transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
+              />
+              <Image
+                src="/codehunter.logo.bg.png"
+                alt="CodeHunter Lab Logo"
+                width={80}
+                height={80}
+                className="relative z-10 w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-[0_0_20px_rgba(0,230,162,0.5)]"
+                priority
+              />
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="text-sm md:text-base uppercase tracking-widest text-hunter-orange font-mono mb-4"
+            variants={itemVariants}
+          >
+            <span className="opacity-80">{"["}&nbsp;</span>
+            <ScrambleText
+              text={t("subHeader")}
+              delay={0.85}
+              className="inline"
+            />
+            <span className="opacity-80">&nbsp;{"]"}</span>
+          </motion.div>
 
           <motion.h1
             className="text-5xl md:text-8xl font-extrabold leading-none tracking-tighter"
             variants={itemVariants}
           >
-            Building High-
-            <span className="text-hunter-green">Performance</span>
-            Digital Products that{" "}
-            <span className="text-hunter-green">Scale</span>.
+            {t("title.part1")}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-green animate-shimmer bg-[length:200%_100%]">
+              {t("title.highlight1")}
+            </span>
+            <br className="hidden md:block" /> {t("title.part2")}{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-green animate-shimmer bg-[length:200%_100%]" style={{ animationDelay: "1s" }}>
+              {t("title.highlight2")}
+            </span>
+            .
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto pt-6"
+            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto pt-6 leading-relaxed"
             variants={itemVariants}
           >
-            CodeHunter Lab operates at the intersection of deep technical
-            engineering, product strategy, and user-centric design to accelerate
-            your digital roadmap.
+            {t("description")}
           </motion.p>
 
           <motion.div
-            className="flex justify-center space-x-6 pt-10"
+            className="flex flex-col md:flex-row justify-center items-center gap-6 pt-10"
             variants={itemVariants}
           >
-            <button className="px-10 py-4 text-near-black bg-hunter-green font-bold rounded-lg transition duration-300 hover:bg-hunter-green/90 shadow-xl shadow-hunter-green/30">
-              Initialize Project
-            </button>
-            <button className="px-10 py-4 text-hunter-orange border-2 border-hunter-orange bg-transparent font-semibold rounded-lg transition duration-300 hover:bg-hunter-orange/10">
-              View Case Studies
-            </button>
+            <Link href="#contact" className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,230,162,0.3)] hover:shadow-[0_0_40px_rgba(0,230,162,0.6)] inline-block">
+              <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
+              <span className="relative z-10">{t("cta.initialize")}</span>
+            </Link>
+
+            <Link href="#work" className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)] inline-block">
+              {t("cta.caseStudies")}
+            </Link>
           </motion.div>
         </motion.div>
       </div>
