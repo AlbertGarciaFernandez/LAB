@@ -38,13 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     })
 
-    // Root URL (redirects to default locale)
-    sitemapEntries.push({
-        url: baseUrl,
-        lastModified: new Date('2026-02-26'),
-        changeFrequency: 'weekly',
-        priority: 1,
-    })
-
     return sitemapEntries
 }
