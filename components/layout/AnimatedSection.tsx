@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -15,7 +15,7 @@ export default function AnimatedSection({
   className = "",
 }: Props) {
   return (
-    <motion.section
+    <m.section
       id={id}
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -24,6 +24,6 @@ export default function AnimatedSection({
       className={`border-b border-white/5 bg-background ${className}`}
     >
       {children}
-    </motion.section>
+    </m.section>
   );
 }

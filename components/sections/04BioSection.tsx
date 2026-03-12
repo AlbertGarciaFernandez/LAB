@@ -3,7 +3,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 const BioSection: React.FC = () => {
@@ -39,7 +39,7 @@ const BioSection: React.FC = () => {
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-start gap-16 md:gap-24">
         {/* Left: The "Statement" */}
         <div className="md:w-3/5">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -48,9 +48,9 @@ const BioSection: React.FC = () => {
             <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-r from-hunter-green to-emerald-600">
               {t("title.part1")} <br /> {t("title.part2")}
             </h2>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -66,17 +66,17 @@ const BioSection: React.FC = () => {
 
             <div className="pt-8 flex flex-wrap gap-8">
               {experienceStats.map((stat, i) => (
-                <div key={i} className="flex flex-col">
+                <div key={stat.label} className="flex flex-col">
                   <span className="text-4xl font-bold text-white">{stat.value}</span>
                   <span className="text-xs uppercase tracking-widest text-hunter-green">{stat.label}</span>
                 </div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Right: The "Visual" or Abstract representation (Optional or kept simple) */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -92,7 +92,7 @@ const BioSection: React.FC = () => {
               <p className="italic text-gray-400">{t("passionCard.quote")}</p>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

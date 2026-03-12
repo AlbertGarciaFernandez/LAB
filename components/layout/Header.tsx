@@ -1,10 +1,10 @@
 // components/layout/Header.tsx
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useReducer, useEffect } from "react";
 import { Link, usePathname } from "@/navigation";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
   LightningIcon,
@@ -25,8 +25,31 @@ import {
   HouseIcon,
 } from "@phosphor-icons/react/dist/ssr";
 
+type NavState = {
+  open: boolean;
+  openDropdown: string | null;
+  mobileExpanded: string | null;
+  prevPathname: string;
+};
+type NavAction =
+  | { type: "TOGGLE_MOBILE" }
+  | { type: "CLOSE_MOBILE" }
+  | { type: "SET_DROPDOWN"; key: string | null }
+  | { type: "TOGGLE_MOBILE_GROUP"; key: string }
+  | { type: "ROUTE_CHANGE"; pathname: string };
+
+function navReducer(state: NavState, action: NavAction): NavState {
+  switch (action.type) {
+    case "TOGGLE_MOBILE": return { ...state, open: !state.open };
+    case "CLOSE_MOBILE": return { ...state, open: false };
+    case "SET_DROPDOWN": return { ...state, openDropdown: action.key };
+    case "TOGGLE_MOBILE_GROUP": return { ...state, mobileExpanded: state.mobileExpanded === action.key ? null : action.key };
+    case "ROUTE_CHANGE": return { ...state, open: false, mobileExpanded: null, prevPathname: action.pathname };
+  }
+}
+
 const ChevronDown: React.FC<{ open?: boolean }> = ({ open }) => (
-  <motion.svg
+  <m.svg
     width="11"
     height="11"
     viewBox="0 0 12 12"
@@ -42,15 +65,19 @@ const ChevronDown: React.FC<{ open?: boolean }> = ({ open }) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-  </motion.svg>
+  </m.svg>
 );
 
 const Header: React.FC = () => {
-  const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const pathname = usePathname();
+  const [nav, dispatch] = useReducer(navReducer, {
+    open: false,
+    openDropdown: null,
+    mobileExpanded: null,
+    prevPathname: pathname,
+  });
+  const { open, openDropdown, mobileExpanded } = nav;
   const t = useTranslations("Header");
 
   // Dropdown groups with all pages
@@ -116,18 +143,16 @@ const Header: React.FC = () => {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setOpen(false);
-    setMobileExpanded(null);
-  }, [pathname]);
+  if (nav.prevPathname !== pathname) {
+    dispatch({ type: "ROUTE_CHANGE", pathname });
+  }
 
   const isGroupActive = (items: { href: string }[]) =>
     items.some((item) => pathname === item.href || pathname?.startsWith(item.href + "/"));
 
   return (
     <>
-      <motion.header
+      <m.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -136,7 +161,7 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center h-24 px-4 md:px-8">
           {/* Logo and Brand Name */}
           <Link href="/" className="flex items-center gap-3 group relative z-50">
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="relative h-11 w-11 rounded-xl bg-near-black border border-hunter-green/30 overflow-hidden flex items-center justify-center shadow-[0_0_15px_rgba(0,230,162,0.1)] group-hover:shadow-[0_0_25px_rgba(0,230,162,0.4)] group-hover:border-hunter-green/60 transition-all duration-500"
@@ -155,7 +180,7 @@ const Header: React.FC = () => {
                 className="relative z-10 w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(0,230,162,0.4)]"
                 priority
               />
-            </motion.div>
+            </m.div>
 
             <div className="flex flex-col justify-center">
               <span className="text-xs font-black uppercase tracking-[0.25em] text-white leading-none mb-1 group-hover:text-hunter-green transition-colors duration-300">
@@ -175,8 +200,8 @@ const Header: React.FC = () => {
                 <li
                   key={group.key}
                   className="relative"
-                  onMouseEnter={() => setOpenDropdown(group.key)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  onMouseEnter={() => dispatch({ type: "SET_DROPDOWN", key: group.key })}
+                  onMouseLeave={() => dispatch({ type: "SET_DROPDOWN", key: null })}
                 >
                   <button
                     className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 flex items-center group ${
@@ -197,7 +222,7 @@ const Header: React.FC = () => {
                   {/* Dropdown Panel */}
                   <AnimatePresence>
                     {openDropdown === group.key && (
-                      <motion.div
+                      <m.div
                         initial={{ opacity: 0, y: 6, scale: 0.97 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 6, scale: 0.97 }}
@@ -214,7 +239,7 @@ const Header: React.FC = () => {
                               <Link
                                 key={item.href}
                                 href={item.href}
-                                onClick={() => setOpenDropdown(null)}
+                                onClick={() => dispatch({ type: "SET_DROPDOWN", key: null })}
                                 className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-200 group/item ${
                                   isActive
                                     ? "text-hunter-green bg-hunter-green/8"
@@ -237,7 +262,7 @@ const Header: React.FC = () => {
 
                         {/* Bottom accent line */}
                         <div className="h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </li>
@@ -296,19 +321,19 @@ const Header: React.FC = () => {
           {/* Mobile Toggle */}
           <button
             className="lg:hidden text-white relative z-[60] p-2 ml-2"
-            onClick={() => setOpen(!open)}
+            onClick={() => dispatch({ type: "TOGGLE_MOBILE" })}
             aria-label="Toggle menu"
           >
             <div className="space-y-1.5">
-              <motion.span
+              <m.span
                 animate={{ rotate: open ? 45 : 0, y: open ? 8 : 0 }}
                 className="block w-6 h-0.5 bg-hunter-green origin-center transition-transform"
               />
-              <motion.span
+              <m.span
                 animate={{ opacity: open ? 0 : 1 }}
                 className="block w-6 h-0.5 bg-hunter-green transition-opacity"
               />
-              <motion.span
+              <m.span
                 animate={{ rotate: open ? -45 : 0, y: open ? -8 : 0, width: open ? "24px" : "16px" }}
                 className="block w-4 ml-auto h-0.5 bg-hunter-green origin-center transition-transform"
               />
@@ -319,23 +344,23 @@ const Header: React.FC = () => {
         {/* Enchanted Bottom Border */}
         <div className="absolute bottom-0 left-0 w-full h-[1px] overflow-hidden">
           <div className="absolute inset-0 w-full h-full bg-white/10" />
-          <motion.div
+          <m.div
             className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-hunter-green to-transparent blur-[1px]"
             animate={{ x: ["-100%", "100%"] }}
             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
           />
-          <motion.div
+          <m.div
             className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-hunter-orange to-transparent blur-[1px]"
             animate={{ x: ["-100%", "100%"] }}
             transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 2 }}
           />
         </div>
-      </motion.header>
+      </m.header>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
@@ -346,7 +371,7 @@ const Header: React.FC = () => {
 
               {/* Dropdown Groups (collapsible on mobile) */}
               {navGroups.map((group, gi) => (
-                <motion.div
+                <m.div
                   key={group.key}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -354,9 +379,7 @@ const Header: React.FC = () => {
                   className="w-full max-w-sm"
                 >
                   <button
-                    onClick={() =>
-                      setMobileExpanded(mobileExpanded === group.key ? null : group.key)
-                    }
+                    onClick={() => dispatch({ type: "TOGGLE_MOBILE_GROUP", key: group.key })}
                     className={`w-full flex items-center justify-between px-5 py-3 rounded-xl font-bold text-xl transition-colors ${
                       isGroupActive(group.items)
                         ? "text-hunter-green"
@@ -371,7 +394,7 @@ const Header: React.FC = () => {
 
                   <AnimatePresence>
                     {mobileExpanded === group.key && (
-                      <motion.div
+                      <m.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -385,7 +408,7 @@ const Header: React.FC = () => {
                               <Link
                                 key={item.href}
                                 href={item.href}
-                                onClick={() => setOpen(false)}
+                                onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                                 className={`flex items-center gap-3 px-5 py-3 text-base border-b border-white/5 last:border-0 transition-colors ${
                                   isActive
                                     ? "text-hunter-green bg-hunter-green/8"
@@ -401,15 +424,15 @@ const Header: React.FC = () => {
                             );
                           })}
                         </div>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
-                </motion.div>
+                </m.div>
               ))}
 
               {/* Simple anchor links */}
               {navLinks.map((item, i) => (
-                <motion.div
+                <m.div
                   key={item.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -418,19 +441,19 @@ const Header: React.FC = () => {
                 >
                   <Link
                     href={item.href}
-                    onClick={() => setOpen(false)}
+                    onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                     className="block w-full px-5 py-3 text-xl font-bold text-gray-400 hover:text-hunter-orange transition-colors rounded-xl"
                   >
                     {item.name}
                   </Link>
-                </motion.div>
+                </m.div>
               ))}
 
               {/* Divider */}
               <div className="w-full max-w-sm h-px bg-white/10 my-2" />
 
               {/* CTAs */}
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.55 }}
@@ -438,14 +461,14 @@ const Header: React.FC = () => {
               >
                 <Link
                   href="/ai-consulting"
-                  onClick={() => setOpen(false)}
+                  onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                   className="block w-full text-center px-8 py-3.5 text-hunter-green border border-hunter-green font-bold uppercase rounded-full tracking-[0.2em] text-sm hover:bg-hunter-green hover:text-near-black transition-all duration-300"
                 >
                   {t("cta.AIConsulting")}
                 </Link>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.62 }}
@@ -453,14 +476,14 @@ const Header: React.FC = () => {
               >
                 <Link
                   href="/#contact"
-                  onClick={() => setOpen(false)}
+                  onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                   className="block w-full text-center px-8 py-3.5 bg-hunter-orange text-near-black font-bold uppercase rounded-full tracking-[0.15em] text-sm hover:opacity-90 transition-opacity"
                 >
                   {t("cta.LetsWork")}
                 </Link>
-              </motion.div>
+              </m.div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

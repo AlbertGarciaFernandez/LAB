@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function HeroBackgroundOrnaments() {
   return (
@@ -24,7 +24,7 @@ export default function HeroBackgroundOrnaments() {
 
       {/* Animated Elements */}
       <div className="absolute inset-0">
-        <motion.div
+        <m.div
           animate={{
             y: [0, -20, 0],
             opacity: [0.2, 0.4, 0.2]
@@ -32,7 +32,7 @@ export default function HeroBackgroundOrnaments() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[20%] left-[15%] h-[1px] w-[300px] bg-gradient-to-r from-transparent via-hunter-green/40 to-transparent"
         />
-        <motion.div
+        <m.div
           animate={{
             y: [0, 20, 0],
             opacity: [0.1, 0.3, 0.1]
@@ -43,7 +43,7 @@ export default function HeroBackgroundOrnaments() {
       </div>
 
       {/* Technical SVG Symbols */}
-      <motion.svg
+      <m.svg
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
         transition={{ duration: 1.5 }}
@@ -53,12 +53,12 @@ export default function HeroBackgroundOrnaments() {
         <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
         <circle cx="100" cy="100" r="40" stroke="currentColor" strokeWidth="1" />
         <path d="M100 20 V180 M20 100 H180" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
-      </motion.svg>
+      </m.svg>
 
       {/* Ambient Floating Particles (Geometric) */}
-      {[...Array(5)].map((_, i) => (
-        <motion.div
-          key={i}
+      {(["p0", "p1", "p2", "p3", "p4"] as const).map((key, i) => (
+        <m.div
+          key={key}
           animate={{
             y: [0, -40, 0],
             x: [0, 20, 0],

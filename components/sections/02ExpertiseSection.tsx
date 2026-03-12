@@ -4,7 +4,7 @@
 
 import React, { useState } from "react";
 import AnimatedSection from "../layout/AnimatedSection";
-import { motion, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
+import { m, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 type PillarId =
@@ -184,7 +184,7 @@ const ExpertiseSection: React.FC = () => {
           {/* ACCORDION DETALLE DEL PILLAR ACTIVO */}
           <div className="mt-4 lg:mt-0">
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={activePillar.id}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -199,8 +199,8 @@ const ExpertiseSection: React.FC = () => {
                   {activePillar.heading}
                 </h3>
 
-                {activePillar.paragraphs.map((p, idx) => (
-                  <p key={idx} className="mt-3 text-sm text-gray-300">
+                {activePillar.paragraphs.map((p) => (
+                  <p key={p} className="mt-3 text-sm text-gray-300">
                     {p}
                   </p>
                 ))}
@@ -210,7 +210,7 @@ const ExpertiseSection: React.FC = () => {
                     <li key={b}>· {b}</li>
                   ))}
                 </ul>
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
         </div>
@@ -249,7 +249,7 @@ function SpotlightCard({
   }
 
   return (
-    <motion.button
+    <m.button
       type="button"
       onClick={onClick}
       onMouseMove={handleMouseMove}
@@ -261,7 +261,7 @@ function SpotlightCard({
       className={`group relative flex h-full flex-col rounded-2xl border bg-surface-dark/70 p-6 text-left transition duration-300 ${isActive ? "border-hunter-green/60" : "border-white/5"
         }`}
     >
-      <motion.div
+      <m.div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
@@ -282,7 +282,7 @@ function SpotlightCard({
 
       {/* badge HNTR Mode solo en la primera card */}
       {isFirst && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 6 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -290,7 +290,7 @@ function SpotlightCard({
           className="pointer-events-none absolute -left-1 -top-3 rounded-full border border-hunter-green/60 bg-near-black/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-hunter-green shadow-[0_0_24px_rgba(0,230,162,0.35)]"
         >
           HNTR Mode
-        </motion.div>
+        </m.div>
       )}
 
       <div className="relative flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-3">
@@ -315,7 +315,7 @@ function SpotlightCard({
           {isActive ? "●" : "↗"}
         </span>
       </span>
-    </motion.button>
+    </m.button>
   );
 }
 

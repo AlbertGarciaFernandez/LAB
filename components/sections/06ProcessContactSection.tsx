@@ -4,7 +4,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ContactForm } from "../ui/ContactForm";
 import { useTranslations } from "next-intl";
 
@@ -47,7 +47,7 @@ const ProcessContactSection: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto relative z-10">
         {/* 06.1 Process Section */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,12 +59,12 @@ const ProcessContactSection: React.FC = () => {
           <p className="text-center text-xl text-gray-400 mb-20 max-w-3xl mx-auto leading-relaxed">
             {t("subtitle.part1")} <span className="text-white font-semibold">{t("subtitle.highlight")}</span> {t("subtitle.part2")}
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Process Steps Grid - Now 4 Columns */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {processSteps.map((item, i) => (
-            <motion.div
+            <m.div
               key={item.step}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ const ProcessContactSection: React.FC = () => {
                   {item.description}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, useAnimationControls } from "framer-motion";
+import { m, useAnimationControls } from "framer-motion";
 
 interface InfiniteLoopProps {
     children: React.ReactNode;
@@ -56,7 +56,7 @@ export const InfiniteLoop: React.FC<InfiniteLoopProps> = ({
         <div className={`overflow-hidden flex w-full mask-gradient ${className}`}>
             {/* We render a track that is 2x the content width (original + duplicate) */}
             {/* Actually simpler: render 2 sets of children in a flex row, animate parent x */}
-            <motion.div
+            <m.div
                 className="flex gap-8 items-center flex-nowrap min-w-max"
                 animate={{
                     x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"],
@@ -70,7 +70,7 @@ export const InfiniteLoop: React.FC<InfiniteLoopProps> = ({
             >
                 {children}
                 {children}
-            </motion.div>
+            </m.div>
         </div>
     );
 };

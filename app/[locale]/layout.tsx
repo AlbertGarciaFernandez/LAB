@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import CookieConsent from "@/components/ui/CookieConsent";
 import GoogleAnalyticsConditional from "@/components/analytics/GoogleAnalyticsConditional";
+import { MotionProvider } from "@/components/providers/MotionProvider";
 
 
 //const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -90,13 +91,15 @@ export default async function RootLayout({
     <html lang={locale} className="sans mono">
       <body>
         <NextIntlClientProvider messages={messages}>
-          <div className="bg-near-black text-white min-h-screen font-sans">
-            <div className="bg-noise" />
-            {children}
-            <Footer />
-            <CookieConsent />
-            <GoogleAnalyticsConditional />
-          </div>
+          <MotionProvider>
+            <div className="bg-near-black text-white min-h-screen font-sans">
+              <div className="bg-noise" />
+              {children}
+              <Footer />
+              <CookieConsent />
+              <GoogleAnalyticsConditional />
+            </div>
+          </MotionProvider>
         </NextIntlClientProvider>
         <script
           type="application/ld+json"

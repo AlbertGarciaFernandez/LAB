@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const projectTypes = [
     "Web App / Product",
@@ -56,7 +56,7 @@ export const ContactForm: React.FC = () => {
 
     if (formState === "success") {
         return (
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="w-full max-w-2xl mx-auto p-12 rounded-2xl bg-surface-dark border border-hunter-green/30 text-center"
@@ -74,7 +74,7 @@ export const ContactForm: React.FC = () => {
                 >
                     Send another message
                 </button>
-            </motion.div>
+            </m.div>
         );
     }
 
@@ -83,9 +83,9 @@ export const ContactForm: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-16">
                 {/* Project Type Selection - Minimal Chips */}
                 <div className="space-y-6 text-center">
-                    <label className="text-sm font-mono uppercase tracking-widest text-hunter-green">
+                    <p className="text-sm font-mono uppercase tracking-widest text-hunter-green">
                         01 / Select Protocol
-                    </label>
+                    </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         {projectTypes.map((type) => (
                             <button
@@ -106,9 +106,9 @@ export const ContactForm: React.FC = () => {
                 {/* Inputs - Minimal Bottom Border */}
                 <div className="space-y-12">
                     <div className="text-center">
-                        <label className="text-sm font-mono uppercase tracking-widest text-hunter-green">
+                        <p className="text-sm font-mono uppercase tracking-widest text-hunter-green">
                             02 / Input Data
-                        </label>
+                        </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12">
@@ -279,7 +279,7 @@ export const ContactForm: React.FC = () => {
 
                 {/* Submit Button */}
                 <div className="flex justify-center pt-8">
-                    <motion.button
+                    <m.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         type="submit"
@@ -292,7 +292,7 @@ export const ContactForm: React.FC = () => {
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             )}
                         </span>
-                    </motion.button>
+                    </m.button>
                 </div>
 
                 {formState === "error" && (

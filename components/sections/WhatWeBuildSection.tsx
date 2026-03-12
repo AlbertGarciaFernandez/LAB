@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "@/navigation";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
     RobotIcon,
@@ -55,7 +55,7 @@ const WhatWeBuildSection: React.FC = () => {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
-                <motion.div
+                <m.div
                     className="text-center mb-14"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -72,10 +72,10 @@ const WhatWeBuildSection: React.FC = () => {
                     <p className="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
                         {t("subtitle")}
                     </p>
-                </motion.div>
+                </m.div>
 
                 {/* Service Cards */}
-                <motion.div
+                <m.div
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12"
                     variants={containerVariants}
                     initial="hidden"
@@ -86,7 +86,7 @@ const WhatWeBuildSection: React.FC = () => {
                         const Icon = serviceIcons[idx];
                         const href = serviceHrefs[idx];
                         return (
-                            <motion.div key={idx} variants={cardVariants} className="h-full">
+                            <m.div key={service.title} variants={cardVariants} className="h-full">
                                 <Link
                                     href={href}
                                     className="group flex flex-col gap-4 p-6 rounded-2xl bg-surface-dark/50 border border-white/5 hover:border-hunter-green/30 hover:bg-surface-dark/80 transition-all duration-300 h-full"
@@ -115,13 +115,13 @@ const WhatWeBuildSection: React.FC = () => {
                                         />
                                     </div>
                                 </Link>
-                            </motion.div>
+                            </m.div>
                         );
                     })}
-                </motion.div>
+                </m.div>
 
                 {/* Bottom CTA */}
-                <motion.div
+                <m.div
                     className="text-center"
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -136,7 +136,7 @@ const WhatWeBuildSection: React.FC = () => {
                         <span className="relative z-10">{t("cta")}</span>
                         <ArrowRightIcon className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </Link>
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

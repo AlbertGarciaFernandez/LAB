@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "@/navigation";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
     CurrencyCircleDollarIcon,
@@ -51,7 +51,7 @@ const IndustriesSection: React.FC = () => {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
-                <motion.div
+                <m.div
                     className="text-center mb-14"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -68,10 +68,10 @@ const IndustriesSection: React.FC = () => {
                     <p className="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
                         {t("subtitle")}
                     </p>
-                </motion.div>
+                </m.div>
 
                 {/* Industry Cards */}
-                <motion.div
+                <m.div
                     className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
                     variants={containerVariants}
                     initial="hidden"
@@ -83,7 +83,7 @@ const IndustriesSection: React.FC = () => {
                         const href = industryHrefs[idx];
                         const accent = accentColors[idx];
                         return (
-                            <motion.div key={idx} variants={cardVariants}>
+                            <m.div key={industry.title} variants={cardVariants}>
                                 <Link
                                     href={href}
                                     className={`group relative flex flex-col gap-5 p-8 rounded-2xl bg-surface-dark/40 border border-white/5 ${accent.hover} hover:bg-surface-dark/70 transition-all duration-300 h-full overflow-hidden`}
@@ -111,13 +111,13 @@ const IndustriesSection: React.FC = () => {
                                         />
                                     </div>
                                 </Link>
-                            </motion.div>
+                            </m.div>
                         );
                     })}
-                </motion.div>
+                </m.div>
 
                 {/* View all */}
-                <motion.div
+                <m.div
                     className="text-center"
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ const IndustriesSection: React.FC = () => {
                         {t("viewAll")}
                         <ArrowRightIcon size={14} />
                     </Link>
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

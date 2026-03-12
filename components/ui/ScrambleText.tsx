@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useReducer } from "react";
+import { m } from "framer-motion";
 
 const CHARS = "-_~`!@#$%^&*()+=[]{}|;:,.<>?/";
 
@@ -16,19 +16,17 @@ export const ScrambleText: React.FC<ScrambleTextProps> = ({
     className,
     delay = 0,
 }) => {
-    const [displayText, setDisplayText] = useState("");
-    const [isScrambling, setIsScrambling] = useState(true);
+    const [displayText, updateText] = useReducer((_: string, next: string) => next, "");
 
     useEffect(() => {
         let timeoutId: NodeJS.Timeout;
         let intervalId: NodeJS.Timeout;
 
-        // Start delay
         timeoutId = setTimeout(() => {
             let iteration = 0;
 
             intervalId = setInterval(() => {
-                setDisplayText((prev) =>
+                updateText(
                     text
                         .split("")
                         .map((letter, index) => {
@@ -41,7 +39,6 @@ export const ScrambleText: React.FC<ScrambleTextProps> = ({
                 );
 
                 if (iteration >= text.length) {
-                    setIsScrambling(false);
                     clearInterval(intervalId);
                 }
 
@@ -56,12 +53,12 @@ export const ScrambleText: React.FC<ScrambleTextProps> = ({
     }, [text, delay]);
 
     return (
-        <motion.span
+        <m.span
             className={className}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
         >
             {displayText}
-        </motion.span>
+        </m.span>
     );
 };

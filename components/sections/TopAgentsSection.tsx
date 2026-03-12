@@ -2,9 +2,9 @@
 
 import React from "react";
 import { Link } from "@/navigation";
-import { motion, useAnimation } from "framer-motion";
+import { m, useAnimation } from "framer-motion";
 import { LightningIcon, PulseIcon, ChartBarIcon, ArrowRightIcon, CheckCircleIcon, SparkleIcon, CaretRightIcon, WarningOctagonIcon, CheckIcon } from "@phosphor-icons/react/dist/ssr";
-import { useState, useEffect } from "react";
+import { useReducer, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 const containerVariants = {
@@ -22,34 +22,44 @@ const itemVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
+type TypingState = { wordIndex: number; text: string; deleting: boolean };
+type TypingAction =
+    | { type: "START_DELETE" }
+    | { type: "NEXT_WORD"; length: number }
+    | { type: "UPDATE_TEXT"; value: string };
+
+function typingReducer(state: TypingState, action: TypingAction): TypingState {
+    switch (action.type) {
+        case "START_DELETE": return { ...state, deleting: true };
+        case "NEXT_WORD": return { wordIndex: (state.wordIndex + 1) % action.length, text: "", deleting: false };
+        case "UPDATE_TEXT": return { ...state, text: action.value };
+    }
+}
+
 const TypingEffect = ({ words }: { words: string[] }) => {
-    const [currentWordIndex, setCurrentWordIndex] = useState(0);
-    const [currentText, setCurrentText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
+    const [state, dispatch] = useReducer(typingReducer, { wordIndex: 0, text: "", deleting: false });
+    const { wordIndex, text, deleting } = state;
 
     useEffect(() => {
-        const typeSpeed = isDeleting ? 50 : 100;
-        const word = words[currentWordIndex];
+        const word = words[wordIndex];
+        const typeSpeed = deleting ? 50 : 100;
 
         const timer = setTimeout(() => {
-            if (!isDeleting && currentText === word) {
-                setTimeout(() => setIsDeleting(true), 2000);
-            } else if (isDeleting && currentText === "") {
-                setIsDeleting(false);
-                setCurrentWordIndex((prev) => (prev + 1) % words.length);
+            if (!deleting && text === word) {
+                setTimeout(() => dispatch({ type: "START_DELETE" }), 2000);
+            } else if (deleting && text === "") {
+                dispatch({ type: "NEXT_WORD", length: words.length });
             } else {
-                setCurrentText(
-                    word.substring(0, currentText.length + (isDeleting ? -1 : 1))
-                );
+                dispatch({ type: "UPDATE_TEXT", value: word.substring(0, text.length + (deleting ? -1 : 1)) });
             }
         }, typeSpeed);
 
         return () => clearTimeout(timer);
-    }, [currentText, isDeleting, currentWordIndex, words]);
+    }, [text, deleting, wordIndex, words]);
 
     return (
         <span className="font-mono text-hunter-green">
-            {currentText}
+            {text}
             <span className="animate-pulse">|</span>
         </span>
     );
@@ -135,34 +145,34 @@ const TopAgentsSection: React.FC = () => {
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-hunter-orange/5 rounded-full blur-[100px] pointer-events-none -z-10" />
 
             {/* Header */}
-            <motion.div
+            <m.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={containerVariants}
                 className="text-center mb-24 max-w-4xl mx-auto"
             >
-                <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-[10px] font-bold tracking-[0.2em] uppercase backdrop-blur-md">
+                <m.div variants={itemVariants} className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-[10px] font-bold tracking-[0.2em] uppercase backdrop-blur-md">
                     <SparkleIcon size={12} className="text-hunter-green" />
                     {t("badge")}
-                </motion.div>
+                </m.div>
 
-                <motion.h2 variants={itemVariants} className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
+                <m.h2 variants={itemVariants} className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
                     {t("title")} <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-hunter-green via-white to-hunter-orange">
                         {t("highlight")}
                     </span>
-                </motion.h2>
+                </m.h2>
 
-                <motion.p variants={itemVariants} className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+                <m.p variants={itemVariants} className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
                     {t("description")}
-                </motion.p>
-            </motion.div>
+                </m.p>
+            </m.div>
 
             {/* Agents Showcase */}
             <div className="grid lg:grid-cols-3 gap-8 mb-32">
                 {agents.map((agent, i) => (
-                    <motion.div
+                    <m.div
                         key={agent.id}
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -183,13 +193,13 @@ const TopAgentsSection: React.FC = () => {
                                     <agent.icon size={28} className="relative z-10" />
                                 </div>
                                 <div className={`px-3 py-1 rounded-full border ${agent.border} ${agent.bg} backdrop-blur-md`}>
-                                    <motion.span
+                                    <m.span
                                         className={`text-[10px] font-bold tracking-widest uppercase ${agent.color} block`}
                                         animate={{ opacity: [0.7, 1, 0.7] }}
                                         transition={{ duration: 2, repeat: Infinity }}
                                     >
                                         {agent.role}
-                                    </motion.span>
+                                    </m.span>
                                 </div>
                             </div>
 
@@ -203,8 +213,8 @@ const TopAgentsSection: React.FC = () => {
 
                             {/* Capabilities List */}
                             <div className="space-y-3 mb-8 flex-grow">
-                                {agent.capabilities.map((cap, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 group/item">
+                                {agent.capabilities.map((cap) => (
+                                    <div key={cap} className="flex items-center gap-3 group/item">
                                         <CheckCircleIcon size={16} className={`shrink-0 ${agent.color} opacity-50 group-hover/item:opacity-100 transition-opacity`} />
                                         <span className="text-sm text-gray-400 group-hover/item:text-white transition-colors">{cap}</span>
                                     </div>
@@ -223,12 +233,12 @@ const TopAgentsSection: React.FC = () => {
                                 </Link>
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
                 ))}
             </div>
 
             {/* Problem / Solution Unified Section */}
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -261,8 +271,8 @@ const TopAgentsSection: React.FC = () => {
                             <p className="text-gray-500 text-sm mb-10">{t("bottleneck.subtitle")}</p>
 
                             <ul className="space-y-6">
-                                {["0", "1", "2", "3"].map((key, i) => (
-                                    <li key={i} className="flex items-center gap-4 text-gray-400 group-hover:text-red-200/80 transition-colors duration-300">
+                                {["0", "1", "2", "3"].map((key) => (
+                                    <li key={`bottleneck-${key}`} className="flex items-center gap-4 text-gray-400 group-hover:text-red-200/80 transition-colors duration-300">
                                         <div className="w-1.5 h-1.5 rounded-full bg-red-500/50" />
                                         {t(`bottleneck.list.${key}`)}
                                     </li>
@@ -292,7 +302,7 @@ const TopAgentsSection: React.FC = () => {
 
                             <ul className="space-y-6">
                                 {["0", "1", "2", "3"].map((key, i) => (
-                                    <li key={i} className="flex items-center gap-4 text-white font-medium" style={{ transitionDelay: `${i * 50}ms` }}>
+                                    <li key={`advantage-${key}`} className="flex items-center gap-4 text-white font-medium" style={{ transitionDelay: `${i * 50}ms` }}>
                                         <div className="w-5 h-5 rounded-full bg-hunter-green/20 flex items-center justify-center">
                                             <CheckCircleIcon size={12} className="text-hunter-green" />
                                         </div>
@@ -312,7 +322,7 @@ const TopAgentsSection: React.FC = () => {
                     </div>
                 </div>
                 {/* Workflow Diagram */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -333,17 +343,17 @@ const TopAgentsSection: React.FC = () => {
 
                         <div className="relative z-10">
                             <div className="flex gap-1">
-                                <motion.div
+                                <m.div
                                     className="w-2 h-2 rounded-full bg-white opacity-20"
                                     animate={{ opacity: [0.2, 1, 0.2], scale: [1, 1.2, 1] }}
                                     transition={{ duration: 1, repeat: Infinity, delay: 0 }}
                                 />
-                                <motion.div
+                                <m.div
                                     className="w-2 h-2 rounded-full bg-white opacity-20"
                                     animate={{ opacity: [0.2, 1, 0.2], scale: [1, 1.2, 1] }}
                                     transition={{ duration: 1, repeat: Infinity, delay: 0.3 }}
                                 />
-                                <motion.div
+                                <m.div
                                     className="w-2 h-2 rounded-full bg-white opacity-20"
                                     animate={{ opacity: [0.2, 1, 0.2], scale: [1, 1.2, 1] }}
                                     transition={{ duration: 1, repeat: Infinity, delay: 0.6 }}
@@ -358,17 +368,17 @@ const TopAgentsSection: React.FC = () => {
 
                         <div className="relative z-10">
                             <div className="flex gap-1">
-                                <motion.div
+                                <m.div
                                     className="w-2 h-2 rounded-full bg-white opacity-20"
                                     animate={{ opacity: [0.2, 1, 0.2], scale: [1, 1.2, 1] }}
                                     transition={{ duration: 1, repeat: Infinity, delay: 0 }}
                                 />
-                                <motion.div
+                                <m.div
                                     className="w-2 h-2 rounded-full bg-white opacity-20"
                                     animate={{ opacity: [0.2, 1, 0.2], scale: [1, 1.2, 1] }}
                                     transition={{ duration: 1, repeat: Infinity, delay: 0.3 }}
                                 />
-                                <motion.div
+                                <m.div
                                     className="w-2 h-2 rounded-full bg-white opacity-20"
                                     animate={{ opacity: [0.2, 1, 0.2], scale: [1, 1.2, 1] }}
                                     transition={{ duration: 1, repeat: Infinity, delay: 0.6 }}
@@ -387,8 +397,8 @@ const TopAgentsSection: React.FC = () => {
                         <span>{t("diagram.worksWith")}</span>
                         <TypingEffect words={["CRM", "EMAIL", "WHATSAPP", "SLACK", "INTERNAL TOOLS"]} />
                     </div>
-                </motion.div>
-            </motion.div>
+                </m.div>
+            </m.div>
 
 
 

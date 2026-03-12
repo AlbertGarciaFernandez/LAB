@@ -10,7 +10,7 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 import Header from "@/components/layout/Header";
 import ROICalculator from '@/components/sections/ROICalculator';
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import TopAgentsSection from "@/components/sections/TopAgentsSection";
 import AnimatedSection from "@/components/layout/AnimatedSection";
 
@@ -89,38 +89,38 @@ const AIConsultingPage = () => {
 
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
                         {/* LEFT COLUMN: HERO CONTENT */}
-                        <motion.div
+                        <m.div
                             initial="hidden"
                             animate="visible"
                             variants={containerVariants}
                         >
-                            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase">
+                            <m.div variants={itemVariants} className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-hunter-green/10 border border-hunter-green/20 text-hunter-green text-[10px] font-bold tracking-[0.2em] uppercase">
                                 <div className="w-2 h-2 rounded-full bg-hunter-green animate-pulse"></div>
                                 {t("Hero.badge")}
-                            </motion.div>
+                            </m.div>
 
-                            <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl xl:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
+                            <m.h1 variants={itemVariants} className="text-5xl md:text-7xl xl:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
                                 {t("Hero.title.part1")} <br /> {t("Hero.title.part2")} <br />
                                 <span className="text-hunter-green">
                                     {t("Hero.title.highlight")}
                                 </span>
-                            </motion.h1>
+                            </m.h1>
 
-                            <motion.p variants={itemVariants} className="text-xl text-gray-400 max-w-xl mb-10 leading-relaxed"
+                            <m.p variants={itemVariants} className="text-xl text-gray-400 max-w-xl mb-10 leading-relaxed"
                                 dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
                             />
 
-                            <motion.div variants={itemVariants}>
+                            <m.div variants={itemVariants}>
                                 <Link href="#roi-calculator" className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden inline-flex items-center gap-2">
                                     <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
                                     <span className="relative z-10">{t("Hero.cta")}</span>
                                     <ArrowRightIcon className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
                                 </Link>
-                            </motion.div>
-                        </motion.div>
+                            </m.div>
+                        </m.div>
 
                         {/* RIGHT COLUMN: WHY US CONTENT */}
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
@@ -141,8 +141,8 @@ const AIConsultingPage = () => {
                                     t("Hero.whyUs.list.0"),
                                     t("Hero.whyUs.list.1"),
                                     t("Hero.whyUs.list.2")
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-4 text-white/90 font-medium">
+                                ].map((item) => (
+                                    <li key={item} className="flex items-center gap-4 text-white/90 font-medium">
                                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-hunter-green/10 flex items-center justify-center border border-hunter-green/20">
                                             <CheckIcon className="text-hunter-green" size={14} />
                                         </div>
@@ -153,7 +153,7 @@ const AIConsultingPage = () => {
 
                             {/* Mini System Status Visual (Simplified) */}
                             <div className="pt-6">
-                                <motion.div
+                                <m.div
                                     className="group relative p-6 bg-surface-dark/40 border border-white/5 rounded-xl flex items-center justify-between overflow-hidden cursor-default transition-colors hover:bg-surface-dark/60"
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
@@ -180,9 +180,9 @@ const AIConsultingPage = () => {
                                         <div className="text-[10px] font-mono uppercase tracking-widest text-gray-500 mb-1 group-hover:text-gray-300 transition-colors">{t("Hero.whyUs.systemStatus.efficiencyLabel")}</div>
                                         <div className="text-xl font-black text-hunter-green group-hover:shadow-[0_0_20px_rgba(0,230,162,0.4)] transition-all">{t("Hero.whyUs.systemStatus.efficiencyValue")}</div>
                                     </div>
-                                </motion.div>
+                                </m.div>
                             </div>
-                        </motion.div>
+                        </m.div>
                     </div>
                 </section>
 
@@ -202,8 +202,8 @@ const AIConsultingPage = () => {
                                 </p>
                             </div>
                             <ul className="space-y-3 lg:pt-4">
-                                {(t.raw("WhoItsFor.items") as string[]).map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3">
+                                {(t.raw("WhoItsFor.items") as string[]).map((item) => (
+                                    <li key={item} className="flex items-start gap-3">
                                         <div className="flex-shrink-0 w-5 h-5 rounded-full bg-hunter-green/10 border border-hunter-green/20 flex items-center justify-center mt-0.5">
                                             <CheckIcon className="text-hunter-green" size={11} />
                                         </div>
@@ -232,8 +232,8 @@ const AIConsultingPage = () => {
                                 const icons = [RobotIcon, ArrowsClockwiseIcon, ShareNetworkIcon, SquaresFourIcon, BrainIcon];
                                 const Icon = icons[i];
                                 return (
-                                <motion.div
-                                    key={i}
+                                <m.div
+                                    key={title}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -255,7 +255,7 @@ const AIConsultingPage = () => {
                                             <ArrowRightIcon size={12} className="transition-transform group-hover:translate-x-1" />
                                         </div>
                                     </Link>
-                                </motion.div>
+                                </m.div>
                                 );
                             })}
                         </div>
@@ -287,8 +287,8 @@ const AIConsultingPage = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {(t.raw("UseCases.items") as { number: string; title: string; problem: string; solution: string; outcome: string }[]).map((uc, i) => (
-                                <motion.div
-                                    key={i}
+                                <m.div
+                                    key={uc.title}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -313,7 +313,7 @@ const AIConsultingPage = () => {
                                         <span className="text-[10px] font-bold uppercase tracking-widest text-hunter-orange">{t("UseCases.labels.outcome")}</span>
                                         <p className="mt-1 text-white text-sm font-medium leading-relaxed">{uc.outcome}</p>
                                     </div>
-                                </motion.div>
+                                </m.div>
                             ))}
                         </div>
                     </div>
@@ -339,7 +339,7 @@ const AIConsultingPage = () => {
                         <div className="relative">
                             {/* Connector Line (Desktop) */}
                             <div className="hidden lg:block absolute top-1/2 left-0 w-full h-px bg-white/10 -translate-y-1/2 z-0">
-                                <motion.div
+                                <m.div
                                     animate={{ width: ["0%", "100%"], opacity: [0, 1, 0] }}
                                     transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                                     className="h-full bg-gradient-to-r from-transparent via-hunter-green to-transparent w-1/2"
@@ -348,7 +348,7 @@ const AIConsultingPage = () => {
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
                                 {/* STEP 1: LEGACY */}
-                                <motion.div
+                                <m.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     className="group relative p-8 rounded-3xl border border-white/5 bg-near-black/80 backdrop-blur-md flex flex-col items-center text-center hover:border-white/10 transition-colors"
@@ -365,11 +365,11 @@ const AIConsultingPage = () => {
                                     <div className="mt-auto px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-bold uppercase tracking-widest">
                                         {t("Migration.legacy.tag")}
                                     </div>
-                                </motion.div>
+                                </m.div>
 
 
                                 {/* STEP 2: OPTIMIZED (Highlight) */}
-                                <motion.div
+                                <m.div
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: 0.2 }}
@@ -397,11 +397,11 @@ const AIConsultingPage = () => {
                                             <span>{t("Migration.optimized.costValue")}</span>
                                         </div>
                                     </div>
-                                </motion.div>
+                                </m.div>
 
 
                                 {/* STEP 3: ACTION */}
-                                <motion.div
+                                <m.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.4 }}
@@ -424,7 +424,7 @@ const AIConsultingPage = () => {
                                             {t("Migration.action.cta2")}
                                         </a>
                                     </div>
-                                </motion.div>
+                                </m.div>
                             </div>
                         </div>
                     </div>
@@ -451,8 +451,8 @@ const AIConsultingPage = () => {
                                 const icons = [PlugsConnectedIcon, CheckIcon, LightningIcon, ShieldCheckIcon, ArrowsClockwiseIcon, BrainIcon];
                                 const Icon = icons[i];
                                 return (
-                                <motion.div
-                                    key={i}
+                                <m.div
+                                    key={title}
                                     initial={{ opacity: 0, y: 16 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -466,7 +466,7 @@ const AIConsultingPage = () => {
                                         <h3 className="text-white font-bold text-sm mb-1.5">{title}</h3>
                                         <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
                                     </div>
-                                </motion.div>
+                                </m.div>
                                 );
                             })}
                         </div>
@@ -488,7 +488,7 @@ const AIConsultingPage = () => {
                         <div className="space-y-2">
                             {faqs.map((faq, i) => (
                                 <div
-                                    key={i}
+                                    key={faq.q}
                                     className="border border-white/5 rounded-xl overflow-hidden bg-near-black/60 hover:border-white/10 transition-colors"
                                 >
                                     <button
@@ -504,7 +504,7 @@ const AIConsultingPage = () => {
                                             size={18}
                                         />
                                     </button>
-                                    <motion.div
+                                    <m.div
                                         initial={false}
                                         animate={openFaq === i ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
                                         transition={{ duration: 0.25, ease: "easeInOut" }}
@@ -513,7 +513,7 @@ const AIConsultingPage = () => {
                                         <p className="px-6 pb-5 text-gray-400 text-sm leading-relaxed">
                                             {faq.a}
                                         </p>
-                                    </motion.div>
+                                    </m.div>
                                 </div>
                             ))}
                         </div>

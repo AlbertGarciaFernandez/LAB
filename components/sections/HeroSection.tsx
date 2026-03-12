@@ -4,7 +4,7 @@
 
 import React from "react";
 import { Link } from "@/navigation";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
 import { ScrambleText } from "../ui/ScrambleText";
@@ -36,23 +36,23 @@ const HeroSection: React.FC = () => {
     <section className="relative flex flex-col items-center justify-center min-h-[90vh] bg-near-black text-white px-4 py-20 overflow-hidden">
       <HeroBackgroundOrnaments />
       <div className="mx-auto max-w-6xl px-6 py-16 relative z-10">
-        <motion.div
+        <m.div
           className="text-center space-y-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Logo */}
-          <motion.div
+          <m.div
             className="flex justify-center mb-2"
             variants={itemVariants}
           >
-            <motion.div
+            <m.div
               className="relative"
               animate={{ scale: [1, 1.08, 1] }}
               transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
             >
-              <motion.div
+              <m.div
                 className="absolute -inset-3 bg-hunter-green/10 rounded-full blur-xl"
                 animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.15, 1] }}
                 transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
@@ -65,10 +65,10 @@ const HeroSection: React.FC = () => {
                 className="relative z-10 w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-[0_0_20px_rgba(0,230,162,0.5)]"
                 priority
               />
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             className="text-sm md:text-base uppercase tracking-widest text-hunter-orange font-mono mb-4"
             variants={itemVariants}
           >
@@ -79,9 +79,9 @@ const HeroSection: React.FC = () => {
               className="inline"
             />
             <span className="opacity-80">&nbsp;{"]"}</span>
-          </motion.div>
+          </m.div>
 
-          <motion.h1
+          <m.h1
             className="text-5xl md:text-8xl font-extrabold leading-none tracking-tighter"
             variants={itemVariants}
           >
@@ -94,16 +94,16 @@ const HeroSection: React.FC = () => {
               {t("title.highlight2")}
             </span>
             .
-          </motion.h1>
+          </m.h1>
 
-          <motion.p
+          <m.p
             className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto pt-6 leading-relaxed"
             variants={itemVariants}
           >
             {t("description")}
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             className="flex flex-col md:flex-row justify-center items-center gap-6 pt-10"
             variants={itemVariants}
           >
@@ -115,8 +115,8 @@ const HeroSection: React.FC = () => {
             <Link href="#work" className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)] inline-block">
               {t("cta.caseStudies")}
             </Link>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

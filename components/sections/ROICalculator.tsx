@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from "@/navigation";
 import { CalculatorIcon, WarningCircleIcon, ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 const ROICalculator = () => {
@@ -12,16 +12,9 @@ const ROICalculator = () => {
     const [hoursPerWeek, setHoursPerWeek] = useState(10);
     const [hourlyRate, setHourlyRate] = useState(65);
 
-    const [monthlySavings, setMonthlySavings] = useState(0);
-    const [annualSavings, setAnnualSavings] = useState(0);
-
-    useEffect(() => {
-        const weeklyCost = employees * hoursPerWeek * hourlyRate;
-        const monthly = weeklyCost * 4.33;
-        const annual = weeklyCost * 52;
-        setMonthlySavings(Math.round(monthly));
-        setAnnualSavings(Math.round(annual));
-    }, [employees, hoursPerWeek, hourlyRate]);
+    const weeklyCost = employees * hoursPerWeek * hourlyRate;
+    const monthlySavings = Math.round(weeklyCost * 4.33);
+    const annualSavings = Math.round(weeklyCost * 52);
 
     const formatCurrency = (value: number) => {
         return new Intl.NumberFormat('en-NL', {
@@ -53,7 +46,7 @@ const ROICalculator = () => {
                         {t("description")}
                     </p>
 
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -69,11 +62,11 @@ const ROICalculator = () => {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
 
                 {/* Lado Derecho: La Calculadora */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -145,7 +138,7 @@ const ROICalculator = () => {
                             <ArrowRightIcon size={18} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

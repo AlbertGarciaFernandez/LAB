@@ -11,7 +11,7 @@ import {
   ChartLineUpIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import {
-  motion,
+  m,
   useMotionValue,
   useSpring,
   useTransform,
@@ -83,7 +83,7 @@ function TiltCard({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       variants={cardVariants}
       style={{ rotateX, rotateY, transformPerspective: 900 }}
@@ -100,7 +100,7 @@ function TiltCard({ children }: { children: React.ReactNode }) {
       <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-hunter-orange/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -115,17 +115,17 @@ const QuickWinsSection: React.FC = () => {
     >
       {/* Floating ambient orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div
+        <m.div
           className="absolute -top-40 left-1/3 w-[700px] h-[700px] rounded-full bg-hunter-orange/[0.04] blur-[140px]"
           animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6], x: [0, 50, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div
+        <m.div
           className="absolute -bottom-40 right-1/4 w-[550px] h-[550px] rounded-full bg-hunter-green/[0.04] blur-[120px]"
           animate={{ scale: [1.1, 1, 1.1], opacity: [0.5, 0.9, 0.5], x: [0, -40, 0] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         />
-        <motion.div
+        <m.div
           className="absolute top-1/2 -right-20 w-[300px] h-[300px] rounded-full bg-hunter-orange/[0.03] blur-[80px]"
           animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.7, 0.3] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -134,14 +134,14 @@ const QuickWinsSection: React.FC = () => {
 
       <div className="mx-auto max-w-7xl relative z-10">
         {/* Header */}
-        <motion.div
+        <m.div
           className="text-center mb-10"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
-          <motion.div
+          <m.div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-hunter-orange/10 border border-hunter-orange/20 text-hunter-orange text-[10px] font-bold tracking-widest uppercase mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -149,7 +149,7 @@ const QuickWinsSection: React.FC = () => {
             transition={{ duration: 0.4, delay: 0.1 }}
           >
             {t("badge")}
-          </motion.div>
+          </m.div>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95]">
             {t("title")}{" "}
             <span className="text-hunter-orange">{t("highlight")}</span>
@@ -157,10 +157,10 @@ const QuickWinsSection: React.FC = () => {
           <p className="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
             {t("subtitle")}
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Stats strip */}
-        <motion.div
+        <m.div
           className="flex items-center justify-center gap-10 md:gap-20 mb-12"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -168,8 +168,8 @@ const QuickWinsSection: React.FC = () => {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.25 }}
         >
           {stats.map((stat, i) => (
-            <motion.div
-              key={i}
+            <m.div
+              key={stat.label}
               className="text-center"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -182,12 +182,12 @@ const QuickWinsSection: React.FC = () => {
               <div className="text-[10px] text-gray-500 uppercase tracking-widest mt-0.5">
                 {stat.label}
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* Divider */}
-        <motion.div
+        <m.div
           className="w-full h-px bg-gradient-to-r from-transparent via-white/8 to-transparent mb-12"
           initial={{ scaleX: 0, opacity: 0 }}
           whileInView={{ scaleX: 1, opacity: 1 }}
@@ -196,7 +196,7 @@ const QuickWinsSection: React.FC = () => {
         />
 
         {/* Cards Grid */}
-        <motion.div
+        <m.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
           variants={containerVariants}
           initial="hidden"
@@ -206,14 +206,14 @@ const QuickWinsSection: React.FC = () => {
           {cards.map((card, idx) => {
             const Icon = icons[idx];
             return (
-              <TiltCard key={idx}>
-                <motion.div
+              <TiltCard key={card.title}>
+                <m.div
                   className="flex-shrink-0 w-11 h-11 rounded-xl bg-hunter-orange/10 border border-hunter-orange/20 flex items-center justify-center text-hunter-orange"
                   whileHover={{ scale: 1.15, rotate: 6 }}
                   transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 >
                   <Icon size={22} />
-                </motion.div>
+                </m.div>
                 <div>
                   <h3 className="text-white font-bold text-base mb-1 tracking-tight">
                     {card.title}
@@ -225,7 +225,7 @@ const QuickWinsSection: React.FC = () => {
               </TiltCard>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

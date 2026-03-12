@@ -33,7 +33,7 @@ export default function Image() {
                         height: 600,
                         borderRadius: "50%",
                         background: "rgba(0, 255, 136, 0.10)",
-                        filter: "blur(100px)",
+                        filter: "blur(80px)",
                     }}
                 />
                 {/* Orange glow bottom-left */}

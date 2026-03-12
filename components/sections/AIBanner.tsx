@@ -61,8 +61,8 @@ const AIBanner = () => {
                 { title: t("cards.0.title"), desc: t("cards.0.desc"), icon: RobotIcon },
                 { title: t("cards.1.title"), desc: t("cards.1.desc"), icon: LightningIcon },
                 { title: t("cards.2.title"), desc: t("cards.2.desc"), icon: TrendUpIcon },
-              ].map((item, idx) => (
-                <div key={idx} className="group flex items-center gap-5 p-6 rounded-2xl bg-[#0F0F0F] border border-white/5 hover:border-[#00E6A0]/30 transition-all duration-300">
+              ].map((item) => (
+                <div key={item.title} className="group flex items-center gap-5 p-6 rounded-2xl bg-[#0F0F0F] border border-white/5 hover:border-[#00E6A0]/30 transition-all duration-300">
                   <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#131313] border border-white/5 flex items-center justify-center text-[#00E6A0] group-hover:bg-[#00E6A0]/10 group-hover:border-[#00E6A0]/20 transition-all duration-300">
                     <item.icon size={26} />
                   </div>

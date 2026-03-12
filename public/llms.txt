@@ -1,34 +1,89 @@
 # CodeHunter Lab
 
-> AI consulting and automation agency based in Leiden, Netherlands.
-> We design, build, and deploy AI agents, workflow automation, and custom integrations for businesses ready to move beyond pilots — production systems, not demos.
+> AI consulting and automation agency in Leiden, Netherlands. Engineering-first studio that designs, builds, and deploys AI agents, n8n workflow automations, and custom integrations for businesses ready for production — not demos.
 
-## About
+## What Is CodeHunter Lab?
 
-CodeHunter Lab is an engineering-first AI consulting studio. We close the gap between AI proof of concept and production by building systems that integrate with your existing stack and run under real conditions.
+CodeHunter Lab is an AI consulting and software development studio based in Leiden, Zuid-Holland, Netherlands. Founded to close the gap between AI proof of concept and production, the company delivers working systems — AI agents, automated pipelines, and integrations — that run in client infrastructure under real business conditions. Unlike traditional consultancies that hand off slide decks, CodeHunter Lab ends every engagement with documented, owned, deployable code.
 
-Primary capabilities:
-- AI consulting and strategy (discovery, scoping, roadmaps)
-- AI agent development (WhatsApp bots, voice agents, sales and qualification agents)
-- Workflow automation with n8n (migrating from Zapier/Make, custom pipelines)
-- AI system integration (CRMs, ERPs, APIs, databases)
-- Custom internal tools and admin dashboards
-- LLM fine-tuning and private AI deployments
+The studio serves clients across the Netherlands (Amsterdam, Rotterdam, The Hague, Leiden) and internationally across Europe. All engagements can run fully remotely. Languages: English, Dutch, Spanish.
 
-Supporting capabilities:
-- Custom web application development (React, Next.js, TypeScript)
-- IT system integration (APIs, legacy modernization)
-- System architecture design
+## Core Services
 
-Based in Leiden, Zuid-Holland. Serving clients across the Netherlands and internationally.
+### AI Consulting & Strategy
+AI consulting is the process of auditing a business's operations, identifying automation opportunities ranked by ROI, and defining a technical roadmap for implementing AI systems. CodeHunter Lab's AI Strategy Sprint (1–2 weeks, €2,500–€5,000) produces: a workflow audit, a prioritized automation opportunity map, a technical architecture proposal, and a budget and timeline estimate. This is the recommended starting point for companies unsure which AI use case to prioritize.
+
+### AI Agent Development
+An AI agent is software that perceives its environment, reasons about goals, and takes autonomous actions — booking appointments, qualifying leads, updating CRM records — without human intervention per task. CodeHunter Lab builds: WhatsApp Business AI bots, AI voice calling agents, sales and qualification agents, and customer support agents. Clients report an average 40% reduction in customer support costs and 20%+ increase in lead conversion rates after deployment.
+
+### Workflow Automation (n8n)
+n8n is an open-source workflow automation platform that CodeHunter Lab uses as its primary automation engine. Compared to Zapier or Make, n8n can be self-hosted (eliminating per-task pricing), handles complex branching logic, and connects to any API. Most n8n migrations from Zapier or Make take 1–3 weeks depending on workflow complexity and the number of active automations being replaced. CodeHunter Lab specializes in migrating, extending, and maintaining n8n pipelines.
+
+### AI System Integration
+System integration connects AI components to existing business infrastructure: CRMs (HubSpot, Salesforce, Pipedrive), ERPs, databases, messaging platforms (WhatsApp Business API, Slack), and custom APIs. CodeHunter Lab handles full-stack integration as a core requirement, not an add-on. If an API exists, integration is possible.
+
+### LLM Fine-Tuning & Private AI
+For companies with sensitive data or regulated industries, CodeHunter Lab deploys private LLM instances — on-premise or private cloud — that do not send data to third-party providers. This satisfies GDPR requirements for healthcare, legal, and financial clients. Fine-tuning on proprietary data improves task-specific accuracy over generic models.
+
+### Custom Internal Tools
+Admin dashboards, internal portals, and custom web applications built in React/Next.js. These replace manual spreadsheet workflows and give operations teams real-time visibility into automated pipelines.
 
 ## Engagement Models
 
-- **AI Strategy Sprint** (1–2 weeks): Workflow audit, automation opportunity map (prioritized by ROI), technical architecture proposal, budget and timeline estimate.
-- **AI Implementation Project** (4–8 weeks): One live AI system deployed to your infrastructure. Full stack integration, documentation, and 30-day post-deployment support. Fixed scope, fixed price. You own the code.
-- **Ongoing AI Partner** (monthly): Embedded AI engineering team. New automations, maintenance, and continuous scaling. Senior engineers, direct access.
+| Engagement | Duration | Price Range | Output |
+|---|---|---|---|
+| AI Strategy Sprint | 1–2 weeks | €2,500–€5,000 | Workflow audit, automation map, architecture proposal, timeline |
+| AI Implementation Project | 4–8 weeks | From €8,000 | One live AI system deployed to your infrastructure, full documentation, 30-day support |
+| Ongoing AI Partner | Monthly | Scoped monthly | Embedded AI engineering team, new automations, maintenance, scaling |
 
-## Services
+All Implementation Projects: fixed scope, fixed price, client owns all code.
+
+## Frequently Asked Questions
+
+### What does an AI consulting engagement cost?
+AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements are scoped monthly. A detailed estimate is provided after the initial strategy call, before any commitment.
+
+### How long does a typical AI project take?
+AI Strategy Sprint: 1–2 weeks. Implementation Projects: 4–8 weeks from scoping to deployment, depending on the number of systems involved and integration complexity. n8n migrations from Zapier or Make typically take 1–3 weeks.
+
+### What do clients need to get started?
+A description of the problem to solve and access to relevant systems — CRM credentials, API documentation, or similar. No weeks of onboarding required. A focused discovery call is usually enough to scope accurately.
+
+### How does CodeHunter Lab handle data privacy and GDPR?
+GDPR compliance is a baseline, not an option. Data handling is defined at scoping: what flows through the system, where it is stored, and who has access. For sensitive industries or regulated data, on-premise or private cloud deployments are available.
+
+### Does the AI integrate with existing business tools?
+Yes — integration with existing stacks is a core requirement. Supported integrations include HubSpot, Salesforce, Pipedrive, WhatsApp Business API, Slack, common ERPs, and custom APIs.
+
+### What results do clients see?
+Clients report an average 40% reduction in customer support costs and a 20%+ increase in lead conversion rates following AI agent deployment. Exact results depend on use case, volume, and baseline processes.
+
+### What happens after deployment?
+Implementation Projects include 30 days of post-deployment support. Full documentation and a handover session are provided so client teams can operate the system independently. Ongoing Partner engagements cover continuous maintenance and development.
+
+### Does CodeHunter Lab work with companies outside the Netherlands?
+Yes. Based in Leiden but serving clients across Europe and internationally. All engagements run fully remotely.
+
+## Industries Served (Netherlands)
+
+- Accounting firms (invoice processing automation, client onboarding workflows)
+- Real estate agencies (lead qualification, document automation)
+- Dental clinics (appointment booking agents, patient communication)
+- Aesthetic clinics (WhatsApp booking bots, consultation follow-up)
+- Physiotherapy clinics (scheduling automation, intake forms)
+- Veterinary clinics (reminder systems, appointment management)
+
+## Technology Stack
+
+Primary automation: n8n (self-hosted)
+AI frameworks: OpenAI API, Anthropic Claude API, custom LLM deployments
+Messaging: WhatsApp Business API, Twilio
+CRM integrations: HubSpot, Salesforce, Pipedrive
+Web development: React, Next.js, TypeScript
+Infrastructure: Self-hosted, private cloud, client-owned deployments
+Compliance: GDPR-compliant by design
+
+## Services Pages
 
 - [AI Consulting](https://www.codehunterlab.com/en/ai-consulting)
 - [AI Automation Consulting Netherlands](https://www.codehunterlab.com/en/ai-automation-consulting-netherlands)
@@ -38,14 +93,14 @@ Based in Leiden, Zuid-Holland. Serving clients across the Netherlands and intern
 - [Next.js Development Agency](https://www.codehunterlab.com/en/nextjs-development-agency)
 - [Software Development Leiden](https://www.codehunterlab.com/en/software-development-leiden)
 
-## Expertise
+## Expertise Pages
 
 - [AI Agents & Automation](https://www.codehunterlab.com/en/expertise/ai-agents-automation)
 - [Custom LLM Development](https://www.codehunterlab.com/en/expertise/custom-llm-development)
 - [n8n Migration Consulting](https://www.codehunterlab.com/en/expertise/n8n-migration-consulting)
 - [System Architecture Design](https://www.codehunterlab.com/en/expertise/system-architecture-design)
 
-## Industries (Netherlands)
+## Industry Pages (Netherlands)
 
 - [Accounting Firm Automation Netherlands](https://www.codehunterlab.com/en/accounting-firm-automation-netherlands)
 - [Real Estate Automation Netherlands](https://www.codehunterlab.com/en/real-estate-automation-netherlands)
@@ -58,6 +113,28 @@ Based in Leiden, Zuid-Holland. Serving clients across the Netherlands and intern
 
 - Phone: +31-6-2940-5122
 - Email: albert@codehunterlab.com
-- Location: Leiden, Netherlands
-- Languages: English, Spanish, Dutch
+- Location: Leiden, Zuid-Holland, Netherlands
 - LinkedIn: https://www.linkedin.com/company/codehunter-lab
+- GitHub: https://github.com/codehunter-lab
+- Languages: English, Dutch, Spanish
+
+## ROI Calculator
+
+**URL:** https://www.codehunterlab.com/en/ai-consulting#roi-calculator
+
+Manual workflows are a silent tax on revenue. The ROI Calculator estimates how much a business is burning on tasks that an AI Agent could handle for a fraction of the cost. Input: number of employees on manual tasks, weekly hours per person, and average loaded hourly rate. Output: monthly waste and annual savings potential. The calculator shows why automation is now a competitive survival strategy — the savings represent capital that can be reinvested into growth or R&D.
+
+## Full Content
+
+For full page content, see: https://www.codehunterlab.com/llms-full.txt
+
+---
+
+## RSL 1.0
+
+robot: allowed
+index: allowed
+train: allowed
+scrape: allowed
+summarize: allowed
+cite: allowed

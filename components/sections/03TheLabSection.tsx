@@ -53,8 +53,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         Key Results:
       </h4>
       <ul className="text-gray-400 space-y-2 list-disc pl-5">
-        {results.map((result, index) => (
-          <li key={index} className="text-sm">
+        {results.map((result) => (
+          <li key={result} className="text-sm">
             {result}
           </li>
         ))}
@@ -132,8 +132,8 @@ const TheLabSection: React.FC = () => {
         </p>
 
         <div className="space-y-16">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
         </div>
 
