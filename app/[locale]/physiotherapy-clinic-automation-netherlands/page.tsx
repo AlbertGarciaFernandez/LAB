@@ -11,8 +11,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Physiotherapy Automation Netherlands — CodeHunter Lab",
-        description: "Automate referral intake, appointment scheduling, patient drop-out detection, and reporting for your physiotherapy practice in the Netherlands. Custom integrations built in Leiden.",
+        title: "Physiotherapy Automation Netherlands | Intake & Reminders",
+        description: "Automate physiotherapy referral intake, appointment reminders, patient drop-out detection, and reporting for practices in the Netherlands.",
         keywords: [
             "physiotherapy clinic automation Netherlands",
             "fysiotherapie praktijk automatisering",
@@ -34,8 +34,8 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Physiotherapy Automation Netherlands — CodeHunter Lab",
-            description: "Custom automation and integration systems for physiotherapy practices in the Netherlands — referral intake, appointment reminders, drop-out detection, and practice analytics.",
+            title: "Physiotherapy Automation Netherlands | Intake & Reminders",
+            description: "Automate physiotherapy referral intake, appointment reminders, patient drop-out detection, and reporting for practices in the Netherlands.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
             type: "website",

@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import WhatWeBuildSection from "@/components/sections/WhatWeBuildSection";
 import AIBanner from "@/components/sections/AIBanner";
+import InsightsSection from "@/components/sections/InsightsSection";
 import ExpertiseSection from "@/components/sections/02ExpertiseSection";
 import QuickWinsSection from "@/components/sections/QuickWinsSection";
 import TheLabSection from "@/components/sections/03TheLabSection";
@@ -25,6 +26,7 @@ const Home = () => {
                 <HeroSection />
                 <WhatWeBuildSection />
                 <AIBanner />
+                <InsightsSection />
                 <ExpertiseSection />
                 <QuickWinsSection />
                 <TheLabSection />

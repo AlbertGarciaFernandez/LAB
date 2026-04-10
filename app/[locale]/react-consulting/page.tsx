@@ -11,8 +11,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "React Consulting Netherlands — CodeHunter Lab",
-        description: "Senior React consulting in the Netherlands. Codebase audits, architecture design, and React migrations. We join your team and fix the hard problems. Based in Leiden.",
+        title: "React Consulting Services Netherlands | Audit & Architecture",
+        description: "Senior React consulting services in the Netherlands: codebase audits, frontend architecture, performance fixes, migrations, and team support.",
         keywords: [
             "React consulting Netherlands",
             "React architecture consultant",
@@ -32,8 +32,8 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "React Consulting Netherlands — CodeHunter Lab",
-            description: "Senior React consulting in the Netherlands. Codebase audits, architecture design, and React migrations. We join your team and fix the hard problems. Based in Leiden.",
+            title: "React Consulting Services Netherlands | Audit & Architecture",
+            description: "Senior React consulting services in the Netherlands: codebase audits, frontend architecture, performance fixes, migrations, and team support.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
             type: "website",

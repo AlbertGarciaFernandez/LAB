@@ -24,6 +24,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = params;
   return {
+    metadataBase: new URL(baseUrl),
     icons: {
       icon: "/codehunter.logo.png",
       shortcut: "/codehunter.logo.png",

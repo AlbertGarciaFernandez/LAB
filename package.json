@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "test": "node --test tests/seo-insights.test.mjs",
     "start": "next start",
     "lint": "next lint"
   },

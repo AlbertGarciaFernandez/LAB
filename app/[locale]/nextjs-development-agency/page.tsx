@@ -11,8 +11,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = params;
     return {
-        title: "Next.js Development Agency Netherlands — CodeHunter Lab",
-        description: "Hire expert Next.js developers in the Netherlands. We build high-performance web apps with App Router, React Server Components, and TypeScript. Based in Leiden, serving Amsterdam & Rotterdam.",
+        title: "Next.js Development Agency Netherlands | App Router Experts",
+        description: "Hire a Next.js development agency in the Netherlands for App Router, React Server Components, TypeScript, migrations, and performance work.",
         keywords: [
             "Next.js development agency",
             "hire Next.js developer Netherlands",
@@ -32,8 +32,8 @@ export async function generateMetadata({
             },
         },
         openGraph: {
-            title: "Next.js Development Agency Netherlands — CodeHunter Lab",
-            description: "Hire expert Next.js developers in the Netherlands. We build high-performance web apps with App Router, React Server Components, and TypeScript. Based in Leiden.",
+            title: "Next.js Development Agency Netherlands | App Router Experts",
+            description: "Hire a Next.js development agency in the Netherlands for App Router, React Server Components, TypeScript, migrations, and performance work.",
             url: `${baseUrl}/${locale}${path}`,
             siteName: "CodeHunter Lab",
             type: "website",

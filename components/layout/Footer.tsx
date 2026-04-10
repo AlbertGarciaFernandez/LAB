@@ -131,6 +131,10 @@ const Footer: React.FC = () => {
                             &copy; {currentYear} {t("Copyright.rights")}
                         </p>
                         <div className="flex items-center gap-3">
+                            <a href="/en/insights" className="text-[11px] font-bold text-hunter-green/80 uppercase tracking-widest hover:text-hunter-green transition-colors">
+                                Insights
+                            </a>
+                            <span className="text-gray-600">·</span>
                             <Link href="/software-development-leiden" className="text-[11px] font-bold text-hunter-green/80 uppercase tracking-widest hover:text-hunter-green transition-colors">
                                 {t("Copyright.locationLeiden")}
                             </Link>

@@ -290,6 +290,15 @@ const Header: React.FC = () => {
                   </li>
                 );
               })}
+              <li>
+                <a
+                  href="/en/insights"
+                  className="relative px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 block group hover:text-white"
+                >
+                  Insights
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-hunter-green rounded-full opacity-0 transition-all duration-300 shadow-[0_0_8px_rgba(0,230,162,0.8)] group-hover:opacity-100" />
+                </a>
+              </li>
             </ul>
           </nav>
 
@@ -448,6 +457,21 @@ const Header: React.FC = () => {
                   </Link>
                 </m.div>
               ))}
+
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.52 }}
+                className="w-full max-w-sm"
+              >
+                <a
+                  href="/en/insights"
+                  onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
+                  className="block w-full px-5 py-3 text-xl font-bold text-gray-400 hover:text-hunter-orange transition-colors rounded-xl"
+                >
+                  Insights
+                </a>
+              </m.div>
 
               {/* Divider */}
               <div className="w-full max-w-sm h-px bg-white/10 my-2" />

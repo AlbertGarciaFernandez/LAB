@@ -23,6 +23,22 @@ const routeMeta: Record<string, { lastModified: string; priority: number; change
     '/real-estate-automation-netherlands':                 { lastModified: '2026-02-26', priority: 0.9,  changeFrequency: 'weekly' },
 }
 
+const insightRoutes: Record<string, { lastModified: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }> = {
+    '/en/insights': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'weekly' },
+    '/en/insights/workflow-automation-agency-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/conversational-ai-consultant-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/n8n-consultant-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/dental-clinic-whatsapp-automation-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/ai-consultants-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/automation-consultancy-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/system-integrator-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/crm-integration-services-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/app-developer-leiden': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/accounting-automation-software-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/react-consulting-services': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+    '/en/insights/nextjs-consultancy-europe': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.codehunterlab.com'
     const sitemapEntries: MetadataRoute.Sitemap = []
@@ -35,6 +51,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 changeFrequency: meta.changeFrequency,
                 priority: meta.priority,
             })
+        })
+    })
+
+    Object.entries(insightRoutes).forEach(([route, meta]) => {
+        sitemapEntries.push({
+            url: `${baseUrl}${route}`,
+            lastModified: new Date(meta.lastModified),
+            changeFrequency: meta.changeFrequency,
+            priority: meta.priority,
         })
     })
 
