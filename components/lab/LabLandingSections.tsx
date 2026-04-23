@@ -60,8 +60,8 @@ export function LabHeroSection({ locale }: LabLandingSectionProps) {
   );
 }
 
-export function LabProblemSection() {
-  const { landing } = getLabData("en");
+export function LabProblemSection({ locale }: LabLandingSectionProps) {
+  const { landing } = getLabData(locale);
 
   return (
     <LabSection
@@ -82,8 +82,8 @@ export function LabProblemSection() {
   );
 }
 
-export function LabSolutionSection() {
-  const { landing } = getLabData("en");
+export function LabSolutionSection({ locale }: LabLandingSectionProps) {
+  const { landing } = getLabData(locale);
 
   return (
     <LabSection
@@ -119,8 +119,8 @@ export function LabSolutionSection() {
   );
 }
 
-export function LabHowItWorksSection() {
-  const { landing } = getLabData("en");
+export function LabHowItWorksSection({ locale }: LabLandingSectionProps) {
+  const { landing } = getLabData(locale);
 
   return (
     <LabSection
@@ -165,8 +165,8 @@ export function LabSystemsSection({ locale }: LabLandingSectionProps) {
   );
 }
 
-export function LabDifferentiationSection() {
-  const { landing } = getLabData("en");
+export function LabDifferentiationSection({ locale }: LabLandingSectionProps) {
+  const { landing } = getLabData(locale);
 
   return (
     <LabSection

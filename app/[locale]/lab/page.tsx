@@ -49,11 +49,11 @@ export default function LabPage({ params }: { params: { locale: string } }) {
   return (
     <main>
       <LabHeroSection locale={locale} />
-      <LabProblemSection />
-      <LabSolutionSection />
-      <LabHowItWorksSection />
+      <LabProblemSection locale={locale} />
+      <LabSolutionSection locale={locale} />
+      <LabHowItWorksSection locale={locale} />
       <LabSystemsSection locale={locale} />
-      <LabDifferentiationSection />
+      <LabDifferentiationSection locale={locale} />
       <LabCtaSection locale={locale} />
     </main>
   );
