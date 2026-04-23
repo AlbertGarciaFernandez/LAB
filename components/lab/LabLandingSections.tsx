@@ -16,27 +16,25 @@ export function LabHeroSection({ locale }: LabLandingSectionProps) {
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/45">
-            Paid Social Landing Surface
+            {data.landing.hero.eyebrow}
           </p>
           <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.06em] text-black sm:text-7xl">
-            Product systems for teams that need a clearer path from traffic to launch.
+            {data.landing.hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-black/65">
-            CodeHunter Lab packages the product strategy, operating structure, and system map
-            into one premium learning surface so teams can move from interest to execution
-            without losing momentum.
+            {data.landing.hero.description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <LabButton href={`/${locale}/lab#systems`}>View Systems</LabButton>
-            <LabButton href={`/${locale}/lab#preview`} variant="secondary">
-              Preview Platform
+            <LabButton href={`/${locale}/lab/app`}>{data.copy.ctaPrimary}</LabButton>
+            <LabButton href={`/${locale}/lab/app`} variant="secondary">
+              {data.copy.ctaSecondary}
             </LabButton>
           </div>
         </div>
 
         <LabCard className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f6f3_100%)]">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-black/45">
-            Current Lab Snapshot
+            {data.landing.snapshotLabel}
           </p>
           <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
             {data.user.overallProgressSummary}
@@ -63,20 +61,18 @@ export function LabHeroSection({ locale }: LabLandingSectionProps) {
 }
 
 export function LabProblemSection() {
+  const { landing } = getLabData("en");
+
   return (
     <LabSection
       id="problem"
-      eyebrow="The Problem"
-      title="Most teams do not need more ideas. They need a product surface that organizes what matters."
-      description="Paid social traffic drops into disconnected promises far too often. Lab is built to tighten the handoff between positioning, systems, and what a buyer can actually preview next."
+      eyebrow={landing.problem.eyebrow}
+      title={landing.problem.title}
+      description={landing.problem.description}
       className="border-t border-black/8"
     >
       <div className="grid gap-6 md:grid-cols-3">
-        {[
-          "Traffic lands on generic consulting pages instead of a product narrative.",
-          "Internal knowledge is scattered across notes, docs, and unfinished workflows.",
-          "Buyers struggle to see how strategy becomes an operational system they can adopt.",
-        ].map((item) => (
+        {landing.problem.items.map((item) => (
           <LabCard key={item}>
             <p className="text-lg leading-7 text-black/72">{item}</p>
           </LabCard>
@@ -87,33 +83,30 @@ export function LabProblemSection() {
 }
 
 export function LabSolutionSection() {
+  const { landing } = getLabData("en");
+
   return (
     <LabSection
-      eyebrow="The Solution"
-      title="Lab presents the platform as a product, not a vague services menu."
-      description="The landing page introduces the structure, shows the systems, and makes the next step obvious. The result is a clearer story for premium buyers and a reusable frame for future public surfaces."
+      eyebrow={landing.solution.eyebrow}
+      title={landing.solution.title}
+      description={landing.solution.description}
       className="bg-[#faf9f6]"
     >
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <LabCard>
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-black/45">
-            Product Framing
+            {landing.solution.framingEyebrow}
           </p>
           <p className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-black">
-            One page to understand the operating model, the systems, and the next action.
+            {landing.solution.framingTitle}
           </p>
           <p className="mt-4 text-base leading-7 text-black/65">
-            The public surface stays intentionally sparse: strong hierarchy, high-contrast
-            typography, and selective proof instead of crowded claims.
+            {landing.solution.framingDescription}
           </p>
         </LabCard>
         <LabCard>
           <div className="space-y-5">
-            {[
-              "Dedicated product navigation from day one",
-              "Clear CTA hierarchy for paid acquisition",
-              "Reusable section and card primitives for future growth",
-            ].map((item) => (
+            {landing.solution.benefits.map((item) => (
               <div key={item} className="flex gap-3 text-sm leading-6 text-black/68">
                 <span className="mt-2 h-2 w-2 rounded-full bg-black" />
                 <span>{item}</span>
@@ -127,31 +120,17 @@ export function LabSolutionSection() {
 }
 
 export function LabHowItWorksSection() {
+  const { landing } = getLabData("en");
+
   return (
     <LabSection
       id="how-it-works"
-      eyebrow="How It Works"
-      title="A simple path from first click to system-level understanding."
-      description="Each section carries a specific job: frame the problem, explain the product logic, surface the systems, and create a confident next click."
+      eyebrow={landing.howItWorks.eyebrow}
+      title={landing.howItWorks.title}
+      description={landing.howItWorks.description}
     >
       <div className="grid gap-6 md:grid-cols-3">
-        {[
-          {
-            step: "01",
-            title: "Frame the outcome",
-            body: "Lead with the promise of a guided platform instead of open-ended service exploration.",
-          },
-          {
-            step: "02",
-            title: "Show the systems",
-            body: "Use structured summaries from the Lab data source so the public surface reflects the product model.",
-          },
-          {
-            step: "03",
-            title: "Drive the next action",
-            body: "Keep the CTA hierarchy stable: View Systems first, Preview Platform second.",
-          },
-        ].map((item) => (
+        {landing.howItWorks.steps.map((item) => (
           <LabCard key={item.step}>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-black/45">
               Step {item.step}
@@ -173,9 +152,9 @@ export function LabSystemsSection({ locale }: LabLandingSectionProps) {
   return (
     <LabSection
       id="systems"
-      eyebrow="Systems"
-      title="The first three Lab systems are already mapped."
-      description="These summaries come directly from the Lab content contract so the marketing surface stays aligned with the product structure."
+      eyebrow={data.landing.systems.eyebrow}
+      title={data.landing.systems.title}
+      description={data.landing.systems.description}
       className="bg-[#faf9f6]"
       contentClassName="grid gap-6 lg:grid-cols-3"
     >
@@ -187,33 +166,29 @@ export function LabSystemsSection({ locale }: LabLandingSectionProps) {
 }
 
 export function LabDifferentiationSection() {
+  const { landing } = getLabData("en");
+
   return (
     <LabSection
       id="differentiation"
-      eyebrow="Why It Converts"
-      title="Clean enough for premium traffic. Structured enough to feel credible."
-      description="Lab differentiates itself by showing a real operating model instead of relying on broad AI agency language."
+      eyebrow={landing.differentiation.eyebrow}
+      title={landing.differentiation.title}
+      description={landing.differentiation.description}
     >
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <LabCard>
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-black/45">
-            What buyers feel
+            {landing.differentiation.cardEyebrow}
           </p>
           <p className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-black">
-            The product feels intentional, premium, and already in motion.
+            {landing.differentiation.cardTitle}
           </p>
           <p className="mt-4 text-base leading-7 text-black/65">
-            That matters for paid social traffic, where signal is weak and the first page has
-            to establish taste, confidence, and direction very quickly.
+            {landing.differentiation.cardDescription}
           </p>
         </LabCard>
         <div className="grid gap-6 sm:grid-cols-2">
-          {[
-            "White-first surface with restrained contrast",
-            "Dedicated Lab navigation rather than the broad site menu",
-            "CTA hierarchy that matches the product journey",
-            "Reusable components for future campaign pages",
-          ].map((item) => (
+          {landing.differentiation.points.map((item) => (
             <LabCard key={item} className="flex items-center">
               <p className="text-base leading-7 text-black/72">{item}</p>
             </LabCard>
@@ -225,34 +200,35 @@ export function LabDifferentiationSection() {
 }
 
 export function LabCtaSection({ locale }: LabLandingSectionProps) {
+  const data = getLabData(locale);
+
   return (
     <LabSection
       id="preview"
-      eyebrow="Next Step"
-      title="Explore the systems now, then preview the broader platform."
-      description="The landing stack is designed to keep the action clear without overwhelming the page."
+      eyebrow={data.landing.cta.eyebrow}
+      title={data.landing.cta.title}
+      description={data.landing.cta.description}
       className="border-t border-black/8"
     >
       <LabCard className="flex flex-col items-start justify-between gap-6 bg-black text-white sm:flex-row sm:items-center">
         <div className="max-w-2xl">
           <p className="text-3xl font-semibold tracking-[-0.04em]">
-            Start with the system map, then move deeper once the product logic clicks.
+            {data.landing.cta.cardTitle}
           </p>
           <p className="mt-4 text-base leading-7 text-white/72">
-            This keeps the first conversion lightweight while preserving a second path for
-            visitors who want more context before committing.
+            {data.landing.cta.cardDescription}
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:min-w-[220px]">
-          <LabButton href={`/${locale}/lab#systems`} className="bg-white text-black hover:bg-white/90">
-            View Systems
+          <LabButton href={`/${locale}/lab/app`} className="bg-white text-black hover:bg-white/90">
+            {data.copy.ctaPrimary}
           </LabButton>
           <LabButton
-            href={`/${locale}/lab#preview`}
+            href={`/${locale}/lab/app`}
             variant="secondary"
             className="border-white/15 bg-transparent text-white hover:border-white/30 hover:bg-white/10"
           >
-            Preview Platform
+            {data.copy.ctaSecondary}
           </LabButton>
         </div>
       </LabCard>

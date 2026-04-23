@@ -118,6 +118,8 @@ test("lab data helpers return localized content and rich runtime shapes", async 
 
   assert.equal(en.copy.ctaPrimary, "View Systems");
   assert.equal(en.copy.ctaSecondary, "Preview Platform");
+  assert.equal(en.landing.hero.eyebrow, "Paid Social Landing Surface");
+  assert.equal(en.landing.navItems[0].label, "Why Lab");
   assert.equal(en.user.overallProgressSummary, "3 systems, 5 resources, 1 path to launch.");
   assert.equal(en.resources[0].downloadLabel, "Download acquisition stack");
   assert.equal(en.systems[0].overview, "Start here to orient the lab and define the base strategy.");
@@ -138,6 +140,9 @@ test("lab landing page uses the dedicated public marketing stack", () => {
   const labLayout = readFileSync("app/[locale]/lab/layout.tsx", "utf8");
   const labPage = readFileSync("app/[locale]/lab/page.tsx", "utf8");
   const landingSections = readFileSync("components/lab/LabLandingSections.tsx", "utf8");
+  const labHeader = readFileSync("components/lab/LabHeader.tsx", "utf8");
+  const systemCard = readFileSync("components/lab/SystemCard.tsx", "utf8");
+  const labContent = readFileSync("content/lab.ts", "utf8");
   const localeLayout = readFileSync("app/[locale]/layout.tsx", "utf8");
   const footerGate = readFileSync("components/layout/LocaleFooterGate.tsx", "utf8");
 
@@ -149,6 +154,9 @@ test("lab landing page uses the dedicated public marketing stack", () => {
   assert.match(footerGate, /segment === "lab"/);
 
   assert.match(labPage, /generateMetadata/);
+  assert.match(labContent, /landing:/);
+  assert.match(labHeader, /getLabData/);
+  assert.match(landingSections, /getLabData/);
 
   for (const sectionName of [
     "LabHeroSection",
@@ -162,6 +170,7 @@ test("lab landing page uses the dedicated public marketing stack", () => {
     assert.match(labPage, new RegExp(sectionName));
   }
 
-  assert.match(landingSections, /View Systems/);
-  assert.match(landingSections, /Preview Platform/);
+  assert.match(labHeader, /\/\$\{locale\}\/lab\/app/);
+  assert.match(landingSections, /\/\$\{locale\}\/lab\/app/);
+  assert.match(systemCard, /\/\$\{locale\}\/lab\/app\/system\/\$\{system\.slug\}/);
 });

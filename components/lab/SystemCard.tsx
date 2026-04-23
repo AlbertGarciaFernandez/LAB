@@ -43,7 +43,7 @@ export default function SystemCard({ locale, system }: SystemCardProps) {
       </div>
 
       <Link
-        href={`/${locale}/lab/systems/${system.slug}`}
+        href={`/${locale}/lab/app/system/${system.slug}`}
         className="mt-8 inline-flex items-center text-sm font-medium text-black transition-opacity hover:opacity-70"
       >
         Explore system

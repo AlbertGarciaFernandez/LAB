@@ -40,6 +40,71 @@ export type LabResource = {
   downloadLabel: string;
 };
 
+export type LabLandingNavItem = {
+  label: string;
+  href: string;
+};
+
+export type LabLandingStep = {
+  step: string;
+  title: string;
+  body: string;
+};
+
+export type LabLanding = {
+  brandLabel: string;
+  brandName: string;
+  navItems: LabLandingNavItem[];
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  snapshotLabel: string;
+  problem: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: string[];
+  };
+  solution: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    framingEyebrow: string;
+    framingTitle: string;
+    framingDescription: string;
+    benefits: string[];
+  };
+  howItWorks: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    steps: LabLandingStep[];
+  };
+  systems: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  differentiation: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    cardEyebrow: string;
+    cardTitle: string;
+    cardDescription: string;
+    points: string[];
+  };
+  cta: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    cardTitle: string;
+    cardDescription: string;
+  };
+};
+
 type LabCopy = {
   ctaPrimary: string;
   ctaSecondary: string;
@@ -55,6 +120,7 @@ type LabUser = {
 type LabLocaleData = {
   locale: LabLocale;
   copy: LabCopy;
+  landing: LabLanding;
   user: LabUser;
   systems: LabSystem[];
   resources: LabResource[];
@@ -63,6 +129,104 @@ type LabLocaleData = {
 const baseLabCopy: LabCopy = {
   ctaPrimary: "View Systems",
   ctaSecondary: "Preview Platform",
+};
+
+const baseLabLanding: LabLanding = {
+  brandLabel: "CodeHunter",
+  brandName: "Lab",
+  navItems: [
+    { label: "Why Lab", href: "#problem" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Systems", href: "#systems" },
+    { label: "Proof", href: "#differentiation" },
+  ],
+  hero: {
+    eyebrow: "Paid Social Landing Surface",
+    title: "Product systems for teams that need a clearer path from traffic to launch.",
+    description:
+      "CodeHunter Lab packages the product strategy, operating structure, and system map into one premium learning surface so teams can move from interest to execution without losing momentum.",
+  },
+  snapshotLabel: "Current Lab Snapshot",
+  problem: {
+    eyebrow: "The Problem",
+    title: "Most teams do not need more ideas. They need a product surface that organizes what matters.",
+    description:
+      "Paid social traffic drops into disconnected promises far too often. Lab is built to tighten the handoff between positioning, systems, and what a buyer can actually preview next.",
+    items: [
+      "Traffic lands on generic consulting pages instead of a product narrative.",
+      "Internal knowledge is scattered across notes, docs, and unfinished workflows.",
+      "Buyers struggle to see how strategy becomes an operational system they can adopt.",
+    ],
+  },
+  solution: {
+    eyebrow: "The Solution",
+    title: "Lab presents the platform as a product, not a vague services menu.",
+    description:
+      "The landing page introduces the structure, shows the systems, and makes the next step obvious. The result is a clearer story for premium buyers and a reusable frame for future public surfaces.",
+    framingEyebrow: "Product Framing",
+    framingTitle: "One page to understand the operating model, the systems, and the next action.",
+    framingDescription:
+      "The public surface stays intentionally sparse: strong hierarchy, high-contrast typography, and selective proof instead of crowded claims.",
+    benefits: [
+      "Dedicated product navigation from day one",
+      "Clear CTA hierarchy for paid acquisition",
+      "Reusable section and card primitives for future growth",
+    ],
+  },
+  howItWorks: {
+    eyebrow: "How It Works",
+    title: "A simple path from first click to system-level understanding.",
+    description:
+      "Each section carries a specific job: frame the problem, explain the product logic, surface the systems, and create a confident next click.",
+    steps: [
+      {
+        step: "01",
+        title: "Frame the outcome",
+        body: "Lead with the promise of a guided platform instead of open-ended service exploration.",
+      },
+      {
+        step: "02",
+        title: "Show the systems",
+        body: "Use structured summaries from the Lab data source so the public surface reflects the product model.",
+      },
+      {
+        step: "03",
+        title: "Drive the next action",
+        body: "Keep the CTA hierarchy stable: View Systems first, Preview Platform second.",
+      },
+    ],
+  },
+  systems: {
+    eyebrow: "Systems",
+    title: "The first three Lab systems are already mapped.",
+    description:
+      "These summaries come directly from the Lab content contract so the marketing surface stays aligned with the product structure.",
+  },
+  differentiation: {
+    eyebrow: "Why It Converts",
+    title: "Clean enough for premium traffic. Structured enough to feel credible.",
+    description:
+      "Lab differentiates itself by showing a real operating model instead of relying on broad AI agency language.",
+    cardEyebrow: "What buyers feel",
+    cardTitle: "The product feels intentional, premium, and already in motion.",
+    cardDescription:
+      "That matters for paid social traffic, where signal is weak and the first page has to establish taste, confidence, and direction very quickly.",
+    points: [
+      "White-first surface with restrained contrast",
+      "Dedicated Lab navigation rather than the broad site menu",
+      "CTA hierarchy that matches the product journey",
+      "Reusable components for future campaign pages",
+    ],
+  },
+  cta: {
+    eyebrow: "Next Step",
+    title: "Explore the systems now, then preview the broader platform.",
+    description:
+      "The landing stack is designed to keep the action clear without overwhelming the page.",
+    cardTitle: "Start with the system map, then move deeper once the product logic clicks.",
+    cardDescription:
+      "This keeps the first conversion lightweight while preserving a second path for visitors who want more context before committing.",
+  },
 };
 
 const baseLabUser: LabUser = {
@@ -266,10 +430,37 @@ const baseLabResources: LabResource[] = [
   },
 ];
 
+function cloneLabLanding(landing: LabLanding): LabLanding {
+  return {
+    ...landing,
+    navItems: landing.navItems.map((item) => ({ ...item })),
+    hero: { ...landing.hero },
+    problem: {
+      ...landing.problem,
+      items: [...landing.problem.items],
+    },
+    solution: {
+      ...landing.solution,
+      benefits: [...landing.solution.benefits],
+    },
+    howItWorks: {
+      ...landing.howItWorks,
+      steps: landing.howItWorks.steps.map((step) => ({ ...step })),
+    },
+    systems: { ...landing.systems },
+    differentiation: {
+      ...landing.differentiation,
+      points: [...landing.differentiation.points],
+    },
+    cta: { ...landing.cta },
+  };
+}
+
 function cloneLabData(data: LabLocaleData): LabLocaleData {
   return {
     locale: data.locale,
     copy: { ...data.copy },
+    landing: cloneLabLanding(data.landing),
     user: { ...data.user },
     systems: data.systems.map((system) => ({
       ...system,
@@ -301,10 +492,12 @@ function buildLabLocaleData(locale: LabLocale): LabLocaleData {
     return {
       locale,
       copy: { ...baseLabCopy },
+      landing: cloneLabLanding(baseLabLanding),
       user: { ...baseLabUser },
       systems: cloneLabData({
         locale,
         copy: baseLabCopy,
+        landing: baseLabLanding,
         user: baseLabUser,
         systems: baseLabSystems,
         resources: baseLabResources,
@@ -312,6 +505,7 @@ function buildLabLocaleData(locale: LabLocale): LabLocaleData {
       resources: cloneLabData({
         locale,
         copy: baseLabCopy,
+        landing: baseLabLanding,
         user: baseLabUser,
         systems: baseLabSystems,
         resources: baseLabResources,
@@ -322,10 +516,12 @@ function buildLabLocaleData(locale: LabLocale): LabLocaleData {
   return {
     locale,
     copy: { ...baseLabCopy },
+    landing: cloneLabLanding(baseLabLanding),
     user: { ...baseLabUser },
     systems: cloneLabData({
       locale,
       copy: baseLabCopy,
+      landing: baseLabLanding,
       user: baseLabUser,
       systems: baseLabSystems,
       resources: baseLabResources,
@@ -333,6 +529,7 @@ function buildLabLocaleData(locale: LabLocale): LabLocaleData {
     resources: cloneLabData({
       locale,
       copy: baseLabCopy,
+      landing: baseLabLanding,
       user: baseLabUser,
       systems: baseLabSystems,
       resources: baseLabResources,
