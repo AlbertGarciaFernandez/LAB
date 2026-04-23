@@ -53,6 +53,7 @@ type LabUser = {
 };
 
 type LabLocaleData = {
+  locale: LabLocale;
   copy: LabCopy;
   user: LabUser;
   systems: LabSystem[];
@@ -267,6 +268,7 @@ const baseLabResources: LabResource[] = [
 
 function cloneLabData(data: LabLocaleData): LabLocaleData {
   return {
+    locale: data.locale,
     copy: { ...data.copy },
     user: { ...data.user },
     systems: data.systems.map((system) => ({
@@ -297,15 +299,18 @@ function normalizeLabLocale(locale: string): LabLocale {
 function buildLabLocaleData(locale: LabLocale): LabLocaleData {
   if (locale === "es") {
     return {
+      locale,
       copy: { ...baseLabCopy },
       user: { ...baseLabUser },
       systems: cloneLabData({
+        locale,
         copy: baseLabCopy,
         user: baseLabUser,
         systems: baseLabSystems,
         resources: baseLabResources,
       }).systems,
       resources: cloneLabData({
+        locale,
         copy: baseLabCopy,
         user: baseLabUser,
         systems: baseLabSystems,
@@ -315,15 +320,18 @@ function buildLabLocaleData(locale: LabLocale): LabLocaleData {
   }
 
   return {
+    locale,
     copy: { ...baseLabCopy },
     user: { ...baseLabUser },
     systems: cloneLabData({
+      locale,
       copy: baseLabCopy,
       user: baseLabUser,
       systems: baseLabSystems,
       resources: baseLabResources,
     }).systems,
     resources: cloneLabData({
+      locale,
       copy: baseLabCopy,
       user: baseLabUser,
       systems: baseLabSystems,

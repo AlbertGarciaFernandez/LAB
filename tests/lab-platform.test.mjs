@@ -22,15 +22,26 @@ test("lab data helpers return localized content and rich runtime shapes", async 
   const enA = lab.getLabData("en");
   const enB = lab.getLabData("en");
   const originalTitle = enB.systems[0].title;
+  const originalStepTitle = enB.systems[0].modules[0].lessons[0].steps[0].title;
+  const originalBullet = enB.systems[0].modules[0].lessons[0].example.bullets[0];
   enA.systems[0].title = "Mutated title";
+  enA.systems[0].modules[0].lessons[0].steps[0].title = "Mutated step";
+  enA.systems[0].modules[0].lessons[0].example.bullets[0] = "Mutated bullet";
 
   assert.equal(enB.systems[0].title, originalTitle);
+  assert.equal(enB.systems[0].modules[0].lessons[0].steps[0].title, originalStepTitle);
+  assert.equal(enB.systems[0].modules[0].lessons[0].example.bullets[0], originalBullet);
 
   const en = lab.getLabData("en");
   const es = lab.getLabData("es");
   const esEs = lab.getLabData("es-ES");
   const esMx = lab.getLabData("es_MX");
   const fallback = lab.getLabData("pt-BR");
+
+  assert.equal(en.locale, "en");
+  assert.equal(es.locale, "es");
+  assert.equal(esEs.locale, "es");
+  assert.equal(fallback.locale, "en");
 
   assert.equal(en.systems.length, 3);
   assert.equal(en.resources.length, 5);
