@@ -195,6 +195,27 @@ test("lab workspace shell is noindex and exposes the core navigation", () => {
   assert.match(appPage, /Next recommended step/);
 });
 
+test("lab resources and settings routes expose the workspace support surfaces", () => {
+  const resourcesPage = readFileSync("app/[locale]/lab/app/resources/page.tsx", "utf8");
+  const settingsPage = readFileSync("app/[locale]/lab/app/settings/page.tsx", "utf8");
+
+  for (const category of ["Acquisition", "Content", "Reporting", "Operations", "Security"]) {
+    assert.match(resourcesPage, new RegExp(category));
+  }
+
+  assert.match(settingsPage, /Workspace preferences/);
+});
+
+test("lab crawler controls keep the app private while preserving the public lab landing", () => {
+  const robots = readFileSync("app/robots.ts", "utf8");
+  const sitemap = readFileSync("app/sitemap.ts", "utf8");
+
+  assert.match(robots, /\/en\/lab\/app/);
+  assert.match(robots, /\/es\/lab\/app/);
+  assert.match(sitemap, /\/lab/);
+  assert.doesNotMatch(sitemap, /\/lab\/app/);
+});
+
 test("lab system and lesson templates wire the content helpers into the app routes", () => {
   const systemPage = readFileSync("app/[locale]/lab/app/system/[systemSlug]/page.tsx", "utf8");
   const lessonPage = readFileSync("app/[locale]/lab/app/system/[systemSlug]/lesson/[lessonSlug]/page.tsx", "utf8");

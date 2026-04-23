@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing'
 // Last modified dates per route — update when page content changes
 const routeMeta: Record<string, { lastModified: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }> = {
     '':                                            { lastModified: '2026-02-26', priority: 1.0,  changeFrequency: 'weekly' },
+    '/lab':                                       { lastModified: '2026-04-23', priority: 0.8,  changeFrequency: 'weekly' },
     '/ai-consulting':                              { lastModified: '2026-02-26', priority: 0.9,  changeFrequency: 'weekly' },
     '/ai-automation-consulting-netherlands':        { lastModified: '2026-02-26', priority: 0.9,  changeFrequency: 'weekly' },
     '/it-system-integration':                      { lastModified: '2026-02-26', priority: 0.8,  changeFrequency: 'weekly' },

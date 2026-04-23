@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/dashboard/', '/dashboard'],
+                disallow: ['/dashboard/', '/dashboard', '/en/lab/app', '/es/lab/app'],
             },
             // Explicitly allow major AI crawlers so content is indexable by AI search
             {
