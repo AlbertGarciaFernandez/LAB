@@ -67,7 +67,7 @@ const sharedLabSystems = [
         progressPercent: 100,
         lessons: [
           {
-            slug: "lab-overview",
+            slug: "map-client-intake",
             title: "Lab Overview",
             summary: "Understand the platform and how the systems fit together.",
             problem: "The team needs a clear starting point.",
@@ -210,12 +210,12 @@ export function getLabData(locale: string) {
   return labContent[normalizeLabLocale(locale)];
 }
 
-export function getSystemBySlug(systemSlug: string) {
-  return labContent.en.systems.find((system) => system.slug === systemSlug);
+export function getSystemBySlug(systemSlug: string, locale: string = "en") {
+  return getLabData(locale).systems.find((system) => system.slug === systemSlug);
 }
 
-export function getLessonBySlug(systemSlug: string, lessonSlug: string) {
-  const system = getSystemBySlug(systemSlug);
+export function getLessonBySlug(systemSlug: string, lessonSlug: string, locale: string = "en") {
+  const system = getSystemBySlug(systemSlug, locale);
   return system?.modules
     .flatMap((module) => module.lessons)
     .find((lesson) => lesson.slug === lessonSlug);
