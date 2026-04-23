@@ -3,11 +3,14 @@ export type LabLocale = "en" | "es";
 export type LabLesson = {
   slug: string;
   title: string;
-  summary: string;
   problem: string;
-  explanation: string;
-  steps: string[];
-  example: string;
+  explanation: string[];
+  steps: Array<{ title: string; body: string }>;
+  example: {
+    title: string;
+    summary: string;
+    bullets: string[];
+  };
   downloads: string[];
 };
 
@@ -21,10 +24,9 @@ export type LabModule = {
 
 export type LabSystem = {
   slug: string;
-  title: string;
   label: string;
+  title: string;
   shortDescription: string;
-  description: string;
   overview: string;
   progressPercent: number;
   modules: LabModule[];
@@ -32,31 +34,49 @@ export type LabSystem = {
 
 export type LabResource = {
   slug: string;
-  title: string;
   category: "Acquisition" | "Content" | "Reporting" | "Operations" | "Security";
+  title: string;
   description: string;
   downloadLabel: string;
 };
 
-const sharedLabCopy = {
+type LabCopy = {
+  ctaPrimary: string;
+  ctaSecondary: string;
+};
+
+type LabUser = {
+  name: string;
+  role: string;
+  activeSystemSlug: string;
+  overallProgressSummary: string;
+};
+
+type LabLocaleData = {
+  copy: LabCopy;
+  user: LabUser;
+  systems: LabSystem[];
+  resources: LabResource[];
+};
+
+const sharedLabCopy: LabCopy = {
   ctaPrimary: "View Systems",
   ctaSecondary: "Preview Platform",
-} as const;
+};
 
-const sharedLabUser = {
+const sharedLabUser: LabUser = {
   name: "Albert Garcia",
   role: "Founder",
   activeSystemSlug: "foundations",
   overallProgressSummary: "3 systems, 5 resources, 1 path to launch.",
-} as const;
+};
 
-const sharedLabSystems = [
+const sharedLabSystems: LabSystem[] = [
   {
     slug: "foundations",
+    label: "System 01",
     title: "System 01 — Foundations",
-    label: "Foundation layer",
     shortDescription: "Core positioning and audience fundamentals.",
-    description: "Core positioning and audience fundamentals.",
     overview: "Start here to orient the lab and define the base strategy.",
     progressPercent: 33,
     modules: [
@@ -69,15 +89,34 @@ const sharedLabSystems = [
           {
             slug: "map-client-intake",
             title: "Lab Overview",
-            summary: "Understand the platform and how the systems fit together.",
             problem: "The team needs a clear starting point.",
-            explanation: "This lesson frames the lab before deeper work begins.",
-            steps: [
-              "Review the platform overview.",
-              "Pick the active system.",
-              "Confirm the intended outcome.",
+            explanation: [
+              "This lesson frames the lab before deeper work begins.",
+              "Use it to orient the team before moving into execution.",
             ],
-            example: "Use the overview to decide where to begin.",
+            steps: [
+              {
+                title: "Review the platform overview",
+                body: "Confirm the systems and how they fit together.",
+              },
+              {
+                title: "Pick the active system",
+                body: "Start with the system that maps to the current workstream.",
+              },
+              {
+                title: "Confirm the intended outcome",
+                body: "Define what the team should be able to do after this lesson.",
+              },
+            ],
+            example: {
+              title: "Example use",
+              summary: "Use the overview to decide where to begin.",
+              bullets: [
+                "Open the lab overview first.",
+                "Pick the active system.",
+                "Share the intended outcome with the team.",
+              ],
+            },
             downloads: ["Foundations brief", "Lab checklist"],
           },
         ],
@@ -86,10 +125,9 @@ const sharedLabSystems = [
   },
   {
     slug: "operations",
+    label: "System 02",
     title: "System 02 — Operations",
-    label: "Operations layer",
     shortDescription: "Processes for delivery, support, and internal execution.",
-    description: "Processes for delivery, support, and internal execution.",
     overview: "Turn the strategy into a repeatable operating system.",
     progressPercent: 66,
     modules: [
@@ -102,15 +140,34 @@ const sharedLabSystems = [
           {
             slug: "daily-ops",
             title: "Daily Ops",
-            summary: "Track the operating routines that keep the lab moving.",
             problem: "The team needs consistent execution.",
-            explanation: "Operational routines reduce drift and manual follow-up.",
-            steps: [
-              "Review daily priorities.",
-              "Assign owners for blockers.",
-              "Capture follow-up items.",
+            explanation: [
+              "Operational routines reduce drift and manual follow-up.",
+              "Small repeatable habits keep delivery visible.",
             ],
-            example: "A daily review keeps delivery visible.",
+            steps: [
+              {
+                title: "Review daily priorities",
+                body: "Decide what must move forward today.",
+              },
+              {
+                title: "Assign owners for blockers",
+                body: "Make the next action and owner explicit.",
+              },
+              {
+                title: "Capture follow-up items",
+                body: "Record anything that needs review later.",
+              },
+            ],
+            example: {
+              title: "Example use",
+              summary: "A daily review keeps delivery visible.",
+              bullets: [
+                "Run a short morning check-in.",
+                "List blockers with owners.",
+                "Close the loop before end of day.",
+              ],
+            },
             downloads: ["Operations checklist", "Status log"],
           },
         ],
@@ -119,10 +176,9 @@ const sharedLabSystems = [
   },
   {
     slug: "architecture",
+    label: "System 03",
     title: "System 03 — Architecture",
-    label: "Architecture layer",
     shortDescription: "Structure for products, content, and platform decisions.",
-    description: "Structure for products, content, and platform decisions.",
     overview: "Shape the platform so every piece has a clear role.",
     progressPercent: 100,
     modules: [
@@ -135,72 +191,115 @@ const sharedLabSystems = [
           {
             slug: "system-map",
             title: "System Map",
-            summary: "Model the platform so each part has a clear role.",
             problem: "The architecture needs a shared reference.",
-            explanation: "A system map clarifies how content, operations, and acquisition relate.",
-            steps: [
-              "List each system boundary.",
-              "Connect systems to outcomes.",
-              "Review dependencies and handoffs.",
+            explanation: [
+              "A system map clarifies how content, operations, and acquisition relate.",
+              "It makes the handoff points easier to maintain.",
             ],
-            example: "Draw the system map before adding new modules.",
+            steps: [
+              {
+                title: "List each system boundary",
+                body: "Name the systems before introducing dependencies.",
+              },
+              {
+                title: "Connect systems to outcomes",
+                body: "Show how each system supports a visible result.",
+              },
+              {
+                title: "Review dependencies and handoffs",
+                body: "Identify the interfaces that need coordination.",
+              },
+            ],
+            example: {
+              title: "Example use",
+              summary: "Draw the system map before adding new modules.",
+              bullets: [
+                "Start with the three top-level systems.",
+                "Mark the dependencies between modules.",
+                "Use the map when scoping new work.",
+              ],
+            },
             downloads: ["System map", "Architecture notes"],
           },
         ],
       },
     ],
   },
-] satisfies LabSystem[];
+];
 
-const sharedLabResources = [
+const sharedLabResources: LabResource[] = [
   {
     slug: "acquisition-stack",
-    title: "Acquisition Stack",
     category: "Acquisition",
+    title: "Acquisition Stack",
     description: "Traffic, lead capture, and demand generation.",
     downloadLabel: "Download acquisition stack",
   },
   {
     slug: "content-stack",
-    title: "Content Stack",
     category: "Content",
+    title: "Content Stack",
     description: "Editorial systems for publishing and reuse.",
     downloadLabel: "Download content stack",
   },
   {
     slug: "reporting-stack",
-    title: "Reporting Stack",
     category: "Reporting",
+    title: "Reporting Stack",
     description: "Metrics, dashboards, and performance visibility.",
     downloadLabel: "Download reporting stack",
   },
   {
     slug: "operations-stack",
-    title: "Operations Stack",
     category: "Operations",
+    title: "Operations Stack",
     description: "Execution and handoff tooling for the team.",
     downloadLabel: "Download operations stack",
   },
   {
     slug: "security-stack",
-    title: "Security Stack",
     category: "Security",
+    title: "Security Stack",
     description: "Access, permissions, and platform safeguards.",
     downloadLabel: "Download security stack",
   },
-] satisfies LabResource[];
+];
 
-const sharedLabLocaleData = {
+function cloneLabData(data: LabLocaleData): LabLocaleData {
+  return {
+    copy: { ...data.copy },
+    user: { ...data.user },
+    systems: data.systems.map((system) => ({
+      ...system,
+      modules: system.modules.map((module) => ({
+        ...module,
+        lessons: module.lessons.map((lesson) => ({
+          ...lesson,
+          explanation: [...lesson.explanation],
+          steps: lesson.steps.map((step) => ({ ...step })),
+          example: {
+            ...lesson.example,
+            bullets: [...lesson.example.bullets],
+          },
+          downloads: [...lesson.downloads],
+        })),
+      })),
+    })),
+    resources: data.resources.map((resource) => ({ ...resource })),
+  };
+}
+
+const sharedLabLocaleData: LabLocaleData = {
   copy: sharedLabCopy,
   user: sharedLabUser,
   systems: sharedLabSystems,
   resources: sharedLabResources,
-} as const;
+};
 
-const labContent = {
-  en: sharedLabLocaleData,
-  es: sharedLabLocaleData,
-} as const;
+const labContent: Record<LabLocale, LabLocaleData> = {
+  en: cloneLabData(sharedLabLocaleData),
+  es: cloneLabData(sharedLabLocaleData),
+};
 
 function normalizeLabLocale(locale: string): LabLocale {
   return locale === "es" ? "es" : "en";
