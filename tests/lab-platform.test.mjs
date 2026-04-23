@@ -21,27 +21,42 @@ test("lab data helpers return localized content and rich runtime shapes", async 
 
   const en = lab.getLabData("en");
   const es = lab.getLabData("es");
+  const esEs = lab.getLabData("es-ES");
+  const esMx = lab.getLabData("es_MX");
   const fallback = lab.getLabData("pt-BR");
 
-  assert.ok(en.systems.length > 0);
-  assert.ok(en.resources.length > 0);
-  assert.ok(es.systems.length > 0);
-  assert.ok(es.resources.length > 0);
+  assert.equal(en.systems.length, 3);
+  assert.equal(en.resources.length, 5);
+  assert.equal(es.systems.length, 3);
+  assert.equal(es.resources.length, 5);
+  assert.equal(esEs.systems.length, 3);
+  assert.equal(esMx.systems.length, 3);
   assert.notStrictEqual(en, es);
   assert.notStrictEqual(en.systems, es.systems);
   assert.notStrictEqual(en.resources, es.resources);
-  assert.deepEqual(es.systems, en.systems);
-  assert.deepEqual(es.resources, en.resources);
-  assert.deepEqual(fallback.systems, en.systems);
-  assert.deepEqual(fallback.resources, en.resources);
+  assert.notStrictEqual(en.systems[0].modules, es.systems[0].modules);
+  assert.notStrictEqual(en.systems[0].modules[0].lessons, es.systems[0].modules[0].lessons);
+  assert.deepEqual(en.systems.map((system) => system.slug), es.systems.map((system) => system.slug));
+  assert.deepEqual(
+    en.systems.flatMap((system) => system.modules.map((module) => module.slug)),
+    es.systems.flatMap((system) => system.modules.map((module) => module.slug)),
+  );
+  assert.deepEqual(
+    en.systems.flatMap((system) => system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))),
+    es.systems.flatMap((system) => system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))),
+  );
+  assert.deepEqual(en.resources.map((resource) => resource.slug), es.resources.map((resource) => resource.slug));
+  assert.deepEqual(fallback.systems.map((system) => system.slug), en.systems.map((system) => system.slug));
+  assert.deepEqual(esEs.systems.map((system) => system.slug), en.systems.map((system) => system.slug));
+  assert.deepEqual(esMx.resources.map((resource) => resource.slug), en.resources.map((resource) => resource.slug));
 
-  const system = lab.getSystemBySlug("foundations", "es");
+  const system = lab.getSystemBySlug("foundations", "es-ES");
   assert.equal(system?.slug, "foundations");
   assert.equal(system?.label, "System 01");
   assert.equal(system?.progressPercent, 33);
   assert.equal(system?.modules[0]?.summary, "Understand the platform, scope, and learning path.");
 
-  const lesson = lab.getLessonBySlug("foundations", "map-client-intake", "es");
+  const lesson = lab.getLessonBySlug("foundations", "map-client-intake", "es_MX");
   assert.equal(lesson?.slug, "map-client-intake");
   assert.equal(lesson?.problem, "The team needs a clear starting point.");
   assert.ok(Array.isArray(lesson?.explanation));
@@ -49,10 +64,11 @@ test("lab data helpers return localized content and rich runtime shapes", async 
   assert.equal(typeof lesson?.steps?.[0]?.body, "string");
   assert.ok(Array.isArray(lesson?.example?.bullets));
   assert.ok(lesson?.downloads?.length);
+  assert.equal(en.user.activeSystemSlug, "foundations");
+  assert.ok(en.systems.some((item) => item.slug === en.user.activeSystemSlug));
 
   assert.equal(en.copy.ctaPrimary, "View Systems");
   assert.equal(en.copy.ctaSecondary, "Preview Platform");
-  assert.equal(en.user.activeSystemSlug, "foundations");
   assert.equal(en.user.overallProgressSummary, "3 systems, 5 resources, 1 path to launch.");
   assert.equal(en.resources[0].downloadLabel, "Download acquisition stack");
   assert.equal(en.systems[0].overview, "Start here to orient the lab and define the base strategy.");

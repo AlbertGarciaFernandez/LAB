@@ -296,24 +296,28 @@ const sharedLabLocaleData: LabLocaleData = {
   resources: sharedLabResources,
 };
 
-const labContent: Record<LabLocale, LabLocaleData> = {
-  en: cloneLabData(sharedLabLocaleData),
-  es: cloneLabData(sharedLabLocaleData),
-};
-
 function normalizeLabLocale(locale: string): LabLocale {
-  return locale === "es" ? "es" : "en";
+  const normalized = locale.toLowerCase().replaceAll("_", "-");
+  return /^es(?:-[a-z0-9]+)?$/.test(normalized) ? "es" : "en";
+}
+
+function buildLabLocaleData(locale: LabLocale): LabLocaleData {
+  if (locale === "es") {
+    return cloneLabData(sharedLabLocaleData);
+  }
+
+  return cloneLabData(sharedLabLocaleData);
 }
 
 export function getLabData(locale: string) {
-  return labContent[normalizeLabLocale(locale)];
+  return buildLabLocaleData(normalizeLabLocale(locale));
 }
 
-export function getSystemBySlug(systemSlug: string, locale: string = "en") {
+export function getSystemBySlug(systemSlug: string, locale: string) {
   return getLabData(locale).systems.find((system) => system.slug === systemSlug);
 }
 
-export function getLessonBySlug(systemSlug: string, lessonSlug: string, locale: string = "en") {
+export function getLessonBySlug(systemSlug: string, lessonSlug: string, locale: string) {
   const system = getSystemBySlug(systemSlug, locale);
   return system?.modules
     .flatMap((module) => module.lessons)
