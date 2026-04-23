@@ -133,3 +133,29 @@ test("package test script runs the full mjs test suite", () => {
   const pkg = readFileSync("package.json", "utf8");
   assert.match(pkg, /"test": "node --test tests\/\*\.test\.mjs"/);
 });
+
+test("lab landing page uses the dedicated public marketing stack", () => {
+  const labLayout = readFileSync("app/[locale]/lab/layout.tsx", "utf8");
+  const labPage = readFileSync("app/[locale]/lab/page.tsx", "utf8");
+  const landingSections = readFileSync("components/lab/LabLandingSections.tsx", "utf8");
+
+  assert.match(labLayout, /LabHeader/);
+  assert.doesNotMatch(labLayout, /components\/layout\/Header/);
+
+  assert.match(labPage, /generateMetadata/);
+
+  for (const sectionName of [
+    "LabHeroSection",
+    "LabProblemSection",
+    "LabSolutionSection",
+    "LabHowItWorksSection",
+    "LabSystemsSection",
+    "LabDifferentiationSection",
+    "LabCtaSection",
+  ]) {
+    assert.match(labPage, new RegExp(sectionName));
+  }
+
+  assert.match(landingSections, /View Systems/);
+  assert.match(landingSections, /Preview Platform/);
+});
