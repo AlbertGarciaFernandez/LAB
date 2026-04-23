@@ -37,6 +37,7 @@ test("lab data helpers return localized content and rich runtime shapes", async 
   assert.notStrictEqual(en.systems[0].modules, es.systems[0].modules);
   assert.notStrictEqual(en.systems[0].modules[0].lessons, es.systems[0].modules[0].lessons);
   assert.deepEqual(en.systems.map((system) => system.slug), es.systems.map((system) => system.slug));
+  assert.deepEqual(en.resources.map((resource) => resource.slug), es.resources.map((resource) => resource.slug));
   assert.deepEqual(
     en.systems.flatMap((system) => system.modules.map((module) => module.slug)),
     es.systems.flatMap((system) => system.modules.map((module) => module.slug)),
@@ -45,10 +46,40 @@ test("lab data helpers return localized content and rich runtime shapes", async 
     en.systems.flatMap((system) => system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))),
     es.systems.flatMap((system) => system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))),
   );
-  assert.deepEqual(en.resources.map((resource) => resource.slug), es.resources.map((resource) => resource.slug));
   assert.deepEqual(fallback.systems.map((system) => system.slug), en.systems.map((system) => system.slug));
   assert.deepEqual(esEs.systems.map((system) => system.slug), en.systems.map((system) => system.slug));
   assert.deepEqual(esMx.resources.map((resource) => resource.slug), en.resources.map((resource) => resource.slug));
+
+  for (const locale of ["en", "es"]) {
+    const data = lab.getLabData(locale);
+    const systemSlugs = data.systems.map((system) => system.slug);
+    const resourceSlugs = data.resources.map((resource) => resource.slug);
+
+    assert.equal(new Set(systemSlugs).size, systemSlugs.length);
+    assert.equal(new Set(resourceSlugs).size, resourceSlugs.length);
+    assert.ok(data.systems.every((system) => system.modules.length > 0));
+    assert.ok(data.systems.every((system) => system.modules.every((module) => module.lessons.length > 0)));
+    assert.ok(data.user.activeSystemSlug);
+    assert.ok(systemSlugs.includes(data.user.activeSystemSlug));
+
+    for (const system of data.systems) {
+      const moduleSlugs = system.modules.map((module) => module.slug);
+      const lessonSlugs = system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug));
+
+      assert.equal(new Set(moduleSlugs).size, moduleSlugs.length);
+      assert.equal(new Set(lessonSlugs).size, lessonSlugs.length);
+      assert.ok(moduleSlugs.length > 0);
+      assert.ok(lessonSlugs.length > 0);
+
+      const resolvedSystem = lab.getSystemBySlug(system.slug, locale);
+      assert.equal(resolvedSystem?.slug, system.slug);
+
+      for (const lessonSlug of lessonSlugs) {
+        const resolvedLesson = lab.getLessonBySlug(system.slug, lessonSlug, locale);
+        assert.equal(resolvedLesson?.slug, lessonSlug);
+      }
+    }
+  }
 
   const system = lab.getSystemBySlug("foundations", "es-ES");
   assert.equal(system?.slug, "foundations");

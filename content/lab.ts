@@ -309,8 +309,16 @@ function buildLabLocaleData(locale: LabLocale): LabLocaleData {
   return cloneLabData(sharedLabLocaleData);
 }
 
+const enLabData = buildLabLocaleData("en");
+const esLabData = buildLabLocaleData("es");
+
+const labContent: Record<LabLocale, LabLocaleData> = {
+  en: enLabData,
+  es: esLabData,
+};
+
 export function getLabData(locale: string) {
-  return buildLabLocaleData(normalizeLabLocale(locale));
+  return cloneLabData(labContent[normalizeLabLocale(locale)]);
 }
 
 export function getSystemBySlug(systemSlug: string, locale: string) {
