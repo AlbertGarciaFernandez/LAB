@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = params;
   return {
-    title: "AI Consulting Netherlands — CodeHunter Lab",
+    title: "AI Consulting Netherlands | Strategy, Delivery & AI Agents",
     description:
-      "AI consulting in the Netherlands. We design and deploy AI agents, workflow automation, and integrations for companies ready to move beyond pilots.",
+      "AI consulting in the Netherlands for strategy, implementation, and AI systems that ship to production. AI agents, workflow automation, and integration work for teams beyond pilots.",
     keywords: [
       "AI consulting Netherlands",
       "AI consulting services",
@@ -34,9 +34,9 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: "AI Consulting Netherlands — CodeHunter Lab",
+      title: "AI Consulting Netherlands | Strategy, Delivery & AI Agents",
       description:
-        "AI consulting in the Netherlands. We design and deploy AI agents, workflow automation, and integrations for companies ready to move beyond pilots.",
+        "AI consulting in the Netherlands for strategy, implementation, and AI systems that ship to production. AI agents, workflow automation, and integration work for teams beyond pilots.",
       url: `${baseUrl}/${locale}${path}`,
       siteName: "CodeHunter Lab",
       type: "website",
@@ -46,15 +46,15 @@ export async function generateMetadata({
           url: `${baseUrl}/${locale}${path}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: "AI Consulting Netherlands — CodeHunter Lab",
+          alt: "AI Consulting Netherlands | Strategy, Delivery & AI Agents",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "AI Consulting Netherlands — CodeHunter Lab",
+      title: "AI Consulting Netherlands | Strategy, Delivery & AI Agents",
       description:
-        "AI consulting in the Netherlands. We design and deploy AI agents, workflow automation, and integrations for companies ready to move beyond pilots.",
+        "AI consulting in the Netherlands for strategy, implementation, and AI systems that ship to production. AI agents, workflow automation, and integration work for teams beyond pilots.",
       images: [`${baseUrl}/${locale}${path}/opengraph-image`],
     },
   };
@@ -69,7 +69,7 @@ const faqSchema = {
       name: "What does an AI consulting engagement cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Scope varies significantly, so we don't publish fixed rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements are scoped monthly. We provide a detailed estimate after the initial strategy call — before you commit to anything.",
+        text: "Scope varies significantly, so we don't publish fixed rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements start from €5,000/month and are scoped around the amount of engineering capacity required. We provide a detailed estimate after the initial strategy call — before you commit to anything.",
       },
     },
     {
@@ -147,6 +147,8 @@ const serviceSchema = {
   description:
     "AI consulting services in the Netherlands. We design and deploy AI agents, workflow automation, and system integrations. Production systems, not demos.",
   url: `${baseUrl}/en${path}`,
+  priceRange:
+    "Free fit check; AI Strategy Sprint €2,500–€5,000; implementation from €8,000; ongoing partner from €5,000/month",
   provider: {
     "@type": "Organization",
     name: "CodeHunter Lab",

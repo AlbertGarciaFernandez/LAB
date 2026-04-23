@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { insights } from '@/content/insights'
 import { routing } from '@/i18n/routing'
 
 // Last modified dates per route — update when page content changes
@@ -23,21 +24,9 @@ const routeMeta: Record<string, { lastModified: string; priority: number; change
     '/real-estate-automation-netherlands':                 { lastModified: '2026-02-26', priority: 0.9,  changeFrequency: 'weekly' },
 }
 
-const insightRoutes: Record<string, { lastModified: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }> = {
-    '/en/insights': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'weekly' },
-    '/en/insights/workflow-automation-agency-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/conversational-ai-consultant-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/n8n-consultant-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/dental-clinic-whatsapp-automation-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/ai-consultants-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/automation-consultancy-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/system-integrator-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/crm-integration-services-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/app-developer-leiden': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/accounting-automation-software-netherlands': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/react-consulting-services': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-    '/en/insights/nextjs-consultancy-europe': { lastModified: '2026-04-10', priority: 0.7, changeFrequency: 'monthly' },
-}
+const insightsIndexMeta = { lastModified: '2026-04-21', priority: 0.7, changeFrequency: 'weekly' as const }
+const insightArticleMeta = { priority: 0.7, changeFrequency: 'monthly' as const }
+const aboutPageMeta = { lastModified: '2026-04-22', priority: 0.6, changeFrequency: 'monthly' as const }
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.codehunterlab.com'
@@ -54,12 +43,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     })
 
-    Object.entries(insightRoutes).forEach(([route, meta]) => {
+    sitemapEntries.push({
+        url: `${baseUrl}/en/insights`,
+        lastModified: new Date(insightsIndexMeta.lastModified),
+        changeFrequency: insightsIndexMeta.changeFrequency,
+        priority: insightsIndexMeta.priority,
+    })
+
+    sitemapEntries.push({
+        url: `${baseUrl}/en/about`,
+        lastModified: new Date(aboutPageMeta.lastModified),
+        changeFrequency: aboutPageMeta.changeFrequency,
+        priority: aboutPageMeta.priority,
+    })
+
+    insights.forEach((article) => {
         sitemapEntries.push({
-            url: `${baseUrl}${route}`,
-            lastModified: new Date(meta.lastModified),
-            changeFrequency: meta.changeFrequency,
-            priority: meta.priority,
+            url: `${baseUrl}/en/insights/${article.slug}`,
+            lastModified: new Date(article.modifiedAt),
+            changeFrequency: insightArticleMeta.changeFrequency,
+            priority: insightArticleMeta.priority,
         })
     })
 

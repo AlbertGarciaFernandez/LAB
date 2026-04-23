@@ -112,7 +112,7 @@ const HeroSection: React.FC = () => {
               <span className="relative z-10">{t("cta.initialize")}</span>
             </Link>
 
-            <Link href="#work" className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)] inline-block">
+            <Link href="/ai-consulting" className="group px-10 py-4 text-hunter-orange border border-hunter-orange/50 bg-transparent font-semibold rounded-lg transition-all duration-300 hover:bg-hunter-orange/10 hover:border-hunter-orange hover:shadow-[0_0_20px_rgba(255,122,60,0.2)] inline-block">
               {t("cta.caseStudies")}
             </Link>
           </m.div>

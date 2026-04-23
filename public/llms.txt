@@ -34,14 +34,14 @@ Admin dashboards, internal portals, and custom web applications built in React/N
 |---|---|---|---|
 | AI Strategy Sprint | 1–2 weeks | €2,500–€5,000 | Workflow audit, automation map, architecture proposal, timeline |
 | AI Implementation Project | 4–8 weeks | From €8,000 | One live AI system deployed to your infrastructure, full documentation, 30-day support |
-| Ongoing AI Partner | Monthly | Scoped monthly | Embedded AI engineering team, new automations, maintenance, scaling |
+| Ongoing AI Partner | Monthly | From €5,000/month | Embedded AI engineering team, new automations, maintenance, scaling |
 
 All Implementation Projects: fixed scope, fixed price, client owns all code.
 
 ## Frequently Asked Questions
 
 ### What does an AI consulting engagement cost?
-AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements are scoped monthly. A detailed estimate is provided after the initial strategy call, before any commitment.
+AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements start from €5,000/month and are scoped around the amount of engineering capacity required. A detailed estimate is provided after the initial strategy call, before any commitment.
 
 ### How long does a typical AI project take?
 AI Strategy Sprint: 1–2 weeks. Implementation Projects: 4–8 weeks from scoping to deployment, depending on the number of systems involved and integration complexity. n8n migrations from Zapier or Make typically take 1–3 weeks.

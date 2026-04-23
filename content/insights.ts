@@ -773,6 +773,496 @@ export const insights: InsightArticle[] = [
       },
     ],
   },
+  {
+    slug: "ai-agent-consulting",
+    title: "AI Agent Consulting: When a Company Needs More Than a Chatbot",
+    description:
+      "A practical guide for companies comparing AI agent consulting, workflow automation, and production implementation support.",
+    category: "AI Agents",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "7 min read",
+    targetQueries: [
+      "ai agent consulting",
+      "ai agent consultant",
+      "ai agent implementation",
+    ],
+    relatedServices: [
+      {
+        label: "AI consulting",
+        href: "/ai-consulting",
+      },
+      {
+        label: "AI agents and automation",
+        href: "/expertise/ai-agents-automation",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "AI agent consulting helps companies move from curiosity about agents to a system that performs useful work in production. The real decision is not whether to add an AI chat interface. The real decision is whether the agent can read the right business context, act safely inside existing systems, and hand work back to humans when needed.",
+      },
+      {
+        type: "heading",
+        text: "An AI agent is only valuable when it can complete a workflow",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Most companies do not need a general-purpose autonomous agent. They need a narrow system that can qualify leads, answer bounded questions, prepare documents, route requests, update a CRM, or trigger the next operational step. A consultant should define the exact workflow first and the model behavior second.",
+      },
+      {
+        type: "list",
+        items: [
+          "Start with one measurable workflow instead of a broad assistant concept.",
+          "Define what data the agent can read and what systems it can write to.",
+          "Design fallback and approval rules before launch.",
+          "Measure outcomes such as response time, hours saved, and conversion quality.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "The implementation work matters more than the demo",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The difficult part of an AI agent project is not the first prompt. It is system integration, evaluation, observability, permissions, and long-term maintenance. Good AI agent consulting closes the gap between a promising proof of concept and a dependable operating system for the team.",
+      },
+    ],
+  },
+  {
+    slug: "whatsapp-automation-netherlands",
+    title: "WhatsApp Automation Netherlands: Where It Creates Real ROI",
+    description:
+      "How Dutch businesses use WhatsApp automation for lead qualification, reminders, follow-up, and CRM workflows without turning support into chaos.",
+    category: "WhatsApp Automation",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "7 min read",
+    targetQueries: [
+      "whatsapp automation netherlands",
+      "whatsapp business automation netherlands",
+      "whatsapp lead automation",
+    ],
+    relatedServices: [
+      {
+        label: "AI automation consulting in the Netherlands",
+        href: "/ai-automation-consulting-netherlands",
+      },
+      {
+        label: "IT system integration",
+        href: "/it-system-integration",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "WhatsApp automation in the Netherlands works best when it removes operational delay from a business process people already use every day. The channel is strong for lead response, reminders, appointment scheduling, status updates, and follow-up because customers actually open it. The weak version is a generic bot that only adds another conversation layer without connecting to the systems behind the process.",
+      },
+      {
+        type: "heading",
+        text: "Start with inbound speed and simple decisions",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The highest-value WhatsApp workflows are usually the simplest: respond immediately, ask a few qualifying questions, offer the next action, and sync the outcome to the CRM or scheduling system. That reduces lead decay and avoids the common situation where inquiries sit in an inbox waiting for someone to notice them.",
+      },
+      {
+        type: "list",
+        items: [
+          "Use WhatsApp for lead qualification, reminders, and follow-up first.",
+          "Connect each conversation outcome to a CRM, booking system, or task flow.",
+          "Keep message templates narrow and operational instead of overly conversational.",
+          "Route unclear or sensitive cases to a human team member quickly.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "The channel only works when it is integrated",
+      },
+      {
+        type: "paragraph",
+        text:
+          "WhatsApp automation becomes a business system only when it is connected to calendars, CRMs, internal notifications, and reporting. Without that integration, the team still ends up copying information manually and the automation creates the illusion of efficiency instead of the real thing.",
+      },
+    ],
+  },
+  {
+    slug: "ai-voice-agent-netherlands",
+    title: "AI Voice Agent Netherlands: Best Use Cases for Sales and Operations",
+    description:
+      "When Dutch businesses should use an AI voice agent for inbound qualification, reminders, scheduling, and operational follow-up.",
+    category: "AI Voice",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "7 min read",
+    targetQueries: [
+      "ai voice agent netherlands",
+      "voice ai agent netherlands",
+      "ai phone agent",
+    ],
+    relatedServices: [
+      {
+        label: "AI automation consulting in the Netherlands",
+        href: "/ai-automation-consulting-netherlands",
+      },
+      {
+        label: "AI agents and automation",
+        href: "/expertise/ai-agents-automation",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "An AI voice agent can handle repetitive phone-based work that slows down sales and operations: first-contact qualification, appointment confirmation, reminder calls, basic intake, and follow-up on missed actions. The strongest use cases are structured, frequent, and time-sensitive. The weakest use cases are emotionally complex, highly regulated, or dependent on deep human judgment.",
+      },
+      {
+        type: "heading",
+        text: "Voice works best where timing matters",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Some workflows perform better by phone than by email or chat because speed changes the outcome. Inbound lead qualification, cancellations, no-show prevention, and simple booking coordination all benefit from a voice layer that can act immediately instead of waiting for a human callback.",
+      },
+      {
+        type: "list",
+        items: [
+          "Use voice for structured qualification and scheduling tasks.",
+          "Define the call script, escalation rules, and CRM updates before launch.",
+          "Avoid giving the agent broad authority in sensitive or ambiguous calls.",
+          "Measure pickup rate, conversion, and handoff quality after deployment.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Integration and monitoring decide whether it is production-ready",
+      },
+      {
+        type: "paragraph",
+        text:
+          "A voice agent project is not just speech recognition plus a model. It needs call outcomes written back to the CRM, alerts for failures, clear human takeover rules, and a review process for bad calls. That is what separates a demo from a system the business can trust.",
+      },
+    ],
+  },
+  {
+    slug: "n8n-vs-zapier-netherlands",
+    title: "n8n vs Zapier Netherlands: Which One Fits a Growing Business",
+    description:
+      "A practical comparison for Dutch teams deciding between n8n and Zapier for automation cost, flexibility, privacy, and maintainability.",
+    category: "Automation Comparison",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "8 min read",
+    targetQueries: [
+      "n8n vs zapier netherlands",
+      "n8n vs zapier",
+      "zapier migration n8n",
+    ],
+    relatedServices: [
+      {
+        label: "n8n migration consulting",
+        href: "/expertise/n8n-migration-consulting",
+      },
+      {
+        label: "AI automation consulting in the Netherlands",
+        href: "/ai-automation-consulting-netherlands",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "The choice between n8n and Zapier is usually not about which interface looks friendlier. It is about execution volume, system complexity, data control, and who will maintain the workflows over time. For a growing Dutch business, the right answer depends on whether automation is still a convenience layer or has already become operational infrastructure.",
+      },
+      {
+        type: "heading",
+        text: "Zapier is faster for simple workflows",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Zapier is often the faster starting point for light automations owned by a non-technical team. It is useful when the workflow is short, the integrations are standard, and the business mainly wants to connect a handful of SaaS tools without much custom logic.",
+      },
+      {
+        type: "heading",
+        text: "n8n wins when automation becomes part of operations",
+      },
+      {
+        type: "paragraph",
+        text:
+          "n8n becomes more attractive when workflows involve branching logic, webhooks, custom APIs, AI steps, self-hosting, or higher execution volume. That is especially relevant when privacy, maintainability, and predictable cost matter more than the convenience of a low-code template gallery.",
+      },
+      {
+        type: "list",
+        items: [
+          "Choose Zapier for fast, simple, low-risk automations.",
+          "Choose n8n when workflows are operational, multi-step, or API-heavy.",
+          "Consider n8n when privacy or self-hosting matters.",
+          "Migrate only the automations that are expensive, fragile, or strategically important.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Migration should be selective, not ideological",
+      },
+      {
+        type: "paragraph",
+        text:
+          "A good migration plan does not move every Zapier workflow at once. It starts with the flows that cost the most, break the most, or touch the most important operations. That gives the business a measurable win without creating unnecessary transition risk.",
+      },
+    ],
+  },
+  {
+    slug: "ai-system-integration",
+    title: "AI System Integration: Why Most AI Projects Fail Without It",
+    description:
+      "A practical guide to AI system integration for teams connecting models, CRMs, internal tools, databases, and operational workflows.",
+    category: "System Integration",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "7 min read",
+    targetQueries: [
+      "ai system integration",
+      "ai integration services",
+      "integrating ai into business systems",
+    ],
+    relatedServices: [
+      {
+        label: "IT system integration",
+        href: "/it-system-integration",
+      },
+      {
+        label: "AI consulting",
+        href: "/ai-consulting",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "AI system integration is the layer that turns a model into a usable business system. Without it, the AI may generate text, summaries, or decisions but it cannot read the right context, trigger the next operational step, or write outcomes back into the places where the business actually works.",
+      },
+      {
+        type: "heading",
+        text: "The missing layer is usually not the model",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Most teams assume the hard part is choosing a provider or writing prompts. In reality, the harder problem is connecting the AI to CRMs, internal tools, permissions, reporting, and exception handling. The better the integration design, the more useful and trustworthy the system becomes.",
+      },
+      {
+        type: "list",
+        items: [
+          "Define which system owns each record before connecting anything.",
+          "Map what the AI can read, what it can write, and what needs approval.",
+          "Write every meaningful outcome back to the source of truth.",
+          "Add monitoring so the team can see when integrations break or drift.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Integration is what makes AI measurable",
+      },
+      {
+        type: "paragraph",
+        text:
+          "When AI is integrated properly, the business can measure time saved, conversion quality, handoff speed, and failure rates. Without that integration, the AI remains a disconnected interface and teams are forced to guess whether it is actually creating value.",
+      },
+    ],
+  },
+  {
+    slug: "whatsapp-automation-for-business",
+    title: "WhatsApp Automation for Business: Where It Creates Real Operational Value",
+    description:
+      "How businesses use WhatsApp automation for lead response, reminders, follow-up, and operational communication without creating a support mess.",
+    category: "WhatsApp Automation",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "7 min read",
+    targetQueries: [
+      "whatsapp automation for business",
+      "whatsapp business automation",
+      "whatsapp workflow automation",
+    ],
+    relatedServices: [
+      {
+        label: "AI automation consulting in the Netherlands",
+        href: "/ai-automation-consulting-netherlands",
+      },
+      {
+        label: "IT system integration",
+        href: "/it-system-integration",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "WhatsApp automation for business works when it shortens the time between an inbound message and the next useful action. The strongest use cases are operational: qualify a lead, confirm an appointment, collect the missing detail, send the next step, and make sure the result ends up in the CRM or workflow system.",
+      },
+      {
+        type: "heading",
+        text: "Treat WhatsApp as part of the workflow, not a side channel",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Businesses often automate the first reply but forget the rest of the process. If the conversation is not connected to ownership, scheduling, follow-up, and reporting, the team still ends up copying context manually and the automation only hides delay instead of removing it.",
+      },
+      {
+        type: "list",
+        items: [
+          "Use WhatsApp for fast response, qualification, reminders, and follow-up.",
+          "Keep business rules narrow and operational instead of overly chatty.",
+          "Connect the conversation outcome to a CRM, booking flow, or task queue.",
+          "Escalate unclear or sensitive cases to a human quickly.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "The real value is in response speed and consistency",
+      },
+      {
+        type: "paragraph",
+        text:
+          "A well-designed WhatsApp workflow helps the team respond faster, miss fewer follow-ups, and keep customer communication more consistent across volume spikes. That makes it useful for both revenue and operations, not just support convenience.",
+      },
+    ],
+  },
+  {
+    slug: "lead-qualification-automation-netherlands",
+    title: "Lead Qualification Automation Netherlands: What to Automate First",
+    description:
+      "A practical guide for Dutch businesses automating lead qualification across forms, WhatsApp, CRM workflows, and first-response systems.",
+    category: "Lead Automation",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "7 min read",
+    targetQueries: [
+      "lead qualification automation netherlands",
+      "lead automation netherlands",
+      "ai lead qualification netherlands",
+    ],
+    relatedServices: [
+      {
+        label: "AI automation consulting in the Netherlands",
+        href: "/ai-automation-consulting-netherlands",
+      },
+      {
+        label: "IT system integration",
+        href: "/it-system-integration",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "Lead qualification automation helps a business decide faster which inbound opportunities deserve immediate attention, which need more information, and which are not a fit. In the Netherlands, the biggest gains usually come from reducing response delay and making sure qualified leads reach the right owner without manual triage.",
+      },
+      {
+        type: "heading",
+        text: "Automate the first decision, not the entire relationship",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The safest starting point is to automate the first layer of qualification: collect missing details, classify urgency or fit, assign ownership, and trigger the next action. That creates value quickly without pretending the full sales process should be handed to a model from day one.",
+      },
+      {
+        type: "list",
+        items: [
+          "Connect forms, WhatsApp, and inbound messages to one CRM pipeline.",
+          "Define the few qualification questions that actually change follow-up.",
+          "Route high-fit leads immediately instead of batching them in an inbox.",
+          "Write summaries and outcomes back to the CRM automatically.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Speed matters more than sophistication at first",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Many businesses overbuild scoring logic and underbuild response speed. In practice, a simpler system that responds immediately and routes cleanly will outperform a more complex one that still leaves leads waiting for a human to notice them.",
+      },
+    ],
+  },
+  {
+    slug: "make-vs-n8n-netherlands",
+    title: "Make vs n8n Netherlands: Which Automation Stack Fits Better",
+    description:
+      "A practical comparison for Dutch teams deciding between Make and n8n for workflow complexity, ownership, cost, and long-term maintainability.",
+    category: "Automation Comparison",
+    publishedAt: "2026-04-22",
+    modifiedAt: "2026-04-22",
+    readingTime: "8 min read",
+    targetQueries: [
+      "make vs n8n netherlands",
+      "make vs n8n",
+      "n8n migration from make",
+    ],
+    relatedServices: [
+      {
+        label: "n8n migration consulting",
+        href: "/expertise/n8n-migration-consulting",
+      },
+      {
+        label: "AI automation consulting in the Netherlands",
+        href: "/ai-automation-consulting-netherlands",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        text:
+          "The decision between Make and n8n usually comes down to workflow ownership, technical flexibility, and how operational the automation layer has become. Both can be useful. The right choice depends on whether the team wants a fast visual builder for moderate complexity or a system with stronger control over logic, infrastructure, and long-term extensibility.",
+      },
+      {
+        type: "heading",
+        text: "Make is often easier to start with",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Make is attractive when the team wants a visual automation layer that can be assembled quickly and maintained by a broader set of non-developers. It can be a strong fit for mid-complexity workflows when privacy and custom logic are not the main pressure points.",
+      },
+      {
+        type: "heading",
+        text: "n8n becomes more attractive as the workflow layer matures",
+      },
+      {
+        type: "paragraph",
+        text:
+          "n8n is usually the stronger choice when automations need custom logic, self-hosting, deeper API flexibility, AI steps, or clearer engineering ownership. That becomes more important when the workflow layer starts supporting revenue, operations, or customer delivery directly.",
+      },
+      {
+        type: "list",
+        items: [
+          "Use Make for fast assembly and visually managed workflows.",
+          "Use n8n when the automation layer is becoming strategic infrastructure.",
+          "Choose based on workflow complexity and ownership, not community hype.",
+          "Migrate only the flows that justify the transition effort.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "The migration decision should be economic, not ideological",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The best migration case is not 'we prefer tool X.' It is 'these workflows are expensive, brittle, or blocked by the current platform.' That keeps the move tied to business value instead of tool preference.",
+      },
+    ],
+  },
 ];
 
 export const insightBySlug = new Map(insights.map((article) => [article.slug, article]));

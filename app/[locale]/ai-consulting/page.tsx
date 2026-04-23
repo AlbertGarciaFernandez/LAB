@@ -11,7 +11,6 @@ import {
 import Header from "@/components/layout/Header";
 import ROICalculator from '@/components/sections/ROICalculator';
 import { m } from "framer-motion";
-import TopAgentsSection from "@/components/sections/TopAgentsSection";
 import AnimatedSection from "@/components/layout/AnimatedSection";
 
 const containerVariants = {
@@ -37,7 +36,7 @@ const itemVariants = {
 const faqs = [
     {
         q: "What does an AI consulting engagement cost?",
-        a: "Scope varies significantly, so we don't publish fixed rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements are scoped monthly. We provide a detailed estimate after the initial strategy call — before you commit to anything.",
+        a: "Scope varies significantly, so we don't publish fixed rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements start from €5,000/month and are scoped around the amount of engineering capacity required. We provide a detailed estimate after the initial strategy call — before you commit to anything.",
     },
     {
         q: "How long does a typical project take?",
@@ -72,6 +71,110 @@ const faqs = [
         a: "That's exactly what the AI Strategy Sprint is for. We map your operations, rank automation opportunities by ROI, and hand you a prioritized roadmap. You leave with a clear implementation plan — whether you work with us to build it or take it in-house.",
     },
 ];
+
+type PricingItem = {
+    name: string;
+    price: string;
+    timeline: string;
+    desc: string;
+    href: string;
+    cta: string;
+    recommended?: boolean;
+    points: string[];
+};
+
+const AIConsultingPricingSection = () => {
+    const t = useTranslations("AIConsulting");
+    const items = t.raw("Pricing.items") as PricingItem[];
+    const comparisonPoints = t.raw("Pricing.comparison.points") as string[];
+
+    return (
+        <AnimatedSection id="ai-consulting-pricing" className="py-20 px-6 lg:px-8 border-b border-white/5">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start mb-10">
+                    <div>
+                        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-hunter-orange/10 border border-hunter-orange/20 text-hunter-orange text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
+                            {t("Pricing.badge")}
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
+                            {t("Pricing.title")} <span className="text-hunter-green">{t("Pricing.highlight")}</span>
+                        </h2>
+                    </div>
+                    <div className="lg:pt-9">
+                        <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                            {t("Pricing.subtitle")}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+                    {items.map((item, i) => (
+                        <m.div
+                            key={item.name}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.45, delay: i * 0.07 }}
+                            className={`relative flex h-full flex-col rounded-lg border p-6 transition-colors ${
+                                item.recommended
+                                    ? "border-hunter-green/40 bg-hunter-green/10"
+                                    : "border-white/5 bg-surface-dark/35 hover:border-white/10"
+                            }`}
+                        >
+                            {item.recommended ? (
+                                <div className="absolute right-4 top-4 rounded bg-hunter-green px-2 py-1 text-[10px] font-black uppercase tracking-widest text-near-black">
+                                    {t("Pricing.recommended")}
+                                </div>
+                            ) : null}
+                            <div className="mb-6 pr-16">
+                                <h3 className="text-lg font-black text-white">{item.name}</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-gray-400">{item.desc}</p>
+                            </div>
+                            <div className="mb-5">
+                                <div className="text-2xl font-black text-white">{item.price}</div>
+                                <div className="mt-1 text-xs font-bold uppercase tracking-widest text-gray-500">{item.timeline}</div>
+                            </div>
+                            <ul className="mb-6 space-y-3">
+                                {item.points.map((point) => (
+                                    <li key={point} className="flex items-start gap-2 text-sm leading-relaxed text-gray-300">
+                                        <CheckIcon className="mt-0.5 flex-shrink-0 text-hunter-green" size={15} />
+                                        <span>{point}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <Link
+                                href={item.href}
+                                className={`mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-bold transition-colors ${
+                                    item.recommended
+                                        ? "bg-hunter-green text-near-black hover:bg-white"
+                                        : "border border-white/10 text-white hover:bg-white/5"
+                                }`}
+                            >
+                                {item.cta}
+                                <ArrowRightIcon className="h-4 w-4" />
+                            </Link>
+                        </m.div>
+                    ))}
+                </div>
+
+                <div className="mt-8 grid gap-6 rounded-lg border border-hunter-orange/20 bg-hunter-orange/10 p-6 lg:grid-cols-[0.7fr_1.3fr] lg:p-8">
+                    <div>
+                        <h3 className="text-xl font-black text-white">{t("Pricing.comparison.title")}</h3>
+                        <p className="mt-3 text-sm leading-relaxed text-gray-400">{t("Pricing.comparison.desc")}</p>
+                    </div>
+                    <ul className="space-y-3">
+                        {comparisonPoints.map((point) => (
+                            <li key={point} className="flex items-start gap-3 text-sm leading-relaxed text-gray-300">
+                                <CheckIcon className="mt-0.5 flex-shrink-0 text-hunter-orange" size={15} />
+                                <span>{point}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </AnimatedSection>
+    );
+};
 
 const AIConsultingPage = () => {
     const t = useTranslations("AIConsulting");
@@ -111,7 +214,7 @@ const AIConsultingPage = () => {
                             />
 
                             <m.div variants={itemVariants}>
-                                <Link href="#roi-calculator" className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden inline-flex items-center gap-2">
+                                <Link href="/#contact" className="relative group px-10 py-4 text-near-black font-bold rounded-lg overflow-hidden inline-flex items-center gap-2">
                                     <div className="absolute inset-0 bg-hunter-green w-full h-full transition-all duration-300 group-hover:bg-hunter-green-dark" />
                                     <span className="relative z-10">{t("Hero.cta")}</span>
                                     <ArrowRightIcon className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -215,7 +318,10 @@ const AIConsultingPage = () => {
                     </div>
                 </AnimatedSection>
 
-                {/* 3. What We Build */}
+                {/* 3. Pricing */}
+                <AIConsultingPricingSection />
+
+                {/* 4. What We Build */}
                 <AnimatedSection className="py-20 px-6 lg:px-8 border-b border-white/5">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-12">
@@ -261,10 +367,6 @@ const AIConsultingPage = () => {
                         </div>
                     </div>
                 </AnimatedSection>
-
-                {/* 4. Top Agents Section */}
-                <TopAgentsSection />
-
 
                 {/* 5. ROI Calculator */}
                 <ROICalculator />

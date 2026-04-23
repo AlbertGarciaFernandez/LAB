@@ -46,7 +46,7 @@
     "description": "We design, build, and deploy AI systems for companies ready to move beyond experiments — connected to your stack, your data, and your team's actual workflows.",
     "cta": {
       "initialize": "Book an AI Strategy Call",
-      "caseStudies": "See How We Work"
+      "caseStudies": "Explore AI Consulting"
     }
   },
   "Footer": {
@@ -90,6 +90,7 @@
     },
     "Copyright": {
       "rights": "CodeHunter Lab.",
+      "about": "About",
       "locationLeiden": "Leiden, Netherlands",
       "locationSpain": "Spain / Remote",
       "developedBy": "Developed by"
@@ -595,6 +596,77 @@
         "You need AI that integrates with your existing CRM, ERP, or stack",
         "You operate in the Netherlands or internationally and need senior engineering"
       ]
+    },
+    "Pricing": {
+      "badge": "Pricing",
+      "title": "Clear AI consulting prices,",
+      "highlight": "with the scope behind them.",
+      "subtitle": "Lower-cost advisory or chatbot packages can be the right move when you only need a workshop or a simple assistant. LAB is priced for engineering ownership: workflow audit, architecture, integrations, deployment, documentation, and post-launch support.",
+      "recommended": "Best start",
+      "items": [
+        {
+          "name": "Fit Check",
+          "price": "Free",
+          "timeline": "30 minutes",
+          "desc": "For teams that need a straight answer before buying strategy or build work.",
+          "href": "/#contact",
+          "cta": "Check fit",
+          "points": [
+            "One workflow or bottleneck reviewed",
+            "Honest build/no-build recommendation",
+            "Suggested next step if there is a real case"
+          ]
+        },
+        {
+          "name": "AI Strategy Sprint",
+          "price": "€2.5k–€5k",
+          "timeline": "1–2 weeks",
+          "desc": "For teams that know AI could help but need a ranked roadmap before investing in implementation.",
+          "href": "/#contact",
+          "cta": "Scope a sprint",
+          "recommended": true,
+          "points": [
+            "Workflow audit and opportunity map",
+            "ROI-ranked automation backlog",
+            "Architecture, budget, and timeline estimate"
+          ]
+        },
+        {
+          "name": "AI Implementation",
+          "price": "From €8k",
+          "timeline": "4–8 weeks",
+          "desc": "For teams that want one production AI system connected to their real business stack.",
+          "href": "/ai-automation-consulting-netherlands",
+          "cta": "Plan the build",
+          "points": [
+            "Fixed scope and delivery plan",
+            "CRM, API, database, or workflow integrations",
+            "Documentation and 30-day support"
+          ]
+        },
+        {
+          "name": "Ongoing AI Partner",
+          "price": "From €5k/mo",
+          "timeline": "Monthly",
+          "desc": "For companies that want continuous AI engineering without hiring a full internal team.",
+          "href": "/#contact",
+          "cta": "Discuss partner scope",
+          "points": [
+            "New automations and improvements",
+            "Monitoring, fixes, and workflow changes",
+            "Quarterly roadmap and ROI reviews"
+          ]
+        }
+      ],
+      "comparison": {
+        "title": "How this compares to cheaper AI consulting",
+        "desc": "If the goal is a generic audit, training session, or basic chatbot, a lower entry price can make sense. LAB should win when the buyer cares about production ownership.",
+        "points": [
+          "The Strategy Sprint overlaps with premium AI audit pricing because it includes technical architecture and a buildable delivery plan.",
+          "Implementation starts higher than a basic chatbot package because it includes real integrations, deployment, documentation, and support.",
+          "The ongoing partner offer is comparable to an external AI department, but positioned around senior engineering capacity and shipped systems."
+        ]
+      }
     },
     "WhatWeBuildInline": {
       "badge": "What We Build",
@@ -2975,6 +3047,164 @@
     "SEO": {
       "extendedDesc": "CodeHunter Lab specializes in real estate agency automation systems across the Netherlands, including Amsterdam, Rotterdam, Den Haag, Utrecht, Leiden, Haarlem, Eindhoven, and Groningen. Our custom automation platforms connect Funda, CRM systems, WhatsApp Business API, and marketing tools to eliminate slow lead follow-up, automate viewing scheduling, syndicate property listings, and build systematic seller communication — helping Dutch real estate agencies close more deals with less admin.",
       "keywords": "real estate automation Netherlands, makelaar automatisering Nederland, Funda integration automation, real estate CRM Netherlands, property lead automation, viewing scheduling automation Netherlands, real estate WhatsApp automation, makelaar CRM systeem, Dutch property market automation, real estate agency Netherlands"
+    }
+  },
+  "TrustProof": {
+    "badge": "Proof without theatre",
+    "title": "Built like a product team, not a slide factory.",
+    "subtitle": "The page needed more trust signals, so we made the operating model explicit: fixed scope, owned code, production handoff, and senior engineering from discovery to deployment.",
+    "metrics": [
+      {
+        "value": "4+",
+        "label": "Years shipping",
+        "note": "Production web apps, automations, integrations, and AI systems."
+      },
+      {
+        "value": "15+",
+        "label": "Companies served",
+        "note": "From local operators to SaaS and ecommerce teams."
+      },
+      {
+        "value": "30d",
+        "label": "Support included",
+        "note": "Implementation projects include post-launch support and handover."
+      }
+    ],
+    "proof": [
+      {
+        "title": "No black-box delivery",
+        "desc": "You own the code, workflows, credentials documentation, and deployment notes."
+      },
+      {
+        "title": "Real systems, not demos",
+        "desc": "We connect to the stack your team already uses: CRM, calendar, WhatsApp, databases, APIs, and reporting."
+      },
+      {
+        "title": "Scoped before build",
+        "desc": "Every project starts with deliverables, integration requirements, timeline, and acceptance criteria."
+      }
+    ]
+  },
+  "StartHere": {
+    "badge": "Start where you are",
+    "title": "Pick the path that matches your stage.",
+    "subtitle": "Not every AI project should start with a chatbot. Choose the entry point that fits your current bottleneck.",
+    "paths": [
+      {
+        "situation": "You are exploring",
+        "title": "AI Strategy Sprint",
+        "desc": "Map workflows, rank opportunities by ROI, and leave with a buildable roadmap.",
+        "href": "/ai-consulting",
+        "cta": "Start with strategy"
+      },
+      {
+        "situation": "You want a live system",
+        "title": "AI Agent Implementation",
+        "desc": "Deploy one production AI agent connected to your tools and escalation rules.",
+        "href": "/ai-automation-consulting-netherlands",
+        "cta": "Build an agent"
+      },
+      {
+        "situation": "Zapier is creaking",
+        "title": "n8n Migration",
+        "desc": "Move fragile or expensive automations into a self-hosted, documented workflow stack.",
+        "href": "/expertise/n8n-migration-consulting",
+        "cta": "Migrate workflows"
+      },
+      {
+        "situation": "Systems do not talk",
+        "title": "System Integration",
+        "desc": "Connect CRM, ERP, WhatsApp, databases, and internal tools into one operational flow.",
+        "href": "/it-system-integration",
+        "cta": "Connect the stack"
+      },
+      {
+        "situation": "Spreadsheets run operations",
+        "title": "Custom Internal Tools",
+        "desc": "Replace repeated spreadsheet work with dashboards, portals, and approval tools.",
+        "href": "/services/custom-internal-tools-development",
+        "cta": "Build the tool"
+      },
+      {
+        "situation": "Your product is slow",
+        "title": "React / Next.js Consulting",
+        "desc": "Audit architecture, fix performance, and make the frontend easier to ship.",
+        "href": "/react-consulting",
+        "cta": "Fix the codebase"
+      }
+    ]
+  },
+  "Packages": {
+    "badge": "Packages",
+    "title": "Clear starting points, clear ranges.",
+    "subtitle": "These are entry ranges, not mystery retainers. Exact scope depends on systems, data access, and integration complexity.",
+    "cta": "Book a scope call",
+    "learnMore": "See details",
+    "items": [
+      {
+        "name": "AI Strategy Sprint",
+        "price": "€2.5k–€5k",
+        "timeline": "1–2 weeks",
+        "desc": "Best when you know AI could help but need a ranked roadmap before investing in build work.",
+        "href": "/ai-consulting",
+        "points": [
+          "Workflow audit and opportunity map",
+          "ROI-ranked automation backlog",
+          "Architecture and implementation estimate"
+        ]
+      },
+      {
+        "name": "Implementation Project",
+        "price": "From €8k",
+        "timeline": "4–8 weeks",
+        "desc": "One live AI system, workflow, or integration deployed to your infrastructure.",
+        "href": "/ai-automation-consulting-netherlands",
+        "points": [
+          "Fixed scope and fixed delivery plan",
+          "Full-stack integration with existing tools",
+          "Documentation and 30-day support"
+        ]
+      },
+      {
+        "name": "Ongoing AI Partner",
+        "price": "From €5k/mo",
+        "timeline": "Monthly",
+        "desc": "Embedded engineering support for teams that want continuous automation, maintenance, and iteration.",
+        "href": "/#contact",
+        "points": [
+          "New automations and improvements",
+          "Monitoring, fixes, and workflow changes",
+          "Strategic roadmap reviews"
+        ]
+      }
+    ]
+  },
+  "Fit": {
+    "badge": "Fit check",
+    "title": "We are not the right partner for every AI idea.",
+    "subtitle": "The best projects have a clear business workflow, a real owner, and enough repetition to make automation worth maintaining.",
+    "good": {
+      "title": "We are a strong fit if...",
+      "items": [
+        "You want a production system connected to real business tools.",
+        "You can name the workflow, owner, and outcome you want to improve.",
+        "You care about documentation, handoff, and long-term maintainability.",
+        "You want honest scoping before build work starts."
+      ]
+    },
+    "bad": {
+      "title": "We are not a fit if...",
+      "items": [
+        "You only need a generic chatbot demo for a presentation.",
+        "No one on the team owns the process after launch.",
+        "You want vague experimentation without a measurable operational goal.",
+        "You are looking for the cheapest no-code setup regardless of reliability."
+      ]
+    },
+    "cta": {
+      "title": "Unsure where your project sits?",
+      "desc": "Send the workflow. We will tell you whether it is worth automating, what the first version should include, and where the risk is.",
+      "button": "Ask for a fit check"
     }
   },
   "QuickWins": {

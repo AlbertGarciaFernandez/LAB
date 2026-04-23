@@ -135,6 +135,10 @@ const Footer: React.FC = () => {
                                 Insights
                             </a>
                             <span className="text-gray-600">·</span>
+                            <Link href="/about" className="text-[11px] font-bold text-hunter-green/80 uppercase tracking-widest hover:text-hunter-green transition-colors">
+                                {t("Copyright.about")}
+                            </Link>
+                            <span className="text-gray-600">·</span>
                             <Link href="/software-development-leiden" className="text-[11px] font-bold text-hunter-green/80 uppercase tracking-widest hover:text-hunter-green transition-colors">
                                 {t("Copyright.locationLeiden")}
                             </Link>

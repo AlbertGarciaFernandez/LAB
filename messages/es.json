@@ -46,7 +46,7 @@
     "description": "Diseñamos, construimos y desplegamos sistemas IA para empresas listas para ir más allá de los experimentos — conectados a tu stack, tus datos y los flujos reales de tu equipo.",
     "cta": {
       "initialize": "Reservar Llamada de Estrategia IA",
-      "caseStudies": "Ver Cómo Trabajamos"
+      "caseStudies": "Explorar AI Consulting"
     }
   },
   "Footer": {
@@ -90,6 +90,7 @@
     },
     "Copyright": {
       "rights": "CodeHunter Lab.",
+      "about": "About",
       "locationLeiden": "Leiden, Países Bajos",
       "locationSpain": "España / Remoto",
       "developedBy": "Desarrollado por"
@@ -595,6 +596,77 @@
         "Necesitas IA que se integre con tu CRM, ERP o stack existente",
         "Operas en los Países Bajos o internacionalmente y necesitas ingeniería senior"
       ]
+    },
+    "Pricing": {
+      "badge": "Precios",
+      "title": "Precios claros de consultoría IA,",
+      "highlight": "con el alcance detrás.",
+      "subtitle": "Los paquetes de asesoría o chatbot más baratos pueden tener sentido si solo necesitas un taller o un asistente sencillo. LAB está posicionado para ingeniería: auditoría de flujos, arquitectura, integraciones, despliegue, documentación y soporte tras el lanzamiento.",
+      "recommended": "Mejor inicio",
+      "items": [
+        {
+          "name": "Fit Check",
+          "price": "Gratis",
+          "timeline": "30 minutos",
+          "desc": "Para equipos que necesitan una respuesta directa antes de comprar estrategia o desarrollo.",
+          "href": "/#contact",
+          "cta": "Comprobar encaje",
+          "points": [
+            "Revisión de un flujo o cuello de botella",
+            "Recomendación honesta de construir o no construir",
+            "Siguiente paso sugerido si hay un caso real"
+          ]
+        },
+        {
+          "name": "Sprint de Estrategia IA",
+          "price": "€2.5k–€5k",
+          "timeline": "1–2 semanas",
+          "desc": "Para equipos que saben que la IA puede ayudar pero necesitan una hoja de ruta priorizada antes de invertir en implementación.",
+          "href": "/#contact",
+          "cta": "Definir sprint",
+          "recommended": true,
+          "points": [
+            "Auditoría de flujos y mapa de oportunidades",
+            "Backlog de automatizaciones priorizado por ROI",
+            "Arquitectura, presupuesto y estimación de plazos"
+          ]
+        },
+        {
+          "name": "Implementación IA",
+          "price": "Desde €8k",
+          "timeline": "4–8 semanas",
+          "desc": "Para equipos que quieren un sistema IA en producción conectado a su stack real de negocio.",
+          "href": "/ai-automation-consulting-netherlands",
+          "cta": "Planear desarrollo",
+          "points": [
+            "Alcance fijo y plan de entrega",
+            "Integraciones con CRM, API, base de datos o flujos",
+            "Documentación y 30 días de soporte"
+          ]
+        },
+        {
+          "name": "Partner IA Continuo",
+          "price": "Desde €5k/mes",
+          "timeline": "Mensual",
+          "desc": "Para empresas que quieren ingeniería IA continua sin contratar un equipo interno completo.",
+          "href": "/#contact",
+          "cta": "Hablar del alcance",
+          "points": [
+            "Nuevas automatizaciones y mejoras",
+            "Monitorización, correcciones y cambios de flujos",
+            "Revisión trimestral de roadmap y ROI"
+          ]
+        }
+      ],
+      "comparison": {
+        "title": "Cómo se compara con consultorías IA más baratas",
+        "desc": "Si el objetivo es una auditoría genérica, formación o un chatbot básico, un precio de entrada más bajo puede tener sentido. LAB debe ganar cuando el comprador valora propiedad técnica y sistemas en producción.",
+        "points": [
+          "El Sprint de Estrategia se solapa con precios de auditoría IA premium porque incluye arquitectura técnica y un plan ejecutable.",
+          "La implementación empieza más alta que un chatbot básico porque incluye integraciones reales, despliegue, documentación y soporte.",
+          "El partner continuo se parece a un departamento IA externo, pero queda posicionado como capacidad senior de ingeniería y sistemas entregados."
+        ]
+      }
     },
     "WhatWeBuildInline": {
       "badge": "Qué Construimos",
@@ -2975,6 +3047,164 @@
     "SEO": {
       "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para agencias inmobiliarias en los Países Bajos, incluyendo Ámsterdam, Róterdam, La Haya, Utrecht, Leiden, Haarlem, Eindhoven y Groninga. Nuestras plataformas de automatización personalizadas conectan Funda, sistemas CRM, WhatsApp Business API y herramientas de marketing para eliminar el seguimiento lento de leads, automatizar la programación de visitas, sindicar publicaciones de propiedades y construir comunicación sistemática con vendedores.",
       "keywords": "automatización agencia inmobiliaria Países Bajos, makelaar automatisering Nederland, integración Funda automatización, CRM inmobiliario Países Bajos, automatización leads inmobiliaria, automatización visitas inmobiliaria Países Bajos, WhatsApp automatización makelaar, sistema CRM makelaar"
+    }
+  },
+  "TrustProof": {
+    "badge": "Prueba sin teatro",
+    "title": "Construimos como equipo de producto, no como fábrica de slides.",
+    "subtitle": "La página necesitaba más señales de confianza, así que hacemos explícito el modelo de trabajo: alcance cerrado, código propio, traspaso a producción e ingeniería senior desde discovery hasta despliegue.",
+    "metrics": [
+      {
+        "value": "4+",
+        "label": "Años entregando",
+        "note": "Apps web, automatizaciones, integraciones y sistemas IA en producción."
+      },
+      {
+        "value": "15+",
+        "label": "Empresas atendidas",
+        "note": "Desde operadores locales hasta equipos SaaS y ecommerce."
+      },
+      {
+        "value": "30d",
+        "label": "Soporte incluido",
+        "note": "Los proyectos de implementación incluyen soporte post-lanzamiento y handoff."
+      }
+    ],
+    "proof": [
+      {
+        "title": "Sin cajas negras",
+        "desc": "El código, workflows, documentación de credenciales y notas de despliegue quedan en tus manos."
+      },
+      {
+        "title": "Sistemas reales, no demos",
+        "desc": "Conectamos con el stack que ya usa tu equipo: CRM, calendario, WhatsApp, bases de datos, APIs e informes."
+      },
+      {
+        "title": "Alcance antes de construir",
+        "desc": "Cada proyecto empieza con entregables, requisitos de integración, calendario y criterios de aceptación."
+      }
+    ]
+  },
+  "StartHere": {
+    "badge": "Empieza donde estás",
+    "title": "Elige el camino que encaja con tu etapa.",
+    "subtitle": "No todos los proyectos IA deberían empezar con un chatbot. Elige el punto de entrada según tu cuello de botella actual.",
+    "paths": [
+      {
+        "situation": "Estás explorando",
+        "title": "Sprint de Estrategia IA",
+        "desc": "Mapea workflows, prioriza oportunidades por ROI y sal con un roadmap construible.",
+        "href": "/ai-consulting",
+        "cta": "Empezar con estrategia"
+      },
+      {
+        "situation": "Quieres un sistema vivo",
+        "title": "Implementación de Agente IA",
+        "desc": "Despliega un agente IA en producción conectado a tus herramientas y reglas de escalado.",
+        "href": "/ai-automation-consulting-netherlands",
+        "cta": "Construir un agente"
+      },
+      {
+        "situation": "Zapier cruje",
+        "title": "Migración a n8n",
+        "desc": "Mueve automatizaciones frágiles o caras a un stack self-hosted y documentado.",
+        "href": "/expertise/n8n-migration-consulting",
+        "cta": "Migrar workflows"
+      },
+      {
+        "situation": "Tus sistemas no hablan",
+        "title": "Integración de Sistemas",
+        "desc": "Conecta CRM, ERP, WhatsApp, bases de datos y herramientas internas en un flujo operativo.",
+        "href": "/it-system-integration",
+        "cta": "Conectar el stack"
+      },
+      {
+        "situation": "Operas con hojas de cálculo",
+        "title": "Herramientas Internas",
+        "desc": "Sustituye tareas repetidas en spreadsheets por dashboards, portales y flujos de aprobación.",
+        "href": "/services/custom-internal-tools-development",
+        "cta": "Construir herramienta"
+      },
+      {
+        "situation": "Tu producto va lento",
+        "title": "Consultoría React / Next.js",
+        "desc": "Audita arquitectura, mejora rendimiento y vuelve más fácil desplegar frontend.",
+        "href": "/react-consulting",
+        "cta": "Arreglar codebase"
+      }
+    ]
+  },
+  "Packages": {
+    "badge": "Paquetes",
+    "title": "Puntos de entrada claros, rangos claros.",
+    "subtitle": "Estos son rangos de entrada, no retainers misteriosos. El alcance exacto depende de sistemas, acceso a datos y complejidad de integración.",
+    "cta": "Reservar llamada",
+    "learnMore": "Ver detalles",
+    "items": [
+      {
+        "name": "Sprint de Estrategia IA",
+        "price": "€2.5k–€5k",
+        "timeline": "1–2 semanas",
+        "desc": "Para cuando sabes que la IA puede ayudar, pero necesitas un roadmap priorizado antes de invertir en desarrollo.",
+        "href": "/ai-consulting",
+        "points": [
+          "Auditoría de workflows y mapa de oportunidades",
+          "Backlog de automatización priorizado por ROI",
+          "Arquitectura y estimación de implementación"
+        ]
+      },
+      {
+        "name": "Proyecto de Implementación",
+        "price": "Desde €8k",
+        "timeline": "4–8 semanas",
+        "desc": "Un sistema IA, workflow o integración en producción desplegado en tu infraestructura.",
+        "href": "/ai-automation-consulting-netherlands",
+        "points": [
+          "Alcance fijo y plan de entrega claro",
+          "Integración full-stack con herramientas existentes",
+          "Documentación y 30 días de soporte"
+        ]
+      },
+      {
+        "name": "Partner IA Continuo",
+        "price": "Desde €5k/mes",
+        "timeline": "Mensual",
+        "desc": "Soporte de ingeniería integrado para equipos que quieren automatización, mantenimiento e iteración continua.",
+        "href": "/#contact",
+        "points": [
+          "Nuevas automatizaciones y mejoras",
+          "Monitorización, fixes y cambios de workflow",
+          "Revisión estratégica del roadmap"
+        ]
+      }
+    ]
+  },
+  "Fit": {
+    "badge": "Encaje",
+    "title": "No somos el partner adecuado para cualquier idea IA.",
+    "subtitle": "Los mejores proyectos tienen un workflow claro, un responsable real y suficiente repetición para que valga la pena mantener la automatización.",
+    "good": {
+      "title": "Encajamos si...",
+      "items": [
+        "Quieres un sistema en producción conectado a herramientas reales.",
+        "Puedes nombrar el workflow, responsable y resultado que quieres mejorar.",
+        "Te importa la documentación, el traspaso y la mantenibilidad.",
+        "Quieres un alcance honesto antes de construir."
+      ]
+    },
+    "bad": {
+      "title": "No encajamos si...",
+      "items": [
+        "Solo necesitas una demo genérica de chatbot para una presentación.",
+        "Nadie del equipo será responsable del proceso tras el lanzamiento.",
+        "Buscas experimentar sin objetivo operativo medible.",
+        "Quieres la opción no-code más barata aunque sacrifique fiabilidad."
+      ]
+    },
+    "cta": {
+      "title": "¿No sabes si tu proyecto encaja?",
+      "desc": "Envíanos el workflow. Te diremos si merece la pena automatizarlo, qué debería incluir la primera versión y dónde está el riesgo.",
+      "button": "Pedir fit check"
     }
   },
   "QuickWins": {

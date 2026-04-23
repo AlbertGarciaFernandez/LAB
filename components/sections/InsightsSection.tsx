@@ -2,7 +2,12 @@ import Link from "next/link";
 import { insights } from "@/content/insights";
 
 export default function InsightsSection() {
-    const featuredInsights = insights.slice(0, 3);
+    const featuredSlugs = new Set([
+        "ai-agent-consulting",
+        "whatsapp-automation-netherlands",
+        "n8n-vs-zapier-netherlands",
+    ]);
+    const featuredInsights = insights.filter((article) => featuredSlugs.has(article.slug));
 
     return (
         <section className="relative overflow-hidden border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
@@ -16,7 +21,7 @@ export default function InsightsSection() {
                             Practical AI automation field notes.
                         </h2>
                         <p className="mt-5 text-lg leading-relaxed text-gray-300">
-                            Guides on workflow automation, conversational AI, n8n, and clinic operations for businesses comparing what to automate first.
+                            Guides on AI agents, WhatsApp automation, n8n strategy, and operational systems for businesses deciding what to ship next.
                         </p>
                     </div>
                     <Link
