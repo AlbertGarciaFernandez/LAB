@@ -174,3 +174,23 @@ test("lab landing page uses the dedicated public marketing stack", () => {
   assert.match(landingSections, /\/\$\{locale\}\/lab\/app/);
   assert.match(systemCard, /\/\$\{locale\}\/lab\/app\/system\/\$\{system\.slug\}/);
 });
+
+test("lab workspace shell is noindex and exposes the core navigation", () => {
+  const appLayout = readFileSync("app/[locale]/lab/app/layout.tsx", "utf8");
+  const appPage = readFileSync("app/[locale]/lab/app/page.tsx", "utf8");
+  const sidebar = readFileSync("components/lab/LabSidebar.tsx", "utf8");
+
+  assert.match(appLayout, /robots:\s*\{\s*index:\s*false,\s*follow:\s*false\s*\}/);
+
+  for (const item of [
+    "System 01 (Foundations)",
+    "System 02 (Operations)",
+    "System 03 (Architecture)",
+    "Resources",
+    "Settings",
+  ]) {
+    assert.match(sidebar, new RegExp(item.replace(/[()]/g, "\\$&")));
+  }
+
+  assert.match(appPage, /Next recommended step/);
+});
