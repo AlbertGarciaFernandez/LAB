@@ -194,3 +194,17 @@ test("lab workspace shell is noindex and exposes the core navigation", () => {
 
   assert.match(appPage, /Next recommended step/);
 });
+
+test("lab system and lesson templates wire the content helpers into the app routes", () => {
+  const systemPage = readFileSync("app/[locale]/lab/app/system/[systemSlug]/page.tsx", "utf8");
+  const lessonPage = readFileSync("app/[locale]/lab/app/system/[systemSlug]/lesson/[lessonSlug]/page.tsx", "utf8");
+
+  assert.match(systemPage, /getSystemBySlug/);
+  assert.match(systemPage, /ModuleList/);
+  assert.match(systemPage, /Continue to next lesson/);
+
+  assert.match(lessonPage, /getLessonBySlug/);
+  assert.match(lessonPage, /LessonContent/);
+  assert.match(lessonPage, /LessonExampleBlock/);
+  assert.match(lessonPage, /Downloadable resources/);
+});
