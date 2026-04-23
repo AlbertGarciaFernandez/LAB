@@ -19,6 +19,13 @@ async function loadLabModule() {
 test("lab data helpers return localized content and rich runtime shapes", async () => {
   const lab = await loadLabModule();
 
+  const enA = lab.getLabData("en");
+  const enB = lab.getLabData("en");
+  const originalTitle = enB.systems[0].title;
+  enA.systems[0].title = "Mutated title";
+
+  assert.equal(enB.systems[0].title, originalTitle);
+
   const en = lab.getLabData("en");
   const es = lab.getLabData("es");
   const esEs = lab.getLabData("es-ES");

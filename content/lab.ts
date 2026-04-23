@@ -59,19 +59,19 @@ type LabLocaleData = {
   resources: LabResource[];
 };
 
-const sharedLabCopy: LabCopy = {
+const baseLabCopy: LabCopy = {
   ctaPrimary: "View Systems",
   ctaSecondary: "Preview Platform",
 };
 
-const sharedLabUser: LabUser = {
+const baseLabUser: LabUser = {
   name: "Albert Garcia",
   role: "Founder",
   activeSystemSlug: "foundations",
   overallProgressSummary: "3 systems, 5 resources, 1 path to launch.",
 };
 
-const sharedLabSystems: LabSystem[] = [
+const baseLabSystems: LabSystem[] = [
   {
     slug: "foundations",
     label: "System 01",
@@ -227,7 +227,7 @@ const sharedLabSystems: LabSystem[] = [
   },
 ];
 
-const sharedLabResources: LabResource[] = [
+const baseLabResources: LabResource[] = [
   {
     slug: "acquisition-stack",
     category: "Acquisition",
@@ -289,13 +289,6 @@ function cloneLabData(data: LabLocaleData): LabLocaleData {
   };
 }
 
-const sharedLabLocaleData: LabLocaleData = {
-  copy: sharedLabCopy,
-  user: sharedLabUser,
-  systems: sharedLabSystems,
-  resources: sharedLabResources,
-};
-
 function normalizeLabLocale(locale: string): LabLocale {
   const normalized = locale.toLowerCase().replaceAll("_", "-");
   return /^es(?:-[a-z0-9]+)?$/.test(normalized) ? "es" : "en";
@@ -303,10 +296,40 @@ function normalizeLabLocale(locale: string): LabLocale {
 
 function buildLabLocaleData(locale: LabLocale): LabLocaleData {
   if (locale === "es") {
-    return cloneLabData(sharedLabLocaleData);
+    return {
+      copy: { ...baseLabCopy },
+      user: { ...baseLabUser },
+      systems: cloneLabData({
+        copy: baseLabCopy,
+        user: baseLabUser,
+        systems: baseLabSystems,
+        resources: baseLabResources,
+      }).systems,
+      resources: cloneLabData({
+        copy: baseLabCopy,
+        user: baseLabUser,
+        systems: baseLabSystems,
+        resources: baseLabResources,
+      }).resources,
+    };
   }
 
-  return cloneLabData(sharedLabLocaleData);
+  return {
+    copy: { ...baseLabCopy },
+    user: { ...baseLabUser },
+    systems: cloneLabData({
+      copy: baseLabCopy,
+      user: baseLabUser,
+      systems: baseLabSystems,
+      resources: baseLabResources,
+    }).systems,
+    resources: cloneLabData({
+      copy: baseLabCopy,
+      user: baseLabUser,
+      systems: baseLabSystems,
+      resources: baseLabResources,
+    }).resources,
+  };
 }
 
 const enLabData = buildLabLocaleData("en");
