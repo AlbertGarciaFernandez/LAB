@@ -138,9 +138,15 @@ test("lab landing page uses the dedicated public marketing stack", () => {
   const labLayout = readFileSync("app/[locale]/lab/layout.tsx", "utf8");
   const labPage = readFileSync("app/[locale]/lab/page.tsx", "utf8");
   const landingSections = readFileSync("components/lab/LabLandingSections.tsx", "utf8");
+  const localeLayout = readFileSync("app/[locale]/layout.tsx", "utf8");
+  const footerGate = readFileSync("components/layout/LocaleFooterGate.tsx", "utf8");
 
   assert.match(labLayout, /LabHeader/);
   assert.doesNotMatch(labLayout, /components\/layout\/Header/);
+  assert.match(localeLayout, /LocaleFooterGate/);
+  assert.doesNotMatch(localeLayout, /[^A-Za-z]Footer\s*\/>/);
+  assert.match(footerGate, /useSelectedLayoutSegment/);
+  assert.match(footerGate, /segment === "lab"/);
 
   assert.match(labPage, /generateMetadata/);
 
