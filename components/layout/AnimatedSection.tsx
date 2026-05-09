@@ -9,11 +9,7 @@ type Props = {
   className?: string;
 };
 
-export default function AnimatedSection({
-  id,
-  children,
-  className = "",
-}: Props) {
+export default function AnimatedSection({ id, children, className = "" }: Props) {
   return (
     <m.section
       id={id}
@@ -21,7 +17,7 @@ export default function AnimatedSection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`border-b border-white/5 bg-background ${className}`}
+      className={`bg-background border-b border-white/5 ${className}`}
     >
       {children}
     </m.section>

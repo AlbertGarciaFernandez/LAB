@@ -12,24 +12,21 @@ type PageParams = {
 };
 
 export function generateStaticParams() {
-  return insights.map((article) => ({
-    locale: "en",
-    slug: article.slug,
-  }));
+  return insights.flatMap((article) => [
+    { locale: "en", slug: article.slug },
+    { locale: "es", slug: article.slug },
+  ]);
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: PageParams;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
   const article = insightBySlug.get(params.slug);
+  const isSpanish = params.locale === "es";
 
-  if (params.locale !== "en" || !article) {
+  if (!article) {
     return {};
   }
 
-  const url = `${baseUrl}/en/insights/${article.slug}`;
+  const url = `${baseUrl}/${params.locale}/insights/${article.slug}`;
 
   return {
     title: `${article.title} | CodeHunter Lab`,
@@ -43,7 +40,7 @@ export async function generateMetadata({
       url,
       siteName: "CodeHunter Lab",
       type: "article",
-      locale: "en_US",
+      locale: isSpanish ? "es_ES" : "en_US",
       publishedTime: article.publishedAt,
       modifiedTime: article.modifiedAt,
     },
@@ -57,12 +54,13 @@ export async function generateMetadata({
 
 export default function InsightArticlePage({ params }: { params: PageParams }) {
   const article = insightBySlug.get(params.slug);
+  const isSpanish = params.locale === "es";
 
-  if (params.locale !== "en" || !article) {
+  if (!article) {
     notFound();
   }
 
-  const articleUrl = `${baseUrl}/en/insights/${article.slug}`;
+  const articleUrl = `${baseUrl}/${params.locale}/insights/${article.slug}`;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -101,11 +99,20 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
         />
 
+        {isSpanish && (
+          <div className="mb-8 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-4">
+            <p className="text-sm font-medium text-hunter-orange">
+              Este artículo está disponible en inglés. Estamos trabajando en la traducción al
+              español.
+            </p>
+          </div>
+        )}
+
         <Link
-          href="/en/insights"
+          href={`/${params.locale}/insights`}
           className="mb-10 inline-block text-sm font-bold uppercase tracking-widest text-hunter-green hover:text-white"
         >
-          Back to insights
+          {isSpanish ? "Volver a insights" : "Back to insights"}
         </Link>
 
         <article>
@@ -120,8 +127,12 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
               {article.description}
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <span>Published {article.publishedAt}</span>
-              <span>Updated {article.modifiedAt}</span>
+              <span>
+                {isSpanish ? "Publicado" : "Published"} {article.publishedAt}
+              </span>
+              <span>
+                {isSpanish ? "Actualizado" : "Updated"} {article.modifiedAt}
+              </span>
               <span>{article.readingTime}</span>
             </div>
           </header>
@@ -130,7 +141,10 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
             {article.sections.map((section, index) => {
               if (section.type === "heading") {
                 return (
-                  <h2 key={`${section.text}-${index}`} className="pt-4 text-3xl font-black tracking-tight">
+                  <h2
+                    key={`${section.text}-${index}`}
+                    className="pt-4 text-3xl font-black tracking-tight"
+                  >
                     {section.text}
                   </h2>
                 );
@@ -150,7 +164,10 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
               }
 
               return (
-                <p key={`${section.text}-${index}`} className="text-lg leading-relaxed text-gray-300">
+                <p
+                  key={`${section.text}-${index}`}
+                  className="text-lg leading-relaxed text-gray-300"
+                >
                   {section.text}
                 </p>
               );
@@ -159,7 +176,7 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
 
           <section className="mt-14 rounded-lg border border-hunter-green/30 bg-hunter-green/10 p-6">
             <h2 className="mb-4 text-2xl font-black tracking-tight">
-              Related services
+              {isSpanish ? "Servicios relacionados" : "Related services"}
             </h2>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {article.relatedServices.map((service) => (
@@ -178,4 +195,3 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
     </div>
   );
 }
-

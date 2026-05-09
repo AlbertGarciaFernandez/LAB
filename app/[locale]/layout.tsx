@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import CookieConsent from "@/components/ui/CookieConsent";
@@ -7,9 +8,8 @@ import GoogleAnalyticsConditional from "@/components/analytics/GoogleAnalyticsCo
 import LocaleFooterGate from "@/components/layout/LocaleFooterGate";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 
-
-//const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
-//const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
 
 export const viewport = {
   themeColor: "#0B0B0B",
@@ -23,28 +23,28 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const { locale } = params;
-    return {
-        metadataBase: new URL(baseUrl),
-        icons: {
-          icon: "/codehunter.logo.png",
-          shortcut: "/codehunter.logo.png",
-          apple: "/codehunter.logo.png",
-        },
-        title: "AI Automation Agency Netherlands | CodeHunter Lab",
-        description:
-          "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
-        keywords: [
-          "AI automation agency Netherlands",
-          "AI automation consulting Netherlands",
-          "AI agents Netherlands",
-          "n8n workflows Netherlands",
-          "workflow automation agency Netherlands",
-          "AI system integration",
-          "custom AI integrations Netherlands",
-          "AI automation Leiden",
-          "WhatsApp automation Netherlands",
-          "AI voice agents Netherlands",
-        ],
+  return {
+    metadataBase: new URL(baseUrl),
+    icons: {
+      icon: "/logo-hntr.svg",
+      shortcut: "/logo-hntr.svg",
+      apple: "/apple-touch-icon.png",
+    },
+    title: "AI Automation Agency Netherlands | CodeHunter Lab",
+    description:
+      "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
+    keywords: [
+      "AI automation agency Netherlands",
+      "AI automation consulting Netherlands",
+      "AI agents Netherlands",
+      "n8n workflows Netherlands",
+      "workflow automation agency Netherlands",
+      "AI system integration",
+      "custom AI integrations Netherlands",
+      "AI automation Leiden",
+      "WhatsApp automation Netherlands",
+      "AI voice agents Netherlands",
+    ],
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
@@ -52,32 +52,32 @@ export async function generateMetadata({
         es: `${baseUrl}/es`,
         "x-default": `${baseUrl}/en`,
       },
+    },
+    openGraph: {
+      title: "AI Automation Agency Netherlands | CodeHunter Lab",
+      description:
+        "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
+      url: `${baseUrl}/${locale}`,
+      siteName: "CodeHunter Lab",
+      type: "website",
+      locale: locale === "es" ? "es_ES" : "en_US",
+      images: [
+        {
+          url: `${baseUrl}/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: "AI Automation Agency Netherlands | CodeHunter Lab",
         },
-        openGraph: {
-          title: "AI Automation Agency Netherlands | CodeHunter Lab",
-          description:
-            "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
-          url: `${baseUrl}/${locale}`,
-          siteName: "CodeHunter Lab",
-          type: "website",
-          locale: locale === "es" ? "es_ES" : "en_US",
-          images: [
-            {
-              url: `${baseUrl}/${locale}/opengraph-image`,
-              width: 1200,
-              height: 630,
-              alt: "AI Automation Agency Netherlands | CodeHunter Lab",
-            },
-          ],
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "AI Automation Agency Netherlands | CodeHunter Lab",
-          description:
-            "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos.",
-          images: [`${baseUrl}/${locale}/opengraph-image`],
-        },
-      };
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "AI Automation Agency Netherlands | CodeHunter Lab",
+      description:
+        "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos.",
+      images: [`${baseUrl}/${locale}/opengraph-image`],
+    },
+  };
 }
 
 export default async function RootLayout({
@@ -89,11 +89,18 @@ export default async function RootLayout({
 }>) {
   const messages = await getMessages();
   return (
-    <html lang={locale} className="sans mono">
+    <html lang={locale} className={`${sans.variable} ${mono.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://formsubmit.co" />
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <MotionProvider>
-            <div className="bg-near-black text-white min-h-screen font-sans">
+            <div className="min-h-screen bg-near-black font-sans text-white">
               <div className="bg-noise" />
               {children}
               <LocaleFooterGate />
@@ -108,31 +115,35 @@ export default async function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://www.codehunterlab.com/#organization",
               name: "CodeHunter Lab",
               url: "https://www.codehunterlab.com",
-                  logo: "https://www.codehunterlab.com/logo-hntr.svg",
-                  foundingDate: "2024",
-                  sameAs: [
-                    "https://www.linkedin.com/company/codehunter-lab",
-                    "https://github.com/codehunter-lab",
-                  ],
+              logo: "https://www.codehunterlab.com/logo-hntr.svg",
+              foundingDate: "2024",
+              sameAs: [
+                "https://www.linkedin.com/company/codehunter-lab",
+                "https://github.com/codehunter-lab",
+              ],
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+31-6-2940-5122",
                 contactType: "customer service",
-                    areaServed: "NL",
-                    availableLanguage: ["English", "Spanish", "Dutch"],
-                  },
-                  knowsAbout: [
-                    "AI automation",
-                    "AI agents",
-                    "n8n workflows",
-                    "CRM integrations",
-                    "Next.js development",
-                  ],
-                }),
-              }}
-            />
+                areaServed: "NL",
+                availableLanguage: ["English", "Spanish", "Dutch"],
+              },
+              knowsAbout: [
+                "AI automation",
+                "AI agents",
+                "n8n workflows",
+                "CRM integrations",
+                "Next.js development",
+              ],
+              founder: {
+                "@id": "https://www.codehunterlab.com/#founder",
+              },
+            }),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -178,7 +189,7 @@ export default async function RootLayout({
               ],
             }),
           }}
-            />
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -190,9 +201,7 @@ export default async function RootLayout({
               url: "https://www.linkedin.com/in/albertgarciafernandez/",
               jobTitle: "Founder",
               worksFor: {
-                "@type": "Organization",
-                name: "CodeHunter Lab",
-                url: "https://www.codehunterlab.com",
+                "@id": "https://www.codehunterlab.com/#organization",
               },
               sameAs: [
                 "https://www.linkedin.com/in/albertgarciafernandez/",

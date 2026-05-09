@@ -13,6 +13,7 @@
 ### Task 1: Content Contract Test
 
 **Files:**
+
 - Create: `tests/seo-insights.test.mjs`
 
 - [ ] Write a failing Node test that checks for the required article slugs, metadata fields, internal links, and sitemap registration.
@@ -21,6 +22,7 @@
 ### Task 2: Insight Content Source
 
 **Files:**
+
 - Create: `content/insights.ts`
 
 - [ ] Add a typed `insights` array with four articles.
@@ -29,6 +31,7 @@
 ### Task 3: Insights Routes
 
 **Files:**
+
 - Create: `app/[locale]/insights/page.tsx`
 - Create: `app/[locale]/insights/[slug]/page.tsx`
 
@@ -39,6 +42,7 @@
 ### Task 4: Sitemap
 
 **Files:**
+
 - Modify: `app/sitemap.ts`
 
 - [ ] Add `/en/insights` and the four article URLs to the sitemap.
@@ -47,9 +51,9 @@
 ### Task 5: Verification
 
 **Files:**
+
 - Modify: `package.json`
 
 - [ ] Add a `test` script for the Node SEO test.
 - [ ] Run `npm test`.
 - [ ] Run `npm run build`.
-

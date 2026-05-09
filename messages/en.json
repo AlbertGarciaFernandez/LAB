@@ -946,11 +946,23 @@
       "title": "Integration That Actually Works",
       "without": {
         "title": "Without Integration",
-        "points": ["Manual copy-paste between apps", "Data always out of sync", "Hours wasted on admin tasks", "Human errors in critical records", "No visibility into your data flows"]
+        "points": [
+          "Manual copy-paste between apps",
+          "Data always out of sync",
+          "Hours wasted on admin tasks",
+          "Human errors in critical records",
+          "No visibility into your data flows"
+        ]
       },
       "with": {
         "title": "With CodeHunter Lab",
-        "points": ["Data flows automatically 24/7", "Single source of truth across all apps", "Your team focuses on real work", "Validated data, zero manual errors", "Full monitoring, alerts and audit trail"]
+        "points": [
+          "Data flows automatically 24/7",
+          "Single source of truth across all apps",
+          "Your team focuses on real work",
+          "Validated data, zero manual errors",
+          "Full monitoring, alerts and audit trail"
+        ]
       }
     },
     "CTA": {
@@ -1082,11 +1094,7 @@
       "whatsapp": {
         "title": "WhatsApp AI Agents",
         "desc": "24/7 Customer Support and Lead Qualification directly in WhatsApp. It talks like a human, knows your business, and books appointments automatically.",
-        "points": [
-          "Zero wait times",
-          "Connects to CRM",
-          "98% intent accuracy"
-        ]
+        "points": ["Zero wait times", "Connects to CRM", "98% intent accuracy"]
       },
       "voice": {
         "title": "AI Voice Call Bots",
@@ -1100,11 +1108,7 @@
       "automation": {
         "title": "Workflow Automation (n8n)",
         "desc": "We act as the \"glue\" between your apps. Using <strong>n8n</strong> and <strong>Make.com</strong>, we automate repetitive data entry, invoicing, and reporting.",
-        "points": [
-          "No more copy-pasting",
-          "Error-free operations",
-          "Custom API Integrations"
-        ]
+        "points": ["No more copy-pasting", "Error-free operations", "Custom API Integrations"]
       },
       "label": {
         "capabilities": "Capabilities",

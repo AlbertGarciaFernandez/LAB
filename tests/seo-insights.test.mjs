@@ -108,7 +108,7 @@ test("core commercial pages ship distinct CTR-focused metadata", () => {
   const aiConsultingLayout = readFileSync("app/[locale]/ai-consulting/layout.tsx", "utf8");
   const aiAutomationPage = readFileSync(
     "app/[locale]/ai-automation-consulting-netherlands/page.tsx",
-    "utf8",
+    "utf8"
   );
   const nextJsPage = readFileSync("app/[locale]/nextjs-development-agency/page.tsx", "utf8");
 
@@ -116,10 +116,16 @@ test("core commercial pages ship distinct CTR-focused metadata", () => {
   assert.match(localeLayout, /AI agents, n8n workflows, and custom integrations/);
 
   assert.match(aiConsultingLayout, /AI Consulting Netherlands \| Strategy, Delivery & AI Agents/);
-  assert.match(aiConsultingLayout, /AI consulting in the Netherlands for strategy, implementation, and AI systems that ship to production/);
+  assert.match(
+    aiConsultingLayout,
+    /AI consulting in the Netherlands for strategy, implementation, and AI systems that ship to production/
+  );
 
   assert.match(aiAutomationPage, /AI Automation Agency Netherlands \| n8n, WhatsApp & AI Agents/);
-  assert.match(aiAutomationPage, /WhatsApp agents, AI voice bots, n8n workflows, and CRM integrations/);
+  assert.match(
+    aiAutomationPage,
+    /WhatsApp agents, AI voice bots, n8n workflows, and CRM integrations/
+  );
 
   assert.match(nextJsPage, /Next\.js Agency Europe \| App Router, Migration & Performance/);
   assert.match(nextJsPage, /App Router, React Server Components, migrations, and performance work/);
@@ -159,12 +165,9 @@ test("commercial pages no longer link to temporary case studies", () => {
   const aiConsultingPage = readFileSync("app/[locale]/ai-consulting/page.tsx", "utf8");
   const aiAutomationPage = readFileSync(
     "app/[locale]/ai-automation-consulting-netherlands/PageContent.tsx",
-    "utf8",
+    "utf8"
   );
-  const nextJsPage = readFileSync(
-    "app/[locale]/nextjs-development-agency/PageContent.tsx",
-    "utf8",
-  );
+  const nextJsPage = readFileSync("app/[locale]/nextjs-development-agency/PageContent.tsx", "utf8");
 
   assert.doesNotMatch(aiConsultingPage, /\/case-studies/);
   assert.doesNotMatch(aiConsultingPage, /zapier-to-n8n-migration/);

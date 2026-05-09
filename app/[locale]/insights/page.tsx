@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import { insights } from "@/content/insights";
 
@@ -11,41 +10,44 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  if (params.locale !== "en") {
-    return {};
-  }
+  const isSpanish = params.locale === "es";
+
+  const title = isSpanish
+    ? "Insights de Automatización AI | CodeHunter Lab"
+    : "AI Automation Insights Netherlands | CodeHunter Lab";
+  const description = isSpanish
+    ? "Notas prácticas sobre automatización AI, flujos n8n, IA conversacional y automatización de clínicas para negocios holandeses."
+    : "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.";
+  const canonical = `${baseUrl}/${params.locale}/insights`;
 
   return {
-    title: "AI Automation Insights Netherlands | CodeHunter Lab",
-    description:
-      "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.",
+    title,
+    description,
     alternates: {
-      canonical: `${baseUrl}/en/insights`,
+      canonical,
     },
     openGraph: {
-      title: "AI Automation Insights Netherlands | CodeHunter Lab",
-      description:
-        "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.",
-      url: `${baseUrl}/en/insights`,
+      title,
+      description,
+      url: canonical,
       siteName: "CodeHunter Lab",
       type: "website",
-      locale: "en_US",
+      locale: isSpanish ? "es_ES" : "en_US",
     },
   };
 }
 
 export default function InsightsPage({ params }: { params: { locale: string } }) {
-  if (params.locale !== "en") {
-    notFound();
-  }
+  const isSpanish = params.locale === "es";
 
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "AI Automation Insights Netherlands",
-    description:
-      "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.",
-    url: `${baseUrl}/en/insights`,
+    name: isSpanish ? "Insights de Automatización AI" : "AI Automation Insights Netherlands",
+    description: isSpanish
+      ? "Notas prácticas sobre automatización AI, flujos n8n, IA conversacional y automatización de clínicas para negocios holandeses."
+      : "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.",
+    url: `${baseUrl}/${params.locale}/insights`,
     publisher: {
       "@type": "Organization",
       name: "CodeHunter Lab",
@@ -54,7 +56,7 @@ export default function InsightsPage({ params }: { params: { locale: string } })
     hasPart: insights.map((article) => ({
       "@type": "Article",
       headline: article.title,
-      url: `${baseUrl}/en/insights/${article.slug}`,
+      url: `${baseUrl}/${params.locale}/insights/${article.slug}`,
       datePublished: article.publishedAt,
       dateModified: article.modifiedAt,
     })),
@@ -68,17 +70,29 @@ export default function InsightsPage({ params }: { params: { locale: string } })
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
         />
+
+        {isSpanish && (
+          <div className="mb-8 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-4">
+            <p className="text-sm font-medium text-hunter-orange">
+              Estos artículos están disponibles en inglés. Estamos trabajando en la traducción al
+              español.
+            </p>
+          </div>
+        )}
+
         <section className="max-w-3xl">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-green">
-            Field notes
+            {isSpanish ? "Notas de campo" : "Field notes"}
           </p>
           <h1 className="mb-6 text-5xl font-black leading-none tracking-tighter md:text-7xl">
-            AI automation insights for Dutch businesses.
+            {isSpanish
+              ? "Insights de automatización AI para negocios holandeses."
+              : "AI automation insights for Dutch businesses."}
           </h1>
           <p className="text-lg leading-relaxed text-gray-300 md:text-xl">
-            Practical guides on the exact topics Google is already testing for
-            CodeHunter Lab: workflow automation, conversational AI, n8n, and
-            clinic operations.
+            {isSpanish
+              ? "Guías prácticas sobre los temas exactos que Google ya está probando para CodeHunter Lab: automatización de flujos, IA conversacional, n8n y operaciones de clínicas."
+              : "Practical guides on the exact topics Google is already testing for CodeHunter Lab: workflow automation, conversational AI, n8n, and clinic operations."}
           </p>
         </section>
 
@@ -93,18 +107,19 @@ export default function InsightsPage({ params }: { params: { locale: string } })
                 <span>{article.readingTime}</span>
               </div>
               <h2 className="mb-4 text-2xl font-black leading-tight tracking-tight">
-                <Link href={`/en/insights/${article.slug}`} className="hover:text-hunter-green">
+                <Link
+                  href={`/${params.locale}/insights/${article.slug}`}
+                  className="hover:text-hunter-green"
+                >
                   {article.title}
                 </Link>
               </h2>
-              <p className="mb-6 text-sm leading-relaxed text-gray-300">
-                {article.description}
-              </p>
+              <p className="mb-6 text-sm leading-relaxed text-gray-300">{article.description}</p>
               <Link
-                href={`/en/insights/${article.slug}`}
+                href={`/${params.locale}/insights/${article.slug}`}
                 className="text-sm font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
               >
-                Read insight
+                {isSpanish ? "Leer insight" : "Read insight"}
               </Link>
             </article>
           ))}
@@ -113,4 +128,3 @@ export default function InsightsPage({ params }: { params: { locale: string } })
     </div>
   );
 }
-

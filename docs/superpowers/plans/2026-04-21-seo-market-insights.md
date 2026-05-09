@@ -13,6 +13,7 @@
 ### Task 1: Protect Against Sitemap Drift
 
 **Files:**
+
 - Modify: `tests/seo-insights.test.mjs`
 - Modify: `app/sitemap.ts`
 
@@ -24,6 +25,7 @@
 ### Task 2: Expand Insight Inventory
 
 **Files:**
+
 - Modify: `content/insights.ts`
 
 - [ ] Add five new articles with complete metadata, target queries, related services, and content sections:
@@ -38,6 +40,7 @@
 ### Task 3: Improve CTR-Oriented Metadata On Core Pages
 
 **Files:**
+
 - Modify: `app/[locale]/layout.tsx`
 - Modify: `app/[locale]/ai-consulting/layout.tsx`
 - Modify: `app/[locale]/ai-automation-consulting-netherlands/page.tsx`
@@ -55,6 +58,7 @@
 ### Task 4: Verify Production Readiness
 
 **Files:**
+
 - Modify: `package.json` only if needed for verification convenience
 
 - [ ] Run `node --test tests/seo-insights.test.mjs`.

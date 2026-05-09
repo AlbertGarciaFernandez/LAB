@@ -10,13 +10,17 @@ export default function ResourceItem({ resource }: ResourceItemProps) {
     <LabCard className="flex h-full flex-col justify-between">
       <div>
         <div className="flex items-center justify-between gap-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-black/40">{resource.category}</p>
-          <span className="rounded-full border border-black/8 bg-[#faf7f2] px-3 py-1 text-xs text-black/55">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-black/40">
+            {resource.category}
+          </p>
+          <span className="border-black/8 rounded-full border bg-[#faf7f2] px-3 py-1 text-xs text-black/55">
             Download
           </span>
         </div>
-        <h3 className="mt-4 text-xl font-semibold tracking-[-0.03em] text-black">{resource.title}</h3>
-        <p className="mt-3 text-sm leading-6 text-black/62">{resource.description}</p>
+        <h3 className="mt-4 text-xl font-semibold tracking-[-0.03em] text-black">
+          {resource.title}
+        </h3>
+        <p className="text-black/62 mt-3 text-sm leading-6">{resource.description}</p>
       </div>
 
       <button

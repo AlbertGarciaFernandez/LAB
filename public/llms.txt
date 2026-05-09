@@ -124,6 +124,14 @@ Compliance: GDPR-compliant by design
 
 Manual workflows are a silent tax on revenue. The ROI Calculator estimates how much a business is burning on tasks that an AI Agent could handle for a fraction of the cost. Input: number of employees on manual tasks, weekly hours per person, and average loaded hourly rate. Output: monthly waste and annual savings potential. The calculator shows why automation is now a competitive survival strategy — the savings represent capital that can be reinvested into growth or R&D.
 
+## Case Studies
+
+### Dental Clinic WhatsApp Automation (Netherlands)
+A dental clinic with 3 locations and 12 staff in the Netherlands reduced no-shows by 35% and saved 12 front-desk hours per week using an n8n workflow connected to the practice management system and WhatsApp Business API. The system sends appointment reminders at 48 and 24 hours before visits, triggers patient recall campaigns for overdue checkups, and routes unclear replies to staff via Slack. Technologies: n8n, WhatsApp Business API, Make. Timeline: 4 weeks.
+
+### Accounting Firm Document Automation (Netherlands)
+An accounting firm with 8 accountants and 400+ clients cut document processing time by 60% and improved client response rates by 45% with an automated intake pipeline built on n8n and Google Drive API. Client documents are auto-classified, renamed, and checked against required-document lists. Missing-document reminders fire automatically after 24 and 72 hours. Onboarding time for new clients dropped by 50%. Technologies: n8n, Google Drive API, Zapier. Timeline: 6 weeks.
+
 ## Full Content
 
 For full page content, see: https://www.codehunterlab.com/llms-full.txt

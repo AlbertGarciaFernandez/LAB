@@ -1,3 +1,10 @@
+// NOTE: The Lab platform is intentionally a mockup / demo for marketing purposes.
+// All data, auth states, progress, and user content are static placeholders.
+// This is NOT a production backend. Converting it to a real product would
+// require: authentication (Clerk/Auth.js), database (PostgreSQL/Supabase),
+// and a real API for progress tracking and resource downloads.
+// See README.md for more context.
+
 export type LabLocale = "en" | "es";
 
 export type LabLesson = {
@@ -149,7 +156,8 @@ const baseLabLanding: LabLanding = {
   snapshotLabel: "Current Lab Snapshot",
   problem: {
     eyebrow: "The Problem",
-    title: "Most teams do not need more ideas. They need a product surface that organizes what matters.",
+    title:
+      "Most teams do not need more ideas. They need a product surface that organizes what matters.",
     description:
       "Paid social traffic drops into disconnected promises far too often. Lab is built to tighten the handoff between positioning, systems, and what a buyer can actually preview next.",
     items: [

@@ -23,7 +23,7 @@ export default function LabWorkspaceLayout({
 
         <main className="flex min-h-full flex-col gap-4">
           <LabTopbar locale={locale} />
-          <div className="flex-1 rounded-[34px] border border-black/8 bg-white/72 p-4 shadow-[0_24px_80px_rgba(17,24,39,0.06)] backdrop-blur sm:p-6">
+          <div className="border-black/8 bg-white/72 flex-1 rounded-[34px] border p-4 shadow-[0_24px_80px_rgba(17,24,39,0.06)] backdrop-blur sm:p-6">
             {children}
           </div>
         </main>

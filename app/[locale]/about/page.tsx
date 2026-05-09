@@ -57,8 +57,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
     "@type": "AboutPage",
     name: "About Albert Garcia",
     url: `${baseUrl}/en/about`,
-    description:
-      "About Albert Garcia, founder of CodeHunter Lab in Leiden, Netherlands.",
+    description: "About Albert Garcia, founder of CodeHunter Lab in Leiden, Netherlands.",
     mainEntity: {
       "@type": "Person",
       name: "Albert Garcia",
@@ -98,16 +97,15 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
               Albert Garcia
             </h1>
             <p className="mb-6 max-w-3xl text-lg leading-relaxed text-gray-300 md:text-xl">
-              Based in Leiden, Netherlands. Working across Europe and
-              internationally. I built CodeHunter Lab to help teams move from
-              promising ideas to systems that actually run in production.
+              Based in Leiden, Netherlands. Working across Europe and internationally. I built
+              CodeHunter Lab to help teams move from promising ideas to systems that actually run in
+              production.
             </p>
             <p className="max-w-3xl text-lg leading-relaxed text-gray-400">
-              The work sits at the intersection of AI automation, product
-              delivery, and frontend architecture. That means scoping the right
-              problem, designing the system around real operational constraints,
-              and staying close enough to execution that the result is useful
-              after launch instead of impressive only in a demo.
+              The work sits at the intersection of AI automation, product delivery, and frontend
+              architecture. That means scoping the right problem, designing the system around real
+              operational constraints, and staying close enough to execution that the result is
+              useful after launch instead of impressive only in a demo.
             </p>
           </div>
 
@@ -128,9 +126,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
 
         <section className="grid gap-10 py-14 lg:grid-cols-2">
           <div>
-            <h2 className="mb-5 text-3xl font-black tracking-tight">
-              Focus areas
-            </h2>
+            <h2 className="mb-5 text-3xl font-black tracking-tight">Focus areas</h2>
             <ul className="space-y-4">
               {strengths.map((item) => (
                 <li key={item} className="flex gap-3 text-gray-300">
@@ -142,32 +138,26 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           </div>
 
           <div>
-            <h2 className="mb-5 text-3xl font-black tracking-tight">
-              Why this matters
-            </h2>
+            <h2 className="mb-5 text-3xl font-black tracking-tight">Why this matters</h2>
             <p className="mb-5 text-lg leading-relaxed text-gray-300">
-              Many AI and software engagements fail because strategy, delivery,
-              and operational reality are separated too early. The model might
-              look good, the demo might work, and the roadmap might sound smart
-              but the system still never becomes part of the business.
+              Many AI and software engagements fail because strategy, delivery, and operational
+              reality are separated too early. The model might look good, the demo might work, and
+              the roadmap might sound smart but the system still never becomes part of the business.
             </p>
             <p className="text-lg leading-relaxed text-gray-400">
-              CodeHunter Lab is designed to close that gap. The goal is not just
-              to propose what should happen next. The goal is to build the next
-              useful system and leave the client with something they can actually
-              run, extend, and own.
+              CodeHunter Lab is designed to close that gap. The goal is not just to propose what
+              should happen next. The goal is to build the next useful system and leave the client
+              with something they can actually run, extend, and own.
             </p>
           </div>
         </section>
 
         <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
-          <h2 className="mb-4 text-3xl font-black tracking-tight">
-            Start with the right problem
-          </h2>
+          <h2 className="mb-4 text-3xl font-black tracking-tight">Start with the right problem</h2>
           <p className="mb-6 max-w-3xl text-lg leading-relaxed text-gray-300">
-            The first step is usually not "build everything." It is choosing
-            the bottleneck worth fixing, the system worth integrating, and the
-            scope that can reach production without turning into internal drag.
+            The first step is usually not &ldquo;build everything.&rdquo; It is choosing the
+            bottleneck worth fixing, the system worth integrating, and the scope that can reach
+            production without turning into internal drag.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link

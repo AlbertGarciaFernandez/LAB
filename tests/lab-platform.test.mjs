@@ -54,19 +54,38 @@ test("lab data helpers return localized content and rich runtime shapes", async 
   assert.notStrictEqual(en.resources, es.resources);
   assert.notStrictEqual(en.systems[0].modules, es.systems[0].modules);
   assert.notStrictEqual(en.systems[0].modules[0].lessons, es.systems[0].modules[0].lessons);
-  assert.deepEqual(en.systems.map((system) => system.slug), es.systems.map((system) => system.slug));
-  assert.deepEqual(en.resources.map((resource) => resource.slug), es.resources.map((resource) => resource.slug));
+  assert.deepEqual(
+    en.systems.map((system) => system.slug),
+    es.systems.map((system) => system.slug)
+  );
+  assert.deepEqual(
+    en.resources.map((resource) => resource.slug),
+    es.resources.map((resource) => resource.slug)
+  );
   assert.deepEqual(
     en.systems.flatMap((system) => system.modules.map((module) => module.slug)),
-    es.systems.flatMap((system) => system.modules.map((module) => module.slug)),
+    es.systems.flatMap((system) => system.modules.map((module) => module.slug))
   );
   assert.deepEqual(
-    en.systems.flatMap((system) => system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))),
-    es.systems.flatMap((system) => system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))),
+    en.systems.flatMap((system) =>
+      system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))
+    ),
+    es.systems.flatMap((system) =>
+      system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug))
+    )
   );
-  assert.deepEqual(fallback.systems.map((system) => system.slug), en.systems.map((system) => system.slug));
-  assert.deepEqual(esEs.systems.map((system) => system.slug), en.systems.map((system) => system.slug));
-  assert.deepEqual(esMx.resources.map((resource) => resource.slug), en.resources.map((resource) => resource.slug));
+  assert.deepEqual(
+    fallback.systems.map((system) => system.slug),
+    en.systems.map((system) => system.slug)
+  );
+  assert.deepEqual(
+    esEs.systems.map((system) => system.slug),
+    en.systems.map((system) => system.slug)
+  );
+  assert.deepEqual(
+    esMx.resources.map((resource) => resource.slug),
+    en.resources.map((resource) => resource.slug)
+  );
 
   for (const locale of ["en", "es"]) {
     const data = lab.getLabData(locale);
@@ -76,13 +95,17 @@ test("lab data helpers return localized content and rich runtime shapes", async 
     assert.equal(new Set(systemSlugs).size, systemSlugs.length);
     assert.equal(new Set(resourceSlugs).size, resourceSlugs.length);
     assert.ok(data.systems.every((system) => system.modules.length > 0));
-    assert.ok(data.systems.every((system) => system.modules.every((module) => module.lessons.length > 0)));
+    assert.ok(
+      data.systems.every((system) => system.modules.every((module) => module.lessons.length > 0))
+    );
     assert.ok(data.user.activeSystemSlug);
     assert.ok(systemSlugs.includes(data.user.activeSystemSlug));
 
     for (const system of data.systems) {
       const moduleSlugs = system.modules.map((module) => module.slug);
-      const lessonSlugs = system.modules.flatMap((module) => module.lessons.map((lesson) => lesson.slug));
+      const lessonSlugs = system.modules.flatMap((module) =>
+        module.lessons.map((lesson) => lesson.slug)
+      );
 
       assert.equal(new Set(moduleSlugs).size, moduleSlugs.length);
       assert.equal(new Set(lessonSlugs).size, lessonSlugs.length);
@@ -122,13 +145,22 @@ test("lab data helpers return localized content and rich runtime shapes", async 
   assert.equal(en.landing.navItems[0].label, "Why Lab");
   assert.equal(en.user.overallProgressSummary, "3 systems, 5 resources, 1 path to launch.");
   assert.equal(en.resources[0].downloadLabel, "Download acquisition stack");
-  assert.equal(en.systems[0].overview, "Start here to orient the lab and define the base strategy.");
+  assert.equal(
+    en.systems[0].overview,
+    "Start here to orient the lab and define the base strategy."
+  );
   assert.equal(en.systems[0].modules[0].progressPercent, 100);
-  assert.equal(en.systems[0].modules[0].lessons[0].example.summary, "Use the overview to decide where to begin.");
+  assert.equal(
+    en.systems[0].modules[0].lessons[0].example.summary,
+    "Use the overview to decide where to begin."
+  );
   assert.equal(en.systems[0].modules[0].lessons[0].example.title, "Example use");
   assert.ok(Array.isArray(en.systems[0].modules[0].lessons[0].steps));
   assert.equal(en.systems[0].modules[0].lessons[0].steps[0].title, "Review the platform overview");
-  assert.equal(en.systems[0].modules[0].lessons[0].steps[0].body, "Confirm the systems and how they fit together.");
+  assert.equal(
+    en.systems[0].modules[0].lessons[0].steps[0].body,
+    "Confirm the systems and how they fit together."
+  );
 });
 
 test("package test script runs the full mjs test suite", () => {
@@ -218,7 +250,10 @@ test("lab crawler controls keep the app private while preserving the public lab 
 
 test("lab system and lesson templates wire the content helpers into the app routes", () => {
   const systemPage = readFileSync("app/[locale]/lab/app/system/[systemSlug]/page.tsx", "utf8");
-  const lessonPage = readFileSync("app/[locale]/lab/app/system/[systemSlug]/lesson/[lessonSlug]/page.tsx", "utf8");
+  const lessonPage = readFileSync(
+    "app/[locale]/lab/app/system/[systemSlug]/lesson/[lessonSlug]/page.tsx",
+    "utf8"
+  );
 
   assert.match(systemPage, /getSystemBySlug/);
   assert.match(systemPage, /ModuleList/);

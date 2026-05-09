@@ -28,7 +28,7 @@ export default function SystemCard({ locale, system }: SystemCardProps) {
         <p className="mt-4 text-sm leading-6 text-black/65">{system.shortDescription}</p>
         <p className="mt-5 text-sm leading-6 text-black/55">{system.overview}</p>
 
-        <dl className="mt-6 grid grid-cols-2 gap-4 border-t border-black/8 pt-6 text-sm">
+        <dl className="border-black/8 mt-6 grid grid-cols-2 gap-4 border-t pt-6 text-sm">
           <div>
             <dt className="text-black/45">Modules</dt>
             <dd className="mt-1 text-lg font-semibold text-black">{system.modules.length}</dd>

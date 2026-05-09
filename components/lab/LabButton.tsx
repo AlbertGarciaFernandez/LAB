@@ -24,7 +24,7 @@ export default function LabButton({
         variant === "primary"
           ? "bg-black text-white hover:bg-black/85"
           : "border border-black/10 bg-white text-black hover:border-black/20 hover:bg-black/[0.03]",
-        className,
+        className
       )}
     >
       {children}

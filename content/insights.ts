@@ -56,8 +56,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "A workflow automation agency helps a business remove repeated manual work from sales, operations, finance, support, and internal reporting. In the Netherlands, the strongest automation opportunities usually sit between existing tools: CRM systems, email inboxes, WhatsApp conversations, accounting software, spreadsheets, and industry-specific platforms.",
+        text: "A workflow automation agency helps a business remove repeated manual work from sales, operations, finance, support, and internal reporting. In the Netherlands, the strongest automation opportunities usually sit between existing tools: CRM systems, email inboxes, WhatsApp conversations, accounting software, spreadsheets, and industry-specific platforms.",
       },
       {
         type: "heading",
@@ -65,8 +64,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The first automation project should not be the most futuristic idea. It should be the workflow that happens every week, consumes measurable hours, and has a clear owner. Good first candidates include lead qualification, appointment reminders, invoice intake, customer follow-up, document routing, and CRM updates.",
+        text: "The first automation project should not be the most futuristic idea. It should be the workflow that happens every week, consumes measurable hours, and has a clear owner. Good first candidates include lead qualification, appointment reminders, invoice intake, customer follow-up, document routing, and CRM updates.",
       },
       {
         type: "list",
@@ -83,8 +81,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "AI agents, n8n workflows, and custom integrations are useful only when they reduce cost, increase response speed, or recover revenue that is currently leaking. A good automation roadmap ranks each idea by monthly hours saved, error reduction, revenue impact, implementation complexity, and operational risk.",
+        text: "AI agents, n8n workflows, and custom integrations are useful only when they reduce cost, increase response speed, or recover revenue that is currently leaking. A good automation roadmap ranks each idea by monthly hours saved, error reduction, revenue impact, implementation complexity, and operational risk.",
       },
       {
         type: "heading",
@@ -92,8 +89,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Hire a workflow automation agency when the work crosses multiple systems, touches customer communication, or needs to run reliably without a human watching every step. Simple one-app automations can often be built internally. Multi-step automations with CRM, WhatsApp, accounting software, and custom APIs benefit from engineering discipline.",
+        text: "Hire a workflow automation agency when the work crosses multiple systems, touches customer communication, or needs to run reliably without a human watching every step. Simple one-app automations can often be built internally. Multi-step automations with CRM, WhatsApp, accounting software, and custom APIs benefit from engineering discipline.",
       },
     ],
   },
@@ -124,8 +120,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "A conversational AI consultant designs and deploys AI systems that speak with customers or employees through channels such as WhatsApp, website chat, voice calls, email, and internal tools. The goal is not to add a chatbot for decoration. The goal is to complete a business process with less waiting, fewer handoffs, and better data capture.",
+        text: "A conversational AI consultant designs and deploys AI systems that speak with customers or employees through channels such as WhatsApp, website chat, voice calls, email, and internal tools. The goal is not to add a chatbot for decoration. The goal is to complete a business process with less waiting, fewer handoffs, and better data capture.",
       },
       {
         type: "heading",
@@ -133,8 +128,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The safest first use cases are lead qualification, appointment booking, intake triage, FAQ handling with escalation, post-visit follow-up, and CRM updates after a conversation. These tasks have clear boundaries, measurable outcomes, and a natural fallback to a human team member.",
+        text: "The safest first use cases are lead qualification, appointment booking, intake triage, FAQ handling with escalation, post-visit follow-up, and CRM updates after a conversation. These tasks have clear boundaries, measurable outcomes, and a natural fallback to a human team member.",
       },
       {
         type: "list",
@@ -151,8 +145,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The cost is rarely driven by the language model alone. The expensive part is integrating the assistant with calendars, CRMs, inboxes, knowledge bases, permissions, analytics, and escalation rules. A production conversational AI system needs logging, handover rules, prompt evaluation, and a clear maintenance owner.",
+        text: "The cost is rarely driven by the language model alone. The expensive part is integrating the assistant with calendars, CRMs, inboxes, knowledge bases, permissions, analytics, and escalation rules. A production conversational AI system needs logging, handover rules, prompt evaluation, and a clear maintenance owner.",
       },
       {
         type: "heading",
@@ -160,8 +153,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The main risks are hallucinated answers, unclear consent, poor escalation, weak data privacy boundaries, and teams losing trust after a bad first deployment. A consultant should define what the AI may answer, what it must refuse, when it escalates, and how performance is reviewed after launch.",
+        text: "The main risks are hallucinated answers, unclear consent, poor escalation, weak data privacy boundaries, and teams losing trust after a bad first deployment. A consultant should define what the AI may answer, what it must refuse, when it escalates, and how performance is reviewed after launch.",
       },
     ],
   },
@@ -174,11 +166,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-10",
     modifiedAt: "2026-04-10",
     readingTime: "7 min read",
-    targetQueries: [
-      "n8n consultant netherlands",
-      "n8n expert nederland",
-      "n8n consulting",
-    ],
+    targetQueries: ["n8n consultant netherlands", "n8n expert nederland", "n8n consulting"],
     relatedServices: [
       {
         label: "n8n migration consulting",
@@ -192,8 +180,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "An n8n consultant helps teams design, migrate, self-host, and maintain workflow automations in n8n. The platform is strongest when a business needs complex branching, API integrations, AI steps, private infrastructure, or predictable automation costs at higher volume.",
+        text: "An n8n consultant helps teams design, migrate, self-host, and maintain workflow automations in n8n. The platform is strongest when a business needs complex branching, API integrations, AI steps, private infrastructure, or predictable automation costs at higher volume.",
       },
       {
         type: "heading",
@@ -201,8 +188,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "n8n usually beats Zapier and Make when workflows need custom API calls, versionable logic, data privacy controls, reusable subflows, and self-hosted execution. It also becomes attractive when task volume makes per-operation pricing expensive.",
+        text: "n8n usually beats Zapier and Make when workflows need custom API calls, versionable logic, data privacy controls, reusable subflows, and self-hosted execution. It also becomes attractive when task volume makes per-operation pricing expensive.",
       },
       {
         type: "list",
@@ -219,8 +205,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A good n8n consultant should deliver more than a canvas full of nodes. The output should include documented workflows, credential handling, failure alerts, retry behavior, deployment notes, naming conventions, and a handover plan so the automation can survive real operations.",
+        text: "A good n8n consultant should deliver more than a canvas full of nodes. The output should include documented workflows, credential handling, failure alerts, retry behavior, deployment notes, naming conventions, and a handover plan so the automation can survive real operations.",
       },
       {
         type: "heading",
@@ -228,8 +213,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Migrating expensive or fragile Zapier and Make automations into n8n is often a practical first step. It creates a clear before-and-after comparison: cost, reliability, ownership, and maintainability.",
+        text: "Migrating expensive or fragile Zapier and Make automations into n8n is often a practical first step. It creates a clear before-and-after comparison: cost, reliability, ownership, and maintainability.",
       },
     ],
   },
@@ -260,8 +244,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "Dental clinic WhatsApp automation helps practices send appointment reminders, patient recall messages, post-treatment follow-ups, and review requests without manually chasing every patient. For clinics in the Netherlands, the best systems are practical, consent-aware, and connected to the tools the front desk already uses.",
+        text: "Dental clinic WhatsApp automation helps practices send appointment reminders, patient recall messages, post-treatment follow-ups, and review requests without manually chasing every patient. For clinics in the Netherlands, the best systems are practical, consent-aware, and connected to the tools the front desk already uses.",
       },
       {
         type: "heading",
@@ -269,8 +252,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The highest-ROI starting point is usually appointment reminders and recall follow-up. Missed appointments create empty chair time, and forgotten recall campaigns quietly reduce patient retention. Automation keeps these messages consistent while letting staff focus on exceptions.",
+        text: "The highest-ROI starting point is usually appointment reminders and recall follow-up. Missed appointments create empty chair time, and forgotten recall campaigns quietly reduce patient retention. Automation keeps these messages consistent while letting staff focus on exceptions.",
       },
       {
         type: "list",
@@ -287,8 +269,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A clinic should know exactly what data is sent through WhatsApp, where conversation logs are stored, and who can access them. Patient-facing automation needs clear consent, careful message templates, and escalation rules for anything clinical or urgent.",
+        text: "A clinic should know exactly what data is sent through WhatsApp, where conversation logs are stored, and who can access them. Patient-facing automation needs clear consent, careful message templates, and escalation rules for anything clinical or urgent.",
       },
       {
         type: "heading",
@@ -296,8 +277,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The strongest clinic automation is not a separate chatbot. It is connected to appointment workflows, patient records, staff notifications, and reporting. That connection is what turns a reminder bot into a real operational system.",
+        text: "The strongest clinic automation is not a separate chatbot. It is connected to appointment workflows, patient records, staff notifications, and reporting. That connection is what turns a reminder bot into a real operational system.",
       },
     ],
   },
@@ -328,8 +308,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "AI consultants in the Netherlands vary widely. Some focus on strategy decks, some on data science models, and some on production automation systems. The right partner depends on whether you need a roadmap, a prototype, or a working system connected to your CRM, inbox, calendar, database, and operations.",
+        text: "AI consultants in the Netherlands vary widely. Some focus on strategy decks, some on data science models, and some on production automation systems. The right partner depends on whether you need a roadmap, a prototype, or a working system connected to your CRM, inbox, calendar, database, and operations.",
       },
       {
         type: "heading",
@@ -337,8 +316,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A useful AI strategy defines where automation can create measurable value. A useful implementation turns that strategy into software that survives real users, edge cases, privacy constraints, and maintenance. Many failed AI projects happen because the strategy and implementation teams never meet in the same architecture.",
+        text: "A useful AI strategy defines where automation can create measurable value. A useful implementation turns that strategy into software that survives real users, edge cases, privacy constraints, and maintenance. Many failed AI projects happen because the strategy and implementation teams never meet in the same architecture.",
       },
       {
         type: "list",
@@ -355,8 +333,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "For most Dutch SMEs, the safest first step is a short AI opportunity sprint. It should map workflows, rank use cases by ROI, estimate implementation effort, and identify the one automation project worth building first.",
+        text: "For most Dutch SMEs, the safest first step is a short AI opportunity sprint. It should map workflows, rank use cases by ROI, estimate implementation effort, and identify the one automation project worth building first.",
       },
     ],
   },
@@ -387,8 +364,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "Automation consultancy helps companies decide which manual processes should become software, which should stay human, and which need a hybrid approach. The work starts with process discovery, but the value appears only when the automation is deployed, monitored, and adopted by the team.",
+        text: "Automation consultancy helps companies decide which manual processes should become software, which should stay human, and which need a hybrid approach. The work starts with process discovery, but the value appears only when the automation is deployed, monitored, and adopted by the team.",
       },
       {
         type: "heading",
@@ -396,8 +372,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The most expensive manual work often hides between systems. A lead arrives by email, gets copied to a spreadsheet, receives a manual reply, then waits for someone to update the CRM. Automation should remove those handoffs and keep the source of truth updated automatically.",
+        text: "The most expensive manual work often hides between systems. A lead arrives by email, gets copied to a spreadsheet, receives a manual reply, then waits for someone to update the CRM. Automation should remove those handoffs and keep the source of truth updated automatically.",
       },
       {
         type: "list",
@@ -414,8 +389,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A finished automation project should leave the company with documented workflows, clear credentials, deployment notes, monitoring, and a maintenance plan. Without that, the automation becomes another fragile black box.",
+        text: "A finished automation project should leave the company with documented workflows, clear credentials, deployment notes, monitoring, and a maintenance plan. Without that, the automation becomes another fragile black box.",
       },
     ],
   },
@@ -446,8 +420,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "A system integrator connects the tools a business already depends on: CRM, ERP, accounting software, customer support, data warehouses, messaging platforms, and custom applications. In AI projects, integration is the difference between a demo and a system that can act on real business data.",
+        text: "A system integrator connects the tools a business already depends on: CRM, ERP, accounting software, customer support, data warehouses, messaging platforms, and custom applications. In AI projects, integration is the difference between a demo and a system that can act on real business data.",
       },
       {
         type: "heading",
@@ -455,8 +428,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Before connecting APIs, a team needs to know which system owns each record. Customer data might live in the CRM, invoices in accounting software, schedules in a practice platform, and operational notes in email. Integration work fails when two systems both believe they are the source of truth.",
+        text: "Before connecting APIs, a team needs to know which system owns each record. Customer data might live in the CRM, invoices in accounting software, schedules in a practice platform, and operational notes in email. Integration work fails when two systems both believe they are the source of truth.",
       },
       {
         type: "list",
@@ -473,8 +445,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "An AI agent that cannot read current customer data or write outcomes back to the CRM is only a chat interface. Production AI needs system integration so every conversation, decision, handoff, and escalation becomes part of the business workflow.",
+        text: "An AI agent that cannot read current customer data or write outcomes back to the CRM is only a chat interface. Production AI needs system integration so every conversation, decision, handoff, and escalation becomes part of the business workflow.",
       },
     ],
   },
@@ -505,8 +476,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "CRM integration services connect customer records with the rest of the business. For Dutch teams, the practical value is simple: fewer manual updates, faster follow-up, cleaner reporting, and better handoffs between marketing, sales, support, and operations.",
+        text: "CRM integration services connect customer records with the rest of the business. For Dutch teams, the practical value is simple: fewer manual updates, faster follow-up, cleaner reporting, and better handoffs between marketing, sales, support, and operations.",
       },
       {
         type: "heading",
@@ -514,8 +484,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The first CRM integration should usually connect inbound leads to qualification, routing, and follow-up. Website forms, WhatsApp messages, email inquiries, and ad leads should create structured CRM records automatically, with ownership and next steps assigned immediately.",
+        text: "The first CRM integration should usually connect inbound leads to qualification, routing, and follow-up. Website forms, WhatsApp messages, email inquiries, and ad leads should create structured CRM records automatically, with ownership and next steps assigned immediately.",
       },
       {
         type: "list",
@@ -532,8 +501,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A CRM can become worse after automation if every tool writes noisy data into it. Good integration filters events, normalizes fields, and keeps human-readable notes so the CRM becomes more useful, not just more full.",
+        text: "A CRM can become worse after automation if every tool writes noisy data into it. Good integration filters events, normalizes fields, and keeps human-readable notes so the CRM becomes more useful, not just more full.",
       },
     ],
   },
@@ -546,11 +514,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-10",
     modifiedAt: "2026-04-10",
     readingTime: "6 min read",
-    targetQueries: [
-      "app developer leiden",
-      "app ontwikkelaar leiden",
-      "software leiden",
-    ],
+    targetQueries: ["app developer leiden", "app ontwikkelaar leiden", "software leiden"],
     relatedServices: [
       {
         label: "Software development Leiden",
@@ -564,8 +528,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "An app developer in Leiden can build customer portals, internal dashboards, booking systems, workflow tools, and integrations for local businesses. The best first project is rarely a broad app idea. It is usually a focused tool that removes a repeated operational bottleneck.",
+        text: "An app developer in Leiden can build customer portals, internal dashboards, booking systems, workflow tools, and integrations for local businesses. The best first project is rarely a broad app idea. It is usually a focused tool that removes a repeated operational bottleneck.",
       },
       {
         type: "heading",
@@ -573,8 +536,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A strong custom app starts with a specific workflow: intake, scheduling, reporting, approval, quoting, document handling, or customer communication. If the workflow is already handled through spreadsheets and copy-paste, a small web app can create value quickly.",
+        text: "A strong custom app starts with a specific workflow: intake, scheduling, reporting, approval, quoting, document handling, or customer communication. If the workflow is already handled through spreadsheets and copy-paste, a small web app can create value quickly.",
       },
       {
         type: "list",
@@ -591,8 +553,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Many businesses ask for an app when they actually need an internal tool. Internal tools are faster to launch, easier to measure, and directly connected to operational savings.",
+        text: "Many businesses ask for an app when they actually need an internal tool. Internal tools are faster to launch, easier to measure, and directly connected to operational savings.",
       },
     ],
   },
@@ -623,8 +584,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "Accounting automation software helps firms reduce manual entry, chase fewer documents, standardize client onboarding, and improve monthly reporting. In the Netherlands, the highest-value automations usually connect email, client portals, accounting packages, CRM records, and task management.",
+        text: "Accounting automation software helps firms reduce manual entry, chase fewer documents, standardize client onboarding, and improve monthly reporting. In the Netherlands, the highest-value automations usually connect email, client portals, accounting packages, CRM records, and task management.",
       },
       {
         type: "heading",
@@ -632,8 +592,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Document intake is usually the best first target. Client files arrive across email, portals, scans, and shared folders. Automation can classify documents, detect missing information, create tasks for exceptions, and keep accountants focused on review instead of chasing.",
+        text: "Document intake is usually the best first target. Client files arrive across email, portals, scans, and shared folders. Automation can classify documents, detect missing information, create tasks for exceptions, and keep accountants focused on review instead of chasing.",
       },
       {
         type: "list",
@@ -650,8 +609,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Buying accounting automation software does not automatically fix the workflow. The real value comes from integrating the software with client communication, task ownership, exception handling, and reporting.",
+        text: "Buying accounting automation software does not automatically fix the workflow. The real value comes from integrating the software with client communication, task ownership, exception handling, and reporting.",
       },
     ],
   },
@@ -664,11 +622,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-10",
     modifiedAt: "2026-04-10",
     readingTime: "7 min read",
-    targetQueries: [
-      "react consulting services",
-      "react consulting",
-      "react consultants",
-    ],
+    targetQueries: ["react consulting services", "react consulting", "react consultants"],
     relatedServices: [
       {
         label: "React consulting services",
@@ -682,8 +636,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "React consulting services help teams fix frontend systems that have become slow, fragile, hard to test, or difficult to extend. The work is most valuable when a product already has users, revenue, and technical debt that blocks delivery.",
+        text: "React consulting services help teams fix frontend systems that have become slow, fragile, hard to test, or difficult to extend. The work is most valuable when a product already has users, revenue, and technical debt that blocks delivery.",
       },
       {
         type: "heading",
@@ -691,8 +644,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The signal is not that React is hard. The signal is that simple changes take too long, performance regressions are common, state management is unclear, and new developers need weeks to understand basic flows.",
+        text: "The signal is not that React is hard. The signal is that simple changes take too long, performance regressions are common, state management is unclear, and new developers need weeks to understand basic flows.",
       },
       {
         type: "list",
@@ -709,8 +661,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A good React consultant does not just patch issues. They leave patterns, documentation, review habits, and examples that make the internal team faster after the engagement ends.",
+        text: "A good React consultant does not just patch issues. They leave patterns, documentation, review habits, and examples that make the internal team faster after the engagement ends.",
       },
     ],
   },
@@ -723,11 +674,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-10",
     modifiedAt: "2026-04-10",
     readingTime: "7 min read",
-    targetQueries: [
-      "nextjs consultancy europe",
-      "nextjs consultancy",
-      "nextjs development agency",
-    ],
+    targetQueries: ["nextjs consultancy europe", "nextjs consultancy", "nextjs development agency"],
     relatedServices: [
       {
         label: "Next.js development agency",
@@ -741,8 +688,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "Next.js consultancy helps teams build, migrate, and optimize production web applications using App Router, React Server Components, TypeScript, caching, routing, and deployment patterns. For European teams, data privacy, hosting, performance, and maintainability often matter as much as visual polish.",
+        text: "Next.js consultancy helps teams build, migrate, and optimize production web applications using App Router, React Server Components, TypeScript, caching, routing, and deployment patterns. For European teams, data privacy, hosting, performance, and maintainability often matter as much as visual polish.",
       },
       {
         type: "heading",
@@ -750,8 +696,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "App Router gives teams powerful primitives, but it also forces decisions about server components, client boundaries, caching, metadata, and data loading. A consultancy engagement should clarify those boundaries before the codebase grows around inconsistent patterns.",
+        text: "App Router gives teams powerful primitives, but it also forces decisions about server components, client boundaries, caching, metadata, and data loading. A consultancy engagement should clarify those boundaries before the codebase grows around inconsistent patterns.",
       },
       {
         type: "list",
@@ -768,8 +713,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A Next.js migration should not be a big-bang rewrite unless the product is small. The safer path is to move routes, data boundaries, and shared UI in stages while keeping business-critical pages stable.",
+        text: "A Next.js migration should not be a big-bang rewrite unless the product is small. The safer path is to move routes, data boundaries, and shared UI in stages while keeping business-critical pages stable.",
       },
     ],
   },
@@ -782,11 +726,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-22",
     modifiedAt: "2026-04-22",
     readingTime: "7 min read",
-    targetQueries: [
-      "ai agent consulting",
-      "ai agent consultant",
-      "ai agent implementation",
-    ],
+    targetQueries: ["ai agent consulting", "ai agent consultant", "ai agent implementation"],
     relatedServices: [
       {
         label: "AI consulting",
@@ -800,8 +740,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "AI agent consulting helps companies move from curiosity about agents to a system that performs useful work in production. The real decision is not whether to add an AI chat interface. The real decision is whether the agent can read the right business context, act safely inside existing systems, and hand work back to humans when needed.",
+        text: "AI agent consulting helps companies move from curiosity about agents to a system that performs useful work in production. The real decision is not whether to add an AI chat interface. The real decision is whether the agent can read the right business context, act safely inside existing systems, and hand work back to humans when needed.",
       },
       {
         type: "heading",
@@ -809,8 +748,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Most companies do not need a general-purpose autonomous agent. They need a narrow system that can qualify leads, answer bounded questions, prepare documents, route requests, update a CRM, or trigger the next operational step. A consultant should define the exact workflow first and the model behavior second.",
+        text: "Most companies do not need a general-purpose autonomous agent. They need a narrow system that can qualify leads, answer bounded questions, prepare documents, route requests, update a CRM, or trigger the next operational step. A consultant should define the exact workflow first and the model behavior second.",
       },
       {
         type: "list",
@@ -827,8 +765,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The difficult part of an AI agent project is not the first prompt. It is system integration, evaluation, observability, permissions, and long-term maintenance. Good AI agent consulting closes the gap between a promising proof of concept and a dependable operating system for the team.",
+        text: "The difficult part of an AI agent project is not the first prompt. It is system integration, evaluation, observability, permissions, and long-term maintenance. Good AI agent consulting closes the gap between a promising proof of concept and a dependable operating system for the team.",
       },
     ],
   },
@@ -859,8 +796,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "WhatsApp automation in the Netherlands works best when it removes operational delay from a business process people already use every day. The channel is strong for lead response, reminders, appointment scheduling, status updates, and follow-up because customers actually open it. The weak version is a generic bot that only adds another conversation layer without connecting to the systems behind the process.",
+        text: "WhatsApp automation in the Netherlands works best when it removes operational delay from a business process people already use every day. The channel is strong for lead response, reminders, appointment scheduling, status updates, and follow-up because customers actually open it. The weak version is a generic bot that only adds another conversation layer without connecting to the systems behind the process.",
       },
       {
         type: "heading",
@@ -868,8 +804,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The highest-value WhatsApp workflows are usually the simplest: respond immediately, ask a few qualifying questions, offer the next action, and sync the outcome to the CRM or scheduling system. That reduces lead decay and avoids the common situation where inquiries sit in an inbox waiting for someone to notice them.",
+        text: "The highest-value WhatsApp workflows are usually the simplest: respond immediately, ask a few qualifying questions, offer the next action, and sync the outcome to the CRM or scheduling system. That reduces lead decay and avoids the common situation where inquiries sit in an inbox waiting for someone to notice them.",
       },
       {
         type: "list",
@@ -886,8 +821,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "WhatsApp automation becomes a business system only when it is connected to calendars, CRMs, internal notifications, and reporting. Without that integration, the team still ends up copying information manually and the automation creates the illusion of efficiency instead of the real thing.",
+        text: "WhatsApp automation becomes a business system only when it is connected to calendars, CRMs, internal notifications, and reporting. Without that integration, the team still ends up copying information manually and the automation creates the illusion of efficiency instead of the real thing.",
       },
     ],
   },
@@ -900,11 +834,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-22",
     modifiedAt: "2026-04-22",
     readingTime: "7 min read",
-    targetQueries: [
-      "ai voice agent netherlands",
-      "voice ai agent netherlands",
-      "ai phone agent",
-    ],
+    targetQueries: ["ai voice agent netherlands", "voice ai agent netherlands", "ai phone agent"],
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
@@ -918,8 +848,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "An AI voice agent can handle repetitive phone-based work that slows down sales and operations: first-contact qualification, appointment confirmation, reminder calls, basic intake, and follow-up on missed actions. The strongest use cases are structured, frequent, and time-sensitive. The weakest use cases are emotionally complex, highly regulated, or dependent on deep human judgment.",
+        text: "An AI voice agent can handle repetitive phone-based work that slows down sales and operations: first-contact qualification, appointment confirmation, reminder calls, basic intake, and follow-up on missed actions. The strongest use cases are structured, frequent, and time-sensitive. The weakest use cases are emotionally complex, highly regulated, or dependent on deep human judgment.",
       },
       {
         type: "heading",
@@ -927,8 +856,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Some workflows perform better by phone than by email or chat because speed changes the outcome. Inbound lead qualification, cancellations, no-show prevention, and simple booking coordination all benefit from a voice layer that can act immediately instead of waiting for a human callback.",
+        text: "Some workflows perform better by phone than by email or chat because speed changes the outcome. Inbound lead qualification, cancellations, no-show prevention, and simple booking coordination all benefit from a voice layer that can act immediately instead of waiting for a human callback.",
       },
       {
         type: "list",
@@ -945,8 +873,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A voice agent project is not just speech recognition plus a model. It needs call outcomes written back to the CRM, alerts for failures, clear human takeover rules, and a review process for bad calls. That is what separates a demo from a system the business can trust.",
+        text: "A voice agent project is not just speech recognition plus a model. It needs call outcomes written back to the CRM, alerts for failures, clear human takeover rules, and a review process for bad calls. That is what separates a demo from a system the business can trust.",
       },
     ],
   },
@@ -959,11 +886,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-22",
     modifiedAt: "2026-04-22",
     readingTime: "8 min read",
-    targetQueries: [
-      "n8n vs zapier netherlands",
-      "n8n vs zapier",
-      "zapier migration n8n",
-    ],
+    targetQueries: ["n8n vs zapier netherlands", "n8n vs zapier", "zapier migration n8n"],
     relatedServices: [
       {
         label: "n8n migration consulting",
@@ -977,8 +900,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "The choice between n8n and Zapier is usually not about which interface looks friendlier. It is about execution volume, system complexity, data control, and who will maintain the workflows over time. For a growing Dutch business, the right answer depends on whether automation is still a convenience layer or has already become operational infrastructure.",
+        text: "The choice between n8n and Zapier is usually not about which interface looks friendlier. It is about execution volume, system complexity, data control, and who will maintain the workflows over time. For a growing Dutch business, the right answer depends on whether automation is still a convenience layer or has already become operational infrastructure.",
       },
       {
         type: "heading",
@@ -986,8 +908,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Zapier is often the faster starting point for light automations owned by a non-technical team. It is useful when the workflow is short, the integrations are standard, and the business mainly wants to connect a handful of SaaS tools without much custom logic.",
+        text: "Zapier is often the faster starting point for light automations owned by a non-technical team. It is useful when the workflow is short, the integrations are standard, and the business mainly wants to connect a handful of SaaS tools without much custom logic.",
       },
       {
         type: "heading",
@@ -995,8 +916,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "n8n becomes more attractive when workflows involve branching logic, webhooks, custom APIs, AI steps, self-hosting, or higher execution volume. That is especially relevant when privacy, maintainability, and predictable cost matter more than the convenience of a low-code template gallery.",
+        text: "n8n becomes more attractive when workflows involve branching logic, webhooks, custom APIs, AI steps, self-hosting, or higher execution volume. That is especially relevant when privacy, maintainability, and predictable cost matter more than the convenience of a low-code template gallery.",
       },
       {
         type: "list",
@@ -1013,8 +933,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A good migration plan does not move every Zapier workflow at once. It starts with the flows that cost the most, break the most, or touch the most important operations. That gives the business a measurable win without creating unnecessary transition risk.",
+        text: "A good migration plan does not move every Zapier workflow at once. It starts with the flows that cost the most, break the most, or touch the most important operations. That gives the business a measurable win without creating unnecessary transition risk.",
       },
     ],
   },
@@ -1045,8 +964,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "AI system integration is the layer that turns a model into a usable business system. Without it, the AI may generate text, summaries, or decisions but it cannot read the right context, trigger the next operational step, or write outcomes back into the places where the business actually works.",
+        text: "AI system integration is the layer that turns a model into a usable business system. Without it, the AI may generate text, summaries, or decisions but it cannot read the right context, trigger the next operational step, or write outcomes back into the places where the business actually works.",
       },
       {
         type: "heading",
@@ -1054,8 +972,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Most teams assume the hard part is choosing a provider or writing prompts. In reality, the harder problem is connecting the AI to CRMs, internal tools, permissions, reporting, and exception handling. The better the integration design, the more useful and trustworthy the system becomes.",
+        text: "Most teams assume the hard part is choosing a provider or writing prompts. In reality, the harder problem is connecting the AI to CRMs, internal tools, permissions, reporting, and exception handling. The better the integration design, the more useful and trustworthy the system becomes.",
       },
       {
         type: "list",
@@ -1072,8 +989,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "When AI is integrated properly, the business can measure time saved, conversion quality, handoff speed, and failure rates. Without that integration, the AI remains a disconnected interface and teams are forced to guess whether it is actually creating value.",
+        text: "When AI is integrated properly, the business can measure time saved, conversion quality, handoff speed, and failure rates. Without that integration, the AI remains a disconnected interface and teams are forced to guess whether it is actually creating value.",
       },
     ],
   },
@@ -1104,8 +1020,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "WhatsApp automation for business works when it shortens the time between an inbound message and the next useful action. The strongest use cases are operational: qualify a lead, confirm an appointment, collect the missing detail, send the next step, and make sure the result ends up in the CRM or workflow system.",
+        text: "WhatsApp automation for business works when it shortens the time between an inbound message and the next useful action. The strongest use cases are operational: qualify a lead, confirm an appointment, collect the missing detail, send the next step, and make sure the result ends up in the CRM or workflow system.",
       },
       {
         type: "heading",
@@ -1113,8 +1028,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Businesses often automate the first reply but forget the rest of the process. If the conversation is not connected to ownership, scheduling, follow-up, and reporting, the team still ends up copying context manually and the automation only hides delay instead of removing it.",
+        text: "Businesses often automate the first reply but forget the rest of the process. If the conversation is not connected to ownership, scheduling, follow-up, and reporting, the team still ends up copying context manually and the automation only hides delay instead of removing it.",
       },
       {
         type: "list",
@@ -1131,8 +1045,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "A well-designed WhatsApp workflow helps the team respond faster, miss fewer follow-ups, and keep customer communication more consistent across volume spikes. That makes it useful for both revenue and operations, not just support convenience.",
+        text: "A well-designed WhatsApp workflow helps the team respond faster, miss fewer follow-ups, and keep customer communication more consistent across volume spikes. That makes it useful for both revenue and operations, not just support convenience.",
       },
     ],
   },
@@ -1163,8 +1076,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "Lead qualification automation helps a business decide faster which inbound opportunities deserve immediate attention, which need more information, and which are not a fit. In the Netherlands, the biggest gains usually come from reducing response delay and making sure qualified leads reach the right owner without manual triage.",
+        text: "Lead qualification automation helps a business decide faster which inbound opportunities deserve immediate attention, which need more information, and which are not a fit. In the Netherlands, the biggest gains usually come from reducing response delay and making sure qualified leads reach the right owner without manual triage.",
       },
       {
         type: "heading",
@@ -1172,8 +1084,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The safest starting point is to automate the first layer of qualification: collect missing details, classify urgency or fit, assign ownership, and trigger the next action. That creates value quickly without pretending the full sales process should be handed to a model from day one.",
+        text: "The safest starting point is to automate the first layer of qualification: collect missing details, classify urgency or fit, assign ownership, and trigger the next action. That creates value quickly without pretending the full sales process should be handed to a model from day one.",
       },
       {
         type: "list",
@@ -1190,8 +1101,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Many businesses overbuild scoring logic and underbuild response speed. In practice, a simpler system that responds immediately and routes cleanly will outperform a more complex one that still leaves leads waiting for a human to notice them.",
+        text: "Many businesses overbuild scoring logic and underbuild response speed. In practice, a simpler system that responds immediately and routes cleanly will outperform a more complex one that still leaves leads waiting for a human to notice them.",
       },
     ],
   },
@@ -1204,11 +1114,7 @@ export const insights: InsightArticle[] = [
     publishedAt: "2026-04-22",
     modifiedAt: "2026-04-22",
     readingTime: "8 min read",
-    targetQueries: [
-      "make vs n8n netherlands",
-      "make vs n8n",
-      "n8n migration from make",
-    ],
+    targetQueries: ["make vs n8n netherlands", "make vs n8n", "n8n migration from make"],
     relatedServices: [
       {
         label: "n8n migration consulting",
@@ -1222,8 +1128,7 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text:
-          "The decision between Make and n8n usually comes down to workflow ownership, technical flexibility, and how operational the automation layer has become. Both can be useful. The right choice depends on whether the team wants a fast visual builder for moderate complexity or a system with stronger control over logic, infrastructure, and long-term extensibility.",
+        text: "The decision between Make and n8n usually comes down to workflow ownership, technical flexibility, and how operational the automation layer has become. Both can be useful. The right choice depends on whether the team wants a fast visual builder for moderate complexity or a system with stronger control over logic, infrastructure, and long-term extensibility.",
       },
       {
         type: "heading",
@@ -1231,8 +1136,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "Make is attractive when the team wants a visual automation layer that can be assembled quickly and maintained by a broader set of non-developers. It can be a strong fit for mid-complexity workflows when privacy and custom logic are not the main pressure points.",
+        text: "Make is attractive when the team wants a visual automation layer that can be assembled quickly and maintained by a broader set of non-developers. It can be a strong fit for mid-complexity workflows when privacy and custom logic are not the main pressure points.",
       },
       {
         type: "heading",
@@ -1240,8 +1144,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "n8n is usually the stronger choice when automations need custom logic, self-hosting, deeper API flexibility, AI steps, or clearer engineering ownership. That becomes more important when the workflow layer starts supporting revenue, operations, or customer delivery directly.",
+        text: "n8n is usually the stronger choice when automations need custom logic, self-hosting, deeper API flexibility, AI steps, or clearer engineering ownership. That becomes more important when the workflow layer starts supporting revenue, operations, or customer delivery directly.",
       },
       {
         type: "list",
@@ -1258,8 +1161,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "paragraph",
-        text:
-          "The best migration case is not 'we prefer tool X.' It is 'these workflows are expensive, brittle, or blocked by the current platform.' That keeps the move tied to business value instead of tool preference.",
+        text: "The best migration case is not 'we prefer tool X.' It is 'these workflows are expensive, brittle, or blocked by the current platform.' That keeps the move tied to business value instead of tool preference.",
       },
     ],
   },

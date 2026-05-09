@@ -33,9 +33,7 @@ export default function LabSection({
             {title}
           </h2>
           {description ? (
-            <p className="mt-5 text-base leading-7 text-black/65 sm:text-lg">
-              {description}
-            </p>
+            <p className="mt-5 text-base leading-7 text-black/65 sm:text-lg">{description}</p>
           ) : null}
         </div>
         <div className={cn("mt-10", contentClassName)}>{children}</div>

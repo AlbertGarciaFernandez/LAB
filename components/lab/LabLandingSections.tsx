@@ -41,7 +41,7 @@ export function LabHeroSection({ locale }: LabLandingSectionProps) {
           </p>
           <div className="mt-8 space-y-4">
             {data.systems.map((system) => (
-              <div key={system.slug} className="rounded-2xl border border-black/8 bg-white/80 p-4">
+              <div key={system.slug} className="border-black/8 rounded-2xl border bg-white/80 p-4">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/45">
@@ -69,12 +69,12 @@ export function LabProblemSection({ locale }: LabLandingSectionProps) {
       eyebrow={landing.problem.eyebrow}
       title={landing.problem.title}
       description={landing.problem.description}
-      className="border-t border-black/8"
+      className="border-black/8 border-t"
     >
       <div className="grid gap-6 md:grid-cols-3">
         {landing.problem.items.map((item) => (
           <LabCard key={item}>
-            <p className="text-lg leading-7 text-black/72">{item}</p>
+            <p className="text-black/72 text-lg leading-7">{item}</p>
           </LabCard>
         ))}
       </div>
@@ -107,7 +107,7 @@ export function LabSolutionSection({ locale }: LabLandingSectionProps) {
         <LabCard>
           <div className="space-y-5">
             {landing.solution.benefits.map((item) => (
-              <div key={item} className="flex gap-3 text-sm leading-6 text-black/68">
+              <div key={item} className="text-black/68 flex gap-3 text-sm leading-6">
                 <span className="mt-2 h-2 w-2 rounded-full bg-black" />
                 <span>{item}</span>
               </div>
@@ -190,7 +190,7 @@ export function LabDifferentiationSection({ locale }: LabLandingSectionProps) {
         <div className="grid gap-6 sm:grid-cols-2">
           {landing.differentiation.points.map((item) => (
             <LabCard key={item} className="flex items-center">
-              <p className="text-base leading-7 text-black/72">{item}</p>
+              <p className="text-black/72 text-base leading-7">{item}</p>
             </LabCard>
           ))}
         </div>
@@ -208,14 +208,12 @@ export function LabCtaSection({ locale }: LabLandingSectionProps) {
       eyebrow={data.landing.cta.eyebrow}
       title={data.landing.cta.title}
       description={data.landing.cta.description}
-      className="border-t border-black/8"
+      className="border-black/8 border-t"
     >
       <LabCard className="flex flex-col items-start justify-between gap-6 bg-black text-white sm:flex-row sm:items-center">
         <div className="max-w-2xl">
-          <p className="text-3xl font-semibold tracking-[-0.04em]">
-            {data.landing.cta.cardTitle}
-          </p>
-          <p className="mt-4 text-base leading-7 text-white/72">
+          <p className="text-3xl font-semibold tracking-[-0.04em]">{data.landing.cta.cardTitle}</p>
+          <p className="text-white/72 mt-4 text-base leading-7">
             {data.landing.cta.cardDescription}
           </p>
         </div>

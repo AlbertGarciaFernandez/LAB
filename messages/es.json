@@ -946,11 +946,23 @@
       "title": "Integración que Realmente Funciona",
       "without": {
         "title": "Sin Integración",
-        "points": ["Copiar y pegar entre apps manualmente", "Datos siempre desincronizados", "Horas perdidas en tareas administrativas", "Errores humanos en registros críticos", "Sin visibilidad de tus flujos de datos"]
+        "points": [
+          "Copiar y pegar entre apps manualmente",
+          "Datos siempre desincronizados",
+          "Horas perdidas en tareas administrativas",
+          "Errores humanos en registros críticos",
+          "Sin visibilidad de tus flujos de datos"
+        ]
       },
       "with": {
         "title": "Con CodeHunter Lab",
-        "points": ["Los datos fluyen automáticamente 24/7", "Fuente única de verdad en todas tus apps", "Tu equipo se enfoca en trabajo real", "Datos validados, cero errores manuales", "Monitoreo completo, alertas y registro de auditoría"]
+        "points": [
+          "Los datos fluyen automáticamente 24/7",
+          "Fuente única de verdad en todas tus apps",
+          "Tu equipo se enfoca en trabajo real",
+          "Datos validados, cero errores manuales",
+          "Monitoreo completo, alertas y registro de auditoría"
+        ]
       }
     },
     "CTA": {
@@ -1082,11 +1094,7 @@
       "whatsapp": {
         "title": "Agentes IA en WhatsApp",
         "desc": "Atención al cliente 24/7 y cualificación de leads directamente en WhatsApp. Habla como un humano, conoce tu negocio y agenda citas automáticamente.",
-        "points": [
-          "Cero tiempos de espera",
-          "Conexión con tu CRM",
-          "98% de precisión en intención"
-        ]
+        "points": ["Cero tiempos de espera", "Conexión con tu CRM", "98% de precisión en intención"]
       },
       "voice": {
         "title": "Bots de Voz con IA",

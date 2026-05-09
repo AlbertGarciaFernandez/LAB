@@ -7,13 +7,7 @@ import AnimatedSection from "../layout/AnimatedSection";
 import { m, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-type PillarId =
-  | "frontend"
-  | "ecommerce"
-  | "product"
-  | "automation"
-  | "leadership"
-  | "delivery";
+type PillarId = "frontend" | "ecommerce" | "product" | "automation" | "leadership" | "delivery";
 
 type Pillar = {
   id: PillarId;
@@ -38,10 +32,7 @@ const ExpertiseSection: React.FC = () => {
       micro: t("pillars.automation.micro"),
       icon: "{01}",
       heading: t("pillars.automation.heading"),
-      paragraphs: [
-        t("pillars.automation.paragraphs.0"),
-        t("pillars.automation.paragraphs.1"),
-      ],
+      paragraphs: [t("pillars.automation.paragraphs.0"), t("pillars.automation.paragraphs.1")],
       bullets: [
         t("pillars.automation.bullets.0"),
         t("pillars.automation.bullets.1"),
@@ -57,10 +48,7 @@ const ExpertiseSection: React.FC = () => {
       micro: t("pillars.frontend.micro"),
       icon: "{02}",
       heading: t("pillars.frontend.heading"),
-      paragraphs: [
-        t("pillars.frontend.paragraphs.0"),
-        t("pillars.frontend.paragraphs.1"),
-      ],
+      paragraphs: [t("pillars.frontend.paragraphs.0"), t("pillars.frontend.paragraphs.1")],
       bullets: [
         t("pillars.frontend.bullets.0"),
         t("pillars.frontend.bullets.1"),
@@ -75,10 +63,7 @@ const ExpertiseSection: React.FC = () => {
       micro: t("pillars.product.micro"),
       icon: "{03}",
       heading: t("pillars.product.heading"),
-      paragraphs: [
-        t("pillars.product.paragraphs.0"),
-        t("pillars.product.paragraphs.1"),
-      ],
+      paragraphs: [t("pillars.product.paragraphs.0"), t("pillars.product.paragraphs.1")],
       bullets: [
         t("pillars.product.bullets.0"),
         t("pillars.product.bullets.1"),
@@ -93,10 +78,7 @@ const ExpertiseSection: React.FC = () => {
       micro: t("pillars.ecommerce.micro"),
       icon: "{04}",
       heading: t("pillars.ecommerce.heading"),
-      paragraphs: [
-        t("pillars.ecommerce.paragraphs.0"),
-        t("pillars.ecommerce.paragraphs.1"),
-      ],
+      paragraphs: [t("pillars.ecommerce.paragraphs.0"), t("pillars.ecommerce.paragraphs.1")],
       bullets: [
         t("pillars.ecommerce.bullets.0"),
         t("pillars.ecommerce.bullets.1"),
@@ -112,9 +94,7 @@ const ExpertiseSection: React.FC = () => {
       micro: t("pillars.leadership.micro"),
       icon: "{05}",
       heading: t("pillars.leadership.heading"),
-      paragraphs: [
-        t("pillars.leadership.paragraphs.0"),
-      ],
+      paragraphs: [t("pillars.leadership.paragraphs.0")],
       bullets: [
         t("pillars.leadership.bullets.0"),
         t("pillars.leadership.bullets.1"),
@@ -129,10 +109,7 @@ const ExpertiseSection: React.FC = () => {
       micro: t("pillars.delivery.micro"),
       icon: "{06}",
       heading: t("pillars.delivery.heading"),
-      paragraphs: [
-        t("pillars.delivery.paragraphs.0"),
-        t("pillars.delivery.paragraphs.1"),
-      ],
+      paragraphs: [t("pillars.delivery.paragraphs.0"), t("pillars.delivery.paragraphs.1")],
       bullets: [
         t("pillars.delivery.bullets.0"),
         t("pillars.delivery.bullets.1"),
@@ -151,13 +128,11 @@ const ExpertiseSection: React.FC = () => {
       className="bg-near-black px-4 py-20 text-white md:px-8 md:py-32"
     >
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-4 text-center text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
+        <h2 className="mb-4 text-center text-5xl font-black uppercase tracking-tighter text-white md:text-7xl">
           <span className="text-hunter-green">02.</span> {t("title.part1")}
           <br className="hidden md:block" /> {t("title.part2")}
         </h2>
-        <p className="mx-auto mb-6 max-w-3xl text-center text-xl text-gray-400">
-          {t("subtitle")}
-        </p>
+        <p className="mx-auto mb-6 max-w-3xl text-center text-xl text-gray-400">{t("subtitle")}</p>
 
         {/* Layout principal: izquierda grid, derecha detalle */}
         <div className="mt-10 grid gap-10 lg:grid-cols-2">
@@ -165,7 +140,6 @@ const ExpertiseSection: React.FC = () => {
           <div className="grid grid-cols-2 gap-3 sm:gap-6">
             {pillars.map((pillar, i) => {
               const isFirst = i === 0;
-              const isActive = pillar.id === activeId;
 
               return (
                 <SpotlightCard
@@ -192,10 +166,10 @@ const ExpertiseSection: React.FC = () => {
                 transition={{ duration: 0.25, ease: "easeOut" }}
                 className="rounded-2xl border border-white/5 bg-surface-dark/80 p-6 md:p-8"
               >
-                <p className="text-xs font-display font-semibold uppercase tracking-[0.25em] text-hunter-green">
+                <p className="font-display text-xs font-semibold uppercase tracking-[0.25em] text-hunter-green">
                   {activePillar.indexLabel}
                 </p>
-                <h3 className="mt-2 text-xl font-display font-semibold text-hunter-orange md:text-2xl">
+                <h3 className="font-display mt-2 text-xl font-semibold text-hunter-orange md:text-2xl">
                   {activePillar.heading}
                 </h3>
 
@@ -232,17 +206,13 @@ function SpotlightCard({
   isFirst: boolean;
   onClick: () => void;
   index: number;
-  t: any;
+  t: ReturnType<typeof useTranslations>;
 }) {
   const isActive = pillar.id === activeId;
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  function handleMouseMove({
-    currentTarget,
-    clientX,
-    clientY,
-  }: React.MouseEvent) {
+  function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
     const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -258,8 +228,9 @@ function SpotlightCard({
       viewport={{ once: true, amount: 0.2 }}
       transition={{ delay: index * 0.06, duration: 0.4 }}
       whileHover={{ y: -4 }}
-      className={`group relative flex h-full flex-col rounded-2xl border bg-surface-dark/70 p-6 text-left transition duration-300 ${isActive ? "border-hunter-green/60" : "border-white/5"
-        }`}
+      className={`group relative flex h-full flex-col rounded-2xl border bg-surface-dark/70 p-6 text-left transition duration-300 ${
+        isActive ? "border-hunter-green/60" : "border-white/5"
+      }`}
     >
       <m.div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100"
@@ -294,26 +265,23 @@ function SpotlightCard({
       )}
 
       <div className="relative flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-3">
-        <span className="text-3xl md:text-4xl text-hunter-green font-mono mb-1 md:mb-0">
+        <span className="mb-1 font-mono text-3xl text-hunter-green md:mb-0 md:text-4xl">
           {pillar.icon}
         </span>
-        <h3 className="text-sm font-display font-bold md:text-lg leading-tight text-white/90">
+        <h3 className="font-display text-sm font-bold leading-tight text-white/90 md:text-lg">
           {pillar.title}
         </h3>
       </div>
 
-      <p className="relative mt-3 text-sm text-gray-400">
-        {pillar.micro}
-      </p>
+      <p className="relative mt-3 text-sm text-gray-400">{pillar.micro}</p>
 
       <span
-        className={`relative mt-4 inline-flex items-center text-[11px] font-medium transition-colors ${isActive ? "text-hunter-orange" : "text-hunter-green/80 group-hover:text-hunter-green"
-          }`}
+        className={`relative mt-4 inline-flex items-center text-[11px] font-medium transition-colors ${
+          isActive ? "text-hunter-orange" : "text-hunter-green/80 group-hover:text-hunter-green"
+        }`}
       >
         {isActive ? t("ui.selected") : t("ui.readMore")}
-        <span className="ml-1 translate-y-[1px] text-xs">
-          {isActive ? "●" : "↗"}
-        </span>
+        <span className="ml-1 translate-y-[1px] text-xs">{isActive ? "●" : "↗"}</span>
       </span>
     </m.button>
   );

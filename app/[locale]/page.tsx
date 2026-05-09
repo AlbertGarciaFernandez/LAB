@@ -10,26 +10,27 @@ import IndustriesSection from "@/components/sections/IndustriesSection";
 import ProcessContactSection from "@/components/sections/06ProcessContactSection";
 
 export const metadata: Metadata = {
-    title: "AI Automation Agency Netherlands | CodeHunter Lab",
-    description: "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
+  title: "AI Automation Agency Netherlands | CodeHunter Lab",
+  description:
+    "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
 };
 
 const Home = () => {
-    return (
-        <div className="min-h-screen bg-near-black text-white antialiased">
-            <Header />
-            <main>
-                <HeroSection />
-                <TrustProofSection />
-                <WhatWeBuildSection />
-                <PackagesSection />
-                <IndustriesSection />
-                <InsightsSection />
-                <BioSection />
-                <ProcessContactSection />
-            </main>
-        </div>
-    );
+  return (
+    <div className="min-h-screen bg-near-black text-white antialiased">
+      <Header />
+      <main>
+        <HeroSection />
+        <TrustProofSection />
+        <WhatWeBuildSection />
+        <PackagesSection />
+        <IndustriesSection />
+        <InsightsSection />
+        <BioSection />
+        <ProcessContactSection />
+      </main>
+    </div>
+  );
 };
 
 export default Home;

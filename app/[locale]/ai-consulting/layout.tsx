@@ -193,11 +193,7 @@ const serviceSchema = {
   },
 };
 
-export default function AIConsultingLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AIConsultingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {children}

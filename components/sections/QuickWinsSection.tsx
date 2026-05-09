@@ -10,12 +10,7 @@ import {
   ArrowsClockwiseIcon,
   ChartLineUpIcon,
 } from "@phosphor-icons/react/dist/ssr";
-import {
-  m,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { m, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const icons = [
   CalendarCheckIcon,
@@ -61,14 +56,8 @@ function TiltCard({ children }: { children: React.ReactNode }) {
   const rawY = useMotionValue(0);
 
   const springConfig = { damping: 18, stiffness: 180 };
-  const rotateX = useSpring(
-    useTransform(rawY, [-60, 60], [7, -7]),
-    springConfig
-  );
-  const rotateY = useSpring(
-    useTransform(rawX, [-60, 60], [-7, 7]),
-    springConfig
-  );
+  const rotateX = useSpring(useTransform(rawY, [-60, 60], [7, -7]), springConfig);
+  const rotateY = useSpring(useTransform(rawX, [-60, 60], [-7, 7]), springConfig);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
@@ -91,13 +80,13 @@ function TiltCard({ children }: { children: React.ReactNode }) {
       onMouseLeave={handleMouseLeave}
       whileHover={{ scale: 1.025, z: 20 }}
       transition={{ duration: 0.2 }}
-      className="group relative flex flex-col gap-4 p-6 rounded-2xl bg-surface-dark/60 border border-white/5 hover:border-hunter-orange/35 transition-colors duration-300 cursor-default overflow-hidden"
+      className="group relative flex cursor-default flex-col gap-4 overflow-hidden rounded-2xl border border-white/5 bg-surface-dark/60 p-6 transition-colors duration-300 hover:border-hunter-orange/35"
     >
       {/* Ambient inner glow on hover */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-hunter-orange/6 via-transparent to-transparent" />
+      <div className="from-hunter-orange/6 pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
       {/* Glowing bottom line */}
-      <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-hunter-orange/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-hunter-orange/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
       {children}
     </m.div>
@@ -111,38 +100,38 @@ const QuickWinsSection: React.FC = () => {
   return (
     <section
       id="quick-wins"
-      className="relative bg-near-black px-4 py-20 text-white md:px-8 md:py-28 border-y border-white/5 overflow-hidden"
+      className="relative overflow-hidden border-y border-white/5 bg-near-black px-4 py-20 text-white md:px-8 md:py-28"
     >
       {/* Floating ambient orbs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <m.div
-          className="absolute -top-40 left-1/3 w-[700px] h-[700px] rounded-full bg-hunter-orange/[0.04] blur-[140px]"
+          className="absolute -top-40 left-1/3 h-[700px] w-[700px] rounded-full bg-hunter-orange/[0.04] blur-[140px]"
           animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6], x: [0, 50, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         />
         <m.div
-          className="absolute -bottom-40 right-1/4 w-[550px] h-[550px] rounded-full bg-hunter-green/[0.04] blur-[120px]"
+          className="absolute -bottom-40 right-1/4 h-[550px] w-[550px] rounded-full bg-hunter-green/[0.04] blur-[120px]"
           animate={{ scale: [1.1, 1, 1.1], opacity: [0.5, 0.9, 0.5], x: [0, -40, 0] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         />
         <m.div
-          className="absolute top-1/2 -right-20 w-[300px] h-[300px] rounded-full bg-hunter-orange/[0.03] blur-[80px]"
+          className="absolute -right-20 top-1/2 h-[300px] w-[300px] rounded-full bg-hunter-orange/[0.03] blur-[80px]"
           animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.7, 0.3] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
       </div>
 
-      <div className="mx-auto max-w-7xl relative z-10">
+      <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header */}
         <m.div
-          className="text-center mb-10"
+          className="mb-10 text-center"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
           <m.div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-hunter-orange/10 border border-hunter-orange/20 text-hunter-orange text-[10px] font-bold tracking-widest uppercase mb-6"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-hunter-orange/20 bg-hunter-orange/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-hunter-orange"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -150,18 +139,15 @@ const QuickWinsSection: React.FC = () => {
           >
             {t("badge")}
           </m.div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[0.95]">
-            {t("title")}{" "}
-            <span className="text-hunter-orange">{t("highlight")}</span>
+          <h2 className="text-4xl font-black leading-[0.95] tracking-tighter text-white md:text-6xl">
+            {t("title")} <span className="text-hunter-orange">{t("highlight")}</span>
           </h2>
-          <p className="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
-            {t("subtitle")}
-          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">{t("subtitle")}</p>
         </m.div>
 
         {/* Stats strip */}
         <m.div
-          className="flex items-center justify-center gap-10 md:gap-20 mb-12"
+          className="mb-12 flex items-center justify-center gap-10 md:gap-20"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
@@ -176,10 +162,10 @@ const QuickWinsSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
             >
-              <div className="text-2xl md:text-3xl font-black text-hunter-orange tabular-nums">
+              <div className="text-2xl font-black tabular-nums text-hunter-orange md:text-3xl">
                 {stat.value}
               </div>
-              <div className="text-[10px] text-gray-500 uppercase tracking-widest mt-0.5">
+              <div className="mt-0.5 text-[10px] uppercase tracking-widest text-gray-500">
                 {stat.label}
               </div>
             </m.div>
@@ -188,7 +174,7 @@ const QuickWinsSection: React.FC = () => {
 
         {/* Divider */}
         <m.div
-          className="w-full h-px bg-gradient-to-r from-transparent via-white/8 to-transparent mb-12"
+          className="via-white/8 mb-12 h-px w-full bg-gradient-to-r from-transparent to-transparent"
           initial={{ scaleX: 0, opacity: 0 }}
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true }}
@@ -197,7 +183,7 @@ const QuickWinsSection: React.FC = () => {
 
         {/* Cards Grid */}
         <m.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -208,19 +194,17 @@ const QuickWinsSection: React.FC = () => {
             return (
               <TiltCard key={card.title}>
                 <m.div
-                  className="flex-shrink-0 w-11 h-11 rounded-xl bg-hunter-orange/10 border border-hunter-orange/20 flex items-center justify-center text-hunter-orange"
+                  className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-orange/20 bg-hunter-orange/10 text-hunter-orange"
                   whileHover={{ scale: 1.15, rotate: 6 }}
                   transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 >
                   <Icon size={22} />
                 </m.div>
                 <div>
-                  <h3 className="text-white font-bold text-base mb-1 tracking-tight">
+                  <h3 className="mb-1 text-base font-bold tracking-tight text-white">
                     {card.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {card.desc}
-                  </p>
+                  <p className="text-sm leading-relaxed text-gray-400">{card.desc}</p>
                 </div>
               </TiltCard>
             );

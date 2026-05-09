@@ -27,16 +27,16 @@ const BioSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-24 md:py-40 bg-near-black text-white px-4 md:px-8 relative overflow-hidden"
+      className="relative overflow-hidden bg-near-black px-4 py-24 text-white md:px-8 md:py-40"
     >
       {/* Background massive text decoration */}
-      <div className="absolute top-10 left-0 w-full overflow-hidden pointer-events-none opacity-[0.03]">
-        <h2 className="text-[12rem] md:text-[20rem] font-black text-white leading-none whitespace-nowrap">
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03]">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           {t("bgText")}
         </h2>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-start gap-16 md:gap-24">
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-start gap-16 md:flex-row md:gap-24">
         {/* Left: The "Statement" */}
         <div className="md:w-3/5">
           <m.div
@@ -45,7 +45,7 @@ const BioSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-r from-hunter-green to-emerald-600">
+            <h2 className="mb-8 bg-gradient-to-r from-hunter-green to-emerald-600 bg-clip-text text-6xl font-black tracking-tighter text-transparent md:text-8xl">
               {t("title.part1")} <br /> {t("title.part2")}
             </h2>
           </m.div>
@@ -57,18 +57,28 @@ const BioSection: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <p className="text-2xl md:text-3xl font-medium leading-relaxed text-gray-200">
-              {t("description.p1.part1")} <span className="text-hunter-orange">{t("description.p1.highlight")}</span> {t("description.p1.part2")}
+            <p className="text-2xl font-medium leading-relaxed text-gray-200 md:text-3xl">
+              {t("description.p1.part1")}{" "}
+              <span className="text-hunter-orange">{t("description.p1.highlight")}</span>{" "}
+              {t("description.p1.part2")}
             </p>
-            <p className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light">
-              {t("description.p2.part1")} <span className="text-hunter-green font-semibold">{t("description.p2.highlight1")}</span>{t("description.p2.part2")} <span className="text-white font-serif italic">{t("description.p2.highlight2")}</span> {t("description.p2.part3")}
+            <p className="text-xl font-light leading-relaxed text-gray-400 md:text-2xl">
+              {t("description.p2.part1")}{" "}
+              <span className="font-semibold text-hunter-green">
+                {t("description.p2.highlight1")}
+              </span>
+              {t("description.p2.part2")}{" "}
+              <span className="font-serif italic text-white">{t("description.p2.highlight2")}</span>{" "}
+              {t("description.p2.part3")}
             </p>
 
-            <div className="pt-8 flex flex-wrap gap-8">
-              {experienceStats.map((stat, i) => (
+            <div className="flex flex-wrap gap-8 pt-8">
+              {experienceStats.map((stat) => (
                 <div key={stat.label} className="flex flex-col">
                   <span className="text-4xl font-bold text-white">{stat.value}</span>
-                  <span className="text-xs uppercase tracking-widest text-hunter-green">{stat.label}</span>
+                  <span className="text-xs uppercase tracking-widest text-hunter-green">
+                    {stat.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -81,14 +91,22 @@ const BioSection: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="md:w-2/5 relative"
+          className="relative md:w-2/5"
         >
-          <div className="w-full aspect-square rounded-full border border-hunter-green/20 relative flex items-center justify-center">
-            <div className="absolute inset-4 border border-hunter-orange/20 rounded-full animate-spin-slow-reverse" style={{ animationDuration: '20s' }}></div>
-            <div className="absolute inset-12 border border-white/5 rounded-full animate-spin-slow" style={{ animationDuration: '15s' }}></div>
+          <div className="relative flex aspect-square w-full items-center justify-center rounded-full border border-hunter-green/20">
+            <div
+              className="animate-spin-slow-reverse absolute inset-4 rounded-full border border-hunter-orange/20"
+              style={{ animationDuration: "20s" }}
+            ></div>
+            <div
+              className="animate-spin-slow absolute inset-12 rounded-full border border-white/5"
+              style={{ animationDuration: "15s" }}
+            ></div>
 
-            <div className="text-center p-8 backdrop-blur-sm bg-near-black/50 rounded-2xl border border-white/10">
-              <p className="font-mono text-sm text-hunter-green mb-2">&lt;{t("passionCard.label")} /&gt;</p>
+            <div className="rounded-2xl border border-white/10 bg-near-black/50 p-8 text-center backdrop-blur-sm">
+              <p className="mb-2 font-mono text-sm text-hunter-green">
+                &lt;{t("passionCard.label")} /&gt;
+              </p>
               <p className="italic text-gray-400">{t("passionCard.quote")}</p>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default function LabHeader({ locale }: { locale: string }) {
   const data = getLabData(locale);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-black/8 bg-white/90 backdrop-blur-xl">
+    <header className="border-black/8 sticky top-0 z-30 border-b bg-white/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
         <Link href={`/${locale}/lab`} className="flex items-center gap-3 text-black">
           <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black text-sm font-semibold text-white">
@@ -33,7 +33,11 @@ export default function LabHeader({ locale }: { locale: string }) {
         </nav>
 
         <div className="flex items-center gap-3">
-          <LabButton href={`/${locale}/lab/app`} variant="secondary" className="hidden sm:inline-flex">
+          <LabButton
+            href={`/${locale}/lab/app`}
+            variant="secondary"
+            className="hidden sm:inline-flex"
+          >
             {data.copy.ctaSecondary}
           </LabButton>
           <LabButton href={`/${locale}/lab/app`}>{data.copy.ctaPrimary}</LabButton>

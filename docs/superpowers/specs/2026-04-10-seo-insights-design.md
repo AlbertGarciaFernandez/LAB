@@ -41,4 +41,3 @@ Spanish insight URLs are not launched in this first batch to avoid duplicated En
 ## Testing
 
 Add a Node test that validates the insight content source exists, contains the four required slugs, has non-empty SEO metadata, includes internal links, and that `app/sitemap.ts` references insight URLs.
-

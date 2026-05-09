@@ -19,11 +19,15 @@ export default function LabLessonPage({
   return (
     <div className="space-y-6">
       <LabCard className="bg-[linear-gradient(135deg,#fffefb_0%,#f4efe6_100%)]">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-black/40">{system.title}</p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-black">{lesson.title}</h1>
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-black/40">
+          {system.title}
+        </p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-black">
+          {lesson.title}
+        </h1>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-black/60">
-          Downloadable resources, examples, and step-by-step guidance stay close to the implementation details for this
-          lesson.
+          Downloadable resources, examples, and step-by-step guidance stay close to the
+          implementation details for this lesson.
         </p>
       </LabCard>
 
