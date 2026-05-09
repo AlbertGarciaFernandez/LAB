@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import CookieConsent from "@/components/ui/CookieConsent";
 import GoogleAnalyticsConditional from "@/components/analytics/GoogleAnalyticsConditional";
 import LocaleFooterGate from "@/components/layout/LocaleFooterGate";
@@ -23,6 +23,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const { locale } = params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
   return {
     metadataBase: new URL(baseUrl),
     icons: {
@@ -30,21 +31,15 @@ export async function generateMetadata({
       shortcut: "/logo-hntr.svg",
       apple: "/apple-touch-icon.png",
     },
-    title: "AI Automation Agency Netherlands | CodeHunter Lab",
-    description:
-      "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
-    keywords: [
-      "AI automation agency Netherlands",
-      "AI automation consulting Netherlands",
-      "AI agents Netherlands",
-      "n8n workflows Netherlands",
-      "workflow automation agency Netherlands",
-      "AI system integration",
-      "custom AI integrations Netherlands",
-      "AI automation Leiden",
-      "WhatsApp automation Netherlands",
-      "AI voice agents Netherlands",
-    ],
+    title: t("title"),
+    description: t("description"),
+    keywords: t.raw("keywords") as string[],
+    robots: {
+      index: true,
+      follow: true,
+      "max-snippet": 150,
+      "max-image-preview": "large",
+    },
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
@@ -54,9 +49,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: "AI Automation Agency Netherlands | CodeHunter Lab",
-      description:
-        "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
+      title: t("title"),
+      description: t("description"),
       url: `${baseUrl}/${locale}`,
       siteName: "CodeHunter Lab",
       type: "website",
@@ -66,15 +60,14 @@ export async function generateMetadata({
           url: `${baseUrl}/${locale}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: "AI Automation Agency Netherlands | CodeHunter Lab",
+          alt: t("title"),
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "AI Automation Agency Netherlands | CodeHunter Lab",
-      description:
-        "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos.",
+      title: t("title"),
+      description: t("description"),
       images: [`${baseUrl}/${locale}/opengraph-image`],
     },
   };
@@ -91,8 +84,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={`${sans.variable} ${mono.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://formsubmit.co" />
@@ -158,7 +149,7 @@ export default async function RootLayout({
               telephone: "+31-6-2940-5122",
               email: "hello@codehunterlab.com",
               logo: "https://www.codehunterlab.com/logo-hntr.svg",
-              image: "https://www.codehunterlab.com/logo-hntr.png",
+              image: "https://www.codehunterlab.com/logo-hntr.webp",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Leiden",
@@ -199,20 +190,36 @@ export default async function RootLayout({
               "@id": "https://www.codehunterlab.com/#founder",
               name: "Albert Garcia",
               url: "https://www.linkedin.com/in/albertgarciafernandez/",
+              image: "https://www.codehunterlab.com/logo-hntr.svg",
               jobTitle: "Founder",
+              description:
+                "Founder of CodeHunter Lab, an AI automation consultancy based in Leiden, Netherlands. Specializes in AI agents, n8n workflows, and Next.js development for European businesses.",
               worksFor: {
                 "@id": "https://www.codehunterlab.com/#organization",
               },
+              alumniOf: [
+                {
+                  "@type": "EducationalOrganization",
+                  name: "Technical University",
+                  url: "https://www.tudelft.nl",
+                },
+              ],
               sameAs: [
                 "https://www.linkedin.com/in/albertgarciafernandez/",
                 "https://github.com/codehunter-lab",
+                "https://www.codehunterlab.com",
               ],
               knowsAbout: [
                 "AI automation",
                 "AI consulting",
-                "Next.js",
+                "n8n workflow automation",
+                "conversational AI",
+                "WhatsApp Business API",
+                "Next.js development",
                 "React",
-                "workflow automation",
+                "system integration",
+                "CRM automation",
+                "AI agent development",
               ],
             }),
           }}

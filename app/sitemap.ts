@@ -12,103 +12,103 @@ const routeMeta: Record<
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   }
 > = {
-  "": { lastModified: "2026-02-26", priority: 1.0, changeFrequency: "weekly" },
-  "/lab": { lastModified: "2026-04-23", priority: 0.8, changeFrequency: "weekly" },
-  "/ai-consulting": { lastModified: "2026-02-26", priority: 0.9, changeFrequency: "weekly" },
+  "": { lastModified: "2026-05-09", priority: 1.0, changeFrequency: "weekly" },
+  "/lab": { lastModified: "2026-05-09", priority: 0.8, changeFrequency: "weekly" },
+  "/ai-consulting": { lastModified: "2026-05-09", priority: 0.9, changeFrequency: "weekly" },
   "/ai-automation-consulting-netherlands": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
   "/it-system-integration": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.8,
     changeFrequency: "weekly",
   },
   "/software-development-leiden": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.8,
     changeFrequency: "weekly",
   },
   "/services/custom-internal-tools-development": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.8,
     changeFrequency: "monthly",
   },
   "/expertise/ai-agents-automation": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.7,
     changeFrequency: "monthly",
   },
   "/expertise/n8n-migration-consulting": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.7,
     changeFrequency: "monthly",
   },
   "/expertise/system-architecture-design": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.7,
     changeFrequency: "monthly",
   },
   "/expertise/custom-llm-development": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.7,
     changeFrequency: "monthly",
   },
   "/nextjs-development-agency": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
-  "/react-consulting": { lastModified: "2026-02-26", priority: 0.9, changeFrequency: "weekly" },
+  "/react-consulting": { lastModified: "2026-05-09", priority: 0.9, changeFrequency: "weekly" },
   "/dental-clinic-automation-netherlands": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
   "/physiotherapy-clinic-automation-netherlands": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
   "/aesthetic-clinic-automation-netherlands": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
   "/veterinary-clinic-automation-netherlands": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
   "/accounting-firm-automation-netherlands": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
   "/real-estate-automation-netherlands": {
-    lastModified: "2026-02-26",
+    lastModified: "2026-05-09",
     priority: 0.9,
     changeFrequency: "weekly",
   },
 };
 
 const insightsIndexMeta = {
-  lastModified: "2026-04-21",
+  lastModified: "2026-05-09",
   priority: 0.7,
   changeFrequency: "weekly" as const,
 };
 const insightArticleMeta = { priority: 0.7, changeFrequency: "monthly" as const };
 
 const caseStudiesIndexMeta = {
-  lastModified: "2026-05-08",
+  lastModified: "2026-05-09",
   priority: 0.7,
   changeFrequency: "monthly" as const,
 };
 const caseStudyArticleMeta = { priority: 0.6, changeFrequency: "monthly" as const };
 
 const aboutPageMeta = {
-  lastModified: "2026-04-22",
+  lastModified: "2026-05-09",
   priority: 0.6,
   changeFrequency: "monthly" as const,
 };

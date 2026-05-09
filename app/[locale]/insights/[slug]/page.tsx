@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
+import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { insightBySlug, insights } from "@/content/insights";
 
 const baseUrl = "https://www.codehunterlab.com";
@@ -94,6 +95,13 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
     <div className="min-h-screen bg-near-black text-white">
       <Header />
       <main className="mx-auto max-w-4xl px-6 pb-24 pt-32 lg:px-8">
+        <BreadcrumbSchema
+          items={[
+            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
+            { name: "Insights", url: `${baseUrl}/${params.locale}/insights` },
+            { name: article.title, url: articleUrl },
+          ]}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
@@ -160,6 +168,46 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
                       </li>
                     ))}
                   </ul>
+                );
+              }
+
+              if (section.type === "table") {
+                return (
+                  <div key={`table-${index}`} className="overflow-x-auto rounded-xl border border-white/10">
+                    <table className="w-full text-left text-sm">
+                      <thead>
+                        <tr className="border-b border-white/10 bg-hunter-green/10">
+                          {section.headers.map((header, hIdx) => (
+                            <th
+                              key={hIdx}
+                              className="px-4 py-3 font-bold uppercase tracking-wider text-hunter-green"
+                            >
+                              {header}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.rows.map((row, rIdx) => (
+                          <tr
+                            key={rIdx}
+                            className="border-b border-white/5 last:border-b-0 hover:bg-white/5"
+                          >
+                            {row.map((cell, cIdx) => (
+                              <td
+                                key={cIdx}
+                                className={`px-4 py-3 leading-relaxed text-gray-300 ${
+                                  cIdx === 0 ? "font-semibold text-white" : ""
+                                }`}
+                              >
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 );
               }
 

@@ -35,10 +35,25 @@ export default function ITSystemIntegrationContent() {
     ],
   };
 
+  const faqQuestions = [
+    {
+      q: "What systems can be integrated with AI automation?",
+      a: "Most modern business systems with APIs can be integrated, including CRMs like HubSpot and Salesforce, ERPs, accounting software, messaging platforms like WhatsApp Business API and Slack, databases, and custom internal applications. If an API exists, integration is possible.",
+    },
+    {
+      q: "How long does a typical system integration project take?",
+      a: "Simple two-system integrations take 2-4 weeks. Complex multi-system projects with custom APIs and data mapping typically take 6-10 weeks depending on the number of endpoints and data volume.",
+    },
+    {
+      q: "Is my data secure during integration?",
+      a: "Yes. All integrations follow GDPR compliance by design. For sensitive industries, on-premise or private cloud deployments are available so data never leaves controlled infrastructure.",
+    },
+  ];
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: (t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => ({
+    mainEntity: faqQuestions.map((item) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: { "@type": "Answer", text: item.a },
@@ -52,9 +67,16 @@ export default function ITSystemIntegrationContent() {
     provider: {
       "@type": "Organization",
       name: "CodeHunter Lab",
-      url: "https://www.codehunterlab.com",
     },
-    areaServed: ["Netherlands", "Leiden", "Amsterdam", "Rotterdam"],
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 52.1601,
+        longitude: 4.497,
+      },
+      geoRadius: "50000",
+    },
     description:
       "Connecting disparate software systems (CRM, ERP, APIs) into a unified, automated workflow.",
     hasOfferCatalog: {
@@ -400,13 +422,12 @@ export default function ITSystemIntegrationContent() {
         <section className="relative z-10 mx-auto max-w-4xl border-t border-white/5 px-6 py-32">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tighter md:text-6xl">
-              {t("FAQ.title")}
+              Frequently asked questions
             </h2>
-            <p className="text-xl text-gray-400">{t("FAQ.subtitle")}</p>
           </div>
 
           <div className="space-y-6">
-            {(t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => (
+            {faqQuestions.map((item) => (
               <GlassCard
                 key={item.q}
                 className="group cursor-default p-8"
@@ -414,7 +435,7 @@ export default function ITSystemIntegrationContent() {
                 glowColor="green"
               >
                 <h3 className="mb-4 flex items-center gap-4 text-2xl font-bold text-white">
-                  <span className="text-blue-400 transition-transform group-hover:rotate-90">
+                  <span className="text-hunter-green transition-transform group-hover:rotate-90">
                     →
                   </span>
                   {item.q}

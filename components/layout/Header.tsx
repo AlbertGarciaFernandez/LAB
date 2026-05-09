@@ -55,6 +55,7 @@ function navReducer(state: NavState, action: NavAction): NavState {
 
 const ChevronDown: React.FC<{ open?: boolean }> = ({ open }) => (
   <m.svg
+    aria-hidden="true"
     width="11"
     height="11"
     viewBox="0 0 12 12"
@@ -211,9 +212,11 @@ const Header: React.FC = () => {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-  if (nav.prevPathname !== pathname) {
-    dispatch({ type: "ROUTE_CHANGE", pathname });
-  }
+  useEffect(() => {
+    if (nav.prevPathname !== pathname) {
+      dispatch({ type: "ROUTE_CHANGE", pathname });
+    }
+  }, [pathname, nav.prevPathname]);
 
   const isGroupActive = (items: { href: string }[]) =>
     items.some((item) => pathname === item.href || pathname?.startsWith(item.href + "/"));

@@ -102,41 +102,17 @@ export default function AIAutomationNetherlandsContent({
   industries,
   seo,
 }: PageProps) {
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "AI Automation Netherlands",
-        item: `https://www.codehunterlab.com/en/ai-automation-consulting-netherlands`,
-      },
-    ],
-  };
-
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is an AI Agent?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "An AI Agent is a piece of software that can perceive its environment, reason about it, and take actions to achieve a goal. Unlike a simple chatbot, it can execute tasks like booking appointments or updating your CRM.",
-        },
+    mainEntity: seo.faqQuestions.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
       },
-      {
-        "@type": "Question",
-        name: "How much can AI automation save my business?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "On average, our clients see a 40% reduction in customer support costs and a significant boost in lead response times, often leading to a 20%+ increase in top-line revenue.",
-        },
-      },
-    ],
+    })),
   };
 
   const jsonLd = {
@@ -180,11 +156,6 @@ export default function AIAutomationNetherlandsContent({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-
         <div className="bg-noise" />
         <HeroBackgroundOrnaments />
 

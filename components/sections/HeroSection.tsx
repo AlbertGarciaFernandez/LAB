@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
         <m.div
           className="space-y-8 text-center"
           variants={containerVariants}
-          initial="hidden"
+          initial={false}
           animate="visible"
         >
           {/* Logo */}

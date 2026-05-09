@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
+import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { insights } from "@/content/insights";
 
 const baseUrl = "https://www.codehunterlab.com";
@@ -34,6 +35,12 @@ export async function generateMetadata({
       type: "website",
       locale: isSpanish ? "es_ES" : "en_US",
     },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${baseUrl}/${params.locale}/opengraph-image`],
+    },
   };
 }
 
@@ -66,6 +73,12 @@ export default function InsightsPage({ params }: { params: { locale: string } })
     <div className="min-h-screen bg-near-black text-white">
       <Header />
       <main className="mx-auto max-w-7xl px-6 pb-24 pt-32 lg:px-8">
+        <BreadcrumbSchema
+          items={[
+            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
+            { name: "Insights", url: `${baseUrl}/${params.locale}/insights` },
+          ]}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}

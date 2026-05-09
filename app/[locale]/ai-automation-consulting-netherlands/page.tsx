@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import AIAutomationNetherlandsContent from "./PageContent";
 
 const baseUrl = "https://www.codehunterlab.com";
@@ -42,7 +43,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page() {
+export default async function Page({ params }: { params: { locale: string } }) {
+  const { locale } = params;
   const t = await getTranslations("AIAutomationNL");
 
   const hero = {
@@ -132,13 +134,21 @@ export default async function Page() {
   };
 
   return (
-    <AIAutomationNetherlandsContent
-      hero={hero}
-      agents={agents}
-      roi={roi}
-      trust={trust}
-      industries={industries}
-      seo={seo}
-    />
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: locale === "es" ? "Inicio" : "Home", url: `${baseUrl}/${locale}` },
+          { name: "AI Automation Consulting", url: `${baseUrl}/${locale}${path}` },
+        ]}
+      />
+      <AIAutomationNetherlandsContent
+        hero={hero}
+        agents={agents}
+        roi={roi}
+        trust={trust}
+        industries={industries}
+        seo={seo}
+      />
+    </>
   );
 }

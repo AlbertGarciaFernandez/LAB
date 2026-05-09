@@ -13,29 +13,57 @@ export default function SoftwareDevelopmentLeidenContent() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "CodeHunter Lab - Software Development Leiden",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
-    author: {
+    "@type": "Service",
+    serviceType: "Software Development",
+    provider: {
       "@type": "Organization",
       name: "CodeHunter Lab",
-      url: "https://www.codehunterlab.com",
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 52.1601,
+        longitude: 4.497,
+      },
+      geoRadius: "50000",
     },
     description:
-      "Premium software development services in Leiden, specialized in React, Next.js and AI integration.",
-    offers: {
-      "@type": "Offer",
-      price: "0.00",
-      priceCurrency: "EUR",
-      description: "Free initial architecture consultation",
+      "Your local software development partner in Leiden. We build custom web apps, scalable e-commerce solutions, and provide expert IT consulting in Zuid-Holland.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Development Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Web Application Development" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "E-commerce Solutions" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Integration Services" } },
+      ],
     },
-    areaServed: ["Leiden", "Zuid-Holland", "Netherlands"],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "12",
+  };
+
+  const faqQuestions = [
+    {
+      q: "What types of applications do you build in Leiden?",
+      a: "We build custom web applications, internal dashboards, booking systems, workflow tools, and customer portals for local businesses in Leiden and surrounding areas, primarily using React and Next.js.",
     },
+    {
+      q: "How long does it take to build a custom web application?",
+      a: "A focused MVP typically takes 4-8 weeks from scoping to deployment. Timeline depends on feature complexity, third-party integrations, and design requirements.",
+    },
+    {
+      q: "Do you work with companies outside Leiden?",
+      a: "Yes. While based in Leiden, we serve clients across the Netherlands and internationally. All engagements can run fully remotely.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqQuestions.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
   };
 
   const breadcrumbJsonLd = {
@@ -59,6 +87,10 @@ export default function SoftwareDevelopmentLeidenContent() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         <script
           type="application/ld+json"
@@ -279,24 +311,23 @@ export default function SoftwareDevelopmentLeidenContent() {
         </section>
 
         {/* FAQ Section - SEO Goldmine */}
-        <section className="relative z-10 mx-auto max-w-4xl px-6 py-32">
+        <section className="relative z-10 mx-auto max-w-4xl border-t border-white/5 px-6 py-32">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tighter md:text-6xl">
-              {t("FAQ.title")}
+              Frequently asked questions
             </h2>
-            <p className="text-xl text-gray-400">{t("FAQ.subtitle")}</p>
           </div>
 
           <div className="space-y-6">
-            {t.raw("FAQ.questions").map((item: { q: string; a: string }) => (
+            {faqQuestions.map((item) => (
               <GlassCard
                 key={item.q}
                 className="group cursor-default p-8"
                 hoverEffect={true}
-                glowColor="orange"
+                glowColor="green"
               >
                 <h3 className="mb-4 flex items-center gap-4 text-2xl font-bold text-white">
-                  <span className="text-hunter-orange transition-transform group-hover:rotate-90">
+                  <span className="text-hunter-green transition-transform group-hover:rotate-90">
                     →
                   </span>
                   {item.q}

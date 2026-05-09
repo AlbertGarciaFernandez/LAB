@@ -44,6 +44,7 @@ export default function HeroBackgroundOrnaments() {
 
       {/* Technical SVG Symbols */}
       <m.svg
+        aria-hidden="true"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
         transition={{ duration: 1.5 }}

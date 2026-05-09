@@ -21,6 +21,36 @@ const useCaseIcons = [FileTextIcon, BrainIcon, HeadsetIcon, ScalesIcon, FirstAid
 export default function CustomLLMPageContent() {
   const t = useTranslations("ExpertisePages.CustomLLMs");
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Custom LLM Development",
+    provider: {
+      "@type": "Organization",
+      name: "CodeHunter Lab",
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 52.1601,
+        longitude: 4.497,
+      },
+      geoRadius: "50000",
+    },
+    description:
+      "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "LLM Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "LLM Fine-Tuning (Llama/Mistral)" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Private AI Server Deployment" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Domain-Specific Model Training" } },
+      ],
+    },
+  };
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -45,6 +75,10 @@ export default function CustomLLMPageContent() {
     <>
       <Header />
       <main className="relative min-h-screen overflow-hidden bg-near-black text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

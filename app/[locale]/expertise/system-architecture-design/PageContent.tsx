@@ -28,6 +28,36 @@ const useCaseIcons = [
 export default function SystemArchitecturePageContent() {
   const t = useTranslations("ExpertisePages.SystemArchitecture");
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "System Architecture Design",
+    provider: {
+      "@type": "Organization",
+      name: "CodeHunter Lab",
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 52.1601,
+        longitude: 4.497,
+      },
+      geoRadius: "50000",
+    },
+    description:
+      "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Architecture Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Scalable Next.js Architecture" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud Infrastructure Design" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Technical Debt Audits" } },
+      ],
+    },
+  };
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -52,6 +82,10 @@ export default function SystemArchitecturePageContent() {
     <>
       <Header />
       <main className="relative min-h-screen overflow-hidden bg-near-black text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

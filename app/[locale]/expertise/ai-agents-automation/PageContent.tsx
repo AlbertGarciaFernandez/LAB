@@ -28,6 +28,36 @@ const useCaseIcons = [
 export default function AIAgentsPageContent() {
   const t = useTranslations("ExpertisePages.AIAgents");
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "AI Agent Development",
+    provider: {
+      "@type": "Organization",
+      name: "CodeHunter Lab",
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 52.1601,
+        longitude: 4.497,
+      },
+      geoRadius: "50000",
+    },
+    description:
+      "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "AI Agent Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "WhatsApp AI Agents" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Voice Calling Bots" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "n8n Workflow Automation" } },
+      ],
+    },
+  };
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -52,6 +82,10 @@ export default function AIAgentsPageContent() {
     <>
       <Header />
       <main className="relative min-h-screen overflow-hidden bg-near-black text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

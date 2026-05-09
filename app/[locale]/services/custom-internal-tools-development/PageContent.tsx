@@ -12,44 +12,58 @@ import { ChartBarIcon, LockKeyIcon, CalendarIcon } from "@phosphor-icons/react/d
 export default function CustomInternalToolsContent() {
   const t = useTranslations("InternalTools");
 
+  const faqQuestions = [
+    {
+      q: "What is a custom internal tool?",
+      a: "A custom internal tool is software built specifically for your team's operational workflows — admin dashboards, data entry portals, approval systems, and reporting tools that replace manual spreadsheet processes.",
+    },
+    {
+      q: "How are internal tools different from public apps?",
+      a: "Internal tools focus on operational efficiency rather than customer-facing features. They are faster to launch, easier to measure, and directly connected to time and cost savings.",
+    },
+    {
+      q: "Can internal tools integrate with our existing software?",
+      a: "Yes. We design internal tools to connect with your existing CRM, ERP, databases, and APIs so data flows automatically instead of being copied manually.",
+    },
+  ];
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Why build a custom internal tool instead of using Retool or Appsmith?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "For many businesses, low-code per-user fees become a massive hidden cost as you grow. Our custom-built tools have zero monthly user fees and 100% flexibility.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can my internal tool sync with Excel or Google Sheets?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. We usually help businesses graduate from sheets to a real database (like Supabase or PostgreSQL) while keeping the sheets as a backup or input method if needed.",
-        },
-      },
-    ],
+    mainEntity: faqQuestions.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
   };
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Custom Software Development",
+    serviceType: "Custom Internal Tools Development",
     provider: {
       "@type": "Organization",
       name: "CodeHunter Lab",
-      url: "https://www.codehunterlab.com",
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 52.1601,
+        longitude: 4.497,
+      },
+      geoRadius: "50000",
     },
     description:
-      "Designing and building custom software to solve internal operational bottlenecks without vendor lock-in.",
-    areaServed: "Netherlands",
-    offers: {
-      "@type": "Offer",
-      description: "Fixed-price MVP development for internal tools",
+      "Expert developer of custom internal tools, admin panels, and operation dashboards. Scale your business without per-user fees in the Netherlands.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Internal Tools Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Admin Panels" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Operation Dashboards" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Workflow Automation Tools" } },
+      ],
     },
   };
 
@@ -279,16 +293,15 @@ export default function CustomInternalToolsContent() {
         <section className="relative z-10 mx-auto max-w-4xl border-t border-white/5 px-6 py-32">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tighter md:text-6xl">
-              {t("FAQ.title")}
+              Frequently asked questions
             </h2>
-            <p className="text-xl text-gray-400">{t("FAQ.subtitle")}</p>
           </div>
 
           <div className="space-y-6">
-            {t.raw("FAQ.questions").map((item: { q: string; a: string }) => (
-              <GlassCard key={item.q} className="group p-8" hoverEffect={true} glowColor="orange">
+            {faqQuestions.map((item) => (
+              <GlassCard key={item.q} className="group p-8" hoverEffect={true} glowColor="green">
                 <h3 className="mb-4 flex items-center gap-4 text-2xl font-bold text-white">
-                  <span className="text-purple-500 transition-transform group-hover:rotate-90">
+                  <span className="text-hunter-green transition-transform group-hover:rotate-90">
                     →
                   </span>
                   {item.q}

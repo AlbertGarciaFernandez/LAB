@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
+import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { caseStudies } from "@/content/case-studies";
 
 const baseUrl = "https://www.codehunterlab.com";
@@ -31,6 +32,12 @@ export async function generateMetadata({
       siteName: "CodeHunter Lab",
       type: "website",
       locale: isSpanish ? "es_ES" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${baseUrl}/${params.locale}/opengraph-image`],
     },
   };
 }
@@ -64,6 +71,12 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
     <div className="min-h-screen bg-near-black text-white">
       <Header />
       <main className="mx-auto max-w-7xl px-6 pb-24 pt-32 lg:px-8">
+        <BreadcrumbSchema
+          items={[
+            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
+            { name: isSpanish ? "Casos de éxito" : "Case Studies", url: `${baseUrl}/${params.locale}/case-studies` },
+          ]}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}

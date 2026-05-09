@@ -10,6 +10,11 @@ export type InsightSection =
   | {
       type: "list";
       items: string[];
+    }
+  | {
+      type: "table";
+      headers: string[];
+      rows: string[][];
     };
 
 export type InsightArticle = {
@@ -56,11 +61,11 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text: "A workflow automation agency helps a business remove repeated manual work from sales, operations, finance, support, and internal reporting. In the Netherlands, the strongest automation opportunities usually sit between existing tools: CRM systems, email inboxes, WhatsApp conversations, accounting software, spreadsheets, and industry-specific platforms.",
+        text: "A workflow automation agency is a specialized services firm that helps businesses identify, design, and deploy software-based workflows that replace repetitive manual tasks across sales, operations, finance, customer support, and internal reporting. In the Netherlands, these agencies typically work with mid-sized companies and growing teams that rely on disconnected tools such as CRM systems, email inboxes, WhatsApp conversations, accounting software, spreadsheets, and industry-specific platforms. The core value lies not in simply connecting apps, but in mapping operational processes, removing friction between systems, and ensuring that data flows accurately without constant human intervention. A competent agency brings together process analysis, integration engineering, and change management to deliver automations that reduce error rates, accelerate response times, and free internal teams to focus on higher-value work rather than administrative repetition. This scope distinguishes a true automation partner from a basic app-connector or generic IT vendor.",
       },
       {
         type: "heading",
-        text: "Start with workflows that already have volume",
+        text: "What workflows should a business automate first?",
       },
       {
         type: "paragraph",
@@ -77,7 +82,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "Rank automation by ROI, not novelty",
+        text: "How should a business rank automation opportunities by ROI?",
       },
       {
         type: "paragraph",
@@ -85,7 +90,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "When to hire an agency",
+        text: "When should a business hire a workflow automation agency?",
       },
       {
         type: "paragraph",
@@ -120,11 +125,11 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text: "A conversational AI consultant designs and deploys AI systems that speak with customers or employees through channels such as WhatsApp, website chat, voice calls, email, and internal tools. The goal is not to add a chatbot for decoration. The goal is to complete a business process with less waiting, fewer handoffs, and better data capture.",
+        text: "A conversational AI consultant refers to a specialist who designs, builds, and deploys artificial intelligence systems capable of holding useful dialogue with customers or employees through communication channels such as WhatsApp, website chat, voice calls, email, and internal messaging tools. In the Dutch market, these consultants serve businesses seeking to automate specific operational tasks rather than deploy generic chatbots for appearance alone. Their work spans natural language understanding, integration with backend systems like CRMs and calendars, and the design of escalation protocols that transfer complex cases to human agents seamlessly. The primary objective is to complete business processes with reduced waiting times, fewer internal handoffs, and improved data capture at every interaction point. Successful implementations require careful boundary-setting around what the AI may handle independently, what it must refuse, and when it should escalate to a human team member. This disciplined approach ensures that conversational AI becomes a reliable operational layer rather than a superficial interface.",
       },
       {
         type: "heading",
-        text: "The best use cases are narrow and operational",
+        text: "What are the best use cases for conversational AI?",
       },
       {
         type: "paragraph",
@@ -141,7 +146,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "Costs depend on integration complexity",
+        text: "What determines the cost of a conversational AI project?",
       },
       {
         type: "paragraph",
@@ -149,7 +154,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "The main risks",
+        text: "What are the main risks of deploying conversational AI?",
       },
       {
         type: "paragraph",
@@ -180,11 +185,11 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text: "An n8n consultant helps teams design, migrate, self-host, and maintain workflow automations in n8n. The platform is strongest when a business needs complex branching, API integrations, AI steps, private infrastructure, or predictable automation costs at higher volume.",
+        text: "An n8n consultant is an automation specialist who helps teams design, migrate, self-host, and maintain workflow automations using the n8n open-source platform. Unlike general automation advisors, these consultants possess deep expertise in n8n's node-based architecture, custom API integrations, error handling patterns, and infrastructure deployment options. The platform proves strongest when a business requires complex branching logic, deep API integrations, AI processing steps, private self-hosted infrastructure, or predictable automation costs at higher execution volumes. Dutch organizations often engage n8n consultants when they have outgrown simpler no-code tools like Zapier or Make and need greater control over data privacy, workflow versioning, and custom code execution. A qualified consultant delivers not only technical implementation but also documentation, credential management, failure alerting, and knowledge transfer so that internal teams can operate and extend the automation layer independently over time.",
       },
       {
         type: "heading",
-        text: "When n8n is a better fit",
+        text: "When is n8n a better fit than Zapier or Make?",
       },
       {
         type: "paragraph",
@@ -201,7 +206,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "What a consultant should deliver",
+        text: "What should an n8n consultant deliver?",
       },
       {
         type: "paragraph",
@@ -209,7 +214,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "Migration is a good first project",
+        text: "Why is migration a good first n8n project?",
       },
       {
         type: "paragraph",
@@ -244,11 +249,11 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text: "Dental clinic WhatsApp automation helps practices send appointment reminders, patient recall messages, post-treatment follow-ups, and review requests without manually chasing every patient. For clinics in the Netherlands, the best systems are practical, consent-aware, and connected to the tools the front desk already uses.",
+        text: "Dental clinic WhatsApp automation refers to the use of programmatic messaging systems to help dental practices send appointment reminders, patient recall messages, post-treatment follow-ups, and review requests without requiring front-desk staff to manually contact every patient. In the Netherlands, where dental practices operate under strict GDPR requirements and patients expect convenient digital communication, effective automation must balance operational efficiency with clear consent management and data protection. The best systems integrate directly with practice management software, appointment calendars, and patient record databases to ensure that messages are timely, personalized, and accurate. Beyond simple reminders, comprehensive automation can handle two-way conversations for rescheduling, route unclear replies to human staff, and trigger targeted recall campaigns based on treatment history. This technology allows clinics to reduce no-show rates, improve patient retention, and free administrative staff to focus on in-person patient care rather than repetitive outreach tasks.",
       },
       {
         type: "heading",
-        text: "Start with reminders and recall",
+        text: "Where should a dental clinic start with WhatsApp automation?",
       },
       {
         type: "paragraph",
@@ -265,7 +270,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "Keep GDPR and consent visible",
+        text: "How should a dental clinic handle GDPR and consent in WhatsApp automation?",
       },
       {
         type: "paragraph",
@@ -273,7 +278,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "Connect automation to practice operations",
+        text: "How should WhatsApp automation connect to dental practice operations?",
       },
       {
         type: "paragraph",
@@ -308,11 +313,11 @@ export const insights: InsightArticle[] = [
     sections: [
       {
         type: "paragraph",
-        text: "AI consultants in the Netherlands vary widely. Some focus on strategy decks, some on data science models, and some on production automation systems. The right partner depends on whether you need a roadmap, a prototype, or a working system connected to your CRM, inbox, calendar, database, and operations.",
+        text: "AI consultants in the Netherlands refer to professional service providers who help organizations apply artificial intelligence and automation technologies to specific business problems, ranging from strategic roadmaps to production system implementation. The Dutch market includes a diverse spectrum of specialists: some focus on high-level strategy decks and feasibility studies, others build data science models and analytics platforms, and a growing number specialize in practical automation systems integrated with CRMs, inboxes, calendars, databases, and daily operations. Choosing the right partner depends heavily on whether the organization needs conceptual guidance, a working prototype, or a fully deployed system that handles real customer interactions and internal workflows. A capable AI consultant combines technical expertise with business process understanding to ensure that AI investments translate into measurable improvements in speed, accuracy, cost reduction, or revenue recovery rather than remaining experimental proofs of concept.",
       },
       {
         type: "heading",
-        text: "Separate strategy from implementation",
+        text: "Why should AI strategy and implementation be handled together?",
       },
       {
         type: "paragraph",
@@ -329,7 +334,7 @@ export const insights: InsightArticle[] = [
       },
       {
         type: "heading",
-        text: "The best first engagement is usually a scoped sprint",
+        text: "What is the best first engagement with an AI consultant?",
       },
       {
         type: "paragraph",
@@ -903,6 +908,18 @@ export const insights: InsightArticle[] = [
         text: "The choice between n8n and Zapier is usually not about which interface looks friendlier. It is about execution volume, system complexity, data control, and who will maintain the workflows over time. For a growing Dutch business, the right answer depends on whether automation is still a convenience layer or has already become operational infrastructure.",
       },
       {
+        type: "table",
+        headers: ["Criteria", "n8n", "Zapier"],
+        rows: [
+          ["Cost model", "Free self-hosted or fair-code; predictable at scale", "Per-task pricing; costs rise with volume"],
+          ["Privacy / self-hosting", "Full self-hosting; data stays on your infrastructure", "Cloud-only; data passes through Zapier servers"],
+          ["Workflow complexity", "Deep branching, loops, subflows, custom code nodes", "Linear flows; limited custom logic"],
+          ["Custom API support", "Any REST/GraphQL API with HTTP request nodes", "Requires built-in app or webhooks"],
+          ["AI steps", "Native AI nodes (OpenAI, local models, vector stores)", "Requires separate AI app integrations"],
+          ["Maintenance", "Versionable JSON, Git-friendly, engineering-owned", "GUI-managed; harder to version control"],
+        ],
+      },
+      {
         type: "heading",
         text: "Zapier is faster for simple workflows",
       },
@@ -1129,6 +1146,18 @@ export const insights: InsightArticle[] = [
       {
         type: "paragraph",
         text: "The decision between Make and n8n usually comes down to workflow ownership, technical flexibility, and how operational the automation layer has become. Both can be useful. The right choice depends on whether the team wants a fast visual builder for moderate complexity or a system with stronger control over logic, infrastructure, and long-term extensibility.",
+      },
+      {
+        type: "table",
+        headers: ["Criteria", "Make", "n8n"],
+        rows: [
+          ["Cost model", "Per-operation credits; tiered plans", "Free self-hosted or fair-code; flat cost at scale"],
+          ["Privacy / self-hosting", "Cloud-hosted only", "Full self-hosting; GDPR-friendly infrastructure control"],
+          ["Workflow complexity", "Visual scenarios with routers and iterators", "Code-friendly branching, loops, subflows, and error handling"],
+          ["Custom API support", "HTTP modules available; less node flexibility", "Any API via HTTP request; custom nodes and JavaScript/Python code"],
+          ["AI steps", "Limited native AI; relies on external tools", "Built-in AI nodes, vector stores, and LLM orchestration"],
+          ["Maintenance", "Visual scenario history; harder to version", "JSON exports, Git versioning, engineering-friendly ownership"],
+        ],
       },
       {
         type: "heading",

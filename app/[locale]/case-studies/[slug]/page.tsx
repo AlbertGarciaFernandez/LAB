@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
+import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { caseStudyBySlug, caseStudies } from "@/content/case-studies";
 
 const baseUrl = "https://www.codehunterlab.com";
@@ -94,6 +95,13 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
     <div className="min-h-screen bg-near-black text-white">
       <Header />
       <main className="mx-auto max-w-4xl px-6 pb-24 pt-32 lg:px-8">
+        <BreadcrumbSchema
+          items={[
+            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
+            { name: isSpanish ? "Casos de éxito" : "Case Studies", url: `${baseUrl}/${params.locale}/case-studies` },
+            { name: study.solution, url: studyUrl },
+          ]}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

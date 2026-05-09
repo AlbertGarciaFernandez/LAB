@@ -8,6 +8,9 @@ import InsightsSection from "@/components/sections/InsightsSection";
 import BioSection from "@/components/sections/04BioSection";
 import IndustriesSection from "@/components/sections/IndustriesSection";
 import ProcessContactSection from "@/components/sections/06ProcessContactSection";
+import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
+
+const baseUrl = "https://www.codehunterlab.com";
 
 export const metadata: Metadata = {
   title: "AI Automation Agency Netherlands | CodeHunter Lab",
@@ -15,11 +18,17 @@ export const metadata: Metadata = {
     "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
 };
 
-const Home = () => {
+export default function Home({ params }: { params: { locale: string } }) {
+  const isSpanish = params.locale === "es";
   return (
     <div className="min-h-screen bg-near-black text-white antialiased">
       <Header />
       <main>
+        <BreadcrumbSchema
+          items={[
+            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
+          ]}
+        />
         <HeroSection />
         <TrustProofSection />
         <WhatWeBuildSection />
@@ -31,6 +40,4 @@ const Home = () => {
       </main>
     </div>
   );
-};
-
-export default Home;
+}
