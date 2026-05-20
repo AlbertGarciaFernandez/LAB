@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { insights } from "@/content/insights";
+import { createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
 
@@ -19,29 +20,17 @@ export async function generateMetadata({
   const description = isSpanish
     ? "Notas prácticas sobre automatización AI, flujos n8n, IA conversacional y automatización de clínicas para negocios holandeses."
     : "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.";
-  const canonical = `${baseUrl}/${params.locale}/insights`;
-
-  return {
+  return createPageMetadata({
+    locale: params.locale,
+    path: "/insights",
     title,
     description,
-    alternates: {
-      canonical,
-    },
-    openGraph: {
-      title,
-      description,
-      url: canonical,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: isSpanish ? "es_ES" : "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [`${baseUrl}/${params.locale}/opengraph-image`],
-    },
-  };
+    keywords: [
+      "AI automation insights Netherlands",
+      "n8n workflows Netherlands",
+      "workflow automation agency Netherlands",
+    ],
+  });
 }
 
 export default function InsightsPage({ params }: { params: { locale: string } }) {

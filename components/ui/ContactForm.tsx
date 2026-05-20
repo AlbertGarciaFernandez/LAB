@@ -15,8 +15,11 @@ type FormState = "idle" | "submitting" | "retrying" | "success" | "error";
 
 interface FieldErrors {
   name?: string;
+  company?: string;
+  role?: string;
   email?: string;
   phone?: string;
+  ai_goal?: string;
   budget?: string;
   message?: string;
   project_type?: string;
@@ -45,6 +48,16 @@ function validateForm(formData: FormData, selectedType: string | null): FieldErr
     errors.email = "Please enter a valid email address.";
   }
 
+  const company = formData.get("company") as string | null;
+  if (!company || company.trim().length < 2) {
+    errors.company = "Company must be at least 2 characters.";
+  }
+
+  const role = formData.get("role") as string | null;
+  if (!role || role.trim().length < 2) {
+    errors.role = "Role must be at least 2 characters.";
+  }
+
   const phone = formData.get("phone") as string | null;
   if (phone && phone.trim()) {
     const digits = getPhoneDigits(phone);
@@ -63,6 +76,11 @@ function validateForm(formData: FormData, selectedType: string | null): FieldErr
     errors.message = "Message must be at least 10 characters.";
   }
 
+  const aiGoal = formData.get("ai_goal") as string | null;
+  if (!aiGoal || aiGoal.trim().length < 10) {
+    errors.ai_goal = "Please describe the AI improvement goal in at least 10 characters.";
+  }
+
   if (!selectedType) {
     errors.project_type = "Please select a project type.";
   }
@@ -71,7 +89,17 @@ function validateForm(formData: FormData, selectedType: string | null): FieldErr
 }
 
 function scrollToFirstError(errors: FieldErrors): void {
-  const fieldIds = ["name", "email", "phone", "budget", "message", "project_type"] as const;
+  const fieldIds = [
+    "name",
+    "company",
+    "role",
+    "budget",
+    "email",
+    "phone",
+    "ai_goal",
+    "message",
+    "project_type",
+  ] as const;
   for (const id of fieldIds) {
     if (errors[id]) {
       const element = document.getElementById(id);
@@ -320,6 +348,14 @@ export const ContactForm: React.FC = () => {
                 id="company"
                 required
                 autoComplete="organization"
+                aria-required="true"
+                aria-invalid={fieldErrors.company ? "true" : "false"}
+                aria-describedby={fieldErrors.company ? "company-error" : undefined}
+                onChange={() => {
+                  if (fieldErrors.company) {
+                    setFieldErrors((prev) => ({ ...prev, company: undefined }));
+                  }
+                }}
                 className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
                 placeholder=" "
               />
@@ -329,6 +365,11 @@ export const ContactForm: React.FC = () => {
               >
                 Company *
               </label>
+              {fieldErrors.company && (
+                <p id="company-error" className="mt-2 text-sm text-red-500">
+                  {fieldErrors.company}
+                </p>
+              )}
             </div>
 
             {/* Role */}
@@ -338,6 +379,14 @@ export const ContactForm: React.FC = () => {
                 name="role"
                 id="role"
                 required
+                aria-required="true"
+                aria-invalid={fieldErrors.role ? "true" : "false"}
+                aria-describedby={fieldErrors.role ? "role-error" : undefined}
+                onChange={() => {
+                  if (fieldErrors.role) {
+                    setFieldErrors((prev) => ({ ...prev, role: undefined }));
+                  }
+                }}
                 className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
                 placeholder=" "
               />
@@ -347,6 +396,11 @@ export const ContactForm: React.FC = () => {
               >
                 Role / Title *
               </label>
+              {fieldErrors.role && (
+                <p id="role-error" className="mt-2 text-sm text-red-500">
+                  {fieldErrors.role}
+                </p>
+              )}
             </div>
 
             {/* Budget */}
@@ -458,6 +512,14 @@ export const ContactForm: React.FC = () => {
               name="ai_goal"
               id="ai_goal"
               required
+              aria-required="true"
+              aria-invalid={fieldErrors.ai_goal ? "true" : "false"}
+              aria-describedby={fieldErrors.ai_goal ? "ai_goal-error" : undefined}
+              onChange={() => {
+                if (fieldErrors.ai_goal) {
+                  setFieldErrors((prev) => ({ ...prev, ai_goal: undefined }));
+                }
+              }}
               className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
               placeholder=" "
             />
@@ -467,6 +529,11 @@ export const ContactForm: React.FC = () => {
             >
               What would you like to improve with AI? *
             </label>
+            {fieldErrors.ai_goal && (
+              <p id="ai_goal-error" className="mt-2 text-sm text-red-500">
+                {fieldErrors.ai_goal}
+              </p>
+            )}
           </div>
 
           {/* Mission Brief */}

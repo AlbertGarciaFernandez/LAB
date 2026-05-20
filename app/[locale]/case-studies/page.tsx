@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { caseStudies } from "@/content/case-studies";
+import { createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
 
@@ -17,29 +18,17 @@ export async function generateMetadata({
   const description = isSpanish
     ? "Ejemplos reales de automatización AI y flujos de trabajo para clínicas, despachos de contabilidad y negocios holandeses."
     : "Real-world automation and AI workflow case studies for Dutch dental clinics, accounting firms, and SMEs.";
-  const canonical = `${baseUrl}/${params.locale}/case-studies`;
-
-  return {
+  return createPageMetadata({
+    locale: params.locale,
+    path: "/case-studies",
     title,
     description,
-    alternates: {
-      canonical,
-    },
-    openGraph: {
-      title,
-      description,
-      url: canonical,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: isSpanish ? "es_ES" : "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [`${baseUrl}/${params.locale}/opengraph-image`],
-    },
-  };
+    keywords: [
+      "AI automation case studies",
+      "workflow automation Netherlands",
+      "n8n automation case studies",
+    ],
+  });
 }
 
 export default function CaseStudiesPage({ params }: { params: { locale: string } }) {

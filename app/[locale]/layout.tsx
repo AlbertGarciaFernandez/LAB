@@ -16,6 +16,9 @@ export const viewport = {
 };
 
 const baseUrl = "https://www.codehunterlab.com";
+const defaultTitle = "AI Automation Agency Netherlands | CodeHunter Lab";
+const defaultDescription =
+  "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.";
 
 export async function generateMetadata({
   params,
@@ -31,8 +34,8 @@ export async function generateMetadata({
       shortcut: "/logo-hntr.svg",
       apple: "/apple-touch-icon.png",
     },
-    title: t("title"),
-    description: t("description"),
+    title: locale === "en" ? defaultTitle : t("title"),
+    description: locale === "en" ? defaultDescription : t("description"),
     keywords: t.raw("keywords") as string[],
     robots: {
       index: true,
@@ -49,8 +52,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: locale === "en" ? defaultTitle : t("title"),
+      description: locale === "en" ? defaultDescription : t("description"),
       url: `${baseUrl}/${locale}`,
       siteName: "CodeHunter Lab",
       type: "website",
@@ -60,14 +63,14 @@ export async function generateMetadata({
           url: `${baseUrl}/${locale}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: t("title"),
+          alt: locale === "en" ? defaultTitle : t("title"),
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
+      title: locale === "en" ? defaultTitle : t("title"),
+      description: locale === "en" ? defaultDescription : t("description"),
       images: [`${baseUrl}/${locale}/opengraph-image`],
     },
   };
@@ -89,11 +92,17 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="https://formsubmit.co" />
       </head>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:not-sr-only focus:rounded-lg focus:bg-hunter-green focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-near-black focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          Skip to main content
+        </a>
         <NextIntlClientProvider messages={messages}>
           <MotionProvider>
             <div className="min-h-screen bg-near-black font-sans text-white">
               <div className="bg-noise" />
-              {children}
+              <div id="main-content">{children}</div>
               <LocaleFooterGate />
               <CookieConsent />
               <GoogleAnalyticsConditional />

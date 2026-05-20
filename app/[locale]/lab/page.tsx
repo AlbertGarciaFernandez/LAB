@@ -8,8 +8,7 @@ import {
   LabSolutionSection,
   LabSystemsSection,
 } from "@/components/lab/LabLandingSections";
-
-const baseUrl = "https://www.codehunterlab.com";
+import { createPageMetadata } from "@/utils/metadata";
 
 export async function generateMetadata({
   params,
@@ -21,26 +20,13 @@ export async function generateMetadata({
   const description =
     "A premium product landing page for CodeHunter Lab that frames the platform, previews the systems, and guides the next click.";
 
-  return {
+  return createPageMetadata({
+    locale,
+    path: "/lab",
     title,
     description,
-    alternates: {
-      canonical: `${baseUrl}/${locale}/lab`,
-      languages: {
-        en: `${baseUrl}/en/lab`,
-        es: `${baseUrl}/es/lab`,
-        "x-default": `${baseUrl}/en/lab`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${baseUrl}/${locale}/lab`,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-    },
-  };
+    keywords: ["AI implementation platform", "AI systems", "workflow automation training"],
+  });
 }
 
 const courseJsonLd = {

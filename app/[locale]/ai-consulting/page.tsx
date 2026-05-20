@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { createPageMetadata } from "@/utils/metadata";
 import AIConsultingPageContent from "./PageContent";
 
 export async function generateMetadata({
@@ -7,31 +8,14 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = params;
-  const baseUrl = "https://www.codehunterlab.com";
-  const path = "/ai-consulting";
-  return {
+  return createPageMetadata({
+    locale: params.locale,
+    path: "/ai-consulting",
     title: "AI Consulting Netherlands | Strategy, Implementation & ROI",
     description:
       "AI consulting for companies ready to ship. Strategy sprints, implementation, and ongoing partnerships. Production systems, not prototypes.",
-    alternates: {
-      canonical: `${baseUrl}/${locale}${path}`,
-      languages: {
-        en: `${baseUrl}/en${path}`,
-        es: `${baseUrl}/es${path}`,
-        "x-default": `${baseUrl}/en${path}`,
-      },
-    },
-    openGraph: {
-      title: "AI Consulting Netherlands | Strategy, Implementation & ROI",
-      description:
-        "AI consulting for companies ready to ship. Strategy sprints, implementation, and ongoing partnerships. Production systems, not prototypes.",
-      url: `${baseUrl}/${locale}${path}`,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-    },
-  };
+    keywords: ["AI consulting Netherlands", "AI automation consulting", "AI agents Netherlands"],
+  });
 }
 
 export default async function Page() {
@@ -58,6 +42,7 @@ export default async function Page() {
   };
 
   const pricing = {
+    // AIConsultingPricingSection copy source.
     badge: t("Pricing.badge"),
     title: t("Pricing.title"),
     highlight: t("Pricing.highlight"),

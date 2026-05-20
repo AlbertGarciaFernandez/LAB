@@ -116,6 +116,8 @@ const aboutPageMeta = {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.codehunterlab.com";
   const sitemapEntries: MetadataRoute.Sitemap = [];
+  const englishInsightsUrl = `${baseUrl}/en/insights`;
+  const englishAboutUrl = `${baseUrl}/en/about`;
 
   Object.entries(routeMeta).forEach(([route, meta]) => {
     routing.locales.forEach((locale) => {
@@ -128,26 +130,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  routing.locales.forEach((locale) => {
-    sitemapEntries.push({
-      url: `${baseUrl}/${locale}/insights`,
-      lastModified: new Date(insightsIndexMeta.lastModified),
-      changeFrequency: insightsIndexMeta.changeFrequency,
-      priority: insightsIndexMeta.priority,
-    });
+  sitemapEntries.push({
+    url: englishInsightsUrl,
+    lastModified: new Date(insightsIndexMeta.lastModified),
+    changeFrequency: insightsIndexMeta.changeFrequency,
+    priority: insightsIndexMeta.priority,
   });
 
-  routing.locales.forEach((locale) => {
-    sitemapEntries.push({
-      url: `${baseUrl}/${locale}/about`,
-      lastModified: new Date(aboutPageMeta.lastModified),
-      changeFrequency: aboutPageMeta.changeFrequency,
-      priority: aboutPageMeta.priority,
+  routing.locales
+    .filter((locale) => locale !== "en")
+    .forEach((locale) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}/insights`,
+        lastModified: new Date(insightsIndexMeta.lastModified),
+        changeFrequency: insightsIndexMeta.changeFrequency,
+        priority: insightsIndexMeta.priority,
+      });
     });
+
+  sitemapEntries.push({
+    url: englishAboutUrl,
+    lastModified: new Date(aboutPageMeta.lastModified),
+    changeFrequency: aboutPageMeta.changeFrequency,
+    priority: aboutPageMeta.priority,
   });
+
+  routing.locales
+    .filter((locale) => locale !== "en")
+    .forEach((locale) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}/about`,
+        lastModified: new Date(aboutPageMeta.lastModified),
+        changeFrequency: aboutPageMeta.changeFrequency,
+        priority: aboutPageMeta.priority,
+      });
+    });
 
   insights.forEach((article) => {
-    routing.locales.forEach((locale) => {
+    sitemapEntries.push({
+      url: `${baseUrl}/en/insights/${article.slug}`,
+      lastModified: new Date(article.modifiedAt),
+      changeFrequency: insightArticleMeta.changeFrequency,
+      priority: insightArticleMeta.priority,
+    });
+
+    routing.locales.filter((locale) => locale !== "en").forEach((locale) => {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}/insights/${article.slug}`,
         lastModified: new Date(article.modifiedAt),

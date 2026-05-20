@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
+import { BASE_URL } from "@/utils/constants";
+import { createPageMetadata } from "@/utils/metadata";
 import AIAutomationNetherlandsContent from "./PageContent";
 
-const baseUrl = "https://www.codehunterlab.com";
+const baseUrl = BASE_URL;
 const path = "/ai-automation-consulting-netherlands";
 
 export async function generateMetadata({
@@ -12,7 +14,9 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const { locale } = params;
-  return {
+  return createPageMetadata({
+    locale,
+    path,
     title: "AI Automation Agency Netherlands | n8n, WhatsApp & AI Agents",
     description:
       "AI automation agency in the Netherlands for WhatsApp agents, AI voice bots, n8n workflows, and CRM integrations built around measurable ROI.",
@@ -23,24 +27,7 @@ export async function generateMetadata({
       "AI Voice Agent Netherlands",
       "n8n automation consultant",
     ],
-    alternates: {
-      canonical: `${baseUrl}/${locale}${path}`,
-      languages: {
-        en: `${baseUrl}/en${path}`,
-        es: `${baseUrl}/es${path}`,
-        "x-default": `${baseUrl}/en${path}`,
-      },
-    },
-    openGraph: {
-      title: "AI Automation Agency Netherlands | n8n, WhatsApp & AI Agents",
-      description:
-        "AI automation agency in the Netherlands for WhatsApp agents, AI voice bots, n8n workflows, and CRM integrations built around measurable ROI.",
-      url: `${baseUrl}/${locale}${path}`,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-    },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: { locale: string } }) {

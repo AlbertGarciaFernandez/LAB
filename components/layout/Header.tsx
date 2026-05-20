@@ -221,6 +221,17 @@ const Header: React.FC = () => {
   const isGroupActive = (items: { href: string }[]) =>
     items.some((item) => pathname === item.href || pathname?.startsWith(item.href + "/"));
 
+  const handleDropdownKeyDown = (event: React.KeyboardEvent, key: string) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      dispatch({ type: "SET_DROPDOWN", key: openDropdown === key ? null : key });
+    }
+
+    if (event.key === "Escape") {
+      dispatch({ type: "SET_DROPDOWN", key: null });
+    }
+  };
+
   return (
     <>
       <m.header
@@ -275,6 +286,12 @@ const Header: React.FC = () => {
                   onMouseLeave={() => dispatch({ type: "SET_DROPDOWN", key: null })}
                 >
                   <button
+                    type="button"
+                    aria-expanded={openDropdown === group.key}
+                    aria-haspopup="menu"
+                    aria-controls={`${group.key}-menu`}
+                    onFocus={() => dispatch({ type: "SET_DROPDOWN", key: group.key })}
+                    onKeyDown={(event) => handleDropdownKeyDown(event, group.key)}
                     className={`group relative flex items-center px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                       isGroupActive(group.items) || openDropdown === group.key
                         ? "text-white"
@@ -300,6 +317,8 @@ const Header: React.FC = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 6, scale: 0.97 }}
                         transition={{ duration: 0.15, ease: "easeOut" }}
+                        id={`${group.key}-menu`}
+                        role="menu"
                         className="absolute left-1/2 top-[calc(100%+8px)] z-50 w-60 -translate-x-1/2 overflow-hidden rounded-2xl border border-white/10 bg-near-black/95 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-xl"
                       >
                         {/* Top accent line */}
@@ -313,7 +332,13 @@ const Header: React.FC = () => {
                               <Link
                                 key={item.href}
                                 href={item.href}
+                                role="menuitem"
                                 onClick={() => dispatch({ type: "SET_DROPDOWN", key: null })}
+                                onKeyDown={(event) => {
+                                  if (event.key === "Escape") {
+                                    dispatch({ type: "SET_DROPDOWN", key: null });
+                                  }
+                                }}
                                 className={`group/item flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-200 ${
                                   isActive
                                     ? "bg-hunter-green/8 text-hunter-green"
@@ -367,7 +392,7 @@ const Header: React.FC = () => {
 
               <li>
                 <Link
-                  href="/insights"
+                  href="/en/insights"
                   className="group relative block px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white"
                 >
                   Insights
@@ -416,6 +441,8 @@ const Header: React.FC = () => {
             className="relative z-[60] ml-2 p-2 text-white lg:hidden"
             onClick={() => dispatch({ type: "TOGGLE_MOBILE" })}
             aria-label="Toggle menu"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             <div className="space-y-1.5">
               <m.span
@@ -462,6 +489,10 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            id="mobile-navigation"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
             className="fixed inset-0 z-40 overflow-y-auto bg-near-black md:hidden"
           >
             <div className="flex min-h-full flex-col items-center justify-center space-y-2 px-6 py-28">
@@ -475,7 +506,10 @@ const Header: React.FC = () => {
                   className="w-full max-w-sm"
                 >
                   <button
+                    type="button"
                     onClick={() => dispatch({ type: "TOGGLE_MOBILE_GROUP", key: group.key })}
+                    aria-expanded={mobileExpanded === group.key}
+                    aria-controls={`mobile-${group.key}-menu`}
                     className={`flex w-full items-center justify-between rounded-xl px-5 py-3 text-xl font-bold transition-colors ${
                       isGroupActive(group.items)
                         ? "text-hunter-green"
@@ -495,6 +529,7 @@ const Header: React.FC = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.25 }}
+                        id={`mobile-${group.key}-menu`}
                         className="overflow-hidden"
                       >
                         <div className="border-white/8 mb-2 mt-1 overflow-hidden rounded-xl border">

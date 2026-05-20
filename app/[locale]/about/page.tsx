@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
+import { createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
 
@@ -18,23 +19,14 @@ export async function generateMetadata({
   const description = isSpanish
     ? "Conoce a Albert Garcia, fundador de CodeHunter Lab en Leiden, Países Bajos. Consultoría AI, automatización y entrega de productos para Europa y clientes internacionales."
     : "Meet Albert Garcia, founder of CodeHunter Lab in Leiden, Netherlands. Engineering-first AI consulting, automation, and product delivery for Europe and international clients.";
-  const canonical = `${baseUrl}/${params.locale}/about`;
-
-  return {
+  return createPageMetadata({
+    locale: params.locale,
+    path: "/about",
     title,
     description,
-    alternates: {
-      canonical,
-    },
-    openGraph: {
-      title,
-      description,
-      url: canonical,
-      siteName: "CodeHunter Lab",
-      type: "profile",
-      locale: isSpanish ? "es_ES" : "en_US",
-    },
-  };
+    type: "profile",
+    keywords: ["Albert Garcia", "CodeHunter Lab", "AI automation consultant Netherlands"],
+  });
 }
 
 export default function AboutPage({ params }: { params: { locale: string } }) {

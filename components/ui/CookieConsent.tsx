@@ -35,6 +35,9 @@ export default function CookieConsent() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          role="dialog"
+          aria-modal="false"
+          aria-labelledby="cookie-consent-title"
           className="fixed bottom-6 left-6 z-[100] max-w-[calc(100vw-3rem)] md:max-w-md"
         >
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-near-black/80 p-6 shadow-2xl backdrop-blur-xl">
@@ -46,15 +49,18 @@ export default function CookieConsent() {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5">
-                    <CookieIcon className="h-5 w-5 text-purple-400" />
+                    <CookieIcon aria-hidden="true" className="h-5 w-5 text-purple-400" />
                   </div>
-                  <h3 className="font-display text-lg font-bold text-white">Cookies & Magic</h3>
+                  <h3 id="cookie-consent-title" className="font-display text-lg font-bold text-white">
+                    Cookies & Magic
+                  </h3>
                 </div>
                 <button
+                  type="button"
                   onClick={handleDecline}
                   className="rounded-full p-1 text-white/50 transition-colors hover:bg-white/10 hover:text-white"
                 >
-                  <XIcon className="h-5 w-5" />
+                  <XIcon aria-hidden="true" className="h-5 w-5" />
                   <span className="sr-only">Close</span>
                 </button>
               </div>
@@ -66,12 +72,14 @@ export default function CookieConsent() {
 
               <div className="flex gap-3 pt-2">
                 <button
+                  type="button"
                   onClick={handleAccept}
                   className="flex-1 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-black shadow-lg shadow-white/10 transition-colors hover:bg-gray-200"
                 >
                   Accept All
                 </button>
                 <button
+                  type="button"
                   onClick={handleDecline}
                   className="flex-1 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
                 >

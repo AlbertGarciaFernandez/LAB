@@ -30,15 +30,17 @@ const Footer: React.FC = () => {
                 href="https://www.linkedin.com/in/albertgarciafernandez/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Albert Garcia on LinkedIn"
                 className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-hunter-green hover:bg-hunter-green/10 hover:text-white"
               >
-                <LinkedinLogoIcon size={20} />
+                <LinkedinLogoIcon aria-hidden="true" size={20} />
               </a>
               <a
                 href="mailto:albert@codehunterlab.com"
+                aria-label="Email CodeHunter Lab"
                 className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-hunter-orange hover:bg-hunter-orange/10 hover:text-white"
               >
-                <EnvelopeIcon size={20} />
+                <EnvelopeIcon aria-hidden="true" size={20} />
               </a>
             </div>
           </div>
@@ -131,31 +133,30 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Case Studies */}
+          {/* Insights */}
           <div>
             <h4 className="mb-8 text-xs font-bold uppercase tracking-widest text-white">
-              Case Studies
+              Insights
             </h4>
             <ul className="space-y-4">
               {[
                 {
-                  key: "DentalWhatsApp",
-                  href: "/case-studies/dental-clinic-whatsapp-automation",
+                  label: "AI Automation Insights",
+                  href: "/en/insights",
                 },
                 {
-                  key: "AccountingDocs",
-                  href: "/case-studies/accounting-firm-document-automation",
+                  label: "About CodeHunter Lab",
+                  href: "/about",
                 },
               ].map((item) => (
-                <li key={item.key}>
+                <li key={item.href}>
                   <Link
                     href={item.href}
                     className="group flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-white"
                   >
-                    {item.key === "DentalWhatsApp"
-                      ? "Dental Clinic WhatsApp Automation"
-                      : "Accounting Firm Document Automation"}
+                    {item.label}
                     <ArrowUpRightIcon
+                      aria-hidden="true"
                       size={12}
                       className="-translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
                     />
@@ -197,13 +198,6 @@ const Footer: React.FC = () => {
               >
                 Insights
               </a>
-              <span className="text-gray-600">·</span>
-              <Link
-                href="/case-studies"
-                className="text-[11px] font-bold uppercase tracking-widest text-hunter-green/80 transition-colors hover:text-hunter-green"
-              >
-                Case Studies
-              </Link>
               <span className="text-gray-600">·</span>
               <Link
                 href="/about"
