@@ -98,7 +98,10 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
         <BreadcrumbSchema
           items={[
             { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
-            { name: isSpanish ? "Casos de éxito" : "Case Studies", url: `${baseUrl}/${params.locale}/case-studies` },
+            {
+              name: isSpanish ? "Casos de éxito" : "Case Studies",
+              url: `${baseUrl}/${params.locale}/case-studies`,
+            },
             { name: study.solution, url: studyUrl },
           ]}
         />

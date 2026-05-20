@@ -51,8 +51,14 @@ export default function SystemArchitecturePageContent() {
       "@type": "OfferCatalog",
       name: "Architecture Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Scalable Next.js Architecture" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud Infrastructure Design" } },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Scalable Next.js Architecture" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Cloud Infrastructure Design" },
+        },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Technical Debt Audits" } },
       ],
     },

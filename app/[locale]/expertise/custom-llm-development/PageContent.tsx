@@ -44,9 +44,18 @@ export default function CustomLLMPageContent() {
       "@type": "OfferCatalog",
       name: "LLM Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "LLM Fine-Tuning (Llama/Mistral)" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Private AI Server Deployment" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Domain-Specific Model Training" } },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "LLM Fine-Tuning (Llama/Mistral)" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Private AI Server Deployment" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Domain-Specific Model Training" },
+        },
       ],
     },
   };

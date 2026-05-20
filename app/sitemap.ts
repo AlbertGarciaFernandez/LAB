@@ -174,14 +174,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: insightArticleMeta.priority,
     });
 
-    routing.locales.filter((locale) => locale !== "en").forEach((locale) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}/insights/${article.slug}`,
-        lastModified: new Date(article.modifiedAt),
-        changeFrequency: insightArticleMeta.changeFrequency,
-        priority: insightArticleMeta.priority,
+    routing.locales
+      .filter((locale) => locale !== "en")
+      .forEach((locale) => {
+        sitemapEntries.push({
+          url: `${baseUrl}/${locale}/insights/${article.slug}`,
+          lastModified: new Date(article.modifiedAt),
+          changeFrequency: insightArticleMeta.changeFrequency,
+          priority: insightArticleMeta.priority,
+        });
       });
-    });
   });
 
   routing.locales.forEach((locale) => {

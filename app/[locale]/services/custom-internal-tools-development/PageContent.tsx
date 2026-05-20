@@ -62,7 +62,10 @@ export default function CustomInternalToolsContent() {
       itemListElement: [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Admin Panels" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Operation Dashboards" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Workflow Automation Tools" } },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Workflow Automation Tools" },
+        },
       ],
     },
   };

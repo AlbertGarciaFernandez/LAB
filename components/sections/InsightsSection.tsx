@@ -44,7 +44,10 @@ export default function InsightsSection({ locale = "en" }: { locale?: string }) 
                 {article.category}
               </p>
               <h3 className="mb-4 text-2xl font-black leading-tight tracking-tight text-white">
-                <Link href={`/${normalizedLocale}/insights/${article.slug}`} className="hover:text-hunter-green">
+                <Link
+                  href={`/${normalizedLocale}/insights/${article.slug}`}
+                  className="hover:text-hunter-green"
+                >
                   {article.title}
                 </Link>
               </h3>

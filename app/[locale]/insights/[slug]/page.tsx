@@ -173,7 +173,10 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
 
               if (section.type === "table") {
                 return (
-                  <div key={`table-${index}`} className="overflow-x-auto rounded-xl border border-white/10">
+                  <div
+                    key={`table-${index}`}
+                    className="overflow-x-auto rounded-xl border border-white/10"
+                  >
                     <table className="w-full text-left text-sm">
                       <thead>
                         <tr className="border-b border-white/10 bg-hunter-green/10">

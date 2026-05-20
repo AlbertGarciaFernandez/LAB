@@ -52,9 +52,7 @@ export default function Home({ params }: { params: { locale: string } }) {
       <Header />
       <main>
         <BreadcrumbSchema
-          items={[
-            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
-          ]}
+          items={[{ name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` }]}
         />
         <HeroSection />
         <TrustProofSection />

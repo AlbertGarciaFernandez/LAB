@@ -34,7 +34,10 @@ export default function SoftwareDevelopmentLeidenContent() {
       "@type": "OfferCatalog",
       name: "Development Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Web Application Development" } },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Custom Web Application Development" },
+        },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "E-commerce Solutions" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Integration Services" } },
       ],
