@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import CustomInternalToolsContent from "./PageContent";
 
 const path = "/services/custom-internal-tools-development";
@@ -26,6 +28,16 @@ export async function generateMetadata({
   });
 }
 
-export default function Page() {
-  return <CustomInternalToolsContent />;
+export default function Page({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <ServiceSchema
+        name="Custom Internal Tools Development"
+        description="Bespoke internal tools, admin dashboards, and workflow systems to replace manual operations and reduce software overhead."
+        url={localizedUrl(params.locale, path)}
+        serviceType="Custom Internal Tools Development"
+      />
+      <CustomInternalToolsContent />
+    </>
+  );
 }

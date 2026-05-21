@@ -185,33 +185,70 @@ test("commercial pages no longer link to temporary case studies", () => {
   assert.doesNotMatch(nextJsPage, /nextjs-platform-architecture/);
 });
 
-test("primary service pages expose visible FAQs and reusable Service schema", () => {
-  const servicePages = [
+test("service pages use reusable ServiceSchema and keep visible FAQ sections where expected", () => {
+  const serviceSchemaPages = [
     {
       route: "app/[locale]/ai-consulting/page.tsx",
-      content: "app/[locale]/ai-consulting/PageContent.tsx",
       serviceName: /AI Consulting Netherlands/,
     },
     {
       route: "app/[locale]/ai-automation-consulting-netherlands/page.tsx",
-      content: "app/[locale]/ai-automation-consulting-netherlands/PageContent.tsx",
       serviceName: /AI Automation Consulting Netherlands/,
     },
     {
       route: "app/[locale]/nextjs-development-agency/page.tsx",
-      content: "app/[locale]/nextjs-development-agency/PageContent.tsx",
       serviceName: /Next\.js Development Agency/,
+    },
+    {
+      route: "app/[locale]/react-consulting/page.tsx",
+      serviceName: /React Consulting Services Netherlands/,
+    },
+    {
+      route: "app/[locale]/it-system-integration/page.tsx",
+      serviceName: /IT System Integration Netherlands/,
+    },
+    {
+      route: "app/[locale]/software-development-leiden/page.tsx",
+      serviceName: /Software Development Company Leiden/,
+    },
+    {
+      route: "app/[locale]/services/custom-internal-tools-development/page.tsx",
+      serviceName: /Custom Internal Tools Development/,
+    },
+    {
+      route: "app/[locale]/n8n-consultant-netherlands/page.tsx",
+      serviceName: /n8n Consultant Netherlands/,
+    },
+    {
+      route: "app/[locale]/ai-voice-agents-netherlands/page.tsx",
+      serviceName: /AI Voice Agents Netherlands/,
+    },
+    {
+      route: "app/[locale]/whatsapp-automation-netherlands/page.tsx",
+      serviceName: /WhatsApp Business Automation Netherlands/,
     },
   ];
 
-  for (const page of servicePages) {
+  for (const page of serviceSchemaPages) {
     const routeSource = readFileSync(page.route, "utf8");
-    const contentSource = readFileSync(page.content, "utf8");
 
     assert.match(routeSource, /ServiceSchema/);
     assert.match(routeSource, page.serviceName);
-    assert.match(contentSource, /FAQ/);
     assert.doesNotMatch(routeSource, /FAQPage/);
+  }
+
+  const faqVisiblePages = [
+    "app/[locale]/ai-consulting/PageContent.tsx",
+    "app/[locale]/ai-automation-consulting-netherlands/PageContent.tsx",
+    "app/[locale]/nextjs-development-agency/PageContent.tsx",
+    "app/[locale]/n8n-consultant-netherlands/PageContent.tsx",
+    "app/[locale]/ai-voice-agents-netherlands/PageContent.tsx",
+    "app/[locale]/whatsapp-automation-netherlands/PageContent.tsx",
+  ];
+
+  for (const contentPath of faqVisiblePages) {
+    const contentSource = readFileSync(contentPath, "utf8");
+    assert.match(contentSource, /FAQ/);
     assert.doesNotMatch(contentSource, /FAQPage/);
   }
 });

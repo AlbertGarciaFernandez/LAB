@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import SoftwareDevelopmentLeidenContent from "./PageContent";
 
 const path = "/software-development-leiden";
@@ -27,6 +29,16 @@ export async function generateMetadata({
   });
 }
 
-export default function Page() {
-  return <SoftwareDevelopmentLeidenContent />;
+export default function Page({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <ServiceSchema
+        name="Software Development Company Leiden"
+        description="Custom web applications and internal software engineering for companies in Leiden and across the Netherlands."
+        url={localizedUrl(params.locale, path)}
+        serviceType="Software Development"
+      />
+      <SoftwareDevelopmentLeidenContent />
+    </>
+  );
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import ReactConsultingContent from "./PageContent";
 
 const path = "/react-consulting";
@@ -28,6 +30,16 @@ export async function generateMetadata({
   });
 }
 
-export default function Page() {
-  return <ReactConsultingContent />;
+export default function Page({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <ServiceSchema
+        name="React Consulting Services Netherlands"
+        description="Senior React consulting for architecture, performance optimization, migrations, and codebase modernization."
+        url={localizedUrl(params.locale, path)}
+        serviceType="React Consulting"
+      />
+      <ReactConsultingContent />
+    </>
+  );
 }

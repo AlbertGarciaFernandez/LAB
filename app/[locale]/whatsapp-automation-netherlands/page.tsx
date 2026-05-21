@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { getTranslations } from "next-intl/server";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import WhatsAppAutomationContent from "./PageContent";
 
 const path = "/whatsapp-automation-netherlands";
@@ -31,7 +33,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page() {
+export default async function Page({ params }: { params: { locale: string } }) {
   const t = await getTranslations("WhatsAppAutomation");
 
   const hero = {
@@ -100,16 +102,24 @@ export default async function Page() {
   };
 
   return (
-    <WhatsAppAutomationContent
-      hero={hero}
-      languageNote={languageNote}
-      painPoints={painPoints}
-      solutions={solutions}
-      useCases={useCases}
-      whyUs={whyUs}
-      faq={faq}
-      cta={cta}
-      seo={seo}
-    />
+    <>
+      <ServiceSchema
+        name="WhatsApp Business Automation Netherlands"
+        description="WhatsApp Business API automation, chatbot workflows, CRM sync, and campaign automation for operations and growth teams."
+        url={localizedUrl(params.locale, path)}
+        serviceType="WhatsApp Business Automation"
+      />
+      <WhatsAppAutomationContent
+        hero={hero}
+        languageNote={languageNote}
+        painPoints={painPoints}
+        solutions={solutions}
+        useCases={useCases}
+        whyUs={whyUs}
+        faq={faq}
+        cta={cta}
+        seo={seo}
+      />
+    </>
   );
 }

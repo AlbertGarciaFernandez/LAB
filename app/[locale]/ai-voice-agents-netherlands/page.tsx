@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { getTranslations } from "next-intl/server";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import AIVoiceAgentsContent from "./PageContent";
 
 const path = "/ai-voice-agents-netherlands";
@@ -31,7 +33,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page() {
+export default async function Page({ params }: { params: { locale: string } }) {
   const t = await getTranslations("AIVoiceAgents");
 
   const hero = {
@@ -100,16 +102,24 @@ export default async function Page() {
   };
 
   return (
-    <AIVoiceAgentsContent
-      hero={hero}
-      languageNote={languageNote}
-      painPoints={painPoints}
-      solutions={solutions}
-      useCases={useCases}
-      whyUs={whyUs}
-      faq={faq}
-      cta={cta}
-      seo={seo}
-    />
+    <>
+      <ServiceSchema
+        name="AI Voice Agents Netherlands"
+        description="Custom AI voice agents for inbound call automation, lead qualification, appointment scheduling, and 24/7 support."
+        url={localizedUrl(params.locale, path)}
+        serviceType="AI Voice Agent Development"
+      />
+      <AIVoiceAgentsContent
+        hero={hero}
+        languageNote={languageNote}
+        painPoints={painPoints}
+        solutions={solutions}
+        useCases={useCases}
+        whyUs={whyUs}
+        faq={faq}
+        cta={cta}
+        seo={seo}
+      />
+    </>
   );
 }

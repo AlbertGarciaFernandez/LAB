@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { getTranslations } from "next-intl/server";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import N8nConsultantContent from "./PageContent";
 
 const path = "/n8n-consultant-netherlands";
@@ -31,7 +33,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page() {
+export default async function Page({ params }: { params: { locale: string } }) {
   const t = await getTranslations("N8nConsultant");
 
   const hero = {
@@ -101,16 +103,24 @@ export default async function Page() {
   };
 
   return (
-    <N8nConsultantContent
-      hero={hero}
-      languageNote={languageNote}
-      painPoints={painPoints}
-      solutions={solutions}
-      migrationSteps={migrationSteps}
-      whyN8n={whyN8n}
-      faq={faq}
-      cta={cta}
-      seo={seo}
-    />
+    <>
+      <ServiceSchema
+        name="n8n Consultant Netherlands"
+        description="n8n consulting and migration services from Zapier and Make to scalable self-hosted automation infrastructure."
+        url={localizedUrl(params.locale, path)}
+        serviceType="n8n Consulting"
+      />
+      <N8nConsultantContent
+        hero={hero}
+        languageNote={languageNote}
+        painPoints={painPoints}
+        solutions={solutions}
+        migrationSteps={migrationSteps}
+        whyN8n={whyN8n}
+        faq={faq}
+        cta={cta}
+        seo={seo}
+      />
+    </>
   );
 }

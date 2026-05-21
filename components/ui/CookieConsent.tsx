@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { CookieIcon, XIcon } from "@phosphor-icons/react/dist/ssr";
 
 export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
@@ -15,6 +17,47 @@ export default function CookieConsent() {
       return () => clearTimeout(timer);
     }
   }, []);
+
+  useEffect(() => {
+    if (!isVisible) {
+      restoreFocusRef.current?.focus();
+      restoreFocusRef.current = null;
+      return;
+    }
+
+    restoreFocusRef.current = document.activeElement as HTMLElement | null;
+
+    const root = containerRef.current;
+    if (!root) return;
+
+    const focusable = root.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    first?.focus();
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        handleDecline();
+      }
+
+      if (event.key !== "Tab" || !first || !last) return;
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+        return;
+      }
+      if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [isVisible]);
 
   const handleAccept = () => {
     localStorage.setItem("cookie-consent", "accepted");
@@ -31,12 +74,13 @@ export default function CookieConsent() {
     <AnimatePresence>
       {isVisible && (
         <m.div
+          ref={containerRef}
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           role="dialog"
-          aria-modal="false"
+          aria-modal="true"
           aria-labelledby="cookie-consent-title"
           className="fixed bottom-6 left-6 z-[100] max-w-[calc(100vw-3rem)] md:max-w-md"
         >

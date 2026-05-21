@@ -235,8 +235,61 @@ const Header: React.FC = () => {
       dispatch({ type: "SET_DROPDOWN", key: openDropdown === key ? null : key });
     }
 
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      dispatch({ type: "SET_DROPDOWN", key });
+      requestAnimationFrame(() => {
+        const firstItem = document.querySelector<HTMLElement>(`#${key}-menu [role="menuitem"]`);
+        firstItem?.focus();
+      });
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      dispatch({ type: "SET_DROPDOWN", key });
+      requestAnimationFrame(() => {
+        const items = document.querySelectorAll<HTMLElement>(`#${key}-menu [role="menuitem"]`);
+        items[items.length - 1]?.focus();
+      });
+    }
+
     if (event.key === "Escape") {
       dispatch({ type: "SET_DROPDOWN", key: null });
+      (event.currentTarget as HTMLButtonElement).focus();
+    }
+  };
+
+  const handleMenuItemKeyDown = (event: React.KeyboardEvent, key: string) => {
+    const items = Array.from(
+      document.querySelectorAll<HTMLElement>(`#${key}-menu [role="menuitem"]`)
+    );
+    const currentIndex = items.indexOf(event.currentTarget as HTMLElement);
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      items[(currentIndex + 1) % items.length]?.focus();
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      items[(currentIndex - 1 + items.length) % items.length]?.focus();
+    }
+
+    if (event.key === "Home") {
+      event.preventDefault();
+      items[0]?.focus();
+    }
+
+    if (event.key === "End") {
+      event.preventDefault();
+      items[items.length - 1]?.focus();
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      dispatch({ type: "SET_DROPDOWN", key: null });
+      const trigger = document.querySelector<HTMLElement>(`[data-dropdown-trigger="${key}"]`);
+      trigger?.focus();
     }
   };
 
@@ -298,6 +351,7 @@ const Header: React.FC = () => {
                     aria-expanded={openDropdown === group.key}
                     aria-haspopup="menu"
                     aria-controls={`${group.key}-menu`}
+                    data-dropdown-trigger={group.key}
                     onFocus={() => dispatch({ type: "SET_DROPDOWN", key: group.key })}
                     onKeyDown={(event) => handleDropdownKeyDown(event, group.key)}
                     className={`group relative flex items-center px-4 py-2 text-sm font-medium transition-colors duration-300 ${
@@ -343,9 +397,7 @@ const Header: React.FC = () => {
                                 role="menuitem"
                                 onClick={() => dispatch({ type: "SET_DROPDOWN", key: null })}
                                 onKeyDown={(event) => {
-                                  if (event.key === "Escape") {
-                                    dispatch({ type: "SET_DROPDOWN", key: null });
-                                  }
+                                  handleMenuItemKeyDown(event, group.key);
                                 }}
                                 className={`group/item flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-200 ${
                                   isActive
