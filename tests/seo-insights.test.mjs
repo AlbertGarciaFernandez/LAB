@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync, statSync } from "node:fs";
 import { test } from "node:test";
 
 const requiredSlugs = [
@@ -24,6 +24,16 @@ const requiredSlugs = [
   "lead-qualification-automation-netherlands",
   "make-vs-n8n-netherlands",
 ];
+
+function collectTsxFiles(dir) {
+  return readdirSync(dir).flatMap((entry) => {
+    const path = `${dir}/${entry}`;
+    if (statSync(path).isDirectory()) {
+      return collectTsxFiles(path);
+    }
+    return path.endsWith(".tsx") ? [path] : [];
+  });
+}
 
 test("insight content includes the Search Console opportunity articles", () => {
   const source = readFileSync("content/insights.ts", "utf8");
@@ -75,8 +85,8 @@ test("insights are discoverable from visible site navigation", () => {
   const footer = readFileSync("components/layout/Footer.tsx", "utf8");
   const home = readFileSync("app/[locale]/page.tsx", "utf8");
 
-  assert.match(header, /href="\/en\/insights"/);
-  assert.match(footer, /href="\/en\/insights"/);
+  assert.match(header, /href=\{`\/\$\{locale\}\/insights`\}/);
+  assert.match(footer, /href=\{`\/\$\{locale\}\/insights`\}/);
   assert.match(home, /InsightsSection/);
 });
 
@@ -173,4 +183,56 @@ test("commercial pages no longer link to temporary case studies", () => {
   assert.doesNotMatch(aiConsultingPage, /zapier-to-n8n-migration/);
   assert.doesNotMatch(aiAutomationPage, /zapier-to-n8n-migration/);
   assert.doesNotMatch(nextJsPage, /nextjs-platform-architecture/);
+});
+
+test("primary service pages expose visible FAQs and reusable Service schema", () => {
+  const servicePages = [
+    {
+      route: "app/[locale]/ai-consulting/page.tsx",
+      content: "app/[locale]/ai-consulting/PageContent.tsx",
+      serviceName: /AI Consulting Netherlands/,
+    },
+    {
+      route: "app/[locale]/ai-automation-consulting-netherlands/page.tsx",
+      content: "app/[locale]/ai-automation-consulting-netherlands/PageContent.tsx",
+      serviceName: /AI Automation Consulting Netherlands/,
+    },
+    {
+      route: "app/[locale]/nextjs-development-agency/page.tsx",
+      content: "app/[locale]/nextjs-development-agency/PageContent.tsx",
+      serviceName: /Next\.js Development Agency/,
+    },
+  ];
+
+  for (const page of servicePages) {
+    const routeSource = readFileSync(page.route, "utf8");
+    const contentSource = readFileSync(page.content, "utf8");
+
+    assert.match(routeSource, /ServiceSchema/);
+    assert.match(routeSource, page.serviceName);
+    assert.match(contentSource, /FAQ/);
+    assert.doesNotMatch(routeSource, /FAQPage/);
+    assert.doesNotMatch(contentSource, /FAQPage/);
+  }
+});
+
+test("NL locale is configured in routing, constants, and middleware", () => {
+  const routing = readFileSync("i18n/routing.ts", "utf8");
+  const constants = readFileSync("utils/constants.ts", "utf8");
+  const middleware = readFileSync("middleware.ts", "utf8");
+
+  assert.match(routing, /locales:\s*\[.*"nl".*\]/);
+  assert.match(constants, /LOCALES\s*=\s*\[.*"nl".*\]/);
+  assert.match(middleware, /\(en\|es\|nl\)/);
+});
+
+test("commercial pages do not ship restricted FAQPage structured data", () => {
+  const pageSources = collectTsxFiles("app/[locale]")
+    .filter((file) => !file.includes("/lab/"))
+    .map((file) => ({ file, source: readFileSync(file, "utf8") }));
+
+  for (const { file, source } of pageSources) {
+    assert.doesNotMatch(source, /"@type":\s*"FAQPage"/, file);
+    assert.doesNotMatch(source, /'@type':\s*'FAQPage'/, file);
+  }
 });

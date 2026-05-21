@@ -102,60 +102,10 @@ export default function AIAutomationNetherlandsContent({
   industries,
   seo,
 }: PageProps) {
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: seo.faqQuestions.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.a,
-      },
-    })),
-  };
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "AI Automation Consulting",
-    provider: {
-      "@type": "Organization",
-      name: "CodeHunter Lab",
-    },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: 52.1601,
-        longitude: 4.497,
-      },
-      geoRadius: "50000",
-    },
-    description: "We specialize in ROI-driven AI automation for businesses in the Netherlands.",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "AI Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "WhatsApp AI Agents" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Voice Calling Bots" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "n8n Workflow Automation" } },
-      ],
-    },
-  };
-
   return (
     <>
       <Header />
       <main className="relative min-h-screen overflow-hidden bg-near-black text-white">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
         <div className="bg-noise" />
         <HeroBackgroundOrnaments />
 

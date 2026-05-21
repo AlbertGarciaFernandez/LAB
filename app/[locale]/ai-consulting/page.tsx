@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import AIConsultingPageContent from "./PageContent";
 
 export async function generateMetadata({
@@ -18,7 +20,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page() {
+export default async function Page({ params }: { params: { locale: string } }) {
   const t = await getTranslations("AIConsulting");
 
   const hero = {
@@ -26,7 +28,7 @@ export default async function Page() {
     titlePart1: t("Hero.title.part1"),
     titlePart2: t("Hero.title.part2"),
     titleHighlight: t("Hero.title.highlight"),
-    description: t("Hero.description"),
+    description: t.raw("Hero.description") as string,
     cta: t("Hero.cta"),
     whyUsTitlePart1: t("Hero.whyUs.title.part1"),
     whyUsTitleHighlight: t("Hero.whyUs.title.highlight"),
@@ -139,14 +141,22 @@ export default async function Page() {
   };
 
   return (
-    <AIConsultingPageContent
-      hero={hero}
-      pricing={pricing}
-      whoItsFor={whoItsFor}
-      whatWeBuild={whatWeBuild}
-      useCases={useCases}
-      migration={migration}
-      techCredibility={techCredibility}
-    />
+    <>
+      <ServiceSchema
+        name="AI Consulting Netherlands"
+        description="AI consulting for companies ready to ship strategy, implementation, and production AI systems."
+        url={localizedUrl(params.locale, "/ai-consulting")}
+        serviceType="AI Consulting"
+      />
+      <AIConsultingPageContent
+        hero={hero}
+        pricing={pricing}
+        whoItsFor={whoItsFor}
+        whatWeBuild={whatWeBuild}
+        useCases={useCases}
+        migration={migration}
+        techCredibility={techCredibility}
+      />
+    </>
   );
 }

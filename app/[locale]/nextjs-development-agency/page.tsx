@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { createPageMetadata } from "@/utils/metadata";
+import { localizedUrl } from "@/utils/metadata";
 import NextJsDevelopmentAgencyContent from "./PageContent";
 
 const path = "/nextjs-development-agency";
@@ -9,9 +11,8 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = params;
   return createPageMetadata({
-    locale,
+    locale: params.locale,
     path,
     title: "Next.js Agency Europe | App Router, Migration & Performance",
     description:
@@ -29,6 +30,16 @@ export async function generateMetadata({
   });
 }
 
-export default function Page() {
-  return <NextJsDevelopmentAgencyContent />;
+export default function Page({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <ServiceSchema
+        name="Next.js Development Agency"
+        description="Next.js development services for App Router architecture, migrations, React Server Components, TypeScript, and performance work."
+        url={localizedUrl(params.locale, path)}
+        serviceType="Next.js Web Development"
+      />
+      <NextJsDevelopmentAgencyContent />
+    </>
+  );
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "@/navigation";
 import { LinkedinLogoIcon, EnvelopeIcon, ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const locale = useLocale();
   const t = useTranslations("Footer");
 
   return (
@@ -136,16 +137,28 @@ const Footer: React.FC = () => {
           {/* Insights */}
           <div>
             <h4 className="mb-8 text-xs font-bold uppercase tracking-widest text-white">
-              Insights
+              {t("Insights.title")}
             </h4>
             <ul className="space-y-4">
               {[
                 {
-                  label: "AI Automation Insights",
-                  href: "/en/insights",
+                  label: t("Insights.items.automation"),
+                  href: `/${locale}/insights`,
                 },
                 {
-                  label: "About CodeHunter Lab",
+                  label: t("Insights.items.n8n"),
+                  href: "/n8n-consultant-netherlands",
+                },
+                {
+                  label: t("Insights.items.voice"),
+                  href: "/ai-voice-agents-netherlands",
+                },
+                {
+                  label: t("Insights.items.whatsapp"),
+                  href: "/whatsapp-automation-netherlands",
+                },
+                {
+                  label: t("Insights.items.about"),
                   href: "/about",
                 },
               ].map((item) => (
@@ -192,12 +205,12 @@ const Footer: React.FC = () => {
               &copy; {currentYear} {t("Copyright.rights")}
             </p>
             <div className="flex items-center gap-3">
-              <a
-                href="/en/insights"
+              <Link
+                href={`/${locale}/insights`}
                 className="text-[11px] font-bold uppercase tracking-widest text-hunter-green/80 transition-colors hover:text-hunter-green"
               >
-                Insights
-              </a>
+                {t("Copyright.insights")}
+              </Link>
               <span className="text-gray-600">·</span>
               <Link
                 href="/about"

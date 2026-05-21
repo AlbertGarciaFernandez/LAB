@@ -23,6 +23,8 @@
       "TheLab": "The Lab",
       "Bio": "Bio",
       "Process": "Proceso",
+      "Insights": "Ideas",
+      "CaseStudies": "Casos de Estudio",
       "services": {
         "AIConsulting": "Consultoría IA",
         "ReactConsulting": "Consultoría React",
@@ -98,6 +100,16 @@
         "RealEstateNL": "Automatización Inmobiliaria"
       }
     },
+    "Insights": {
+      "title": "Ideas",
+      "items": {
+        "automation": "Insights de Automatización IA",
+        "n8n": "Consultoría n8n Países Bajos",
+        "voice": "Agentes de Voz IA Países Bajos",
+        "whatsapp": "Automatización WhatsApp Países Bajos",
+        "about": "Sobre CodeHunter Lab"
+      }
+    },
     "Availability": {
       "nextOpening": "Próxima Disponibilidad: {date}",
       "title": "¿Listo para escalar?",
@@ -106,7 +118,8 @@
     },
     "Copyright": {
       "rights": "CodeHunter Lab.",
-      "about": "About",
+      "insights": "Ideas",
+      "about": "Sobre Nosotros",
       "locationLeiden": "Leiden, Países Bajos",
       "locationSpain": "España / Remoto",
       "developedBy": "Desarrollado por"
@@ -293,6 +306,21 @@
           "3": "Mitigación de riesgos en sistemas críticos",
           "4": "Mantenibilidad a largo plazo vs parches rápidos"
         }
+      },
+      "aiAutomation": {
+        "title": "Agentes IA & Automatización",
+        "micro": "Flujos inteligentes que eliminan el trabajo manual.",
+        "heading": "De tareas repetitivas a flujos autónomos impulsados por IA.",
+        "paragraphs": {
+          "0": "Diseñamos e implementamos sistemas inteligentes — desde agentes IA personalizados e integraciones LLM hasta automatizaciones complejas con n8n y Make — que reducen la carga operativa y desbloquean nuevas capacidades.",
+          "1": "Nuestro enfoque va más allá de simples scripts. Diseñamos frameworks de automatización robustos, seguros y escalables adaptados a tu lógica de negocio, con observabilidad y mantenibilidad claros desde el día uno."
+        },
+        "bullets": {
+          "0": "Agentes IA personalizados e integraciones LLM (OpenAI, Claude, modelos locales)",
+          "1": "Automatización de flujos con n8n, Make y workflows personalizados",
+          "2": "Gestión segura de credenciales y registro de auditoría",
+          "3": "Observabilidad, manejo de errores y mantenimiento a largo plazo"
+        }
       }
     },
     "ui": {
@@ -334,7 +362,8 @@
         "results": {
           "0": "Partnership con clientes diversos, desde startups a enterprise.",
           "1": "Soluciones escalables entregadas en E-commerce, SaaS e IA.",
-          "2": "Mejora del rendimiento, SEO y conversión."
+          "2": "Mejora del rendimiento, SEO y conversión.",
+          "3": "Soporte a largo plazo y mantenimiento con resultados medibles."
         }
       }
     },
@@ -1110,7 +1139,11 @@
       "whatsapp": {
         "title": "Agentes IA en WhatsApp",
         "desc": "Atención al cliente 24/7 y cualificación de leads directamente en WhatsApp. Habla como un humano, conoce tu negocio y agenda citas automáticamente.",
-        "points": ["Cero tiempos de espera", "Conexión con tu CRM", "98% de precisión en intención"]
+        "points": [
+          "Cero tiempos de espera",
+          "Conexión con tu CRM",
+          "98% de precisión en intención"
+        ]
       },
       "voice": {
         "title": "Bots de Voz con IA",
@@ -3262,5 +3295,534 @@
         "desc": "Informes de rendimiento semanales entregados automáticamente en tu email o Slack."
       }
     ]
+  },
+  "AIVoiceAgents": {
+    "Hero": {
+      "badge": "AGENTES DE VOZ IA :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tus Líneas Telefónicas",
+        "highlight": "Están Perdiendo Ingresos.",
+        "part2": "La IA Responde 24/7"
+      },
+      "description": "CodeHunter Lab construye <strong>agentes de voz IA personalizados</strong> para empresas en los Países Bajos: gestión de llamadas entrantes, cualificación de leads, programación de citas y soporte telefónico 24/7. Conversaciones humanas. Cero tiempo de espera. Sin contratar más personal.",
+      "cta": {
+        "primary": "Reservar Consulta Gratuita de Voz IA",
+        "secondary": "Ver Qué Puede Hacer la Voz IA"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "El Coste Real de las Llamadas Perdidas en 2026",
+      "items": [
+        {
+          "emoji": "📞",
+          "title": "Las llamadas perdidas son ingresos perdidos",
+          "desc": "Cada llamada sin respuesta es un cliente potencial que llama a tu competidor. Si tu equipo está en reuniones, comiendo o fuera de horario, esos ingresos desaparecen."
+        },
+        {
+          "emoji": "⏳",
+          "title": "Los tiempos de espera alejan a los clientes",
+          "desc": "El 60% de los llamantes cuelga después de 2 minutos en espera. Tu recepcionista atiende una llamada a la vez mientras otras 5 esperan. Ese cuello de botella no se soluciona contratando más."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Las preguntas repetitivas desperdician el tiempo de tu equipo",
+          "desc": "¿Cuáles son sus horarios? ¿Aceptan nuevos pacientes? ¿Cómo reprogramo? — tu equipo responde las mismas preguntas 50+ veces al día. La IA las gestiona al instante."
+        },
+        {
+          "emoji": "📊",
+          "title": "Sin datos sobre volumen ni resultados de llamadas",
+          "desc": "¿Cuántas llamadas perdiste el mes pasado? ¿Cuántas convirtieron? Sin analítica de llamadas, operas a ciegas en tu canal de clientes más directo."
+        },
+        {
+          "emoji": "🌙",
+          "title": "Las llamadas fuera de horario no llegan a ninguna parte",
+          "desc": "El 30% de las llamadas entrantes ocurren fuera del horario comercial. Sin un sistema de respuesta, esos llamantes reciben un buzón del que no dejarán mensaje — y nunca volverán a llamar."
+        },
+        {
+          "emoji": "💰",
+          "title": "Contratar más personal es caro y lento",
+          "desc": "Un recepcionista a tiempo completo cuesta 35.000–45.000 €/año en los Países Bajos. Los agentes de voz IA gestionan 10 veces el volumen de llamadas a una fracción del coste — y nunca se dan de baja por enfermedad."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Hacen los Agentes de Voz IA para tu Negocio",
+      "subtitle": "Construimos IA conversacional que suena natural, gestiona diálogos complejos e integra con tus sistemas existentes, para que cada llamada genere un resultado medible.",
+      "items": [
+        {
+          "emoji": "📞",
+          "title": "Gestión de Llamadas Entrantes 24/7",
+          "desc": "La IA responde cada llamada: horario comercial, noches, fines de semana. Gestiona FAQs, proporciona información y deriva consultas complejas a la persona adecuada. Ningún llamante recibe señal de ocupado.",
+          "result": "Cero llamadas perdidas. Cobertura del 100%."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Cualificación de Leads con IA",
+          "desc": "El agente de IA hace preguntas de cualificación, puntúa el lead y deriva los leads calientes a tu equipo de ventas al instante. Los leads fríos entran automáticamente en una secuencia de nutrición.",
+          "result": "El equipo de ventas solo habla con prospectos cualificados. Mayor tasa de cierre."
+        },
+        {
+          "emoji": "📅",
+          "title": "Programación de Citas por Voz",
+          "desc": "Los llamantes reservan, reprograman o cancelan citas directamente con el agente de IA. Este consulta tu calendario en tiempo real, confirma la reserva y envía una confirmación por WhatsApp o SMS.",
+          "result": "Recepción liberada de la agenda. Menos ausencias con recordatorios automáticos."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Integración con CRM y Sistemas",
+          "desc": "Cada llamada se registra en tu CRM. Los detalles del llamante, el resumen de la conversación y el resultado se guardan automáticamente. Tu equipo tiene contexto completo antes de atender.",
+          "result": "Historial completo de llamadas. Sin pérdida de contexto entre llamadas."
+        },
+        {
+          "emoji": "📊",
+          "title": "Panel de Analítica de Llamadas",
+          "desc": "Panel en tiempo real: volumen de llamadas, tasa de respuesta, consultas frecuentes, tasa de conversión y sentimiento del llamante. Actualizado tras cada llamada. Accesible desde tu móvil.",
+          "result": "Decisiones basadas en datos sobre personal, marketing y calidad de servicio."
+        },
+        {
+          "emoji": "🌍",
+          "title": "Soporte Multilingüe (Neerlandés, Inglés y Más)",
+          "desc": "Agentes de voz IA que hablan neerlandés, inglés y otros idiomas con fluidez. Detecta automáticamente el idioma del llamante y cambia. Ideal para empresas internacionales en los Países Bajos.",
+          "result": "Atiende a cada llamante en su idioma preferido — sin personal bilingüe."
+        }
+      ]
+    },
+    "UseCases": {
+      "title": "Voz IA en Acción",
+      "items": [
+        {
+          "num": "01",
+          "title": "Captación de Llamadas Fuera de Horario",
+          "desc": "Un cliente potencial llama a las 21:00. La IA responde, contesta sus preguntas sobre servicios y precios, verifica disponibilidad y reserva una consulta para el martes siguiente. El cliente nunca supo que habló con IA. Tu calendario está lleno."
+        },
+        {
+          "num": "02",
+          "title": "Cualificación de Leads de Alto Volumen",
+          "desc": "Tu campaña de Google Ads genera 50 llamadas al día. La IA responde todas, cualifica según presupuesto, plazo y necesidad, y deriva las 10 mejores a tu equipo de ventas. Las otras 40 entran en una secuencia de nutrición automática."
+        },
+        {
+          "num": "03",
+          "title": "Reprogramación de Citas Sin Personal",
+          "desc": "Un paciente necesita reprogramar. En lugar de llamar en horario comercial y esperar en línea, llama a tu agente de IA, que consulta las franjas disponibles y la reubica en 90 segundos. Cero intervención del personal."
+        },
+        {
+          "num": "04",
+          "title": "Atención al Cliente Multilingüe",
+          "desc": "Un cliente internacional llama con una pregunta en inglés. La IA detecta el idioma, cambia sin interrupciones y resuelve la consulta. El siguiente llamante habla neerlandés: el mismo agente, cambio instantáneo. Sin barrera idiomática."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué las Empresas Eligen CodeHunter Lab para Voz IA",
+      "points": [
+        {
+          "title": "Personalizado, no genérico",
+          "desc": "No te vendemos una recepcionista de IA genérica. Construimos un agente de voz entrenado en tu negocio: tus servicios, tu tono, tus reglas de escalado. Suena como tu marca, no como un robot."
+        },
+        {
+          "title": "Integración total con tu stack",
+          "desc": "La voz IA solo tiene valor si se conecta a tu calendario, CRM y herramientas internas. Construimos las integraciones para que cada llamada genere una acción, no solo una conversación."
+        },
+        {
+          "title": "Traspaso a humanos cuando importa",
+          "desc": "La IA gestiona el 80% de las llamadas de forma autónoma. Para el 20% que requiere una persona — temas complejos, escalaciones, llamantes VIP — la IA transfiere sin interrupciones con contexto completo."
+        },
+        {
+          "title": "ROI medido desde el día uno",
+          "desc": "Rastreamos llamadas atendidas, leads cualificados, citas reservadas e ingresos atribuidos a la voz IA. Ves el retorno exacto de tu inversión, no solo métricas de actividad."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que las empresas preguntan antes de desplegar agentes de voz IA.",
+      "questions": [
+        {
+          "q": "¿Suena el agente de voz IA como un robot?",
+          "a": "No. Utilizamos los modelos de IA conversacional más avanzados con síntesis de voz natural. Los llamantes califican consistentemente la experiencia como natural y profesional. La mayoría no distingue que habla con IA a menos que se le diga."
+        },
+        {
+          "q": "¿Puede gestionar llamadas en neerlandés?",
+          "a": "Sí. Nuestros agentes de voz IA soportan neerlandés, inglés y varios idiomas más. El agente detecta automáticamente el idioma del llamante y responde con fluidez. Lo entrenamos en terminología y pronunciación empresarial en neerlandés."
+        },
+        {
+          "q": "¿Qué ocurre cuando la IA no puede ayudar?",
+          "a": "La IA reconoce cuando una consulta excede su alcance y transfiere sin interrupciones a un agente humano, con un resumen completo de la conversación. El llamante nunca tiene que repetirse."
+        },
+        {
+          "q": "¿Cuánto tarda el despliegue?",
+          "a": "Un agente de voz IA estándar (gestión de llamadas entrantes + programación de citas) tarda de 2 a 4 semanas desde el inicio hasta la puesta en marcha. Configuraciones más complejas con integraciones personalizadas pueden tardar de 4 a 6 semanas."
+        },
+        {
+          "q": "¿Es conforme con el RGPD?",
+          "a": "Sí. Las grabaciones y transcripciones de llamadas se gestionan conforme al RGPD. Implementamos mecanismos de consentimiento, minimización de datos y almacenamiento seguro. Asesoramos sobre las mejores prácticas de cumplimiento durante la configuración."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "¿Cuántas llamadas perdiste la semana pasada?",
+      "title": "Reserva tu Consulta Gratuita de Voz IA",
+      "desc": "Analizamos tu gestión actual de llamadas, estimamos los ingresos perdidos por llamadas no atendidas y te mostramos exactamente qué gestionaría un agente de voz IA, con una proyección clara de ROI.",
+      "button": "Reservar Consulta Gratuita de Voz IA",
+      "subtext": "Para empresas en los Países Bajos. Capacidad actual de incorporación: Q2 2026. ¿Preguntas? Escríbenos a info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "agentes de voz IA Países Bajos, asistente telefónico IA Países Bajos, automatización de voz Ámsterdam, gestión de llamadas IA Países Bajos, recepcionista IA Países Bajos, sistema telefónico IA conversacional, automatización de llamadas entrantes IA, cualificación de leads por teléfono IA",
+      "extendedDesc": "CodeHunter Lab construye agentes de voz IA personalizados para empresas en los Países Bajos. Desde la gestión de llamadas entrantes 24/7 y la cualificación de leads con IA hasta la programación de citas por voz y el servicio al cliente multilingüe, ayudamos a las empresas a captar cada llamada, cualificar leads automáticamente y reducir la carga de recepción. Con sede en Leiden, atendemos empresas en Ámsterdam, Róterdam, La Haya, Utrecht y todo los Países Bajos."
+    }
+  },
+  "N8nConsultant": {
+    "Hero": {
+      "badge": "CONSULTORÍA Y MIGRACIÓN N8N :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Deja de Pagar",
+        "highlight": "Zapier por Tarea.",
+        "part2": "Controla tus Workflows"
+      },
+      "description": "CodeHunter Lab somos <strong>consultores expertos en n8n</strong> en los Países Bajos. Migramos tus workflows personalizados de Zapier y Make a n8n auto-alojado, reduciendo costes un 60–80%, eliminando límites de ejecución y dándote control total de tus datos. Sin cajas negras. Sin dependencia de proveedor.",
+      "cta": {
+        "primary": "Reservar Auditoría Gratuita de Workflows",
+        "secondary": "Ver Nuestro Proceso de Migración"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "El Coste Oculto de las Herramientas SaaS de Workflow",
+      "items": [
+        {
+          "emoji": "💸",
+          "title": "La factura de Zapier crece con tu éxito",
+          "desc": "Cada tarea cuesta. A medida que crece tu negocio, crece tu factura de Zapier: 200 €, 500 €, 1.000 €+ al mes. Estás pagando un impuesto sobre tu propio crecimiento."
+        },
+        {
+          "emoji": "🔒",
+          "title": "Tus datos viven en el servidor de otra empresa",
+          "desc": "Datos de clientes, registros financieros, procesos internos: todo fluye por infraestructura cloud de terceros. Para empresas sensibles al RGPD, esto es un riesgo de cumplimiento."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Los límites de ejecución bloquean workflows críticos",
+          "desc": "Cuando necesitas procesar 10.000 registros y Zapier te limita a 2.000 tareas al mes, tu automatización falla justo cuando más la necesitas."
+        },
+        {
+          "emoji": "🧩",
+          "title": "La lógica compleja requiere soluciones improvisadas",
+          "desc": "Ramas condicionales, bucles, manejo de errores — cosas que deberían ser simples se convierten en cadenas de Zaps confusas. Depurar es una pesadilla."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Las integraciones faltantes obligan a pasos manuales",
+          "desc": "Tu herramienta interna, SaaS de nicho o API personalizada no tiene integración en Zapier. Así que alguien de tu equipo cubre manualmente la brecha cada día."
+        },
+        {
+          "emoji": "📊",
+          "title": "Sin visibilidad del rendimiento de los workflows",
+          "desc": "Cuando un Zap falla en silencio, no lo sabes hasta que un cliente se queja. Sin monitorización centralizada, sin alertas, sin registro de auditoría."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos con n8n",
+      "subtitle": "No somos una agencia no-code. Ingeniamos sistemas de workflows de nivel producción que ejecutan en tu infraestructura, escalan con tu negocio y están completamente documentados.",
+      "items": [
+        {
+          "emoji": "🔄",
+          "title": "Migración de Zapier y Make a n8n",
+          "desc": "Auditamos tus automatizaciones existentes, mapeamos cada trigger y acción, y los reconstruimos en n8n con mejor manejo de errores, logging y rendimiento. Migración con cero downtime.",
+          "result": "Reducción de costes del 60–80%. Soberanía total de datos."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Arquitectura de Workflows Personalizada",
+          "desc": "Diseñamos y construimos workflows multi-paso complejos con lógica condicional, ejecución paralela, recuperación de errores y endpoints webhook. Construidos para fiabilidad, no solo funcionalidad.",
+          "result": "Workflows que escalan con tu negocio, no se rompen bajo carga."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Configuración y Optimización de n8n Auto-alojado",
+          "desc": "Desplegamos n8n en tu infraestructura (Docker, Kubernetes o VPS cloud), configuramos modo cola para alto volumen, backups y optimización de rendimiento.",
+          "result": "Tareas ilimitadas. Sin límites de ejecución. Control total."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Integraciones API Personalizadas",
+          "desc": "El nodo HTTP de n8n y los bloques de código personalizados nos permiten conectar con cualquier API: tus herramientas internas, plataformas SaaS de nicho o sistemas legacy. Ninguna integración está fuera de alcance.",
+          "result": "Cada sistema conectado. Sin puentes manuales."
+        },
+        {
+          "emoji": "📊",
+          "title": "Monitorización y Alertas de Workflows",
+          "desc": "Configuramos logging de ejecución, notificaciones de errores (Slack, email, webhook) y monitorización de dashboards. Sabes inmediatamente cuando algo falla — antes que tus clientes.",
+          "result": "Cero fallos silenciosos. Visibilidad operativa completa."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "Pipelines de Datos Conformes al RGPD",
+          "desc": "n8n auto-alojado significa que tus datos nunca salen de tu infraestructura. Construimos con minimización de datos, cifrado y registro de auditoría desde el día uno.",
+          "result": "Cumplimiento RGPD/AVG por diseño, no como parche posterior."
+        }
+      ]
+    },
+    "MigrationSteps": {
+      "title": "Nuestro Proceso de Migración",
+      "subtitle": "De la auditoría a producción: una migración estructurada con cero downtime.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Auditoría y Documentación de Workflows",
+          "desc": "Mapeamos cada Zap o escenario de Make existente: triggers, acciones, flujo de datos, manejo de errores y dependencias. Obtienes un inventario completo de tu stack de automatización."
+        },
+        {
+          "num": "02",
+          "title": "Diseño de Arquitectura n8n",
+          "desc": "Diseñamos la arquitectura n8n objetivo: estructura de workflows, gestión de credenciales, modo de ejecución y requisitos de infraestructura. Revisado con tu equipo antes de construir."
+        },
+        {
+          "num": "03",
+          "title": "Construcción y Pruebas en Paralelo",
+          "desc": "Reconstruimos workflows en n8n junto a tus Zaps existentes. Ambos ejecutan en paralelo para validar la precisión de los resultados antes del cambio. Sin interrupción de tus operaciones."
+        },
+        {
+          "num": "04",
+          "title": "Cambio y Monitorización",
+          "desc": "Una vez validados, redirigimos el tráfico a los workflows de n8n. Monitorizamos de cerca durante 2 semanas, resolvemos casos límite y entregamos documentación completa y traspaso."
+        }
+      ]
+    },
+    "WhyN8n": {
+      "title": "Por Qué n8n Sobre Zapier o Make",
+      "points": [
+        {
+          "title": "Ejecuciones ilimitadas, precio fijo",
+          "desc": "n8n auto-alojado cuesta una fracción de Zapier a escala. Sin costes por tarea, sin subidas de plan al crecer. El volumen de tu workflow no es un problema de facturación."
+        },
+        {
+          "title": "Control total de datos y cumplimiento RGPD",
+          "desc": "Los datos permanecen en tu infraestructura. Sin procesamiento por terceros, sin dudas sobre residencia de datos. Crítico para empresas neerlandesas que manejan información sensible de clientes."
+        },
+        {
+          "title": "Lógica compleja sin soluciones improvisadas",
+          "desc": "Soporte nativo para bucles, condicionales, manejo de errores, nodos de fusión y JavaScript personalizado. Construye lo que realmente necesitas, no lo que la plataforma permite."
+        },
+        {
+          "title": "Código abierto y a prueba de futuro",
+          "desc": "n8n es open source (fair-code). Tus workflows son archivos JSON: versionables, portables y no atados a una plataforma propietaria. Tú lo controlas todo."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que las empresas preguntan antes de migrar a n8n.",
+      "questions": [
+        {
+          "q": "¿Podéis migrar todos nuestros Zaps a n8n sin downtime?",
+          "a": "Sí. Ejecutamos workflows de n8n en paralelo con tus Zaps existentes durante las pruebas. Una vez validados, redirigimos el tráfico de forma controlada. Tus operaciones continúan sin interrupción."
+        },
+        {
+          "q": "¿Cuánto cuesta n8n auto-alojado comparado con Zapier?",
+          "a": "Para la mayoría de empresas, n8n auto-alojado cuesta un 60–80% menos que Zapier con volúmenes equivalentes. Un VPS de 5–10 €/mes puede gestionar decenas de miles de ejecuciones. Proporcionamos una comparación de costes durante la auditoría."
+        },
+        {
+          "q": "¿Necesitamos personal técnico para gestionar n8n?",
+          "a": "No. Nosotros nos encargamos de la configuración, documentación y despliegue. La interfaz de n8n es visual e intuitiva, similar a Zapier. Proporcionamos formación y soporte continuo. No necesitas un ingeniero dedicado."
+        },
+        {
+          "q": "¿Qué ocurre si un workflow no tiene integración en n8n?",
+          "a": "El nodo HTTP de n8n y los bloques de código personalizados nos permiten conectar con cualquier API. Si tiene API REST o GraphQL, podemos integrarlo. Hemos construido conectores personalizados para decenas de plataformas de nicho."
+        },
+        {
+          "q": "¿Cuánto tarda una migración típica?",
+          "a": "Una migración estándar (10–30 workflows) tarda de 3 a 5 semanas desde la auditoría hasta el cambio. Migraciones mayores o integraciones complejas pueden tardar de 6 a 8 semanas. Definimos el calendario durante la auditoría."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "¿Listo para controlar tus workflows?",
+      "title": "Reserva tu Auditoría Gratuita de Workflows n8n",
+      "desc": "Revisamos tu configuración actual de Zapier o Make, calculamos tu coste real por tarea y te mostramos exactamente cómo sería una migración a n8n auto-alojado, con una estimación clara de ROI.",
+      "button": "Reservar Auditoría Gratuita de Workflows",
+      "subtext": "Para empresas en los Países Bajos. Capacidad actual de incorporación: Q2 2026. ¿Preguntas? Escríbenos a info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "consultor n8n Países Bajos, migrar de Zapier a n8n, automatización de workflows auto-alojada, experto n8n Ámsterdam, agencia de automatización de workflows Países Bajos, consultoría de migración n8n, migración de Make a n8n, servicios de integración n8n",
+      "extendedDesc": "CodeHunter Lab ofrece consultoría experta y servicios de migración n8n para empresas en los Países Bajos. Desde la migración de Zapier y Make hasta el despliegue de n8n auto-alojado, arquitectura de workflows personalizada y pipelines de datos conformes con el RGPD, ayudamos a las empresas a reducir costes de automatización un 60–80% mientras mantienen el control total de sus datos. Con sede en Leiden, atendemos empresas en Ámsterdam, Róterdam, La Haya, Utrecht y todo los Países Bajos."
+    }
+  },
+  "WhatsAppAutomation": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN WHATSAPP BUSINESS :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tus Clientes Están",
+        "highlight": "En WhatsApp.",
+        "part2": "Tus Sistemas No"
+      },
+      "description": "CodeHunter Lab construye <strong>automatización con WhatsApp Business API</strong> para empresas en los Países Bajos: chatbots, workflows de atención al cliente, campañas de marketing e integración con CRM. Llega a tus clientes donde ya están. Automatiza a escala.",
+      "cta": {
+        "primary": "Reservar Consulta Gratuita de WhatsApp",
+        "secondary": "Ver Qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "Por Qué el WhatsApp Manual Te Está Costando Dinero",
+      "items": [
+        {
+          "emoji": "📱",
+          "title": "Un teléfono, una persona, una conversación",
+          "desc": "Tu app de WhatsApp Business en un único teléfono solo puede gestionar una conversación a la vez. Mientras tanto, 10 clientes esperan. Ese cuello de botella no se puede escalar."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Las respuestas repetitivas agotan a tu equipo",
+          "desc": "¿Cuáles son sus horarios? ¿Dónde están ubicados? ¿Cuánto cuesta? — tu equipo escribe las mismas respuestas 50 veces al día. Los chatbots de IA las gestionan al instante."
+        },
+        {
+          "emoji": "📊",
+          "title": "Sin seguimiento de conversaciones en WhatsApp",
+          "desc": "Consultas de clientes, pedidos, quejas: todo ocurre en WhatsApp sin registro en CRM, sin analítica, sin sistema de seguimiento. Datos valiosos de clientes desaparecen en hilos de chat."
+        },
+        {
+          "emoji": "🚫",
+          "title": "Riesgo de bloqueo de WhatsApp con herramientas no oficiales",
+          "desc": "Usar herramientas no oficiales de automatización de WhatsApp pone en riesgo que tu número empresarial sea bloqueado permanentemente. La API oficial es el único camino seguro, y requiere configuración técnica."
+        },
+        {
+          "emoji": "📧",
+          "title": "Las tasas de apertura del email están cayendo",
+          "desc": "Las tasas de apertura de email rondan el 20%. Las de WhatsApp superan el 95%. Si tu comunicación con clientes y marketing es solo por email, estás perdiendo el canal que realmente consultan."
+        },
+        {
+          "emoji": "🔌",
+          "title": "WhatsApp está desconectado de tus sistemas",
+          "desc": "Un cliente ordena por WhatsApp. Tu inventario, CRM y sistema de envío no saben nada. Alguien transfiere manualmente los datos. Ocurren errores. Los clientes se frustran."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos con WhatsApp Business API",
+      "subtitle": "Conectamos WhatsApp a tus sistemas empresariales para que cada mensaje desencadene una acción, cada conversación quede registrada y tu equipo se centre en lo que solo los humanos pueden hacer.",
+      "items": [
+        {
+          "emoji": "🤖",
+          "title": "Chatbots de IA para WhatsApp",
+          "desc": "Chatbots personalizados que gestionan FAQs, cualifican leads, reservan citas y procesan pedidos: 24/7, en varios idiomas, con traspaso humano fluido cuando es necesario.",
+          "result": "80% de consultas resueltas automáticamente. Cero tiempo de espera."
+        },
+        {
+          "emoji": "📢",
+          "title": "Automatización de Difusión y Campañas",
+          "desc": "Envía mensajes de WhatsApp personalizados a miles de clientes: actualizaciones de pedidos, recordatorios de citas, campañas promocionales y secuencias de re-engagement. Todo vía API oficial.",
+          "result": "Tasa de apertura del 95%+. Engagement 5 veces mayor que el email."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Integración con CRM y Sistemas",
+          "desc": "Cada conversación de WhatsApp se registra en tu CRM. Detalles del cliente, historial de pedidos y transcripciones se sincronizan automáticamente. Tu equipo tiene contexto completo.",
+          "result": "Sin conversaciones perdidas. Historial completo de clientes."
+        },
+        {
+          "emoji": "🛒",
+          "title": "Comercio y Pedidos por WhatsApp",
+          "desc": "Los clientes exploran productos, realizan pedidos y reciben enlaces de pago, todo dentro de WhatsApp. Integrado con tu inventario, procesador de pagos y sistema de envío.",
+          "result": "Compra sin fricciones. Mayor conversión que el checkout web."
+        },
+        {
+          "emoji": "📊",
+          "title": "Panel de Analítica de WhatsApp",
+          "desc": "Sigue volumen de mensajes, tiempos de respuesta, resultados de conversaciones, rendimiento de campañas y satisfacción del cliente. Panel en tiempo real accesible desde cualquier dispositivo.",
+          "result": "Estrategia de WhatsApp basada en datos. ROI medible."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "Configuración Oficial de API y Cumplimiento",
+          "desc": "Configuramos tu cuenta de WhatsApp Business API vía Meta Cloud API o un BSP (360dialog, Twilio), configuramos plantillas, garantizamos cumplimiento con las políticas de WhatsApp y gestionamos la verificación.",
+          "result": "Cero riesgo de bloqueo. Cumplimiento total. Configuración profesional."
+        }
+      ]
+    },
+    "UseCases": {
+      "title": "Automatización de WhatsApp en Acción",
+      "items": [
+        {
+          "num": "01",
+          "title": "Confirmación y Seguimiento de Pedidos Automatizado",
+          "desc": "El cliente realiza un pedido en tu web → recibe instantáneamente una confirmación por WhatsApp con los detalles del pedido → actualización de envío automática cuando se despacha → confirmación de entrega con encuesta de satisfacción. Todo automatizado."
+        },
+        {
+          "num": "02",
+          "title": "Cualificación de Leads con IA vía WhatsApp",
+          "desc": "Un prospecto envía 'Hola' a tu número de WhatsApp → el chatbot de IA hace preguntas de cualificación (presupuesto, plazo, necesidades) → puntúa el lead → deriva los leads calientes al equipo de ventas vía Slack → los leads tibios entran en una secuencia de nutrición."
+        },
+        {
+          "num": "03",
+          "title": "Recordatorios y Reprogramación de Citas",
+          "desc": "48 horas antes de una cita, el cliente recibe un recordatorio por WhatsApp con confirmación o reprogramación en un toque. Si reprograma, la nueva franja se reserva automáticamente. Las ausencias se reducen un 40%."
+        },
+        {
+          "num": "04",
+          "title": "Triaje de Atención al Cliente",
+          "desc": "El cliente envía una solicitud de soporte → el chatbot de IA categoriza el problema (facturación, técnico, general) → resuelve problemas simples automáticamente → deriva problemas complejos a la persona correcta con contexto completo."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué las Empresas Eligen CodeHunter Lab para WhatsApp",
+      "points": [
+        {
+          "title": "Solo API oficial — sin riesgo de bloqueo",
+          "desc": "Solo usamos la API oficial de WhatsApp Business vía Meta Cloud API o BSPs aprobados. Sin herramientas no oficiales, sin soluciones alternativas. Tu número empresarial está seguro."
+        },
+        {
+          "title": "Integrado en tus sistemas existentes",
+          "desc": "WhatsApp solo tiene valor si se conecta a tu CRM, inventario, calendario y sistemas de pago. Construimos las integraciones para que WhatsApp forme parte de tu flujo operativo."
+        },
+        {
+          "title": "Potenciado por IA, no basado en reglas",
+          "desc": "Nuestros chatbots utilizan IA conversacional: entienden contexto, gestionan conversaciones multi-turno y escalan inteligentemente. No menús rígidos de botones que frustran a los clientes."
+        },
+        {
+          "title": "Impacto medido desde el día uno",
+          "desc": "Rastreamos volumen de mensajes, tiempos de respuesta, tasas de conversión y satisfacción del cliente. Ves el ROI exacto de tu automatización de WhatsApp, no solo conteos de mensajes."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que las empresas preguntan antes de implementar automatización de WhatsApp.",
+      "questions": [
+        {
+          "q": "¿Cuál es la diferencia entre WhatsApp Business App y WhatsApp Business API?",
+          "a": "La Business App es para pequeñas empresas: un teléfono, respuestas manuales. La API es para empresas que necesitan soporte multi-agente, chatbots, automatización e integración con sistemas. Requiere configuración técnica y se accede a través de Meta Cloud API o un BSP."
+        },
+        {
+          "q": "¿Podemos enviar mensajes de marketing por WhatsApp?",
+          "a": "Sí, a través de la WhatsApp Business API con plantillas de mensaje aprobadas. Los clientes deben optar por recibir mensajes de marketing. Te ayudamos a configurar flujos de opt-in conformes y la aprobación de plantillas."
+        },
+        {
+          "q": "¿Cuánto cuesta la WhatsApp Business API?",
+          "a": "Meta cobra por conversación (las tarifas varían por país y categoría). En los Países Bajos, las conversaciones iniciadas por la empresa cuestan aproximadamente 0,05–0,10 € cada una. Proporcionamos una estimación detallada de costes durante la consulta."
+        },
+        {
+          "q": "¿El chatbot puede gestionar neerlandés?",
+          "a": "Sí. Nuestros chatbots de IA soportan neerlandés, inglés y varios idiomas más. Detectan automáticamente el idioma del cliente y responden con fluidez."
+        },
+        {
+          "q": "¿Cuánto tarda la implementación?",
+          "a": "Una configuración estándar (configuración de API + chatbot básico + integración CRM) tarda de 2 a 4 semanas. Configuraciones más complejas con chatbots de IA, integración de comercio y workflows personalizados pueden tardar de 4 a 8 semanas."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Tus clientes ya están en WhatsApp",
+      "title": "Reserva tu Consulta Gratuita de WhatsApp",
+      "desc": "Revisamos tu comunicación actual con clientes, identificamos las oportunidades de automatización de WhatsApp de mayor impacto y te mostramos exactamente cómo sería una configuración de WhatsApp Business API, con una estimación clara de costes y ROI.",
+      "button": "Reservar Consulta Gratuita de WhatsApp",
+      "subtext": "Para empresas en los Países Bajos. Capacidad actual de incorporación: Q2 2026. ¿Preguntas? Escríbenos a info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "WhatsApp Business API Países Bajos, automatización WhatsApp Ámsterdam, chatbot WhatsApp Países Bajos, integración CRM WhatsApp Países Bajos, marketing automatización WhatsApp NL, automatización atención cliente WhatsApp, servicios integración WhatsApp API",
+      "extendedDesc": "CodeHunter Lab proporciona servicios de automatización con WhatsApp Business API para empresas en los Países Bajos. Desde el desarrollo de chatbots de IA y automatización de atención al cliente hasta campañas de marketing e integración con CRM, ayudamos a las empresas a llegar a sus clientes en su canal de mensajería más utilizado. Con sede en Leiden, atendemos empresas en Ámsterdam, Róterdam, La Haya, Utrecht y todo los Países Bajos."
+    }
   }
 }

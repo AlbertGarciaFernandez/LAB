@@ -56,7 +56,10 @@ const cardVariants = {
 
 const IndustriesSection: React.FC = () => {
   const t = useTranslations("IndustriesSection");
-  const industries = t.raw("industries") as { title: string; desc: string; link: string }[];
+  const industriesRaw = t.raw("industries");
+  const industries = Array.isArray(industriesRaw)
+    ? (industriesRaw as { title: string; desc: string; link: string }[])
+    : [];
 
   return (
     <section className="relative overflow-hidden border-t border-white/5 bg-near-black px-4 py-20 text-white md:px-8 md:py-28">

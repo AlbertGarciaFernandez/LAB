@@ -50,16 +50,6 @@ export default function ITSystemIntegrationContent() {
     },
   ];
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqQuestions.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -109,10 +99,6 @@ export default function ITSystemIntegrationContent() {
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
 
@@ -147,9 +133,8 @@ export default function ITSystemIntegrationContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-2xl"
-          >
-            {t("Hero.description")}
-          </m.p>
+            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+          />
 
           <m.div
             initial={{ opacity: 0, y: 20 }}

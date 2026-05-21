@@ -3,14 +3,17 @@ import { Link } from "@/navigation";
 
 export default function PackagesSection() {
   const t = useTranslations("Packages");
-  const packages = t.raw("items") as Array<{
-    name: string;
-    price: string;
-    timeline: string;
-    desc: string;
-    points: string[];
-    href: string;
-  }>;
+  const packagesRaw = t.raw("items");
+  const packages = Array.isArray(packagesRaw)
+    ? (packagesRaw as Array<{
+        name: string;
+        price: string;
+        timeline: string;
+        desc: string;
+        points: string[];
+        href: string;
+      }>)
+    : [];
 
   return (
     <section className="border-y border-white/5 bg-near-black px-6 py-24 text-white lg:px-8">
@@ -33,37 +36,41 @@ export default function PackagesSection() {
           </Link>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-3">
-          {packages.map((item) => (
-            <article
-              key={item.name}
-              className="rounded-lg border border-white/10 bg-white/[0.03] p-7"
-            >
-              <h3 className="text-2xl font-black tracking-tight text-white">{item.name}</h3>
-              <p className="mt-4 text-3xl font-black tracking-tighter text-hunter-green">
-                {item.price}
-              </p>
-              <p className="mt-2 text-xs font-bold uppercase tracking-widest text-gray-500">
-                {item.timeline}
-              </p>
-              <p className="mt-5 text-sm leading-relaxed text-gray-300">{item.desc}</p>
-              <ul className="mt-6 space-y-3">
-                {item.points.map((point) => (
-                  <li key={point} className="flex gap-3 text-sm text-gray-300">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-hunter-orange" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={item.href}
-                className="mt-7 inline-flex text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
+        {packages.length > 0 && (
+          <div className="grid gap-5 lg:grid-cols-3">
+            {packages.map((item) => (
+              <article
+                key={item.name}
+                className="rounded-lg border border-white/10 bg-white/[0.03] p-7"
               >
-                {t("learnMore")}
-              </Link>
-            </article>
-          ))}
-        </div>
+                <h3 className="text-2xl font-black tracking-tight text-white">{item.name}</h3>
+                <p className="mt-4 text-3xl font-black tracking-tighter text-hunter-green">
+                  {item.price}
+                </p>
+                <p className="mt-2 text-xs font-bold uppercase tracking-widest text-gray-500">
+                  {item.timeline}
+                </p>
+                <p className="mt-5 text-sm leading-relaxed text-gray-300">{item.desc}</p>
+                {Array.isArray(item.points) && (
+                  <ul className="mt-6 space-y-3">
+                    {item.points.map((point) => (
+                      <li key={point} className="flex gap-3 text-sm text-gray-300">
+                        <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-hunter-orange" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <Link
+                  href={item.href}
+                  className="mt-7 inline-flex text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
+                >
+                  {t("learnMore")}
+                </Link>
+              </article>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

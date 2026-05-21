@@ -5,7 +5,7 @@ import React, { useState, useReducer, useEffect } from "react";
 import { Link, usePathname } from "@/navigation";
 import Image from "next/image";
 import { m, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   LightningIcon,
   AtomIcon,
@@ -24,6 +24,7 @@ import {
   ChartBarIcon,
   HouseIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import LanguageSelector from "./LanguageSelector";
 
 type NavState = {
   open: boolean;
@@ -77,6 +78,7 @@ const ChevronDown: React.FC<{ open?: boolean }> = ({ open }) => (
 const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
+  const locale = useLocale();
   const [nav, dispatch] = useReducer(navReducer, {
     open: false,
     openDropdown: null,
@@ -192,6 +194,12 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: t("nav.Bio"), href: "/#about" },
     { name: t("nav.Process"), href: "/#process-contact" },
+  ];
+
+  const locales = [
+    { code: "en", label: "EN", flag: "🇬🇧" },
+    { code: "es", label: "ES", flag: "🇪🇸" },
+    { code: "nl", label: "NL", flag: "🇳🇱" },
   ];
 
   useEffect(() => {
@@ -392,19 +400,19 @@ const Header: React.FC = () => {
 
               <li>
                 <Link
-                  href="/en/insights"
+                  href={`/${locale}/insights`}
                   className="group relative block px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white"
                 >
-                  Insights
+                  {t("nav.Insights")}
                   <span className="absolute bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-hunter-green opacity-0 shadow-[0_0_8px_rgba(0,230,162,0.8)] transition-all duration-300 group-hover:opacity-100" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/case-studies"
+                  href={`/${locale}/case-studies`}
                   className="group relative block px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white"
                 >
-                  Case Studies
+                  {t("nav.CaseStudies")}
                   <span className="absolute bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-hunter-green opacity-0 shadow-[0_0_8px_rgba(0,230,162,0.8)] transition-all duration-300 group-hover:opacity-100" />
                 </Link>
               </li>
@@ -413,6 +421,8 @@ const Header: React.FC = () => {
 
           {/* CTAs */}
           <div className="flex items-center gap-2 md:gap-4">
+            {/* Language Selector */}
+            <LanguageSelector />
             {/* AI Consulting Button */}
             <Link
               href="/ai-consulting"
@@ -588,11 +598,11 @@ const Header: React.FC = () => {
                 className="w-full max-w-sm"
               >
                 <Link
-                  href="/insights"
+                  href={`/${locale}/insights`}
                   onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                   className="block w-full rounded-xl px-5 py-3 text-xl font-bold text-gray-400 transition-colors hover:text-hunter-orange"
                 >
-                  Insights
+                  {t("nav.Insights")}
                 </Link>
               </m.div>
               <m.div
@@ -602,16 +612,46 @@ const Header: React.FC = () => {
                 className="w-full max-w-sm"
               >
                 <Link
-                  href="/case-studies"
+                  href={`/${locale}/case-studies`}
                   onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                   className="block w-full rounded-xl px-5 py-3 text-xl font-bold text-gray-400 transition-colors hover:text-hunter-orange"
                 >
-                  Case Studies
+                  {t("nav.CaseStudies")}
                 </Link>
               </m.div>
 
               {/* Divider */}
               <div className="my-2 h-px w-full max-w-sm bg-white/10" />
+
+              {/* Language Selector (mobile) */}
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="w-full max-w-sm"
+              >
+                <div className="flex items-center justify-center gap-3 px-5 py-3">
+                  {locales.map((l) => {
+                    const isActive = l.code === locale;
+                    return (
+                      <Link
+                        key={l.code}
+                        href={pathname}
+                        locale={l.code}
+                        onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
+                        className={`flex flex-col items-center gap-1 rounded-xl px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all ${
+                          isActive
+                            ? "bg-hunter-green/10 text-hunter-green"
+                            : "text-gray-500 hover:text-white"
+                        }`}
+                      >
+                        <span className="text-xl leading-none">{l.flag}</span>
+                        <span>{l.label}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </m.div>
 
               {/* CTAs */}
               <m.div

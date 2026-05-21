@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/utils/metadata";
 import { getTranslations } from "next-intl/server";
 import DentalClinicAutomationContent from "./PageContent";
 
-const baseUrl = "https://www.codehunterlab.com";
 const path = "/dental-clinic-automation-netherlands";
 
 export async function generateMetadata({
@@ -10,8 +10,9 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = params;
-  return {
+  return createPageMetadata({
+    locale: params.locale,
+    path,
     title: "Dental Clinic Automation Netherlands | Reduce No-Shows",
     description:
       "Reduce dental no-shows with WhatsApp reminders, patient recall automation, and practice software integrations for clinics in the Netherlands.",
@@ -27,24 +28,7 @@ export async function generateMetadata({
       "Exquise ISOS integration",
       "dental lead automation Netherlands",
     ],
-    alternates: {
-      canonical: `${baseUrl}/${locale}${path}`,
-      languages: {
-        en: `${baseUrl}/en${path}`,
-        es: `${baseUrl}/es${path}`,
-        "x-default": `${baseUrl}/en${path}`,
-      },
-    },
-    openGraph: {
-      title: "Dental Clinic Automation Netherlands | Reduce No-Shows",
-      description:
-        "Reduce dental no-shows with WhatsApp reminders, patient recall automation, and practice software integrations for clinics in the Netherlands.",
-      url: `${baseUrl}/${locale}${path}`,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-    },
-  };
+  });
 }
 
 export default async function Page() {
@@ -55,7 +39,7 @@ export default async function Page() {
     titlePart1: t("Hero.title.part1"),
     titleHighlight: t("Hero.title.highlight"),
     titlePart2: t("Hero.title.part2"),
-    description: t("Hero.description"),
+    description: t.raw("Hero.description") as string,
     ctaPrimary: t("Hero.cta.primary"),
     ctaSecondary: t("Hero.cta.secondary"),
   };

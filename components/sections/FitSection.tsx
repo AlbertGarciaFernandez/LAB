@@ -3,8 +3,10 @@ import { Link } from "@/navigation";
 
 export default function FitSection() {
   const t = useTranslations("Fit");
-  const good = t.raw("good.items") as string[];
-  const bad = t.raw("bad.items") as string[];
+  const goodRaw = t.raw("good.items");
+  const badRaw = t.raw("bad.items");
+  const good = Array.isArray(goodRaw) ? (goodRaw as string[]) : [];
+  const bad = Array.isArray(badRaw) ? (badRaw as string[]) : [];
 
   return (
     <section className="bg-surface-dark/20 px-6 py-24 text-white lg:px-8">
@@ -22,26 +24,30 @@ export default function FitSection() {
         <div className="grid gap-5 lg:grid-cols-2">
           <div className="rounded-lg border border-hunter-green/30 bg-hunter-green/10 p-7">
             <h3 className="text-2xl font-black tracking-tight text-white">{t("good.title")}</h3>
-            <ul className="mt-6 space-y-4">
-              {good.map((item) => (
-                <li key={item} className="flex gap-3 text-gray-200">
-                  <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-hunter-green" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
+            {good.length > 0 && (
+              <ul className="mt-6 space-y-4">
+                {good.map((item) => (
+                  <li key={item} className="flex gap-3 text-gray-200">
+                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-hunter-green" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <div className="rounded-lg border border-white/10 bg-near-black/70 p-7">
             <h3 className="text-2xl font-black tracking-tight text-white">{t("bad.title")}</h3>
-            <ul className="mt-6 space-y-4">
-              {bad.map((item) => (
-                <li key={item} className="flex gap-3 text-gray-300">
-                  <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-hunter-orange" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
+            {bad.length > 0 && (
+              <ul className="mt-6 space-y-4">
+                {bad.map((item) => (
+                  <li key={item} className="flex gap-3 text-gray-300">
+                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-hunter-orange" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
 

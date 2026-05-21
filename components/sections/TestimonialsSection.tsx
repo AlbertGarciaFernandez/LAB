@@ -28,14 +28,17 @@ const QuoteMark = ({ color }: { color: "green" | "orange" }) => (
 
 export default function TestimonialsSection() {
   const t = useTranslations("Testimonials");
-  const items = t.raw("items") as Array<{
-    quote: string;
-    name: string;
-    role: string;
-    company: string;
-    initials: string;
-    color: "green" | "orange";
-  }>;
+  const itemsRaw = t.raw("items");
+  const items = Array.isArray(itemsRaw)
+    ? (itemsRaw as Array<{
+        quote: string;
+        name: string;
+        role: string;
+        company: string;
+        initials: string;
+        color: "green" | "orange";
+      }>)
+    : [];
 
   return (
     <section className="relative overflow-hidden border-t border-white/5 bg-near-black py-24">
@@ -61,46 +64,48 @@ export default function TestimonialsSection() {
         </m.div>
 
         {/* Grid */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {items.map((item, idx) => (
-            <m.div
-              key={item.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className={`bg-white/3 group relative flex flex-col rounded-2xl border p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
-                item.color === "green"
-                  ? "border-white/8 hover:border-hunter-green/30 hover:shadow-[0_8px_32px_rgba(0,230,162,0.08)]"
-                  : "border-white/8 hover:border-hunter-orange/30 hover:shadow-[0_8px_32px_rgba(255,122,60,0.08)]"
-              }`}
-            >
-              <QuoteMark color={item.color} />
-              <StarRating />
+        {items.length > 0 && (
+          <div className="grid gap-6 md:grid-cols-2">
+            {items.map((item, idx) => (
+              <m.div
+                key={item.name}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className={`bg-white/3 group relative flex flex-col rounded-2xl border p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
+                  item.color === "green"
+                    ? "border-white/8 hover:border-hunter-green/30 hover:shadow-[0_8px_32px_rgba(0,230,162,0.08)]"
+                    : "border-white/8 hover:border-hunter-orange/30 hover:shadow-[0_8px_32px_rgba(255,122,60,0.08)]"
+                }`}
+              >
+                <QuoteMark color={item.color} />
+                <StarRating />
 
-              <p className="mb-8 flex-1 text-base leading-relaxed text-gray-200">{item.quote}</p>
+                <p className="mb-8 flex-1 text-base leading-relaxed text-gray-200">{item.quote}</p>
 
-              {/* Author */}
-              <div className="flex items-center gap-4">
-                <div
-                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-black ${
-                    item.color === "green"
-                      ? "border border-hunter-green/20 bg-hunter-green/15 text-hunter-green"
-                      : "border border-hunter-orange/20 bg-hunter-orange/15 text-hunter-orange"
-                  }`}
-                >
-                  {item.initials}
+                {/* Author */}
+                <div className="flex items-center gap-4">
+                  <div
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-black ${
+                      item.color === "green"
+                        ? "border border-hunter-green/20 bg-hunter-green/15 text-hunter-green"
+                        : "border border-hunter-orange/20 bg-hunter-orange/15 text-hunter-orange"
+                    }`}
+                  >
+                    {item.initials}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">{item.name}</p>
+                    <p className="text-xs text-gray-500">
+                      {item.role} · {item.company}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-white">{item.name}</p>
-                  <p className="text-xs text-gray-500">
-                    {item.role} · {item.company}
-                  </p>
-                </div>
-              </div>
-            </m.div>
-          ))}
-        </div>
+              </m.div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
+import ServiceSchema from "@/components/ui/ServiceSchema";
 import { BASE_URL } from "@/utils/constants";
-import { createPageMetadata } from "@/utils/metadata";
+import { createPageMetadata, localizedUrl } from "@/utils/metadata";
 import AIAutomationNetherlandsContent from "./PageContent";
 
 const baseUrl = BASE_URL;
@@ -13,9 +14,8 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = params;
   return createPageMetadata({
-    locale,
+    locale: params.locale,
     path,
     title: "AI Automation Agency Netherlands | n8n, WhatsApp & AI Agents",
     description:
@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
     titlePart1: t("Hero.title.part1"),
     titleHighlight: t("Hero.title.highlight"),
     titleSub: t("Hero.title.sub"),
-    description: t("Hero.description"),
+    description: t.raw("Hero.description") as string,
     ctaPrimary: t("Hero.cta.primary"),
     ctaSecondary: t("Hero.cta.secondary"),
   };
@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
     },
     automation: {
       title: t("Agents.automation.title"),
-      desc: t("Agents.automation.desc"),
+      desc: t.raw("Agents.automation.desc") as string,
       points: t.raw("Agents.automation.points") as string[],
     },
   };
@@ -95,7 +95,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
     do: {
       titlePart1: t("Trust.do.title.part1"),
       titleHighlight: t("Trust.do.title.highlight"),
-      points: [t("Trust.do.points.0"), t("Trust.do.points.1")],
+      points: [t("Trust.do.points.0"), t.raw("Trust.do.points.1") as string],
     },
   };
 
@@ -122,6 +122,12 @@ export default async function Page({ params }: { params: { locale: string } }) {
 
   return (
     <>
+      <ServiceSchema
+        name="AI Automation Consulting Netherlands"
+        description="AI automation consulting for WhatsApp agents, AI voice bots, n8n workflows, and CRM integrations in the Netherlands."
+        url={localizedUrl(locale, path)}
+        serviceType="AI Automation Consulting"
+      />
       <BreadcrumbSchema
         items={[
           { name: locale === "es" ? "Inicio" : "Home", url: `${baseUrl}/${locale}` },

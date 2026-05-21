@@ -95,7 +95,8 @@ function TiltCard({ children }: { children: React.ReactNode }) {
 
 const QuickWinsSection: React.FC = () => {
   const t = useTranslations("QuickWins");
-  const cards = t.raw("cards") as { title: string; desc: string }[];
+  const cardsRaw = t.raw("cards");
+  const cards = Array.isArray(cardsRaw) ? (cardsRaw as { title: string; desc: string }[]) : [];
 
   return (
     <section

@@ -88,16 +88,6 @@ export default function VeterinaryClinicAutomationContent() {
     ],
   };
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: (t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
-
   return (
     <>
       <Header />
@@ -110,11 +100,6 @@ export default function VeterinaryClinicAutomationContent() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-
         <div className="bg-noise" />
         <HeroBackgroundOrnaments />
 
@@ -148,9 +133,8 @@ export default function VeterinaryClinicAutomationContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl"
-          >
-            {t("Hero.description")}
-          </m.p>
+            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+          />
 
           <m.div
             initial={{ opacity: 0, y: 20 }}

@@ -16,6 +16,7 @@ export function generateStaticParams() {
   return insights.flatMap((article) => [
     { locale: "en", slug: article.slug },
     { locale: "es", slug: article.slug },
+    { locale: "nl", slug: article.slug },
   ]);
 }
 
@@ -34,6 +35,12 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     description: article.description,
     alternates: {
       canonical: url,
+      languages: {
+        en: `${baseUrl}/en/insights/${article.slug}`,
+        es: `${baseUrl}/es/insights/${article.slug}`,
+        nl: `${baseUrl}/nl/insights/${article.slug}`,
+        "x-default": `${baseUrl}/en/insights/${article.slug}`,
+      },
     },
     openGraph: {
       title: article.title,
@@ -41,7 +48,7 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
       url,
       siteName: "CodeHunter Lab",
       type: "article",
-      locale: isSpanish ? "es_ES" : "en_US",
+      locale: isSpanish ? "es_ES" : params.locale === "nl" ? "nl_NL" : "en_US",
       publishedTime: article.publishedAt,
       modifiedTime: article.modifiedAt,
     },

@@ -40,7 +40,10 @@ const cardVariants = {
 
 const WhatWeBuildSection: React.FC = () => {
   const t = useTranslations("WhatWeBuild");
-  const services = t.raw("services") as { title: string; desc: string; link: string }[];
+  const servicesRaw = t.raw("services");
+  const services = Array.isArray(servicesRaw)
+    ? (servicesRaw as { title: string; desc: string; link: string }[])
+    : [];
 
   return (
     <section className="relative overflow-hidden border-b border-white/5 bg-near-black px-4 py-20 text-white md:px-8 md:py-28">

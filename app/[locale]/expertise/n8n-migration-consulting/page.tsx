@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/utils/metadata";
 import N8nMigrationPageContent from "./PageContent";
 
-const baseUrl = "https://www.codehunterlab.com";
 const path = "/expertise/n8n-migration-consulting";
 
 export async function generateMetadata({
@@ -9,8 +9,9 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = params;
-  return {
+  return createPageMetadata({
+    locale: params.locale,
+    path,
     title: "n8n Consulting & Migration Services | Zapier Alternative",
     description:
       "Expert n8n consultants in the Netherlands. We migrate tailored workflows from Zapier and Make to n8n for better performance and lower costs.",
@@ -20,24 +21,7 @@ export async function generateMetadata({
       "workflow automation expert",
       "self-hosted automation",
     ],
-    alternates: {
-      canonical: `${baseUrl}/${locale}${path}`,
-      languages: {
-        en: `${baseUrl}/en${path}`,
-        es: `${baseUrl}/es${path}`,
-        "x-default": `${baseUrl}/en${path}`,
-      },
-    },
-    openGraph: {
-      title: "n8n Consulting & Migration Services | Zapier Alternative",
-      description:
-        "Expert n8n consultants in the Netherlands. We migrate tailored workflows from Zapier and Make to n8n for better performance and lower costs.",
-      url: `${baseUrl}/${locale}${path}`,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-    },
-  };
+  });
 }
 
 export default function Page() {

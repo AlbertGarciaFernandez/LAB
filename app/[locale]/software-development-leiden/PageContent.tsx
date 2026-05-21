@@ -59,16 +59,6 @@ export default function SoftwareDevelopmentLeidenContent() {
     },
   ];
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqQuestions.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
-
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -90,10 +80,6 @@ export default function SoftwareDevelopmentLeidenContent() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         <script
           type="application/ld+json"
@@ -129,9 +115,8 @@ export default function SoftwareDevelopmentLeidenContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-2xl"
-          >
-            {t("Hero.description")}
-          </m.p>
+            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+          />
 
           <m.div
             initial={{ opacity: 0, y: 20 }}
@@ -230,9 +215,10 @@ export default function SoftwareDevelopmentLeidenContent() {
                 <h3 className="mb-4 text-3xl font-black uppercase tracking-tight text-white">
                   {t("Services.ai.title")}
                 </h3>
-                <p className="flex-grow text-lg leading-relaxed text-gray-400">
-                  {t("Services.ai.description")}
-                </p>
+                <p
+                  className="flex-grow text-lg leading-relaxed text-gray-400"
+                  dangerouslySetInnerHTML={{ __html: t.raw("Services.ai.description") }}
+                />
               </GlassCard>
 
               <GlassCard

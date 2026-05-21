@@ -17,27 +17,6 @@ import Header from "@/components/layout/Header";
 export default function NextJsDevelopmentAgencyContent() {
   const t = useTranslations("NextJsAgency");
 
-  const serviceJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Next.js Development Agency Netherlands",
-    provider: {
-      "@type": "Organization",
-      name: "CodeHunter Lab",
-      url: "https://www.codehunterlab.com",
-    },
-    areaServed: ["Netherlands", "Leiden", "Amsterdam", "Rotterdam", "Den Haag"],
-    description:
-      "Professional Next.js development services including App Router architecture, React Server Components, TypeScript, and full-stack applications.",
-    serviceType: "Next.js Web Development",
-    offers: {
-      "@type": "Offer",
-      price: "0.00",
-      priceCurrency: "EUR",
-      description: "Free initial Next.js architecture consultation",
-    },
-  };
-
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -52,31 +31,13 @@ export default function NextJsDevelopmentAgencyContent() {
     ],
   };
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: (t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
-
   return (
     <>
       <Header />
       <main className="relative min-h-screen overflow-hidden bg-near-black text-white">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
 
         <div className="bg-noise" />
@@ -110,9 +71,8 @@ export default function NextJsDevelopmentAgencyContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-2xl"
-          >
-            {t("Hero.description")}
-          </m.p>
+            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+          />
 
           <m.div
             initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/utils/metadata";
 import ReactConsultingContent from "./PageContent";
 
-const baseUrl = "https://www.codehunterlab.com";
 const path = "/react-consulting";
 
 export async function generateMetadata({
@@ -9,8 +9,9 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = params;
-  return {
+  return createPageMetadata({
+    locale: params.locale,
+    path,
     title: "React Consulting Services Netherlands | Audit & Architecture",
     description:
       "Senior React consulting services in the Netherlands: codebase audits, frontend architecture, performance fixes, migrations, and team support.",
@@ -24,24 +25,7 @@ export async function generateMetadata({
       "React performance consulting",
       "frontend architecture Netherlands",
     ],
-    alternates: {
-      canonical: `${baseUrl}/${locale}${path}`,
-      languages: {
-        en: `${baseUrl}/en${path}`,
-        es: `${baseUrl}/es${path}`,
-        "x-default": `${baseUrl}/en${path}`,
-      },
-    },
-    openGraph: {
-      title: "React Consulting Services Netherlands | Audit & Architecture",
-      description:
-        "Senior React consulting services in the Netherlands: codebase audits, frontend architecture, performance fixes, migrations, and team support.",
-      url: `${baseUrl}/${locale}${path}`,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
-    },
-  };
+  });
 }
 
 export default function Page() {

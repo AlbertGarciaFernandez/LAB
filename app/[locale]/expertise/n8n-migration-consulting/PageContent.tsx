@@ -28,45 +28,6 @@ const useCaseIcons = [
 export default function N8nMigrationPageContent() {
   const t = useTranslations("ExpertisePages.n8nMigration");
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How long does a migration take?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Most migrations take 1-3 weeks depending on the number and complexity of workflows. Simple setups (under 10 workflows) can be live in 5 days.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do I need my own server to run n8n?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. We recommend a VPS (like Hetzner or DigitalOcean) for €5-15/month. We handle the full server setup, SSL, backups, and monitoring as part of the migration.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What happens to my existing Zapier workflows during migration?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Nothing. We build the n8n version in parallel and only switch over after full testing. Your Zapier workflows keep running until you approve the cutover.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can you add new logic that Zapier could not handle?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Absolutely. n8n supports full JavaScript/Python code nodes, complex branching, sub-workflows, and API calls that Zapier simply cannot execute. We often improve workflows significantly during migration.",
-        },
-      },
-    ],
-  };
-
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -91,10 +52,6 @@ export default function N8nMigrationPageContent() {
     <>
       <Header />
       <main className="relative min-h-screen overflow-hidden bg-near-black text-white">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

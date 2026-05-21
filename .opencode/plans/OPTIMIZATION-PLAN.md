@@ -51,12 +51,15 @@
 - Improved header keyboard semantics, dropdown ARIA attributes, mobile nav dialog semantics, footer social link labels, contact form validation, and cookie consent dialog semantics.
 - Fixed locale-aware links in `InsightsSection`.
 - Converted `AIBanner` from a client component to a server component.
+- Added reusable `ServiceSchema` to the three primary service pages: AI Consulting, AI Automation Netherlands, and Next.js Development Agency.
+- Kept visible FAQ sections on those primary service pages, but removed commercial `FAQPage` JSON-LD where present because Google restricts FAQ rich results to government and health authority sites.
+- Added a regression test that prevents commercial pages from reintroducing restricted `FAQPage` JSON-LD, then removed the remaining restricted FAQ schema blocks while keeping visible FAQ content.
 - Verified `GlassCard.tsx` is still used and must remain.
 - Added `.worktrees/` to `.gitignore` so the local implementation worktree is not accidentally committed.
 
 ### Current validation status
 
-- `npm test` passes: 19/19 tests.
+- `npm test` passes: 22/22 tests (updated after locale-aware navigation assertion fix).
 - `npm run build` passes.
 - Remaining build output includes non-blocking warnings, including Prettier/formatting warnings and a `next-intl` dynamic import dependency warning.
 
@@ -66,44 +69,44 @@
 
 ### 2.1 Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 14 (App Router) |
-| i18n | next-intl with `/en/` and `/es/` locales |
-| Styling | Tailwind CSS 3 + custom tokens |
-| Animation | Framer Motion |
-| Fonts | Inter (sans) + Space Grotesk (mono) via next/font |
-| Deployment | Vercel |
-| Content | TypeScript data files (insights.ts, case-studies.ts, lab.ts) |
-| Testing | Node built-in test runner |
+| Layer      | Technology                                                   |
+| ---------- | ------------------------------------------------------------ |
+| Framework  | Next.js 14 (App Router)                                      |
+| i18n       | next-intl with `/en/` and `/es/` locales                     |
+| Styling    | Tailwind CSS 3 + custom tokens                               |
+| Animation  | Framer Motion                                                |
+| Fonts      | Inter (sans) + Space Grotesk (mono) via next/font            |
+| Deployment | Vercel                                                       |
+| Content    | TypeScript data files (insights.ts, case-studies.ts, lab.ts) |
+| Testing    | Node built-in test runner                                    |
 
 ### 2.2 Page Inventory
 
-| Route | Type | Server/Client | Metadata Quality |
-|-------|------|---------------|-----------------|
-| `/en` | Home | Mixed | Improved — canonical, alternates, OG, Twitter, keywords added |
-| `/en/ai-consulting` | Service | Mixed | Improved — shared metadata added |
-| `/en/ai-automation-consulting-netherlands` | Service | Mixed | Improved — shared metadata added |
-| `/en/dental-clinic-automation-netherlands` | Industry | Mixed | Good |
-| `/en/aesthetic-clinic-automation-netherlands` | Industry | Mixed | Good |
-| `/en/physiotherapy-clinic-automation-netherlands` | Industry | Mixed | Good |
-| `/en/veterinary-clinic-automation-netherlands` | Industry | Mixed | Good |
-| `/en/accounting-firm-automation-netherlands` | Industry | Mixed | Good |
-| `/en/real-estate-automation-netherlands` | Industry | Mixed | Good |
-| `/en/software-development-leiden` | Service | Mixed | Good |
-| `/en/nextjs-development-agency` | Service | Mixed | Improved — shared metadata added |
-| `/en/react-consulting` | Service | Mixed | Good |
-| `/en/it-system-integration` | Service | Mixed | Good |
-| `/en/services/custom-internal-tools-development` | Service | Mixed | Good |
-| `/en/expertise/ai-agents-automation` | Expertise | Mixed | Missing twitter |
-| `/en/expertise/custom-llm-development` | Expertise | Mixed | Missing twitter |
-| `/en/expertise/system-architecture-design` | Expertise | Mixed | Missing twitter |
-| `/en/expertise/n8n-migration-consulting` | Expertise | Mixed | Missing twitter |
-| `/en/about` | About | Server | Improved — hreflang, Twitter, keywords added |
-| `/en/case-studies` | Listing | Server | Improved — hreflang, Twitter, keywords added |
-| `/en/insights` | Listing | Server | Improved — hreflang, Twitter, keywords added |
-| `/en/lab` | Product | Server | Improved — Twitter, keywords added |
-| `/en/lab/app/*` | Workspace | Server | noindex (correct) |
+| Route                                             | Type      | Server/Client | Metadata Quality                                              |
+| ------------------------------------------------- | --------- | ------------- | ------------------------------------------------------------- |
+| `/en`                                             | Home      | Mixed         | Improved — canonical, alternates, OG, Twitter, keywords added |
+| `/en/ai-consulting`                               | Service   | Mixed         | Improved — shared metadata added                              |
+| `/en/ai-automation-consulting-netherlands`        | Service   | Mixed         | Improved — shared metadata added                              |
+| `/en/dental-clinic-automation-netherlands`        | Industry  | Mixed         | Good                                                          |
+| `/en/aesthetic-clinic-automation-netherlands`     | Industry  | Mixed         | Good                                                          |
+| `/en/physiotherapy-clinic-automation-netherlands` | Industry  | Mixed         | Good                                                          |
+| `/en/veterinary-clinic-automation-netherlands`    | Industry  | Mixed         | Good                                                          |
+| `/en/accounting-firm-automation-netherlands`      | Industry  | Mixed         | Good                                                          |
+| `/en/real-estate-automation-netherlands`          | Industry  | Mixed         | Good                                                          |
+| `/en/software-development-leiden`                 | Service   | Mixed         | Good                                                          |
+| `/en/nextjs-development-agency`                   | Service   | Mixed         | Improved — shared metadata added                              |
+| `/en/react-consulting`                            | Service   | Mixed         | Good                                                          |
+| `/en/it-system-integration`                       | Service   | Mixed         | Good                                                          |
+| `/en/services/custom-internal-tools-development`  | Service   | Mixed         | Good                                                          |
+| `/en/expertise/ai-agents-automation`              | Expertise | Mixed         | Missing twitter                                               |
+| `/en/expertise/custom-llm-development`            | Expertise | Mixed         | Missing twitter                                               |
+| `/en/expertise/system-architecture-design`        | Expertise | Mixed         | Missing twitter                                               |
+| `/en/expertise/n8n-migration-consulting`          | Expertise | Mixed         | Missing twitter                                               |
+| `/en/about`                                       | About     | Server        | Improved — hreflang, Twitter, keywords added                  |
+| `/en/case-studies`                                | Listing   | Server        | Improved — hreflang, Twitter, keywords added                  |
+| `/en/insights`                                    | Listing   | Server        | Improved — hreflang, Twitter, keywords added                  |
+| `/en/lab`                                         | Product   | Server        | Improved — Twitter, keywords added                            |
+| `/en/lab/app/*`                                   | Workspace | Server        | noindex (correct)                                             |
 
 ### 2.3 Client vs. Server Component Analysis
 
@@ -114,29 +117,32 @@
 **6 UI components** are client components (ContactForm, CookieConsent, InfiniteLoop, ScrambleText, etc.).
 
 **Pages that are purely static** (no client JS needed):
+
 - `/about`, `/case-studies` (listing), `/insights` (listing), `/lab` (landing), all `/lab/app/*` pages
 
 **Pages where Astro would help most** (high ratio of static content, minimal interactivity):
+
 - Home page (only HeroSection, TopAgentsSection, QuickWinsSection, ROICalculator need interactivity)
 - All industry landing pages (mostly static, only scroll animations)
 - About page (entirely static)
 
 **Pages where Astro adds no value**:
+
 - Contact form (form validation requires client JS)
 - Lab workspace (interactive dashboard)
 - Cookie consent (localStorage required)
 
 ### 2.4 Accessibility Issues Summary
 
-| Issue | Severity | WCAG | Affected |
-|-------|----------|------|----------|
-| No skip-navigation link | FIXED | 2.4.1 A | All pages |
-| Keyboard-inaccessible dropdown menus | IMPROVED | 2.1.1 A | Header component |
-| Form validation mismatch (Company/Role marked required but not validated) | FIXED | 3.3.1 A | ContactForm |
-| Missing aria-labels on social links | FIXED | 2.4.4 AA | Footer |
-| Potential color contrast (gray on black) | MEDIUM | 1.4.3 AA | Multiple |
-| Cookie consent missing role="dialog" | FIXED | 4.1.2 A | CookieConsent |
-| No focus management on mobile menu | IMPROVED | 2.4.3 A | Header |
+| Issue                                                                     | Severity | WCAG     | Affected         |
+| ------------------------------------------------------------------------- | -------- | -------- | ---------------- |
+| No skip-navigation link                                                   | FIXED    | 2.4.1 A  | All pages        |
+| Keyboard-inaccessible dropdown menus                                      | IMPROVED | 2.1.1 A  | Header component |
+| Form validation mismatch (Company/Role marked required but not validated) | FIXED    | 3.3.1 A  | ContactForm      |
+| Missing aria-labels on social links                                       | FIXED    | 2.4.4 AA | Footer           |
+| Potential color contrast (gray on black)                                  | MEDIUM   | 1.4.3 AA | Multiple         |
+| Cookie consent missing role="dialog"                                      | FIXED    | 4.1.2 A  | CookieConsent    |
+| No focus management on mobile menu                                        | IMPROVED | 2.4.3 A  | Header           |
 
 ---
 
@@ -144,13 +150,13 @@
 
 ### 3.1 Top Competitors
 
-| Competitor | URL | Strength | Weakness |
-|-----------|-----|----------|----------|
-| **Codelevate** | codelevate.com | Ranks #1 for "AI automation agency Netherlands" via "Top 10" listicle. EN+NL. FAQ schema. | Self-promotional listicle, Webflow (slow), ad-heavy |
-| **NinA AI** | nina-ai.nl | Strong brand, real client logos (Schiphol, Action), NL-primary, daily LinkedIn content | Thin EN content, zero blog SEO, no schema |
-| **DataNorth** | datanorth.ai | 30+ service pages, EN+NL+DE, ISO badges, pricing shown, FAQ schema | Stock photos, generic content, WordPress |
-| **Flowmondo** | flowmondo.com | 420 reviews, deep n8n content, integration pages, AggregateRating schema | UK-only, no NL focus, no AI agents |
-| **Crux Digits** | cruxdigits.nl | Exact-match URL `/ai-agency-netherlands`, static (fast) | Thin content, no blog, no real testimonials |
+| Competitor      | URL            | Strength                                                                                  | Weakness                                            |
+| --------------- | -------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Codelevate**  | codelevate.com | Ranks #1 for "AI automation agency Netherlands" via "Top 10" listicle. EN+NL. FAQ schema. | Self-promotional listicle, Webflow (slow), ad-heavy |
+| **NinA AI**     | nina-ai.nl     | Strong brand, real client logos (Schiphol, Action), NL-primary, daily LinkedIn content    | Thin EN content, zero blog SEO, no schema           |
+| **DataNorth**   | datanorth.ai   | 30+ service pages, EN+NL+DE, ISO badges, pricing shown, FAQ schema                        | Stock photos, generic content, WordPress            |
+| **Flowmondo**   | flowmondo.com  | 420 reviews, deep n8n content, integration pages, AggregateRating schema                  | UK-only, no NL focus, no AI agents                  |
+| **Crux Digits** | cruxdigits.nl  | Exact-match URL `/ai-agency-netherlands`, static (fast)                                   | Thin content, no blog, no real testimonials         |
 
 ### 3.2 Competitive Positioning Map
 
@@ -172,43 +178,43 @@
 
 ### 3.3 What Makes Competitors Rank
 
-| Strategy | Who | Effectiveness | CHL Should |
-|----------|-----|---------------|------------|
-| "Top 10 AI Agencies" listicle | Codelevate | **Highest** — ranks #1 | Create own authoritative version |
-| Year-in-title freshness (2026/2027) | Codelevate, Ploko | High CTR boost | Add year to key titles |
-| Deep service taxonomy (30+ pages) | DataNorth | High long-tail coverage | Create more service pages |
-| Logo wall + ROI case studies | NinA | Strong trust | Add more case studies with hard numbers |
-| Integration-specific pages | Flowmondo | Good long-tail | Create n8n integration pages |
-| FAQ schema on service pages | Codelevate, DataNorth | Rich snippets | Add to all service pages |
-| NL translations | All NL competitors | 60% of Dutch search | **P0: Add NL locale** |
+| Strategy                            | Who                   | Effectiveness           | CHL Should                              |
+| ----------------------------------- | --------------------- | ----------------------- | --------------------------------------- |
+| "Top 10 AI Agencies" listicle       | Codelevate            | **Highest** — ranks #1  | Create own authoritative version        |
+| Year-in-title freshness (2026/2027) | Codelevate, Ploko     | High CTR boost          | Add year to key titles                  |
+| Deep service taxonomy (30+ pages)   | DataNorth             | High long-tail coverage | Create more service pages               |
+| Logo wall + ROI case studies        | NinA                  | Strong trust            | Add more case studies with hard numbers |
+| Integration-specific pages          | Flowmondo             | Good long-tail          | Create n8n integration pages            |
+| FAQ schema on service pages         | Codelevate, DataNorth | Rich snippets           | Add to all service pages                |
+| NL translations                     | All NL competitors    | 60% of Dutch search     | **P0: Add NL locale**                   |
 
 ### 3.4 Keyword Opportunity Matrix
 
-| Priority | Keyword | Current URL | Competition | Action |
-|----------|---------|-------------|-------------|--------|
-| **P0** | AI automation agency Netherlands | `/en/ai-automation-consulting-netherlands` | Moderate | Add NL + schema |
-| **P0** | n8n consultant Netherlands | *None* | **Low** | Create dedicated page |
-| **P0** | NL translations (/nl/) | *None* | **Zero** | Add Dutch locale |
-| **P1** | WhatsApp automation Netherlands | Blog post only | **Low** | Create service page |
-| **P1** | AI voice agents Netherlands | *None* | **Near zero** | Create page |
-| **P1** | AI consultants Netherlands | `/en/ai-consulting` | Moderate | Add "Netherlands" to title + NL |
-| **P2** | workflow automation agency Netherlands | `/en/ai-automation-consulting-netherlands` | Moderate | Create dedicated page |
-| **P2** | Next.js development agency | `/en/nextjs-development-agency` | High (directories) | Add NL + schema |
-| **P2** | React consulting services | `/en/react-consulting` | High (Indian agencies) | Add NL + schema |
-| **P3** | "Top 10 AI agencies Netherlands" | *None* | Moderate | Publish listicle |
+| Priority | Keyword                                | Current URL                                | Competition            | Action                          |
+| -------- | -------------------------------------- | ------------------------------------------ | ---------------------- | ------------------------------- |
+| **P0**   | AI automation agency Netherlands       | `/en/ai-automation-consulting-netherlands` | Moderate               | Add NL + schema                 |
+| **P0**   | n8n consultant Netherlands             | _None_                                     | **Low**                | Create dedicated page           |
+| **P0**   | NL translations (/nl/)                 | _None_                                     | **Zero**               | Add Dutch locale                |
+| **P1**   | WhatsApp automation Netherlands        | Blog post only                             | **Low**                | Create service page             |
+| **P1**   | AI voice agents Netherlands            | _None_                                     | **Near zero**          | Create page                     |
+| **P1**   | AI consultants Netherlands             | `/en/ai-consulting`                        | Moderate               | Add "Netherlands" to title + NL |
+| **P2**   | workflow automation agency Netherlands | `/en/ai-automation-consulting-netherlands` | Moderate               | Create dedicated page           |
+| **P2**   | Next.js development agency             | `/en/nextjs-development-agency`            | High (directories)     | Add NL + schema                 |
+| **P2**   | React consulting services              | `/en/react-consulting`                     | High (Indian agencies) | Add NL + schema                 |
+| **P3**   | "Top 10 AI agencies Netherlands"       | _None_                                     | Moderate               | Publish listicle                |
 
 ### 3.5 Multilingual Gap Analysis
 
-| Competitor | EN | NL | ES | DE | Other |
-|-----------|----|----|-----|-----|-------|
-| Codelevate | Y | Y | N | - | - |
-| Ploko | Y | Y | N | - | IT |
-| NinA AI | Y (basic) | Y | N | - | - |
-| DataNorth | Y | Y | N | Y | - |
-| Flowmondo | Y | N | N | - | - |
-| Crux Digits | Y | Y | N | - | - |
-| EasyData | N | Y | N | - | - |
-| **CodeHunter Lab** | Y | **N** | Y | - | - |
+| Competitor         | EN        | NL    | ES  | DE  | Other |
+| ------------------ | --------- | ----- | --- | --- | ----- |
+| Codelevate         | Y         | Y     | N   | -   | -     |
+| Ploko              | Y         | Y     | N   | -   | IT    |
+| NinA AI            | Y (basic) | Y     | N   | -   | -     |
+| DataNorth          | Y         | Y     | N   | Y   | -     |
+| Flowmondo          | Y         | N     | N   | -   | -     |
+| Crux Digits        | Y         | Y     | N   | -   | -     |
+| EasyData           | N         | Y     | N   | -   | -     |
+| **CodeHunter Lab** | Y         | **N** | Y   | -   | -     |
 
 **Critical finding**: CHL is the only NL-based agency with ES content but zero NL content. Dutch SMEs overwhelmingly search in Dutch. The NL gap costs approximately 60% of potential organic traffic. Spanish is a unique differentiator — zero NL competitors offer ES content.
 
@@ -222,17 +228,17 @@ The user expressed interest in migrating some pages to Astro. After analysis:
 
 **Stay on Next.js for now.** Here's why:
 
-| Factor | Astro | Next.js (current) |
-|--------|-------|-------------------|
-| Zero-JS by default | Yes — pages ship 0 JS unless islands | Only with `'use client'` discipline |
-| Static generation | Built-in, default | Via `generateStaticParams` + ISR |
-| i18n | Requires manual setup or `astro-i18n` | `next-intl` already working |
-| Dynamic routes | Supported | Supported |
-| SEO metadata | Manual in frontmatter | `generateMetadata()` already working |
-| Lab workspace (interactive) | Needs React island | Works as-is |
-| Migration effort | **3-4 weeks** for full rewrite | 0 |
-| Core Web Vitals | Marginal improvement (already good) | Good with proper optimization |
-| Interactive components | Islands architecture | Conventional React |
+| Factor                      | Astro                                 | Next.js (current)                    |
+| --------------------------- | ------------------------------------- | ------------------------------------ |
+| Zero-JS by default          | Yes — pages ship 0 JS unless islands  | Only with `'use client'` discipline  |
+| Static generation           | Built-in, default                     | Via `generateStaticParams` + ISR     |
+| i18n                        | Requires manual setup or `astro-i18n` | `next-intl` already working          |
+| Dynamic routes              | Supported                             | Supported                            |
+| SEO metadata                | Manual in frontmatter                 | `generateMetadata()` already working |
+| Lab workspace (interactive) | Needs React island                    | Works as-is                          |
+| Migration effort            | **3-4 weeks** for full rewrite        | 0                                    |
+| Core Web Vitals             | Marginal improvement (already good)   | Good with proper optimization        |
+| Interactive components      | Islands architecture                  | Conventional React                   |
 
 ### Recommendation
 
@@ -246,15 +252,15 @@ The user expressed interest in migrating some pages to Astro. After analysis:
 
 ### Pages where Astro could help (future consideration)
 
-| Page | Interactive Elements | JS Required | Astro Benefit |
-|------|---------------------|-------------|---------------|
-| Home | HeroAnimation, ScrambleText, ROI Calculator, QuickWins 3D tilt | Yes (4) | Low — too interactive |
-| About | None (static) | No | **High** |
-| Case Studies (listing) | None (static) | No | **High** |
-| Insights (listing) | None (static) | No | **High** |
-| Industry landing pages | Only scroll animations | Minimal | **Medium** |
-| Lab landing | None (static) | No | **High** |
-| Lab workspace | Dashboard with interactivity | Yes | None |
+| Page                   | Interactive Elements                                           | JS Required | Astro Benefit         |
+| ---------------------- | -------------------------------------------------------------- | ----------- | --------------------- |
+| Home                   | HeroAnimation, ScrambleText, ROI Calculator, QuickWins 3D tilt | Yes (4)     | Low — too interactive |
+| About                  | None (static)                                                  | No          | **High**              |
+| Case Studies (listing) | None (static)                                                  | No          | **High**              |
+| Insights (listing)     | None (static)                                                  | No          | **High**              |
+| Industry landing pages | Only scroll animations                                         | Minimal     | **Medium**            |
+| Lab landing            | None (static)                                                  | No          | **High**              |
+| Lab workspace          | Dashboard with interactivity                                   | Yes         | None                  |
 
 ---
 
@@ -280,19 +286,20 @@ Current utility coverage includes home, about, case-studies, insights, lab, ai-c
 
 Created schema helpers, but visible FAQ sections and page-level schema usage still need to be wired into service pages. Currently only the root layout has JSON-LD (Organization, LocalBusiness, Person, WebSite). Individual pages need:
 
-| Schema Type | Pages | Priority |
-|-------------|-------|----------|
-| FAQPage | All service + industry pages | P0 |
-| Service | All service pages | P0 |
-| BreadcrumbList | All pages (missing on 15+ pages) | P0 |
-| LocalBusiness | Already on root (good) | - |
-| Article | All insights/blog pages | P1 |
+| Schema Type    | Pages                            | Priority |
+| -------------- | -------------------------------- | -------- |
+| FAQPage        | All service + industry pages     | P0       |
+| Service        | All service pages                | P0       |
+| BreadcrumbList | All pages (missing on 15+ pages) | P0       |
+| LocalBusiness  | Already on root (good)           | -        |
+| Article        | All insights/blog pages          | P1       |
 
 **Components created:** `components/ui/FAQSchema.tsx` and `components/ui/ServiceSchema.tsx`.
 
 #### 5.1.4 Standardize Title Format
 
 **Current inconsistency:**
+
 - `"AI Automation Agency Netherlands | CodeHunter Lab"` (pipe)
 - `"IT System Integration Netherlands — CodeHunter Lab"` (em-dash)
 - `"CodeHunter Lab | Product Systems for Modern Teams"` (brand-first)
@@ -303,12 +310,12 @@ Exception: Home page can be `"CodeHunter Lab | AI Automation Agency Netherlands"
 
 #### 5.1.5 Fix Missing Hreflang on Key Pages
 
-| Page | Current | Target |
-|------|---------|--------|
-| Home | Fixed for current locales | Add NL when `/nl` launches |
-| About | Fixed for current locales | Add NL when `/nl` launches |
+| Page         | Current                   | Target                     |
+| ------------ | ------------------------- | -------------------------- |
+| Home         | Fixed for current locales | Add NL when `/nl` launches |
+| About        | Fixed for current locales | Add NL when `/nl` launches |
 | Case Studies | Fixed for current locales | Add NL when `/nl` launches |
-| Insights | Fixed for current locales | Add NL when `/nl` launches |
+| Insights     | Fixed for current locales | Add NL when `/nl` launches |
 
 ### 5.2 P1 — High-Impact SEO (Weeks 2-3)
 
@@ -318,6 +325,7 @@ Exception: Home page can be `"CodeHunter Lab | AI Automation Agency Netherlands"
 **Target:** `locales: ["en", "es", "nl"]`
 
 **Steps:**
+
 1. Create `messages/nl.json` with full Dutch translations
 2. Update `i18n/routing.ts` to add `"nl"` locale
 3. Update `middleware.ts` matcher to include `/nl/` routes
@@ -326,6 +334,7 @@ Exception: Home page can be `"CodeHunter Lab | AI Automation Agency Netherlands"
 6. Update `vercel.json` redirect root to consider NL
 
 **Priority pages for NL translation:**
+
 1. Home page
 2. `/ai-consulting`
 3. `/ai-automation-consulting-netherlands`
@@ -336,6 +345,7 @@ Exception: Home page can be `"CodeHunter Lab | AI Automation Agency Netherlands"
 #### 5.2.2 Add FAQ Sections to Service Pages
 
 Add FAQ sections with `FAQPage` schema to:
+
 1. `/en/ai-consulting`
 2. `/en/ai-automation-consulting-netherlands`
 3. `/en/expertise/ai-agents-automation`
@@ -362,6 +372,7 @@ Pages missing keywords: home, about, case-studies, insights, ai-consulting, lab,
 #### 5.3.2 Optimize Meta Descriptions
 
 Current descriptions are generic. Make them:
+
 - 150-160 characters (not truncated)
 - Include primary keyword
 - Include a CTA or value proposition
@@ -391,7 +402,10 @@ Current descriptions are generic. Make them:
 Status: completed. Added as the first focusable element in `app/[locale]/layout.tsx`:
 
 ```html
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:rounded-lg focus:bg-hunter-green focus:px-4 focus:py-2 focus:text-near-black focus:outline-none">
+<a
+  href="#main-content"
+  class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:rounded-lg focus:bg-hunter-green focus:px-4 focus:py-2 focus:text-near-black focus:outline-none"
+>
   Skip to main content
 </a>
 ```
@@ -404,6 +418,7 @@ Also added `id="main-content"` to the main content wrapper.
 **Status:** Improved. Header now includes dropdown ARIA attributes and keyboard handlers. Remaining polish: run a browser/screen-reader pass for arrow-key navigation and focus return behavior.
 
 Target behavior remains:
+
 - `onKeyDown` handler for Enter/Space/Escape
 - `aria-expanded` on trigger buttons
 - `aria-haspopup="menu"` on parent items
@@ -433,6 +448,7 @@ Cookie consent banner now has dialog semantics. Remaining polish: verify focus t
 #### 6.2.3 Color Contrast Verification
 
 Audit these Tailwind classes against WCAG AA (4.5:1):
+
 - `text-gray-400` on `bg-near-black` (#0B0B0B) — likely fails
 - `text-gray-500` on `bg-near-black` — likely fails
 - `text-gray-600` on `bg-near-black` — likely passes for large text only
@@ -464,9 +480,9 @@ Ensure `aria-checked` toggles on radio items, add `aria-live="polite"` for form 
 Created `utils/constants.ts`:
 
 ```typescript
-export const BASE_URL = 'https://www.codehunterlab.com';
-export const SITE_NAME = 'CodeHunter Lab';
-export const LOCALES = ['en', 'es'] as const;
+export const BASE_URL = "https://www.codehunterlab.com";
+export const SITE_NAME = "CodeHunter Lab";
+export const LOCALES = ["en", "es"] as const;
 export type Locale = (typeof LOCALES)[number];
 ```
 
@@ -509,13 +525,13 @@ Priority: Low — these work as-is but will become harder to maintain as content
 
 ### 8.1 Reduce Client-Side JavaScript
 
-| Component | Current | Optimization | Estimated Saving |
-|-----------|---------|-------------|-----------------|
-| `AIBanner.tsx` | Server Component | Completed | ~2KB |
-| `WhatWeBuildSection.tsx` | `'use client'` (Framer Motion) | Replace with CSS transitions | ~8KB |
-| `IndustriesSection.tsx` | `'use client'` (Framer Motion) | Replace with CSS transitions + IntersectionObserver | ~8KB |
-| `04BioSection.tsx` | `'use client'` (Framer Motion) | Replace with CSS transitions | ~5KB |
-| `TestimonialsSection.tsx` | `'use client'` (Framer Motion) | Replace with CSS transitions | ~5KB |
+| Component                 | Current                        | Optimization                                        | Estimated Saving |
+| ------------------------- | ------------------------------ | --------------------------------------------------- | ---------------- |
+| `AIBanner.tsx`            | Server Component               | Completed                                           | ~2KB             |
+| `WhatWeBuildSection.tsx`  | `'use client'` (Framer Motion) | Replace with CSS transitions                        | ~8KB             |
+| `IndustriesSection.tsx`   | `'use client'` (Framer Motion) | Replace with CSS transitions + IntersectionObserver | ~8KB             |
+| `04BioSection.tsx`        | `'use client'` (Framer Motion) | Replace with CSS transitions                        | ~5KB             |
+| `TestimonialsSection.tsx` | `'use client'` (Framer Motion) | Replace with CSS transitions                        | ~5KB             |
 
 **Total potential savings:** ~28KB of client JS by replacing Framer Motion scroll animations with CSS-only equivalents.
 
@@ -539,18 +555,19 @@ Priority: Low — these work as-is but will become harder to maintain as content
 
 ### 9.1 New Pages to Create (Priority Order)
 
-| # | Route | Keywords | Competition | Priority |
-|---|-------|----------|-------------|----------|
-| 1 | `/en/n8n-consultant-netherlands` | n8n consultant Netherlands, n8n expert, n8n migration | **Low** | P0 |
-| 2 | `/en/ai-voice-agents-netherlands` | AI voice agents Netherlands, AI phone agents, voice AI consulting | **Near zero** | P0 |
-| 3 | `/en/whatsapp-automation-netherlands` | WhatsApp automation Netherlands, WhatsApp Business API | **Low** | P1 |
-| 4 | `/en/workflow-automation-agency-netherlands` | workflow automation agency Netherlands | Moderate | P2 |
-| 5 | `/en/ai-agents-for-business` | AI agents for business, business AI automation | Moderate | P2 |
-| 6 | `/nl/` versions of top 5 pages | Dutch-language equivalents | **Zero** (no NL competitor) | P0 |
+| #   | Route                                        | Keywords                                                          | Competition                 | Priority |
+| --- | -------------------------------------------- | ----------------------------------------------------------------- | --------------------------- | -------- |
+| 1   | `/en/n8n-consultant-netherlands`             | n8n consultant Netherlands, n8n expert, n8n migration             | **Low**                     | P0       |
+| 2   | `/en/ai-voice-agents-netherlands`            | AI voice agents Netherlands, AI phone agents, voice AI consulting | **Near zero**               | P0       |
+| 3   | `/en/whatsapp-automation-netherlands`        | WhatsApp automation Netherlands, WhatsApp Business API            | **Low**                     | P1       |
+| 4   | `/en/workflow-automation-agency-netherlands` | workflow automation agency Netherlands                            | Moderate                    | P2       |
+| 5   | `/en/ai-agents-for-business`                 | AI agents for business, business AI automation                    | Moderate                    | P2       |
+| 6   | `/nl/` versions of top 5 pages               | Dutch-language equivalents                                        | **Zero** (no NL competitor) | P0       |
 
 ### 9.2 Content Requirements for Each New Page
 
 Every new service page must include:
+
 1. **Unique H1** with primary keyword
 2. **150-160 character meta description** with keyword + CTA
 3. **3-5 sections** with H2 headings targeting secondary keywords
@@ -564,18 +581,19 @@ Every new service page must include:
 
 ### 9.3 Competitive Content Gaps to Fill
 
-| Content Type | Competitor Doing It | CHL Gap | Action |
-|-------------|---------------------|---------|--------|
-| "Top 10 AI Agencies Netherlands" listicle | Codelevate (#1 ranking) | None | Create authoritative version |
-| Case studies with hard ROI numbers | NinA (192hr/month saved) | 2 case studies, soft numbers | Add 3-5 case studies with specific %/EUR metrics |
-| Integration-specific pages | Flowmondo (60+ tool pages) | None | Create n8n integration pages |
-| Pricing transparency | DataNorth (EUR 3,000 stated) | Partial (packages section) | Add starting prices to all service pages |
-| Team photos and bios | NinA, Flowmondo | Single bio section | Expand with team page |
-| Clutch/DesignRush/Sortlist profiles | Codelevate, Crux Digits | None | Create profiles on all three |
+| Content Type                              | Competitor Doing It          | CHL Gap                      | Action                                           |
+| ----------------------------------------- | ---------------------------- | ---------------------------- | ------------------------------------------------ |
+| "Top 10 AI Agencies Netherlands" listicle | Codelevate (#1 ranking)      | None                         | Create authoritative version                     |
+| Case studies with hard ROI numbers        | NinA (192hr/month saved)     | 2 case studies, soft numbers | Add 3-5 case studies with specific %/EUR metrics |
+| Integration-specific pages                | Flowmondo (60+ tool pages)   | None                         | Create n8n integration pages                     |
+| Pricing transparency                      | DataNorth (EUR 3,000 stated) | Partial (packages section)   | Add starting prices to all service pages         |
+| Team photos and bios                      | NinA, Flowmondo              | Single bio section           | Expand with team page                            |
+| Clutch/DesignRush/Sortlist profiles       | Codelevate, Crux Digits      | None                         | Create profiles on all three                     |
 
 ### 9.4 Spanish (ES) Competitive Advantage
 
 No NL competitor offers ES content. This is a unique differentiator:
+
 - Create `/es/automatizacion-ia-consultoria` (AI automation consulting in Spanish)
 - Target Spanish-speaking businesses in NL and broader EU
 - Cross-link between EN/ES/NL versions for internal link equity
@@ -589,6 +607,7 @@ No NL competitor offers ES content. This is a unique differentiator:
 **Description:** `Hire an n8n consultant in the Netherlands. Migration, custom workflows, and production-grade automation. Based in Leiden.`
 **Keywords:** n8n consultant Netherlands, n8n expert, n8n migration, workflow automation, n8n development
 **Sections:**
+
 1. Hero: "Your n8n workflows should run in production, not in demos"
 2. What we automate with n8n (CRM sync, email sequences, WhatsApp bots, reporting)
 3. n8n migration consulting (Zapier/Make to n8n)
@@ -602,6 +621,7 @@ No NL competitor offers ES content. This is a unique differentiator:
 **Description:** `Deploy AI voice agents for your Netherlands business. Automated phone calls, WhatsApp voice, and conversational AI. Based in Leiden.`
 **Keywords:** AI voice agents Netherlands, AI phone agents, voice AI consulting, automated calling, conversational AI Netherlands
 **Sections:**
+
 1. Hero: "AI voice agents that handle calls while you focus on delivery"
 2. Use cases (appointment scheduling, follow-up calls, customer support)
 3. How our voice agents work
@@ -615,6 +635,7 @@ No NL competitor offers ES content. This is a unique differentiator:
 **Description:** `Automate WhatsApp for your Netherlands business. Appointment reminders, lead qualification, and customer support via WhatsApp Business API.`
 **Keywords:** WhatsApp automation Netherlands, WhatsApp Business API, WhatsApp chatbot Netherlands, automated messaging
 **Sections:**
+
 1. Hero: "WhatsApp is where your customers are. Automate it."
 2. What WhatsApp automation handles (appointments, follow-ups, support)
 3. Integration with n8n and CRM
@@ -628,63 +649,63 @@ No NL competitor offers ES content. This is a unique differentiator:
 
 ### Phase 1: Critical Fixes (Week 1) — Completed in working tree
 
-| # | Task | Files Affected | Status |
-|---|------|---------------|--------|
-| 1.1 | Create `utils/constants.ts` with `BASE_URL` | New file | Done |
-| 1.2 | Create `utils/metadata.ts` with `createPageMetadata` utility | New file | Done |
-| 1.3 | Fix home page metadata (canonical, hreflang, OG, twitter) | `app/[locale]/page.tsx` | Done |
-| 1.4 | Add skip-navigation link | `app/[locale]/layout.tsx` | Done |
-| 1.5 | Fix keyboard dropdown navigation in Header | `components/layout/Header.tsx` | Improved; browser a11y pass still recommended |
-| 1.6 | Fix form validation mismatch (Company/Role/AI Goal) | `components/ui/ContactForm.tsx` | Done |
-| 1.7 | Standardize title format on high-priority pages | Selected `page.tsx` files | Partially done; continue for remaining pages |
-| 1.8 | Add missing hreflang to about, case-studies, insights pages | 3 page files | Done for current locales |
-| 1.9 | Add missing twitter cards via metadata utility | Selected `page.tsx` files | Partially done; continue for remaining pages |
-| 1.10 | Create `FAQSchema.tsx` component | New file | Done |
-| 1.11 | Create `ServiceSchema.tsx` component | New file | Done |
+| #    | Task                                                         | Files Affected                  | Status                                        |
+| ---- | ------------------------------------------------------------ | ------------------------------- | --------------------------------------------- |
+| 1.1  | Create `utils/constants.ts` with `BASE_URL`                  | New file                        | Done                                          |
+| 1.2  | Create `utils/metadata.ts` with `createPageMetadata` utility | New file                        | Done                                          |
+| 1.3  | Fix home page metadata (canonical, hreflang, OG, twitter)    | `app/[locale]/page.tsx`         | Done                                          |
+| 1.4  | Add skip-navigation link                                     | `app/[locale]/layout.tsx`       | Done                                          |
+| 1.5  | Fix keyboard dropdown navigation in Header                   | `components/layout/Header.tsx`  | Improved; browser a11y pass still recommended |
+| 1.6  | Fix form validation mismatch (Company/Role/AI Goal)          | `components/ui/ContactForm.tsx` | Done                                          |
+| 1.7  | Standardize title format on high-priority pages              | Selected `page.tsx` files       | Partially done; continue for remaining pages  |
+| 1.8  | Add missing hreflang to about, case-studies, insights pages  | 3 page files                    | Done for current locales                      |
+| 1.9  | Add missing twitter cards via metadata utility               | Selected `page.tsx` files       | Partially done; continue for remaining pages  |
+| 1.10 | Create `FAQSchema.tsx` component                             | New file                        | Done                                          |
+| 1.11 | Create `ServiceSchema.tsx` component                         | New file                        | Done                                          |
 
 ### Phase 2: Schema & SEO (Weeks 2-3) — Partially Complete
 
-| # | Task | Files Affected | Estimated Time |
-|---|------|---------------|---------------|
-| 2.1 | Add visible FAQ sections + `FAQSchema` to all service pages | All service `PageContent.tsx` files | 4h |
-| 2.2 | Add `ServiceSchema` usage to all service pages | All service `page.tsx` files | 2h |
-| 2.3 | Add BreadcrumbList schema to all pages missing it | 15+ `page.tsx` files | 2h |
-| 2.4 | Fix InsightsSection hardcoded locale bug | `components/sections/InsightsSection.tsx` | Done |
-| 2.5 | Add keywords to all pages missing them | Remaining `page.tsx` files | Partially done |
-| 2.6 | Extract animation variants to `utils/animations.ts` | New file + 3 section components | 1h |
-| 2.7 | Extract LocaleBanner component | New file + 2 pages | 30min |
-| 2.8 | Keep GlassCard component | `components/ui/GlassCard.tsx` | Done; component is still used |
-| 2.9 | Convert AIBanner to Server Component | `components/sections/AIBanner.tsx` | Done |
-| 2.10 | Add aria-labels to footer social links | `components/layout/Footer.tsx` | Done |
-| 2.11 | Add role="dialog" to CookieConsent | `components/ui/CookieConsent.tsx` | Done |
-| 2.12 | Fix Prettier/ESLint warnings from changed files | Multiple changed files | Recommended before commit |
+| #    | Task                                                                                                    | Files Affected                            | Estimated Time                                                                                        |
+| ---- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| 2.1  | Add visible FAQ sections to all service pages; avoid commercial `FAQPage` JSON-LD unless policy changes | All service `PageContent.tsx` files       | Commercial `FAQPage` JSON-LD removed and guarded by test; continue visible FAQ improvements as needed |
+| 2.2  | Add `ServiceSchema` usage to all service pages                                                          | All service `page.tsx` files              | Primary 3 done; continue remaining service pages                                                      |
+| 2.3  | Add BreadcrumbList schema to all pages missing it                                                       | 15+ `page.tsx` files                      | 2h                                                                                                    |
+| 2.4  | Fix InsightsSection hardcoded locale bug                                                                | `components/sections/InsightsSection.tsx` | Done                                                                                                  |
+| 2.5  | Add keywords to all pages missing them                                                                  | Remaining `page.tsx` files                | Partially done                                                                                        |
+| 2.6  | Extract animation variants to `utils/animations.ts`                                                     | New file + 3 section components           | 1h                                                                                                    |
+| 2.7  | Extract LocaleBanner component                                                                          | New file + 2 pages                        | 30min                                                                                                 |
+| 2.8  | Keep GlassCard component                                                                                | `components/ui/GlassCard.tsx`             | Done; component is still used                                                                         |
+| 2.9  | Convert AIBanner to Server Component                                                                    | `components/sections/AIBanner.tsx`        | Done                                                                                                  |
+| 2.10 | Add aria-labels to footer social links                                                                  | `components/layout/Footer.tsx`            | Done                                                                                                  |
+| 2.11 | Add role="dialog" to CookieConsent                                                                      | `components/ui/CookieConsent.tsx`         | Done                                                                                                  |
+| 2.12 | Fix Prettier/ESLint warnings from changed files                                                         | Multiple changed files                    | Recommended before commit                                                                             |
 
 ### Phase 3: Dutch Locale + New Pages (Weeks 3-5) — ~25 hours
 
-| # | Task | Files Affected | Estimated Time |
-|---|------|---------------|---------------|
-| 3.1 | Add NL locale to `i18n/routing.ts` | 1 file | 15min |
-| 3.2 | Create `messages/nl.json` with full NL translations | New file (~3200 lines) | 6h |
-| 3.3 | Update middleware to handle `/nl/` routes | `middleware.ts` | 30min |
-| 3.4 | Create NL versions of top 5 pages | 5 new page files | 4h |
-| 3.5 | Update sitemap with NL URLs | `app/sitemap.ts` | 1h |
-| 3.6 | Create `/en/n8n-consultant-netherlands` page | 2 new files (page.tsx + PageContent.tsx) | 3h |
-| 3.7 | Create `/en/ai-voice-agents-netherlands` page | 2 new files | 3h |
-| 3.8 | Create `/en/whatsapp-automation-netherlands` service page | 2 new files | 3h |
-| 3.9 | Add alternates for all new pages | All relevant page.tsx | 1h |
-| 3.10 | Create "Top AI Automation Agencies Netherlands" listicle insight | `content/insights.ts` + new page | 3h |
+| #    | Task                                                             | Files Affected                           | Estimated Time |
+| ---- | ---------------------------------------------------------------- | ---------------------------------------- | -------------- |
+| 3.1  | Add NL locale to `i18n/routing.ts`                               | 1 file                                   | 15min          |
+| 3.2  | Create `messages/nl.json` with full NL translations              | New file (~3200 lines)                   | 6h             |
+| 3.3  | Update middleware to handle `/nl/` routes                        | `middleware.ts`                          | 30min          |
+| 3.4  | Create NL versions of top 5 pages                                | 5 new page files                         | 4h             |
+| 3.5  | Update sitemap with NL URLs                                      | `app/sitemap.ts`                         | 1h             |
+| 3.6  | Create `/en/n8n-consultant-netherlands` page                     | 2 new files (page.tsx + PageContent.tsx) | 3h             |
+| 3.7  | Create `/en/ai-voice-agents-netherlands` page                    | 2 new files                              | 3h             |
+| 3.8  | Create `/en/whatsapp-automation-netherlands` service page        | 2 new files                              | 3h             |
+| 3.9  | Add alternates for all new pages                                 | All relevant page.tsx                    | 1h             |
+| 3.10 | Create "Top AI Automation Agencies Netherlands" listicle insight | `content/insights.ts` + new page         | 3h             |
 
 ### Phase 4: Performance & Polish (Weeks 5-6) — ~20 hours
 
-| # | Task | Files Affected | Estimated Time |
-|---|------|---------------|---------------|
-| 4.1 | Replace Framer Motion scroll reveals with CSS animations | 5 section components | 6h |
-| 4.2 | Color contrast audit and fixes | Multiple components | 2h |
-| 4.3 | Mobile menu focus management | `components/layout/Header.tsx` | 2h |
-| 4.4 | Optimize heading hierarchy across all pages | Multiple components | 2h |
-| 4.5 | Add year freshness to key page titles | All service page.tsx | 1h |
-| 4.6 | Create integration-specific pages (n8n + HubSpot, etc.) | New pages | 6h |
-| 4.7 | Add Clutch/DesignRush/Sortlist profile links | Footer + about page | 1h |
+| #   | Task                                                     | Files Affected                 | Estimated Time |
+| --- | -------------------------------------------------------- | ------------------------------ | -------------- |
+| 4.1 | Replace Framer Motion scroll reveals with CSS animations | 5 section components           | 6h             |
+| 4.2 | Color contrast audit and fixes                           | Multiple components            | 2h             |
+| 4.3 | Mobile menu focus management                             | `components/layout/Header.tsx` | 2h             |
+| 4.4 | Optimize heading hierarchy across all pages              | Multiple components            | 2h             |
+| 4.5 | Add year freshness to key page titles                    | All service page.tsx           | 1h             |
+| 4.6 | Create integration-specific pages (n8n + HubSpot, etc.)  | New pages                      | 6h             |
+| 4.7 | Add Clutch/DesignRush/Sortlist profile links             | Footer + about page            | 1h             |
 
 ---
 
@@ -720,8 +741,14 @@ No NL competitor offers ES content. This is a unique differentiator:
 Every page must follow this pattern (via the `createPageMetadata` utility):
 
 ```typescript
-import type { Metadata } from 'next';
-import { BASE_URL, LOCALES, SITE_NAME, getOpenGraphLocale, normalizeLocale } from '@/utils/constants';
+import type { Metadata } from "next";
+import {
+  BASE_URL,
+  LOCALES,
+  SITE_NAME,
+  getOpenGraphLocale,
+  normalizeLocale,
+} from "@/utils/constants";
 
 type CreatePageMetadataInput = {
   title: string;
@@ -729,19 +756,19 @@ type CreatePageMetadataInput = {
   path: string; // e.g., '/ai-consulting' with no locale prefix
   locale: string;
   keywords?: string[];
-  type?: 'website' | 'article' | 'profile';
+  type?: "website" | "article" | "profile";
   imagePath?: string;
 };
 
-export function localizedUrl(locale: string, path = '') {
+export function localizedUrl(locale: string, path = "") {
   const normalizedLocale = normalizeLocale(locale);
   return `${BASE_URL}/${normalizedLocale}${path}`;
 }
 
-export function localizedAlternates(path = '') {
+export function localizedAlternates(path = "") {
   return {
     ...Object.fromEntries(LOCALES.map((locale) => [locale, `${BASE_URL}/${locale}${path}`])),
-    'x-default': `${BASE_URL}/en${path}`,
+    "x-default": `${BASE_URL}/en${path}`,
   };
 }
 
@@ -751,7 +778,7 @@ export function createPageMetadata({
   path,
   locale,
   keywords,
-  type = 'website',
+  type = "website",
   imagePath,
 }: CreatePageMetadataInput): Metadata {
   const normalizedLocale = normalizeLocale(locale);
@@ -777,7 +804,7 @@ export function createPageMetadata({
       images: [{ url: `${BASE_URL}${image}`, width: 1200, height: 630, alt: title }],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
       description,
       images: [`${BASE_URL}${image}`],
@@ -821,15 +848,13 @@ export default function FAQSchema({ items }: { items: FAQItem[] }) {
 <!-- Add as first element in layout.tsx body -->
 <a
   href="#main-content"
-  class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-hunter-green focus:px-4 focus:py-2 focus:text-near-black focus:outline-none"
+  class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-hunter-green focus:px-4 focus:py-2 focus:text-near-black focus:outline-none"
 >
   Skip to main content
 </a>
 
 <!-- Add to main element -->
-<main id="main-content">
-  {children}
-</main>
+<main id="main-content">{children}</main>
 ```
 
 ## Appendix D: Keyboard Dropdown Menu Pattern
@@ -840,19 +865,35 @@ export default function FAQSchema({ items }: { items: FAQItem[] }) {
   aria-expanded={isOpen}
   aria-haspopup="menu"
   onKeyDown={(e) => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
-    if (e.key === 'Escape') { close(); }
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggle();
+    }
+    if (e.key === "Escape") {
+      close();
+    }
   }}
 >
   {label}
-</button>
-{isOpen && (
-  <ul role="menu" onKeyDown={(e) => { /* arrow key navigation */ }}>
-    <li role="none"><a role="menuitem" href="...">Link</a></li>
-  </ul>
-)}
+</button>;
+{
+  isOpen && (
+    <ul
+      role="menu"
+      onKeyDown={(e) => {
+        /* arrow key navigation */
+      }}
+    >
+      <li role="none">
+        <a role="menuitem" href="...">
+          Link
+        </a>
+      </li>
+    </ul>
+  );
+}
 ```
 
 ---
 
-*End of document. Current code changes remain uncommitted for manual review and commit by the user.*
+_End of document. Current code changes remain uncommitted for manual review and commit by the user._

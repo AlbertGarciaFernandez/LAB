@@ -48,6 +48,7 @@ export async function generateMetadata({
       languages: {
         en: `${baseUrl}/en`,
         es: `${baseUrl}/es`,
+        nl: `${baseUrl}/nl`,
         "x-default": `${baseUrl}/en`,
       },
     },
@@ -57,7 +58,7 @@ export async function generateMetadata({
       url: `${baseUrl}/${locale}`,
       siteName: "CodeHunter Lab",
       type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
+      locale: locale === "es" ? "es_ES" : locale === "nl" ? "nl_NL" : "en_US",
       images: [
         {
           url: `${baseUrl}/${locale}/opengraph-image`,

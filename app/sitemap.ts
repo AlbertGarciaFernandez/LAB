@@ -91,6 +91,21 @@ const routeMeta: Record<
     priority: 0.9,
     changeFrequency: "weekly",
   },
+  "/n8n-consultant-netherlands": {
+    lastModified: "2026-05-20",
+    priority: 0.9,
+    changeFrequency: "weekly",
+  },
+  "/ai-voice-agents-netherlands": {
+    lastModified: "2026-05-20",
+    priority: 0.9,
+    changeFrequency: "weekly",
+  },
+  "/whatsapp-automation-netherlands": {
+    lastModified: "2026-05-20",
+    priority: 0.9,
+    changeFrequency: "weekly",
+  },
 };
 
 const insightsIndexMeta = {

@@ -16,6 +16,7 @@ export function generateStaticParams() {
   return caseStudies.flatMap((cs) => [
     { locale: "en", slug: cs.slug },
     { locale: "es", slug: cs.slug },
+    { locale: "nl", slug: cs.slug },
   ]);
 }
 
@@ -34,6 +35,12 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     description: study.solution,
     alternates: {
       canonical: url,
+      languages: {
+        en: `${baseUrl}/en/case-studies/${study.slug}`,
+        es: `${baseUrl}/es/case-studies/${study.slug}`,
+        nl: `${baseUrl}/nl/case-studies/${study.slug}`,
+        "x-default": `${baseUrl}/en/case-studies/${study.slug}`,
+      },
     },
     openGraph: {
       title: `${study.industry} Case Study | CodeHunter Lab`,
@@ -41,7 +48,7 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
       url,
       siteName: "CodeHunter Lab",
       type: "article",
-      locale: isSpanish ? "es_ES" : "en_US",
+      locale: isSpanish ? "es_ES" : params.locale === "nl" ? "nl_NL" : "en_US",
       publishedTime: study.publishedAt,
       modifiedTime: study.modifiedAt,
     },
