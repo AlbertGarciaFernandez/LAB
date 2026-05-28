@@ -92,6 +92,13 @@ const StackSection: React.FC = () => {
       {/* Ambient Glows */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,230,162,0.03),transparent_70%)]" />
 
+      {/* Massive Background Text */}
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          STACK
+        </h2>
+      </div>
+
       <div className="relative z-10 mx-auto mb-12 max-w-7xl px-6 text-center">
         <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-hunter-green">
           {t("subtitle")}

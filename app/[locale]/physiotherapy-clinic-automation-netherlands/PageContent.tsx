@@ -316,7 +316,7 @@ export default function PhysiotherapyClinicAutomationContent() {
                   key={point.title}
                   className="flex gap-6 p-8"
                   hoverEffect={true}
-                  glowColor="green"
+                  glowColor="orange"
                 >
                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-hunter-green/30 bg-hunter-green/10">
                     <CheckIcon className="h-5 w-5 text-hunter-green" />
@@ -347,7 +347,7 @@ export default function PhysiotherapyClinicAutomationContent() {
                 key={item.q}
                 className="group cursor-default p-8"
                 hoverEffect={true}
-                glowColor="green"
+                glowColor="orange"
               >
                 <h3 className="mb-4 flex items-start gap-4 text-xl font-bold text-white">
                   <span className="mt-0.5 flex-shrink-0 text-hunter-green transition-transform group-hover:rotate-90">

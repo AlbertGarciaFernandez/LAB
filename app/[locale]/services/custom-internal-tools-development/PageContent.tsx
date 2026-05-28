@@ -283,7 +283,7 @@ export default function CustomInternalToolsContent() {
 
           <div className="space-y-6">
             {(t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => (
-              <GlassCard key={item.q} className="group p-8" hoverEffect={true} glowColor="green">
+              <GlassCard key={item.q} className="group p-8" hoverEffect={true} glowColor="orange">
                 <h3 className="mb-4 flex items-center gap-4 text-2xl font-bold text-white">
                   <span className="text-hunter-green transition-transform group-hover:rotate-90">
                     →

@@ -9,6 +9,7 @@ import Image from "next/image";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
 import { ScrambleText } from "../ui/ScrambleText";
 import { useTranslations } from "next-intl";
+import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,6 +27,24 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: { duration: 0.6 },
+  },
+};
+
+const slideLeftVariants = {
+  hidden: { x: -80, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const slideRightVariants = {
+  hidden: { x: 80, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -74,23 +93,21 @@ const HeroSection: React.FC = () => {
             <span className="opacity-80">&nbsp;{"]"}</span>
           </m.div>
 
-          <m.h1
-            className="text-5xl font-extrabold leading-none tracking-tighter md:text-8xl"
-            variants={itemVariants}
-          >
-            {t("title.part1")}
-            <span className="animate-shimmer bg-gradient-to-r from-hunter-green via-white to-hunter-green bg-[length:200%_100%] bg-clip-text text-transparent">
-              {t("title.highlight1")}
-            </span>
-            <br className="hidden md:block" /> {t("title.part2")}{" "}
-            <span
-              className="animate-shimmer bg-gradient-to-r from-hunter-green via-white to-hunter-green bg-[length:200%_100%] bg-clip-text text-transparent"
-              style={{ animationDelay: "1s" }}
-            >
-              {t("title.highlight2")}
-            </span>
-            .
-          </m.h1>
+          <h1 className="flex flex-col gap-1 text-5xl font-black leading-[0.95] tracking-tighter md:gap-4 md:text-8xl">
+            <m.span variants={slideLeftVariants} className="block">
+              {t("title.part1")}
+              <span className="text-hunter-green">
+                {t("title.highlight1")}
+              </span>
+            </m.span>
+            <m.span variants={slideRightVariants} className="block">
+              {t("title.part2")}{" "}
+              <span className="text-hunter-green">
+                {t("title.highlight2")}
+              </span>
+              .
+            </m.span>
+          </h1>
 
           <m.p
             className="mx-auto max-w-3xl pt-6 text-lg leading-relaxed text-gray-400 md:text-xl"
@@ -105,15 +122,18 @@ const HeroSection: React.FC = () => {
           >
             <Link
               href="#contact"
-              className="group relative inline-block overflow-hidden rounded-lg px-10 py-4 font-bold text-near-black shadow-[0_0_20px_rgba(0,230,162,0.3)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,230,162,0.6)]"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl px-12 py-5 font-bold text-near-black shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_20px_rgba(0,230,162,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_15px_30px_-10px_rgba(0,230,162,0.4)]"
             >
-              <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-green-dark" />
-              <span className="relative z-10">{t("cta.initialize")}</span>
+              <div className="absolute inset-0 h-full w-full bg-hunter-green transition-colors duration-300 group-hover:bg-[#00C086]" />
+              <span className="relative z-10 flex items-center gap-2 drop-shadow-sm">
+                {t("cta.initialize")}
+                <ArrowRightIcon weight="bold" size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
             </Link>
 
             <Link
               href="/ai-consulting"
-              className="group inline-block rounded-lg border border-hunter-orange/50 bg-transparent px-10 py-4 font-semibold text-hunter-orange transition-all duration-300 hover:border-hunter-orange hover:bg-hunter-orange/10 hover:shadow-[0_0_20px_rgba(255,122,60,0.2)]"
+              className="group inline-flex items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.02] px-12 py-5 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-hunter-orange/30 hover:bg-hunter-orange/5 hover:text-hunter-orange hover:shadow-[0_15px_30px_-10px_rgba(255,122,60,0.15)]"
             >
               {t("cta.caseStudies")}
             </Link>

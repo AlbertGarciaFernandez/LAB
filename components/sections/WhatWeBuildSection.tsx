@@ -11,6 +11,7 @@ import {
   SquaresFourIcon,
   BrainIcon,
   ArrowRightIcon,
+  ArrowUpRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 
 const serviceIcons = [RobotIcon, ArrowsClockwiseIcon, ShareNetworkIcon, SquaresFourIcon, BrainIcon];
@@ -50,6 +51,13 @@ const WhatWeBuildSection: React.FC = () => {
       {/* Ambient glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-hunter-green/[0.04] blur-[140px]" />
 
+      {/* Massive Background Text */}
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          SERVICES
+        </h2>
+      </div>
+
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header */}
         <m.div
@@ -70,7 +78,7 @@ const WhatWeBuildSection: React.FC = () => {
 
         {/* Service Cards */}
         <m.div
-          className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -79,31 +87,44 @@ const WhatWeBuildSection: React.FC = () => {
           {services.map((service, idx) => {
             const Icon = serviceIcons[idx];
             const href = serviceHrefs[idx];
+            // Bento Box logic: Top 2 span 3 cols (half), Bottom 3 span 2 cols (thirds)
+            const bentoClass =
+              idx < 2
+                ? "lg:col-span-3 sm:col-span-2"
+                : idx === 4
+                  ? "lg:col-span-2 sm:col-span-2"
+                  : "lg:col-span-2 sm:col-span-1";
+
             return (
-              <m.div key={service.title} variants={cardVariants} className="h-full">
+              <m.div key={service.title} variants={cardVariants} className={`h-full ${bentoClass}`}>
                 <Link
                   href={href}
-                  className="group flex h-full flex-col gap-4 rounded-2xl border border-white/5 bg-surface-dark/50 p-6 transition-all duration-300 hover:border-hunter-green/30 hover:bg-surface-dark/80"
+                  className="group relative flex h-full flex-col gap-6 rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-lg shadow-black/50 transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.25)]"
                 >
-                  {/* Hover glow */}
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-hunter-green/[0.04] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  {/* Subtle hover background sweep */}
+                  <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10 transition-colors duration-300 group-hover:bg-hunter-green/20">
-                    <Icon className="text-hunter-green" size={20} />
+                  {/* Hover background radial glow */}
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top_left,rgba(0,230,162,0.08)_0%,transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+                  <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10 transition-colors duration-300 group-hover:bg-hunter-green/20">
+                    <Icon className="text-hunter-green drop-shadow-[0_0_10px_rgba(0,230,162,0.5)]" size={24} weight="duotone" />
                   </div>
 
-                  <div className="flex-1">
-                    <h3 className="mb-1.5 text-base font-bold tracking-tight text-white">
+                  <div className="relative z-10 flex-1">
+                    <h3 className="mb-2 text-lg font-black tracking-tight text-white">
                       {service.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-gray-400">{service.desc}</p>
                   </div>
 
-                  <div className="mt-auto flex items-center gap-1.5 border-t border-white/5 pt-2 text-xs font-semibold text-hunter-green">
+                  <div className="relative z-10 mt-auto flex items-center justify-between border-t border-white/[0.05] pt-5 text-xs font-bold uppercase tracking-wider text-gray-500 transition-all duration-500 group-hover:border-hunter-green/20 group-hover:text-hunter-green">
                     <span>{service.link}</span>
-                    <ArrowRightIcon
-                      size={13}
-                      className="transition-transform duration-200 group-hover:translate-x-1"
+                    <ArrowUpRightIcon
+                      size={18}
+                      weight="bold"
+                      className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                     />
                   </div>
                 </Link>

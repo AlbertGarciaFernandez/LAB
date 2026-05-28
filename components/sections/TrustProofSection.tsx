@@ -11,8 +11,18 @@ export default function TrustProofSection() {
   const proof = Array.isArray(proofRaw) ? (proofRaw as Array<{ title: string; desc: string }>) : [];
 
   return (
-    <section className="border-y border-white/5 bg-near-black px-6 py-20 text-white lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative bg-near-black px-6 py-24 text-white lg:px-8 md:py-32">
+      {/* Top gradient separator */}
+      <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      {/* Massive Background Text */}
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          TRUST
+        </h2>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-orange">
@@ -29,13 +39,16 @@ export default function TrustProofSection() {
               {metrics.map((metric) => (
                 <div
                   key={metric.label}
-                  className="rounded-lg border border-white/10 bg-white/[0.03] p-5"
+                  className="group/card relative overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.2)]"
                 >
-                  <div className="text-3xl font-black tracking-tighter text-hunter-green">
+                  {/* Subtle inner glow */}
+                  <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover/card:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
+                  <div className="relative z-10 text-3xl font-black tracking-tighter text-hunter-green transition-all duration-500 group-hover/card:drop-shadow-[0_0_12px_rgba(0,230,162,0.5)]">
                     {metric.value}
                   </div>
-                  <div className="mt-2 text-sm font-bold text-white">{metric.label}</div>
-                  <p className="mt-2 text-xs leading-relaxed text-gray-400">{metric.note}</p>
+                  <div className="relative z-10 mt-2 text-sm font-bold text-white transition-colors duration-500 group-hover/card:text-hunter-green">{metric.label}</div>
+                  <p className="relative z-10 mt-2 text-xs leading-relaxed text-gray-400">{metric.note}</p>
                 </div>
               ))}
             </div>
@@ -47,10 +60,13 @@ export default function TrustProofSection() {
             {proof.map((item) => (
               <article
                 key={item.title}
-                className="rounded-lg border border-white/10 bg-surface-dark/30 p-6"
+                className="group/card relative overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.2)]"
               >
-                <h3 className="text-lg font-black tracking-tight text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-gray-400">{item.desc}</p>
+                {/* Subtle inner glow */}
+                <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover/card:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
+                <h3 className="relative z-10 text-lg font-black tracking-tight text-white transition-all duration-500 group-hover/card:text-hunter-green group-hover/card:drop-shadow-[0_0_12px_rgba(0,230,162,0.5)]">{item.title}</h3>
+                <p className="relative z-10 mt-3 text-sm leading-relaxed text-gray-400">{item.desc}</p>
               </article>
             ))}
           </div>

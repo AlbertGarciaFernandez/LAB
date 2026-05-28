@@ -159,6 +159,13 @@ const TopAgentsSection: React.FC = () => {
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-hunter-green/5 blur-[120px]" />
       <div className="pointer-events-none absolute right-0 top-0 -z-10 h-[500px] w-[500px] rounded-full bg-hunter-orange/5 blur-[100px]" />
 
+      {/* Massive Background Text */}
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          AGENTS
+        </h2>
+      </div>
+
       {/* Header */}
       <m.div
         initial="hidden"

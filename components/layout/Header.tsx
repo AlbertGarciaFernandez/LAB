@@ -297,7 +297,7 @@ const Header: React.FC = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 z-50 w-full bg-near-black/60 backdrop-blur-xl transition-all duration-300 supports-[backdrop-filter]:bg-near-black/40"
+        className="fixed top-0 z-50 w-full border-b border-white/[0.05] bg-near-black/70 backdrop-blur-xl transition-all duration-300 supports-[backdrop-filter]:bg-near-black/50"
       >
         <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 md:px-8">
           {/* Logo and Brand Name */}
@@ -305,20 +305,17 @@ const Header: React.FC = () => {
             <m.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-hunter-green/30 bg-near-black shadow-[0_0_15px_rgba(0,230,162,0.1)] transition-all duration-500 group-hover:border-hunter-green/60 group-hover:shadow-[0_0_25px_rgba(0,230,162,0.4)]"
+              className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl border border-white/[0.08] bg-[#0A0A0A] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-all duration-500 group-hover:border-hunter-green/40 group-hover:shadow-[0_0_20px_rgba(0,230,162,0.2)]"
             >
               {/* Internal Glow Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-hunter-green/10 to-transparent opacity-50 transition-opacity duration-500 group-hover:opacity-100" />
-
-              {/* Scanline Effect */}
-              <div className="absolute inset-0 h-full w-full -translate-y-[150%] bg-gradient-to-b from-transparent via-white/10 to-transparent transition-transform duration-700 ease-in-out group-hover:translate-y-[150%]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-hunter-green/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
               <Image
                 src="/logo-hntr.svg"
                 alt="CodeHunter Lab Logo"
                 width={32}
                 height={32}
-                className="relative z-10 h-8 w-8 object-contain drop-shadow-[0_0_8px_rgba(0,230,162,0.4)]"
+                className="relative z-10 h-7 w-7 object-contain drop-shadow-[0_0_8px_rgba(0,230,162,0.4)]"
                 priority
               />
             </m.div>
@@ -335,7 +332,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden items-center space-x-1 lg:flex">
-            <ul className="flex items-center space-x-1 rounded-full border border-white/5 bg-surface-dark/50 px-2 py-1">
+            <ul className="flex items-center space-x-1 rounded-full border border-white/[0.05] bg-white/[0.02] px-2 py-1 shadow-inner backdrop-blur-md">
               {/* Dropdown Groups */}
               {navGroups.map((group) => (
                 <li
@@ -373,16 +370,16 @@ const Header: React.FC = () => {
                   <AnimatePresence>
                     {openDropdown === group.key && (
                       <m.div
-                        initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                        initial={{ opacity: 0, y: 8, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 6, scale: 0.97 }}
-                        transition={{ duration: 0.15, ease: "easeOut" }}
+                        exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
                         id={`${group.key}-menu`}
                         role="menu"
-                        className="absolute left-1/2 top-[calc(100%+8px)] z-50 w-60 -translate-x-1/2 overflow-hidden rounded-2xl border border-white/10 bg-near-black/95 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-xl"
+                        className="absolute left-1/2 top-[calc(100%+12px)] z-50 w-64 -translate-x-1/2 overflow-hidden rounded-3xl border border-white/[0.05] bg-[#0A0A0A]/95 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] backdrop-blur-2xl"
                       >
                         {/* Top accent line */}
-                        <div className="h-[1px] bg-gradient-to-r from-transparent via-hunter-green/60 to-transparent" />
+                        <div className="h-[1px] bg-gradient-to-r from-transparent via-hunter-green/40 to-transparent" />
 
                         <div className="py-1.5">
                           {group.items.map((item) => {
@@ -478,23 +475,17 @@ const Header: React.FC = () => {
             {/* AI Consulting Button */}
             <Link
               href="/ai-consulting"
-              className="group relative inline-flex h-9 overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-105 focus:outline-none md:h-10"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/[0.08] bg-white/[0.02] px-5 py-2 font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm transition-all duration-300 hover:border-hunter-green/50 hover:bg-hunter-green/10 hover:text-hunter-green hover:shadow-[0_0_20px_rgba(0,230,162,0.15)] md:px-6 md:py-2.5 md:text-[10px]"
             >
-              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00E6A2_0%,#0B0B0B_50%,#00E6A2_100%)] opacity-70" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-4 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-3xl transition-all group-hover:bg-near-black/80 group-hover:text-hunter-green md:px-6 md:text-[10px] md:tracking-[0.25em]">
-                {t("cta.AIConsulting")}
-              </span>
+              {t("cta.AIConsulting")}
             </Link>
 
             {/* Let's Work Button */}
             <Link
               href="/#contact"
-              className="group relative hidden h-10 overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-105 focus:outline-none md:inline-flex"
+              className="group relative hidden inline-flex items-center justify-center overflow-hidden rounded-full bg-hunter-green px-6 py-2 font-bold uppercase tracking-[0.2em] text-near-black shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_15px_rgba(0,230,162,0.2)] transition-all duration-300 hover:scale-105 hover:bg-[#00C086] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_10px_20px_-5px_rgba(0,230,162,0.4)] md:text-[10px] lg:inline-flex"
             >
-              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF7A3C_0%,#0B0B0B_50%,#FF7A3C_100%)] opacity-70" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-6 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white backdrop-blur-3xl transition-all group-hover:bg-hunter-orange group-hover:text-near-black">
-                {t("cta.LetsWork")}
-              </span>
+              <span className="drop-shadow-sm">{t("cta.LetsWork")}</span>
             </Link>
           </div>
 
@@ -527,20 +518,7 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Enchanted Bottom Border */}
-        <div className="absolute bottom-0 left-0 h-[1px] w-full overflow-hidden">
-          <div className="absolute inset-0 h-full w-full bg-white/10" />
-          <m.div
-            className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-hunter-green to-transparent blur-[1px]"
-            animate={{ x: ["-100%", "100%"] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-          />
-          <m.div
-            className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-hunter-orange to-transparent blur-[1px]"
-            animate={{ x: ["-100%", "100%"] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 2 }}
-          />
-        </div>
+        {/* Enchanted Bottom Border (Removed in favor of crisp border on header) */}
       </m.header>
 
       {/* Mobile Menu Overlay */}

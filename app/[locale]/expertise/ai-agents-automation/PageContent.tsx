@@ -159,7 +159,7 @@ export default function AIAgentsPageContent() {
                 <GlassCard
                   key={card.title}
                   hoverEffect={true}
-                  glowColor="green"
+                  glowColor="orange"
                   className="flex h-full flex-col p-10"
                 >
                   <h3 className="mb-4 text-2xl font-bold uppercase tracking-tight text-white">

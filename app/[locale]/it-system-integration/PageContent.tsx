@@ -412,7 +412,7 @@ export default function ITSystemIntegrationContent() {
                 key={item.q}
                 className="group cursor-default p-8"
                 hoverEffect={true}
-                glowColor="green"
+                glowColor="orange"
               >
                 <h3 className="mb-4 flex items-center gap-4 text-2xl font-bold text-white">
                   <span className="text-hunter-green transition-transform group-hover:rotate-90">
