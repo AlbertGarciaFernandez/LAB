@@ -75,7 +75,7 @@ const ProcessContactSection: React.FC = () => {
           <div className="absolute bottom-0 left-[27px] top-0 hidden w-[2px] bg-gradient-to-b from-hunter-green/40 via-hunter-orange/20 to-transparent md:block" />
 
           <div className="space-y-10 md:space-y-16">
-            {processSteps.map((item, i) => (
+            {processSteps.map((item) => (
               <m.div
                 key={item.step}
                 initial={{ opacity: 0, x: -20, y: 20 }}

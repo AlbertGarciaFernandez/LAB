@@ -32,7 +32,6 @@ export default function LanguageSelector() {
         aria-label={t("currentLanguage", { language: current.name })}
         className="group flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-gray-400 backdrop-blur-md transition-all hover:border-hunter-green/30 hover:text-white"
       >
-        <span className="text-sm leading-none">{current.flag}</span>
         <span>{current.label}</span>
         <m.svg
           width="10"
@@ -85,7 +84,6 @@ export default function LanguageSelector() {
                         : "text-gray-400 hover:bg-white/5 hover:text-white"
                     }`}
                   >
-                    <span className="text-base leading-none">{l.flag}</span>
                     <span className="font-medium">{l.name}</span>
                     <span className="ml-auto font-mono text-[10px] opacity-50">{l.label}</span>
                     {isActive && (
