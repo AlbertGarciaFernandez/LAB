@@ -96,7 +96,7 @@ const HeroSection: React.FC = () => {
           <h1 className="flex flex-col gap-1 text-5xl font-black leading-[0.95] tracking-tighter md:gap-4 md:text-8xl">
             <m.span variants={slideLeftVariants} className="block">
               {t("title.part1")}
-              <span className="text-hunter-green">
+              <span className="text-hunter-green ">
                 {t("title.highlight1")}
               </span>
             </m.span>
