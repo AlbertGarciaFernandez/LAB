@@ -51,6 +51,10 @@
     "cta": {
       "AIConsulting": "Consultoría IA",
       "LetsWork": "Hablemos"
+    },
+    "localeSwitcher": {
+      "currentLanguage": "Idioma actual: {language}. Haz clic para cambiar.",
+      "selectLanguage": "Seleccionar idioma"
     }
   },
   "Hero": {
@@ -815,6 +819,56 @@
           "desc": "Documentación técnica completa, un runbook y una sesión de entrega. Tú eres el propietario del sistema — con o sin nosotros."
         }
       ]
+    },
+    "FAQ": {
+      "badge": "FAQ CONSULTORIA IA",
+      "title": "Consultoria IA",
+      "titleHighlight": "FAQ — Paises Bajos",
+      "items": [
+        {
+          "q": "¿Cuanto cuesta un proyecto de consultoria IA?",
+          "a": "El alcance varia bastante, por eso no publicamos tarifas fijas. Los AI Strategy Sprints suelen estar entre €2.500 y €5.000. Los proyectos de implementacion empiezan en €8.000 y escalan segun la complejidad de integracion. Los acuerdos como partner continuo empiezan desde €5.000/mes y se ajustan a la capacidad de ingenieria necesaria. Damos una estimacion detallada despues de la llamada inicial de estrategia, antes de que te comprometas a nada."
+        },
+        {
+          "q": "¿Cuanto tarda un proyecto tipico?",
+          "a": "AI Strategy Sprint: 1-2 semanas. Proyectos de implementacion: 4-8 semanas desde la definicion hasta el despliegue, segun cuantos sistemas haya que conectar y su complejidad de integracion. Marcamos plazos realistas en la fase de alcance y no los cambiamos salvo que los requisitos cambien de forma material."
+        },
+        {
+          "q": "¿Que necesitais de nosotros para empezar?",
+          "a": "Una descripcion clara del problema que quieres resolver y acceso a los sistemas relevantes: credenciales del CRM, documentacion API o similar. No necesitamos semanas de onboarding. Una discovery call enfocada suele ser suficiente para definir el alcance con precision."
+        },
+        {
+          "q": "¿Como gestionais nuestros datos y la privacidad?",
+          "a": "El cumplimiento de RGPD es la base, no una opcion. Definimos el tratamiento de datos en la fase de alcance: que datos circulan por el sistema, donde se almacenan y quien tiene acceso. Para sectores sensibles o datos regulados, podemos trabajar con despliegues on-premise o en cloud privada."
+        },
+        {
+          "q": "¿La IA se integra con nuestras herramientas actuales?",
+          "a": "Si. Integrar con tu stack actual es un requisito central, no una caracteristica extra. Tenemos experiencia conectando HubSpot, Salesforce, Pipedrive, WhatsApp Business API, Slack, ERPs comunes y APIs personalizadas. Si lo usas, probablemente ya lo hemos conectado o podemos hacerlo."
+        },
+        {
+          "q": "¿Trabajais con empresas fuera de los Paises Bajos?",
+          "a": "Si. Estamos en Leiden, pero trabajamos con clientes de toda Europa e internacionales. Todos los proyectos pueden ejecutarse completamente en remoto."
+        },
+        {
+          "q": "¿Que pasa despues del despliegue?",
+          "a": "Los proyectos de implementacion incluyen 30 dias de soporte tras el lanzamiento. Los acuerdos como partner continuo cubren mantenimiento y desarrollo continuo. En proyectos cerrados de una sola vez, entregamos documentacion completa y una sesion de handoff para que tu equipo pueda operar el sistema de forma independiente."
+        },
+        {
+          "q": "¿Podeis construir sobre herramientas que ya usamos, como Make o Zapier?",
+          "a": "Si. Migramos con frecuencia a clientes desde Zapier o Make hacia stacks mas robustos y rentables, o ampliamos automatizaciones que ya han empezado. Recomendamos segun tu volumen, presupuesto y capacidad de mantenimiento, no segun lo que nos convenga a nosotros."
+        },
+        {
+          "q": "¿Y si todavia no tenemos claro por que caso de uso de IA empezar?",
+          "a": "Para eso existe exactamente el AI Strategy Sprint. Mapeamos tu operativa, priorizamos oportunidades de automatizacion por ROI y te entregamos una hoja de ruta priorizada. Sales con un plan claro de implementacion, tanto si lo construyes con nosotros como si decides llevarlo in-house."
+        }
+      ]
+    },
+    "FinalCTA": {
+      "title": "Reserva una",
+      "titleHighlight": "Llamada de Estrategia IA",
+      "description": "Habla con un ingeniero senior, no con ventas. En 30 minutos mapearemos tu oportunidad de automatizacion de mayor impacto y te diremos con honestidad si merece la pena construirla.",
+      "primary": "Reservar Llamada IA",
+      "secondary": "Escribenos Directamente"
     }
   },
   "SoftwareLeiden": {
@@ -1033,6 +1087,7 @@
     },
     "Comparison": {
       "title": "¿Por qué a Medida vs Low-Code?",
+      "recommended": "Recomendado",
       "custom": {
         "title": "Desarrollo a Medida (Nuestro Método)",
         "points": [

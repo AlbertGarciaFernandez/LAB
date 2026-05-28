@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -15,6 +15,8 @@ import {
   HandshakeIcon,
   ChartBarIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../../_shared/localeCopy";
 
 const useCaseIcons = [
   TargetIcon,
@@ -27,6 +29,8 @@ const useCaseIcons = [
 
 export default function AIAgentsPageContent() {
   const t = useTranslations("ExpertisePages.AIAgents");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -62,18 +66,22 @@ export default function AIAgentsPageContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Expertise",
-        item: `https://www.codehunterlab.com/en/expertise`,
+        name: labels.expertise,
+        item: localizedUrl(locale, "/expertise"),
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: "AI Agents Automation",
-        item: `https://www.codehunterlab.com/en/expertise/ai-agents-automation`,
+        name: getLocaleValue(locale, {
+          en: "AI Agents Automation",
+          es: "Automatización de Agentes IA",
+          nl: "AI-agents Automatisering",
+        }),
+        item: localizedUrl(locale, "/expertise/ai-agents-automation"),
       },
     ],
   };

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -15,11 +15,15 @@ import {
   FirstAidKitIcon,
   CodeIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../../_shared/localeCopy";
 
 const useCaseIcons = [FileTextIcon, BrainIcon, HeadsetIcon, ScalesIcon, FirstAidKitIcon, CodeIcon];
 
 export default function CustomLLMPageContent() {
   const t = useTranslations("ExpertisePages.CustomLLMs");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -64,18 +68,22 @@ export default function CustomLLMPageContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Expertise",
-        item: `https://www.codehunterlab.com/en/expertise`,
+        name: labels.expertise,
+        item: localizedUrl(locale, "/expertise"),
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: "Custom LLM Development",
-        item: `https://www.codehunterlab.com/en/expertise/custom-llm-development`,
+        name: getLocaleValue(locale, {
+          en: "Custom LLM Development",
+          es: "Desarrollo de LLMs a Medida",
+          nl: "Custom LLM Ontwikkeling",
+        }),
+        item: localizedUrl(locale, "/expertise/custom-llm-development"),
       },
     ],
   };

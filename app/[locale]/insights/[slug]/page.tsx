@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { insightBySlug, insights } from "@/content/insights";
+import { canonicalUrl, createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
 
@@ -13,62 +14,56 @@ type PageParams = {
 };
 
 export function generateStaticParams() {
-  return insights.flatMap((article) => [
-    { locale: "en", slug: article.slug },
-    { locale: "es", slug: article.slug },
-    { locale: "nl", slug: article.slug },
-  ]);
+  return insights.map((article) => ({ locale: "en", slug: article.slug }));
 }
 
 export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
+  if (params.locale !== "en") {
+    return {};
+  }
+
   const article = insightBySlug.get(params.slug);
-  const isSpanish = params.locale === "es";
 
   if (!article) {
     return {};
   }
 
-  const url = `${baseUrl}/${params.locale}/insights/${article.slug}`;
-
-  return {
+  const path = `/insights/${article.slug}`;
+  const metadata = createPageMetadata({
+    locale: params.locale,
+    path,
     title: `${article.title} | CodeHunter Lab`,
     description: article.description,
-    alternates: {
-      canonical: url,
-      languages: {
-        en: `${baseUrl}/en/insights/${article.slug}`,
-        es: `${baseUrl}/es/insights/${article.slug}`,
-        nl: `${baseUrl}/nl/insights/${article.slug}`,
-        "x-default": `${baseUrl}/en/insights/${article.slug}`,
-      },
-    },
+    type: "article",
+  });
+
+  return {
+    ...metadata,
     openGraph: {
-      title: article.title,
+      ...metadata.openGraph,
+      title: `${article.title} | CodeHunter Lab`,
       description: article.description,
-      url,
+      url: canonicalUrl(params.locale, path),
       siteName: "CodeHunter Lab",
       type: "article",
-      locale: isSpanish ? "es_ES" : params.locale === "nl" ? "nl_NL" : "en_US",
       publishedTime: article.publishedAt,
       modifiedTime: article.modifiedAt,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: article.title,
-      description: article.description,
     },
   };
 }
 
 export default function InsightArticlePage({ params }: { params: PageParams }) {
+  if (params.locale !== "en") {
+    notFound();
+  }
+
   const article = insightBySlug.get(params.slug);
-  const isSpanish = params.locale === "es";
 
   if (!article) {
     notFound();
   }
 
-  const articleUrl = `${baseUrl}/${params.locale}/insights/${article.slug}`;
+  const articleUrl = canonicalUrl("en", `/insights/${article.slug}`);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -104,8 +99,8 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
       <main className="mx-auto max-w-4xl px-6 pb-24 pt-32 lg:px-8">
         <BreadcrumbSchema
           items={[
-            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
-            { name: "Insights", url: `${baseUrl}/${params.locale}/insights` },
+            { name: "Home", url: `${baseUrl}/en` },
+            { name: "Insights", url: `${baseUrl}/en/insights` },
             { name: article.title, url: articleUrl },
           ]}
         />
@@ -114,20 +109,11 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
         />
 
-        {isSpanish && (
-          <div className="mb-8 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-4">
-            <p className="text-sm font-medium text-hunter-orange">
-              Este artículo está disponible en inglés. Estamos trabajando en la traducción al
-              español.
-            </p>
-          </div>
-        )}
-
         <Link
-          href={`/${params.locale}/insights`}
+          href="/en/insights"
           className="mb-10 inline-block text-sm font-bold uppercase tracking-widest text-hunter-green hover:text-white"
         >
-          {isSpanish ? "Volver a insights" : "Back to insights"}
+          Back to insights
         </Link>
 
         <article>
@@ -142,12 +128,8 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
               {article.description}
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <span>
-                {isSpanish ? "Publicado" : "Published"} {article.publishedAt}
-              </span>
-              <span>
-                {isSpanish ? "Actualizado" : "Updated"} {article.modifiedAt}
-              </span>
+              <span>Published {article.publishedAt}</span>
+              <span>Updated {article.modifiedAt}</span>
               <span>{article.readingTime}</span>
             </div>
           </header>
@@ -233,9 +215,7 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
           </div>
 
           <section className="mt-14 rounded-lg border border-hunter-green/30 bg-hunter-green/10 p-6">
-            <h2 className="mb-4 text-2xl font-black tracking-tight">
-              {isSpanish ? "Servicios relacionados" : "Related services"}
-            </h2>
+            <h2 className="mb-4 text-2xl font-black tracking-tight">Related services</h2>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {article.relatedServices.map((service) => (
                 <Link

@@ -1,10 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { localizedUrl } from "@/utils/metadata";
 import {
   CheckIcon,
   XIcon,
@@ -17,6 +18,14 @@ import Header from "@/components/layout/Header";
 
 export default function ReactConsultingContent() {
   const t = useTranslations("ReactConsulting");
+  const locale = useLocale();
+  const breadcrumbLabel =
+    locale === "es"
+      ? "Consultoria React"
+      : locale === "nl"
+        ? "React Consulting"
+        : "React Consulting";
+  const homeLabel = locale === "es" ? "Inicio" : locale === "nl" ? "Start" : "Home";
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -43,12 +52,12 @@ export default function ReactConsultingContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: homeLabel, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "React Consulting",
-        item: `https://www.codehunterlab.com/en/react-consulting`,
+        name: breadcrumbLabel,
+        item: localizedUrl(locale, "/react-consulting"),
       },
     ],
   };

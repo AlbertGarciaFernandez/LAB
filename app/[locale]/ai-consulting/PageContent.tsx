@@ -40,45 +40,6 @@ const itemVariants = {
   },
 };
 
-const faqs = [
-  {
-    q: "What does an AI consulting engagement cost?",
-    a: "Scope varies significantly, so we don't publish fixed rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements start from €5,000/month and are scoped around the amount of engineering capacity required. We provide a detailed estimate after the initial strategy call — before you commit to anything.",
-  },
-  {
-    q: "How long does a typical project take?",
-    a: "AI Strategy Sprint: 1–2 weeks. Implementation Projects: 4–8 weeks from scoping to deployment, depending on how many systems are involved and their integration complexity. We set realistic timelines at scoping and don't revise them unless requirements change materially.",
-  },
-  {
-    q: "What do you need from us to get started?",
-    a: "A clear description of the problem you want to solve and access to the relevant systems — CRM credentials, API documentation, or similar. We don't require weeks of onboarding. A focused discovery call is usually enough to scope accurately.",
-  },
-  {
-    q: "How do you handle our data and privacy?",
-    a: "GDPR compliance is a baseline, not an option. We define data handling at scoping: what data flows through the system, where it's stored, and who has access. For sensitive industries or regulated data, we can work with on-premise or private cloud deployments.",
-  },
-  {
-    q: "Does the AI integrate with our existing tools?",
-    a: "Yes — integration with your existing stack is a core requirement, not a feature. We have experience integrating with HubSpot, Salesforce, Pipedrive, WhatsApp Business API, Slack, common ERPs, and custom APIs. If you use it, we've likely connected to it or can.",
-  },
-  {
-    q: "Do you work with companies outside the Netherlands?",
-    a: "Yes. We're based in Leiden but work with clients across Europe and internationally. All engagements can run fully remotely.",
-  },
-  {
-    q: "What happens after deployment?",
-    a: "Implementation Projects include 30 days of post-deployment support. Ongoing Partner engagements cover continuous maintenance and development. For completed one-time projects, we provide full documentation and a handover session so your team can operate the system independently.",
-  },
-  {
-    q: "Can you build on top of tools we already use, like Make or Zapier?",
-    a: "Yes. We frequently migrate clients from Zapier or Make to more robust, cost-effective stacks — or extend automations they've already started. We recommend based on your volume, budget, and maintenance capacity, not on what's convenient for us.",
-  },
-  {
-    q: "What if we're not sure which AI use case to start with?",
-    a: "That's exactly what the AI Strategy Sprint is for. We map your operations, rank automation opportunities by ROI, and hand you a prioritized roadmap. You leave with a clear implementation plan — whether you work with us to build it or take it in-house.",
-  },
-];
-
 type HeroProps = {
   badge: string;
   titlePart1: string;
@@ -209,6 +170,19 @@ type PageProps = {
   useCases: UseCasesProps;
   migration: MigrationProps;
   techCredibility: TechCredibilityProps;
+  faq: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    items: Array<{ q: string; a: string }>;
+  };
+  finalCta: {
+    title: string;
+    titleHighlight: string;
+    description: string;
+    primary: string;
+    secondary: string;
+  };
 };
 
 export default function AIConsultingPageContent({
@@ -219,6 +193,8 @@ export default function AIConsultingPageContent({
   useCases,
   migration,
   techCredibility,
+  faq,
+  finalCta,
 }: PageProps) {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
@@ -773,17 +749,17 @@ export default function AIConsultingPageContent({
           <div className="mx-auto max-w-3xl">
             <div className="mb-14 text-center">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
-                AI CONSULTING FAQ
+                {faq.badge}
               </div>
               <h2 className="text-3xl font-black tracking-tighter text-white md:text-5xl">
-                AI Consulting <span className="text-hunter-green">FAQ — Netherlands</span>
+                {faq.title} <span className="text-hunter-green">{faq.titleHighlight}</span>
               </h2>
             </div>
 
             <div className="space-y-2">
-              {faqs.map((faq, i) => (
+              {faq.items.map((item, i) => (
                 <div
-                  key={faq.q}
+                  key={item.q}
                   className="overflow-hidden rounded-xl border border-white/5 bg-near-black/60 transition-colors hover:border-white/10"
                 >
                   <button
@@ -792,7 +768,7 @@ export default function AIConsultingPageContent({
                     aria-expanded={openFaq === i}
                   >
                     <span className="text-sm font-semibold leading-snug text-white md:text-base">
-                      {faq.q}
+                      {item.q}
                     </span>
                     <CaretDownIcon
                       className={`flex-shrink-0 text-hunter-green transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
@@ -807,7 +783,7 @@ export default function AIConsultingPageContent({
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <p className="px-6 pb-5 text-sm leading-relaxed text-gray-400">{faq.a}</p>
+                    <p className="px-6 pb-5 text-sm leading-relaxed text-gray-400">{item.a}</p>
                   </m.div>
                 </div>
               ))}
@@ -816,12 +792,11 @@ export default function AIConsultingPageContent({
             {/* Final CTA */}
             <div className="mt-16 space-y-4 text-center">
               <h2 className="text-2xl font-black tracking-tighter text-white md:text-4xl">
-                Book a Free <span className="text-hunter-green">AI Strategy Call</span>
+                {finalCta.title}{" "}
+                <span className="text-hunter-green">{finalCta.titleHighlight}</span>
               </h2>
               <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-400">
-                Talk to a senior engineer — not a sales rep. In 30 minutes, we&apos;ll map your
-                highest-impact automation opportunity and tell you honestly whether it&apos;s worth
-                building.
+                {finalCta.description}
               </p>
               <div className="flex flex-col justify-center gap-3 pt-2 sm:flex-row">
                 <Link
@@ -829,14 +804,14 @@ export default function AIConsultingPageContent({
                   className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-3 font-bold text-near-black"
                 >
                   <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-green-dark" />
-                  <span className="relative z-10">Book AI Strategy Call</span>
+                  <span className="relative z-10">{finalCta.primary}</span>
                   <ArrowRightIcon className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
                   href="mailto:albert@codehunterlab.com"
                   className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-transparent px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5"
                 >
-                  Email Us Directly
+                  {finalCta.secondary}
                 </a>
               </div>
             </div>

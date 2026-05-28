@@ -110,6 +110,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
         serviceType="AI Voice Agent Development"
       />
       <AIVoiceAgentsContent
+        locale={params.locale}
         hero={hero}
         languageNote={languageNote}
         painPoints={painPoints}

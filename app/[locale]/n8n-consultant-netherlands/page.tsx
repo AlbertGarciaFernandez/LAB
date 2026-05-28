@@ -111,6 +111,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
         serviceType="n8n Consulting"
       />
       <N8nConsultantContent
+        locale={params.locale}
         hero={hero}
         languageNote={languageNote}
         painPoints={painPoints}

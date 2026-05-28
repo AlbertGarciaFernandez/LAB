@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
 import { getTranslations } from "next-intl/server";
+import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
 import DentalClinicAutomationContent from "./PageContent";
 
 const path = "/dental-clinic-automation-netherlands";
@@ -10,24 +11,18 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "DentalClinic" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "Dental Clinic Automation Netherlands | Reduce No-Shows",
-    description:
-      "Reduce dental no-shows with WhatsApp reminders, patient recall automation, and practice software integrations for clinics in the Netherlands.",
-    keywords: [
-      "dental clinic automation Netherlands",
-      "tandartspraktijk automatisering",
-      "dental appointment reminder system",
-      "dental CRM integration Netherlands",
-      "no-show reduction dental practice",
-      "patient recall system Netherlands",
-      "WhatsApp patient communication dental",
-      "dental practice management software integration",
-      "Exquise ISOS integration",
-      "dental lead automation Netherlands",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "Dental Clinic Automation Netherlands | Reduce No-Shows",
+      es: "Automatización para Clínicas Dentales en Países Bajos | Reduce Ausencias",
+      nl: "Automatisering voor Tandartspraktijken in Nederland | Minder No-Shows",
+    }),
+    description: stripHtml(t.raw("Hero.description") as string),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

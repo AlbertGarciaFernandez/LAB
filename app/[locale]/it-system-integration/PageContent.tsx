@@ -1,10 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { localizedUrl } from "@/utils/metadata";
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
 import {
@@ -20,35 +21,28 @@ import {
 
 export default function ITSystemIntegrationContent() {
   const t = useTranslations("ITSystemIntegration");
+  const locale = useLocale();
+  const breadcrumbLabel =
+    locale === "es"
+      ? "Integracion de Sistemas IT"
+      : locale === "nl"
+        ? "IT Systeemintegratie"
+        : "IT System Integration";
+  const homeLabel = locale === "es" ? "Inicio" : locale === "nl" ? "Start" : "Home";
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: homeLabel, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "IT System Integration",
-        item: `https://www.codehunterlab.com/en/it-system-integration`,
+        name: breadcrumbLabel,
+        item: localizedUrl(locale, "/it-system-integration"),
       },
     ],
   };
-
-  const faqQuestions = [
-    {
-      q: "What systems can be integrated with AI automation?",
-      a: "Most modern business systems with APIs can be integrated, including CRMs like HubSpot and Salesforce, ERPs, accounting software, messaging platforms like WhatsApp Business API and Slack, databases, and custom internal applications. If an API exists, integration is possible.",
-    },
-    {
-      q: "How long does a typical system integration project take?",
-      a: "Simple two-system integrations take 2-4 weeks. Complex multi-system projects with custom APIs and data mapping typically take 6-10 weeks depending on the number of endpoints and data volume.",
-    },
-    {
-      q: "Is my data secure during integration?",
-      a: "Yes. All integrations follow GDPR compliance by design. For sensitive industries, on-premise or private cloud deployments are available so data never leaves controlled infrastructure.",
-    },
-  ];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -407,12 +401,13 @@ export default function ITSystemIntegrationContent() {
         <section className="relative z-10 mx-auto max-w-4xl border-t border-white/5 px-6 py-32">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tighter md:text-6xl">
-              Frequently asked questions
+              {t("FAQ.title")}
             </h2>
+            <p className="text-xl text-gray-400">{t("FAQ.subtitle")}</p>
           </div>
 
           <div className="space-y-6">
-            {faqQuestions.map((item) => (
+            {(t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => (
               <GlassCard
                 key={item.q}
                 className="group cursor-default p-8"

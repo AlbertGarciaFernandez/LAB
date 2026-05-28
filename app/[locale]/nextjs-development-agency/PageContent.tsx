@@ -1,10 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { localizedUrl } from "@/utils/metadata";
 import {
   CheckIcon,
   LightningIcon,
@@ -16,17 +17,25 @@ import Header from "@/components/layout/Header";
 
 export default function NextJsDevelopmentAgencyContent() {
   const t = useTranslations("NextJsAgency");
+  const locale = useLocale();
+  const breadcrumbLabel =
+    locale === "es"
+      ? "Agencia de Desarrollo Next.js"
+      : locale === "nl"
+        ? "Next.js Ontwikkelagency"
+        : "Next.js Development Agency";
+  const homeLabel = locale === "es" ? "Inicio" : locale === "nl" ? "Start" : "Home";
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: homeLabel, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Next.js Development Agency",
-        item: `https://www.codehunterlab.com/en/nextjs-development-agency`,
+        name: breadcrumbLabel,
+        item: localizedUrl(locale, "/nextjs-development-agency"),
       },
     ],
   };

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -15,6 +15,8 @@ import {
   ReceiptIcon,
   PlugsConnectedIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../../_shared/localeCopy";
 
 const useCaseIcons = [
   UsersIcon,
@@ -27,23 +29,29 @@ const useCaseIcons = [
 
 export default function N8nMigrationPageContent() {
   const t = useTranslations("ExpertisePages.n8nMigration");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Expertise",
-        item: `https://www.codehunterlab.com/en/expertise`,
+        name: labels.expertise,
+        item: localizedUrl(locale, "/expertise"),
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: "n8n Migration Consulting",
-        item: `https://www.codehunterlab.com/en/expertise/n8n-migration-consulting`,
+        name: getLocaleValue(locale, {
+          en: "n8n Migration Consulting",
+          es: "Consultoría de Migración n8n",
+          nl: "n8n Migratie Consulting",
+        }),
+        item: localizedUrl(locale, "/expertise/n8n-migration-consulting"),
       },
     ],
   };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { BASE_URL, LOCALES, SITE_NAME, getOpenGraphLocale, normalizeLocale } from "@/utils/constants";
+import { BASE_URL, SITE_NAME, getOpenGraphLocale, normalizeLocale } from "@/utils/constants";
+import { getCanonicalLocale, getSeoLocalePolicy, isLocaleIndexable } from "@/utils/seo-locale";
 
 type CreatePageMetadataInput = {
   title: string;
@@ -17,10 +18,22 @@ export function localizedUrl(locale: string, path = "") {
 }
 
 export function localizedAlternates(path = "") {
+  const policy = getSeoLocalePolicy(path);
+
+  if (!policy.allowAlternates) {
+    return undefined;
+  }
+
   return {
-    ...Object.fromEntries(LOCALES.map((locale) => [locale, `${BASE_URL}/${locale}${path}`])),
-    "x-default": `${BASE_URL}/en${path}`,
+    ...Object.fromEntries(
+      policy.indexableLocales.map((locale) => [locale, localizedUrl(locale, path)])
+    ),
+    "x-default": localizedUrl(policy.canonicalLocale, path),
   };
+}
+
+export function canonicalUrl(locale: string, path = "") {
+  return localizedUrl(getCanonicalLocale(locale, path), path);
 }
 
 export function createPageMetadata({
@@ -33,8 +46,11 @@ export function createPageMetadata({
   imagePath,
 }: CreatePageMetadataInput): Metadata {
   const normalizedLocale = normalizeLocale(locale);
-  const url = localizedUrl(normalizedLocale, path);
-  const image = imagePath ?? `/${normalizedLocale}/opengraph-image`;
+  const indexable = isLocaleIndexable(normalizedLocale, path);
+  const effectiveLocale = getCanonicalLocale(normalizedLocale, path);
+  const url = canonicalUrl(normalizedLocale, path);
+  const image = imagePath ?? `/${effectiveLocale}/opengraph-image`;
+  const alternateLanguages = localizedAlternates(path);
 
   return {
     metadataBase: new URL(BASE_URL),
@@ -43,7 +59,11 @@ export function createPageMetadata({
     keywords,
     alternates: {
       canonical: url,
-      languages: localizedAlternates(path),
+      languages: alternateLanguages,
+    },
+    robots: {
+      index: indexable,
+      follow: true,
     },
     openGraph: {
       title,
@@ -51,7 +71,7 @@ export function createPageMetadata({
       url,
       siteName: SITE_NAME,
       type,
-      locale: getOpenGraphLocale(normalizedLocale),
+      locale: getOpenGraphLocale(effectiveLocale),
       images: [
         {
           url: `${BASE_URL}${image}`,

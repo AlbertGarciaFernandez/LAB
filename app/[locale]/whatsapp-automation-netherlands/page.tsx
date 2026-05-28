@@ -3,6 +3,7 @@ import ServiceSchema from "@/components/ui/ServiceSchema";
 import { getTranslations } from "next-intl/server";
 import { createPageMetadata } from "@/utils/metadata";
 import { localizedUrl } from "@/utils/metadata";
+import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
 import WhatsAppAutomationContent from "./PageContent";
 
 const path = "/whatsapp-automation-netherlands";
@@ -12,24 +13,18 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "WhatsAppAutomation" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "WhatsApp Business Automation Netherlands | API Integration",
-    description:
-      "WhatsApp Business API automation for companies in the Netherlands. Build chatbots, automate customer service, send bulk campaigns, and integrate WhatsApp with your CRM and internal tools.",
-    keywords: [
-      "WhatsApp Business API Netherlands",
-      "WhatsApp automation Amsterdam",
-      "WhatsApp chatbot Netherlands",
-      "WhatsApp CRM integration Netherlands",
-      "WhatsApp marketing automation NL",
-      "WhatsApp customer service automation",
-      "WhatsApp API integration services",
-      "WhatsApp bulk messaging Netherlands",
-      "WhatsApp business solutions NL",
-      "WhatsApp conversational AI Netherlands",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "WhatsApp Business Automation Netherlands | API Integration",
+      es: "Automatización de WhatsApp Business en Países Bajos | Integración API",
+      nl: "WhatsApp Business Automatisering Nederland | API Integratie",
+    }),
+    description: stripHtml(t.raw("Hero.description") as string),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

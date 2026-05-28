@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -36,6 +36,8 @@ const solutionIcons = [
 ];
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
 const realEstateSystems = [
   "Funda",
@@ -52,6 +54,8 @@ const realEstateSystems = [
 
 export default function RealEstateAutomationContent() {
   const t = useTranslations("RealEstateAgency");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -78,12 +82,16 @@ export default function RealEstateAutomationContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Real Estate Agency Automation Netherlands",
-        item: `https://www.codehunterlab.com/en/real-estate-automation-netherlands`,
+        name: getLocaleValue(locale, {
+          en: "Real Estate Agency Automation Netherlands",
+          es: "Automatización para Agencias Inmobiliarias en Países Bajos",
+          nl: "Automatisering voor Makelaars in Nederland",
+        }),
+        item: localizedUrl(locale, "/real-estate-automation-netherlands"),
       },
     ],
   };

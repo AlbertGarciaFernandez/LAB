@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { splitKeywords } from "../../_shared/localeCopy";
 import AIAgentsPageContent from "./PageContent";
 
 const path = "/expertise/ai-agents-automation";
@@ -9,18 +11,14 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "ExpertisePages.AIAgents" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "AI Agent Development Netherlands | 24/7 Automation",
-    description:
-      "Deploy custom AI agents for customer support and sales. Top AI agency in the Netherlands for WhatsApp and Voice bots.",
-    keywords: [
-      "ai agent development",
-      "digital workforce",
-      "whatsapp automation business",
-      "ai customer service nl",
-    ],
+    title: t("SEO.title"),
+    description: t("SEO.description"),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

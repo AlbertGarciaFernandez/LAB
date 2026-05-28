@@ -33,6 +33,12 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: { locale: string } }) {
   const { locale } = params;
   const t = await getTranslations("AIAutomationNL");
+  const breadcrumbName =
+    locale === "es"
+      ? "Automatizacion IA"
+      : locale === "nl"
+        ? "AI Automatisering"
+        : "AI Automation Consulting";
 
   const hero = {
     badge: t("Hero.badge"),
@@ -130,8 +136,11 @@ export default async function Page({ params }: { params: { locale: string } }) {
       />
       <BreadcrumbSchema
         items={[
-          { name: locale === "es" ? "Inicio" : "Home", url: `${baseUrl}/${locale}` },
-          { name: "AI Automation Consulting", url: `${baseUrl}/${locale}${path}` },
+          {
+            name: locale === "es" ? "Inicio" : locale === "nl" ? "Start" : "Home",
+            url: `${baseUrl}/${locale}`,
+          },
+          { name: breadcrumbName, url: `${baseUrl}/${locale}${path}` },
         ]}
       />
       <AIAutomationNetherlandsContent

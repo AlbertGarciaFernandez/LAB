@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -36,8 +36,9 @@ const solutionIcons = [
 ];
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
-const baseUrl = "https://www.codehunterlab.com";
 const path = "/aesthetic-clinic-automation-netherlands";
 
 const aestheticSystems = [
@@ -56,6 +57,8 @@ const aestheticSystems = [
 
 export default function AestheticClinicAutomationContent() {
   const t = useTranslations("AestheticClinic");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -82,12 +85,16 @@ export default function AestheticClinicAutomationContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Aesthetic Clinic Automation Netherlands",
-        item: `${baseUrl}/en${path}`,
+        name: getLocaleValue(locale, {
+          en: "Aesthetic Clinic Automation Netherlands",
+          es: "Automatización para Clínicas Estéticas en Países Bajos",
+          nl: "Automatisering voor Esthetische Klinieken in Nederland",
+        }),
+        item: localizedUrl(locale, path),
       },
     ],
   };

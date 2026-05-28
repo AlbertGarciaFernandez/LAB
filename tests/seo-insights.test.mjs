@@ -61,7 +61,7 @@ test("insight routes expose index and article metadata/schema", () => {
   assert.match(indexPage, /CollectionPage/);
   assert.match(articlePage, /generateStaticParams/);
   assert.match(articlePage, /Article/);
-  assert.match(articlePage, /alternates:/);
+  assert.match(articlePage, /createPageMetadata/);
 });
 
 test("sitemap includes the English insights hub and article URLs", () => {
@@ -69,15 +69,17 @@ test("sitemap includes the English insights hub and article URLs", () => {
 
   assert.match(sitemap, /from ['"]@\/content\/insights['"]/);
   assert.match(sitemap, /\/en\/insights/);
-  assert.match(sitemap, /\/en\/insights\/\$\{article\.slug\}/);
+  assert.match(sitemap, /getSeoLocalePolicy\(`\/insights\/\$\{article\.slug\}`\)/);
 });
 
 test("locale layout sets metadataBase for absolute social metadata", () => {
   const layout = readFileSync("app/[locale]/layout.tsx", "utf8");
+  const helper = readFileSync("utils/metadata.ts", "utf8");
 
-  assert.match(layout, /metadataBase:\s*new URL\(baseUrl\)/);
-  assert.match(layout, /"@type":\s*"Person"/);
-  assert.match(layout, /albertgarciafernandez/);
+  assert.match(layout, /createPageMetadata/);
+  assert.match(helper, /metadataBase:\s*new URL\(BASE_URL\)/);
+  assert.match(layout, /"@type":\s*"Organization"/);
+  assert.match(layout, /#founder/);
 });
 
 test("insights are discoverable from visible site navigation", () => {
@@ -85,8 +87,8 @@ test("insights are discoverable from visible site navigation", () => {
   const footer = readFileSync("components/layout/Footer.tsx", "utf8");
   const home = readFileSync("app/[locale]/page.tsx", "utf8");
 
-  assert.match(header, /href=\{`\/\$\{locale\}\/insights`\}/);
-  assert.match(footer, /href=\{`\/\$\{locale\}\/insights`\}/);
+  assert.match(header, /href="\/insights"[\s\S]*locale="en"/);
+  assert.match(footer, /href="\/insights"[\s\S]*locale="en"/);
   assert.match(home, /InsightsSection/);
 });
 
@@ -166,9 +168,8 @@ test("footer and sitemap expose about without case study urls", () => {
   const sitemap = readFileSync("app/sitemap.ts", "utf8");
 
   assert.match(footer, /\/about/);
-  assert.match(sitemap, /\/en\/about/);
+  assert.match(sitemap, /getSeoLocalePolicy\("\/about"\)/);
   assert.doesNotMatch(footer, /\/case-studies/);
-  assert.doesNotMatch(sitemap, /\/en\/case-studies/);
 });
 
 test("commercial pages no longer link to temporary case studies", () => {

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
 import RealEstateAutomationContent from "./PageContent";
 
 const path = "/real-estate-automation-netherlands";
@@ -9,24 +11,18 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "RealEstateAgency" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "Real Estate Automation Netherlands — CodeHunter Lab",
-    description:
-      "Automate lead follow-up, property listings, and client communication. Custom automation systems for real estate agencies in the Netherlands. Based in Leiden.",
-    keywords: [
-      "real estate automation Netherlands",
-      "makelaar automatisering Nederland",
-      "real estate CRM integration Netherlands",
-      "property lead automation Netherlands",
-      "real estate follow-up automation",
-      "Funda integration automation",
-      "real estate WhatsApp automation",
-      "makelaar CRM systeem",
-      "real estate agency Netherlands automation",
-      "property viewing automation Netherlands",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "Real Estate Automation Netherlands — CodeHunter Lab",
+      es: "Automatización para Inmobiliarias en Países Bajos — CodeHunter Lab",
+      nl: "Automatisering voor Makelaars in Nederland — CodeHunter Lab",
+    }),
+    description: stripHtml(t.raw("Hero.description") as string),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

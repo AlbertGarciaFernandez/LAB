@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "@/navigation";
 import { LinkedinLogoIcon, EnvelopeIcon, ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const locale = useLocale();
   const t = useTranslations("Footer");
 
   return (
@@ -143,7 +142,8 @@ const Footer: React.FC = () => {
               {[
                 {
                   label: t("Insights.items.automation"),
-                  href: `/${locale}/insights`,
+                  href: "/insights",
+                  locale: "en" as const,
                 },
                 {
                   label: t("Insights.items.n8n"),
@@ -165,6 +165,7 @@ const Footer: React.FC = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    locale={item.locale}
                     className="group flex items-center gap-2 text-sm text-gray-500 transition-colors hover:text-white"
                   >
                     {item.label}
@@ -206,7 +207,8 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex items-center gap-3">
               <Link
-                href={`/${locale}/insights`}
+                href="/insights"
+                locale="en"
                 className="text-[11px] font-bold uppercase tracking-widest text-hunter-green/80 transition-colors hover:text-hunter-green"
               >
                 {t("Copyright.insights")}

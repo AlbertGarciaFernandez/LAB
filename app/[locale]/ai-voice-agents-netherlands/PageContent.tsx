@@ -19,6 +19,7 @@ import {
 
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import { getCommonBreadcrumbLabels } from "../_shared/localeCopy";
 
 const painPointIcons = [
   PhoneIcon,
@@ -105,6 +106,7 @@ type SEOProps = {
 };
 
 type PageProps = {
+  locale: string;
   hero: HeroProps;
   languageNote: string;
   painPoints: { title: string; items: PainPointItem[] };
@@ -117,6 +119,7 @@ type PageProps = {
 };
 
 export default function AIVoiceAgentsContent({
+  locale,
   hero,
   languageNote,
   painPoints,
@@ -127,6 +130,7 @@ export default function AIVoiceAgentsContent({
   cta,
   seo,
 }: PageProps) {
+  const breadcrumbLabels = getCommonBreadcrumbLabels(locale);
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -160,12 +164,17 @@ export default function AIVoiceAgentsContent({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: breadcrumbLabels.home,
+        item: `https://www.codehunterlab.com/${locale}`,
+      },
       {
         "@type": "ListItem",
         position: 2,
         name: "AI Voice Agents Netherlands",
-        item: `https://www.codehunterlab.com/en/ai-voice-agents-netherlands`,
+        item: `https://www.codehunterlab.com/${locale}/ai-voice-agents-netherlands`,
       },
     ],
   };

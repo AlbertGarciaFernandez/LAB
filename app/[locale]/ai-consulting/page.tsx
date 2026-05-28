@@ -140,6 +140,21 @@ export default async function Page({ params }: { params: { locale: string } }) {
     items: t.raw("TechCredibility.items") as Array<{ title: string; desc: string }>,
   };
 
+  const faq = {
+    badge: t("FAQ.badge"),
+    title: t("FAQ.title"),
+    titleHighlight: t("FAQ.titleHighlight"),
+    items: t.raw("FAQ.items") as Array<{ q: string; a: string }>,
+  };
+
+  const finalCta = {
+    title: t("FinalCTA.title"),
+    titleHighlight: t("FinalCTA.titleHighlight"),
+    description: t("FinalCTA.description"),
+    primary: t("FinalCTA.primary"),
+    secondary: t("FinalCTA.secondary"),
+  };
+
   return (
     <>
       <ServiceSchema
@@ -156,6 +171,8 @@ export default async function Page({ params }: { params: { locale: string } }) {
         useCases={useCases}
         migration={migration}
         techCredibility={techCredibility}
+        faq={faq}
+        finalCta={finalCta}
       />
     </>
   );

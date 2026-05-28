@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -36,6 +36,8 @@ const solutionIcons = [
 ];
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
 const vetSystems = [
   "VetSoft",
@@ -52,6 +54,8 @@ const vetSystems = [
 
 export default function VeterinaryClinicAutomationContent() {
   const t = useTranslations("VeterinaryClinic");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -78,12 +82,16 @@ export default function VeterinaryClinicAutomationContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Veterinary Clinic Automation Netherlands",
-        item: `https://www.codehunterlab.com/en/veterinary-clinic-automation-netherlands`,
+        name: getLocaleValue(locale, {
+          en: "Veterinary Clinic Automation Netherlands",
+          es: "Automatización para Clínicas Veterinarias en Países Bajos",
+          nl: "Automatisering voor Dierenklinieken in Nederland",
+        }),
+        item: localizedUrl(locale, "/veterinary-clinic-automation-netherlands"),
       },
     ],
   };

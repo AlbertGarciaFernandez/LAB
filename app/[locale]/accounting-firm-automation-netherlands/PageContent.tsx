@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -35,6 +35,8 @@ const solutionIcons = [
 ];
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
 const accountingSystems = [
   "Exact Online",
@@ -51,6 +53,8 @@ const accountingSystems = [
 
 export default function AccountingFirmAutomationContent() {
   const t = useTranslations("AccountingFirm");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -77,12 +81,16 @@ export default function AccountingFirmAutomationContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Accounting Firm Automation Netherlands",
-        item: `https://www.codehunterlab.com/en/accounting-firm-automation-netherlands`,
+        name: getLocaleValue(locale, {
+          en: "Accounting Firm Automation Netherlands",
+          es: "Automatización para Despachos Contables en Países Bajos",
+          nl: "Automatisering voor Accountantskantoren in Nederland",
+        }),
+        item: localizedUrl(locale, "/accounting-firm-automation-netherlands"),
       },
     ],
   };

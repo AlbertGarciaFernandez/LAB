@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
@@ -37,6 +37,8 @@ const solutionIcons = [
 ];
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
 const physioSystems = [
   "Intramed",
@@ -53,6 +55,8 @@ const physioSystems = [
 
 export default function PhysiotherapyClinicAutomationContent() {
   const t = useTranslations("PhysiotherapyClinic");
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -79,12 +83,16 @@ export default function PhysiotherapyClinicAutomationContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Physiotherapy Practice Automation Netherlands",
-        item: `https://www.codehunterlab.com/en/physiotherapy-clinic-automation-netherlands`,
+        name: getLocaleValue(locale, {
+          en: "Physiotherapy Practice Automation Netherlands",
+          es: "Automatización para Clínicas de Fisioterapia en Países Bajos",
+          nl: "Automatisering voor Fysiotherapiepraktijken in Nederland",
+        }),
+        item: localizedUrl(locale, "/physiotherapy-clinic-automation-netherlands"),
       },
     ],
   };

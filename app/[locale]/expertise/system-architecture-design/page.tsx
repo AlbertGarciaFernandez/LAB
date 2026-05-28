@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { splitKeywords } from "../../_shared/localeCopy";
 import SystemArchitecturePageContent from "./PageContent";
 
 const path = "/expertise/system-architecture-design";
@@ -9,18 +11,17 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "ExpertisePages.SystemArchitecture",
+  });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "System Architecture Design Netherlands — CodeHunter Lab",
-    description:
-      "Senior system architects in Leiden. We design scalable Next.js and cloud architectures for ambitious tech companies.",
-    keywords: [
-      "system architect netherlands",
-      "react performance consulting",
-      "scalable software design",
-      "tech debt audit",
-    ],
+    title: t("SEO.title"),
+    description: t("SEO.description"),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

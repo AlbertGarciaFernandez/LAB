@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { insights } from "@/content/insights";
@@ -12,19 +13,16 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isSpanish = params.locale === "es";
+  if (params.locale !== "en") {
+    return {};
+  }
 
-  const title = isSpanish
-    ? "Insights de Automatización AI | CodeHunter Lab"
-    : "AI Automation Insights Netherlands | CodeHunter Lab";
-  const description = isSpanish
-    ? "Notas prácticas sobre automatización AI, flujos n8n, IA conversacional y automatización de clínicas para negocios holandeses."
-    : "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.";
   return createPageMetadata({
-    locale: params.locale,
+    locale: "en",
     path: "/insights",
-    title,
-    description,
+    title: "AI Automation Insights Netherlands | CodeHunter Lab",
+    description:
+      "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.",
     keywords: [
       "AI automation insights Netherlands",
       "n8n workflows Netherlands",
@@ -34,16 +32,17 @@ export async function generateMetadata({
 }
 
 export default function InsightsPage({ params }: { params: { locale: string } }) {
-  const isSpanish = params.locale === "es";
+  if (params.locale !== "en") {
+    notFound();
+  }
 
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: isSpanish ? "Insights de Automatización AI" : "AI Automation Insights Netherlands",
-    description: isSpanish
-      ? "Notas prácticas sobre automatización AI, flujos n8n, IA conversacional y automatización de clínicas para negocios holandeses."
-      : "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.",
-    url: `${baseUrl}/${params.locale}/insights`,
+    name: "AI Automation Insights Netherlands",
+    description:
+      "Practical field notes on AI automation, n8n workflows, conversational AI, and clinic automation for Dutch businesses.",
+    url: `${baseUrl}/en/insights`,
     publisher: {
       "@type": "Organization",
       name: "CodeHunter Lab",
@@ -52,7 +51,7 @@ export default function InsightsPage({ params }: { params: { locale: string } })
     hasPart: insights.map((article) => ({
       "@type": "Article",
       headline: article.title,
-      url: `${baseUrl}/${params.locale}/insights/${article.slug}`,
+      url: `${baseUrl}/en/insights/${article.slug}`,
       datePublished: article.publishedAt,
       dateModified: article.modifiedAt,
     })),
@@ -64,8 +63,8 @@ export default function InsightsPage({ params }: { params: { locale: string } })
       <main className="mx-auto max-w-7xl px-6 pb-24 pt-32 lg:px-8">
         <BreadcrumbSchema
           items={[
-            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
-            { name: "Insights", url: `${baseUrl}/${params.locale}/insights` },
+            { name: "Home", url: `${baseUrl}/en` },
+            { name: "Insights", url: `${baseUrl}/en/insights` },
           ]}
         />
         <script
@@ -73,28 +72,16 @@ export default function InsightsPage({ params }: { params: { locale: string } })
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
         />
 
-        {isSpanish && (
-          <div className="mb-8 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-4">
-            <p className="text-sm font-medium text-hunter-orange">
-              Estos artículos están disponibles en inglés. Estamos trabajando en la traducción al
-              español.
-            </p>
-          </div>
-        )}
-
         <section className="max-w-3xl">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-green">
-            {isSpanish ? "Notas de campo" : "Field notes"}
+            Field notes
           </p>
           <h1 className="mb-6 text-5xl font-black leading-none tracking-tighter md:text-7xl">
-            {isSpanish
-              ? "Insights de automatización AI para negocios holandeses."
-              : "AI automation insights for Dutch businesses."}
+            AI automation insights for Dutch businesses.
           </h1>
           <p className="text-lg leading-relaxed text-gray-300 md:text-xl">
-            {isSpanish
-              ? "Guías prácticas sobre los temas exactos que Google ya está probando para CodeHunter Lab: automatización de flujos, IA conversacional, n8n y operaciones de clínicas."
-              : "Practical guides on the exact topics Google is already testing for CodeHunter Lab: workflow automation, conversational AI, n8n, and clinic operations."}
+            Practical guides on the exact topics Google is already testing for CodeHunter Lab:
+            workflow automation, conversational AI, n8n, and clinic operations.
           </p>
         </section>
 
@@ -109,19 +96,16 @@ export default function InsightsPage({ params }: { params: { locale: string } })
                 <span>{article.readingTime}</span>
               </div>
               <h2 className="mb-4 text-2xl font-black leading-tight tracking-tight">
-                <Link
-                  href={`/${params.locale}/insights/${article.slug}`}
-                  className="hover:text-hunter-green"
-                >
+                <Link href={`/en/insights/${article.slug}`} className="hover:text-hunter-green">
                   {article.title}
                 </Link>
               </h2>
               <p className="mb-6 text-sm leading-relaxed text-gray-300">{article.description}</p>
               <Link
-                href={`/${params.locale}/insights/${article.slug}`}
+                href={`/en/insights/${article.slug}`}
                 className="text-sm font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
               >
-                {isSpanish ? "Leer insight" : "Read insight"}
+                Read insight
               </Link>
             </article>
           ))}

@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { insights } from "@/content/insights";
 
-export default function InsightsSection({ locale = "en" }: { locale?: string }) {
-  const normalizedLocale = locale === "es" ? "es" : "en";
+export default function InsightsSection() {
   const featuredSlugs = new Set([
     "ai-agent-consulting",
     "whatsapp-automation-netherlands",
@@ -27,7 +26,7 @@ export default function InsightsSection({ locale = "en" }: { locale?: string }) 
             </p>
           </div>
           <Link
-            href={`/${normalizedLocale}/insights`}
+            href="/en/insights"
             className="inline-flex w-fit items-center justify-center rounded-lg border border-hunter-green/30 px-5 py-3 text-xs font-bold uppercase tracking-widest text-hunter-green transition-colors hover:bg-hunter-green hover:text-near-black"
           >
             View all insights
@@ -44,16 +43,13 @@ export default function InsightsSection({ locale = "en" }: { locale?: string }) 
                 {article.category}
               </p>
               <h3 className="mb-4 text-2xl font-black leading-tight tracking-tight text-white">
-                <Link
-                  href={`/${normalizedLocale}/insights/${article.slug}`}
-                  className="hover:text-hunter-green"
-                >
+                <Link href={`/en/insights/${article.slug}`} className="hover:text-hunter-green">
                   {article.title}
                 </Link>
               </h3>
               <p className="mb-6 text-sm leading-relaxed text-gray-400">{article.description}</p>
               <Link
-                href={`/${normalizedLocale}/insights/${article.slug}`}
+                href={`/en/insights/${article.slug}`}
                 className="text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
               >
                 Read article

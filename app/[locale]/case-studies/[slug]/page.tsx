@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { caseStudyBySlug, caseStudies } from "@/content/case-studies";
+import { canonicalUrl, createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
 
@@ -13,62 +14,56 @@ type PageParams = {
 };
 
 export function generateStaticParams() {
-  return caseStudies.flatMap((cs) => [
-    { locale: "en", slug: cs.slug },
-    { locale: "es", slug: cs.slug },
-    { locale: "nl", slug: cs.slug },
-  ]);
+  return caseStudies.map((cs) => ({ locale: "en", slug: cs.slug }));
 }
 
 export async function generateMetadata({ params }: { params: PageParams }): Promise<Metadata> {
+  if (params.locale !== "en") {
+    return {};
+  }
+
   const study = caseStudyBySlug.get(params.slug);
-  const isSpanish = params.locale === "es";
 
   if (!study) {
     return {};
   }
 
-  const url = `${baseUrl}/${params.locale}/case-studies/${study.slug}`;
-
-  return {
+  const path = `/case-studies/${study.slug}`;
+  const metadata = createPageMetadata({
+    locale: params.locale,
+    path,
     title: `${study.industry} Case Study | CodeHunter Lab`,
     description: study.solution,
-    alternates: {
-      canonical: url,
-      languages: {
-        en: `${baseUrl}/en/case-studies/${study.slug}`,
-        es: `${baseUrl}/es/case-studies/${study.slug}`,
-        nl: `${baseUrl}/nl/case-studies/${study.slug}`,
-        "x-default": `${baseUrl}/en/case-studies/${study.slug}`,
-      },
-    },
+    type: "article",
+  });
+
+  return {
+    ...metadata,
     openGraph: {
+      ...metadata.openGraph,
       title: `${study.industry} Case Study | CodeHunter Lab`,
       description: study.solution,
-      url,
+      url: canonicalUrl(params.locale, path),
       siteName: "CodeHunter Lab",
       type: "article",
-      locale: isSpanish ? "es_ES" : params.locale === "nl" ? "nl_NL" : "en_US",
       publishedTime: study.publishedAt,
       modifiedTime: study.modifiedAt,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${study.industry} Case Study | CodeHunter Lab`,
-      description: study.solution,
     },
   };
 }
 
 export default function CaseStudyPage({ params }: { params: PageParams }) {
+  if (params.locale !== "en") {
+    notFound();
+  }
+
   const study = caseStudyBySlug.get(params.slug);
-  const isSpanish = params.locale === "es";
 
   if (!study) {
     notFound();
   }
 
-  const studyUrl = `${baseUrl}/${params.locale}/case-studies/${study.slug}`;
+  const studyUrl = canonicalUrl("en", `/case-studies/${study.slug}`);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -104,11 +99,8 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
       <main className="mx-auto max-w-4xl px-6 pb-24 pt-32 lg:px-8">
         <BreadcrumbSchema
           items={[
-            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
-            {
-              name: isSpanish ? "Casos de éxito" : "Case Studies",
-              url: `${baseUrl}/${params.locale}/case-studies`,
-            },
+            { name: "Home", url: `${baseUrl}/en` },
+            { name: "Case Studies", url: `${baseUrl}/en/case-studies` },
             { name: study.solution, url: studyUrl },
           ]}
         />
@@ -117,20 +109,11 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
         />
 
-        {isSpanish && (
-          <div className="mb-8 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-4">
-            <p className="text-sm font-medium text-hunter-orange">
-              Este case study está disponible en inglés. Estamos trabajando en la traducción al
-              español.
-            </p>
-          </div>
-        )}
-
         <Link
-          href={`/${params.locale}/case-studies`}
+          href="/en/case-studies"
           className="mb-10 inline-block text-sm font-bold uppercase tracking-widest text-hunter-green hover:text-white"
         >
-          {isSpanish ? "Volver a case studies" : "Back to case studies"}
+          Back to case studies
         </Link>
 
         <article>
@@ -143,18 +126,10 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
             </h1>
             <p className="mb-6 text-lg leading-relaxed text-gray-300 md:text-xl">{study.problem}</p>
             <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <span>
-                {isSpanish ? "Clientes" : "Client size"}: {study.clientSize}
-              </span>
-              <span>
-                {isSpanish ? "Cronograma" : "Timeline"}: {study.timeline}
-              </span>
-              <span>
-                {isSpanish ? "Año" : "Year"}: {study.year}
-              </span>
-              <span>
-                {isSpanish ? "Publicado" : "Published"} {study.publishedAt}
-              </span>
+              <span>Client size: {study.clientSize}</span>
+              <span>Timeline: {study.timeline}</span>
+              <span>Year: {study.year}</span>
+              <span>Published {study.publishedAt}</span>
             </div>
           </header>
 
@@ -177,25 +152,19 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
 
           {/* Problem statement */}
           <section className="mb-12">
-            <h2 className="mb-4 text-2xl font-black tracking-tight">
-              {isSpanish ? "El problema" : "The problem"}
-            </h2>
+            <h2 className="mb-4 text-2xl font-black tracking-tight">The problem</h2>
             <p className="text-lg leading-relaxed text-gray-300">{study.problem}</p>
           </section>
 
           {/* Solution description */}
           <section className="mb-12">
-            <h2 className="mb-4 text-2xl font-black tracking-tight">
-              {isSpanish ? "La solución" : "The solution"}
-            </h2>
+            <h2 className="mb-4 text-2xl font-black tracking-tight">The solution</h2>
             <p className="text-lg leading-relaxed text-gray-300">{study.solution}</p>
           </section>
 
           {/* Technologies used */}
           <section className="mb-12">
-            <h2 className="mb-4 text-2xl font-black tracking-tight">
-              {isSpanish ? "Tecnologías" : "Technologies"}
-            </h2>
+            <h2 className="mb-4 text-2xl font-black tracking-tight">Technologies</h2>
             <div className="flex flex-wrap gap-2">
               {study.technologies.map((tech) => (
                 <span
@@ -249,18 +218,17 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
           {/* CTA to contact */}
           <section className="mt-14 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-6">
             <h2 className="mb-3 text-2xl font-black tracking-tight">
-              {isSpanish ? "¿Algo similar en tu negocio?" : "Something similar in your business?"}
+              Something similar in your business?
             </h2>
             <p className="mb-6 text-gray-300">
-              {isSpanish
-                ? "Hablemos de cómo la automatización AI puede reducir costes operativos y recuperar horas semanales en tu equipo."
-                : "Let's talk about how AI automation can reduce operational costs and reclaim weekly hours for your team."}
+              Let&apos;s talk about how AI automation can reduce operational costs and reclaim
+              weekly hours for your team.
             </p>
             <Link
               href={`/${params.locale}/#contact`}
               className="inline-block rounded-lg bg-hunter-orange px-6 py-3 text-sm font-bold uppercase tracking-widest text-near-black transition-opacity hover:opacity-90"
             >
-              {isSpanish ? "Contactar" : "Get in touch"}
+              Get in touch
             </Link>
           </section>
         </article>

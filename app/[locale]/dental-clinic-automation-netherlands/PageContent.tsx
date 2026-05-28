@@ -1,6 +1,7 @@
 "use client";
 
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
+import { useLocale } from "next-intl";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -19,6 +20,8 @@ import {
 
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
 const painPointIcons = [
   CalendarXIcon,
@@ -126,6 +129,9 @@ export default function DentalClinicAutomationContent({
   cta,
   seo,
 }: PageProps) {
+  const locale = useLocale();
+  const labels = getCommonBreadcrumbLabels(locale);
+
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -151,12 +157,16 @@ export default function DentalClinicAutomationContent({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: labels.home, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Dental Clinic Automation Netherlands",
-        item: `https://www.codehunterlab.com/en/dental-clinic-automation-netherlands`,
+        name: getLocaleValue(locale, {
+          en: "Dental Clinic Automation Netherlands",
+          es: "Automatización para Clínicas Dentales en Países Bajos",
+          nl: "Automatisering voor Tandartspraktijken in Nederland",
+        }),
+        item: localizedUrl(locale, "/dental-clinic-automation-netherlands"),
       },
     ],
   };

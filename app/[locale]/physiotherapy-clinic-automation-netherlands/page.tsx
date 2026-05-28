@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
 import PhysiotherapyClinicAutomationContent from "./PageContent";
 
 const path = "/physiotherapy-clinic-automation-netherlands";
@@ -9,24 +11,18 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "PhysiotherapyClinic" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "Physiotherapy Automation Netherlands | Intake & Reminders",
-    description:
-      "Automate physiotherapy referral intake, appointment reminders, patient drop-out detection, and reporting for practices in the Netherlands.",
-    keywords: [
-      "physiotherapy clinic automation Netherlands",
-      "fysiotherapie praktijk automatisering",
-      "Zorgdomein integration automation",
-      "physiotherapy appointment reminder system",
-      "patient drop-out prevention physiotherapy",
-      "fysiotherapie CRM Nederland",
-      "physiotherapy referral intake automation",
-      "Intramed integration Netherlands",
-      "Physiosoftware automation",
-      "fysiotherapie software integratie",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "Physiotherapy Automation Netherlands | Intake & Reminders",
+      es: "Automatización para Clínicas de Fisioterapia en Países Bajos | Intake y Recordatorios",
+      nl: "Automatisering voor Fysiotherapiepraktijken in Nederland | Intake en Herinneringen",
+    }),
+    description: stripHtml(t.raw("Hero.description") as string),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

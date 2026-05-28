@@ -1,15 +1,24 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { localizedUrl } from "@/utils/metadata";
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
 
 export default function SoftwareDevelopmentLeidenContent() {
   const t = useTranslations("SoftwareLeiden");
+  const locale = useLocale();
+  const breadcrumbLabel =
+    locale === "es"
+      ? "Desarrollo de Software Leiden"
+      : locale === "nl"
+        ? "Softwareontwikkeling Leiden"
+        : "Software Development Leiden";
+  const homeLabel = locale === "es" ? "Inicio" : locale === "nl" ? "Start" : "Home";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -44,31 +53,16 @@ export default function SoftwareDevelopmentLeidenContent() {
     },
   };
 
-  const faqQuestions = [
-    {
-      q: "What types of applications do you build in Leiden?",
-      a: "We build custom web applications, internal dashboards, booking systems, workflow tools, and customer portals for local businesses in Leiden and surrounding areas, primarily using React and Next.js.",
-    },
-    {
-      q: "How long does it take to build a custom web application?",
-      a: "A focused MVP typically takes 4-8 weeks from scoping to deployment. Timeline depends on feature complexity, third-party integrations, and design requirements.",
-    },
-    {
-      q: "Do you work with companies outside Leiden?",
-      a: "Yes. While based in Leiden, we serve clients across the Netherlands and internationally. All engagements can run fully remotely.",
-    },
-  ];
-
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: homeLabel, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Software Development Leiden",
-        item: `https://www.codehunterlab.com/en/software-development-leiden`,
+        name: breadcrumbLabel,
+        item: localizedUrl(locale, "/software-development-leiden"),
       },
     ],
   };
@@ -303,12 +297,13 @@ export default function SoftwareDevelopmentLeidenContent() {
         <section className="relative z-10 mx-auto max-w-4xl border-t border-white/5 px-6 py-32">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tighter md:text-6xl">
-              Frequently asked questions
+              {t("FAQ.title")}
             </h2>
+            <p className="text-xl text-gray-400">{t("FAQ.subtitle")}</p>
           </div>
 
           <div className="space-y-6">
-            {faqQuestions.map((item) => (
+            {(t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => (
               <GlassCard
                 key={item.q}
                 className="group cursor-default p-8"

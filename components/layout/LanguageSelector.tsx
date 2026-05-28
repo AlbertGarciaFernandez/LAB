@@ -1,20 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/navigation";
 import { m, AnimatePresence } from "framer-motion";
+import { LOCALES, LOCALE_METADATA } from "@/utils/constants";
 
-const locales = [
-  { code: "en", label: "EN", flag: "🇬🇧", name: "English" },
-  { code: "es", label: "ES", flag: "🇪🇸", name: "Español" },
-  { code: "nl", label: "NL", flag: "🇳🇱", name: "Nederlands" },
-];
+const locales = LOCALES.map((code) => ({ code, ...LOCALE_METADATA[code] }));
 
 export default function LanguageSelector() {
   const locale = useLocale();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const t = useTranslations("Header.localeSwitcher");
+  const normalizedPathname = pathname.replace(/^\/(en|es|nl)(?=\/|$)/, "") || "/";
 
   const current = locales.find((l) => l.code === locale) ?? locales[0];
 
@@ -30,7 +29,7 @@ export default function LanguageSelector() {
         onBlur={() => setOpen(false)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        aria-label={`Current language: ${current.name}. Click to change.`}
+        aria-label={t("currentLanguage", { language: current.name })}
         className="group flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-gray-400 backdrop-blur-md transition-all hover:border-hunter-green/30 hover:text-white"
       >
         <span className="text-sm leading-none">{current.flag}</span>
@@ -63,7 +62,7 @@ export default function LanguageSelector() {
             exit={{ opacity: 0, y: 4, scale: 0.97 }}
             transition={{ duration: 0.15 }}
             role="listbox"
-            aria-label="Select language"
+            aria-label={t("selectLanguage")}
             className="absolute right-0 top-[calc(100%+8px)] z-50 w-44 overflow-hidden rounded-xl border border-white/10 bg-near-black/95 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-xl"
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
@@ -75,7 +74,7 @@ export default function LanguageSelector() {
                 return (
                   <Link
                     key={l.code}
-                    href={pathname}
+                    href={normalizedPathname}
                     locale={l.code}
                     role="option"
                     aria-selected={isActive}

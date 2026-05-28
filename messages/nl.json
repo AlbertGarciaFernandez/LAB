@@ -51,6 +51,10 @@
     "cta": {
       "AIConsulting": "AI Consulting",
       "LetsWork": "Laten we praten"
+    },
+    "localeSwitcher": {
+      "currentLanguage": "Huidige taal: {language}. Klik om te wijzigen.",
+      "selectLanguage": "Selecteer taal"
     }
   },
   "Hero": {
@@ -1573,6 +1577,56 @@
           "desc": "Volledige technische documentatie, een runbook en een delivery-sessie. Jij bent de eigenaar van het systeem — met of zonder ons."
         }
       ]
+    },
+    "FAQ": {
+      "badge": "AI CONSULTING FAQ",
+      "title": "AI Consulting",
+      "titleHighlight": "FAQ — Nederland",
+      "items": [
+        {
+          "q": "Wat kost een AI consulting traject?",
+          "a": "De scope varieert sterk, daarom publiceren we geen vaste tarieven. AI Strategy Sprints liggen meestal tussen €2.500 en €5.000. Implementatieprojecten starten vanaf €8.000 en schalen mee met de integratiecomplexiteit. Doorlopende partnertrajecten starten vanaf €5.000 per maand en worden afgestemd op de benodigde engineeringcapaciteit. We geven een gedetailleerde raming na het eerste strategiegesprek, voordat je ergens aan vastzit."
+        },
+        {
+          "q": "Hoe lang duurt een typisch project?",
+          "a": "AI Strategy Sprint: 1-2 weken. Implementatieprojecten: 4-8 weken van scope tot deployment, afhankelijk van hoeveel systemen betrokken zijn en hoe complex de integratie is. We zetten realistische tijdlijnen tijdens de scoping en wijzigen die alleen als de vereisten wezenlijk veranderen."
+        },
+        {
+          "q": "Wat hebben jullie van ons nodig om te starten?",
+          "a": "Een duidelijke omschrijving van het probleem dat je wilt oplossen en toegang tot de relevante systemen — CRM-credentials, API-documentatie of iets vergelijkbaars. We hebben geen weken onboarding nodig. Een gerichte discovery call is meestal genoeg om de scope scherp te krijgen."
+        },
+        {
+          "q": "Hoe gaan jullie om met onze data en privacy?",
+          "a": "AVG-compliance is de basis, geen optie. Tijdens de scoping definiëren we de datastromen: welke data door het systeem gaat, waar die wordt opgeslagen en wie toegang heeft. Voor gevoelige sectoren of gereguleerde data kunnen we werken met on-premise of private cloud deployments."
+        },
+        {
+          "q": "Integreert de AI met onze bestaande tools?",
+          "a": "Ja. Integratie met je bestaande stack is een kernvereiste, geen extra feature. We hebben ervaring met HubSpot, Salesforce, Pipedrive, WhatsApp Business API, Slack, gangbare ERP's en maatwerk-API's. Als jij het gebruikt, hebben we het waarschijnlijk al gekoppeld of kunnen we dat doen."
+        },
+        {
+          "q": "Werken jullie ook met bedrijven buiten Nederland?",
+          "a": "Ja. We zijn gevestigd in Leiden, maar werken met klanten in heel Europa en internationaal. Alle trajecten kunnen volledig remote verlopen."
+        },
+        {
+          "q": "Wat gebeurt er na deployment?",
+          "a": "Implementatieprojecten bevatten 30 dagen support na livegang. Doorlopende partnertrajecten dekken continu onderhoud en doorontwikkeling. Bij afgeronde eenmalige projecten leveren we volledige documentatie en een handoff-sessie zodat je team het systeem zelfstandig kan beheren."
+        },
+        {
+          "q": "Kunnen jullie voortbouwen op tools die we al gebruiken, zoals Make of Zapier?",
+          "a": "Ja. We migreren klanten vaak van Zapier of Make naar robuustere en kostenefficiëntere stacks, of breiden bestaande automatiseringen uit. We adviseren op basis van volume, budget en onderhoudscapaciteit, niet op basis van wat voor ons het makkelijkst is."
+        },
+        {
+          "q": "Wat als we nog niet weten met welke AI use case we moeten beginnen?",
+          "a": "Daar is de AI Strategy Sprint precies voor bedoeld. We brengen je operatie in kaart, rangschikken automatiseringskansen op ROI en geven je een geprioriteerde roadmap mee. Je vertrekt met een duidelijk implementatieplan, of je nu met ons bouwt of het intern oppakt."
+        }
+      ]
+    },
+    "FinalCTA": {
+      "title": "Boek een Gratis",
+      "titleHighlight": "AI Strategiegesprek",
+      "description": "Praat met een senior engineer, niet met sales. In 30 minuten brengen we je automation opportunity met de hoogste impact in kaart en zeggen we eerlijk of het de moeite waard is om te bouwen.",
+      "primary": "Boek AI Strategiegesprek",
+      "secondary": "Mail Ons Direct"
     }
   },
   "SoftwareLeiden": {
@@ -1791,6 +1845,7 @@
     },
     "Comparison": {
       "title": "Waarom Maatwerk vs Low-Code?",
+      "recommended": "Aanbevolen",
       "custom": {
         "title": "Maatwerk Ontwikkeling (Onze Methode)",
         "points": [

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
 import VeterinaryClinicAutomationContent from "./PageContent";
 
 const path = "/veterinary-clinic-automation-netherlands";
@@ -9,24 +11,18 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "VeterinaryClinic" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "Veterinary Clinic Automation Netherlands — CodeHunter Lab",
-    description:
-      "Reduce no-shows, automate pet owner communication, and connect your practice software. Custom automation systems for veterinary clinics in the Netherlands. Based in Leiden.",
-    keywords: [
-      "veterinary clinic automation Netherlands",
-      "dierenkliniek automatisering",
-      "vet appointment reminder system",
-      "veterinary CRM integration Netherlands",
-      "no-show reduction veterinary practice",
-      "pet owner recall system Netherlands",
-      "WhatsApp veterinary communication",
-      "veterinary practice management software integration",
-      "dierenarts automatisering",
-      "veterinary lead automation Netherlands",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "Veterinary Clinic Automation Netherlands — CodeHunter Lab",
+      es: "Automatización para Clínicas Veterinarias en Países Bajos — CodeHunter Lab",
+      nl: "Automatisering voor Dierenklinieken in Nederland — CodeHunter Lab",
+    }),
+    description: stripHtml(t.raw("Hero.description") as string),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

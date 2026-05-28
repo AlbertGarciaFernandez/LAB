@@ -1,31 +1,26 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { localizedUrl } from "@/utils/metadata";
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
 import { ChartBarIcon, LockKeyIcon, CalendarIcon } from "@phosphor-icons/react/dist/ssr";
 
 export default function CustomInternalToolsContent() {
   const t = useTranslations("InternalTools");
-
-  const faqQuestions = [
-    {
-      q: "What is a custom internal tool?",
-      a: "A custom internal tool is software built specifically for your team's operational workflows — admin dashboards, data entry portals, approval systems, and reporting tools that replace manual spreadsheet processes.",
-    },
-    {
-      q: "How are internal tools different from public apps?",
-      a: "Internal tools focus on operational efficiency rather than customer-facing features. They are faster to launch, easier to measure, and directly connected to time and cost savings.",
-    },
-    {
-      q: "Can internal tools integrate with our existing software?",
-      a: "Yes. We design internal tools to connect with your existing CRM, ERP, databases, and APIs so data flows automatically instead of being copied manually.",
-    },
-  ];
+  const locale = useLocale();
+  const homeLabel = locale === "es" ? "Inicio" : locale === "nl" ? "Start" : "Home";
+  const servicesLabel = locale === "es" ? "Servicios" : locale === "nl" ? "Diensten" : "Services";
+  const breadcrumbLabel =
+    locale === "es"
+      ? "Herramientas Internas Personalizadas"
+      : locale === "nl"
+        ? "Maatwerk Interne Tools"
+        : "Custom Internal Tools";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -64,18 +59,18 @@ export default function CustomInternalToolsContent() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `https://www.codehunterlab.com/en` },
+      { "@type": "ListItem", position: 1, name: homeLabel, item: localizedUrl(locale) },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Services",
-        item: `https://www.codehunterlab.com/en/services`,
+        name: servicesLabel,
+        item: localizedUrl(locale, "/services"),
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: "Custom Internal Tools",
-        item: `https://www.codehunterlab.com/en/services/custom-internal-tools-development`,
+        name: breadcrumbLabel,
+        item: localizedUrl(locale, "/services/custom-internal-tools-development"),
       },
     ],
   };
@@ -172,7 +167,7 @@ export default function CustomInternalToolsContent() {
                 glowColor="orange"
               >
                 <div className="absolute right-0 top-0 bg-purple-500 px-6 py-2 text-xs font-black uppercase tracking-widest text-black">
-                  Recommended
+                  {t("Comparison.recommended")}
                 </div>
                 <h3 className="mb-8 text-3xl font-black uppercase italic text-white">
                   {t("Comparison.custom.title")}
@@ -281,12 +276,13 @@ export default function CustomInternalToolsContent() {
         <section className="relative z-10 mx-auto max-w-4xl border-t border-white/5 px-6 py-32">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tighter md:text-6xl">
-              Frequently asked questions
+              {t("FAQ.title")}
             </h2>
+            <p className="text-xl text-gray-400">{t("FAQ.subtitle")}</p>
           </div>
 
           <div className="space-y-6">
-            {faqQuestions.map((item) => (
+            {(t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => (
               <GlassCard key={item.q} className="group p-8" hoverEffect={true} glowColor="green">
                 <h3 className="mb-4 flex items-center gap-4 text-2xl font-bold text-white">
                   <span className="text-hunter-green transition-transform group-hover:rotate-90">

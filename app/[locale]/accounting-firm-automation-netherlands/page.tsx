@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
 import AccountingFirmAutomationContent from "./PageContent";
 
 const path = "/accounting-firm-automation-netherlands";
@@ -9,24 +11,18 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "AccountingFirm" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "Accounting Firm Automation Netherlands — CodeHunter Lab",
-    description:
-      "Automate invoice processing, client communication, and financial reporting. Custom automation systems for accounting firms in the Netherlands. Based in Leiden.",
-    keywords: [
-      "accounting firm automation Netherlands",
-      "accountantskantoor automatisering",
-      "invoice automation Netherlands",
-      "accounting CRM integration Netherlands",
-      "financial reporting automation",
-      "client onboarding automation accounting",
-      "Exact Online integration",
-      "Twinfield automation Netherlands",
-      "accountancy workflow automation",
-      "boekhouding automatisering Nederland",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "Accounting Firm Automation Netherlands — CodeHunter Lab",
+      es: "Automatización para Despachos Contables en Países Bajos — CodeHunter Lab",
+      nl: "Automatisering voor Accountantskantoren in Nederland — CodeHunter Lab",
+    }),
+    description: stripHtml(t.raw("Hero.description") as string),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

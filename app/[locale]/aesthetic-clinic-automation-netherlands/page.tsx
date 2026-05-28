@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
 import AestheticClinicAutomationContent from "./PageContent";
 
 const path = "/aesthetic-clinic-automation-netherlands";
@@ -9,24 +11,18 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "AestheticClinic" });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "Aesthetic Clinic Automation Netherlands — CodeHunter Lab",
-    description:
-      "Convert more aesthetic clinic inquiries into booked treatments. Custom CRM, lead nurturing, and booking automation for cosmetic and dermatology clinics in the Netherlands.",
-    keywords: [
-      "aesthetic clinic automation Netherlands",
-      "cosmetic clinic CRM Netherlands",
-      "lead nurturing aesthetic clinic",
-      "dermatology clinic booking automation",
-      "cosmetic clinic marketing ROI",
-      "beauty clinic WhatsApp automation",
-      "patient retention aesthetic clinic",
-      "kliniek automatisering Nederland",
-      "aesthetic clinic lead response system",
-      "cosmetic clinic funnel automation Netherlands",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "Aesthetic Clinic Automation Netherlands — CodeHunter Lab",
+      es: "Automatización para Clínicas Estéticas en Países Bajos — CodeHunter Lab",
+      nl: "Automatisering voor Esthetische Klinieken in Nederland — CodeHunter Lab",
+    }),
+    description: stripHtml(t.raw("Hero.description") as string),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

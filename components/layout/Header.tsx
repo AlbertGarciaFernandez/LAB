@@ -25,6 +25,7 @@ import {
   HouseIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import LanguageSelector from "./LanguageSelector";
+import { LOCALES, LOCALE_METADATA } from "@/utils/constants";
 
 type NavState = {
   open: boolean;
@@ -87,6 +88,7 @@ const Header: React.FC = () => {
   });
   const { open, openDropdown, mobileExpanded } = nav;
   const t = useTranslations("Header");
+  const normalizedPathname = pathname.replace(/^\/(en|es|nl)(?=\/|$)/, "") || "/";
 
   // Dropdown groups with all pages
   const navGroups = [
@@ -196,11 +198,7 @@ const Header: React.FC = () => {
     { name: t("nav.Process"), href: "/#process-contact" },
   ];
 
-  const locales = [
-    { code: "en", label: "EN", flag: "🇬🇧" },
-    { code: "es", label: "ES", flag: "🇪🇸" },
-    { code: "nl", label: "NL", flag: "🇳🇱" },
-  ];
+  const locales = LOCALES.map((code) => ({ code, ...LOCALE_METADATA[code] }));
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -452,7 +450,8 @@ const Header: React.FC = () => {
 
               <li>
                 <Link
-                  href={`/${locale}/insights`}
+                  href="/insights"
+                  locale="en"
                   className="group relative block px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white"
                 >
                   {t("nav.Insights")}
@@ -461,7 +460,8 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href={`/${locale}/case-studies`}
+                  href="/case-studies"
+                  locale="en"
                   className="group relative block px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white"
                 >
                   {t("nav.CaseStudies")}
@@ -650,7 +650,8 @@ const Header: React.FC = () => {
                 className="w-full max-w-sm"
               >
                 <Link
-                  href={`/${locale}/insights`}
+                  href="/insights"
+                  locale="en"
                   onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                   className="block w-full rounded-xl px-5 py-3 text-xl font-bold text-gray-400 transition-colors hover:text-hunter-orange"
                 >
@@ -664,7 +665,8 @@ const Header: React.FC = () => {
                 className="w-full max-w-sm"
               >
                 <Link
-                  href={`/${locale}/case-studies`}
+                  href="/case-studies"
+                  locale="en"
                   onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                   className="block w-full rounded-xl px-5 py-3 text-xl font-bold text-gray-400 transition-colors hover:text-hunter-orange"
                 >
@@ -688,7 +690,7 @@ const Header: React.FC = () => {
                     return (
                       <Link
                         key={l.code}
-                        href={pathname}
+                        href={normalizedPathname}
                         locale={l.code}
                         onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                         className={`flex flex-col items-center gap-1 rounded-xl px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all ${

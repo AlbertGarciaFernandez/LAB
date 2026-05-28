@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { splitKeywords } from "../../_shared/localeCopy";
 import CustomLLMPageContent from "./PageContent";
 
 const path = "/expertise/custom-llm-development";
@@ -9,18 +11,17 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "ExpertisePages.CustomLLMs",
+  });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "Custom LLM Development & Fine-Tuning Netherlands",
-    description:
-      "Build private AI models for your enterprise. We fine-tune Llama and Mistral models for specific business use cases in the Netherlands.",
-    keywords: [
-      "custom llm development",
-      "fine-tuning ai models",
-      "private ai server",
-      "llama 3 business implementation",
-    ],
+    title: t("SEO.title"),
+    description: t("SEO.description"),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

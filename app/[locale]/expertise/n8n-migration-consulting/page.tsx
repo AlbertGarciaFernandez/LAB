@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
+import { getTranslations } from "next-intl/server";
+import { splitKeywords } from "../../_shared/localeCopy";
 import N8nMigrationPageContent from "./PageContent";
 
 const path = "/expertise/n8n-migration-consulting";
@@ -9,18 +11,17 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "ExpertisePages.n8nMigration",
+  });
+
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "n8n Consulting & Migration Services | Zapier Alternative",
-    description:
-      "Expert n8n consultants in the Netherlands. We migrate tailored workflows from Zapier and Make to n8n for better performance and lower costs.",
-    keywords: [
-      "n8n consultant netherlands",
-      "migrate from zapier to n8n",
-      "workflow automation expert",
-      "self-hosted automation",
-    ],
+    title: t("SEO.title"),
+    description: t("SEO.description"),
+    keywords: splitKeywords(t("SEO.keywords")),
   });
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { caseStudies } from "@/content/case-studies";
@@ -12,17 +13,16 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const isSpanish = params.locale === "es";
+  if (params.locale !== "en") {
+    return {};
+  }
 
-  const title = isSpanish ? "Case Studies | CodeHunter Lab" : "Case Studies | CodeHunter Lab";
-  const description = isSpanish
-    ? "Ejemplos reales de automatización AI y flujos de trabajo para clínicas, despachos de contabilidad y negocios holandeses."
-    : "Real-world automation and AI workflow case studies for Dutch dental clinics, accounting firms, and SMEs.";
   return createPageMetadata({
-    locale: params.locale,
+    locale: "en",
     path: "/case-studies",
-    title,
-    description,
+    title: "AI Automation Case Studies in the Netherlands | CodeHunter Lab",
+    description:
+      "Real-world automation and AI workflow case studies for Dutch dental clinics, accounting firms, and SMEs.",
     keywords: [
       "AI automation case studies",
       "workflow automation Netherlands",
@@ -32,16 +32,17 @@ export async function generateMetadata({
 }
 
 export default function CaseStudiesPage({ params }: { params: { locale: string } }) {
-  const isSpanish = params.locale === "es";
+  if (params.locale !== "en") {
+    notFound();
+  }
 
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: isSpanish ? "Case Studies | CodeHunter Lab" : "Case Studies | CodeHunter Lab",
-    description: isSpanish
-      ? "Ejemplos reales de automatización AI y flujos de trabajo para clínicas, despachos de contabilidad y negocios holandeses."
-      : "Real-world automation and AI workflow case studies for Dutch dental clinics, accounting firms, and SMEs.",
-    url: `${baseUrl}/${params.locale}/case-studies`,
+    name: "AI Automation Case Studies in the Netherlands",
+    description:
+      "Real-world automation and AI workflow case studies for Dutch dental clinics, accounting firms, and SMEs.",
+    url: `${baseUrl}/en/case-studies`,
     publisher: {
       "@type": "Organization",
       name: "CodeHunter Lab",
@@ -50,7 +51,7 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
     hasPart: caseStudies.map((cs) => ({
       "@type": "Article",
       headline: `${cs.industry} — ${cs.solution}`,
-      url: `${baseUrl}/${params.locale}/case-studies/${cs.slug}`,
+      url: `${baseUrl}/en/case-studies/${cs.slug}`,
       datePublished: cs.publishedAt,
       dateModified: cs.modifiedAt,
     })),
@@ -62,11 +63,8 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
       <main className="mx-auto max-w-7xl px-6 pb-24 pt-32 lg:px-8">
         <BreadcrumbSchema
           items={[
-            { name: isSpanish ? "Inicio" : "Home", url: `${baseUrl}/${params.locale}` },
-            {
-              name: isSpanish ? "Casos de éxito" : "Case Studies",
-              url: `${baseUrl}/${params.locale}/case-studies`,
-            },
+            { name: "Home", url: `${baseUrl}/en` },
+            { name: "Case Studies", url: `${baseUrl}/en/case-studies` },
           ]}
         />
         <script
@@ -74,26 +72,16 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
         />
 
-        {isSpanish && (
-          <div className="mb-8 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-4">
-            <p className="text-sm font-medium text-hunter-orange">
-              Estos case studies están disponibles en inglés. Estamos trabajando en la traducción al
-              español.
-            </p>
-          </div>
-        )}
-
         <section className="max-w-3xl">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-green">
-            {isSpanish ? "Trabajo de clientes" : "Client work"}
+            Client work
           </p>
           <h1 className="mb-6 text-5xl font-black leading-none tracking-tighter md:text-7xl">
-            {isSpanish ? "Case studies." : "Case studies."}
+            Case studies.
           </h1>
           <p className="text-lg leading-relaxed text-gray-300 md:text-xl">
-            {isSpanish
-              ? "Resultados reales de automatización AI, integración de sistemas y flujos de trabajo n8n para negocios en los Países Bajos."
-              : "Real results from AI automation, system integration, and n8n workflow projects for Dutch businesses."}
+            Real results from AI automation, system integration, and n8n workflow projects for Dutch
+            businesses.
           </p>
         </section>
 
@@ -110,10 +98,7 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
               </div>
 
               <h2 className="mb-3 text-2xl font-black leading-tight tracking-tight">
-                <Link
-                  href={`/${params.locale}/case-studies/${cs.slug}`}
-                  className="hover:text-hunter-green"
-                >
+                <Link href={`/en/case-studies/${cs.slug}`} className="hover:text-hunter-green">
                   {cs.solution}
                 </Link>
               </h2>
@@ -135,10 +120,10 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
               </div>
 
               <Link
-                href={`/${params.locale}/case-studies/${cs.slug}`}
+                href={`/en/case-studies/${cs.slug}`}
                 className="text-sm font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
               >
-                {isSpanish ? "Ver case study" : "Read case study"}
+                Read case study
               </Link>
             </article>
           ))}

@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { insights } from "@/content/insights";
 import { caseStudies } from "@/content/case-studies";
-import { routing } from "@/i18n/routing";
+import { getSeoLocalePolicy } from "@/utils/seo-locale";
 
 // Last modified dates per route — update when page content changes
 const routeMeta: Record<
@@ -131,11 +131,9 @@ const aboutPageMeta = {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.codehunterlab.com";
   const sitemapEntries: MetadataRoute.Sitemap = [];
-  const englishInsightsUrl = `${baseUrl}/en/insights`;
-  const englishAboutUrl = `${baseUrl}/en/about`;
 
   Object.entries(routeMeta).forEach(([route, meta]) => {
-    routing.locales.forEach((locale) => {
+    getSeoLocalePolicy(route).indexableLocales.forEach((locale) => {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}${route}`,
         lastModified: new Date(meta.lastModified),
@@ -146,62 +144,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   sitemapEntries.push({
-    url: englishInsightsUrl,
+    url: `${baseUrl}/en/insights`,
     lastModified: new Date(insightsIndexMeta.lastModified),
     changeFrequency: insightsIndexMeta.changeFrequency,
     priority: insightsIndexMeta.priority,
   });
 
-  routing.locales
-    .filter((locale) => locale !== "en")
-    .forEach((locale) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}/insights`,
-        lastModified: new Date(insightsIndexMeta.lastModified),
-        changeFrequency: insightsIndexMeta.changeFrequency,
-        priority: insightsIndexMeta.priority,
-      });
+  getSeoLocalePolicy("/about").indexableLocales.forEach((locale) => {
+    sitemapEntries.push({
+      url: `${baseUrl}/${locale}/about`,
+      lastModified: new Date(aboutPageMeta.lastModified),
+      changeFrequency: aboutPageMeta.changeFrequency,
+      priority: aboutPageMeta.priority,
     });
-
-  sitemapEntries.push({
-    url: englishAboutUrl,
-    lastModified: new Date(aboutPageMeta.lastModified),
-    changeFrequency: aboutPageMeta.changeFrequency,
-    priority: aboutPageMeta.priority,
   });
-
-  routing.locales
-    .filter((locale) => locale !== "en")
-    .forEach((locale) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}/about`,
-        lastModified: new Date(aboutPageMeta.lastModified),
-        changeFrequency: aboutPageMeta.changeFrequency,
-        priority: aboutPageMeta.priority,
-      });
-    });
 
   insights.forEach((article) => {
-    sitemapEntries.push({
-      url: `${baseUrl}/en/insights/${article.slug}`,
-      lastModified: new Date(article.modifiedAt),
-      changeFrequency: insightArticleMeta.changeFrequency,
-      priority: insightArticleMeta.priority,
-    });
-
-    routing.locales
-      .filter((locale) => locale !== "en")
-      .forEach((locale) => {
-        sitemapEntries.push({
-          url: `${baseUrl}/${locale}/insights/${article.slug}`,
-          lastModified: new Date(article.modifiedAt),
-          changeFrequency: insightArticleMeta.changeFrequency,
-          priority: insightArticleMeta.priority,
-        });
+    getSeoLocalePolicy(`/insights/${article.slug}`).indexableLocales.forEach((locale) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}/insights/${article.slug}`,
+        lastModified: new Date(article.modifiedAt),
+        changeFrequency: insightArticleMeta.changeFrequency,
+        priority: insightArticleMeta.priority,
       });
+    });
   });
 
-  routing.locales.forEach((locale) => {
+  getSeoLocalePolicy("/case-studies").indexableLocales.forEach((locale) => {
     sitemapEntries.push({
       url: `${baseUrl}/${locale}/case-studies`,
       lastModified: new Date(caseStudiesIndexMeta.lastModified),
@@ -211,7 +180,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   caseStudies.forEach((study) => {
-    routing.locales.forEach((locale) => {
+    getSeoLocalePolicy(`/case-studies/${study.slug}`).indexableLocales.forEach((locale) => {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}/case-studies/${study.slug}`,
         lastModified: new Date(study.modifiedAt),

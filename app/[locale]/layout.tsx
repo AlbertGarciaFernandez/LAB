@@ -7,6 +7,8 @@ import CookieConsent from "@/components/ui/CookieConsent";
 import GoogleAnalyticsConditional from "@/components/analytics/GoogleAnalyticsConditional";
 import LocaleFooterGate from "@/components/layout/LocaleFooterGate";
 import { MotionProvider } from "@/components/providers/MotionProvider";
+import { LOCALES, SCHEMA_AVAILABLE_LANGUAGES, normalizeLocale } from "@/utils/constants";
+import { createPageMetadata } from "@/utils/metadata";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
@@ -15,7 +17,6 @@ export const viewport = {
   themeColor: "#0B0B0B",
 };
 
-const baseUrl = "https://www.codehunterlab.com";
 const defaultTitle = "AI Automation Agency Netherlands | CodeHunter Lab";
 const defaultDescription =
   "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.";
@@ -25,54 +26,30 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = params;
+  const locale = normalizeLocale(params.locale);
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const metadata = createPageMetadata({
+    locale,
+    path: "",
+    title: locale === "en" ? defaultTitle : t("title"),
+    description: locale === "en" ? defaultDescription : t("description"),
+    keywords: t.raw("keywords") as string[],
+  });
+  const metadataRobots =
+    typeof metadata.robots === "object" && metadata.robots ? metadata.robots : {};
+
   return {
-    metadataBase: new URL(baseUrl),
+    ...metadata,
     icons: {
       icon: "/logo-hntr.svg",
       shortcut: "/logo-hntr.svg",
       apple: "/apple-touch-icon.png",
     },
-    title: locale === "en" ? defaultTitle : t("title"),
-    description: locale === "en" ? defaultDescription : t("description"),
-    keywords: t.raw("keywords") as string[],
     robots: {
-      index: true,
-      follow: true,
+      index: metadataRobots.index ?? true,
+      follow: metadataRobots.follow ?? true,
       "max-snippet": 150,
       "max-image-preview": "large",
-    },
-    alternates: {
-      canonical: `${baseUrl}/${locale}`,
-      languages: {
-        en: `${baseUrl}/en`,
-        es: `${baseUrl}/es`,
-        nl: `${baseUrl}/nl`,
-        "x-default": `${baseUrl}/en`,
-      },
-    },
-    openGraph: {
-      title: locale === "en" ? defaultTitle : t("title"),
-      description: locale === "en" ? defaultDescription : t("description"),
-      url: `${baseUrl}/${locale}`,
-      siteName: "CodeHunter Lab",
-      type: "website",
-      locale: locale === "es" ? "es_ES" : locale === "nl" ? "nl_NL" : "en_US",
-      images: [
-        {
-          url: `${baseUrl}/${locale}/opengraph-image`,
-          width: 1200,
-          height: 630,
-          alt: locale === "en" ? defaultTitle : t("title"),
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: locale === "en" ? defaultTitle : t("title"),
-      description: locale === "en" ? defaultDescription : t("description"),
-      images: [`${baseUrl}/${locale}/opengraph-image`],
     },
   };
 }
@@ -85,8 +62,10 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   const messages = await getMessages();
+  const normalizedLocale = normalizeLocale(locale);
+
   return (
-    <html lang={locale} className={`${sans.variable} ${mono.variable}`}>
+    <html lang={normalizedLocale} className={`${sans.variable} ${mono.variable}`}>
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
@@ -130,7 +109,7 @@ export default async function RootLayout({
                 telephone: "+31-6-2940-5122",
                 contactType: "customer service",
                 areaServed: "NL",
-                availableLanguage: ["English", "Spanish", "Dutch"],
+                availableLanguage: SCHEMA_AVAILABLE_LANGUAGES,
               },
               knowsAbout: [
                 "AI automation",
@@ -248,7 +227,7 @@ export default async function RootLayout({
                 name: "CodeHunter Lab",
                 logo: "https://www.codehunterlab.com/logo-hntr.svg",
               },
-              inLanguage: ["en", "es"],
+              inLanguage: LOCALES,
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
