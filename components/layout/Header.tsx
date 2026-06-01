@@ -17,10 +17,8 @@ import {
   TreeStructureIcon,
   ArrowsClockwiseIcon,
   GlobeIcon,
-  ToothIcon,
   SparkleIcon,
   HeartbeatIcon,
-  PawPrintIcon,
   ChartBarIcon,
   HouseIcon,
 } from "@phosphor-icons/react/dist/ssr";
@@ -159,9 +157,9 @@ const Header: React.FC = () => {
           icon: <GlobeIcon size={16} />,
         },
         {
-          name: t("nav.industries.DentalNL"),
-          href: "/dental-clinic-automation-netherlands",
-          icon: <ToothIcon size={16} />,
+          name: t("nav.industries.HealthcareNL"),
+          href: "/healthcare-automation-netherlands",
+          icon: <HeartbeatIcon size={16} />,
         },
         {
           name: t("nav.industries.AestheticNL"),
@@ -169,18 +167,8 @@ const Header: React.FC = () => {
           icon: <SparkleIcon size={16} />,
         },
         {
-          name: t("nav.industries.PhysiotherapyNL"),
-          href: "/physiotherapy-clinic-automation-netherlands",
-          icon: <HeartbeatIcon size={16} />,
-        },
-        {
-          name: t("nav.industries.VeterinaryNL"),
-          href: "/veterinary-clinic-automation-netherlands",
-          icon: <PawPrintIcon size={16} />,
-        },
-        {
-          name: t("nav.industries.AccountingNL"),
-          href: "/accounting-firm-automation-netherlands",
+          name: t("nav.industries.ProfessionalServicesNL"),
+          href: "/professional-services-automation-netherlands",
           icon: <ChartBarIcon size={16} />,
         },
         {
@@ -475,17 +463,23 @@ const Header: React.FC = () => {
             {/* AI Consulting Button */}
             <Link
               href="/ai-consulting"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/[0.08] bg-white/[0.02] px-5 py-2 font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm transition-all duration-300 hover:border-hunter-green/50 hover:bg-hunter-green/10 hover:text-hunter-green hover:shadow-[0_0_20px_rgba(0,230,162,0.15)] md:px-6 md:py-2.5 md:text-[10px]"
+              className="group relative inline-flex h-9 overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-105 focus:outline-none md:h-10"
             >
-              {t("cta.AIConsulting")}
+              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00E6A2_0%,#0B0B0B_50%,#00E6A2_100%)] opacity-70" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-4 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-3xl transition-all group-hover:bg-near-black/80 group-hover:text-hunter-green md:px-6 md:text-[10px] md:tracking-[0.25em]">
+                {t("cta.AIConsulting")}
+              </span>
             </Link>
 
             {/* Let's Work Button */}
             <Link
               href="/#contact"
-              className="group relative hidden inline-flex items-center justify-center overflow-hidden rounded-full bg-hunter-green px-6 py-2 font-bold uppercase tracking-[0.2em] text-near-black shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_15px_rgba(0,230,162,0.2)] transition-all duration-300 hover:scale-105 hover:bg-[#00C086] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_10px_20px_-5px_rgba(0,230,162,0.4)] md:text-[10px] lg:inline-flex"
+              className="group relative hidden h-10 overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-105 focus:outline-none md:inline-flex"
             >
-              <span className="drop-shadow-sm">{t("cta.LetsWork")}</span>
+              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF7A3C_0%,#0B0B0B_50%,#FF7A3C_100%)] opacity-70" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-6 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white backdrop-blur-3xl transition-all group-hover:bg-hunter-orange group-hover:text-near-black">
+                {t("cta.LetsWork")}
+              </span>
             </Link>
           </div>
 
@@ -695,9 +689,12 @@ const Header: React.FC = () => {
                 <Link
                   href="/ai-consulting"
                   onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
-                  className="block w-full rounded-full border border-hunter-green px-8 py-3.5 text-center text-sm font-bold uppercase tracking-[0.2em] text-hunter-green transition-all duration-300 hover:bg-hunter-green hover:text-near-black"
+                  className="group relative block w-full overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-[1.02]"
                 >
-                  {t("cta.AIConsulting")}
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00E6A2_0%,#0B0B0B_50%,#00E6A2_100%)] opacity-70" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-8 py-3.5 text-center text-sm font-bold uppercase tracking-[0.2em] text-white backdrop-blur-3xl transition-all group-hover:bg-near-black/80 group-hover:text-hunter-green">
+                    {t("cta.AIConsulting")}
+                  </span>
                 </Link>
               </m.div>
 
@@ -710,9 +707,12 @@ const Header: React.FC = () => {
                 <Link
                   href="/#contact"
                   onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
-                  className="block w-full rounded-full bg-hunter-orange px-8 py-3.5 text-center text-sm font-bold uppercase tracking-[0.15em] text-near-black transition-opacity hover:opacity-90"
+                  className="group relative block w-full overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-[1.02]"
                 >
-                  {t("cta.LetsWork")}
+                  <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF7A3C_0%,#0B0B0B_50%,#FF7A3C_100%)] opacity-70" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-near-black px-8 py-3.5 text-center text-sm font-bold uppercase tracking-[0.15em] text-white backdrop-blur-3xl transition-all group-hover:bg-hunter-orange group-hover:text-near-black">
+                    {t("cta.LetsWork")}
+                  </span>
                 </Link>
               </m.div>
             </div>

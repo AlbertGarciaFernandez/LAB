@@ -20,6 +20,8 @@ import Header from "@/components/layout/Header";
 import ROICalculator from "@/components/sections/ROICalculator";
 import { m } from "framer-motion";
 import AnimatedSection from "@/components/layout/AnimatedSection";
+import SidebarNav from "@/components/ui/SidebarNav";
+import TopAgentsSection from "@/components/sections/TopAgentsSection";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -201,9 +203,13 @@ export default function AIConsultingPageContent({
   return (
     <div className="min-h-screen overflow-x-hidden bg-near-black">
       <Header />
+      <SidebarNav />
       <main>
         {/* 1. Hero Section */}
-        <section className="relative mx-auto max-w-7xl overflow-hidden px-6 pb-20 pt-32 lg:px-8">
+        <section
+          id="hero"
+          className="relative mx-auto max-w-7xl overflow-hidden px-6 pb-20 pt-32 lg:px-8"
+        >
           {/* Background Blobs */}
           <div className="pointer-events-none absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-hunter-green/10 blur-[120px]" />
           <div className="pointer-events-none absolute bottom-0 left-0 h-[600px] w-[600px] rounded-full bg-hunter-orange/5 blur-[120px]" />
@@ -221,7 +227,7 @@ export default function AIConsultingPageContent({
 
               <m.h1
                 variants={itemVariants}
-                className="mb-8 text-5xl font-black leading-[0.9] tracking-tighter text-white md:text-7xl xl:text-8xl"
+                className="mb-8 text-4xl font-black leading-[0.92] tracking-tighter text-white md:text-6xl xl:text-7xl"
               >
                 {hero.titlePart1} <br /> {hero.titlePart2} <br />
                 <span className="text-hunter-green">{hero.titleHighlight}</span>
@@ -238,7 +244,7 @@ export default function AIConsultingPageContent({
                   href="/#contact"
                   className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-10 py-4 font-bold text-near-black"
                 >
-                  <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-green-dark" />
+                  <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-orange" />
                   <span className="relative z-10">{hero.cta}</span>
                   <ArrowRightIcon className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -312,43 +318,250 @@ export default function AIConsultingPageContent({
                   </div>
                 </m.div>
               </div>
+
+              <m.div
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.45 }}
+              >
+                <Link
+                  href="#roi-calculator"
+                  className="group relative block overflow-hidden rounded-2xl border border-hunter-green/25 bg-gradient-to-br from-hunter-green/15 via-surface-dark/80 to-hunter-orange/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-hunter-orange/55 hover:shadow-[0_24px_80px_-36px_rgba(255,122,60,0.75)]"
+                >
+                  <div className="pointer-events-none absolute -right-12 -top-16 h-40 w-40 rounded-full bg-hunter-orange/20 opacity-70 blur-3xl transition-opacity group-hover:opacity-100" />
+                  <div className="relative z-10 flex items-center justify-between gap-5">
+                    <div>
+                      <div className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.22em] text-hunter-green">
+                        ROI Calculator
+                      </div>
+                      <div className="text-xl font-black leading-tight text-white">
+                        Estimate ROI first
+                      </div>
+                      <p className="mt-2 max-w-sm text-sm leading-relaxed text-gray-400">
+                        Jump to the savings calculator before scoping an AI system.
+                      </p>
+                    </div>
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-hunter-green text-near-black transition-all group-hover:translate-y-1 group-hover:bg-hunter-orange">
+                      <ArrowRightIcon className="rotate-90" size={18} weight="bold" />
+                    </div>
+                  </div>
+                </Link>
+              </m.div>
             </m.div>
           </div>
         </section>
 
         {/* 2. Who This Is For */}
-        <AnimatedSection className="border-b border-white/5 px-6 py-16 lg:px-8">
+        <AnimatedSection id="who-its-for" className="border-b border-white/5 px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="grid items-start gap-12 lg:grid-cols-2">
-              <div>
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
-                  {whoItsFor.badge}
-                </div>
-                <h2 className="text-3xl font-black leading-tight tracking-tighter text-white md:text-5xl">
-                  {whoItsFor.title} <span className="text-hunter-green">{whoItsFor.highlight}</span>
-                </h2>
-                <p className="mt-4 max-w-md text-base leading-relaxed text-gray-400">
-                  {whoItsFor.description}
-                </p>
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-surface-dark/40 p-6 shadow-2xl shadow-black/30 md:p-10 lg:p-12">
+              <div className="pointer-events-none absolute -left-24 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-hunter-green/10 blur-[90px]" />
+              <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-hunter-orange/10 blur-[90px]" />
+              <div className="pointer-events-none absolute right-8 top-8 hidden font-mono text-8xl font-black text-white/[0.025] lg:block">
+                FIT
               </div>
-              <ul className="space-y-3 lg:pt-4">
-                {whoItsFor.items.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-hunter-green/20 bg-hunter-green/10">
-                      <CheckIcon className="text-hunter-green" size={11} />
-                    </div>
-                    <span className="text-sm leading-relaxed text-gray-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
+
+              <div className="relative z-10 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                <div>
+                  <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
+                    {whoItsFor.badge}
+                  </div>
+                  <h2 className="text-3xl font-black leading-[0.95] tracking-tighter text-white md:text-5xl">
+                    For teams past the AI toy phase.
+                    <span className="block pt-2 text-hunter-green">
+                      {whoItsFor.title} {whoItsFor.highlight}
+                    </span>
+                  </h2>
+                  <p className="mt-5 max-w-md text-base leading-relaxed text-gray-400">
+                    {whoItsFor.description}
+                  </p>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {whoItsFor.items.map((item, i) => (
+                    <m.div
+                      key={item}
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.04 }}
+                      className="group relative overflow-hidden rounded-2xl border border-white/5 bg-near-black/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-hunter-orange/35 hover:bg-near-black"
+                    >
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-hunter-orange/10 via-hunter-green/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                      <div className="relative z-10 mb-4 flex items-center justify-between">
+                        <span className="font-mono text-xs font-black text-hunter-green transition-colors group-hover:text-hunter-orange">
+                          0{i + 1}
+                        </span>
+                        <div className="flex h-6 w-6 items-center justify-center rounded-full border border-hunter-green/20 bg-hunter-green/10 transition-colors group-hover:border-hunter-orange/30 group-hover:bg-hunter-orange/10">
+                          <CheckIcon
+                            className="text-hunter-green transition-colors group-hover:text-hunter-orange"
+                            size={12}
+                          />
+                        </div>
+                      </div>
+                      <p className="relative z-10 text-sm leading-relaxed text-gray-300">{item}</p>
+                    </m.div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </AnimatedSection>
 
-        {/* 3. Pricing */}
+        {/* 1.5 Top Agents + Use Cases Section */}
+        <section id="top-agents">
+          <TopAgentsSection useCases={useCases} />
+        </section>
+
+        {/* 4. What We Build editorial bento */}
+        <AnimatedSection id="what-we-build" className="border-b border-white/5 px-6 py-24 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-near-black p-6 md:p-10 lg:p-12">
+              <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-hunter-green/10 blur-[100px]" />
+              <div className="relative z-10 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                <div>
+                  <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
+                    {whatWeBuild.badge}
+                  </div>
+                  <h2 className="text-4xl font-black leading-[0.95] tracking-tighter text-white md:text-6xl">
+                    Production AI systems,
+                    <span className="block text-hunter-green">not isolated demos.</span>
+                  </h2>
+                  <p className="mt-5 max-w-md text-base leading-relaxed text-gray-400">
+                    {whatWeBuild.title} {whatWeBuild.highlight}. Every service links to a system we
+                    can deploy, integrate, document and hand over.
+                  </p>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {whatWeBuild.services.map(({ title, desc, label, href }, i) => {
+                    const icons = [
+                      RobotIcon,
+                      ArrowsClockwiseIcon,
+                      ShareNetworkIcon,
+                      SquaresFourIcon,
+                      BrainIcon,
+                    ];
+                    const Icon = icons[i];
+                    const isFeatured = i === 0;
+
+                    return (
+                      <m.div
+                        key={title}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.45, delay: i * 0.07 }}
+                        className={isFeatured ? "sm:col-span-2" : undefined}
+                      >
+                        <Link
+                          href={href}
+                          className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border p-6 transition-all duration-500 hover:-translate-y-1 hover:bg-[#0B0B0B] ${
+                            isFeatured
+                              ? "min-h-[190px] border-hunter-orange/30 bg-hunter-orange/10"
+                              : "min-h-[150px] border-white/5 bg-surface-dark/45 hover:border-hunter-orange/25"
+                          }`}
+                        >
+                          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-hunter-orange/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                          <div className="relative z-10 mb-5 flex items-center justify-between">
+                            <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10 transition-colors group-hover:border-hunter-orange/25 group-hover:bg-hunter-orange/10">
+                              <Icon
+                                className="text-hunter-green group-hover:text-hunter-orange"
+                                size={21}
+                              />
+                            </div>
+                            <span className="font-mono text-xs font-black text-white/25">
+                              0{i + 1}
+                            </span>
+                          </div>
+                          <div className="relative z-10 flex-1">
+                            <h3 className="mb-2 text-lg font-black tracking-tight text-white">
+                              {title}
+                            </h3>
+                            <p className="text-sm leading-relaxed text-gray-400">{desc}</p>
+                          </div>
+                          <div className="relative z-10 mt-6 flex items-center justify-between border-t border-white/5 pt-4 text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors group-hover:text-hunter-orange">
+                            <span>{label}</span>
+                            <ArrowRightIcon
+                              size={13}
+                              className="transition-transform group-hover:translate-x-1"
+                            />
+                          </div>
+                        </Link>
+                      </m.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* 5. Production standards strip */}
         <AnimatedSection
-          id="ai-consulting-pricing"
-          className="border-b border-white/5 px-6 py-20 lg:px-8"
+          id="tech-credibility"
+          className="border-b border-white/5 px-6 py-16 lg:px-8"
+        >
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
+                  {techCredibility.badge}
+                </div>
+                <h2 className="text-3xl font-black tracking-tighter text-white md:text-5xl">
+                  {techCredibility.title}{" "}
+                  <span className="text-hunter-green">{techCredibility.highlight}</span>
+                </h2>
+              </div>
+              <p className="max-w-xl text-sm leading-relaxed text-gray-400 md:text-right">
+                {techCredibility.subtitle}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
+              {techCredibility.items.map(({ title, desc }, i) => {
+                const icons = [
+                  PlugsConnectedIcon,
+                  CheckIcon,
+                  LightningIcon,
+                  ShieldCheckIcon,
+                  ArrowsClockwiseIcon,
+                  BrainIcon,
+                ];
+                const Icon = icons[i];
+                return (
+                  <m.div
+                    key={title}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.04 }}
+                    className="group rounded-2xl border border-hunter-green/15 bg-hunter-green/5 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-hunter-orange/35 hover:bg-hunter-orange/10"
+                  >
+                    <Icon
+                      className="mb-4 text-hunter-green transition-colors group-hover:text-hunter-orange"
+                      size={18}
+                    />
+                    <h3 className="text-sm font-black text-white transition-colors group-hover:text-hunter-orange">
+                      {title}
+                    </h3>
+                    <p className="mt-2 text-xs leading-relaxed text-gray-500">{desc}</p>
+                  </m.div>
+                );
+              })}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* 5. ROI Calculator */}
+        <div id="roi-calculator">
+          <ROICalculator />
+        </div>
+
+        {/* 7. Pricing */}
+        <AnimatedSection
+          id="pricing"
+          className="scroll-mt-32 border-b border-white/5 px-6 py-20 lg:px-8"
         >
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 grid items-start gap-12 lg:grid-cols-[0.8fr_1.2fr]">
@@ -375,7 +588,7 @@ export default function AIConsultingPageContent({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: i * 0.07 }}
-                  className={`relative flex h-full flex-col rounded-lg border p-6 transition-colors ${
+                  className={`group relative flex h-full flex-col rounded-lg border p-6 transition-colors ${
                     item.recommended
                       ? "border-hunter-green/40 bg-hunter-green/10"
                       : "border-white/5 bg-surface-dark/35 hover:border-white/10"
@@ -402,7 +615,10 @@ export default function AIConsultingPageContent({
                         key={point}
                         className="flex items-start gap-2 text-sm leading-relaxed text-gray-300"
                       >
-                        <CheckIcon className="mt-0.5 flex-shrink-0 text-hunter-green" size={15} />
+                        <CheckIcon
+                          className="mt-0.5 flex-shrink-0 text-hunter-green transition-colors group-hover:text-hunter-orange"
+                          size={15}
+                        />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -411,7 +627,7 @@ export default function AIConsultingPageContent({
                     href={item.href}
                     className={`mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-bold transition-colors ${
                       item.recommended
-                        ? "bg-hunter-green text-near-black hover:bg-white"
+                        ? "bg-hunter-green text-near-black hover:bg-hunter-orange"
                         : "border border-white/10 text-white hover:bg-white/5"
                     }`}
                   >
@@ -444,130 +660,8 @@ export default function AIConsultingPageContent({
           </div>
         </AnimatedSection>
 
-        {/* 4. What We Build */}
-        <AnimatedSection className="border-b border-white/5 px-6 py-20 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-12 text-center">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
-                {whatWeBuild.badge}
-              </div>
-              <h2 className="text-3xl font-black tracking-tighter text-white md:text-5xl">
-                {whatWeBuild.title}{" "}
-                <span className="text-hunter-green">{whatWeBuild.highlight}</span>
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {whatWeBuild.services.map(({ title, desc, label, href }, i) => {
-                const icons = [
-                  RobotIcon,
-                  ArrowsClockwiseIcon,
-                  ShareNetworkIcon,
-                  SquaresFourIcon,
-                  BrainIcon,
-                ];
-                const Icon = icons[i];
-                return (
-                  <m.div
-                    key={title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, delay: i * 0.07 }}
-                  >
-                    <Link
-                      href={href}
-                      className="group flex h-full flex-col gap-4 rounded-2xl border border-white/5 bg-surface-dark/40 p-6 transition-all duration-300 hover:border-hunter-green/30 hover:bg-surface-dark/70"
-                    >
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10 transition-colors group-hover:bg-hunter-green/20">
-                        <Icon className="text-hunter-green" size={20} />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="mb-1.5 text-sm font-bold tracking-tight text-white">
-                          {title}
-                        </h3>
-                        <p className="text-sm leading-relaxed text-gray-400">{desc}</p>
-                      </div>
-                      <div className="mt-auto flex items-center gap-1.5 border-t border-white/5 pt-2 text-xs font-semibold text-hunter-green">
-                        <span>{label}</span>
-                        <ArrowRightIcon
-                          size={12}
-                          className="transition-transform group-hover:translate-x-1"
-                        />
-                      </div>
-                    </Link>
-                  </m.div>
-                );
-              })}
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* 5. ROI Calculator */}
-        <ROICalculator />
-
-        {/* 6. Use Cases */}
-        <AnimatedSection className="border-t border-white/5 px-6 py-20 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-12 text-center">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-hunter-orange/20 bg-hunter-orange/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-orange">
-                {useCases.badge}
-              </div>
-              <h2 className="text-3xl font-black tracking-tighter text-white md:text-5xl">
-                {useCases.title} <span className="text-hunter-orange">{useCases.highlight}</span>
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-400">
-                {useCases.subtitle}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {useCases.items.map((uc, i) => (
-                <m.div
-                  key={uc.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: i * 0.1 }}
-                  className="flex flex-col gap-5 rounded-2xl border border-white/5 bg-surface-dark/40 p-7 transition-all duration-300 hover:border-hunter-orange/20"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="font-mono text-xs font-black text-hunter-orange">
-                      {uc.number}
-                    </span>
-                    <h3 className="text-base font-bold leading-snug tracking-tight text-white">
-                      {uc.title}
-                    </h3>
-                  </div>
-                  <div className="flex-1 space-y-3">
-                    <div>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
-                        {useCases.labels.problem}
-                      </span>
-                      <p className="mt-1 text-sm leading-relaxed text-gray-400">{uc.problem}</p>
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
-                        {useCases.labels.solution}
-                      </span>
-                      <p className="mt-1 text-sm leading-relaxed text-gray-400">{uc.solution}</p>
-                    </div>
-                  </div>
-                  <div className="border-t border-white/5 pt-4">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-hunter-orange">
-                      {useCases.labels.outcome}
-                    </span>
-                    <p className="mt-1 text-sm font-medium leading-relaxed text-white">
-                      {uc.outcome}
-                    </p>
-                  </div>
-                </m.div>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
-
         {/* 7. Migration Journey & CTA */}
-        <AnimatedSection className="relative overflow-hidden py-24">
+        <AnimatedSection id="migration" className="relative scroll-mt-32 overflow-hidden py-24">
           {/* Background Ambience */}
           <div className="absolute inset-0 bg-surface-dark/10" />
           <div className="absolute left-1/2 top-1/2 -z-10 h-[300px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-hunter-green/5 blur-[100px]" />
@@ -694,58 +788,8 @@ export default function AIConsultingPageContent({
           </div>
         </AnimatedSection>
 
-        {/* 8. Technical Credibility */}
-        <AnimatedSection className="border-t border-white/5 px-6 py-20 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-12 text-center">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
-                {techCredibility.badge}
-              </div>
-              <h2 className="text-3xl font-black tracking-tighter text-white md:text-5xl">
-                {techCredibility.title}{" "}
-                <span className="text-hunter-green">{techCredibility.highlight}</span>
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-400">
-                {techCredibility.subtitle}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {techCredibility.items.map(({ title, desc }, i) => {
-                const icons = [
-                  PlugsConnectedIcon,
-                  CheckIcon,
-                  LightningIcon,
-                  ShieldCheckIcon,
-                  ArrowsClockwiseIcon,
-                  BrainIcon,
-                ];
-                const Icon = icons[i];
-                return (
-                  <m.div
-                    key={title}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.07 }}
-                    className="flex gap-4 rounded-xl border border-white/5 bg-surface-dark/30 p-6 transition-all duration-300 hover:border-hunter-green/20 hover:bg-surface-dark/50"
-                  >
-                    <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-hunter-green/20 bg-hunter-green/10">
-                      <Icon className="text-hunter-green" size={18} />
-                    </div>
-                    <div>
-                      <h3 className="mb-1.5 text-sm font-bold text-white">{title}</h3>
-                      <p className="text-sm leading-relaxed text-gray-400">{desc}</p>
-                    </div>
-                  </m.div>
-                );
-              })}
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* 9. FAQ */}
-        <AnimatedSection className="px-6 py-24 lg:px-8">
+        {/* 8. FAQ */}
+        <AnimatedSection id="faq" className="px-6 py-24 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <div className="mb-14 text-center">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-hunter-green">
@@ -760,9 +804,10 @@ export default function AIConsultingPageContent({
               {faq.items.map((item, i) => (
                 <div
                   key={item.q}
-                  className="overflow-hidden rounded-xl border border-white/5 bg-near-black/60 transition-colors hover:border-white/10"
+                  className="group overflow-hidden rounded-xl border border-white/5 bg-near-black/60 transition-colors hover:border-hunter-orange/25"
                 >
                   <button
+                    type="button"
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     aria-expanded={openFaq === i}
@@ -771,7 +816,7 @@ export default function AIConsultingPageContent({
                       {item.q}
                     </span>
                     <CaretDownIcon
-                      className={`flex-shrink-0 text-hunter-green transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
+                      className={`flex-shrink-0 text-hunter-green transition-all duration-300 group-hover:text-hunter-orange ${openFaq === i ? "rotate-180" : ""}`}
                       size={18}
                     />
                   </button>
@@ -803,7 +848,7 @@ export default function AIConsultingPageContent({
                   href="/#contact"
                   className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-3 font-bold text-near-black"
                 >
-                  <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-green-dark" />
+                  <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-orange" />
                   <span className="relative z-10">{finalCta.primary}</span>
                   <ArrowRightIcon className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>

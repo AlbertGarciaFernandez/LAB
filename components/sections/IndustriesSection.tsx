@@ -14,9 +14,9 @@ import {
 const industryIcons = [CurrencyCircleDollarIcon, BuildingsIcon, HeartbeatIcon];
 
 const industryHrefs = [
-  "/accounting-firm-automation-netherlands",
+  "/professional-services-automation-netherlands",
   "/real-estate-automation-netherlands",
-  "/dental-clinic-automation-netherlands",
+  "/healthcare-automation-netherlands",
 ];
 
 const accentColors = [

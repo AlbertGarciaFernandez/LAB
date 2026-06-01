@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
@@ -110,7 +110,8 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
         />
 
         <Link
-          href="/en/insights"
+          href="/insights"
+          locale="en"
           className="mb-10 inline-block text-sm font-bold uppercase tracking-widest text-hunter-green hover:text-white"
         >
           Back to insights

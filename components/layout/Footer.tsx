@@ -110,11 +110,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               {[
                 { key: "AIAutomationNL", href: "/ai-automation-consulting-netherlands" },
-                { key: "DentalNL", href: "/dental-clinic-automation-netherlands" },
+                { key: "HealthcareNL", href: "/healthcare-automation-netherlands" },
                 { key: "AestheticNL", href: "/aesthetic-clinic-automation-netherlands" },
-                { key: "PhysiotherapyNL", href: "/physiotherapy-clinic-automation-netherlands" },
-                { key: "VeterinaryNL", href: "/veterinary-clinic-automation-netherlands" },
-                { key: "AccountingNL", href: "/accounting-firm-automation-netherlands" },
+                { key: "ProfessionalServicesNL", href: "/professional-services-automation-netherlands" },
                 { key: "RealEstateNL", href: "/real-estate-automation-netherlands" },
               ].map((item) => (
                 <li key={item.key}>

@@ -1,5 +1,22 @@
+"use client";
+
+import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
+
+const slideUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
 
 export default function PackagesSection() {
   const t = useTranslations("Packages");
@@ -12,25 +29,32 @@ export default function PackagesSection() {
         desc: string;
         points: string[];
         href: string;
+        cta?: string;
       }>)
     : [];
 
   return (
-    <section className="relative bg-near-black px-6 py-24 text-white lg:px-8 md:py-32">
+    <section className="relative bg-near-black px-6 py-24 text-white md:py-32 lg:px-8">
       {/* Top gradient separator */}
       <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       {/* Bottom gradient separator */}
       <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       {/* Massive Background Text */}
-      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           PACKAGES
         </h2>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <m.div
+          className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between"
+          variants={slideUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <div className="max-w-3xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-orange">
               {t("badge")}
@@ -46,18 +70,25 @@ export default function PackagesSection() {
           >
             {t("cta")}
           </Link>
-        </div>
+        </m.div>
 
         {packages.length > 0 && (
-          <div className="grid gap-5 lg:grid-cols-3">
+          <m.div
+            className="grid gap-5 lg:grid-cols-3"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {packages.map((item) => (
-              <article
+              <m.article
                 key={item.name}
+                variants={slideUp}
                 className="group/card relative overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.2)]"
               >
                 {/* Subtle inner glow */}
                 <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover/card:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
                 <h3 className="relative z-10 text-2xl font-black tracking-tight text-white transition-all duration-500 group-hover/card:text-hunter-green group-hover/card:drop-shadow-[0_0_12px_rgba(0,230,162,0.5)]">
                   {item.name}
                 </h3>
@@ -80,13 +111,13 @@ export default function PackagesSection() {
                 )}
                 <Link
                   href={item.href}
-                  className="mt-7 inline-flex text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
+                  className="relative z-10 mt-7 inline-flex text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
                 >
-                  {t("learnMore")}
+                  {item.cta ?? t("learnMore")}
                 </Link>
-              </article>
+              </m.article>
             ))}
-          </div>
+          </m.div>
         )}
       </div>
     </section>

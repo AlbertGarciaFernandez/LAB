@@ -61,13 +61,8 @@ const routeMeta: Record<
     changeFrequency: "weekly",
   },
   "/react-consulting": { lastModified: "2026-05-09", priority: 0.9, changeFrequency: "weekly" },
-  "/dental-clinic-automation-netherlands": {
-    lastModified: "2026-05-09",
-    priority: 0.9,
-    changeFrequency: "weekly",
-  },
-  "/physiotherapy-clinic-automation-netherlands": {
-    lastModified: "2026-05-09",
+  "/healthcare-automation-netherlands": {
+    lastModified: "2026-06-01",
     priority: 0.9,
     changeFrequency: "weekly",
   },
@@ -76,13 +71,8 @@ const routeMeta: Record<
     priority: 0.9,
     changeFrequency: "weekly",
   },
-  "/veterinary-clinic-automation-netherlands": {
-    lastModified: "2026-05-09",
-    priority: 0.9,
-    changeFrequency: "weekly",
-  },
-  "/accounting-firm-automation-netherlands": {
-    lastModified: "2026-05-09",
+  "/professional-services-automation-netherlands": {
+    lastModified: "2026-06-01",
     priority: 0.9,
     changeFrequency: "weekly",
   },

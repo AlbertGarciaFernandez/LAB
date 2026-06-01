@@ -42,8 +42,6 @@
         "AIConsultingNL": "Consultoría IA Países Bajos",
         "DentalNL": "Automatización Clínica Dental",
         "AestheticNL": "Automatización Clínica Estética",
-        "PhysiotherapyNL": "Automatización Fisioterapia",
-        "VeterinaryNL": "Automatización Clínica Veterinaria",
         "AccountingNL": "Automatización Despacho Contable",
         "RealEstateNL": "Automatización Inmobiliaria"
       }
@@ -96,10 +94,8 @@
       "title": "Industrias",
       "items": {
         "AIAutomationNL": "Automatización IA NL",
-        "DentalNL": "Clínica Dental NL",
+        "HealthcareNL": "Automatización Sanitaria",
         "AestheticNL": "Clínica Estética NL",
-        "PhysiotherapyNL": "Fisioterapia NL",
-        "VeterinaryNL": "Automatización Veterinaria",
         "AccountingNL": "Automatización Contable",
         "RealEstateNL": "Automatización Inmobiliaria"
       }
@@ -135,7 +131,6 @@
         "ITIntegration": "Integración de Sistemas",
         "SoftwareLeiden": "Software en Leiden",
         "InternalTools": "Herramientas Internas",
-        "VeterinaryNL": "Automatización Veterinaria",
         "AccountingNL": "Automatización Contable",
         "RealEstateNL": "Automatización Inmobiliaria"
       }
@@ -207,7 +202,7 @@
       },
       {
         "title": "Salud y Clínicas",
-        "desc": "Reserva de citas, seguimiento de pacientes y reducción de carga administrativa para clínicas dentales, estéticas y de fisioterapia.",
+        "desc": "Reserva de citas, seguimiento de pacientes y reducción de carga administrativa para clínicas médicas, dentistas, fisioterapeutas y veterinarios, estéticas y de fisioterapia.",
         "link": "Automatización de Clínicas"
       }
     ]
@@ -217,98 +212,98 @@
       "part1": "Expertise Central y",
       "part2": "Pilares Estratégicos"
     },
-    "subtitle": "Sistemas con IA en primer plano, ingeniería de producción y flujos que eliminan el trabajo manual.",
+    "subtitle": "Auditamos, ordenamos e implementamos IA, automatización y producto digital con foco real en negocio, seguridad y adopción.",
     "pillars": {
       "frontend": {
         "title": "Arquitectura Frontend",
-        "micro": "Sistemas robustos construidos para durar.",
-        "heading": "Aplicaciones web escalables, mantenibles y de alto impacto.",
+        "micro": "Interfaces sólidas, vivas y con intención.",
+        "heading": "Seguimos construyendo productos que transmiten quién eres.",
         "paragraphs": {
-          "0": "Diseñamos y lideramos el desarrollo de aplicaciones web de alto calibre. Nuestra base es una arquitectura moderna (React, Next.js, TypeScript), enfocada obsesivamente en la escalabilidad a largo plazo, el rendimiento y la experiencia de desarrollo.",
-          "1": "No escribimos código por escribir. Tomamos decisiones arquitectónicas que eliminan la complejidad, permiten escalar equipos y se adaptan a la evolución de tu producto."
+          "0": "No dejamos atrás nuestras bases. El frontend sigue siendo una parte esencial de cómo concebimos y construimos producto digital: sólido por dentro, claro por fuera y preparado para evolucionar.",
+          "1": "Nos importa la arquitectura, el rendimiento y la mantenibilidad, pero también crear experiencias con identidad, sensibilidad y narrativa. Productos que no solo funcionan bien, sino que también se sienten propios."
         },
         "bullets": {
-          "0": "Arquitectura basada en componentes (React, Next.js)",
-          "1": "Escalabilidad y mantenibilidad desde el diseño",
-          "2": "Calidad de código y estrategias de testing sostenibles",
-          "3": "Obsesión por el rendimiento (Performance-first)"
+          "0": "Arquitectura moderna y mantenible",
+          "1": "Performance, accesibilidad y claridad visual",
+          "2": "Interfaces con identidad, intención y narrativa",
+          "3": "Productos que combinan utilidad, emoción y consistencia"
         }
       },
-      "ecommerce": {
-        "title": "Ecommerce y Performance",
-        "micro": "Plataformas críticas optimizadas para facturar.",
-        "heading": "Velocidad, UX y conversión para plataformas críticas.",
+      "training": {
+        "title": "Formación",
+        "micro": "Adopción real, no teoría suelta.",
+        "heading": "Programas prácticos adaptados al contexto real de tu empresa.",
         "paragraphs": {
-          "0": "Nos especializamos en plataformas donde cada milisegundo cuenta. Cuando el rendimiento y la fiabilidad impactan directamente en la facturación, nosotros entramos en juego.",
-          "1": "Desde migraciones complejas de Salesforce Commerce Cloud (SFCC) hasta la optimización extrema de Shopify y stacks a medida. Construimos journeys de usuario rápidos, accesibles y diseñados para convertir."
+          "0": "La implementación no termina cuando una solución entra en producción. Para que un cambio funcione de verdad, el equipo tiene que entenderlo, incorporarlo a su día a día y saber aplicarlo con criterio.",
+          "1": "Diseñamos programas de formación prácticos adaptados al sector, al nivel del equipo y a los procesos reales de la empresa, desde dirección hasta perfiles operativos o técnicos."
         },
         "bullets": {
-          "0": "Liderazgo en migraciones SFCC y arquitectura",
-          "1": "Optimización de Core Web Vitals y Lighthouse",
-          "2": "UX, accesibilidad (WCAG 2.1) y SEO técnico",
-          "3": "A/B testing y optimización basada en datos",
-          "4": "Transformamos rendimiento en ingresos"
+          "0": "Formación adaptada a roles y contexto de la empresa",
+          "1": "Online o presencial, con grabación incluida",
+          "2": "Casos de uso reales del sector",
+          "3": "Aplicable desde el primer día",
+          "4": "Materiales y entregables definidos para tu equipo"
         }
       },
       "product": {
-        "title": "Estrategia de Producto e IA",
-        "micro": "Objetivos de negocio, traducidos a código.",
-        "heading": "Uniendo visión de producto con ejecución técnica.",
+        "title": "Auditoría y Estrategia",
+        "micro": "Primero entendemos. Luego priorizamos.",
+        "heading": "Antes de implementar, analizamos qué necesita de verdad tu empresa.",
         "paragraphs": {
-          "0": "Eliminamos la brecha entre ingeniería y negocio. Combinamos liderazgo técnico con visión de producto para traducir objetivos comerciales en roadmaps claros y soluciones técnicas viables.",
-          "1": "Lideramos la ingeniería de aplicaciones potenciadas por IA, integrando APIs de OpenAI para acelerar flujos, reducir ruido y potenciar la toma de decisiones estratégica."
+          "0": "No se trata de aplicar IA a lo loco ni de digitalizar por inercia. Empezamos con una auditoría profunda para entender procesos, cuellos de botella, tareas repetitivas, dependencias internas y oportunidades reales de mejora.",
+          "1": "A partir de ahí definimos qué conviene ordenar, qué debe digitalizarse, qué merece automatización y dónde la IA puede aportar una ventaja concreta alineada con tus objetivos."
         },
         "bullets": {
-          "0": "Discovery, roadmap y priorización de producto",
-          "1": "Integración de IA (OpenAI) y herramientas a medida",
-          "2": "Liderazgo Ágil y alineación con stakeholders",
-          "3": "Ingeniería realista basada en restricciones reales"
+          "0": "Auditoría de procesos, sistemas y fricciones",
+          "1": "Detección de cuellos de botella y trabajo repetitivo",
+          "2": "Priorización entre digitalización, automatización e IA",
+          "3": "Decisiones conectadas a objetivos reales de negocio"
         }
       },
       "automation": {
         "title": "Automatización IA",
-        "micro": "Flujos inteligentes que eliminan el trabajo manual.",
-        "heading": "Automatiza lo aburrido. Potencia lo importante.",
+        "micro": "IA útil, integrada y lista para operar.",
+        "heading": "Implementamos automatización e IA donde realmente hacen avanzar a la empresa.",
         "paragraphs": {
-          "0": "Diseñamos flujos de automatización con IA que erradican el trabajo manual repetitivo, aceleran decisiones y disparan la eficiencia operativa.",
-          "1": "Con herramientas como n8n, scripts a medida e integraciones API, conectamos tu ecosistema de datos para crear pipelines inteligentes que resuelven problemas reales. Nada de experimentos sobre-ingenierizados."
+          "0": "No creemos en implementar IA por tendencia ni en automatizar procesos sin criterio. Estudiamos cómo funciona tu empresa, dónde se pierde tiempo, qué frena al equipo y qué merece realmente ser transformado.",
+          "1": "Diseñamos soluciones seguras, coste-eficientes y conectadas a tus sistemas para que la IA no quede aislada, sino integrada en la operativa diaria y generando valor desde el principio."
         },
         "bullets": {
-          "0": "Pipelines automatizados de datos y contenido",
-          "1": "QA, análisis y reportes asistidos por IA",
-          "2": "Orquestación de flujos entre equipos",
-          "3": "Reducción drástica de carga operativa",
-          "4": "Convierte datos brutos en insights accionables"
+          "0": "Integración con herramientas, datos y sistemas internos",
+          "1": "Automatización segura, mantenible y escalable",
+          "2": "Uso de IA con foco en impacto y eficiencia de costes",
+          "3": "Menos carga manual y menos fricción operativa",
+          "4": "Soluciones conectadas al negocio, no experimentos aislados"
         }
       },
       "leadership": {
         "title": "Liderazgo Técnico",
-        "micro": "Claridad, alineación y decisiones senior.",
-        "heading": "Alineando producto, diseño e ingeniería.",
+        "micro": "Criterio senior para decidir, alinear y optimizar.",
+        "heading": "Alineamos equipos, prioridades y rendimiento para que el producto avance con claridad.",
         "paragraphs": {
-          "0": "Colaboramos estrechamente con diseño, producto y backend para asegurar que la ejecución técnica cumpla con la visión. Operamos en la intersección de arquitectura, entrega y estrategia, asegurando velocidad sin sacrificar calidad."
+          "0": "Trabajamos en la intersección entre negocio, producto, diseño e ingeniería para tomar decisiones con contexto, reducir fricción y mantener el foco en lo que realmente mueve el proyecto. El rendimiento no es un detalle técnico: forma parte de la calidad, de la experiencia y de la dirección del producto."
         },
         "bullets": {
-          "0": "Colaboración cross-functional de alto nivel",
-          "1": "Comunicación clara y ownership total",
-          "2": "Eliminamos la fricción entre áreas",
-          "3": "Entrega sostenible, sin deuda técnica innecesaria"
+          "0": "Alineación entre producto, diseño, negocio e ingeniería",
+          "1": "Decisiones técnicas con criterio senior",
+          "2": "Performance y calidad como parte de la estrategia",
+          "3": "Menos fricción, más claridad y más foco"
         }
       },
       "delivery": {
-        "title": "Entrega y Riesgo",
-        "micro": "Resultados predecibles en entornos complejos.",
-        "heading": "Entrega predecible cuando hay mucho en juego.",
+        "title": "Entrega y Relación",
+        "micro": "Claridad, calidad y compromisos realistas.",
+        "heading": "Trabajamos con honestidad para construir soluciones que duren años.",
         "paragraphs": {
-          "0": "Nos enfocamos en la entrega predecible y de calidad. Aplicamos ingeniería probada para reducir riesgos, evitar retrabajo y asegurar que tu producto escale sin romperse.",
-          "1": "Sabemos hacer trade-offs pragmáticos, gestionamos la deuda técnica de forma consciente y construimos sistemas evolutivos, no frágiles."
+          "0": "Somos claros con lo que tiene sentido hacer, con lo que no y con el tiempo que requiere hacer bien las cosas. Nos interesa entregar productos de calidad, mantenibles y preparados para durar, no soluciones rápidas que generen problemas después.",
+          "1": "Por eso acordamos tiempos y formas de trabajo que sean beneficiosos para ambas partes. Para integrar bien, definir metas, coordinar reuniones y conectar sistemas, también necesitamos implicación, contexto y tiempo por parte del cliente."
         },
         "bullets": {
-          "0": "Planificación clara y definición de alcance",
-          "1": "Estándares de calidad y testing riguroso",
-          "2": "Gestión consciente de deuda técnica",
-          "3": "Mitigación de riesgos en sistemas críticos",
-          "4": "Mantenibilidad a largo plazo vs parches rápidos"
+          "0": "Planificación clara y realista desde el inicio",
+          "1": "Calidad y durabilidad por encima de la prisa",
+          "2": "Colaboración activa para reuniones, metas e integraciones",
+          "3": "Expectativas sinceras y decisiones transparentes",
+          "4": "Soluciones pensadas para sostenerse en el tiempo"
         }
       },
       "aiAutomation": {
@@ -1194,11 +1189,7 @@
       "whatsapp": {
         "title": "Agentes IA en WhatsApp",
         "desc": "Atención al cliente 24/7 y cualificación de leads directamente en WhatsApp. Habla como un humano, conoce tu negocio y agenda citas automáticamente.",
-        "points": [
-          "Cero tiempos de espera",
-          "Conexión con tu CRM",
-          "98% de precisión en intención"
-        ]
+        "points": ["Cero tiempos de espera", "Conexión con tu CRM", "98% de precisión en intención"]
       },
       "voice": {
         "title": "Bots de Voz con IA",
@@ -2083,7 +2074,7 @@
         "highlight": "Miles al Mes",
         "part2": "en Gestión Manual"
       },
-      "description": "CodeHunter Lab construye <strong>sistemas de automatización personalizados</strong> para clínicas dentales en los Países Bajos — reduciendo ausencias, automatizando la comunicación con pacientes y conectando tu software de gestión. Sin software genérico. Sin dependencia de proveedor.",
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización personalizados</strong> para clínicas médicas, dentistas, fisioterapeutas y veterinarios en los Países Bajos — reduciendo ausencias, automatizando la comunicación con pacientes y conectando tu software de gestión. Sin software genérico. Sin dependencia de proveedor.",
       "cta": {
         "primary": "Reserva una Auditoría Gratuita",
         "secondary": "Ver Qué Automatizamos"
@@ -2257,8 +2248,8 @@
       "subtext": "Disponible para clínicas en los Países Bajos. Capacidad de incorporación actual: Q2 2026. ¿Preguntas? Email info@codehunterlab.com"
     },
     "SEO": {
-      "keywords": "automatización clínica dental Países Bajos, tandartspraktijk automatisering, recordatorios citas dentales Países Bajos, integración CRM dental, reducción ausencias clínica dental, sistema reactivación pacientes, comunicación WhatsApp pacientes dental",
-      "extendedDesc": "CodeHunter Lab construye sistemas personalizados de automatización e integración para clínicas dentales en los Países Bajos. Desde flujos de trabajo de recordatorios de citas y campañas de reactivación de pacientes hasta integración CRM completa y automatización lead-a-reserva, ayudamos a las clínicas dentales a reducir ausencias, mejorar la retención de pacientes y aumentar ingresos. Con sede en Leiden, prestando servicio a clínicas en Ámsterdam, Róterdam, La Haya, Utrecht y más allá."
+      "keywords": "automatización clínica dental Países Bajos, gezondheidszorg automatisering, tandartspraktijk automatisering, fysiotherapie automatisering, recordatorios citas dentales Países Bajos, integración CRM dental, reducción ausencias clínica dental, sistema reactivación pacientes, comunicación WhatsApp pacientes dental",
+      "extendedDesc": "CodeHunter Lab construye sistemas personalizados de automatización e integración para clínicas médicas, dentistas, fisioterapeutas y veterinarios en los Países Bajos. Desde flujos de trabajo de recordatorios de citas y campañas de reactivación de pacientes hasta integración CRM completa y automatización lead-a-reserva, ayudamos a las clínicas dentales a reducir ausencias, mejorar la retención de pacientes y aumentar ingresos. Con sede en Leiden, prestando servicio a clínicas en Ámsterdam, Róterdam, La Haya, Utrecht y más allá."
     }
   },
   "PhysiotherapyClinic": {
@@ -2982,7 +2973,7 @@
     },
     "SEO": {
       "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para despachos contables en los Países Bajos, incluyendo Ámsterdam, Róterdam, La Haya, Utrecht, Leiden y Eindhoven. Nuestras plataformas de automatización personalizadas conectan software contable como Exact Online, Twinfield y Moneybird con sistemas CRM, portales de clientes y herramientas de comunicación para eliminar la administración manual y automatizar el cumplimiento de plazos.",
-      "keywords": "automatización despacho contable Países Bajos, accountantskantoor automatisering, integración Exact Online, automatización Twinfield, procesamiento facturas automatización, automatización plazos BTW, incorporación clientes automatización contable, informes financieros automatización Países Bajos"
+      "keywords": "automatización despacho contable Países Bajos, professionele diensten automatisering, accountantskantoor automatisering, integración Exact Online, automatización Twinfield, procesamiento facturas automatización, automatización plazos BTW, incorporación clientes automatización contable, informes financieros automatización Países Bajos"
     }
   },
   "RealEstateAgency": {
@@ -3258,7 +3249,8 @@
         "price": "€2.5k–€5k",
         "timeline": "1–2 semanas",
         "desc": "Para cuando sabes que la IA puede ayudar, pero necesitas un roadmap priorizado antes de invertir en desarrollo.",
-        "href": "/ai-consulting",
+        "href": "/ai-consulting#pricing",
+        "cta": "Ver alcance del sprint",
         "points": [
           "Auditoría de workflows y mapa de oportunidades",
           "Backlog de automatización priorizado por ROI",
@@ -3270,7 +3262,8 @@
         "price": "Desde €8k",
         "timeline": "4–8 semanas",
         "desc": "Un sistema IA, workflow o integración en producción desplegado en tu infraestructura.",
-        "href": "/ai-automation-consulting-netherlands",
+        "href": "/ai-consulting#pricing",
+        "cta": "Ver alcance de implementación",
         "points": [
           "Alcance fijo y plan de entrega claro",
           "Integración full-stack con herramientas existentes",
@@ -3282,7 +3275,8 @@
         "price": "Desde €5k/mes",
         "timeline": "Mensual",
         "desc": "Soporte de ingeniería integrado para equipos que quieren automatización, mantenimiento e iteración continua.",
-        "href": "/#contact",
+        "href": "/ai-consulting#migration",
+        "cta": "Ver modelo de partner",
         "points": [
           "Nuevas automatizaciones y mejoras",
           "Monitorización, fixes y cambios de workflow",

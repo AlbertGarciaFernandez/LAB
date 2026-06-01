@@ -16,9 +16,7 @@ export function GlassCard({
   const baseClasses =
     "group/card relative overflow-hidden bg-near-black border border-white/[0.05] rounded-3xl p-8 transition-all duration-500 shadow-lg [&>*]:relative [&>*]:z-10";
 
-  const hoverClasses = hoverEffect
-    ? "hover:bg-[#0B0B0B] hover:-translate-y-2"
-    : "";
+  const hoverClasses = hoverEffect ? "hover:bg-[#0B0B0B] hover:-translate-y-2" : "";
 
   let glowClasses = "";
   if (hoverEffect) {
@@ -37,7 +35,7 @@ export function GlassCard({
     <div className={`${baseClasses} ${hoverClasses} ${glowClasses} ${className}`}>
       {/* Subtle inner glow sweep */}
       <div className="pointer-events-none absolute inset-0 !z-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover/card:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)]" />
-      
+
       {/* Glow gradient background */}
       {hoverEffect && glowColor === "green" && (
         <div className="absolute inset-0 !z-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />

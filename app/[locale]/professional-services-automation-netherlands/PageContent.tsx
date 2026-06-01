@@ -7,60 +7,59 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import {
   CheckIcon,
-  CalendarXIcon,
-  PhoneIcon,
-  ChartBarIcon,
+  FileTextIcon,
+  CalendarCheckIcon,
   ArrowsClockwiseIcon,
+  ChartBarIcon,
   PlugsConnectedIcon,
   ChatCircleDotsIcon,
-  TargetIcon,
-  LightningIcon,
-  StarIcon,
+  RocketIcon,
+  BriefcaseIcon,
 } from "@phosphor-icons/react/dist/ssr";
 
 const painPointIcons = [
-  CalendarXIcon,
-  PhoneIcon,
-  ChartBarIcon,
+  FileTextIcon,
+  CalendarCheckIcon,
   ArrowsClockwiseIcon,
+  ChartBarIcon,
   PlugsConnectedIcon,
   ChatCircleDotsIcon,
 ];
 const solutionIcons = [
-  ChatCircleDotsIcon,
-  TargetIcon,
-  LightningIcon,
-  ArrowsClockwiseIcon,
+  FileTextIcon,
+  CalendarCheckIcon,
+  RocketIcon,
   ChartBarIcon,
-  StarIcon,
+  ArrowsClockwiseIcon,
+  BriefcaseIcon,
 ];
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
 import { localizedUrl } from "@/utils/metadata";
 import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
-const vetSystems = [
-  "VetSoft",
-  "Animana",
-  "WhatsApp Business API",
+const accountingSystems = [
+  "Exact Online",
+  "Twinfield",
+  "Moneybird",
   "n8n",
   "HubSpot",
-  "Google Ads",
+  "Microsoft 365",
   "Mollie",
-  "Calendly",
+  "Slack",
   "ActiveCampaign",
   "Zapier",
 ];
 
-export default function VeterinaryClinicAutomationContent() {
-  const t = useTranslations("VeterinaryClinic");
+export default function ProfessionalServicesAutomationContent() {
+  const t = useTranslations("ProfessionalServices");
   const locale = useLocale();
   const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Veterinary Clinic Automation Netherlands",
+    name: "Professional Services Automation Netherlands",
     provider: {
       "@type": "Organization",
       name: "CodeHunter Lab",
@@ -68,13 +67,13 @@ export default function VeterinaryClinicAutomationContent() {
     },
     areaServed: ["Netherlands", "Leiden", "Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
     description:
-      "Custom automation and CRM integration systems for veterinary clinics in the Netherlands — appointment reminders, pet owner recall campaigns, lead-to-booking automation, and practice dashboards.",
-    serviceType: "Veterinary Practice Automation & Integration",
+      "Custom automation and CRM integration systems for professional services in the Netherlands — accounting firms, consultancies, legal practices, and agencies. Invoice processing, deadline tracking, client onboarding automation, and document management.",
+    serviceType: "Professional Services Automation & Integration",
     offers: {
       "@type": "Offer",
       price: "0.00",
       priceCurrency: "EUR",
-      description: "Free veterinary practice automation audit",
+      description: "Free professional services automation audit",
     },
   };
 
@@ -87,11 +86,11 @@ export default function VeterinaryClinicAutomationContent() {
         "@type": "ListItem",
         position: 2,
         name: getLocaleValue(locale, {
-          en: "Veterinary Clinic Automation Netherlands",
-          es: "Automatización para Clínicas Veterinarias en Países Bajos",
-          nl: "Automatisering voor Dierenklinieken in Nederland",
+          en: "Professional Services Automation Netherlands",
+          es: "Automatización para Servicios Profesionales en Países Bajos",
+          nl: "Automatisering voor Professionele Diensten in Nederland",
         }),
-        item: localizedUrl(locale, "/veterinary-clinic-automation-netherlands"),
+        item: localizedUrl(locale, "/professional-services-automation-netherlands"),
       },
     ],
   };
@@ -176,7 +175,7 @@ export default function VeterinaryClinicAutomationContent() {
         {/* Systems Marquee */}
         <section className="relative z-10 mt-8 overflow-hidden border-y border-white/5 bg-near-black/50 py-12 backdrop-blur-sm">
           <div className="animate-marquee flex space-x-12 whitespace-nowrap opacity-40 grayscale transition-all duration-700 hover:grayscale-0">
-            {vetSystems.map((sys) => (
+            {accountingSystems.map((sys) => (
               <span
                 key={`a-${sys}`}
                 className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
@@ -184,7 +183,7 @@ export default function VeterinaryClinicAutomationContent() {
                 {sys}
               </span>
             ))}
-            {vetSystems.map((sys) => (
+            {accountingSystems.map((sys) => (
               <span
                 key={`b-${sys}`}
                 className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
@@ -251,7 +250,7 @@ export default function VeterinaryClinicAutomationContent() {
                   <GlassCard
                     key={item.title}
                     hoverEffect={true}
-                    glowColor="green"
+                    glowColor="orange"
                     className="flex h-full flex-col gap-4 p-8"
                   >
                     <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10">

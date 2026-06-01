@@ -52,7 +52,7 @@ const WhatWeBuildSection: React.FC = () => {
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-hunter-green/[0.04] blur-[140px]" />
 
       {/* Massive Background Text */}
-      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           SERVICES
         </h2>
@@ -99,17 +99,21 @@ const WhatWeBuildSection: React.FC = () => {
               <m.div key={service.title} variants={cardVariants} className={`h-full ${bentoClass}`}>
                 <Link
                   href={href}
-                  className="group relative flex h-full flex-col gap-6 rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-lg shadow-black/50 transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.25)]"
+                  className="group relative flex h-full flex-col gap-6 rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-lg shadow-black/50 transition-all duration-500 hover:-translate-y-2 hover:border-hunter-orange/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(255,122,60,0.25)]"
                 >
                   {/* Subtle hover background sweep */}
-                  <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover:shadow-[inset_0_1px_0_0_rgba(255,122,60,0.2)]" />
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-orange/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   {/* Hover background radial glow */}
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top_left,rgba(0,230,162,0.08)_0%,transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top_left,rgba(255,122,60,0.08)_0%,transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                  <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10 transition-colors duration-300 group-hover:bg-hunter-green/20">
-                    <Icon className="text-hunter-green drop-shadow-[0_0_10px_rgba(0,230,162,0.5)]" size={24} weight="duotone" />
+                  <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10 transition-colors duration-300 group-hover:border-hunter-orange/20 group-hover:bg-hunter-orange/10">
+                    <Icon
+                      className="text-hunter-green transition-colors duration-300 group-hover:text-hunter-orange drop-shadow-[0_0_10px_rgba(255,122,60,0.5)]"
+                      size={24}
+                      weight="duotone"
+                    />
                   </div>
 
                   <div className="relative z-10 flex-1">
@@ -119,12 +123,12 @@ const WhatWeBuildSection: React.FC = () => {
                     <p className="text-sm leading-relaxed text-gray-400">{service.desc}</p>
                   </div>
 
-                  <div className="relative z-10 mt-auto flex items-center justify-between border-t border-white/[0.05] pt-5 text-xs font-bold uppercase tracking-wider text-gray-500 transition-all duration-500 group-hover:border-hunter-green/20 group-hover:text-hunter-green">
+                  <div className="relative z-10 mt-auto flex items-center justify-between border-t border-white/[0.05] pt-5 text-xs font-bold uppercase tracking-wider text-gray-500 transition-all duration-500 group-hover:border-hunter-orange/20 group-hover:text-hunter-orange">
                     <span>{service.link}</span>
                     <ArrowUpRightIcon
                       size={18}
                       weight="bold"
-                      className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
                     />
                   </div>
                 </Link>
@@ -145,7 +149,7 @@ const WhatWeBuildSection: React.FC = () => {
             href="/ai-consulting"
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-8 py-3 font-bold text-near-black"
           >
-            <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-green-dark" />
+            <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-orange" />
             <span className="relative z-10">{t("cta")}</span>
             <ArrowRightIcon className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>

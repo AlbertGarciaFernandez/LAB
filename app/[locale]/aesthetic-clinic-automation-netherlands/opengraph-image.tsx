@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Dental Clinic Automation Netherlands — CodeHunter Lab";
+export const alt = "Aesthetic Clinic Automation Netherlands — CodeHunter Lab";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -71,7 +71,7 @@ export default function Image() {
           }}
         />
         <span style={{ color: "#00ff88", fontSize: 13, letterSpacing: 3, fontWeight: 700 }}>
-          DENTAL AUTOMATION NL
+          AESTHETIC AUTOMATION NL
         </span>
       </div>
 
@@ -87,7 +87,7 @@ export default function Image() {
           letterSpacing: "-2px",
         }}
       >
-        Dental Clinic Automation <span style={{ color: "#00ff88" }}>Netherlands.</span>
+        Aesthetic Clinic Automation <span style={{ color: "#00ff88" }}>Netherlands.</span>
       </div>
 
       {/* Three service pills */}
@@ -98,7 +98,7 @@ export default function Image() {
           marginBottom: 44,
         }}
       >
-        {["WhatsApp", "Reminders", "CRM"].map((label) => (
+        {["Instagram DM", "Booking", "CRM"].map((label) => (
           <div
             key={label}
             style={{
@@ -133,7 +133,7 @@ export default function Image() {
           }}
         />
         <span style={{ color: "#6b7280", fontSize: 16 }}>
-          codehunterlab.com/dental-clinic-automation-netherlands
+          codehunterlab.com/aesthetic-clinic-automation-netherlands
         </span>
       </div>
     </div>,

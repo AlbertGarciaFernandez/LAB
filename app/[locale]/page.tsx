@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustProofSection from "@/components/sections/TrustProofSection";
+import ExpertiseSection from "@/components/sections/02ExpertiseSection";
 import WhatWeBuildSection from "@/components/sections/WhatWeBuildSection";
 import PackagesSection from "@/components/sections/PackagesSection";
 import InsightsSection from "@/components/sections/InsightsSection";
 import BioSection from "@/components/sections/04BioSection";
-import IndustriesSection from "@/components/sections/IndustriesSection";
 import ProcessContactSection from "@/components/sections/06ProcessContactSection";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { createPageMetadata } from "@/utils/metadata";
@@ -74,9 +74,9 @@ export default function Home({ params }: { params: { locale: string } }) {
         />
         <HeroSection />
         <TrustProofSection />
+        <ExpertiseSection />
         <WhatWeBuildSection />
         <PackagesSection />
-        <IndustriesSection />
         <InsightsSection />
         <BioSection />
         <ProcessContactSection />

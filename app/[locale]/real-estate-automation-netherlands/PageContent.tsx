@@ -36,6 +36,7 @@ const solutionIcons = [
 ];
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import ResponseSpeedChart from "@/components/industry/ResponseSpeedChart";
 import { localizedUrl } from "@/utils/metadata";
 import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
@@ -173,27 +174,7 @@ export default function RealEstateAutomationContent() {
           </div>
         </section>
 
-        {/* Systems Marquee */}
-        <section className="relative z-10 mt-8 overflow-hidden border-y border-white/5 bg-near-black/50 py-12 backdrop-blur-sm">
-          <div className="animate-marquee flex space-x-12 whitespace-nowrap opacity-40 grayscale transition-all duration-700 hover:grayscale-0">
-            {realEstateSystems.map((sys) => (
-              <span
-                key={`a-${sys}`}
-                className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
-              >
-                {sys}
-              </span>
-            ))}
-            {realEstateSystems.map((sys) => (
-              <span
-                key={`b-${sys}`}
-                className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
-              >
-                {sys}
-              </span>
-            ))}
-          </div>
-        </section>
+        <ResponseSpeedChart />
 
         {/* Pain Points */}
         <section className="relative z-10 py-32">
@@ -254,7 +235,7 @@ export default function RealEstateAutomationContent() {
                     glowColor="green"
                     className="flex h-full flex-col gap-4 p-8"
                   >
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-orange/20 bg-hunter-orange/10">
                       {Icon && <Icon size={24} className="text-hunter-green" />}
                     </div>
                     <h3 className="text-xl font-black uppercase tracking-tight text-white">
@@ -273,6 +254,30 @@ export default function RealEstateAutomationContent() {
           </div>
         </section>
 
+        {/* Systems Marquee */}
+        <section className="relative z-10 mt-8 overflow-hidden border-y border-white/5 bg-near-black/50 py-12 backdrop-blur-sm">
+          <div className="animate-marquee flex space-x-12 whitespace-nowrap opacity-40 grayscale transition-all duration-700 hover:grayscale-0">
+            {realEstateSystems.map((sys) => (
+              <span
+                key={`a-${sys}`}
+                className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
+              >
+                {sys}
+              </span>
+            ))}
+            {realEstateSystems.map((sys) => (
+              <span
+                key={`b-${sys}`}
+                className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
+              >
+                {sys}
+              </span>
+            ))}
+          </div>
+        </section>
+
+
+
         {/* Scenarios */}
         <section className="relative z-10 py-32">
           <div className="mx-auto max-w-5xl px-6">
@@ -285,7 +290,7 @@ export default function RealEstateAutomationContent() {
               ).map((item) => (
                 <GlassCard
                   key={item.title}
-                  className="group border-l-4 border-l-hunter-green p-8 transition-colors hover:bg-white/[0.02]"
+                  className="group border-l-4 border-l-hunter-orange p-8 transition-colors hover:bg-white/[0.02]"
                   hoverEffect={false}
                 >
                   <div className="mb-3 flex items-start justify-between">
@@ -317,8 +322,8 @@ export default function RealEstateAutomationContent() {
                   hoverEffect={true}
                   glowColor="orange"
                 >
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-hunter-green/30 bg-hunter-green/10">
-                    <CheckIcon className="h-5 w-5 text-hunter-green" />
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-hunter-orange/30 bg-hunter-orange/10">
+                    <CheckIcon className="h-5 w-5 text-hunter-orange" />
                   </div>
                   <div>
                     <h3 className="mb-2 text-xl font-black uppercase tracking-tight text-white">
@@ -349,12 +354,12 @@ export default function RealEstateAutomationContent() {
                 glowColor="orange"
               >
                 <h3 className="mb-4 flex items-start gap-4 text-xl font-bold text-white">
-                  <span className="mt-0.5 flex-shrink-0 text-hunter-green transition-transform group-hover:rotate-90">
+                  <span className="mt-0.5 flex-shrink-0 text-hunter-orange transition-transform group-hover:rotate-90">
                     →
                   </span>
                   {item.q}
                 </h3>
-                <p className="border-l border-white/10 pl-8 text-sm leading-relaxed text-gray-400">
+                <p className="border-l border-hunter-orange/20 pl-8 text-sm leading-relaxed text-gray-400">
                   {item.a}
                 </p>
               </GlassCard>

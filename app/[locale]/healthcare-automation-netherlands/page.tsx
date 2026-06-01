@@ -2,24 +2,24 @@ import type { Metadata } from "next";
 import { createPageMetadata } from "@/utils/metadata";
 import { getTranslations } from "next-intl/server";
 import { getLocaleValue, splitKeywords, stripHtml } from "../_shared/localeCopy";
-import PhysiotherapyClinicAutomationContent from "./PageContent";
+import HealthcareAutomationContent from "./PageContent";
 
-const path = "/physiotherapy-clinic-automation-netherlands";
+const path = "/healthcare-automation-netherlands";
 
 export async function generateMetadata({
   params,
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: "PhysiotherapyClinic" });
+  const t = await getTranslations({ locale: params.locale, namespace: "Healthcare" });
 
   return createPageMetadata({
     locale: params.locale,
     path,
     title: getLocaleValue(params.locale, {
-      en: "Physiotherapy Automation Netherlands | Intake & Reminders",
-      es: "Automatización para Clínicas de Fisioterapia en Países Bajos | Intake y Recordatorios",
-      nl: "Automatisering voor Fysiotherapiepraktijken in Nederland | Intake en Herinneringen",
+      en: "Healthcare & Medical Automation Netherlands | CodeHunter Lab",
+      es: "Automatización para Clínicas Médicas en Países Bajos | CodeHunter Lab",
+      nl: "Automatisering voor Gezondheidszorg in Nederland | CodeHunter Lab",
     }),
     description: stripHtml(t.raw("Hero.description") as string),
     keywords: splitKeywords(t("SEO.keywords")),
@@ -27,5 +27,5 @@ export async function generateMetadata({
 }
 
 export default function Page() {
-  return <PhysiotherapyClinicAutomationContent />;
+  return <HealthcareAutomationContent />;
 }

@@ -712,7 +712,8 @@
         "price": "€2.5k–€5k",
         "timeline": "1–2 weeks",
         "desc": "For when you know AI can help, but need a prioritised roadmap before investing in development.",
-        "href": "/ai-consulting",
+        "href": "/ai-consulting#pricing",
+        "cta": "View sprint scope",
         "points": [
           "Workflow audit and opportunity map",
           "Automation backlog prioritised by ROI",
@@ -724,7 +725,8 @@
         "price": "From €8k",
         "timeline": "4–8 weeks",
         "desc": "One AI system, workflow or integration deployed in production on your infrastructure.",
-        "href": "/ai-automation-consulting-netherlands",
+        "href": "/ai-consulting#pricing",
+        "cta": "View implementation scope",
         "points": [
           "Fixed scope and clear delivery plan",
           "Full-stack integration with existing tools",
@@ -736,7 +738,8 @@
         "price": "From €5k/mo",
         "timeline": "Monthly",
         "desc": "Integrated engineering support for teams that want automation, maintenance and continuous iteration.",
-        "href": "/#contact",
+        "href": "/ai-consulting#migration",
+        "cta": "View partner model",
         "points": [
           "New automations and improvements",
           "Monitoring, fixes and workflow changes",
@@ -860,11 +863,9 @@
       },
       "industries": {
         "AIConsultingNL": "AI Consulting Netherlands",
-        "DentalNL": "Dental Clinic Automation",
+        "HealthcareNL": "Healthcare & Medical Automation",
         "AestheticNL": "Aesthetic Clinic Automation",
-        "PhysiotherapyNL": "Physiotherapy Automation",
-        "VeterinaryNL": "Veterinary Clinic Automation",
-        "AccountingNL": "Accounting Firm Automation",
+        "ProfessionalServicesNL": "Professional Services Automation",
         "RealEstateNL": "Real Estate Automation"
       }
     },
@@ -918,8 +919,6 @@
         "AIAutomationNL": "AI Automation NL",
         "DentalNL": "Dental Clinic NL",
         "AestheticNL": "Aesthetic Clinic NL",
-        "PhysiotherapyNL": "Physiotherapy NL",
-        "VeterinaryNL": "Veterinary Automation",
         "AccountingNL": "Accounting Automation",
         "RealEstateNL": "Real Estate Automation"
       }
@@ -955,7 +954,6 @@
         "ITIntegration": "IT System Integration",
         "SoftwareLeiden": "Software Dev Leiden",
         "InternalTools": "Internal Tools",
-        "VeterinaryNL": "Veterinary Automation",
         "AccountingNL": "Accounting Automation",
         "RealEstateNL": "Real Estate Automation"
       }
@@ -975,37 +973,37 @@
       "part1": "Core Expertise &",
       "part2": "Strategic Pillars"
     },
-    "subtitle": "AI-first systems, production engineering and flows that eliminate manual work.",
+    "subtitle": "We audit, structure and implement AI, automation and digital products with a clear focus on business value, security and adoption.",
     "pillars": {
       "frontend": {
         "title": "Frontend Architecture",
-        "micro": "Robust systems built to last.",
-        "heading": "Scalable, maintainable, high-impact web applications.",
+        "micro": "Interfaces with strength, presence and intent.",
+        "heading": "We still love building products that express who you are.",
         "paragraphs": {
-          "0": "We design and lead the development of high-calibre web applications. Our foundation is a modern architecture (React, Next.js, TypeScript), obsessively focused on long-term scalability, performance and developer experience.",
-          "1": "We don't write code for the sake of it. We make architectural decisions that eliminate complexity, enable team scaling and adapt to your product's evolution."
+          "0": "We have not left our foundations behind. Frontend remains a core part of how we think about and build digital products: strong underneath, clear on the surface and designed to evolve.",
+          "1": "We care about architecture, performance and maintainability, but also about creating experiences with identity, sensitivity and narrative. Products that do not just work well, but feel truly yours."
         },
         "bullets": {
-          "0": "Component-based architecture (React, Next.js)",
-          "1": "Scalability and maintainability by design",
-          "2": "Code quality and sustainable testing strategies",
-          "3": "Performance-first obsession (Lighthouse, Core Web Vitals)"
+          "0": "Modern, maintainable architecture",
+          "1": "Performance, accessibility and visual clarity",
+          "2": "Interfaces with identity, intent and narrative",
+          "3": "Products that combine utility, emotion and consistency"
         }
       },
-      "ecommerce": {
-        "title": "Ecommerce & Performance",
-        "micro": "Business-critical platforms optimised to convert.",
-        "heading": "Speed, UX and conversion for critical platforms.",
+      "training": {
+        "title": "Training",
+        "micro": "Real adoption, not loose theory.",
+        "heading": "Practical training programmes shaped around your company’s real context.",
         "paragraphs": {
-          "0": "We specialise in platforms where every millisecond counts. When performance and reliability directly impact revenue, we step in.",
-          "1": "From complex Salesforce Commerce Cloud (SFCC) migrations to extreme Shopify optimisation and custom stacks. We build fast, accessible user journeys designed to convert."
+          "0": "Implementation does not end when a solution goes live. For change to work in practice, teams need to understand it, absorb it into their daily work and know how to apply it with confidence.",
+          "1": "We design practical training programmes adapted to the sector, the team’s level and the company’s real processes, from leadership to operational and technical roles."
         },
         "bullets": {
-          "0": "SFCC migration leadership and architecture",
-          "1": "Core Web Vitals and Lighthouse optimisation",
-          "2": "UX, accessibility and conversion-focused design",
-          "3": "A/B testing and analytics integration",
-          "4": "We turn performance into revenue"
+          "0": "Training adapted to roles and company context",
+          "1": "Online or on-site, with recording included",
+          "2": "Real sector-specific use cases",
+          "3": "Practical from day one",
+          "4": "Materials and deliverables defined for your team"
         }
       },
       "aiAutomation": {
@@ -1024,64 +1022,64 @@
         }
       },
       "product": {
-        "title": "Product Strategy & AI",
-        "micro": "Business goals, translated to code.",
-        "heading": "Bridging product vision with technical execution.",
+        "title": "Audit & Strategy",
+        "micro": "First we understand. Then we prioritise.",
+        "heading": "Before implementing anything, we analyse what your company actually needs.",
         "paragraphs": {
-          "0": "We eliminate the gap between engineering and business. We combine technical leadership with product vision to translate commercial objectives into clear roadmaps and viable technical solutions.",
-          "1": "We lead engineering for AI-powered applications, integrating OpenAI APIs to accelerate flows, reduce noise and empower strategic decision-making."
+          "0": "This is not about applying AI blindly or digitising by inertia. We begin with a deep audit to understand processes, bottlenecks, repetitive work, internal dependencies and real opportunities for improvement.",
+          "1": "From there, we define what should be structured, what should be digitised, what deserves automation and where AI can create a concrete advantage aligned with your goals."
         },
         "bullets": {
-          "0": "Discovery, roadmap and product prioritization",
-          "1": "AI integration (OpenAI) and custom tools",
-          "2": "Agile leadership and stakeholder alignment",
-          "3": "Realistic engineering based on real constraints"
+          "0": "Audit of processes, systems and friction points",
+          "1": "Identification of bottlenecks and repetitive work",
+          "2": "Prioritisation across digitisation, automation and AI",
+          "3": "Decisions tied to real business goals"
         }
       },
       "automation": {
         "title": "AI Automation",
-        "micro": "Intelligent workflows that eliminate manual work.",
-        "heading": "Automate the boring. Empower the important.",
+        "micro": "Useful AI, integrated and ready to operate.",
+        "heading": "We implement automation and AI where they genuinely move the business forward.",
         "paragraphs": {
-          "0": "We design AI-powered automation flows that eradicate repetitive manual work, accelerate decisions and trigger operational efficiency.",
-          "1": "With tools like n8n, custom scripts and API integrations, we connect your data ecosystem to create intelligent pipelines that solve real problems. No over-engineered experiments."
+          "0": "We do not believe in deploying AI because it is trendy, or automating processes without judgment. We study how your company operates, where time is lost, what slows teams down and what is truly worth transforming.",
+          "1": "We design secure, cost-efficient solutions connected to your systems so AI does not sit in isolation, but becomes part of day-to-day operations and starts creating value from the start."
         },
         "bullets": {
-          "0": "Automated data and content pipelines",
-          "1": "AI-assisted QA, analysis and reporting",
-          "2": "Workflow orchestration across teams",
-          "3": "Drastic reduction of operational load",
-          "4": "Turn raw data into actionable insights"
+          "0": "Integration with internal tools, data and systems",
+          "1": "Secure, maintainable and scalable automation",
+          "2": "AI applied with impact and cost-efficiency in mind",
+          "3": "Less manual work and less operational friction",
+          "4": "Solutions tied to the business, not isolated experiments"
         }
       },
       "leadership": {
         "title": "Technical Leadership",
-        "micro": "Clarity, alignment and senior decisions.",
-        "heading": "Aligning product, design and engineering.",
+        "micro": "Senior judgment to decide, align and optimise.",
+        "heading": "We align teams, priorities and performance so the product can move forward clearly.",
         "paragraphs": {
-          "0": "We collaborate closely with design, product and backend to ensure technical execution fulfills the vision. We operate at the intersection of architecture, delivery and strategy, ensuring velocity without sacrificing quality."
+          "0": "We work at the intersection of business, product, design and engineering to make decisions with context, reduce friction and keep the focus on what actually drives the project forward. Performance is not a technical footnote: it is part of quality, experience and product direction."
         },
         "bullets": {
-          "0": "High-level cross-functional collaboration",
-          "1": "Clear communication and total ownership",
-          "2": "We eliminate friction between areas",
-          "3": "Sustainable delivery, without unnecessary technical debt"
+          "0": "Alignment across product, design, business and engineering",
+          "1": "Technical decisions guided by senior judgment",
+          "2": "Performance and quality as part of strategy",
+          "3": "Less friction, more clarity and more focus"
         }
       },
       "delivery": {
-        "title": "Delivery & Risk",
-        "micro": "Predictable results in complex environments.",
-        "heading": "Predictable delivery when stakes are high.",
+        "title": "Delivery & Partnership",
+        "micro": "Clarity, quality and realistic commitments.",
+        "heading": "We work honestly to build solutions that are meant to last for years.",
         "paragraphs": {
-          "0": "We focus on predictable, high-quality delivery. We apply proven engineering to reduce risks, avoid rework and ensure your product scales without breaking.",
-          "1": "We know how to make pragmatic trade-offs, consciously manage technical debt and build evolutionary systems, not fragile ones."
+          "0": "We are clear about what makes sense, what does not and how much time good work actually requires. We care about delivering quality products that are maintainable and built to last, not quick fixes that create bigger problems later.",
+          "1": "That is why we agree on timelines and ways of working that benefit both sides. To integrate properly, define goals, coordinate meetings and connect systems, we also need involvement, context and time from the client."
         },
         "bullets": {
-          "0": "Clear planning and scope definition",
-          "1": "Quality standards and rigorous testing",
-          "2": "Conscious technical debt management",
-          "3": "Risk mitigation in critical systems",
-          "4": "Long-term maintainability vs quick patches"
+          "0": "Clear and realistic planning from the start",
+          "1": "Quality and durability over speed",
+          "2": "Active collaboration around meetings, goals and integrations",
+          "3": "Honest expectations and transparent decisions",
+          "4": "Solutions designed to hold up over time"
         }
       }
     },
@@ -1952,11 +1950,7 @@
       "whatsapp": {
         "title": "AI Agents on WhatsApp",
         "desc": "24/7 customer service and lead qualification directly in WhatsApp. Speaks like a human, knows your business and books appointments automatically.",
-        "points": [
-          "Zero wait times",
-          "CRM connection",
-          "98% intent accuracy"
-        ]
+        "points": ["Zero wait times", "CRM connection", "98% intent accuracy"]
       },
       "voice": {
         "title": "AI Voice Bots",
@@ -1970,11 +1964,7 @@
       "automation": {
         "title": "Workflow Automation (n8n)",
         "desc": "We are the \"glue\" between your applications. Using <strong>n8n</strong> and <strong>Make.com</strong>, we automate data entry, billing and reporting.",
-        "points": [
-          "Goodbye to copy and paste",
-          "Error-free operations",
-          "Custom API integrations"
-        ]
+        "points": ["Goodbye to copy and paste", "Error-free operations", "Custom API integrations"]
       },
       "label": {
         "capabilities": "Capabilities",
@@ -2796,13 +2786,13 @@
   },
   "DentalClinic": {
     "Hero": {
-      "badge": "DENTAL CLINIC AUTOMATION :: NETHERLANDS",
+      "badge": "HEALTHCARE AUTOMATION :: NETHERLANDS",
       "title": {
-        "part1": "Your Dental Clinic Is Losing",
+        "part1": "Your Healthcare Practice Is Losing",
         "highlight": "Thousands per Month",
         "part2": "to Manual Management"
       },
-      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for dental clinics in the Netherlands — reducing no-shows, automating patient communication and connecting your practice management software. No generic software. No vendor lock-in.",
+      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for healthcare practices in the Netherlands — dental clinics, physiotherapy practices, veterinary clinics, and medical practices. We reduce no-shows, automate patient communication, and connect your practice management software. No generic software. No vendor lock-in.",
       "cta": {
         "primary": "Book a Free Audit",
         "secondary": "See What We Automate"
@@ -2810,17 +2800,17 @@
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
     "PainPoints": {
-      "title": "The Real Cost of Running a Dental Clinic in 2026",
+      "title": "The Real Cost of Running a Healthcare Practice in 2026",
       "items": [
         {
           "emoji": "📅",
           "title": "Last-minute no-shows and cancellations",
-          "desc": "A missed implant or orthodontics appointment means €150–€400 in lost revenue. If your reminder system is a reception call the day before, you are losing money every week."
+          "desc": "A missed appointment — whether a dental implant, physiotherapy session, or veterinary consultation — means €80–€400 in lost revenue. If your reminder system is a reception call the day before, you are losing money every week."
         },
         {
           "emoji": "📞",
           "title": "Your team is an expensive answering machine",
-          "desc": "Scheduling calls, rescheduling, treatment plan follow-ups — your assistants spend 2–3 hours a day on communication that automation handles in seconds."
+          "desc": "Scheduling calls, rescheduling, treatment plan follow-ups, referral coordination — your team spends 2–3 hours a day on communication that automation handles in seconds."
         },
         {
           "emoji": "📊",
@@ -2845,13 +2835,13 @@
       ]
     },
     "Solutions": {
-      "title": "What We Build for Dental Clinics",
+      "title": "What We Build for Healthcare Practices",
       "subtitle": "We are not a software vendor. We build and integrate the systems your clinic already owns — so they work together automatically.",
       "items": [
         {
           "emoji": "💬",
           "title": "Automated Patient Communication",
-          "desc": "We connect your management system (Exquise, ISOS, Dentrix or any platform with an API) to WhatsApp Business API, SMS and email. Confirmations, 48h and 2h reminders, post-treatment check-ins — all triggered automatically from your calendar data.",
+          "desc": "We connect your practice management system (Exquise, ISOS, Dentrix, Animana, VetSoft, Intramed, or any platform with an API) to WhatsApp Business API, SMS and email. Confirmations, 48h and 2h reminders, post-treatment check-ins — all triggered automatically from your calendar data.",
           "result": "30–50% reduction in no-shows within 60 days."
         },
         {
@@ -2863,7 +2853,7 @@
         {
           "emoji": "⚡",
           "title": "Lead-to-Booking Automation",
-          "desc": "When someone fills out your form asking about implants or Invisalign, they receive an instant personalised response, a booking link and a 3-step follow-up sequence if they don't book. Without your team lifting a finger.",
+          "desc": "When someone fills out your form asking about implants, Invisalign, physiotherapy, or veterinary services, they receive an instant personalised response, a booking link and a 3-step follow-up sequence if they don't book. Without your team lifting a finger.",
           "result": "60–80% faster response time. Higher consultation-to-booking conversion."
         },
         {
@@ -2907,7 +2897,7 @@
         {
           "num": "04",
           "title": "Treatment Plan Follow-up",
-          "desc": "The patient receives a dental implant plan. They leave without booking. Three days later they receive a specific follow-up answering common questions and offering a 10-minute call with your coordinator — triggered automatically, personalised by treatment type."
+          "desc": "The patient receives a treatment plan — whether dental implants, physiotherapy sessions, or a veterinary procedure. They leave without booking. Three days later they receive a specific follow-up answering common questions and offering a 10-minute call with your coordinator — triggered automatically, personalised by treatment type."
         },
         {
           "num": "05",
@@ -2944,7 +2934,7 @@
     },
     "FAQ": {
       "title": "Frequently Asked Questions",
-      "subtitle": "What dental clinic owners ask before getting started.",
+      "subtitle": "What healthcare practice owners ask before getting started.",
       "questions": [
         {
           "q": "Does it work with our current management software?",
@@ -2976,8 +2966,8 @@
       "subtext": "Available for clinics in the Netherlands. Current onboarding capacity: Q2 2026. Questions? Email info@codehunterlab.com"
     },
     "SEO": {
-      "keywords": "dental clinic automation Netherlands, tandartspraktijk automatisering, dental appointment reminders Netherlands, dental CRM integration, dental clinic no-show reduction, patient reactivation system, dental WhatsApp patient communication",
-      "extendedDesc": "CodeHunter Lab builds custom automation and integration systems for dental clinics in the Netherlands. From appointment reminder workflows and patient reactivation campaigns to full CRM integration and lead-to-booking automation, we help dental clinics reduce no-shows, improve patient retention and increase revenue. Based in Leiden, serving clinics in Amsterdam, Rotterdam, The Hague, Utrecht and beyond."
+      "keywords": "healthcare automation Netherlands, dental clinic automation, physiotherapy automation, veterinary clinic automation, medical practice automation, patient appointment reminders Netherlands, healthcare CRM integration, clinic no-show reduction, patient reactivation system, WhatsApp patient communication",
+      "extendedDesc": "CodeHunter Lab builds custom automation and integration systems for healthcare practices in the Netherlands — dental clinics, physiotherapy practices, veterinary clinics, and medical practices. From appointment reminder workflows and patient reactivation campaigns to full CRM integration and lead-to-booking automation, we help healthcare providers reduce no-shows, improve patient retention and increase revenue. Based in Leiden, serving practices in Amsterdam, Rotterdam, The Hague, Utrecht and beyond."
     }
   },
   "PhysiotherapyClinic": {
@@ -3530,13 +3520,13 @@
   },
   "AccountingFirm": {
     "Hero": {
-      "badge": "ACCOUNTING FIRM AUTOMATION :: NETHERLANDS",
+      "badge": "PROFESSIONAL SERVICES AUTOMATION :: NETHERLANDS",
       "title": {
-        "part1": "Your Firm Loses Hours",
+        "part1": "Your Professional Services Firm Loses Hours",
         "highlight": "Every Week",
         "part2": "to Repetitive Admin"
       },
-      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for accounting firms in the Netherlands — automating invoice processing, client onboarding, deadline reminders, and financial report generation. No generic software. No vendor dependency.",
+      "description": "CodeHunter Lab builds <strong>custom automation systems</strong> for professional services firms in the Netherlands — accounting practices, consultancies, legal firms, and agencies. We automate invoice processing, client onboarding, deadline reminders, and document management. No generic software. No vendor dependency.",
       "cta": {
         "primary": "Book a Free Audit",
         "secondary": "See What We Automate"
@@ -3544,17 +3534,17 @@
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English. However, we also offer and create systems in Dutch, as we have a specialist who reviews content in that language.",
     "PainPoints": {
-      "title": "The Real Cost of Running an Accounting Firm in 2026",
+      "title": "The Real Cost of Running a Professional Services Firm in 2026",
       "items": [
         {
           "emoji": "📄",
           "title": "Manual invoice processing consumes billable hours",
-          "desc": "Your team enters invoices manually, checks VAT codes, and exports to Exact Online or Twinfield. Every manual step is time your accountants could spend on advisory work that actually generates margin."
+          "desc": "Your team enters invoices manually, checks VAT codes, and exports to Exact Online or Twinfield. For legal firms, it's chasing signatures and document versions. For consultancies, it's time tracking and expense reconciliation. Every manual step is time your specialists could spend on billable work that actually generates margin."
         },
         {
           "emoji": "📅",
           "title": "Tax deadlines managed with spreadsheets and memory",
-          "desc": "Missed deadlines mean penalties for clients — and damaged trust for your firm. Without automated deadline tracking and client reminders, you are one busy month away from a costly mistake."
+          "desc": "Missed deadlines — whether tax filings, legal submissions, or project deliverables — mean penalties and damaged trust. Without automated deadline tracking and client reminders, you are one busy month away from a costly mistake."
         },
         {
           "emoji": "🔄",
@@ -3569,29 +3559,29 @@
         {
           "emoji": "🔌",
           "title": "Your tools don't talk to each other",
-          "desc": "Exact Online, your CRM, email, and client portal are disconnected. Every transfer between systems is a manual step and a potential data error."
+          "desc": "Exact Online, Twinfield, your CRM, email, and client portal are disconnected. For legal practices, it's document management systems and signature platforms. For agencies, it's project tools and billing systems. Every transfer between systems is a manual step and a potential data error."
         },
         {
           "emoji": "💬",
           "title": "Pending document follow-up falls through the cracks",
-          "desc": "You wait weeks for clients to send bank statements or receipts. Without automated reminders, your team ends up chasing them manually — a poor use of specialised time."
+          "desc": "You wait weeks for clients to send bank statements, receipts, contracts, or project briefs. Without automated reminders, your team ends up chasing them manually — a poor use of specialised time."
         }
       ]
     },
     "Solutions": {
-      "title": "What We Build for Accounting Firms",
+      "title": "What We Build for Professional Services Firms",
       "subtitle": "We are not a software vendor. We build and integrate the systems your firm already has — or needs — so they work together automatically.",
       "items": [
         {
           "emoji": "📄",
           "title": "Invoice Processing Automation",
-          "desc": "We connect your document intake (email, portal, scanner) to Exact Online or Twinfield via API. Invoices are automatically categorised, VAT codes applied, and posted — your accountants review exceptions, not every line.",
+          "desc": "We connect your document intake (email, portal, scanner) to Exact Online, Twinfield, or your accounting platform via API. Invoices are automatically categorised, VAT codes applied, and posted — your team reviews exceptions, not every line. For legal and consultancy firms, we automate document intake and routing.",
           "result": "80% reduction in manual entry time."
         },
         {
           "emoji": "📅",
           "title": "Deadline Reminder System",
-          "desc": "We build a deadline engine that tracks BTW, Vpb, and IB filing dates for every client. Automated reminders go to clients (requesting documents) and your team (internal alerts) — with weeks to spare.",
+          "desc": "We build a deadline engine that tracks BTW, Vpb, and IB filing dates for accountants; court deadlines and filing dates for legal practices; or project milestones for consultancies. Automated reminders go to clients (requesting documents) and your team (internal alerts) — with weeks to spare.",
           "result": "Zero missed deadlines. Clients prepared on time."
         },
         {
@@ -3603,7 +3593,7 @@
         {
           "emoji": "📊",
           "title": "Real-Time Reporting Dashboards",
-          "desc": "We connect Exact Online, Twinfield, or Moneybird to a live dashboard showing P&L, cash flow, outstanding debtors, and VAT position for each client. Automatically updated. Accessible anytime.",
+          "desc": "We connect Exact Online, Twinfield, or Moneybird to a live dashboard showing P&L, cash flow, outstanding debtors, and VAT position. For consultancies, we build utilisation and project margin dashboards. For legal firms, matter status and billing dashboards. Automatically updated. Accessible anytime.",
           "result": "Management reports in seconds, not days."
         },
         {
@@ -3646,11 +3636,11 @@
       ]
     },
     "WhyUs": {
-      "title": "Why Accounting Firms Choose CodeHunter Lab",
+      "title": "Why Professional Services Firms Choose CodeHunter Lab",
       "points": [
         {
           "title": "We know Exact Online, Twinfield, and Moneybird",
-          "desc": "We have direct experience with the APIs of the accounting platforms used by Dutch firms. We integrate your existing stack — no migration, no disruption to your current workflows."
+          "desc": "We have direct experience with the APIs of Exact Online, Twinfield, Moneybird, and major legal and consultancy platforms used by Dutch firms. We integrate your existing stack — no migration, no disruption to your current workflows."
         },
         {
           "title": "No dependencies. Everything is yours.",
@@ -3658,7 +3648,7 @@
         },
         {
           "title": "GDPR and NBA compliance by design",
-          "desc": "Client financial data is processed on EU-based infrastructure. We implement proper data access controls, audit logs, and retention policies aligned with Dutch accounting regulations."
+          "desc": "Client financial and confidential data is processed on EU-based infrastructure. We implement proper data access controls, audit logs, and retention policies aligned with Dutch accounting regulations (NBA) and GDPR."
         },
         {
           "title": "Measurable ROI from the first month",
@@ -3668,7 +3658,7 @@
     },
     "FAQ": {
       "title": "Frequently Asked Questions",
-      "subtitle": "Everything you need to know before booking your free audit.",
+      "subtitle": "Everything you need to know before booking your free audit for your professional services firm.",
       "questions": [
         {
           "q": "Do you integrate with Exact Online?",
@@ -3684,7 +3674,7 @@
         },
         {
           "q": "How much does it cost?",
-          "a": "We calculate each project individually. Most projects for accounting firms start between €5,000 and €12,000. Book a free audit for an accurate estimate."
+          "a": "We calculate each project individually. Most projects for professional services firms start between €5,000 and €15,000 depending on scope and integrations. Book a free audit for an accurate estimate."
         },
         {
           "q": "Will this disrupt our current workflow?",
@@ -3700,8 +3690,8 @@
       "subtext": "No commitment. No sales pressure. Just a clear view of what automation can do for your firm."
     },
     "SEO": {
-      "extendedDesc": "CodeHunter Lab specialises in automation systems for accounting firms in the Netherlands, including Amsterdam, Rotterdam, The Hague, Utrecht, Leiden, and Eindhoven. Our custom automation platforms connect accounting software like Exact Online, Twinfield, and Moneybird with CRM systems, client portals, and communication tools to eliminate manual administration and automate deadline compliance.",
-      "keywords": "accounting firm automation netherlands, accountantskantoor automatisering, exact online integration, twinfield automation, automated invoice processing, vat deadline automation, automated client onboarding accounting, automated financial reporting netherlands"
+      "extendedDesc": "CodeHunter Lab specialises in automation systems for professional services firms in the Netherlands, including Amsterdam, Rotterdam, The Hague, Utrecht, Leiden, and Eindhoven. We serve accounting practices, consultancies, legal firms, and agencies. Our custom automation platforms connect accounting software like Exact Online, Twinfield, and Moneybird with CRM systems, client portals, and communication tools to eliminate manual administration and automate deadline compliance.",
+      "keywords": "professional services automation netherlands, accounting firm automation, consultancy automation, legal firm automation netherlands, exact online integration, twinfield automation, automated invoice processing, deadline automation, automated client onboarding, document management automation"
     }
   },
   "RealEstateAgency": {

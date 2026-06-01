@@ -42,8 +42,6 @@
         "AIConsultingNL": "AI Consulting Nederland",
         "DentalNL": "Tandheelkunde Automatisering",
         "AestheticNL": "Esthetische Kliniek Automatisering",
-        "PhysiotherapyNL": "Fysiotherapie Automatisering",
-        "VeterinaryNL": "Dierenkliniek Automatisering",
         "AccountingNL": "Administratiekantoor Automatisering",
         "RealEstateNL": "Makelaar Automatisering"
       }
@@ -98,8 +96,6 @@
         "AIAutomationNL": "AI Automatisering NL",
         "DentalNL": "Tandheelkunde NL",
         "AestheticNL": "Esthetische Kliniek NL",
-        "PhysiotherapyNL": "Fysiotherapie NL",
-        "VeterinaryNL": "Dierenkliniek Automatisering",
         "AccountingNL": "Administratie Automatisering",
         "RealEstateNL": "Makelaar Automatisering"
       }
@@ -135,7 +131,6 @@
         "ITIntegration": "IT Systeemintegratie",
         "SoftwareLeiden": "Software Dev Leiden",
         "InternalTools": "Interne Tools",
-        "VeterinaryNL": "Dierenkliniek Automatisering",
         "AccountingNL": "Administratie Automatisering",
         "RealEstateNL": "Makelaar Automatisering"
       }
@@ -217,37 +212,37 @@
       "part1": "Kernexpertise &",
       "part2": "Strategische Pilaren"
     },
-    "subtitle": "AI-first systemen, productie-engineering en flows die handmatig werk elimineren.",
+    "subtitle": "We auditen, structureren en implementeren AI, automatisering en digitale producten met een duidelijke focus op bedrijfswaarde, veiligheid en adoptie.",
     "pillars": {
       "frontend": {
         "title": "Frontend Architectuur",
-        "micro": "Robuuste systemen gebouwd om te blijven.",
-        "heading": "Schaalbare, onderhoudbare, high-impact webapplicaties.",
+        "micro": "Interfaces met kracht, karakter en intentie.",
+        "heading": "We bouwen nog altijd graag producten die laten zien wie je bent.",
         "paragraphs": {
-          "0": "Wij ontwerpen en leiden de ontwikkeling van webapplicaties van hoog kaliber. Onze basis is een moderne architectuur (React, Next.js, TypeScript), obsessief gefocust op lange-termijn schaalbaarheid, prestaties en developer experience.",
-          "1": "Wij schrijven geen code om te schrijven. Wij nemen architecturale beslissingen die complexiteit elimineren, teamscaling mogelijk maken en meegroeien met de evolutie van je product."
+          "0": "We hebben onze basis niet achter ons gelaten. Frontend blijft een essentieel onderdeel van hoe we digitale producten denken en bouwen: sterk vanbinnen, helder vanbuiten en klaar om mee te groeien.",
+          "1": "We geven om architectuur, performance en onderhoudbaarheid, maar ook om ervaringen met identiteit, gevoel en narratief. Producten die niet alleen goed werken, maar ook echt eigen aanvoelen."
         },
         "bullets": {
-          "0": "Component-based architectuur (React, Next.js)",
-          "1": "Schaalbaarheid en onderhoudbaarheid vanaf het ontwerp",
-          "2": "Codekwaliteit en duurzame teststrategieën",
-          "3": "Performance-first obsessie (Lighthouse, Core Web Vitals)"
+          "0": "Moderne en onderhoudbare architectuur",
+          "1": "Performance, toegankelijkheid en visuele helderheid",
+          "2": "Interfaces met identiteit, intentie en narratief",
+          "3": "Producten die nut, emotie en consistentie combineren"
         }
       },
-      "ecommerce": {
-        "title": "Ecommerce & Performance",
-        "micro": "Business-kritieke platforms geoptimaliseerd voor conversie.",
-        "heading": "Snelheid, UX en conversie voor kritieke platforms.",
+      "training": {
+        "title": "Opleiding",
+        "micro": "Echte adoptie, geen losse theorie.",
+        "heading": "Praktische opleidingsprogramma’s afgestemd op de echte context van je bedrijf.",
         "paragraphs": {
-          "0": "Wij zijn gespecialiseerd in platforms waar elke milliseconde telt. Wanneer prestaties en betrouwbaarheid directe impact hebben op omzet, stappen wij in.",
-          "1": "Van complexe Salesforce Commerce Cloud (SFCC) migraties tot extreme Shopify-optimalisatie en custom stacks. Wij bouwen snelle, toegankelijke user journeys die converteren."
+          "0": "Implementatie stopt niet wanneer een oplossing live gaat. Om verandering echt te laten werken, moet een team begrijpen wat er verandert, het opnemen in de dagelijkse werking en het met vertrouwen kunnen toepassen.",
+          "1": "We ontwerpen praktische opleidingsprogramma’s afgestemd op de sector, het niveau van het team en de reële processen van het bedrijf, van directie tot operationele en technische rollen."
         },
         "bullets": {
-          "0": "SFCC migratie-leiderschap en architectuur",
-          "1": "Core Web Vitals en Lighthouse optimalisatie",
-          "2": "UX, toegankelijkheid en conversiegericht ontwerp",
-          "3": "A/B testing en analytics-integratie",
-          "4": "We transformeren prestaties in omzet"
+          "0": "Opleiding afgestemd op rollen en bedrijfscontext",
+          "1": "Online of op locatie, met opname inbegrepen",
+          "2": "Reële use cases uit de sector",
+          "3": "Praktisch toepasbaar vanaf dag één",
+          "4": "Materialen en deliverables afgestemd op je team"
         }
       },
       "aiAutomation": {
@@ -266,64 +261,64 @@
         }
       },
       "product": {
-        "title": "Productstrategie & AI",
-        "micro": "Zakelijke doelen, vertaald naar code.",
-        "heading": "Productvisie en technische uitvoering verbinden.",
+        "title": "Audit & Strategie",
+        "micro": "Eerst begrijpen. Daarna prioriteren.",
+        "heading": "Voor we iets implementeren, analyseren we wat je bedrijf echt nodig heeft.",
         "paragraphs": {
-          "0": "We elimineren de kloof tussen engineering en business. We combineren technisch leiderschap met productvisie om commerciële doelen te vertalen naar duidelijke roadmaps en haalbare technische oplossingen.",
-          "1": "We leiden engineering voor AI-gedreven applicaties, OpenAI API's integrerend om flows te versnellen, ruis te verminderen en strategisch besluitvorming te versterken."
+          "0": "Het gaat er niet om AI blind toe te passen of zomaar te digitaliseren. We starten met een grondige audit om processen, knelpunten, repetitief werk, interne afhankelijkheden en echte verbeterkansen te begrijpen.",
+          "1": "Van daaruit bepalen we wat eerst op orde moet worden gebracht, wat gedigitaliseerd moet worden, wat automatisering verdient en waar AI een concreet voordeel kan opleveren in lijn met je doelstellingen."
         },
         "bullets": {
-          "0": "Discovery, roadmap en productpriorisatie",
-          "1": "AI-integratie (OpenAI) en maatwerktools",
-          "2": "Agile leiderschap en stakeholder-afstemming",
-          "3": "Realistische engineering gebaseerd op echte beperkingen"
+          "0": "Audit van processen, systemen en frictiepunten",
+          "1": "Detectie van knelpunten en repetitief werk",
+          "2": "Prioritering tussen digitalisering, automatisering en AI",
+          "3": "Beslissingen gekoppeld aan echte bedrijfsdoelen"
         }
       },
       "automation": {
         "title": "AI Automatisering",
-        "micro": "Intelligente workflows die handmatig werk elimineren.",
-        "heading": "Automatiseer het saaie. Versterk het belangrijke.",
+        "micro": "Nuttige AI, geïntegreerd en klaar om te draaien.",
+        "heading": "We implementeren automatisering en AI waar ze het bedrijf echt vooruithelpen.",
         "paragraphs": {
-          "0": "We ontwerpen AI-gedreven automatiseringsflows die repetitief handmatig werk uitbannen, beslissingen versnellen en operationele efficiëntie verhogen.",
-          "1": "Met tools als n8n, maatwerk scripts en API-integraties verbinden we je data-ecosysteem om intelligente pipelines te creëren die echte problemen oplossen. Geen over-engineerde experimenten."
+          "0": "Wij geloven niet in AI invoeren omdat het een trend is, of in automatiseren zonder oordeel. We onderzoeken hoe je bedrijf werkt, waar tijd verloren gaat, wat teams afremt en wat werkelijk de moeite waard is om te transformeren.",
+          "1": "We ontwerpen veilige, kostenefficiënte oplossingen die op je systemen aansluiten, zodat AI niet los blijft staan maar onderdeel wordt van de dagelijkse operatie en vanaf het begin waarde levert."
         },
         "bullets": {
-          "0": "Geautomatiseerde data- en contentpipelines",
-          "1": "AI-ondersteunde QA, analyse en rapportage",
-          "2": "Workflow-orchestratie tussen teams",
-          "3": "Drastische reductie van operationele belasting",
-          "4": "Ruwe data omzetten in actionable insights"
+          "0": "Integratie met interne tools, data en systemen",
+          "1": "Veilige, onderhoudbare en schaalbare automatisering",
+          "2": "AI toegepast met focus op impact en kostenefficiëntie",
+          "3": "Minder handmatig werk en minder operationele frictie",
+          "4": "Oplossingen gekoppeld aan het bedrijf, geen losse experimenten"
         }
       },
       "leadership": {
         "title": "Technisch Leiderschap",
-        "micro": "Duidelijkheid, afstemming en senior beslissingen.",
-        "heading": "Product, design en engineering afstemmen.",
+        "micro": "Senior inzicht om te beslissen, af te stemmen en te optimaliseren.",
+        "heading": "We brengen teams, prioriteiten en performance op één lijn zodat het product helder vooruit kan.",
         "paragraphs": {
-          "0": "We werken nauw samen met design, product en backend om te garanderen dat technische uitvoering de visie waarmaakt. We opereren op het snijvlak van architectuur, delivery en strategie, en garanderen snelheid zonder kwaliteit op te offeren."
+          "0": "We werken op het snijvlak van business, product, design en engineering om beslissingen met context te nemen, frictie te verminderen en de aandacht te houden op wat het project echt vooruitbrengt. Performance is geen technisch detail: het maakt deel uit van kwaliteit, ervaring en productrichting."
         },
         "bullets": {
-          "0": "High-level cross-functionele samenwerking",
-          "1": "Duidelijke communicatie en volledige ownership",
-          "2": "We elimineren wrijving tussen afdelingen",
-          "3": "Duurzame delivery, zonder onnodige technische schuld"
+          "0": "Afstemming tussen product, design, business en engineering",
+          "1": "Technische beslissingen met senior inzicht",
+          "2": "Performance en kwaliteit als onderdeel van de strategie",
+          "3": "Minder frictie, meer helderheid en meer focus"
         }
       },
       "delivery": {
-        "title": "Delivery & Risico",
-        "micro": "Voorspelbare resultaten in complexe omgevingen.",
-        "heading": "Voorspelbare delivery als er veel op het spel staat.",
+        "title": "Delivery & Samenwerking",
+        "micro": "Helderheid, kwaliteit en realistische afspraken.",
+        "heading": "We werken eerlijk om oplossingen te bouwen die jarenlang meegaan.",
         "paragraphs": {
-          "0": "We focussen op voorspelbare, hoogwaardige delivery. We passen beproefde engineering toe om risico's te verminderen, rework te vermijden en te garanderen dat je product schaalt zonder te breken.",
-          "1": "We kennen pragmatische trade-offs, beheren technische schuld bewust en bouwen evolutionaire systemen, geen fragiele systemen."
+          "0": "We zijn duidelijk over wat zinvol is, wat niet en hoeveel tijd degelijk werk echt vraagt. We willen kwaliteitsvolle producten opleveren die onderhoudbaar zijn en lang meegaan, niet snelle oplossingen die later grotere problemen veroorzaken.",
+          "1": "Daarom spreken we timings en manieren van samenwerken af die voor beide kanten werken. Om goed te integreren, doelen te bepalen, meetings af te stemmen en systemen te verbinden, hebben we ook betrokkenheid, context en tijd van de klant nodig."
         },
         "bullets": {
-          "0": "Duidelijke planning en scope-definitie",
-          "1": "Kwaliteitsnormen en rigoureuze testing",
-          "2": "Bewust beheer van technische schuld",
-          "3": "Risico-mitigatie in kritieke systemen",
-          "4": "Langetermijnonderhoudbaarheid vs snelle patches"
+          "0": "Heldere en realistische planning vanaf de start",
+          "1": "Kwaliteit en duurzaamheid boven snelheid",
+          "2": "Actieve samenwerking rond meetings, doelen en integraties",
+          "3": "Eerlijke verwachtingen en transparante beslissingen",
+          "4": "Oplossingen ontworpen om op lange termijn stand te houden"
         }
       }
     },
@@ -1137,7 +1132,7 @@
   },
   "Packages": {
     "badge": "Pakketten",
-    "title": "Duidelijke instappunten, duidelijke rangers.",
+    "title": "Duidelijke instappunten, duidelijke prijsklassen.",
     "subtitle": "Dit zijn instapranges, geen mysterieuze retainers. Exacte scope hangt af van systemen, data-toegang en integratiecomplexiteit.",
     "cta": "Boek een gesprek",
     "learnMore": "Bekijk details",
@@ -1147,7 +1142,8 @@
         "price": "€2,5k–€5k",
         "timeline": "1–2 weken",
         "desc": "Voor als je weet dat AI kan helpen, maar eerst een geprioriteerd roadmap nodig hebt voordat je in ontwikkeling investeert.",
-        "href": "/ai-consulting",
+        "href": "/ai-consulting#pricing",
+        "cta": "Bekijk sprintscope",
         "points": [
           "Workflow-audit en opportuniteitenkaart",
           "Automatiseringsbacklog geprioriteerd op ROI",
@@ -1159,7 +1155,8 @@
         "price": "Vanaf €8k",
         "timeline": "4–8 weken",
         "desc": "Een AI-systeem, workflow of integratie in productie op je infrastructuur.",
-        "href": "/ai-automation-consulting-netherlands",
+        "href": "/ai-consulting#pricing",
+        "cta": "Bekijk implementatiescope",
         "points": [
           "Vaste scope en duidelijk deliverplan",
           "Full-stack integratie met bestaande tools",
@@ -1171,7 +1168,8 @@
         "price": "Vanaf €5k/mnd",
         "timeline": "Maandelijks",
         "desc": "Geïntegreerde engineering-support voor teams die automatisering, onderhoud en continue iteratie willen.",
-        "href": "/#contact",
+        "href": "/ai-consulting#migration",
+        "cta": "Bekijk partnermodel",
         "points": [
           "Nieuwe automatiseringen en verbeteringen",
           "Monitoring, fixes en workflow-wijzigingen",
@@ -1952,11 +1950,7 @@
       "whatsapp": {
         "title": "AI-agents op WhatsApp",
         "desc": "24/7 klantenservice en lead-kwalificatie rechtstreeks in WhatsApp. Spreekt als een mens, kent je bedrijf en boekt afspraken automatisch.",
-        "points": [
-          "Nul wachttijden",
-          "Koppeling met je CRM",
-          "98% intentie-accuratesse"
-        ]
+        "points": ["Nul wachttijden", "Koppeling met je CRM", "98% intentie-accuratesse"]
       },
       "voice": {
         "title": "AI Spraakbots",
@@ -1970,11 +1964,7 @@
       "automation": {
         "title": "Workflow Automatisering (n8n)",
         "desc": "Wij zijn de \"lijm\" tussen je applicaties. Met <strong>n8n</strong> en <strong>Make.com</strong> automatiseren wij data-invoer, facturering en rapportages.",
-        "points": [
-          "Vaarwel kopieer-en-plak",
-          "Foutloze operaties",
-          "Maatwerk API-integraties"
-        ]
+        "points": ["Vaarwel kopieer-en-plak", "Foutloze operaties", "Maatwerk API-integraties"]
       },
       "label": {
         "capabilities": "Mogelijkheden",
@@ -2802,7 +2792,7 @@
         "highlight": "Duizenden per Maand",
         "part2": "door Handmatig Beheer"
       },
-      "description": "CodeHunter Lab bouwt <strong>maatwerk automatiseringsystemen</strong> voor tandartspraktijken in Nederland — no-shows reduceren, patiëntcommunicatie automatiseren en jouw praktijksoftware koppelen. Geen generieke software. Geen vendor lock-in.",
+      "description": "CodeHunter Lab bouwt <strong>maatwerk automatiseringsystemen</strong> voor gezondheidszorgpraktijken — tandartspraktijken, fysiotherapiepraktijken en dierenklinieken in Nederland — no-shows reduceren, patiëntcommunicatie automatiseren en jouw praktijksoftware koppelen. Geen generieke software. Geen vendor lock-in.",
       "cta": {
         "primary": "Boek een Gratis Audit",
         "secondary": "Bekijk Wat Wij Automatiseren"
@@ -2944,7 +2934,7 @@
     },
     "FAQ": {
       "title": "Veelgestelde Vragen",
-      "subtitle": "Wat praktijkhouders van tandartspraktijken vragen voordat ze starten.",
+      "subtitle": "Wat praktijkhouders van gezondheidszorgpraktijken — tandartspraktijken, fysiotherapiepraktijken en dierenklinieken vragen voordat ze starten.",
       "questions": [
         {
           "q": "Werkt het met onze huidige managementsoftware?",
@@ -2976,8 +2966,8 @@
       "subtext": "Beschikbaar voor praktijken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Email info@codehunterlab.com"
     },
     "SEO": {
-      "keywords": "tandartspraktijk automatisering Nederland, tandheelkundige praktijk automatisering, tandarts afspraak herinneringen Nederland, tandheelkundige CRM integratie, tandarts no-show reductie, tandarts patiënt reactivatie systeem, tandarts WhatsApp communicatie",
-      "extendedDesc": "CodeHunter Lab bouwt maatwerk automatiserings- en integratiesystemen voor tandartspraktijken in Nederland. Van afspraakherinneringsworkflows en patiëntreactiveringscampagnes tot volledige CRM-integratie en lead-naar-afspraak automatisering, helpen wij tandartspraktijken no-shows te reduceren, patiëntretentie te verbeteren en omzet te verhogen. Gevestigd in Leiden, werkzaam voor praktijken in Amsterdam, Rotterdam, Den Haag, Utrecht en daarbuiten."
+      "keywords": "gezondheidszorg automatisering, tandartspraktijk automatisering, fysiotherapie automatisering Nederland, tandheelkundige praktijk automatisering, tandarts afspraak herinneringen Nederland, tandheelkundige CRM integratie, tandarts no-show reductie, tandarts patiënt reactivatie systeem, tandarts WhatsApp communicatie",
+      "extendedDesc": "CodeHunter Lab bouwt maatwerk automatiserings- en integratiesystemen voor gezondheidszorgpraktijken — tandartspraktijken, fysiotherapiepraktijken en dierenklinieken in Nederland. Van afspraakherinneringsworkflows en patiëntreactiveringscampagnes tot volledige CRM-integratie en lead-naar-afspraak automatisering, helpen wij gezondheidszorgpraktijken — tandartspraktijken, fysiotherapiepraktijken en dierenklinieken no-shows te reduceren, patiëntretentie te verbeteren en omzet te verhogen. Gevestigd in Leiden, werkzaam voor praktijken in Amsterdam, Rotterdam, Den Haag, Utrecht en daarbuiten."
     }
   },
   "PhysiotherapyClinic": {
@@ -3701,7 +3691,7 @@
     },
     "SEO": {
       "extendedDesc": "CodeHunter Lab is gespecialiseerd in automatiseringsystemen voor administratiekantoren in Nederland, inclusief Amsterdam, Rotterdam, Den Haag, Utrecht, Leiden en Eindhoven. Onze maatwerk automatiseringsplatforms koppelen boekhoudsoftware zoals Exact Online, Twinfield en Moneybird aan CRM-systemen, klantenportalen en communicatietools om handmatige administratie te elimineren en deadline-naleving te automatiseren.",
-      "keywords": "administratiekantoor automatisering nederland, accountantskantoor automatisering, exact online integratie, twinfield automatisering, factuurverwerking automatisering, btw deadline automatisering, klantintake automatisering accountancy, financiële rapportage automatisering nederland"
+      "keywords": "administratiekantoor automatisering nederland, professionele diensten automatisering, accountantskantoor automatisering, exact online integratie, twinfield automatisering, factuurverwerking automatisering, btw deadline automatisering, klantintake automatisering accountancy, financiële rapportage automatisering nederland"
     }
   },
   "RealEstateAgency": {

@@ -7,7 +7,7 @@ import AnimatedSection from "../layout/AnimatedSection";
 import { m, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-type PillarId = "frontend" | "ecommerce" | "product" | "automation" | "leadership" | "delivery";
+type PillarId = "frontend" | "training" | "product" | "automation" | "leadership" | "delivery";
 
 type Pillar = {
   id: PillarId;
@@ -72,19 +72,19 @@ const ExpertiseSection: React.FC = () => {
       ],
     },
     {
-      id: "ecommerce",
-      indexLabel: t("ui.indexLabel", { number: "04", title: t("pillars.ecommerce.title") }),
-      title: t("pillars.ecommerce.title"),
-      micro: t("pillars.ecommerce.micro"),
+      id: "training",
+      indexLabel: t("ui.indexLabel", { number: "04", title: t("pillars.training.title") }),
+      title: t("pillars.training.title"),
+      micro: t("pillars.training.micro"),
       icon: "{04}",
-      heading: t("pillars.ecommerce.heading"),
-      paragraphs: [t("pillars.ecommerce.paragraphs.0"), t("pillars.ecommerce.paragraphs.1")],
+      heading: t("pillars.training.heading"),
+      paragraphs: [t("pillars.training.paragraphs.0"), t("pillars.training.paragraphs.1")],
       bullets: [
-        t("pillars.ecommerce.bullets.0"),
-        t("pillars.ecommerce.bullets.1"),
-        t("pillars.ecommerce.bullets.2"),
-        t("pillars.ecommerce.bullets.3"),
-        t("pillars.ecommerce.bullets.4"),
+        t("pillars.training.bullets.0"),
+        t("pillars.training.bullets.1"),
+        t("pillars.training.bullets.2"),
+        t("pillars.training.bullets.3"),
+        t("pillars.training.bullets.4"),
       ],
     },
     {

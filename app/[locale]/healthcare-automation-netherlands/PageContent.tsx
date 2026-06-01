@@ -1,65 +1,61 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
 import HeroBackgroundOrnaments from "@/components/HeroBackgroundOrnaments";
+import { useLocale, useTranslations } from "next-intl";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import {
   CheckIcon,
-  FileTextIcon,
-  CalendarCheckIcon,
-  ArrowsClockwiseIcon,
+  CalendarXIcon,
+  PhoneIcon,
   ChartBarIcon,
+  ArrowsClockwiseIcon,
   PlugsConnectedIcon,
   ChatCircleDotsIcon,
-  RocketIcon,
-  BriefcaseIcon,
+  TargetIcon,
+  LightningIcon,
+  StarIcon,
 } from "@phosphor-icons/react/dist/ssr";
 
+import { m } from "framer-motion";
+import Header from "@/components/layout/Header";
+import PatientJourneyTimeline from "@/components/industry/PatientJourneyTimeline";
+import { localizedUrl } from "@/utils/metadata";
+import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
+
 const painPointIcons = [
-  FileTextIcon,
-  CalendarCheckIcon,
-  ArrowsClockwiseIcon,
+  CalendarXIcon,
+  PhoneIcon,
   ChartBarIcon,
+  ArrowsClockwiseIcon,
   PlugsConnectedIcon,
   ChatCircleDotsIcon,
 ];
 const solutionIcons = [
-  FileTextIcon,
-  CalendarCheckIcon,
-  RocketIcon,
-  ChartBarIcon,
+  ChatCircleDotsIcon,
+  TargetIcon,
+  LightningIcon,
   ArrowsClockwiseIcon,
-  BriefcaseIcon,
-];
-import { m } from "framer-motion";
-import Header from "@/components/layout/Header";
-import { localizedUrl } from "@/utils/metadata";
-import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
-
-const accountingSystems = [
-  "Exact Online",
-  "Twinfield",
-  "Moneybird",
-  "n8n",
-  "HubSpot",
-  "Microsoft 365",
-  "Mollie",
-  "Slack",
-  "ActiveCampaign",
-  "Zapier",
+  ChartBarIcon,
+  StarIcon,
 ];
 
-export default function AccountingFirmAutomationContent() {
-  const t = useTranslations("AccountingFirm");
+
+export default function HealthcareAutomationContent() {
   const locale = useLocale();
+  const t = useTranslations("Healthcare");
+  const painPointsItems = t.raw("PainPoints.items") as Array<{ emoji: string; title: string; desc: string }>;
+  const solutionsItems = t.raw("Solutions.items") as Array<{ emoji: string; title: string; desc: string; result: string }>;
+  const scenariosItems = t.raw("Scenarios.items") as Array<{ num: string; title: string; desc: string }>;
+  const whyUsPoints = t.raw("WhyUs.points") as Array<{ title: string; desc: string }>;
+  const faqQuestions = t.raw("FAQ.questions") as Array<{ q: string; a: string }>;
   const labels = getCommonBreadcrumbLabels(locale);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Accounting Firm Automation Netherlands",
+    name: "Healthcare & Medical Automation Netherlands",
     provider: {
       "@type": "Organization",
       name: "CodeHunter Lab",
@@ -67,13 +63,13 @@ export default function AccountingFirmAutomationContent() {
     },
     areaServed: ["Netherlands", "Leiden", "Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
     description:
-      "Custom automation and CRM integration systems for accounting firms in the Netherlands — invoice processing, client onboarding, deadline reminders, and financial reporting dashboards.",
-    serviceType: "Accounting Firm Automation & Integration",
+      "Custom automation and CRM integration systems for healthcare providers in the Netherlands — dental clinics, physiotherapy practices, veterinary clinics, and medical practices. Appointment reminders, patient reactivation, lead-to-booking automation, and practice dashboards.",
+    serviceType: "Healthcare Practice Automation & Integration",
     offers: {
       "@type": "Offer",
       price: "0.00",
       priceCurrency: "EUR",
-      description: "Free accounting firm automation audit",
+      description: "Free healthcare practice automation audit",
     },
   };
 
@@ -86,11 +82,11 @@ export default function AccountingFirmAutomationContent() {
         "@type": "ListItem",
         position: 2,
         name: getLocaleValue(locale, {
-          en: "Accounting Firm Automation Netherlands",
-          es: "Automatización para Despachos Contables en Países Bajos",
-          nl: "Automatisering voor Accountantskantoren in Nederland",
+          en: "Healthcare Automation Netherlands",
+          es: "Automatización para Clínicas Médicas en Países Bajos",
+          nl: "Automatisering voor Gezondheidszorg in Nederland",
         }),
-        item: localizedUrl(locale, "/accounting-firm-automation-netherlands"),
+        item: localizedUrl(locale, "/healthcare-automation-netherlands"),
       },
     ],
   };
@@ -128,9 +124,7 @@ export default function AccountingFirmAutomationContent() {
             className="mb-8 text-4xl font-black leading-[0.95] tracking-tighter md:text-7xl"
           >
             {t("Hero.title.part1")} <br />
-            <span className="text-gradient-enchanted neon-glow-green">
-              {t("Hero.title.highlight")}
-            </span>
+            <span className="text-gradient-enchanted neon-glow-green">{t("Hero.title.highlight")}</span>
             <br />
             {t("Hero.title.part2")}
           </m.h1>
@@ -172,27 +166,7 @@ export default function AccountingFirmAutomationContent() {
           </div>
         </section>
 
-        {/* Systems Marquee */}
-        <section className="relative z-10 mt-8 overflow-hidden border-y border-white/5 bg-near-black/50 py-12 backdrop-blur-sm">
-          <div className="animate-marquee flex space-x-12 whitespace-nowrap opacity-40 grayscale transition-all duration-700 hover:grayscale-0">
-            {accountingSystems.map((sys) => (
-              <span
-                key={`a-${sys}`}
-                className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
-              >
-                {sys}
-              </span>
-            ))}
-            {accountingSystems.map((sys) => (
-              <span
-                key={`b-${sys}`}
-                className="text-xl font-black uppercase italic tracking-tighter text-white md:text-2xl"
-              >
-                {sys}
-              </span>
-            ))}
-          </div>
-        </section>
+        <PatientJourneyTimeline />
 
         {/* Pain Points */}
         <section className="relative z-10 py-32">
@@ -201,9 +175,7 @@ export default function AccountingFirmAutomationContent() {
               {t("PainPoints.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {(
-                t.raw("PainPoints.items") as Array<{ emoji: string; title: string; desc: string }>
-              ).map((item, idx) => {
+              {painPointsItems.map((item, idx) => {
                 const Icon = painPointIcons[idx];
                 return (
                   <GlassCard
@@ -237,20 +209,13 @@ export default function AccountingFirmAutomationContent() {
               <p className="mx-auto max-w-2xl text-lg text-gray-400">{t("Solutions.subtitle")}</p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {(
-                t.raw("Solutions.items") as Array<{
-                  emoji: string;
-                  title: string;
-                  desc: string;
-                  result: string;
-                }>
-              ).map((item, idx) => {
+              {solutionsItems.map((item, idx) => {
                 const Icon = solutionIcons[idx];
                 return (
                   <GlassCard
                     key={item.title}
                     hoverEffect={true}
-                    glowColor="orange"
+                    glowColor="green"
                     className="flex h-full flex-col gap-4 p-8"
                   >
                     <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10">
@@ -259,7 +224,10 @@ export default function AccountingFirmAutomationContent() {
                     <h3 className="text-xl font-black uppercase tracking-tight text-white">
                       {item.title}
                     </h3>
-                    <p className="flex-grow text-sm leading-relaxed text-gray-400">{item.desc}</p>
+                    <p
+                      className="flex-grow text-sm leading-relaxed text-gray-400"
+                      dangerouslySetInnerHTML={{ __html: item.desc }}
+                    />
                     <div className="mt-auto border-t border-white/5 pt-4">
                       <p className="font-mono text-xs font-bold uppercase tracking-wider text-hunter-green">
                         → {item.result}
@@ -279,9 +247,7 @@ export default function AccountingFirmAutomationContent() {
               {t("Scenarios.title")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
-              {(
-                t.raw("Scenarios.items") as Array<{ num: string; title: string; desc: string }>
-              ).map((item) => (
+              {scenariosItems.map((item) => (
                 <GlassCard
                   key={item.title}
                   className="group border-l-4 border-l-hunter-green p-8 transition-colors hover:bg-white/[0.02]"
@@ -309,12 +275,12 @@ export default function AccountingFirmAutomationContent() {
               {t("WhyUs.title")}
             </h2>
             <div className="grid gap-8 md:grid-cols-2">
-              {(t.raw("WhyUs.points") as Array<{ title: string; desc: string }>).map((point) => (
+              {whyUsPoints.map((point) => (
                 <GlassCard
                   key={point.title}
                   className="flex gap-6 p-8"
                   hoverEffect={true}
-                  glowColor="orange"
+                  glowColor="green"
                 >
                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-hunter-green/30 bg-hunter-green/10">
                     <CheckIcon className="h-5 w-5 text-hunter-green" />
@@ -323,7 +289,10 @@ export default function AccountingFirmAutomationContent() {
                     <h3 className="mb-2 text-xl font-black uppercase tracking-tight text-white">
                       {point.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-gray-400">{point.desc}</p>
+                    <p
+                      className="text-sm leading-relaxed text-gray-400"
+                      dangerouslySetInnerHTML={{ __html: point.desc }}
+                    />
                   </div>
                 </GlassCard>
               ))}
@@ -340,12 +309,12 @@ export default function AccountingFirmAutomationContent() {
             <p className="text-xl text-gray-400">{t("FAQ.subtitle")}</p>
           </div>
           <div className="space-y-6">
-            {(t.raw("FAQ.questions") as Array<{ q: string; a: string }>).map((item) => (
+            {faqQuestions.map((item) => (
               <GlassCard
                 key={item.q}
                 className="group cursor-default p-8"
                 hoverEffect={true}
-                glowColor="orange"
+                glowColor="green"
               >
                 <h3 className="mb-4 flex items-start gap-4 text-xl font-bold text-white">
                   <span className="mt-0.5 flex-shrink-0 text-hunter-green transition-transform group-hover:rotate-90">
@@ -393,11 +362,9 @@ export default function AccountingFirmAutomationContent() {
               {t("SEO.extendedDesc")}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4 font-mono text-[10px] uppercase tracking-widest text-gray-400 opacity-20">
-              {t("SEO.keywords")
-                .split(",")
-                .map((kw: string) => (
-                  <span key={kw}>{kw.trim()}</span>
-                ))}
+              {t("SEO.keywords").split(",").map((kw: string) => (
+                <span key={kw}>{kw.trim()}</span>
+              ))}
             </div>
           </div>
         </footer>

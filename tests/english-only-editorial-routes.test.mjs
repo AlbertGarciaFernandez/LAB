@@ -51,3 +51,17 @@ test("editorial listing pages link to english article routes only", () => {
   assert.match(insightsIndex, /href=\{`\/en\/insights\/\$\{article\.slug\}`\}/);
   assert.match(caseStudiesIndex, /href=\{`\/en\/case-studies\/\$\{cs\.slug\}`\}/);
 });
+
+test("case studies page includes trust proof metrics and delivery guarantees", () => {
+  const caseStudiesIndex = readFileSync("app/[locale]/case-studies/page.tsx", "utf8");
+
+  assert.match(caseStudiesIndex, /4\+/);
+  assert.match(caseStudiesIndex, /Years shipping/);
+  assert.match(caseStudiesIndex, /15\+/);
+  assert.match(caseStudiesIndex, /Companies served/);
+  assert.match(caseStudiesIndex, /30d/);
+  assert.match(caseStudiesIndex, /Support included/);
+  assert.match(caseStudiesIndex, /No black boxes/);
+  assert.match(caseStudiesIndex, /Real systems, not demos/);
+  assert.match(caseStudiesIndex, /Scope before build/);
+});

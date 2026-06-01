@@ -15,20 +15,35 @@ const nextConfig = {
       "@phosphor-icons/react",
     ],
   },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-XSS-Protection", value: "1; mode=block" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
-        ],
-      },
-    ];
+  redirects: async () => [
+    {
+      source: "/dental-clinic-automation-netherlands",
+      destination: "/healthcare-automation-netherlands",
+      permanent: true,
+    },
+    {
+      source: "/physiotherapy-clinic-automation-netherlands",
+      destination: "/healthcare-automation-netherlands",
+      permanent: true,
+    },
+    {
+      source: "/veterinary-clinic-automation-netherlands",
+      destination: "/healthcare-automation-netherlands",
+      permanent: true,
+    },
+    {
+      source: "/accounting-firm-automation-netherlands",
+      destination: "/professional-services-automation-netherlands",
+      permanent: true,
+    },
+  ],
+  webpack: (config, { isServer }) => {
+    config.resolve.fallback = {
+      fs: false,
+      net: false,
+      tls: false,
+    };
+    return config;
   },
 };
 

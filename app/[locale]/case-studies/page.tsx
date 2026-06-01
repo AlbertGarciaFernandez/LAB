@@ -8,6 +8,39 @@ import { createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
 
+const trustProofMetrics = [
+  {
+    value: "4+",
+    label: "Years shipping",
+    note: "Web apps, automations, integrations and AI systems in production.",
+  },
+  {
+    value: "15+",
+    label: "Companies served",
+    note: "From local operators to SaaS and ecommerce teams.",
+  },
+  {
+    value: "30d",
+    label: "Support included",
+    note: "Implementation projects include post-launch support and handoff.",
+  },
+];
+
+const trustProofItems = [
+  {
+    title: "No black boxes",
+    desc: "The code, workflows, credential docs and deployment notes stay in your hands.",
+  },
+  {
+    title: "Real systems, not demos",
+    desc: "We connect with the stack your team already uses: CRM, calendar, WhatsApp, databases, APIs and reports.",
+  },
+  {
+    title: "Scope before build",
+    desc: "Every project starts with deliverables, integration requirements, timeline and acceptance criteria.",
+  },
+];
+
 export async function generateMetadata({
   params,
 }: {
@@ -83,6 +116,52 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
             Real results from AI automation, system integration, and n8n workflow projects for Dutch
             businesses.
           </p>
+        </section>
+
+        <section className="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-hunter-green">
+                Proof, not theatre
+              </p>
+              <h2 className="text-3xl font-black leading-tight tracking-tighter md:text-4xl">
+                We build like a product team, not a slide factory.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-gray-300">
+                Fixed scope, ownable code, production handoff, and senior engineering from discovery
+                to deployment.
+              </p>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-3">
+              {trustProofMetrics.map((metric) => (
+                <div
+                  key={metric.label}
+                  className="rounded-2xl border border-white/5 bg-near-black p-5"
+                >
+                  <div className="text-3xl font-black tracking-tighter text-hunter-green">
+                    {metric.value}
+                  </div>
+                  <div className="mt-2 text-sm font-bold text-white">{metric.label}</div>
+                  <p className="mt-2 text-xs leading-relaxed text-gray-400">{metric.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            {trustProofItems.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-2xl border border-white/5 bg-near-black p-5"
+              >
+                <h3 className="text-sm font-black tracking-tight text-hunter-green">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-400">{item.desc}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="mt-16 grid gap-6 md:grid-cols-2">
