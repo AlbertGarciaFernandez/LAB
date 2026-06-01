@@ -18,10 +18,10 @@
   "Header": {
     "nav": {
       "Services": "Servicios",
-      "Expertise": "Expertise",
+      "Expertise": "Especialidades",
       "Industries": "Industrias",
-      "TheLab": "The Lab",
-      "Bio": "Bio",
+      "TheLab": "El Lab",
+      "Bio": "Biografía",
       "Process": "Proceso",
       "Insights": "Ideas",
       "CaseStudies": "Casos Estudio",
@@ -66,7 +66,7 @@
     "description": "Diseñamos, construimos y desplegamos sistemas IA para empresas listas para ir más allá de los experimentos — conectados a tu stack, tus datos y los flujos reales de tu equipo.",
     "cta": {
       "initialize": "Reservar Llamada de Estrategia IA",
-      "caseStudies": "Explorar AI Consulting"
+      "caseStudies": "Explorar Consultoría IA"
     }
   },
   "Footer": {
@@ -82,7 +82,7 @@
       }
     },
     "Expertise": {
-      "title": "Expertise",
+      "title": "Especialidades",
       "items": {
         "AIAgents": "Agentes IA",
         "n8nMigration": "Migración n8n",
@@ -138,7 +138,7 @@
     "Navigation": {
       "title": "Navegar",
       "items": {
-        "AIConsulting": "AI Consulting",
+        "AIConsulting": "Consultoría IA",
         "OurWork": "Nuestro Trabajo",
         "Calculator": "Calculadora ROI",
         "Contact": "Contacto"
@@ -209,7 +209,7 @@
   },
   "Expertise": {
     "title": {
-      "part1": "Expertise Central y",
+      "part1": "Especialidades Centrales y",
       "part2": "Pilares Estratégicos"
     },
     "subtitle": "Auditamos, ordenamos e implementamos IA, automatización y producto digital con foco real en negocio, seguridad y adopción.",
@@ -329,7 +329,7 @@
     }
   },
   "TheLab": {
-    "title": "The Lab",
+    "title": "El Lab",
     "subtitle": "Soluciones de ingeniería y liderazgo estratégico con impacto de negocio medible.",
     "projects": {
       "0": {
@@ -402,7 +402,7 @@
     }
   },
   "Stack": {
-    "subtitle": "Motor de The Lab",
+    "subtitle": "Motor de El Lab",
     "title": "Stack Tecnológico"
   },
   "Process": {
@@ -649,7 +649,7 @@
       "recommended": "Mejor inicio",
       "items": [
         {
-          "name": "Fit Check",
+          "name": "Chequeo de Encaje",
           "price": "Gratis",
           "timeline": "30 minutos",
           "desc": "Para equipos que necesitan una respuesta directa antes de comprar estrategia o desarrollo.",
@@ -798,7 +798,7 @@
           "desc": "Código limpio y documentado con separación clara de responsabilidades. Tu equipo puede extenderlo sin nosotros."
         },
         {
-          "title": "Observable",
+          "title": "Observabilidad",
           "desc": "Cada automatización incluye logging, alertas de error y dashboards de estado para que sepas cuándo algo falla antes que tus clientes."
         },
         {
@@ -876,7 +876,7 @@
       "description": "¿Buscas una <strong>empresa de software en Leiden</strong>? Combinamos la agilidad de un <strong>consultor IT</strong> local con los estándares de ingeniería de Silicon Valley. Sin relleno, solo código que funciona.",
       "cta": {
         "coffee": "Quedamos para un Café",
-        "services": "Ver Expertise"
+        "services": "Ver Especialidades"
       }
     },
     "Services": {
@@ -1097,7 +1097,7 @@
         "points": [
           "Costes de escalado caros",
           "Interfaces rígidas y toscas",
-          "Dependencia del proveedor (Lock-in)",
+          "Dependencia del proveedor (cautividad)",
           "Techo de rendimiento limitado"
         ]
       }
@@ -1119,11 +1119,11 @@
     },
     "Process": {
       "title": "Cómo Construimos tu Herramienta",
-      "subtitle": "Desde la auditoría del workflow hasta la herramienta en producción — sin sorpresas ni bloat.",
+      "subtitle": "Desde la auditoría del flujo de trabajo hasta la herramienta en producción — sin sorpresas ni complejidad innecesaria.",
       "steps": [
         {
           "number": "01",
-          "title": "Auditoría del Workflow",
+            "title": "Auditoría del Flujo de Trabajo",
           "desc": "Mapeamos tu proceso actual: qué herramientas usas, dónde se atascan los datos y en qué invierte más tiempo tu equipo. Los puntos de dolor se convierten en el spec."
         },
         {
@@ -1159,8 +1159,8 @@
     },
     "CTA": {
       "title": "¿Listo para Reemplazar tus Hojas de Cálculo?",
-      "subtitle": "Sesión de scoping gratuita. Mapeamos tu workflow, proponemos una solución y estimamos plazos y costes. Sin compromiso.",
-      "button": "Reservar Llamada de Scoping Gratuita"
+      "subtitle": "Sesión de alcance gratuita. Mapeamos tu flujo de trabajo, proponemos una solución y estimamos plazos y costes. Sin compromiso.",
+      "button": "Reservar Llamada de Alcance Gratuita"
     },
     "SEO": {
       "description": "CodeHunter Lab construye herramientas internas a medida, paneles de administración y portales de operaciones para empresas en los Países Bajos. Reemplazamos hojas de cálculo y plataformas low-code caras con software personalizado que posees completamente — sin tarifas por usuario, sin dependencia del proveedor. Con sede en Leiden.",
@@ -1189,11 +1189,7 @@
       "whatsapp": {
         "title": "Agentes IA en WhatsApp",
         "desc": "Atención al cliente 24/7 y cualificación de leads directamente en WhatsApp. Habla como un humano, conoce tu negocio y agenda citas automáticamente.",
-        "points": [
-          "Cero tiempos de espera",
-          "Conexión con tu CRM",
-          "98% de precisión en intención"
-        ]
+        "points": ["Cero tiempos de espera", "Conexión con tu CRM", "98% de precisión en intención"]
       },
       "voice": {
         "title": "Bots de Voz con IA",
@@ -2457,6 +2453,12 @@
       }
     },
     "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "IndustryMetrics": [
+      { "value": "45%", "label": "Conversión de lead a reserva" },
+      { "value": "€850", "label": "Incremento medio del valor de vida del cliente" },
+      { "value": "28%", "label": "Mejora en retención" },
+      { "value": "3.2x", "label": "ROAS con trazabilidad de anuncios" }
+    ],
     "PainPoints": {
       "title": "Por Qué Tu Gasto en Marketing No Está Convirtiendo Como Debería",
       "items": [
@@ -2995,6 +2997,12 @@
       }
     },
     "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés. Sin embargo, también ofrecemos y creamos sistemas en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "IndustryMetrics": [
+      { "value": "92%", "label": "de leads respondidos en menos de 5 minutos" },
+      { "value": "3x", "label": "más visitas agendadas con respuesta inmediata" },
+      { "value": "€2.1M", "label": "pipeline medio anual generado por agente" },
+      { "value": "68%", "label": "de tiempo ahorrado en tareas administrativas" }
+    ],
     "PainPoints": {
       "title": "El Coste Real de Gestionar una Agencia Inmobiliaria en 2026",
       "items": [
@@ -3893,6 +3901,12 @@
       }
     },
     "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "IndustryMetrics": [
+      { "value": "35%", "label": "reducción de no-shows con recordatorios automáticos" },
+      { "value": "2 min", "label": "tiempo medio de respuesta frente a 4 horas manual" },
+      { "value": "€12K", "label": "ingresos mensuales recuperados por cancelaciones" },
+      { "value": "4.8★", "label": "satisfacción del paciente tras la automatización" }
+    ],
     "PainPoints": {
       "title": "El Coste Oculto de la Administración Médica Manual",
       "items": [
@@ -4069,6 +4083,12 @@
       }
     },
     "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "IndustryMetrics": [
+      { "value": "85%", "label": "de utilización lograda tras automatizar" },
+      { "value": "€200K", "label": "horas facturables recuperadas al año" },
+      { "value": "40%", "label": "ciclo de facturación más rápido" },
+      { "value": "12", "label": "integraciones de media por firma" }
+    ],
     "PainPoints": {
       "title": "El Coste Oculto de las Operaciones Manuales",
       "items": [

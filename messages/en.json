@@ -30,6 +30,12 @@
       }
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "IndustryMetrics": [
+      { "value": "45%", "label": "Lead-to-Booking Conversion" },
+      { "value": "€850", "label": "Avg. Client Lifetime Value Increase" },
+      { "value": "28%", "label": "Retention Improvement" },
+      { "value": "3.2x", "label": "ROAS with Ad Tracking" }
+    ],
     "PainPoints": {
       "title": "The Hidden Cost of SaaS Workflow Tools",
       "items": [
@@ -1950,11 +1956,7 @@
       "whatsapp": {
         "title": "AI Agents on WhatsApp",
         "desc": "24/7 customer service and lead qualification directly in WhatsApp. Speaks like a human, knows your business and books appointments automatically.",
-        "points": [
-          "Zero wait times",
-          "CRM connection",
-          "98% intent accuracy"
-        ]
+        "points": ["Zero wait times", "CRM connection", "98% intent accuracy"]
       },
       "voice": {
         "title": "AI Voice Bots",
@@ -1968,11 +1970,7 @@
       "automation": {
         "title": "Workflow Automation (n8n)",
         "desc": "We are the \"glue\" between your applications. Using <strong>n8n</strong> and <strong>Make.com</strong>, we automate data entry, billing and reporting.",
-        "points": [
-          "Goodbye to copy and paste",
-          "Error-free operations",
-          "Custom API integrations"
-        ]
+        "points": ["Goodbye to copy and paste", "Error-free operations", "Custom API integrations"]
       },
       "label": {
         "capabilities": "Capabilities",
@@ -3541,6 +3539,12 @@
       }
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English. However, we also offer and create systems in Dutch, as we have a specialist who reviews content in that language.",
+    "IndustryMetrics": [
+      { "value": "92%", "label": "of leads responded to within 5 minutes" },
+      { "value": "3x", "label": "more viewings booked with instant scheduling" },
+      { "value": "€2.1M", "label": "average pipeline generated per agent annually" },
+      { "value": "68%", "label": "time saved on administrative tasks" }
+    ],
     "PainPoints": {
       "title": "The Real Cost of Running a Professional Services Firm in 2026",
       "items": [
@@ -3893,6 +3897,12 @@
       }
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "IndustryMetrics": [
+      { "value": "35%", "label": "No-show reduction with automated reminders" },
+      { "value": "2 min", "label": "Average response time vs 4-hour manual" },
+      { "value": "€12K", "label": "Monthly revenue recovered from cancellations" },
+      { "value": "4.8★", "label": "Patient satisfaction score post-automation" }
+    ],
     "PainPoints": {
       "title": "The Hidden Cost of Manual Healthcare Admin",
       "items": [
@@ -4069,6 +4079,12 @@
       }
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "IndustryMetrics": [
+      { "value": "85%", "label": "utilization rate achieved after automation" },
+      { "value": "€200K", "label": "billable hours recovered annually" },
+      { "value": "40%", "label": "faster invoicing cycle" },
+      { "value": "12", "label": "integrations average per firm" }
+    ],
     "PainPoints": {
       "title": "The Hidden Cost of Manual Operations",
       "items": [

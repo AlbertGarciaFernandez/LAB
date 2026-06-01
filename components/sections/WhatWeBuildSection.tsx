@@ -110,7 +110,7 @@ const WhatWeBuildSection: React.FC = () => {
 
                   <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-hunter-green/20 bg-hunter-green/10 transition-colors duration-300 group-hover:border-hunter-orange/20 group-hover:bg-hunter-orange/10">
                     <Icon
-                      className="text-hunter-green transition-colors duration-300 group-hover:text-hunter-orange drop-shadow-[0_0_10px_rgba(255,122,60,0.5)]"
+                      className="text-hunter-green drop-shadow-[0_0_10px_rgba(255,122,60,0.5)] transition-colors duration-300 group-hover:text-hunter-orange"
                       size={24}
                       weight="duotone"
                     />

@@ -1950,11 +1950,7 @@
       "whatsapp": {
         "title": "AI-agents op WhatsApp",
         "desc": "24/7 klantenservice en lead-kwalificatie rechtstreeks in WhatsApp. Spreekt als een mens, kent je bedrijf en boekt afspraken automatisch.",
-        "points": [
-          "Nul wachttijden",
-          "Koppeling met je CRM",
-          "98% intentie-accuratesse"
-        ]
+        "points": ["Nul wachttijden", "Koppeling met je CRM", "98% intentie-accuratesse"]
       },
       "voice": {
         "title": "AI Spraakbots",
@@ -1968,11 +1964,7 @@
       "automation": {
         "title": "Workflow Automatisering (n8n)",
         "desc": "Wij zijn de \"lijm\" tussen je applicaties. Met <strong>n8n</strong> en <strong>Make.com</strong> automatiseren wij data-invoer, facturering en rapportages.",
-        "points": [
-          "Vaarwel kopieer-en-plak",
-          "Foutloze operaties",
-          "Maatwerk API-integraties"
-        ]
+        "points": ["Vaarwel kopieer-en-plak", "Foutloze operaties", "Maatwerk API-integraties"]
       },
       "label": {
         "capabilities": "Mogelijkheden",
@@ -3179,6 +3171,12 @@
       }
     },
     "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "IndustryMetrics": [
+      { "value": "45%", "label": "Lead-naar-boeking conversie" },
+      { "value": "€850", "label": "Gemiddelde stijging in klantlevensduurwaarde" },
+      { "value": "28%", "label": "Verbetering in retentie" },
+      { "value": "3.2x", "label": "ROAS met advertentie-attributie" }
+    ],
     "PainPoints": {
       "title": "Waarom Jouw Marketingbesteding Niet Converteert Zoals Het Zou Moeten",
       "items": [
@@ -3717,6 +3715,12 @@
       }
     },
     "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook systemen in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "IndustryMetrics": [
+      { "value": "92%", "label": "van leads beantwoord binnen 5 minuten" },
+      { "value": "3x", "label": "meer bezichtigingen geboekt met directe opvolging" },
+      { "value": "€2.1M", "label": "gemiddelde jaarlijkse pipeline per makelaar" },
+      { "value": "68%", "label": "tijdbesparing op administratieve taken" }
+    ],
     "PainPoints": {
       "title": "De Echte Kosten van een Makelaardij Run in 2026",
       "items": [
@@ -3893,6 +3897,12 @@
       }
     },
     "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "IndustryMetrics": [
+      { "value": "35%", "label": "minder no-shows door automatische reminders" },
+      { "value": "2 min", "label": "gemiddelde responstijd versus 4 uur handmatig" },
+      { "value": "€12K", "label": "maandelijks teruggewonnen omzet door annuleringen" },
+      { "value": "4.8★", "label": "patiënttevredenheid na automatisering" }
+    ],
     "PainPoints": {
       "title": "De Verboren Kosten van Handmatige Zorgadministratie",
       "items": [
@@ -4069,6 +4079,12 @@
       }
     },
     "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "IndustryMetrics": [
+      { "value": "85%", "label": "bezettingsgraad na automatisering" },
+      { "value": "€200K", "label": "jaarlijks teruggewonnen declarabele uren" },
+      { "value": "40%", "label": "snellere facturatiecyclus" },
+      { "value": "12", "label": "gemiddeld aantal integraties per kantoor" }
+    ],
     "PainPoints": {
       "title": "De Verboren Kosten van Handmatige Operaties",
       "items": [

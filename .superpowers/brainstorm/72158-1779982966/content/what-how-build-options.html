@@ -1,136 +1,769 @@
 <h2>More Options: What We Build + How We Build</h2>
-<p class="subtitle">A is approved. B should be vertical. This screen explores stronger C alternatives inspired by the home page bento/spotlight style.</p>
+<p class="subtitle">
+  A is approved. B should be vertical. This screen explores stronger C alternatives inspired by the
+  home page bento/spotlight style.
+</p>
 
 <div class="cards">
   <div class="card" data-choice="c1" onclick="toggleSelect(this)">
     <div class="card-image">
-      <div style="background:#050505;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;font-family:Inter,system-ui,sans-serif;overflow:hidden">
-        <div style="position:relative">
-          <div style="position:absolute;right:-50px;top:-70px;width:220px;height:220px;border-radius:999px;background:rgba(0,230,162,.08);filter:blur(45px)"></div>
-          <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:18px;position:relative;z-index:1">
+      <div
+        style="
+          background: #050505;
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 18px;
+          padding: 20px;
+          font-family: Inter, system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <div style="position: relative">
+          <div
+            style="
+              position: absolute;
+              right: -50px;
+              top: -70px;
+              width: 220px;
+              height: 220px;
+              border-radius: 999px;
+              background: rgba(0, 230, 162, 0.08);
+              filter: blur(45px);
+            "
+          ></div>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 0.85fr 1.15fr;
+              gap: 18px;
+              position: relative;
+              z-index: 1;
+            "
+          >
             <div>
-              <div style="font-size:10px;color:#00e6a2;letter-spacing:.22em;text-transform:uppercase">What We Build</div>
-              <div style="margin-top:10px;font-size:38px;font-weight:950;letter-spacing:-.06em;line-height:.95">Production AI systems, not isolated demos</div>
-              <p style="font-size:12px;color:#a1a1aa;line-height:1.5;margin-top:12px">Large editorial left rail, bento right rail.</p>
-              <div style="margin-top:18px;display:inline-flex;background:#00e6a2;color:#050505;border-radius:10px;padding:10px 14px;font-weight:900;font-size:12px">Explore systems →</div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-              <div style="grid-column:span 2;min-height:104px;border:1px solid rgba(255,122,60,.35);background:linear-gradient(135deg,rgba(255,122,60,.14),rgba(255,255,255,.03));border-radius:22px;padding:16px;display:flex;flex-direction:column;justify-content:space-between">
-                <div style="font-size:11px;color:#ff7a3c;font-weight:900;letter-spacing:.16em;text-transform:uppercase">01 / Featured</div>
-                <div><b style="font-size:18px">AI Sales & Qualification Agents</b><p style="font-size:12px;color:#aaa;margin:5px 0 0">24/7 lead response, qualification and booking.</p></div>
+              <div
+                style="
+                  font-size: 10px;
+                  color: #00e6a2;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                "
+              >
+                What We Build
               </div>
-              <div style="min-height:84px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:18px;padding:14px"><b>Flow Automation</b><p style="font-size:11px;color:#999;margin:5px 0 0">Docs, CRM, approvals.</p></div>
-              <div style="min-height:84px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:18px;padding:14px"><b>AI Integration</b><p style="font-size:11px;color:#999;margin:5px 0 0">ERP, APIs, data.</p></div>
-              <div style="min-height:84px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:18px;padding:14px"><b>Internal Tools</b><p style="font-size:11px;color:#999;margin:5px 0 0">Dashboards and admin.</p></div>
-              <div style="min-height:84px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:18px;padding:14px"><b>Custom LLMs</b><p style="font-size:11px;color:#999;margin:5px 0 0">Retrieval and private AI.</p></div>
+              <div
+                style="
+                  margin-top: 10px;
+                  font-size: 38px;
+                  font-weight: 950;
+                  letter-spacing: -0.06em;
+                  line-height: 0.95;
+                "
+              >
+                Production AI systems, not isolated demos
+              </div>
+              <p style="font-size: 12px; color: #a1a1aa; line-height: 1.5; margin-top: 12px">
+                Large editorial left rail, bento right rail.
+              </p>
+              <div
+                style="
+                  margin-top: 18px;
+                  display: inline-flex;
+                  background: #00e6a2;
+                  color: #050505;
+                  border-radius: 10px;
+                  padding: 10px 14px;
+                  font-weight: 900;
+                  font-size: 12px;
+                "
+              >
+                Explore systems →
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+              <div
+                style="
+                  grid-column: span 2;
+                  min-height: 104px;
+                  border: 1px solid rgba(255, 122, 60, 0.35);
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 122, 60, 0.14),
+                    rgba(255, 255, 255, 0.03)
+                  );
+                  border-radius: 22px;
+                  padding: 16px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                "
+              >
+                <div
+                  style="
+                    font-size: 11px;
+                    color: #ff7a3c;
+                    font-weight: 900;
+                    letter-spacing: 0.16em;
+                    text-transform: uppercase;
+                  "
+                >
+                  01 / Featured
+                </div>
+                <div>
+                  <b style="font-size: 18px">AI Sales & Qualification Agents</b>
+                  <p style="font-size: 12px; color: #aaa; margin: 5px 0 0">
+                    24/7 lead response, qualification and booking.
+                  </p>
+                </div>
+              </div>
+              <div
+                style="
+                  min-height: 84px;
+                  border: 1px solid rgba(255, 255, 255, 0.08);
+                  background: rgba(255, 255, 255, 0.04);
+                  border-radius: 18px;
+                  padding: 14px;
+                "
+              >
+                <b>Flow Automation</b>
+                <p style="font-size: 11px; color: #999; margin: 5px 0 0">Docs, CRM, approvals.</p>
+              </div>
+              <div
+                style="
+                  min-height: 84px;
+                  border: 1px solid rgba(255, 255, 255, 0.08);
+                  background: rgba(255, 255, 255, 0.04);
+                  border-radius: 18px;
+                  padding: 14px;
+                "
+              >
+                <b>AI Integration</b>
+                <p style="font-size: 11px; color: #999; margin: 5px 0 0">ERP, APIs, data.</p>
+              </div>
+              <div
+                style="
+                  min-height: 84px;
+                  border: 1px solid rgba(255, 255, 255, 0.08);
+                  background: rgba(255, 255, 255, 0.04);
+                  border-radius: 18px;
+                  padding: 14px;
+                "
+              >
+                <b>Internal Tools</b>
+                <p style="font-size: 11px; color: #999; margin: 5px 0 0">Dashboards and admin.</p>
+              </div>
+              <div
+                style="
+                  min-height: 84px;
+                  border: 1px solid rgba(255, 255, 255, 0.08);
+                  background: rgba(255, 255, 255, 0.04);
+                  border-radius: 18px;
+                  padding: 14px;
+                "
+              >
+                <b>Custom LLMs</b>
+                <p style="font-size: 11px; color: #999; margin: 5px 0 0">
+                  Retrieval and private AI.
+                </p>
+              </div>
             </div>
           </div>
-          <div style="margin-top:18px;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;display:grid;grid-template-columns:repeat(6,1fr);gap:8px">
-            <div style="border:1px solid rgba(0,230,162,.18);border-radius:14px;padding:10px;font-size:11px;color:#d4d4d8">Integrated</div><div style="border:1px solid rgba(0,230,162,.18);border-radius:14px;padding:10px;font-size:11px;color:#d4d4d8">Maintainable</div><div style="border:1px solid rgba(0,230,162,.18);border-radius:14px;padding:10px;font-size:11px;color:#d4d4d8">Observable</div><div style="border:1px solid rgba(0,230,162,.18);border-radius:14px;padding:10px;font-size:11px;color:#d4d4d8">Secure</div><div style="border:1px solid rgba(0,230,162,.18);border-radius:14px;padding:10px;font-size:11px;color:#d4d4d8">Agnostic</div><div style="border:1px solid rgba(0,230,162,.18);border-radius:14px;padding:10px;font-size:11px;color:#d4d4d8">Handoff</div>
+          <div
+            style="
+              margin-top: 18px;
+              border-top: 1px solid rgba(255, 255, 255, 0.08);
+              padding-top: 14px;
+              display: grid;
+              grid-template-columns: repeat(6, 1fr);
+              gap: 8px;
+            "
+          >
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.18);
+                border-radius: 14px;
+                padding: 10px;
+                font-size: 11px;
+                color: #d4d4d8;
+              "
+            >
+              Integrated
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.18);
+                border-radius: 14px;
+                padding: 10px;
+                font-size: 11px;
+                color: #d4d4d8;
+              "
+            >
+              Maintainable
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.18);
+                border-radius: 14px;
+                padding: 10px;
+                font-size: 11px;
+                color: #d4d4d8;
+              "
+            >
+              Observable
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.18);
+                border-radius: 14px;
+                padding: 10px;
+                font-size: 11px;
+                color: #d4d4d8;
+              "
+            >
+              Secure
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.18);
+                border-radius: 14px;
+                padding: 10px;
+                font-size: 11px;
+                color: #d4d4d8;
+              "
+            >
+              Agnostic
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.18);
+                border-radius: 14px;
+                padding: 10px;
+                font-size: 11px;
+                color: #d4d4d8;
+              "
+            >
+              Handoff
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card-body">
       <h3>C1. Editorial Bento</h3>
-      <p>Strongest marketing-page hierarchy. Big positioning statement plus cards. Closest to home's premium bento feel.</p>
+      <p>
+        Strongest marketing-page hierarchy. Big positioning statement plus cards. Closest to home's
+        premium bento feel.
+      </p>
     </div>
   </div>
 
   <div class="card" data-choice="c2" onclick="toggleSelect(this)">
     <div class="card-image">
-      <div style="background:#050505;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;font-family:Inter,system-ui,sans-serif">
-        <div style="text-align:center;margin-bottom:18px">
-          <div style="font-size:10px;color:#00e6a2;letter-spacing:.22em;text-transform:uppercase">What We Build → How It Ships</div>
-          <div style="font-size:34px;font-weight:950;letter-spacing:-.05em;line-height:1;margin-top:8px">From business system to production standard</div>
+      <div
+        style="
+          background: #050505;
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 18px;
+          padding: 20px;
+          font-family: Inter, system-ui, sans-serif;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 18px">
+          <div
+            style="
+              font-size: 10px;
+              color: #00e6a2;
+              letter-spacing: 0.22em;
+              text-transform: uppercase;
+            "
+          >
+            What We Build → How It Ships
+          </div>
+          <div
+            style="
+              font-size: 34px;
+              font-weight: 950;
+              letter-spacing: -0.05em;
+              line-height: 1;
+              margin-top: 8px;
+            "
+          >
+            From business system to production standard
+          </div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 80px 1fr;gap:12px;align-items:stretch">
-          <div style="display:grid;gap:9px">
-            <div style="border:1px solid rgba(255,122,60,.28);background:rgba(255,122,60,.08);border-radius:16px;padding:13px"><b>AI Sales Agents</b><p style="font-size:11px;color:#aaa;margin:4px 0 0">Lead intake and booking.</p></div>
-            <div style="border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:16px;padding:13px"><b>Operations Automation</b><p style="font-size:11px;color:#aaa;margin:4px 0 0">Reports and workflows.</p></div>
-            <div style="border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:16px;padding:13px"><b>Internal AI Tools</b><p style="font-size:11px;color:#aaa;margin:4px 0 0">Dashboards and admin.</p></div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 80px 1fr;
+            gap: 12px;
+            align-items: stretch;
+          "
+        >
+          <div style="display: grid; gap: 9px">
+            <div
+              style="
+                border: 1px solid rgba(255, 122, 60, 0.28);
+                background: rgba(255, 122, 60, 0.08);
+                border-radius: 16px;
+                padding: 13px;
+              "
+            >
+              <b>AI Sales Agents</b>
+              <p style="font-size: 11px; color: #aaa; margin: 4px 0 0">Lead intake and booking.</p>
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 16px;
+                padding: 13px;
+              "
+            >
+              <b>Operations Automation</b>
+              <p style="font-size: 11px; color: #aaa; margin: 4px 0 0">Reports and workflows.</p>
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 16px;
+                padding: 13px;
+              "
+            >
+              <b>Internal AI Tools</b>
+              <p style="font-size: 11px; color: #aaa; margin: 4px 0 0">Dashboards and admin.</p>
+            </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:center;position:relative">
-            <div style="position:absolute;height:100%;width:1px;background:linear-gradient(transparent,rgba(0,230,162,.45),transparent)"></div>
-            <div style="background:#00e6a2;color:#050505;border-radius:999px;width:54px;height:54px;display:flex;align-items:center;justify-content:center;font-weight:950;z-index:1">→</div>
+          <div
+            style="display: flex; align-items: center; justify-content: center; position: relative"
+          >
+            <div
+              style="
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                background: linear-gradient(transparent, rgba(0, 230, 162, 0.45), transparent);
+              "
+            ></div>
+            <div
+              style="
+                background: #00e6a2;
+                color: #050505;
+                border-radius: 999px;
+                width: 54px;
+                height: 54px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 950;
+                z-index: 1;
+              "
+            >
+              →
+            </div>
           </div>
-          <div style="display:grid;gap:9px">
-            <div style="border:1px solid rgba(0,230,162,.22);background:rgba(0,230,162,.08);border-radius:16px;padding:13px"><b>Integrated</b><p style="font-size:11px;color:#aaa;margin:4px 0 0">CRM, APIs, databases.</p></div>
-            <div style="border:1px solid rgba(0,230,162,.22);background:rgba(0,230,162,.08);border-radius:16px;padding:13px"><b>Observable</b><p style="font-size:11px;color:#aaa;margin:4px 0 0">Logs, alerts, runbooks.</p></div>
-            <div style="border:1px solid rgba(0,230,162,.22);background:rgba(0,230,162,.08);border-radius:16px;padding:13px"><b>Owned by You</b><p style="font-size:11px;color:#aaa;margin:4px 0 0">Code, docs, handoff.</p></div>
+          <div style="display: grid; gap: 9px">
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.22);
+                background: rgba(0, 230, 162, 0.08);
+                border-radius: 16px;
+                padding: 13px;
+              "
+            >
+              <b>Integrated</b>
+              <p style="font-size: 11px; color: #aaa; margin: 4px 0 0">CRM, APIs, databases.</p>
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.22);
+                background: rgba(0, 230, 162, 0.08);
+                border-radius: 16px;
+                padding: 13px;
+              "
+            >
+              <b>Observable</b>
+              <p style="font-size: 11px; color: #aaa; margin: 4px 0 0">Logs, alerts, runbooks.</p>
+            </div>
+            <div
+              style="
+                border: 1px solid rgba(0, 230, 162, 0.22);
+                background: rgba(0, 230, 162, 0.08);
+                border-radius: 16px;
+                padding: 13px;
+              "
+            >
+              <b>Owned by You</b>
+              <p style="font-size: 11px; color: #aaa; margin: 4px 0 0">Code, docs, handoff.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card-body">
       <h3>C2. Build → Standard Bridge</h3>
-      <p>Clear relationship between what you build and how you build. Less flashy, very easy to understand.</p>
+      <p>
+        Clear relationship between what you build and how you build. Less flashy, very easy to
+        understand.
+      </p>
     </div>
   </div>
 
   <div class="card" data-choice="c3" onclick="toggleSelect(this)">
     <div class="card-image">
-      <div style="background:#050505;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;font-family:Inter,system-ui,sans-serif">
-        <div style="display:grid;grid-template-columns:.72fr 1.28fr;gap:16px">
-          <div style="border:1px solid rgba(0,230,162,.2);background:rgba(0,230,162,.07);border-radius:24px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;min-height:285px">
+      <div
+        style="
+          background: #050505;
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 18px;
+          padding: 20px;
+          font-family: Inter, system-ui, sans-serif;
+        "
+      >
+        <div style="display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 16px">
+          <div
+            style="
+              border: 1px solid rgba(0, 230, 162, 0.2);
+              background: rgba(0, 230, 162, 0.07);
+              border-radius: 24px;
+              padding: 18px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              min-height: 285px;
+            "
+          >
             <div>
-              <div style="font-size:10px;color:#00e6a2;letter-spacing:.22em;text-transform:uppercase">Production Standard</div>
-              <div style="font-size:34px;line-height:.95;font-weight:950;letter-spacing:-.05em;margin-top:10px">Every system ships with the same engineering baseline.</div>
+              <div
+                style="
+                  font-size: 10px;
+                  color: #00e6a2;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                "
+              >
+                Production Standard
+              </div>
+              <div
+                style="
+                  font-size: 34px;
+                  line-height: 0.95;
+                  font-weight: 950;
+                  letter-spacing: -0.05em;
+                  margin-top: 10px;
+                "
+              >
+                Every system ships with the same engineering baseline.
+              </div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px">
-              <div style="font-size:11px;border-top:1px solid rgba(255,255,255,.12);padding-top:8px">Secure</div>
-              <div style="font-size:11px;border-top:1px solid rgba(255,255,255,.12);padding-top:8px">Observable</div>
-              <div style="font-size:11px;border-top:1px solid rgba(255,255,255,.12);padding-top:8px">Documented</div>
-              <div style="font-size:11px;border-top:1px solid rgba(255,255,255,.12);padding-top:8px">Handoff-ready</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px">
+              <div
+                style="
+                  font-size: 11px;
+                  border-top: 1px solid rgba(255, 255, 255, 0.12);
+                  padding-top: 8px;
+                "
+              >
+                Secure
+              </div>
+              <div
+                style="
+                  font-size: 11px;
+                  border-top: 1px solid rgba(255, 255, 255, 0.12);
+                  padding-top: 8px;
+                "
+              >
+                Observable
+              </div>
+              <div
+                style="
+                  font-size: 11px;
+                  border-top: 1px solid rgba(255, 255, 255, 0.12);
+                  padding-top: 8px;
+                "
+              >
+                Documented
+              </div>
+              <div
+                style="
+                  font-size: 11px;
+                  border-top: 1px solid rgba(255, 255, 255, 0.12);
+                  padding-top: 8px;
+                "
+              >
+                Handoff-ready
+              </div>
             </div>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
-            <div style="grid-column:span 3;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:20px;padding:16px;min-height:112px"><div style="font-size:10px;color:#ff7a3c">01</div><b>AI Sales & Qualification</b><p style="font-size:11px;color:#aaa;margin:5px 0 0">Respond, qualify, book.</p></div>
-            <div style="grid-column:span 3;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:20px;padding:16px;min-height:112px"><div style="font-size:10px;color:#ff7a3c">02</div><b>Operations Automation</b><p style="font-size:11px;color:#aaa;margin:5px 0 0">Reports, docs, workflows.</p></div>
-            <div style="grid-column:span 2;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:20px;padding:14px;min-height:92px"><div style="font-size:10px;color:#00e6a2">03</div><b style="font-size:13px">Integration</b></div>
-            <div style="grid-column:span 2;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:20px;padding:14px;min-height:92px"><div style="font-size:10px;color:#00e6a2">04</div><b style="font-size:13px">Internal Tools</b></div>
-            <div style="grid-column:span 2;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:20px;padding:14px;min-height:92px"><div style="font-size:10px;color:#00e6a2">05</div><b style="font-size:13px">Custom LLMs</b></div>
+          <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px">
+            <div
+              style="
+                grid-column: span 3;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 20px;
+                padding: 16px;
+                min-height: 112px;
+              "
+            >
+              <div style="font-size: 10px; color: #ff7a3c">01</div>
+              <b>AI Sales & Qualification</b>
+              <p style="font-size: 11px; color: #aaa; margin: 5px 0 0">Respond, qualify, book.</p>
+            </div>
+            <div
+              style="
+                grid-column: span 3;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 20px;
+                padding: 16px;
+                min-height: 112px;
+              "
+            >
+              <div style="font-size: 10px; color: #ff7a3c">02</div>
+              <b>Operations Automation</b>
+              <p style="font-size: 11px; color: #aaa; margin: 5px 0 0">Reports, docs, workflows.</p>
+            </div>
+            <div
+              style="
+                grid-column: span 2;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 20px;
+                padding: 14px;
+                min-height: 92px;
+              "
+            >
+              <div style="font-size: 10px; color: #00e6a2">03</div>
+              <b style="font-size: 13px">Integration</b>
+            </div>
+            <div
+              style="
+                grid-column: span 2;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 20px;
+                padding: 14px;
+                min-height: 92px;
+              "
+            >
+              <div style="font-size: 10px; color: #00e6a2">04</div>
+              <b style="font-size: 13px">Internal Tools</b>
+            </div>
+            <div
+              style="
+                grid-column: span 2;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 20px;
+                padding: 14px;
+                min-height: 92px;
+              "
+            >
+              <div style="font-size: 10px; color: #00e6a2">05</div>
+              <b style="font-size: 13px">Custom LLMs</b>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card-body">
       <h3>C3. Standards-Led Split</h3>
-      <p>Best if you want to emphasize quality and engineering standards. Slightly less direct for services.</p>
+      <p>
+        Best if you want to emphasize quality and engineering standards. Slightly less direct for
+        services.
+      </p>
     </div>
   </div>
 
   <div class="card" data-choice="c4" onclick="toggleSelect(this)">
     <div class="card-image">
-      <div style="background:#050505;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;font-family:Inter,system-ui,sans-serif">
-        <div style="display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px">
+      <div
+        style="
+          background: #050505;
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 18px;
+          padding: 20px;
+          font-family: Inter, system-ui, sans-serif;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: end;
+            margin-bottom: 18px;
+          "
+        >
           <div>
-            <div style="font-size:10px;color:#00e6a2;letter-spacing:.22em;text-transform:uppercase">Systems Menu</div>
-            <div style="font-size:34px;font-weight:950;letter-spacing:-.05em;line-height:1;margin-top:8px">Choose the system. We ship the full stack.</div>
+            <div
+              style="
+                font-size: 10px;
+                color: #00e6a2;
+                letter-spacing: 0.22em;
+                text-transform: uppercase;
+              "
+            >
+              Systems Menu
+            </div>
+            <div
+              style="
+                font-size: 34px;
+                font-weight: 950;
+                letter-spacing: -0.05em;
+                line-height: 1;
+                margin-top: 8px;
+              "
+            >
+              Choose the system. We ship the full stack.
+            </div>
           </div>
-          <div style="font-size:11px;color:#aaa;max-width:170px">Inspired by the home interactive expertise grid, but static for this page.</div>
+          <div style="font-size: 11px; color: #aaa; max-width: 170px">
+            Inspired by the home interactive expertise grid, but static for this page.
+          </div>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px">
-          <div style="background:#00e6a2;color:#050505;border-radius:14px;padding:10px;font-size:11px;font-weight:900;text-align:center">Sales Agent</div>
-          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px;font-size:11px;text-align:center">Ops Flow</div>
-          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px;font-size:11px;text-align:center">Integration</div>
-          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px;font-size:11px;text-align:center">Tools</div>
-          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px;font-size:11px;text-align:center">LLMs</div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-bottom: 14px;
+          "
+        >
+          <div
+            style="
+              background: #00e6a2;
+              color: #050505;
+              border-radius: 14px;
+              padding: 10px;
+              font-size: 11px;
+              font-weight: 900;
+              text-align: center;
+            "
+          >
+            Sales Agent
+          </div>
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.05);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              border-radius: 14px;
+              padding: 10px;
+              font-size: 11px;
+              text-align: center;
+            "
+          >
+            Ops Flow
+          </div>
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.05);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              border-radius: 14px;
+              padding: 10px;
+              font-size: 11px;
+              text-align: center;
+            "
+          >
+            Integration
+          </div>
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.05);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              border-radius: 14px;
+              padding: 10px;
+              font-size: 11px;
+              text-align: center;
+            "
+          >
+            Tools
+          </div>
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.05);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              border-radius: 14px;
+              padding: 10px;
+              font-size: 11px;
+              text-align: center;
+            "
+          >
+            LLMs
+          </div>
         </div>
-        <div style="border:1px solid rgba(0,230,162,.22);background:linear-gradient(135deg,rgba(0,230,162,.1),rgba(255,255,255,.03));border-radius:24px;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
-          <div><div style="font-size:24px;font-weight:950">AI Sales & Qualification Agents</div><p style="font-size:12px;color:#aaa;line-height:1.5">Respond to leads 24/7, qualify, book meetings, hand over context.</p></div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-            <div style="background:rgba(0,0,0,.25);border-radius:12px;padding:10px;font-size:11px">Integrated CRM</div>
-            <div style="background:rgba(0,0,0,.25);border-radius:12px;padding:10px;font-size:11px">WhatsApp/Web</div>
-            <div style="background:rgba(0,0,0,.25);border-radius:12px;padding:10px;font-size:11px">Monitoring</div>
-            <div style="background:rgba(0,0,0,.25);border-radius:12px;padding:10px;font-size:11px">Handoff docs</div>
+        <div
+          style="
+            border: 1px solid rgba(0, 230, 162, 0.22);
+            background: linear-gradient(135deg, rgba(0, 230, 162, 0.1), rgba(255, 255, 255, 0.03));
+            border-radius: 24px;
+            padding: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+          "
+        >
+          <div>
+            <div style="font-size: 24px; font-weight: 950">AI Sales & Qualification Agents</div>
+            <p style="font-size: 12px; color: #aaa; line-height: 1.5">
+              Respond to leads 24/7, qualify, book meetings, hand over context.
+            </p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+            <div
+              style="
+                background: rgba(0, 0, 0, 0.25);
+                border-radius: 12px;
+                padding: 10px;
+                font-size: 11px;
+              "
+            >
+              Integrated CRM
+            </div>
+            <div
+              style="
+                background: rgba(0, 0, 0, 0.25);
+                border-radius: 12px;
+                padding: 10px;
+                font-size: 11px;
+              "
+            >
+              WhatsApp/Web
+            </div>
+            <div
+              style="
+                background: rgba(0, 0, 0, 0.25);
+                border-radius: 12px;
+                padding: 10px;
+                font-size: 11px;
+              "
+            >
+              Monitoring
+            </div>
+            <div
+              style="
+                background: rgba(0, 0, 0, 0.25);
+                border-radius: 12px;
+                padding: 10px;
+                font-size: 11px;
+              "
+            >
+              Handoff docs
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card-body">
       <h3>C4. Static Interactive-Style Panel</h3>
-      <p>Looks dynamic like home expertise, but can be implemented as static cards. Strong if you want a productized feel.</p>
+      <p>
+        Looks dynamic like home expertise, but can be implemented as static cards. Strong if you
+        want a productized feel.
+      </p>
     </div>
   </div>
 </div>
@@ -140,7 +773,10 @@
     <div class="letter">R</div>
     <div class="content">
       <h3>My recommendation: C1</h3>
-      <p>C1 gives the best balance: premium visual hierarchy, simple implementation, and it clearly separates “what we build” from the production standards.</p>
+      <p>
+        C1 gives the best balance: premium visual hierarchy, simple implementation, and it clearly
+        separates “what we build” from the production standards.
+      </p>
     </div>
   </div>
 </div>

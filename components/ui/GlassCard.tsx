@@ -4,7 +4,7 @@ interface GlassCardProps {
   children: ReactNode;
   className?: string;
   hoverEffect?: boolean;
-  glowColor?: "green" | "orange" | "none";
+  glowColor?: "green" | "orange" | "blue" | "none";
 }
 
 export function GlassCard({
@@ -26,6 +26,9 @@ export function GlassCard({
     } else if (glowColor === "orange") {
       glowClasses =
         "hover:shadow-[0_25px_50px_-12px_rgba(255,122,60,0.2)] hover:border-hunter-orange/30";
+    } else if (glowColor === "blue") {
+      glowClasses =
+        "hover:shadow-[0_25px_50px_-12px_rgba(96,165,250,0.25)] hover:border-blue-400/40";
     } else {
       glowClasses = "hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]";
     }
@@ -42,6 +45,9 @@ export function GlassCard({
       )}
       {hoverEffect && glowColor === "orange" && (
         <div className="absolute inset-0 !z-0 rounded-3xl bg-gradient-to-br from-hunter-orange/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
+      )}
+      {hoverEffect && glowColor === "blue" && (
+        <div className="absolute inset-0 !z-0 rounded-3xl bg-gradient-to-br from-blue-400/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
       )}
 
       {children}

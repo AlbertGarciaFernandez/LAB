@@ -96,16 +96,10 @@ const HeroSection: React.FC = () => {
           <h1 className="flex flex-col gap-1 text-5xl font-black leading-[0.95] tracking-tighter md:gap-4 md:text-8xl">
             <m.span variants={slideLeftVariants} className="block">
               {t("title.part1")}
-              <span className="text-hunter-green ">
-                {t("title.highlight1")}
-              </span>
+              <span className="text-hunter-green">{t("title.highlight1")}</span>
             </m.span>
             <m.span variants={slideRightVariants} className="block">
-              {t("title.part2")}{" "}
-              <span className="text-hunter-green">
-                {t("title.highlight2")}
-              </span>
-              .
+              {t("title.part2")} <span className="text-hunter-green">{t("title.highlight2")}</span>.
             </m.span>
           </h1>
 
@@ -127,7 +121,11 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 h-full w-full bg-hunter-green transition-colors duration-300 group-hover:bg-[#00C086]" />
               <span className="relative z-10 flex items-center gap-2 drop-shadow-sm">
                 {t("cta.initialize")}
-                <ArrowRightIcon weight="bold" size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRightIcon
+                  weight="bold"
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
               </span>
             </Link>
 

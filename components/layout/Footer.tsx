@@ -112,7 +112,10 @@ const Footer: React.FC = () => {
                 { key: "AIAutomationNL", href: "/ai-automation-consulting-netherlands" },
                 { key: "HealthcareNL", href: "/healthcare-automation-netherlands" },
                 { key: "AestheticNL", href: "/aesthetic-clinic-automation-netherlands" },
-                { key: "ProfessionalServicesNL", href: "/professional-services-automation-netherlands" },
+                {
+                  key: "ProfessionalServicesNL",
+                  href: "/professional-services-automation-netherlands",
+                },
                 { key: "RealEstateNL", href: "/real-estate-automation-netherlands" },
               ].map((item) => (
                 <li key={item.key}>

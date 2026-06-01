@@ -9,11 +9,7 @@ const nextConfig = {
     minimumCacheTTL: 86400,
   },
   experimental: {
-    optimizePackageImports: [
-      "framer-motion",
-      "lucide-react",
-      "@phosphor-icons/react",
-    ],
+    optimizePackageImports: ["framer-motion", "lucide-react", "@phosphor-icons/react"],
   },
   redirects: async () => [
     {

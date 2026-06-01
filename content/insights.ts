@@ -911,12 +911,36 @@ export const insights: InsightArticle[] = [
         type: "table",
         headers: ["Criteria", "n8n", "Zapier"],
         rows: [
-          ["Cost model", "Free self-hosted or fair-code; predictable at scale", "Per-task pricing; costs rise with volume"],
-          ["Privacy / self-hosting", "Full self-hosting; data stays on your infrastructure", "Cloud-only; data passes through Zapier servers"],
-          ["Workflow complexity", "Deep branching, loops, subflows, custom code nodes", "Linear flows; limited custom logic"],
-          ["Custom API support", "Any REST/GraphQL API with HTTP request nodes", "Requires built-in app or webhooks"],
-          ["AI steps", "Native AI nodes (OpenAI, local models, vector stores)", "Requires separate AI app integrations"],
-          ["Maintenance", "Versionable JSON, Git-friendly, engineering-owned", "GUI-managed; harder to version control"],
+          [
+            "Cost model",
+            "Free self-hosted or fair-code; predictable at scale",
+            "Per-task pricing; costs rise with volume",
+          ],
+          [
+            "Privacy / self-hosting",
+            "Full self-hosting; data stays on your infrastructure",
+            "Cloud-only; data passes through Zapier servers",
+          ],
+          [
+            "Workflow complexity",
+            "Deep branching, loops, subflows, custom code nodes",
+            "Linear flows; limited custom logic",
+          ],
+          [
+            "Custom API support",
+            "Any REST/GraphQL API with HTTP request nodes",
+            "Requires built-in app or webhooks",
+          ],
+          [
+            "AI steps",
+            "Native AI nodes (OpenAI, local models, vector stores)",
+            "Requires separate AI app integrations",
+          ],
+          [
+            "Maintenance",
+            "Versionable JSON, Git-friendly, engineering-owned",
+            "GUI-managed; harder to version control",
+          ],
         ],
       },
       {
@@ -1151,12 +1175,36 @@ export const insights: InsightArticle[] = [
         type: "table",
         headers: ["Criteria", "Make", "n8n"],
         rows: [
-          ["Cost model", "Per-operation credits; tiered plans", "Free self-hosted or fair-code; flat cost at scale"],
-          ["Privacy / self-hosting", "Cloud-hosted only", "Full self-hosting; GDPR-friendly infrastructure control"],
-          ["Workflow complexity", "Visual scenarios with routers and iterators", "Code-friendly branching, loops, subflows, and error handling"],
-          ["Custom API support", "HTTP modules available; less node flexibility", "Any API via HTTP request; custom nodes and JavaScript/Python code"],
-          ["AI steps", "Limited native AI; relies on external tools", "Built-in AI nodes, vector stores, and LLM orchestration"],
-          ["Maintenance", "Visual scenario history; harder to version", "JSON exports, Git versioning, engineering-friendly ownership"],
+          [
+            "Cost model",
+            "Per-operation credits; tiered plans",
+            "Free self-hosted or fair-code; flat cost at scale",
+          ],
+          [
+            "Privacy / self-hosting",
+            "Cloud-hosted only",
+            "Full self-hosting; GDPR-friendly infrastructure control",
+          ],
+          [
+            "Workflow complexity",
+            "Visual scenarios with routers and iterators",
+            "Code-friendly branching, loops, subflows, and error handling",
+          ],
+          [
+            "Custom API support",
+            "HTTP modules available; less node flexibility",
+            "Any API via HTTP request; custom nodes and JavaScript/Python code",
+          ],
+          [
+            "AI steps",
+            "Limited native AI; relies on external tools",
+            "Built-in AI nodes, vector stores, and LLM orchestration",
+          ],
+          [
+            "Maintenance",
+            "Visual scenario history; harder to version",
+            "JSON exports, Git versioning, engineering-friendly ownership",
+          ],
         ],
       },
       {

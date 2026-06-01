@@ -45,7 +45,7 @@ const ProcessContactSection: React.FC = () => {
       className="relative overflow-hidden bg-near-black px-4 py-24 text-white md:px-8 md:py-32"
     >
       {/* Massive Background Text */}
-      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           PROCESS
         </h2>
@@ -94,10 +94,10 @@ const ProcessContactSection: React.FC = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="group/card relative flex-1 overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-8 md:p-12 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-hunter-orange/30 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(255,122,60,0.2)]">
+                <div className="group/card relative flex-1 overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-hunter-orange/30 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(255,122,60,0.2)] md:p-12">
                   {/* Subtle hover background sweep */}
                   <div className="absolute inset-0 bg-gradient-to-br from-hunter-orange/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
-                  
+
                   {/* Large Watermark Number */}
                   <div className="pointer-events-none absolute -right-6 -top-10 text-[14rem] font-black leading-none text-white/[0.02] transition-colors duration-500 group-hover/card:text-white/[0.04]">
                     {item.step}
@@ -122,9 +122,10 @@ const ProcessContactSection: React.FC = () => {
                       <div className="mb-3 text-xs font-bold uppercase tracking-widest text-hunter-green">
                         Outcome
                       </div>
-                      <div className="h-1 w-8 rounded-full bg-hunter-green/30 mb-4" />
+                      <div className="mb-4 h-1 w-8 rounded-full bg-hunter-green/30" />
                       <p className="text-sm leading-relaxed text-gray-400">
-                        A structured and fully documented execution of the <strong className="font-semibold text-white">{item.title}</strong> phase.
+                        A structured and fully documented execution of the{" "}
+                        <strong className="font-semibold text-white">{item.title}</strong> phase.
                       </p>
                     </div>
                   </div>

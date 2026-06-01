@@ -76,7 +76,7 @@ export default function PatientJourneyTimeline() {
 
         <div className="relative">
           {/* Connector line */}
-          <div className="absolute left-6 top-12 bottom-12 w-0.5 bg-gradient-to-b from-hunter-green/50 via-hunter-green/20 to-hunter-green/5 md:left-1/2 md:-ml-0.5" />
+          <div className="absolute bottom-12 left-6 top-12 w-0.5 bg-gradient-to-b from-hunter-green/50 via-hunter-green/20 to-hunter-green/5 md:left-1/2 md:-ml-0.5" />
 
           <div className="space-y-12">
             {journeySteps.map((step, idx) => {
@@ -95,8 +95,12 @@ export default function PatientJourneyTimeline() {
                 >
                   {/* Content side */}
                   <div className={`flex-1 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                    <div className={`rounded-2xl border border-white/5 bg-white/[0.02] p-6 backdrop-blur-sm transition-colors hover:border-hunter-green/20 hover:bg-white/[0.04] ${isEven ? "md:ml-auto md:max-w-md" : "md:max-w-md"}`}>
-                      <div className={`mb-3 flex items-center gap-3 ${isEven ? "md:flex-row-reverse" : ""}`}>
+                    <div
+                      className={`rounded-2xl border border-white/5 bg-white/[0.02] p-6 backdrop-blur-sm transition-colors hover:border-hunter-green/20 hover:bg-white/[0.04] ${isEven ? "md:ml-auto md:max-w-md" : "md:max-w-md"}`}
+                    >
+                      <div
+                        className={`mb-3 flex items-center gap-3 ${isEven ? "md:flex-row-reverse" : ""}`}
+                      >
                         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-hunter-green/10">
                           <Icon size={20} className="text-hunter-green" />
                         </div>
@@ -106,11 +110,15 @@ export default function PatientJourneyTimeline() {
                         {step.title}
                       </h3>
                       <p className="mb-3 text-sm text-gray-400">{step.desc}</p>
-                      <div className={`inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/5 px-3 py-1.5 text-xs font-bold text-hunter-green`}>
-                        <span className="h-1.5 w-1.5 rounded-full bg-hunter-green animate-pulse" />
+                      <div
+                        className={`inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/5 px-3 py-1.5 text-xs font-bold text-hunter-green`}
+                      >
+                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-hunter-green" />
                         {step.auto}
                       </div>
-                      <div className={`mt-3 font-mono text-[10px] uppercase tracking-widest text-gray-500`}>
+                      <div
+                        className={`mt-3 font-mono text-[10px] uppercase tracking-widest text-gray-500`}
+                      >
                         Response time: {step.time}
                       </div>
                     </div>
@@ -118,7 +126,9 @@ export default function PatientJourneyTimeline() {
 
                   {/* Center dot */}
                   <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-2 border-hunter-green/30 bg-near-black md:absolute md:left-1/2 md:-ml-6">
-                    <span className="font-mono text-sm font-bold text-hunter-green">{step.step}</span>
+                    <span className="font-mono text-sm font-bold text-hunter-green">
+                      {step.step}
+                    </span>
                   </div>
 
                   {/* Empty side for balance */}

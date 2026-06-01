@@ -13,6 +13,7 @@
 ### Task 1: Audit and document the real localization scope
 
 **Files:**
+
 - Create: `docs/translation-audit-2026-05-26.md`
 - Inspect/verify:
   - `app/[locale]/page.tsx`
@@ -36,6 +37,7 @@
 ### Task 2: Fix corporate pages that still use partial locale logic
 
 **Files:**
+
 - Modify: `app/[locale]/page.tsx`
 - Modify: `app/[locale]/about/page.tsx`
 - Modify: `app/[locale]/ai-consulting/layout.tsx`
@@ -44,6 +46,7 @@
 ### Task 3: Formalize English-only behavior for Insights and Case Studies
 
 **Files:**
+
 - Modify: `app/[locale]/insights/page.tsx`
 - Modify: `app/[locale]/insights/[slug]/page.tsx`
 - Modify: `app/[locale]/case-studies/page.tsx`
@@ -53,6 +56,7 @@
 ### Task 4: Remove Lab from locale translation and locale SEO assumptions
 
 **Files:**
+
 - Modify: `app/[locale]/lab/page.tsx`
 - Inspect: `app/[locale]/lab/**`
 - Modify: `docs/translation-audit-2026-05-26.md`
@@ -60,6 +64,7 @@
 ### Task 5: Introduce centralized SEO locale policy
 
 **Files:**
+
 - Create: `utils/seo-locale.ts`
 - Modify: `utils/metadata.ts`
 - Modify: `utils/constants.ts`
@@ -68,6 +73,7 @@
 ### Task 6: Refactor shared metadata generation to use SEO locale policy
 
 **Files:**
+
 - Modify: `utils/metadata.ts`
 - Modify: `app/[locale]/layout.tsx`
 - Modify: `app/[locale]/ai-consulting/layout.tsx`
@@ -75,6 +81,7 @@
 ### Task 7: Refactor Insights, Case Studies, and Lab metadata to stop advertising false locale parity
 
 **Files:**
+
 - Modify: `app/[locale]/insights/page.tsx`
 - Modify: `app/[locale]/insights/[slug]/page.tsx`
 - Modify: `app/[locale]/case-studies/page.tsx`
@@ -84,12 +91,14 @@
 ### Task 8: Filter sitemap output to match real indexability
 
 **Files:**
+
 - Modify: `app/sitemap.ts`
 - Test: `tests/sitemap-locale-policy.test.mjs`
 
 ### Task 9: Run full regression verification
 
 **Files:**
+
 - Verify:
   - `tests/seo-insights.test.mjs`
   - `tests/locale-translation.test.mjs`
@@ -100,6 +109,7 @@
 ### Task 10: Final documentation pass
 
 **Files:**
+
 - Modify: `docs/translation-audit-2026-05-26.md`
 - Modify: `docs/release-ready-checklist.md`
 - Optionally modify: `docs/i18n-audit-2026-05-21.md`

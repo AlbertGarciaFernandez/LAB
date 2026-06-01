@@ -84,7 +84,7 @@ export default function ResponseSpeedChart() {
               >
                 <div className="mb-2 flex items-center justify-between">
                   <span className="text-sm font-bold text-white">{item.hour}</span>
-                  <span className="text-xs font-mono text-gray-400">{item.label}</span>
+                  <span className="font-mono text-xs text-gray-400">{item.label}</span>
                 </div>
                 <div className="h-8 w-full overflow-hidden rounded-full bg-white/5">
                   <m.div

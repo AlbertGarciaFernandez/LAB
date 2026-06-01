@@ -6,10 +6,10 @@ import { insights } from "@/content/insights";
 
 const slideUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" } 
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -24,7 +24,7 @@ export default function InsightsSection() {
     "whatsapp-automation-netherlands",
     "n8n-vs-zapier-netherlands",
     "ai-system-integration",
-    "ai-automation-to-autonomous-ai-systems"
+    "ai-automation-to-autonomous-ai-systems",
   ]);
   const featuredInsights = insights.filter((article) => featuredSlugs.has(article.slug));
 

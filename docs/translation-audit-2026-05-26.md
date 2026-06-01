@@ -3,6 +3,7 @@
 ## Scope Rules
 
 Included in full localization audit:
+
 - Corporate navigation
 - Homepage
 - About
@@ -12,6 +13,7 @@ Included in full localization audit:
 - Shared metadata for those pages
 
 Excluded from full localization target:
+
 - `/[locale]/insights/**` (English-only editorial)
 - `/[locale]/case-studies/**` (English-only editorial)
 - `/[locale]/lab/**` (not translated, not part of locale SEO strategy)
@@ -26,10 +28,12 @@ Excluded from full localization target:
 ## English-only Editorial Sections
 
 These are intentionally not part of full locale translation:
+
 - Insights
 - Case Studies
 
 Rule:
+
 - editorial body remains in English
 - locale routes may exist technically
 - they are not treated as fully localized equivalents for SEO
@@ -63,16 +67,16 @@ It is not part of the locale SEO equivalence model.
 
 ## Current Status Matrix
 
-| Area | Scope | Status | Notes |
-|---|---|---:|---|
-| Global navigation | Header, Footer, Language selector, root layout | Done | Locale labels, schema language list, and shared SEO locale policy aligned. |
-| Corporate core | Home, About | Done | `en/es/nl` copy and breadcrumb labels normalized. |
-| Commercial pages | AI consulting, automation, React, Next.js, IT integration, Leiden, internal tools, n8n, AI voice, WhatsApp | Done | Visible CTA/FAQ/breadcrumb/schema locale inconsistencies corrected. |
-| Expertise pages | `expertise/*` | Done | Locale-aware breadcrumb schema and metadata helpers in place. |
-| Industry pages | `*-automation-netherlands/*` | Done | Locale-aware breadcrumb schema and visible labels aligned. |
-| Insights | Index + articles | Intentional exception | Editorial content remains English-only and now renders only under `/en/...` routes. |
-| Case Studies | Index + articles | Intentional exception | Editorial content remains English-only and now renders only under `/en/...` routes. |
-| Lab | `/lab` public + app routes | Intentional exception | Not part of translation target or locale SEO parity. |
+| Area              | Scope                                                                                                      |                Status | Notes                                                                               |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- | --------------------: | ----------------------------------------------------------------------------------- |
+| Global navigation | Header, Footer, Language selector, root layout                                                             |                  Done | Locale labels, schema language list, and shared SEO locale policy aligned.          |
+| Corporate core    | Home, About                                                                                                |                  Done | `en/es/nl` copy and breadcrumb labels normalized.                                   |
+| Commercial pages  | AI consulting, automation, React, Next.js, IT integration, Leiden, internal tools, n8n, AI voice, WhatsApp |                  Done | Visible CTA/FAQ/breadcrumb/schema locale inconsistencies corrected.                 |
+| Expertise pages   | `expertise/*`                                                                                              |                  Done | Locale-aware breadcrumb schema and metadata helpers in place.                       |
+| Industry pages    | `*-automation-netherlands/*`                                                                               |                  Done | Locale-aware breadcrumb schema and visible labels aligned.                          |
+| Insights          | Index + articles                                                                                           | Intentional exception | Editorial content remains English-only and now renders only under `/en/...` routes. |
+| Case Studies      | Index + articles                                                                                           | Intentional exception | Editorial content remains English-only and now renders only under `/en/...` routes. |
+| Lab               | `/lab` public + app routes                                                                                 | Intentional exception | Not part of translation target or locale SEO parity.                                |
 
 ## What Still Remains
 

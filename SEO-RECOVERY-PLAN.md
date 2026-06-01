@@ -18,13 +18,13 @@
 
 ## Fase 1: Arreglos técnicos críticos (Impacto inmediato, ~1-2h)
 
-| # | Tarea | Archivo(s) | Detalle |
-|---|-------|------------|---------|
-| 1.1 | Bloquear `/nl/lab/app` en robots | `app/robots.ts` | Añadir `/nl/lab/app` al array `disallow` |
-| 1.2 | Arreglar enlaces hardcodeados `/en/` | `components/sections/InsightsSection.tsx` | Reemplazar `next/link` por `Link` de `@/navigation` con `locale="en"` |
-| 1.3 | Arreglar back-link case-studies | `app/[locale]/case-studies/[slug]/page.tsx` | Mismo cambio: usar `Link` intl con `locale="en"` |
-| 1.4 | Arreglar back-link insights | `app/[locale]/insights/[slug]/page.tsx` | Mismo cambio |
-| 1.5 | Estandarizar Dental Clinic | `app/[locale]/dental-clinic-automation-netherlands/PageContent.tsx` | Cambiar de patrón props a `useTranslations()` como el resto |
+| #   | Tarea                                | Archivo(s)                                                          | Detalle                                                               |
+| --- | ------------------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 1.1 | Bloquear `/nl/lab/app` en robots     | `app/robots.ts`                                                     | Añadir `/nl/lab/app` al array `disallow`                              |
+| 1.2 | Arreglar enlaces hardcodeados `/en/` | `components/sections/InsightsSection.tsx`                           | Reemplazar `next/link` por `Link` de `@/navigation` con `locale="en"` |
+| 1.3 | Arreglar back-link case-studies      | `app/[locale]/case-studies/[slug]/page.tsx`                         | Mismo cambio: usar `Link` intl con `locale="en"`                      |
+| 1.4 | Arreglar back-link insights          | `app/[locale]/insights/[slug]/page.tsx`                             | Mismo cambio                                                          |
+| 1.5 | Estandarizar Dental Clinic           | `app/[locale]/dental-clinic-automation-netherlands/PageContent.tsx` | Cambiar de patrón props a `useTranslations()` como el resto           |
 
 ---
 
@@ -32,27 +32,27 @@
 
 **Decisión: Mantener páginas separadas** (cada industria = nicho de búsqueda distinto) pero diferenciarlas estructural y visualmente.
 
-| # | Tarea | Archivo(s) | Detalle |
-|---|-------|------------|---------|
-| 2.1 | Rediseñar layout de 2-3 páginas principales | Las 6 páginas de industria | Cambiar ORDEN de secciones en 2-3 páginas (ej. Dental: Hero → Scenarios → Pain Points → Solutions; Real Estate: Hero → Solutions → Scenarios → Pain Points) |
-| 2.2 | Añadir componente visual único por industria | Cada PageContent.tsx | Crear UN componente exclusivo: Dental = timeline "Patient Journey"; Real Estate = mapa "Response Speed by Hour"; Accounting = flujo "Document Pipeline"; etc. |
-| 2.3 | Diferenciar color de acento | Tailwind classes en cada PageContent | Asignar color secundario distintivo: Dental = azul médico, Real Estate = dorado, Aesthetic = lila, Vet = verde, Accounting = verde oscuro, Physio = teal |
-| 2.4 | Diferenciar FAQs completamente | Archivos de traducción JSON | Asegurar que las 5 preguntas de cada industria sean 100% diferentes, no variaciones del mismo tema |
-| 2.5 | Crear 5 opengraph-image.tsx | `aesthetic-clinic...`, `physiotherapy...`, `veterinary...`, `accounting...`, `real-estate...` | Actualmente solo Dental tiene OG image. Las demás usan el fallback genérico. |
+| #   | Tarea                                        | Archivo(s)                                                                                    | Detalle                                                                                                                                                       |
+| --- | -------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.1 | Rediseñar layout de 2-3 páginas principales  | Las 6 páginas de industria                                                                    | Cambiar ORDEN de secciones en 2-3 páginas (ej. Dental: Hero → Scenarios → Pain Points → Solutions; Real Estate: Hero → Solutions → Scenarios → Pain Points)   |
+| 2.2 | Añadir componente visual único por industria | Cada PageContent.tsx                                                                          | Crear UN componente exclusivo: Dental = timeline "Patient Journey"; Real Estate = mapa "Response Speed by Hour"; Accounting = flujo "Document Pipeline"; etc. |
+| 2.3 | Diferenciar color de acento                  | Tailwind classes en cada PageContent                                                          | Asignar color secundario distintivo: Dental = azul médico, Real Estate = dorado, Aesthetic = lila, Vet = verde, Accounting = verde oscuro, Physio = teal      |
+| 2.4 | Diferenciar FAQs completamente               | Archivos de traducción JSON                                                                   | Asegurar que las 5 preguntas de cada industria sean 100% diferentes, no variaciones del mismo tema                                                            |
+| 2.5 | Crear 5 opengraph-image.tsx                  | `aesthetic-clinic...`, `physiotherapy...`, `veterinary...`, `accounting...`, `real-estate...` | Actualmente solo Dental tiene OG image. Las demás usan el fallback genérico.                                                                                  |
 
 **Prioridad de industrias para rediseño:** Dental → Real Estate → Aesthetic → Veterinary → Accounting → Physiotherapy
 
-*(Razón: Dental y Real Estate tienen pain points más visuales y mayor potencial de búsqueda)*
+_(Razón: Dental y Real Estate tienen pain points más visuales y mayor potencial de búsqueda)_
 
 ---
 
 ## Fase 3: Señales de calidad y canonicals (~2-3h)
 
-| # | Tarea | Verificación |
-|---|-------|------------|
-| 3.1 | Verificar canonical tags | Cada página ES/NL debe tener `<link rel="canonical" href="https://www.codehunterlab.com/es/...">` a sí misma, NO a la versión EN |
-| 3.2 | Verificar hreflang | `next-intl` debería generar `<link rel="alternate" hreflang="...">` automáticamente. Verificar en el `<head>` renderizado |
-| 3.3 | Verificar que `/lab/app/*` devuelve noindex o está bloqueado | Confirmar que las páginas internas no aparecen en indexación |
+| #   | Tarea                                                        | Verificación                                                                                                                     |
+| --- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| 3.1 | Verificar canonical tags                                     | Cada página ES/NL debe tener `<link rel="canonical" href="https://www.codehunterlab.com/es/...">` a sí misma, NO a la versión EN |
+| 3.2 | Verificar hreflang                                           | `next-intl` debería generar `<link rel="alternate" hreflang="...">` automáticamente. Verificar en el `<head>` renderizado        |
+| 3.3 | Verificar que `/lab/app/*` devuelve noindex o está bloqueado | Confirmar que las páginas internas no aparecen en indexación                                                                     |
 
 ---
 
@@ -60,24 +60,24 @@
 
 **Decisión: Fusionar 6 industrias pequeñas → 4 categorías B2B más grandes**
 
-| URL vieja | Redirige a | Razón |
-|-----------|-----------|-------|
-| `/dental-clinic-automation-netherlands` | `/healthcare-automation-netherlands` | Dental + Physio + Vet = mismo core de clínica médica |
-| `/physiotherapy-clinic-automation-netherlands` | `/healthcare-automation-netherlands` | Citas, recordatorios, reactivación de pacientes |
-| `/veterinary-clinic-automation-netherlands` | `/healthcare-automation-netherlands` | CRM y automatización idéntica |
-| `/accounting-firm-automation-netherlands` | `/professional-services-automation-netherlands` | Expandir a consultoras, abogados, agencias |
-| `/aesthetic-clinic-automation-netherlands` | (se mantiene) | Nicho diferente: Instagram DM, alto valor |
-| `/real-estate-automation-netherlands` | (se mantiene) | Muy diferente: Funda, velocidad de respuesta |
+| URL vieja                                      | Redirige a                                      | Razón                                                |
+| ---------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------- |
+| `/dental-clinic-automation-netherlands`        | `/healthcare-automation-netherlands`            | Dental + Physio + Vet = mismo core de clínica médica |
+| `/physiotherapy-clinic-automation-netherlands` | `/healthcare-automation-netherlands`            | Citas, recordatorios, reactivación de pacientes      |
+| `/veterinary-clinic-automation-netherlands`    | `/healthcare-automation-netherlands`            | CRM y automatización idéntica                        |
+| `/accounting-firm-automation-netherlands`      | `/professional-services-automation-netherlands` | Expandir a consultoras, abogados, agencias           |
+| `/aesthetic-clinic-automation-netherlands`     | (se mantiene)                                   | Nicho diferente: Instagram DM, alto valor            |
+| `/real-estate-automation-netherlands`          | (se mantiene)                                   | Muy diferente: Funda, velocidad de respuesta         |
 
 **Redirects 301** añadidos en `next.config.mjs`.
 
 ## Fase 5: Recuperación en Google Search Console (~30min + espera)
 
-| # | Tarea | Cuándo |
-|---|-------|--------|
+| #   | Tarea                                                      | Cuándo                         |
+| --- | ---------------------------------------------------------- | ------------------------------ |
 | 5.1 | Request re-indexación de las 8 páginas legítimas restantes | Después de completar Fases 1-4 |
-| 5.2 | Re-submitear sitemap.xml | Inmediatamente después |
-| 5.3 | Monitorear Chart.csv semanalmente | Durante 4 semanas |
+| 5.2 | Re-submitear sitemap.xml                                   | Inmediatamente después         |
+| 5.3 | Monitorear Chart.csv semanalmente                          | Durante 4 semanas              |
 
 ---
 

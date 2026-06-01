@@ -93,7 +93,7 @@ const StackSection: React.FC = () => {
       <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,230,162,0.03),transparent_70%)]" />
 
       {/* Massive Background Text */}
-      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           STACK
         </h2>

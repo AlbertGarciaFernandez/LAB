@@ -46,8 +46,14 @@ test("editorial listing pages link to english article routes only", () => {
   const insightsIndex = readFileSync("app/[locale]/insights/page.tsx", "utf8");
   const caseStudiesIndex = readFileSync("app/[locale]/case-studies/page.tsx", "utf8");
 
-  assert.doesNotMatch(insightsIndex, /href=\{`\/\$\{params\.locale\}\/insights\/\$\{article\.slug\}`\}/);
-  assert.doesNotMatch(caseStudiesIndex, /href=\{`\/\$\{params\.locale\}\/case-studies\/\$\{cs\.slug\}`\}/);
+  assert.doesNotMatch(
+    insightsIndex,
+    /href=\{`\/\$\{params\.locale\}\/insights\/\$\{article\.slug\}`\}/
+  );
+  assert.doesNotMatch(
+    caseStudiesIndex,
+    /href=\{`\/\$\{params\.locale\}\/case-studies\/\$\{cs\.slug\}`\}/
+  );
   assert.match(insightsIndex, /href=\{`\/en\/insights\/\$\{article\.slug\}`\}/);
   assert.match(caseStudiesIndex, /href=\{`\/en\/case-studies\/\$\{cs\.slug\}`\}/);
 });

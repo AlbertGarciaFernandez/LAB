@@ -77,7 +77,7 @@ const IndustriesSection: React.FC = () => {
       <div className="pointer-events-none absolute left-0 top-0 h-[300px] w-[500px] rounded-full bg-hunter-green/[0.03] blur-[100px]" />
 
       {/* Massive Background Text */}
-      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03] flex justify-center">
+      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           INDUSTRIES
         </h2>
@@ -117,22 +117,29 @@ const IndustriesSection: React.FC = () => {
               <m.div key={industry.title} variants={cardVariants}>
                 <Link
                   href={href}
-                  className={`group relative flex flex-col gap-5 rounded-3xl border border-white/[0.05] bg-near-black p-10 h-full overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:bg-[#0B0B0B] ${accent.hover} ${accent.glow} shadow-lg [&>*]:relative [&>*]:z-10`}
+                  className={`group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-10 transition-all duration-500 hover:-translate-y-2 hover:bg-[#0B0B0B] ${accent.hover} ${accent.glow} shadow-lg [&>*]:relative [&>*]:z-10`}
                 >
                   {/* Subtle inner glow sweep */}
                   <div className="pointer-events-none absolute inset-0 !z-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)]" />
-                  
+
                   {/* Glow gradient background */}
-                  <div className={`absolute inset-0 !z-0 rounded-3xl bg-gradient-to-br ${accent.sweep} to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100`} />
+                  <div
+                    className={`absolute inset-0 !z-0 rounded-3xl bg-gradient-to-br ${accent.sweep} to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
+                  />
 
                   <div
                     className={`h-12 w-12 flex-shrink-0 rounded-xl ${accent.bg} border ${accent.border} flex items-center justify-center transition-all duration-500 group-hover:scale-110`}
                   >
-                    <Icon className={`${accent.text} ${accent.dropShadow} transition-all duration-500`} size={24} />
+                    <Icon
+                      className={`${accent.text} ${accent.dropShadow} transition-all duration-500`}
+                      size={24}
+                    />
                   </div>
 
                   <div className="flex-1">
-                    <h3 className={`mb-2 text-xl font-black tracking-tight text-white transition-all duration-500 group-hover:${accent.text} ${accent.dropShadow}`}>
+                    <h3
+                      className={`mb-2 text-xl font-black tracking-tight text-white transition-all duration-500 group-hover:${accent.text} ${accent.dropShadow}`}
+                    >
                       {industry.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-gray-400">{industry.desc}</p>
