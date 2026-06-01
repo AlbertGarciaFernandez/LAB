@@ -1950,7 +1950,11 @@
       "whatsapp": {
         "title": "AI Agents on WhatsApp",
         "desc": "24/7 customer service and lead qualification directly in WhatsApp. Speaks like a human, knows your business and books appointments automatically.",
-        "points": ["Zero wait times", "CRM connection", "98% intent accuracy"]
+        "points": [
+          "Zero wait times",
+          "CRM connection",
+          "98% intent accuracy"
+        ]
       },
       "voice": {
         "title": "AI Voice Bots",
@@ -1964,7 +1968,11 @@
       "automation": {
         "title": "Workflow Automation (n8n)",
         "desc": "We are the \"glue\" between your applications. Using <strong>n8n</strong> and <strong>Make.com</strong>, we automate data entry, billing and reporting.",
-        "points": ["Goodbye to copy and paste", "Error-free operations", "Custom API integrations"]
+        "points": [
+          "Goodbye to copy and paste",
+          "Error-free operations",
+          "Custom API integrations"
+        ]
       },
       "label": {
         "capabilities": "Capabilities",
@@ -3868,6 +3876,358 @@
     "SEO": {
       "extendedDesc": "CodeHunter Lab specialises in automation systems for real estate agencies in the Netherlands, including Amsterdam, Rotterdam, The Hague, Utrecht, Leiden, Haarlem, Eindhoven, and Groningen. Our custom automation platforms connect Funda, CRM systems, WhatsApp Business API, and marketing tools to eliminate slow lead follow-up, automate viewing scheduling, syndicate property listings, and build systematic communication with sellers.",
       "keywords": "real estate agency automation netherlands, makelaar automatisering nederland, funda integration automation, real estate crm netherlands, real estate lead automation, real estate viewing automation netherlands, whatsapp automation makelaar, makelaar crm system"
+    }
+  },
+  "Healthcare": {
+    "Hero": {
+      "badge": "HEALTHCARE PRACTICE AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "Your Front Desk",
+        "highlight": "Is Drowning.",
+        "part2": "Automation Saves Lives."
+      },
+      "description": "CodeHunter Lab builds <strong>automation systems for healthcare practices</strong> in the Netherlands — dental clinics, physiotherapy practices, veterinary clinics, and medical centres. Appointment reminders, patient reactivation, lead-to-booking flows, and practice dashboards. Less admin. More patients. Zero no-shows.",
+      "cta": {
+        "primary": "Book a Free Practice Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "The Hidden Cost of Manual Healthcare Admin",
+      "items": [
+        {
+          "emoji": "📅",
+          "title": "No-shows cost you €150+ per slot",
+          "desc": "A missed appointment is not just an empty chair — it is lost revenue, wasted staff time, and a patient who may not reschedule. If your reminder system is a phone call the day before, you are bleeding money."
+        },
+        {
+          "emoji": "📞",
+          "title": "Your staff are expensive phone operators",
+          "desc": "Scheduling, rescheduling, confirming appointments — your receptionists spend 2–3 hours daily on phone calls that automation handles in seconds. That is billable capacity lost to admin."
+        },
+        {
+          "emoji": "📊",
+          "title": "You have no idea where patients come from",
+          "desc": "Google? A referral? Instagram? Without tracking from ad click to booked appointment, your marketing budget is a guess you cannot optimise."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Patient reactivation is reactive, not systematic",
+          "desc": "Patients who have not visited in 6, 12, or 18 months represent significant revenue. Most practices have no automated system to re-engage them at the right time."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Your systems do not talk to each other",
+          "desc": "Practice management, accounting, email marketing, WhatsApp — four separate islands. Every data transfer is a manual step and a potential error."
+        },
+        {
+          "emoji": "💬",
+          "title": "Treatment plans stall between consultation and booking",
+          "desc": "A patient enquires about implants or aligners, leaves without booking, and receives no follow-up. That lead is often lost to a faster competitor."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "What We Build for Healthcare Practices",
+      "subtitle": "We are not a no-code agency. We engineer production-grade automation systems that connect your practice management software, CRM, and communication channels into one seamless workflow.",
+      "items": [
+        {
+          "emoji": "🔄",
+          "title": "Automated Appointment Reminders",
+          "desc": "We build multi-channel reminder systems via WhatsApp, SMS, and email — triggered automatically from your practice calendar. Patients confirm or reschedule with one click.",
+          "result": "No-shows drop by 40–70%. Staff phone time cut in half."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Patient Reactivation Campaigns",
+          "desc": "We identify inactive patients and trigger personalised reactivation sequences at optimal intervals. Automated follow-ups with treatment-specific messaging.",
+          "result": "Reactivating 10% of dormant patients adds thousands in monthly revenue."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Lead-to-Booking Automation",
+          "desc": "From website enquiry to scheduled appointment — without manual intervention. AI chatbot qualification, instant calendar booking, and automated welcome sequences.",
+          "result": "Convert 30–50% more web enquiries into booked appointments."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Practice Software Integration",
+          "desc": "We connect your practice management system (e.g., Exact Online, HubSpot) with WhatsApp Business, email marketing, and accounting. One source of truth for patient data.",
+          "result": "Zero manual data entry. Zero double bookings."
+        },
+        {
+          "emoji": "📊",
+          "title": "Practice Performance Dashboards",
+          "desc": "Real-time dashboards tracking appointments, no-shows, revenue per treatment type, marketing ROI, and patient flow. Visibility you have never had before.",
+          "result": "Make decisions with data, not gut feeling."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "GDPR-Compliant Communication",
+          "desc": "All patient communication is logged, encrypted, and stored on your infrastructure. Consent management, data retention policies, and audit trails built in from day one.",
+          "result": "AVG/GDPR compliance by design."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Real Automation Scenarios for Healthcare",
+      "items": [
+        {
+          "num": "01",
+          "title": "The No-Show Prevention System",
+          "desc": "A dental clinic in Leiden was losing €3,000+ monthly to no-shows. We built a WhatsApp reminder flow 48h and 24h before appointments with one-click confirm/reschedule. No-shows dropped 65% in 30 days."
+        },
+        {
+          "num": "02",
+          "title": "The Dormant Patient Reactivation Engine",
+          "desc": "A physiotherapy practice had 800+ inactive patients in their database. We deployed an automated email and WhatsApp sequence triggered after 90 days of inactivity. 12% rebooked within 60 days."
+        },
+        {
+          "num": "03",
+          "title": "The Lead Response Bot",
+          "desc": "An aesthetic clinic was losing enquiries to slow follow-up. We built an AI chatbot that qualifies leads, answers pricing questions, and books consultations instantly. Response time went from 4 hours to 30 seconds."
+        },
+        {
+          "num": "04",
+          "title": "The Treatment Plan Follow-Up",
+          "desc": "A veterinary clinic's complex treatment plans were stalling after initial visits. We automated personalised follow-up sequences with care instructions, next-appointment booking, and payment reminders. Completion rates rose 45%."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Why Healthcare Practices Choose CodeHunter Lab",
+      "points": [
+        {
+          "title": "We understand Dutch healthcare compliance",
+          "desc": "From AVG/GDPR to WGBO patient record requirements — we build systems that meet Dutch healthcare standards. Your patient data stays in the Netherlands, on your infrastructure."
+        },
+        {
+          "title": "We integrate with your existing software",
+          "desc": "Whether you use Exact Online, HubSpot, Microsoft 365, or a custom practice management system, we connect it. No rip-and-replace. We enhance what you already have."
+        },
+        {
+          "title": "We measure everything",
+          "desc": "Every automation we build includes analytics: no-show rates, reactivation conversion, lead-to-booking funnels, and revenue attribution. You see exactly what automation delivers."
+        },
+        {
+          "title": "We are local and responsive",
+          "desc": "Based in Leiden, serving practices across Amsterdam, Rotterdam, Den Haag, and Utrecht. We offer in-person implementation, training, and ongoing support — not offshore tickets."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Common Questions",
+      "subtitle": "What healthcare practices ask before automating.",
+      "questions": [
+        {
+          "q": "Will this work with our existing practice management software?",
+          "a": "Yes. We integrate with virtually any system that has an API — Exact Online, HubSpot, Salesforce Health Cloud, custom systems, and more. During the audit, we map your current stack and design connections that work."
+        },
+        {
+          "q": "Is patient data secure and GDPR-compliant?",
+          "a": "Absolutely. We build self-hosted systems where patient data never leaves your infrastructure. We implement encryption, access controls, audit logging, and consent management. AVG/GDPR compliance is engineered in, not bolted on."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "A standard healthcare automation project (reminders + reactivation + lead capture) takes 4–6 weeks from audit to go-live. Larger integrations with custom dashboards may take 8–10 weeks. We provide a detailed timeline during scoping."
+        },
+        {
+          "q": "Will our staff need technical training?",
+          "a": "Minimal. The automations run in the background. We provide a 2-hour training session for your front-desk team on the new workflows and dashboard. Most practices are fully operational within a week."
+        },
+        {
+          "q": "What is the typical ROI?",
+          "a": "Most healthcare practices see a 3–5x ROI within 90 days. The biggest wins are reduced no-shows (saving €1,500–€5,000/month), reactivated patients (€2,000–€8,000/month), and converted web leads (20–40% uplift). We model this in your audit."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Ready to stop losing patients to admin?",
+      "title": "Book Your Free Healthcare Practice Audit",
+      "desc": "We review your current patient flow, identify the top 3 automation opportunities, and show you exactly what a custom system would look like — with a clear ROI estimate.",
+      "button": "Book Free Practice Audit",
+      "subtext": "For healthcare practices in the Netherlands. Current onboarding capacity: Q2 2026. Questions? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "healthcare automation Netherlands, dental clinic automation, physiotherapy practice automation, veterinary clinic automation, patient reminder system Netherlands, WhatsApp appointment reminders, healthcare CRM integration, practice management automation, medical practice automation Netherlands, no-show reduction system",
+      "extendedDesc": "CodeHunter Lab specialises in automation systems for healthcare practices across the Netherlands, including dental clinics, physiotherapy practices, veterinary clinics, and medical centres in Amsterdam, Rotterdam, Den Haag, Utrecht, and Leiden. We build appointment reminder systems, patient reactivation campaigns, lead-to-booking automation, practice software integration, and GDPR-compliant communication pipelines that reduce no-shows by 40–70% and reactivate dormant patients."
+    }
+  },
+  "ProfessionalServices": {
+    "Hero": {
+      "badge": "PROFESSIONAL SERVICES AUTOMATION :: NETHERLANDS",
+      "title": {
+        "part1": "You Bill by the Hour.",
+        "highlight": "Admin Eats Them.",
+        "part2": "Automation Gives Them Back."
+      },
+      "description": "CodeHunter Lab builds <strong>automation systems for professional services firms</strong> in the Netherlands — accounting practices, legal firms, consultancies, and agencies. Invoice processing, deadline tracking, client onboarding, and document management. Billable hours protected. Clients served faster.",
+      "cta": {
+        "primary": "Book a Free Firm Audit",
+        "secondary": "See What We Automate"
+      }
+    },
+    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "PainPoints": {
+      "title": "The Hidden Cost of Manual Operations",
+      "items": [
+        {
+          "emoji": "📝",
+          "title": "Billable hours lost to admin",
+          "desc": "Your accountants, lawyers, or consultants spend 20–40% of their time on data entry, document sorting, email chasing, and scheduling. That is revenue you are giving away for free."
+        },
+        {
+          "emoji": "📅",
+          "title": "Deadlines slip through cracks",
+          "desc": "Tax filing dates, contract renewals, compliance deadlines — tracked in spreadsheets, sticky notes, or someone's memory. One missed deadline costs more than a year of automation."
+        },
+        {
+          "emoji": "📊",
+          "title": "Client onboarding is a 3-day manual slog",
+          "desc": "Collecting documents, sending contracts, setting up portals, chasing signatures — every new client triggers a repetitive, error-prone process that delays revenue recognition."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Your tools are isolated islands",
+          "desc": "Exact Online, HubSpot, SharePoint, Slack, email — none of them talk to each other. Your team copy-pastes data between systems daily, introducing errors and version chaos."
+        },
+        {
+          "emoji": "📊",
+          "title": "No visibility into firm performance",
+          "desc": "You do not know which clients are profitable, which projects are over budget, or which team members are at capacity until it is too late. Decisions are made on gut feeling, not data."
+        },
+        {
+          "emoji": "💬",
+          "title": "Invoicing is a monthly panic",
+          "desc": "Every month-end becomes a scramble: gathering hours, checking rates, creating PDFs, chasing approvals, sending reminders. Your cash flow suffers because billing is manual."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "What We Build for Professional Firms",
+      "subtitle": "We engineer automation systems that connect your accounting software, CRM, document management, and communication tools into one seamless operational backbone.",
+      "items": [
+        {
+          "emoji": "🔄",
+          "title": "Automated Invoice Processing",
+          "desc": "From time tracking to sent invoice — fully automated. We connect your time tracking, project management, and accounting software to generate, approve, and send invoices without manual intervention.",
+          "result": "Invoices sent same-day. Cash flow improved by 30–40%."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Deadline & Compliance Tracking",
+          "desc": "We build automated deadline pipelines that monitor filing dates, contract renewals, and compliance milestones across all clients. Alerts escalate before deadlines, never after.",
+          "result": "Zero missed deadlines. Zero compliance penalties."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Client Onboarding Automation",
+          "desc": "From signed proposal to first deliverable — automated. Document collection, contract signing, portal setup, welcome sequences, and task creation all triggered by one client approval.",
+          "result": "Onboarding time cut from 3 days to 3 hours."
+        },
+        {
+          "emoji": "🔗",
+          "title": "System Integration & Data Sync",
+          "desc": "We connect Exact Online, HubSpot, SharePoint, Microsoft 365, Slack, and any other tools you use. One change in your CRM updates every connected system automatically.",
+          "result": "One source of truth. Zero manual data entry."
+        },
+        {
+          "emoji": "📊",
+          "title": "Firm Performance Dashboards",
+          "desc": "Real-time dashboards showing client profitability, project margins, team utilisation, and cash flow. Filter by client, service line, or time period. Visibility you have never had.",
+          "result": "Make strategic decisions with live data."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "GDPR-Compliant Document Workflows",
+          "desc": "All client documents are handled with encryption, access controls, and audit trails. Automated retention policies and consent management ensure compliance without manual oversight.",
+          "result": "AVG/GDPR compliance built into every workflow."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Real Automation Scenarios for Professional Firms",
+      "items": [
+        {
+          "num": "01",
+          "title": "The Monthly Invoicing Machine",
+          "desc": "An accounting firm in Amsterdam spent 3 days each month on invoicing. We automated time tracking, rate checking, PDF generation, approval routing, and client delivery. Invoicing now takes 2 hours. Cash flow improved 35%."
+        },
+        {
+          "num": "02",
+          "title": "The Compliance Deadline Tracker",
+          "desc": "A legal practice managed 200+ contract renewals in a shared spreadsheet. We built an automated pipeline that monitors dates, sends alerts 30/14/7 days before expiry, and generates renewal drafts. Zero missed renewals in 12 months."
+        },
+        {
+          "num": "03",
+          "title": "The Self-Service Client Onboarding",
+          "desc": "A consultancy firm's onboarding involved 12 manual steps across 4 tools. We automated document requests, e-signature, portal provisioning, and task creation. New clients are fully onboarded in 3 hours instead of 3 days."
+        },
+        {
+          "num": "04",
+          "title": "The Real-Time Profitability Dashboard",
+          "desc": "A marketing agency had no visibility into project margins. We built a live dashboard connecting their project management and accounting data. They discovered 3 unprofitable clients and renegotiated terms, saving €40,000 annually."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Why Professional Firms Choose CodeHunter Lab",
+      "points": [
+        {
+          "title": "We understand professional services workflows",
+          "desc": "We have worked with accounting firms, legal practices, and consultancies across the Netherlands. We know the difference between billable and non-billable time — and we protect the former."
+        },
+        {
+          "title": "We integrate with Dutch accounting standards",
+          "desc": "Exact Online, Twinfield, Moneybird — we know these systems inside out. We build automations that align with Dutch tax filing requirements and compliance frameworks."
+        },
+        {
+          "title": "We deliver measurable ROI",
+          "desc": "Every automation includes baseline metrics and ongoing reporting. You see exactly how many hours are saved, how much faster invoices are paid, and which processes improved. No vague promises."
+        },
+        {
+          "title": "We are local and accountable",
+          "desc": "Based in Leiden, working with firms in Amsterdam, Rotterdam, Den Haag, and Utrecht. We offer in-person discovery, implementation, and training. You meet the team building your system."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Common Questions",
+      "subtitle": "What professional firms ask before automating.",
+      "questions": [
+        {
+          "q": "Will this work with our existing accounting and CRM software?",
+          "a": "Yes. We specialise in integrating Dutch business software — Exact Online, Twinfield, Moneybird, HubSpot, Salesforce, and Microsoft 365. During the audit, we map your stack and design automations that enhance it."
+        },
+        {
+          "q": "How do we maintain compliance while automating?",
+          "a": "Compliance is built into every workflow. We implement encryption, access controls, audit logging, and data retention policies that meet AVG/GDPR and sector-specific requirements. Your compliance officer reviews every design."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "A standard firm automation project (invoicing + deadline tracking + onboarding) takes 5–7 weeks from audit to go-live. Larger integrations with custom dashboards take 8–12 weeks. We scope timelines precisely during discovery."
+        },
+        {
+          "q": "Will our team need training?",
+          "a": "We provide hands-on training for your core team — typically 2–3 sessions of 90 minutes each. Most automations run in the background, so daily workflows change minimally. We also provide documentation and 30 days of post-launch support."
+        },
+        {
+          "q": "What is the typical ROI?",
+          "a": "Most professional firms see a 4–6x ROI within 6 months. The biggest wins are recovered billable hours (10–20 hours per professional per month), faster invoicing (improving cash flow by 30–40%), and eliminated compliance penalties."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Ready to reclaim your billable hours?",
+      "title": "Book Your Free Firm Automation Audit",
+      "desc": "We analyse your current operations, identify the top 3 automation opportunities, and show you exactly what a custom system would look like — with a clear ROI estimate and timeline.",
+      "button": "Book Free Firm Audit",
+      "subtext": "For professional services firms in the Netherlands. Current onboarding capacity: Q2 2026. Questions? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "professional services automation Netherlands, accounting firm automation, legal practice automation, consultancy automation, invoice automation Netherlands, deadline tracking system, client onboarding automation, Exact Online integration, firm performance dashboard, professional services CRM Netherlands",
+      "extendedDesc": "CodeHunter Lab specialises in automation systems for professional services firms across the Netherlands, including accounting practices, legal firms, consultancies, and agencies in Amsterdam, Rotterdam, Den Haag, Utrecht, and Leiden. We build invoice automation, deadline tracking, client onboarding flows, document management, and firm performance dashboards that recover 10–20 billable hours per professional per month and improve cash flow by 30–40%."
     }
   }
 }

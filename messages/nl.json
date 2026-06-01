@@ -1950,7 +1950,11 @@
       "whatsapp": {
         "title": "AI-agents op WhatsApp",
         "desc": "24/7 klantenservice en lead-kwalificatie rechtstreeks in WhatsApp. Spreekt als een mens, kent je bedrijf en boekt afspraken automatisch.",
-        "points": ["Nul wachttijden", "Koppeling met je CRM", "98% intentie-accuratesse"]
+        "points": [
+          "Nul wachttijden",
+          "Koppeling met je CRM",
+          "98% intentie-accuratesse"
+        ]
       },
       "voice": {
         "title": "AI Spraakbots",
@@ -1964,7 +1968,11 @@
       "automation": {
         "title": "Workflow Automatisering (n8n)",
         "desc": "Wij zijn de \"lijm\" tussen je applicaties. Met <strong>n8n</strong> en <strong>Make.com</strong> automatiseren wij data-invoer, facturering en rapportages.",
-        "points": ["Vaarwel kopieer-en-plak", "Foutloze operaties", "Maatwerk API-integraties"]
+        "points": [
+          "Vaarwel kopieer-en-plak",
+          "Foutloze operaties",
+          "Maatwerk API-integraties"
+        ]
       },
       "label": {
         "capabilities": "Mogelijkheden",
@@ -3868,6 +3876,358 @@
     "SEO": {
       "extendedDesc": "CodeHunter Lab is gespecialiseerd in automatiseringsystemen voor makelaars in Nederland, inclusief Amsterdam, Rotterdam, Den Haag, Utrecht, Leiden, Haarlem, Eindhoven en Groningen. Onze maatwerk automatiseringsplatforms koppelen Funda, CRM-systemen, WhatsApp Business API en marketingtools om traag lead-follow-up te elimineren, bezichtigingen te automatiseren, woningpublicaties te syndiceren en systematische verkoperscommunicatie op te bouwen.",
       "keywords": "makelaar automatisering nederland, makelaardij automatisering, funda integratie automatisering, crm makelaar nederland, lead automatisering makelaar, bezichtiging automatisering makelaar nederland, whatsapp automatisering makelaar, makelaar crm systeem"
+    }
+  },
+  "Healthcare": {
+    "Hero": {
+      "badge": "AUTOMATISERING VOOR ZORGPRAKTIJKEN :: NEDERLAND",
+      "title": {
+        "part1": "Je Balie",
+        "highlight": "Verdrinkt.",
+        "part2": "Automatisering Reddt Levens."
+      },
+      "description": "CodeHunter Lab bouwt <strong>automatiseringssystemen voor zorgpraktijken</strong> in Nederland — tandartspraktijken, fysiotherapiepraktijken, dierenartspraktijken en medische centra. Afspraakherinneringen, patiëntheractivatie, lead-naar-boekingstromen en praktijkdashboards. Minder administratie. Meer patiënten. Geen no-shows.",
+      "cta": {
+        "primary": "Boek een Gratis Praktijk Audit",
+        "secondary": "Bekijk Wat Wij Automatiseren"
+      }
+    },
+    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "PainPoints": {
+      "title": "De Verboren Kosten van Handmatige Zorgadministratie",
+      "items": [
+        {
+          "emoji": "📅",
+          "title": "No-shows kosten je €150+ per plek",
+          "desc": "Een gemiste afspraak is niet alleen een lege stoel — het is verloren omzet, verspilde personeelstijd en een patiënt die mogelijk niet opnieuw reserveert. Als je herinneringssysteem een telefoontje de dag ervoor is, verlies je geld."
+        },
+        {
+          "emoji": "📞",
+          "title": "Je personeel zijn dure telefooncentrales",
+          "desc": "Planning, herschikking, bevestiging van afspraken — je receptionisten besteden dagelijks 2–3 uur aan telefoontjes die automatisering in seconden afhandelt. Dat is factureerbare capaciteit verloren aan administratie."
+        },
+        {
+          "emoji": "📊",
+          "title": "Je hebt geen idee waar patiënten vandaan komen",
+          "desc": "Google? Een doorverwijzing? Instagram? Zonder tracking van advertentieklik tot geboekte afspraak is je marketingbudget een gok die je niet kunt optimaliseren."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Patiëntheractivatie is reactief, niet systematisch",
+          "desc": "Patiënten die al 6, 12 of 18 maanden niet zijn geweest, vertegenwoordigen aanzienlijke omzet. De meeste praktijken hebben geen geautomatiseerd systeem om hen op het juiste moment opnieuw te benaderen."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Je systemen praten niet met elkaar",
+          "desc": "Praktijkbeheer, boekhouding, e-mailmarketing, WhatsApp — vier aparte eilanden. Elke gegevensoverdracht is een handmatige stap en een potentiële fout."
+        },
+        {
+          "emoji": "💬",
+          "title": "Behandelplannen stranden tussen consult en boeking",
+          "desc": "Een patiënt informeert over implantaten of aligners, vertrekt zonder te boeken en ontvangt geen vervolg. Die lead gaat vaak verloren aan een snellere concurrent."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Wat Wij Bouwen voor Zorgpraktijken",
+      "subtitle": "Wij zijn geen no-code agency. Wij ontwikkelen productieklare automatiseringssystemen die je praktijksoftware, CRM en communicatiekanalen verbinden tot één naadloze workflow.",
+      "items": [
+        {
+          "emoji": "🔄",
+          "title": "Geautomatiseerde Afspraakherinneringen",
+          "desc": "Wij bouwen multi-channel herinneringssystemen via WhatsApp, SMS en e-mail — automatisch getriggerd vanuit je praktijkagenda. Patiënten bevestigen of verzetten met één klik.",
+          "result": "No-shows dalen met 40–70%. Telefoontijd personeel gehalveerd."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Patiëntheractivatiecampagnes",
+          "desc": "Wij identificeren inactieve patiënten en activeren gepersonaliseerde heractivatiereeksen op optimale intervallen. Geautomatiseerde vervolgcontacten met behandelingsspecifieke berichten.",
+          "result": "Heractivering van 10% van slapende patiënten levert duizenden euro's extra omzet per maand."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Lead-naar-Boeking Automatisering",
+          "desc": "Van websiteaanvraag tot geplande afspraak — zonder handmatige tussenkomst. AI-chatbotkwalificatie, directe kalenderboeking en geautomatiseerde welkomstreekzen.",
+          "result": "Converteer 30–50% meer webaanvragen naar geboekte afspraken."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Praktijksoftware-integratie",
+          "desc": "Wij koppelen je praktijkbeheersysteem (bijv. Exact Online, HubSpot) met WhatsApp Business, e-mailmarketing en boekhouding. Één bron van waarheid voor patiëntgegevens.",
+          "result": "Zero handmatige invoer. Zero dubbele boekingen."
+        },
+        {
+          "emoji": "📊",
+          "title": "Praktijkprestatiedashboards",
+          "desc": "Real-time dashboards die afspraken, no-shows, omzet per behandelingstype, marketing-ROI en patiëntdoorstromen volgen. Inzicht die je nog nooit had.",
+          "result": "Neem beslissingen op basis van data, niet op gevoel."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "AVG-Conforme Communicatie",
+          "desc": "Alle patiëntcommunicatie wordt gelogd, versleuteld en opgeslagen op je eigen infrastructuur. Toestemmingsbeheer, dataretentiebeleid en audittrails ingebouwd vanaf dag één.",
+          "result": "AVG/GDPR-compliance by design."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Reële AutomatiseringsScenario's voor de Zorg",
+      "items": [
+        {
+          "num": "01",
+          "title": "Het No-Show Preventiesysteem",
+          "desc": "Een tandartspraktijk in Leiden verloor maandelijks €3.000+ aan no-shows. Wij bouwden een WhatsApp-herinneringsflow 48u en 24u voor afspraken met één-klik bevestiging/verzetting. No-shows daalden 65% in 30 dagen."
+        },
+        {
+          "num": "02",
+          "title": "De Slaapende Patiënt Heractivatiemotor",
+          "desc": "Een fysiotherapiepraktijk had 800+ inactieve patiënten in de database. Wij zetten een geautomatiseerde e-mail- en WhatsApp-reeks op na 90 dagen inactiviteit. 12% boekte binnen 60 dagen opnieuw."
+        },
+        {
+          "num": "03",
+          "title": "De Leadrespons Bot",
+          "desc": "Een esthetische kliniek verloor aanvragen door trage follow-up. Wij bouwden een AI-chatbot die leads kwalificeert, prijsvragen beantwoordt en consulten direct boekt. Responstijd ging van 4 uur naar 30 seconden."
+        },
+        {
+          "num": "04",
+          "title": "De Behandelplan Vervolg",
+          "desc": "De complexe behandelplannen van een dierenartspraktijk strandden na het eerste bezoek. Wij automatiseerden gepersonaliseerde vervolgreekzen met zorginstructies, volgende-afspraakboeking en betalingsherinneringen. Aanvullingspercentages stegen 45%."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Waarom Zorgpraktijken Kiezen voor CodeHunter Lab",
+      "points": [
+        {
+          "title": "Wij begrijpen Nederlandse zorgcompliance",
+          "desc": "Van AVG/GDPR tot WGBO-patiëntdossiereisen — wij bouwen systemen die voldoen aan Nederlandse zorgnormen. Je patiëntgegevens blijven in Nederland, op je eigen infrastructuur."
+        },
+        {
+          "title": "Wij integreren met je bestaande software",
+          "desc": "Of je nu Exact Online, HubSpot, Microsoft 365 of een custom praktijkbeheersysteem gebruikt, wij koppelen het. Geen rip-and-replace. Wij verbeteren wat je al hebt."
+        },
+        {
+          "title": "Wij meten alles",
+          "desc": "Elke automatisering die wij bouwen, bevat analytics: no-show-percentages, heractivatieconversie, lead-naar-boeking-funnels en omzetattributie. Je ziet precies wat automatisering oplevert."
+        },
+        {
+          "title": "Wij zijn lokaal en responsief",
+          "desc": "Gevestigd in Leiden, praktijken in Amsterdam, Rotterdam, Den Haag en Utrecht. Wij bieden persoonlijke implementatie, training en doorlopende ondersteuning — geen offshore tickets."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Veelgestelde Vragen",
+      "subtitle": "Wat zorgpraktijken vragen voordat zij automatiseren.",
+      "questions": [
+        {
+          "q": "Werkt dit met ons bestaande praktijkbeheersysteem?",
+          "a": "Ja. Wij integreren met vrijwel elk systeem dat een API heeft — Exact Online, HubSpot, Salesforce Health Cloud, custom systemen, en meer. Tijdens de audit mappen wij je huidige stack en ontwerpen wij koppelingen die werken."
+        },
+        {
+          "q": "Zijn patiëntgegevens veilig en AVG-conform?",
+          "a": "Absoluut. Wij bouwen self-hosted systemen waar patiëntgegevens nooit je infrastructuur verlaten. Wij implementeren versleuteling, toegangscontroles, auditlogging en toestemmingsbeheer. AVG/GDPR-compliance is ingenieurd, niet achteraf toegevoegd."
+        },
+        {
+          "q": "Hoe lang duurt implementatie?",
+          "a": "Een standaard zorgautomatisering (herinneringen + heractivatie + leadcapture) duurt 4–6 weken van audit tot live. Grotere integraties met custom dashboards kunnen 8–10 weken duren. Wij geven een gedetailleerde tijdlijn tijdens de scope."
+        },
+        {
+          "q": "Moet ons personeel technische training volgen?",
+          "a": "Minimaal. De automatiseringen draaien op de achtergrond. Wij bieden een 2-uur trainingssessie aan je balieteam over de nieuwe workflows en het dashboard. De meeste praktijken zijn binnen een week volledig operationeel."
+        },
+        {
+          "q": "Wat is de typische ROI?",
+          "a": "De meeste zorgpraktijken zien een 3–5x ROI binnen 90 dagen. De grootste winsten zijn minder no-shows (besparing €1.500–€5.000/maand), geheractiveerde patiënten (€2.000–€8.000/maand) en geconverteerde webleads (20–40% stijging). Wij modelleren dit in je audit."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Klaar om patiënten te stoppen verliezen aan admin?",
+      "title": "Boek Je Gratis Zorgpraktijk Audit",
+      "desc": "Wij reviewen je huidige patiëntenstroom, identificeren de top 3 automatiseringskansen en laten je precies zien hoe een custom systeem eruitziet — met een heldere ROI-schatting.",
+      "button": "Boek Gratis Praktijk Audit",
+      "subtext": "Voor zorgpraktijken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? E-mail info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "zorgautomatisering nederland, tandartspraktijk automatisering, fysiotherapie praktijk automatisering, dierenartspraktijk automatisering, patiënt herinneringssysteem nederland, WhatsApp afspraakherinneringen, zorg CRM integratie, praktijkbeheer automatisering, medische praktijk automatisering nederland, no-show reductie systeem",
+      "extendedDesc": "CodeHunter Lab is gespecialiseerd in automatiseringssystemen voor zorgpraktijken in heel Nederland, waaronder tandartspraktijken, fysiotherapiepraktijken, dierenartspraktijken en medische centra in Amsterdam, Rotterdam, Den Haag, Utrecht en Leiden. Wij bouwen afspraakherinneringssystemen, patiëntheractivatiecampagnes, lead-naar-boeking automatisering, praktijksoftware-integratie en AVG-conforme communicatiekanalen die no-shows met 40–70% verminderen en slapende patiënten heractiveren."
+    }
+  },
+  "ProfessionalServices": {
+    "Hero": {
+      "badge": "AUTOMATISERING VOOR PROFESSIONELE DIENSTEN :: NEDERLAND",
+      "title": {
+        "part1": "Jij Factureert per Uur.",
+        "highlight": "Administratie Vreet Ze.",
+        "part2": "Automatisering Geeft Ze Terug."
+      },
+      "description": "CodeHunter Lab bouwt <strong>automatiseringssystemen voor professionele dienstverleners</strong> in Nederland — accountantskantoren, advocatenpraktijken, consultancybureaus en agencies. Factuurverwerking, deadline-tracking, klant onboarding en documentbeheer. Factureerbare uren beschermd. Klanten sneller bediend.",
+      "cta": {
+        "primary": "Boek een Gratis Kantoor Audit",
+        "secondary": "Bekijk Wat Wij Automatiseren"
+      }
+    },
+    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "PainPoints": {
+      "title": "De Verboren Kosten van Handmatige Operaties",
+      "items": [
+        {
+          "emoji": "📝",
+          "title": "Factureerbare uren verloren aan administratie",
+          "desc": "Je accountants, advocaten of consultants spenderen 20–40% van hun tijd aan data-invoer, documentsortering, e-mailachtervolging en planning. Dat is omzet die je gratis weggeeft."
+        },
+        {
+          "emoji": "📅",
+          "title": "Deadlines glippen door de mazen",
+          "desc": "Aangiftedeadlines, contractverlengingen, compliancedeadlines — bijgehouden in spreadsheets, post-its of iemands geheugen. Één gemiste deadline kost meer dan een jaar automatisering."
+        },
+        {
+          "emoji": "📊",
+          "title": "Klant onboarding is een 3-daagse handmatige beproeving",
+          "desc": "Documenten verzamelen, contracten versturen, portals opzetten, handtekeningen achtervolgen — elke nieuwe klant triggert een repetitief, foutgevoelig proces dat omzetherkenning vertraagt."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Je tools zijn geïsoleerde eilanden",
+          "desc": "Exact Online, HubSpot, SharePoint, Slack, e-mail — geen van hen praat met elkaar. Je team kopieert dagelijks gegevens tussen systemen, wat fouten en versiechaos introduceert."
+        },
+        {
+          "emoji": "📊",
+          "title": "Geen inzicht in kantoorprestaties",
+          "desc": "Je weet niet welke klanten winstgevend zijn, welke projecten over budget zijn, of welke teamleden op capaciteit zitten tot het te laat is. Beslissingen worden genomen op gevoel, niet op data."
+        },
+        {
+          "emoji": "💬",
+          "title": "Facturatie is een maandelijkse paniek",
+          "desc": "Elke maand-einde wordt een jacht: uren verzamelen, tarieven checken, PDF's maken, goedkeuringen achtervolgen, herinneringen sturen. Je cashflow lijdt omdat facturatie handmatig is."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Wat Wij Bouwen voor Professionele Kantoren",
+      "subtitle": "Wij ontwikkelen automatiseringssystemen die je boekhoudsoftware, CRM, documentbeheer en communicatietools verbinden tot één naadloze operationale ruggengraat.",
+      "items": [
+        {
+          "emoji": "🔄",
+          "title": "Geautomatiseerde Factuurverwerking",
+          "desc": "Van urenregistratie tot verzonden factuur — volledig geautomatiseerd. Wij koppelen je urenregistratie, projectbeheer en boekhoudsoftware om facturen te genereren, goedkeuren en verzenden zonder handmatige tussenkomst.",
+          "result": "Facturen dezelfde dag verstuurd. Cashflow verbeterd met 30–40%."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Deadline & Compliance Tracking",
+          "desc": "Wij bouwen geautomatiseerde deadline-pipelines die aangiftedatums, contractverlengingen en compliance-mijlpalen over alle klanten monitoren. Alerts escaleren vóór deadlines, nooit erna.",
+          "result": "Zero gemiste deadlines. Zero compliance-boetes."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Geautomatiseerde Klant Onboarding",
+          "desc": "Van ondertekend voorstel tot eerste deliverable — geautomatiseerd. Documentverzameling, contractondertekening, portal-opzet, welkomstreekzen en taakaanmaak, allemaal getriggerd door één klantgoedkeuring.",
+          "result": "Onboardingtijd verkort van 3 dagen naar 3 uur."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Systeemintegratie & Datasynchronisatie",
+          "desc": "Wij koppelen Exact Online, HubSpot, SharePoint, Microsoft 365, Slack en alle andere tools die je gebruikt. Één wijziging in je CRM update elk gekoppeld systeem automatisch.",
+          "result": "Één bron van waarheid. Zero handmatige invoer."
+        },
+        {
+          "emoji": "📊",
+          "title": "Kantoorprestatiedashboards",
+          "desc": "Real-time dashboards die klantwinstgevendheid, projectmarges, teambezetting en cashflow tonen. Filter op klant, dienstenlijn of periode. Inzicht die je nog nooit had.",
+          "result": "Neem strategische beslissingen met live data."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "AVG-Conforme Documentworkflows",
+          "desc": "Alle klantdocumenten worden verwerkt met versleuteling, toegangscontroles en audittrails. Geautomatiseerde retentiebeleid en toestemmingsbeheer garanderen compliance zonder handmatig toezicht.",
+          "result": "AVG/GDPR-compliance ingebouwd in elke workflow."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Reële AutomatiseringsScenario's voor Professionele Kantoren",
+      "items": [
+        {
+          "num": "01",
+          "title": "De Maandelijkse Factureermachine",
+          "desc": "Een accountantskantoor in Amsterdam besteedde elke maand 3 dagen aan facturatie. Wij automatiseerden urenregistratie, tariefcontrole, PDF-generatie, goedkeuringsrouting en klantverzending. Facturatie duurt nu 2 uur. Cashflow verbeterde 35%."
+        },
+        {
+          "num": "02",
+          "title": "De Compliance Deadline Tracker",
+          "desc": "Een advocatenpraktijk beheerde 200+ contractverlengingen in een gedeelde spreadsheet. Wij bouwden een geautomatiseerde pipeline dat datums monitort, alerts stuurt 30/14/7 dagen voor verloop, en verlengingsconcepten genereert. Zero gemiste verlengingen in 12 maanden."
+        },
+        {
+          "num": "03",
+          "title": "De Self-Service Klant Onboarding",
+          "desc": "De onboarding van een consultancybureau omvatte 12 handmatige stappen over 4 tools. Wij automatiseerden documentaanvragen, e-handtekening, portal-provisioning en taakaanmaak. Nieuwe klanten zijn volledig onboard in 3 uur in plaats van 3 dagen."
+        },
+        {
+          "num": "04",
+          "title": "Het Real-Time Winstgevendheidsdashboard",
+          "desc": "Een marketingagency had geen inzicht in projectmarges. Wij bouwden een live dashboard dat hun projectbeheer en boekhoudgegevens koppelt. Zij ontdekten 3 onrendabele klanten en heronderhandelden tarieven, wat €40.000 per jaar bespaarde."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Waarom Professionele Kantoren Kiezen voor CodeHunter Lab",
+      "points": [
+        {
+          "title": "Wij begrijpen professionele dienstverleningsworkflows",
+          "desc": "Wij hebben gewerkt met accountantskantoren, advocatenpraktijken en consultancybureaus in heel Nederland. Wij kennen het verschil tussen factureerbare en niet-factureerbare tijd — en wij beschermen het eerste."
+        },
+        {
+          "title": "Wij integreren met Nederlandse boekhoudnormen",
+          "desc": "Exact Online, Twinfield, Moneybird — wij kennen deze systemen door en door. Wij bouwen automatiseringen die aansluiten bij Nederlandse aangiftevereisten en compliance-kaders."
+        },
+        {
+          "title": "Wij leveren meetbare ROI",
+          "desc": "Elke automatisering bevat basislijn-metrics en doorlopende rapportage. Je ziet precies hoeveel uren worden bespaard, hoeveel sneller facturen worden betaald, en welke processen verbeterden. Geen vage beloften."
+        },
+        {
+          "title": "Wij zijn lokaal en aanspreekbaar",
+          "desc": "Gevestigd in Leiden, werkend met kantoren in Amsterdam, Rotterdam, Den Haag en Utrecht. Wij bieden persoonlijke discovery, implementatie en training. Je ontmoet het team dat je systeem bouwt."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Veelgestelde Vragen",
+      "subtitle": "Wat professionele kantoren vragen voordat zij automatiseren.",
+      "questions": [
+        {
+          "q": "Werkt dit met onze bestaande boekhoud- en CRM-software?",
+          "a": "Ja. Wij zijn gespecialiseerd in het integreren van Nederlandse zakelijke software — Exact Online, Twinfield, Moneybird, HubSpot, Salesforce en Microsoft 365. Tijdens de audit mappen wij je stack en ontwerpen wij automatiseringen die het versterken."
+        },
+        {
+          "q": "Hoe behouden we compliance tijdens automatisering?",
+          "a": "Compliance is ingebouwd in elke workflow. Wij implementeren versleuteling, toegangscontroles, auditlogging en dataretentiebeleid dat voldoet aan AVG/GDPR en sectorspecifieke vereisten. Je compliance-officer reviewt elk ontwerp."
+        },
+        {
+          "q": "Hoe lang duurt implementatie?",
+          "a": "Een standaard kantoorautomatisering (facturatie + deadline-tracking + onboarding) duurt 5–7 weken van audit tot live. Grotere integraties met custom dashboards duren 8–12 weken. Wij bepalen tijdlijnen precies tijdens discovery."
+        },
+        {
+          "q": "Moet ons team training volgen?",
+          "a": "Wij bieden praktijkgerichte training voor je kernteam — meestal 2–3 sessies van 90 minuten. De meeste automatiseringen draaien op de achtergrond, dus dagelijkse workflows veranderen minimaal. Wij leveren ook documentatie en 30 dagen post-launch support."
+        },
+        {
+          "q": "Wat is de typische ROI?",
+          "a": "De meeste professionele kantoren zien een 4–6x ROI binnen 6 maanden. De grootste winsten zijn herwonnen factureerbare uren (10–20 uur per professional per maand), snellere facturatie (cashflow-verbetering 30–40%) en geëlimineerde compliance-boetes."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "Klaar om je factureerbare uren terug te claimen?",
+      "title": "Boek Je Gratis Kantoor Automatisering Audit",
+      "desc": "Wij analyseren je huidige operaties, identificeren de top 3 automatiseringskansen en laten je precies zien hoe een custom systeem eruitziet — met een heldere ROI-schatting en tijdlijn.",
+      "button": "Boek Gratis Kantoor Audit",
+      "subtext": "Voor professionele dienstverleners in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? E-mail info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "professionele diensten automatisering nederland, accountantskantoor automatisering, advocatenpraktijk automatisering, consultancy automatisering, factuurautomatisering nederland, deadline tracking systeem, klant onboarding automatisering, Exact Online integratie, kantoorprestatie dashboard, professionele diensten CRM nederland",
+      "extendedDesc": "CodeHunter Lab is gespecialiseerd in automatiseringssystemen voor professionele dienstverleners in heel Nederland, waaronder accountantskantoren, advocatenpraktijken, consultancybureaus en agencies in Amsterdam, Rotterdam, Den Haag, Utrecht en Leiden. Wij bouwen factuurautomatisering, deadline-tracking, klant onboarding-flows, documentbeheer en kantoorprestatiedashboards die 10–20 factureerbare uren per professional per maand herwinnen en de cashflow met 30–40% verbeteren."
     }
   }
 }

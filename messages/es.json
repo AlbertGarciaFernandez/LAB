@@ -1189,7 +1189,11 @@
       "whatsapp": {
         "title": "Agentes IA en WhatsApp",
         "desc": "Atención al cliente 24/7 y cualificación de leads directamente en WhatsApp. Habla como un humano, conoce tu negocio y agenda citas automáticamente.",
-        "points": ["Cero tiempos de espera", "Conexión con tu CRM", "98% de precisión en intención"]
+        "points": [
+          "Cero tiempos de espera",
+          "Conexión con tu CRM",
+          "98% de precisión en intención"
+        ]
       },
       "voice": {
         "title": "Bots de Voz con IA",
@@ -3872,6 +3876,358 @@
     "SEO": {
       "keywords": "WhatsApp Business API Países Bajos, automatización WhatsApp Ámsterdam, chatbot WhatsApp Países Bajos, integración CRM WhatsApp Países Bajos, marketing automatización WhatsApp NL, automatización atención cliente WhatsApp, servicios integración WhatsApp API",
       "extendedDesc": "CodeHunter Lab proporciona servicios de automatización con WhatsApp Business API para empresas en los Países Bajos. Desde el desarrollo de chatbots de IA y automatización de atención al cliente hasta campañas de marketing e integración con CRM, ayudamos a las empresas a llegar a sus clientes en su canal de mensajería más utilizado. Con sede en Leiden, atendemos empresas en Ámsterdam, Róterdam, La Haya, Utrecht y todo los Países Bajos."
+    }
+  },
+  "Healthcare": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN PARA CLÍNICAS MÉDICAS :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Tu Recepción",
+        "highlight": "Se Está Ahogando.",
+        "part2": "La Automatización Salva Vidas."
+      },
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización para clínicas médicas</strong> en los Países Bajos — clínicas dentales, fisioterapia, veterinarias y centros médicos. Recordatorios de citas, reactivación de pacientes, flujos de lead a reserva y dashboards de clínica. Menos administración. Más pacientes. Cero citas perdidas.",
+      "cta": {
+        "primary": "Reserva una Auditoría Gratuita",
+        "secondary": "Descubre Qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "El Coste Oculto de la Administración Médica Manual",
+      "items": [
+        {
+          "emoji": "📅",
+          "title": "Las citas perdidas te cuestan €150+ por espacio",
+          "desc": "Una cita perdida no es solo una silla vacía — es ingresos perdidos, tiempo de personal desperdiciado y un paciente que puede no volver a reservar. Si tu sistema de recordatorios es una llamada telefónica el día anterior, estás perdiendo dinero."
+        },
+        {
+          "emoji": "📞",
+          "title": "Tu personal son operadores telefónicos caros",
+          "desc": "Programar, reprogramar, confirmar citas — tus recepcionistas pasan 2–3 horas diarias en llamadas que la automatización maneja en segundos. Esa es capacidad facturable perdida en administración."
+        },
+        {
+          "emoji": "📊",
+          "title": "No tienes ni idea de dónde vienen los pacientes",
+          "desc": "¿Google? ¿Una referencia? ¿Instagram? Sin seguimiento desde el clic del anuncio hasta la cita reservada, tu presupuesto de marketing es una suposición que no puedes optimizar."
+        },
+        {
+          "emoji": "🔄",
+          "title": "La reactivación de pacientes es reactiva, no sistemática",
+          "desc": "Los pacientes que no han visitado en 6, 12 o 18 meses representan ingresos significativos. La mayoría de clínicas no tiene un sistema automatizado para volver a contactarlos en el momento adecuado."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Tus sistemas no se comunican entre sí",
+          "desc": "Gestión de clínica, contabilidad, email marketing, WhatsApp — cuatro islas separadas. Cada transferencia de datos es un paso manual y un posible error."
+        },
+        {
+          "emoji": "💬",
+          "title": "Los planes de tratamiento se detienen entre consulta y reserva",
+          "desc": "Un paciente pregunta sobre implantes o alineadores, se va sin reservar y no recibe seguimiento. Ese lead se pierde a menudo ante un competidor más rápido."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos para Clínicas Médicas",
+      "subtitle": "No somos una agencia no-code. Ingeniamos sistemas de automatización de grado producción que conectan tu software de gestión clínica, CRM y canales de comunicación en un flujo de trabajo fluido.",
+      "items": [
+        {
+          "emoji": "🔄",
+          "title": "Recordatorios de Citas Automatizados",
+          "desc": "Construimos sistemas de recordatorios multi-canal vía WhatsApp, SMS y email — activados automáticamente desde tu agenda clínica. Los pacientes confirman o reprograman con un clic.",
+          "result": "Las citas perdidas bajan un 40–70%. El tiempo telefónico del personal se reduce a la mitad."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Campañas de Reactivación de Pacientes",
+          "desc": "Identificamos pacientes inactivos y activamos secuencias de reactivación personalizadas en intervalos óptimos. Seguimientos automatizados con mensajes específicos por tratamiento.",
+          "result": "Reactivar el 10% de pacientes dormidos añade miles de euros en ingresos mensuales."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Automatización Lead-a-Reserva",
+          "desc": "Desde la consulta web hasta la cita programada — sin intervención manual. Calificación con chatbot IA, reserva instantánea en calendario y secuencias de bienvenida automatizadas.",
+          "result": "Convierte un 30–50% más de consultas web en citas reservadas."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Integración de Software Clínico",
+          "desc": "Conectamos tu sistema de gestión clínica (p. ej., Exact Online, HubSpot) con WhatsApp Business, email marketing y contabilidad. Una única fuente de verdad para los datos de pacientes.",
+          "result": "Zero entrada manual de datos. Zero reservas duplicadas."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboards de Rendimiento Clínico",
+          "desc": "Dashboards en tiempo real que rastrean citas, citas perdidas, ingresos por tipo de tratamiento, ROI de marketing y flujo de pacientes. Visibilidad que nunca antes tuviste.",
+          "result": "Toma decisiones con datos, no con intuición."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "Comunicación Conforme al GDPR",
+          "desc": "Toda la comunicación con pacientes se registra, cifra y almacena en tu infraestructura. Gestión de consentimientos, políticas de retención de datos y trazas de auditoría desde el primer día.",
+          "result": "Cumplimiento GDPR/AVG por diseño."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Escenarios Reales de Automatización para Clínicas",
+      "items": [
+        {
+          "num": "01",
+          "title": "El Sistema de Prevención de Citas Perdidas",
+          "desc": "Una clínica dental en Leiden perdía más de €3.000 mensuales en citas perdidas. Construimos un flujo de recordatorios por WhatsApp 48h y 24h antes de las citas con confirmación/reprogramación en un clic. Las citas perdidas bajaron un 65% en 30 días."
+        },
+        {
+          "num": "02",
+          "title": "El Motor de Reactivación de Pacientes Dormidos",
+          "desc": "Una clínica de fisioterapia tenía 800+ pacientes inactivos en su base de datos. Desplegamos una secuencia automatizada de email y WhatsApp activada tras 90 días de inactividad. El 12% volvió a reservar dentro de 60 días."
+        },
+        {
+          "num": "03",
+          "title": "El Bot de Respuesta a Leads",
+          "desc": "Una clínica estética perdía consultas por seguimiento lento. Construimos un chatbot IA que califica leads, responde preguntas de precios y reserva consultas al instante. El tiempo de respuesta pasó de 4 horas a 30 segundos."
+        },
+        {
+          "num": "04",
+          "title": "El Seguimiento del Plan de Tratamiento",
+          "desc": "Los planes de tratamiento complejos de una clínica veterinaria se estancaban tras la primera visita. Automatizamos secuencias de seguimiento personalizadas con instrucciones de cuidado, reserva de siguiente cita y recordatorios de pago. Las tasas de finalización subieron un 45%."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué las Clínicas Médicas Eligen CodeHunter Lab",
+      "points": [
+        {
+          "title": "Entendemos el cumplimiento sanitario neerlandés",
+          "desc": "Desde GDPR/AVG hasta los requisitos de historiales clínicos WGBO — construimos sistemas que cumplen los estándares sanitarios neerlandeses. Los datos de tus pacientes permanecen en los Países Bajos, en tu infraestructura."
+        },
+        {
+          "title": "Integramos con tu software existente",
+          "desc": "Ya uses Exact Online, HubSpot, Microsoft 365 o un sistema de gestión clínica personalizado, lo conectamos. Sin reemplazo radical. Mejoramos lo que ya tienes."
+        },
+        {
+          "title": "Medimos todo",
+          "desc": "Cada automatización que construimos incluye analíticas: tasas de citas perdidas, conversión de reactivación, funnels de lead a reserva y atribución de ingresos. Ves exactamente qué aporta la automatización."
+        },
+        {
+          "title": "Somos locales y responsivos",
+          "desc": "Con sede en Leiden, atendemos clínicas en Amsterdam, Róterdam, La Haya y Utrecht. Ofrecemos implementación presencial, formación y soporte continuo — no tickets offshore."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que las clínicas médicas preguntan antes de automatizar.",
+      "questions": [
+        {
+          "q": "¿Funcionará con nuestro software de gestión clínica existente?",
+          "a": "Sí. Integramos con prácticamente cualquier sistema que tenga API — Exact Online, HubSpot, Salesforce Health Cloud, sistemas personalizados y más. Durante la auditoría, mapeamos tu stack actual y diseñamos conexiones que funcionan."
+        },
+        {
+          "q": "¿Los datos de los pacientes están seguros y son conformes al GDPR?",
+          "a": "Absolutamente. Construimos sistemas auto-alojados donde los datos de pacientes nunca abandonan tu infraestructura. Implementamos cifrado, controles de acceso, auditoría de logs y gestión de consentimientos. El cumplimiento GDPR/AVG está ingenierado, no añadido posteriormente."
+        },
+        {
+          "q": "¿Cuánto tiempo lleva la implementación?",
+          "a": "Un proyecto estándar de automatización médica (recordatorios + reactivación + captura de leads) lleva 4–6 semanas desde la auditoría hasta la puesta en marcha. Integraciones mayores con dashboards personalizados pueden llevar 8–10 semanas. Proporcionamos una cronología detallada durante el scoping."
+        },
+        {
+          "q": "¿Nuestro personal necesitará formación técnica?",
+          "a": "Mínima. Las automatizaciones funcionan en segundo plano. Ofrecemos una sesión de formación de 2 horas para tu equipo de recepción sobre los nuevos flujos de trabajo y el dashboard. La mayoría de clínicas están plenamente operativas en una semana."
+        },
+        {
+          "q": "¿Cuál es el ROI típico?",
+          "a": "La mayoría de clínicas médicas ven un ROI de 3–5x en 90 días. Las mayores victorias son menos citas perdidas (ahorro de €1.500–€5.000/mes), pacientes reactivados (€2.000–€8.000/mes) y leads web convertidos (incremento del 20–40%). Lo modelamos en tu auditoría."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "¿Listo para dejar de perder pacientes por la administración?",
+      "title": "Reserva Tu Auditoría Gratuita de Clínica Médica",
+      "desc": "Revisamos tu flujo actual de pacientes, identificamos las 3 mejores oportunidades de automatización y te mostramos exactamente cómo sería un sistema personalizado — con una estimación clara de ROI.",
+      "button": "Reserva Auditoría Gratuita",
+      "subtext": "Para clínicas médicas en los Países Bajos. Capacidad actual de onboarding: Q2 2026. ¿Preguntas? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "automatización clínica médica países bajos, automatización clínica dental, automatización fisioterapia, automatización clínica veterinaria, sistema recordatorios pacientes países bajos, recordatorios citas WhatsApp, integración CRM salud, automatización gestión clínica, automatización práctica médica países bajos, sistema reducción citas perdidas",
+      "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para clínicas médicas en los Países Bajos, incluyendo clínicas dentales, fisioterapia, veterinarias y centros médicos en Amsterdam, Róterdam, La Haya, Utrecht y Leiden. Construimos sistemas de recordatorios de citas, campañas de reactivación de pacientes, automatización de lead a reserva, integración de software clínico y canales de comunicación conformes al GDPR que reducen las citas perdidas en un 40–70% y reactivan pacientes dormidos."
+    }
+  },
+  "ProfessionalServices": {
+    "Hero": {
+      "badge": "AUTOMATIZACIÓN PARA SERVICIOS PROFESIONALES :: PAÍSES BAJOS",
+      "title": {
+        "part1": "Facturas por Hora.",
+        "highlight": "La Administración se las Come.",
+        "part2": "La Automatización te las Devuelve."
+      },
+      "description": "CodeHunter Lab construye <strong>sistemas de automatización para firmas de servicios profesionales</strong> en los Países Bajos — despachos de contabilidad, bufetes de abogados, consultoras y agencies. Procesamiento de facturas, seguimiento de deadlines, onboarding de clientes y gestión documental. Horas facturables protegidas. Clientes atendidos más rápido.",
+      "cta": {
+        "primary": "Reserva una Auditoría Gratuita",
+        "secondary": "Descubre Qué Automatizamos"
+      }
+    },
+    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "PainPoints": {
+      "title": "El Coste Oculto de las Operaciones Manuales",
+      "items": [
+        {
+          "emoji": "📝",
+          "title": "Horas facturables perdidas en administración",
+          "desc": "Tus contables, abogados o consultores dedican un 20–40% de su tiempo a entrada de datos, clasificación de documentos, persecución de emails y planificación. Esos son ingresos que regalas gratis."
+        },
+        {
+          "emoji": "📅",
+          "title": "Los deadlines se escapan entre las grietas",
+          "desc": "Fechas de declaración de impuestos, renovaciones de contratos, deadlines de compliance — controlados en hojas de cálculo, post-its o la memoria de alguien. Un solo deadline perdido cuesta más que un año de automatización."
+        },
+        {
+          "emoji": "📊",
+          "title": "El onboarding de clientes es una tortura manual de 3 días",
+          "desc": "Recopilar documentos, enviar contratos, configurar portales, perseguir firmas — cada nuevo cliente desencadena un proceso repetitivo y propenso a errores que retrasa el reconocimiento de ingresos."
+        },
+        {
+          "emoji": "🔌",
+          "title": "Tus herramientas son islas aisladas",
+          "desc": "Exact Online, HubSpot, SharePoint, Slack, email — ninguno habla con el otro. Tu equipo copia y pega datos entre sistemas diariamente, introduciendo errores y caos de versiones."
+        },
+        {
+          "emoji": "📊",
+          "title": "Sin visibilidad del rendimiento de la firma",
+          "desc": "No sabes qué clientes son rentables, qué proyectos están sobre presupuesto o qué miembros del equipo están al límite hasta que es demasiado tarde. Las decisiones se toman a intuición, no con datos."
+        },
+        {
+          "emoji": "💬",
+          "title": "La facturación es un pánico mensual",
+          "desc": "Cada fin de mes se convierte en una carrera: recopilar horas, verificar tarifas, crear PDFs, perseguir aprobaciones, enviar recordatorios. Tu flujo de caja sufre porque la facturación es manual."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Qué Construimos para Firmas Profesionales",
+      "subtitle": "Ingeniamos sistemas de automatización que conectan tu software contable, CRM, gestión documental y herramientas de comunicación en una sola columna vertebral operativa fluida.",
+      "items": [
+        {
+          "emoji": "🔄",
+          "title": "Procesamiento de Facturas Automatizado",
+          "desc": "Desde el registro de horas hasta la factura enviada — completamente automatizado. Conectamos tu registro de horas, gestión de proyectos y software contable para generar, aprobar y enviar facturas sin intervención manual.",
+          "result": "Facturas enviadas el mismo día. Flujo de caja mejorado un 30–40%."
+        },
+        {
+          "emoji": "🎯",
+          "title": "Seguimiento de Deadlines y Compliance",
+          "desc": "Construimos pipelines automatizados de deadlines que monitorean fechas de declaración, renovaciones de contratos y hitos de compliance en todos los clientes. Las alertas escalan antes de los deadlines, nunca después.",
+          "result": "Zero deadlines perdidos. Zero sanciones de compliance."
+        },
+        {
+          "emoji": "⚡",
+          "title": "Automatización del Onboarding de Clientes",
+          "desc": "Desde la propuesta firmada hasta el primer entregable — automatizado. Recopilación de documentos, firma electrónica, aprovisionamiento de portal, secuencias de bienvenida y creación de tareas, todo activado por una aprobación del cliente.",
+          "result": "Tiempo de onboarding reducido de 3 días a 3 horas."
+        },
+        {
+          "emoji": "🔗",
+          "title": "Integración de Sistemas y Sincronización de Datos",
+          "desc": "Conectamos Exact Online, HubSpot, SharePoint, Microsoft 365, Slack y cualquier otra herramienta que uses. Un cambio en tu CRM actualiza automáticamente cada sistema conectado.",
+          "result": "Una única fuente de verdad. Zero entrada manual de datos."
+        },
+        {
+          "emoji": "📊",
+          "title": "Dashboards de Rendimiento de la Firma",
+          "desc": "Dashboards en tiempo real que muestran rentabilidad por cliente, márgenes de proyecto, utilización del equipo y flujo de caja. Filtra por cliente, línea de servicio o periodo. Visibilidad que nunca antes tuviste.",
+          "result": "Toma decisiones estratégicas con datos en vivo."
+        },
+        {
+          "emoji": "🛡️",
+          "title": "Workflows Documentales Conformes al GDPR",
+          "desc": "Todos los documentos de clientes se manejan con cifrado, controles de acceso y trazas de auditoría. Políticas de retención automatizadas y gestión de consentimientos garantizan compliance sin supervisión manual.",
+          "result": "Cumplimiento GDPR/AVG integrado en cada workflow."
+        }
+      ]
+    },
+    "Scenarios": {
+      "title": "Escenarios Reales de Automatización para Firmas Profesionales",
+      "items": [
+        {
+          "num": "01",
+          "title": "La Máquina de Facturación Mensual",
+          "desc": "Un despacho de contabilidad en Ámsterdam dedicaba 3 días cada mes a la facturación. Automatizamos el registro de horas, verificación de tarifas, generación de PDFs, routing de aprobaciones y entrega al cliente. La facturación ahora dura 2 horas. El flujo de caja mejoró un 35%."
+        },
+        {
+          "num": "02",
+          "title": "El Tracker de Deadlines de Compliance",
+          "desc": "Un bufete de abogados gestionaba 200+ renovaciones de contratos en una hoja de cálculo compartida. Construimos un pipeline automatizado que monitorea fechas, envía alertas 30/14/7 días antes del vencimiento y genera borradores de renovación. Zero renovaciones perdidas en 12 meses."
+        },
+        {
+          "num": "03",
+          "title": "El Onboarding de Clientes Self-Service",
+          "desc": "El onboarding de una consultora implicaba 12 pasos manuales en 4 herramientas. Automatizamos solicitudes de documentos, firma electrónica, aprovisionamiento de portal y creación de tareas. Los nuevos clientes quedan completamente onboard en 3 horas en lugar de 3 días."
+        },
+        {
+          "num": "04",
+          "title": "El Dashboard de Rentabilidad en Tiempo Real",
+          "desc": "Una agency de marketing no tenía visibilidad de los márgenes de proyecto. Construimos un dashboard en vivo que conecta su gestión de proyectos y datos contables. Descubrieron 3 clientes no rentables y renegociaron términos, ahorrando €40.000 anuales."
+        }
+      ]
+    },
+    "WhyUs": {
+      "title": "Por Qué las Firmas Profesionales Eligen CodeHunter Lab",
+      "points": [
+        {
+          "title": "Entendemos los workflows de servicios profesionales",
+          "desc": "Hemos trabajado con despachos de contabilidad, bufetes de abogados y consultoras en los Países Bajos. Conocemos la diferencia entre tiempo facturable y no facturable — y protegemos el primero."
+        },
+        {
+          "title": "Integramos con normas contables neerlandesas",
+          "desc": "Exact Online, Twinfield, Moneybird — conocemos estos sistemas al dedillo. Construimos automatizaciones que se alinean con los requisitos de declaración fiscal neerlandeses y marcos de compliance."
+        },
+        {
+          "title": "Entregamos ROI medible",
+          "desc": "Cada automatización incluye métricas de línea base y reportes continuos. Ves exactamente cuántas horas se ahorran, cuánto más rápido se pagan las facturas y qué procesos mejoraron. Sin promesas vagas."
+        },
+        {
+          "title": "Somos locales y responsables",
+          "desc": "Con sede en Leiden, trabajando con firmas en Ámsterdam, Róterdam, La Haya y Utrecht. Ofrecemos discovery presencial, implementación y formación. Conoces al equipo que construye tu sistema."
+        }
+      ]
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Lo que las firmas profesionales preguntan antes de automatizar.",
+      "questions": [
+        {
+          "q": "¿Funcionará con nuestro software contable y CRM existente?",
+          "a": "Sí. Estamos especializados en integrar software empresarial neerlandés — Exact Online, Twinfield, Moneybird, HubSpot, Salesforce y Microsoft 365. Durante la auditoría, mapeamos tu stack y diseñamos automatizaciones que lo potencian."
+        },
+        {
+          "q": "¿Cómo mantenemos el compliance al automatizar?",
+          "a": "El compliance está integrado en cada workflow. Implementamos cifrado, controles de acceso, auditoría de logs y políticas de retención de datos que cumplen GDPR/AVG y requisitos sectoriales. Tu compliance officer revisa cada diseño."
+        },
+        {
+          "q": "¿Cuánto tiempo lleva la implementación?",
+          "a": "Un proyecto estándar de automatización de firma (facturación + seguimiento de deadlines + onboarding) lleva 5–7 semanas desde la auditoría hasta la puesta en marcha. Integraciones mayores con dashboards personalizados llevan 8–12 semanas. Definimos cronologías con precisión durante el discovery."
+        },
+        {
+          "q": "¿Nuestro equipo necesitará formación?",
+          "a": "Ofrecemos formación práctica para tu equipo clave — normalmente 2–3 sesiones de 90 minutos. La mayoría de automatizaciones funcionan en segundo plano, así que los flujos diarios cambian mínimamente. También proporcionamos documentación y 30 días de soporte post-lanzamiento."
+        },
+        {
+          "q": "¿Cuál es el ROI típico?",
+          "a": "La mayoría de firmas profesionales ven un ROI de 4–6x en 6 meses. Las mayores victorias son horas facturables recuperadas (10–20 horas por profesional al mes), facturación más rápida (mejora del flujo de caja un 30–40%) y eliminación de sanciones de compliance."
+        }
+      ]
+    },
+    "CTA": {
+      "label": "¿Listo para recuperar tus horas facturables?",
+      "title": "Reserva Tu Auditoría Gratuita de Automatización de Firma",
+      "desc": "Analizamos tus operaciones actuales, identificamos las 3 mejores oportunidades de automatización y te mostramos exactamente cómo sería un sistema personalizado — con una estimación clara de ROI y cronología.",
+      "button": "Reserva Auditoría Gratuita",
+      "subtext": "Para firmas de servicios profesionales en los Países Bajos. Capacidad actual de onboarding: Q2 2026. ¿Preguntas? Email info@codehunterlab.com"
+    },
+    "SEO": {
+      "keywords": "automatización servicios profesionales países bajos, automatización despacho contabilidad, automatización bufete abogados, automatización consultora, automatización facturas países bajos, sistema seguimiento deadlines, automatización onboarding clientes, integración Exact Online, dashboard rendimiento firma, CRM servicios profesionales países bajos",
+      "extendedDesc": "CodeHunter Lab está especializado en sistemas de automatización para firmas de servicios profesionales en los Países Bajos, incluyendo despachos de contabilidad, bufetes de abogados, consultoras y agencies en Ámsterdam, Róterdam, La Haya, Utrecht y Leiden. Construimos automatización de facturas, seguimiento de deadlines, flujos de onboarding de clientes, gestión documental y dashboards de rendimiento de firma que recuperan 10–20 horas facturables por profesional al mes y mejoran el flujo de caja un 30–40%."
     }
   }
 }
