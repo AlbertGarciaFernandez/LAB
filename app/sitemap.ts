@@ -101,7 +101,7 @@ const insightsIndexMeta = {
 const insightArticleMeta = { priority: 0.7, changeFrequency: "monthly" as const };
 
 const caseStudiesIndexMeta = {
-  lastModified: "2026-05-09",
+  lastModified: "2026-06-02",
   priority: 0.7,
   changeFrequency: "monthly" as const,
 };

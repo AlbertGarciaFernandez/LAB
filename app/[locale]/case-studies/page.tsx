@@ -7,6 +7,15 @@ import { caseStudies } from "@/content/case-studies";
 import { createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
+const caseStudiesTitle = "Case Studies: AI Automation, Product Engineering, Migrations, and Systems Integration";
+const caseStudiesDescription =
+  "Delivery stories across AI products, internal platforms, ecommerce migrations, and integration-heavy systems work.";
+const caseStudiesKeywords = [
+  "AI automation case studies",
+  "product engineering case studies",
+  "software migration case studies",
+  "systems integration projects",
+];
 
 const trustProofMetrics = [
   {
@@ -53,14 +62,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale: "en",
     path: "/case-studies",
-    title: "AI Automation Case Studies in the Netherlands | CodeHunter Lab",
-    description:
-      "Real-world automation and AI workflow case studies for Dutch dental clinics, accounting firms, and SMEs.",
-    keywords: [
-      "AI automation case studies",
-      "workflow automation Netherlands",
-      "n8n automation case studies",
-    ],
+    title: `${caseStudiesTitle} | CodeHunter Lab`,
+    description: caseStudiesDescription,
+    keywords: caseStudiesKeywords,
   });
 }
 
@@ -72,9 +76,8 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "AI Automation Case Studies in the Netherlands",
-    description:
-      "Real-world automation and AI workflow case studies for Dutch dental clinics, accounting firms, and SMEs.",
+    name: caseStudiesTitle,
+    description: caseStudiesDescription,
     url: `${baseUrl}/en/case-studies`,
     publisher: {
       "@type": "Organization",
@@ -110,11 +113,11 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
             Client work
           </p>
           <h1 className="mb-6 text-5xl font-black leading-none tracking-tighter md:text-7xl">
-            Case studies.
+            AI automation, product engineering, migrations, and systems integration.
           </h1>
           <p className="text-lg leading-relaxed text-gray-300 md:text-xl">
-            Real results from AI automation, system integration, and n8n workflow projects for Dutch
-            businesses.
+            Delivery stories across AI products, internal platforms, ecommerce migrations, and
+            integration-heavy systems work.
           </p>
         </section>
 

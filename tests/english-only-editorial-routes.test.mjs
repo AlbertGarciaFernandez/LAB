@@ -1,6 +1,30 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
 import { test } from "node:test";
+import vm from "node:vm";
+
+const require = createRequire(import.meta.url);
+const ts = require("typescript");
+
+function loadCaseStudies() {
+  const caseStudiesSource = readFileSync("content/case-studies.ts", "utf8");
+  const { outputText } = ts.transpileModule(caseStudiesSource, {
+    compilerOptions: {
+      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES2020,
+    },
+  });
+  const module = { exports: {} };
+
+  vm.runInNewContext(outputText, {
+    exports: module.exports,
+    module,
+    require,
+  });
+
+  return module.exports.caseStudies;
+}
 
 test("insight and case study static params generate english routes only", () => {
   const insightsArticle = readFileSync("app/[locale]/insights/[slug]/page.tsx", "utf8");
@@ -58,6 +82,14 @@ test("editorial listing pages link to english article routes only", () => {
   assert.match(caseStudiesIndex, /href=\{`\/en\/case-studies\/\$\{cs\.slug\}`\}/);
 });
 
+test("case studies collection includes the new product and migration case studies", () => {
+  const caseStudies = loadCaseStudies();
+  const slugs = caseStudies.map((caseStudy) => caseStudy.slug);
+
+  assert.ok(slugs.includes("ai-productivity-app-accelerator"));
+  assert.ok(slugs.includes("basic-fit-sfcc-migration"));
+});
+
 test("case studies page includes trust proof metrics and delivery guarantees", () => {
   const caseStudiesIndex = readFileSync("app/[locale]/case-studies/page.tsx", "utf8");
 
@@ -70,4 +102,14 @@ test("case studies page includes trust proof metrics and delivery guarantees", (
   assert.match(caseStudiesIndex, /No black boxes/);
   assert.match(caseStudiesIndex, /Real systems, not demos/);
   assert.match(caseStudiesIndex, /Scope before build/);
+});
+
+test("case studies page copy reflects the broader mix of work on the index", () => {
+  const caseStudiesIndex = readFileSync("app/[locale]/case-studies/page.tsx", "utf8");
+
+  assert.match(caseStudiesIndex, /AI automation, product engineering, migrations, and systems integration/);
+  assert.match(caseStudiesIndex, /Delivery stories across AI products, internal platforms, ecommerce migrations, and integration-heavy systems work/);
+  assert.match(caseStudiesIndex, /AI automation case studies/);
+  assert.match(caseStudiesIndex, /software migration case studies/);
+  assert.match(caseStudiesIndex, /systems integration projects/);
 });

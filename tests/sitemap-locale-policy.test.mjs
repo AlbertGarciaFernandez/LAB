@@ -15,3 +15,9 @@ test("sitemap no longer publishes spanish and dutch insights variants by default
   assert.match(source, /getSeoLocalePolicy\(`\/insights\/\$\{article\.slug\}`\)/);
   assert.doesNotMatch(source, /routing\.locales[\s\S]*\/insights/);
 });
+
+test("case studies index lastModified matches the latest collection update", () => {
+  const source = readFileSync("app/sitemap.ts", "utf8");
+
+  assert.match(source, /const caseStudiesIndexMeta = \{[\s\S]*lastModified: "2026-06-02"/);
+});

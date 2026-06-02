@@ -161,6 +161,144 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
   },
+  {
+    slug: "ai-productivity-app-accelerator",
+    industry: "SaaS / AI Product",
+    location: "Europe (remote product team)",
+    clientSize: "2 founders, 1 designer, 4 engineers",
+    problem:
+      "An AI productivity app needed a frontend that could support weekly releases, a safer way to ship OpenAI-powered features, and clearer product-to-engineering handoff as the roadmap expanded.",
+    solution:
+      "Frontend and product acceleration work covering Next.js architecture, OpenAI-powered feature integration, test coverage for critical user flows, and tighter roadmap coordination between founders and engineering.",
+    metrics: [
+      { label: "Release cadence supported", value: "Weekly" },
+      { label: "Core AI flows covered", value: "Jest smoke tests" },
+      { label: "Performance checks", value: "Lighthouse + CWV reviews" },
+    ],
+    technologies: ["React", "Next.js", "TypeScript", "OpenAI", "Jest", "Lighthouse"],
+    timeline: "Ongoing support across 3 release cycles",
+    year: "2025",
+    publishedAt: "2026-06-02",
+    modifiedAt: "2026-06-02",
+    sections: [
+      {
+        type: "paragraph",
+        text: "An AI productivity product was moving fast, but the delivery model was starting to strain. The team was shipping new interface flows and OpenAI-assisted features in parallel, without a strong frontend structure for reuse, testing, or performance review.",
+      },
+      {
+        type: "heading",
+        text: "Problem statement",
+      },
+      {
+        type: "paragraph",
+        text: "The main challenge was operational rather than conceptual: the product needed to keep releasing every week, while AI-driven UI states, prompt handling, and asynchronous loading patterns were making the frontend harder to reason about. Founders also needed engineering work translated into clear delivery decisions instead of a backlog full of loosely defined experiments.",
+      },
+      {
+        type: "list",
+        items: [
+          "UI patterns were being repeated across onboarding, workspace, and assistant flows.",
+          "AI features needed predictable loading, fallback, and error states in the product UI.",
+          "Performance checks were needed before new flows could be treated as production-ready.",
+          "Roadmap discussions needed clearer translation into engineering scope and release order.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Solution",
+      },
+      {
+        type: "paragraph",
+        text: "We reworked the frontend around clearer React, Next.js, and TypeScript patterns so shared UI and state handling could be reused instead of rebuilt per feature. On the AI side, we integrated OpenAI-powered personalisation flows with explicit loading, retry, and fallback handling, then added a lightweight quality loop using Jest smoke tests and Lighthouse reviews before releases.",
+      },
+      {
+        type: "list",
+        items: [
+          "Shared frontend patterns in React, Next.js, and TypeScript for repeated product surfaces.",
+          "OpenAI integration for personalisation features with defined loading and fallback states.",
+          "Jest smoke tests around key assistant and onboarding flows before release.",
+          "Lighthouse and Core Web Vitals review as part of release readiness checks.",
+          "Regular roadmap translation between founders, product decisions, and engineering scope.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Results and impact",
+      },
+      {
+        type: "paragraph",
+        text: "The engagement gave the team a steadier delivery setup rather than a headline metric. Shared frontend patterns reduced one-off implementation work across new surfaces, AI features shipped with explicit UX behavior for slow or failed responses, and releases had a repeatable check for test coverage and performance before going live. Just as importantly, roadmap conversations became more concrete because product priorities were being converted into scoped engineering work for the next release cycle instead of staying at the idea level.",
+      },
+    ],
+  },
+  {
+    slug: "basic-fit-sfcc-migration",
+    industry: "E-commerce / Fitness",
+    location: "Europe",
+    clientSize: "Multi-market fitness ecommerce team",
+    problem:
+      "A high-risk ecommerce migration to Salesforce Commerce Cloud had to preserve UX quality while improving performance, SEO, and conversion opportunities across multiple markets.",
+    solution:
+      "Led a multi-country Salesforce Commerce Cloud migration with custom templates, responsive implementation, A/B testing support, and integrated analytics.",
+    metrics: [
+      { label: "Platform rollout", value: "Multi-country SFCC migration" },
+      { label: "Implementation scope", value: "Custom templates + responsive frontend" },
+      { label: "Post-launch readiness", value: "Analytics + A/B testing in place" },
+    ],
+    technologies: ["Salesforce Commerce Cloud", "A/B Testing", "Analytics", "Responsive Design"],
+    timeline: "Multi-phase migration",
+    year: "2025",
+    publishedAt: "2026-06-02",
+    modifiedAt: "2026-06-02",
+    sections: [
+      {
+        type: "paragraph",
+        text: "Basic-Fit needed to move a revenue-critical ecommerce flow onto Salesforce Commerce Cloud while keeping the customer journey stable across markets. Because the migration affected multiple country sites, the work had to protect navigation, merchandising, responsive behaviour, and conversion paths while the platform underneath was being replaced.",
+      },
+      {
+        type: "heading",
+        text: "Problem statement",
+      },
+      {
+        type: "paragraph",
+        text: "This was not just a replatforming exercise. The SFCC build had to carry over working customer journeys, avoid unnecessary SEO disruption, and give internal teams a platform they could keep optimising after go-live. That required controlled rollout coordination, custom implementation work inside SFCC, and measurement coverage strong enough to compare behaviour before and after launch.",
+      },
+      {
+        type: "list",
+        items: [
+          "Migration scope covered multiple country storefronts on a live commerce operation.",
+          "Core UX patterns had to remain intact through the platform transition.",
+          "SEO and performance could not be treated as a post-migration cleanup task.",
+          "Analytics and experimentation needed to be available from the first production phase.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Solution",
+      },
+      {
+        type: "paragraph",
+        text: "We led the SFCC migration with a practical focus on rollout control and frontend quality. The delivery included custom Salesforce Commerce Cloud templates, responsive implementation for key commerce journeys, analytics instrumentation, and A/B testing support so the team could monitor behaviour closely and continue optimising once traffic moved onto the new stack.",
+      },
+      {
+        type: "list",
+        items: [
+          "Migration coordination across a live multi-market ecommerce transition.",
+          "Custom SFCC template implementation for the new storefront experience.",
+          "Responsive frontend work to preserve consistency across device types.",
+          "Analytics integration to validate post-launch behaviour and performance.",
+          "A/B testing support so optimisation work could continue on the new platform.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Results and impact",
+      },
+      {
+        type: "paragraph",
+        text: "The migration delivered a working SFCC foundation without forcing the business to pause optimisation work after launch. Customer-facing journeys were preserved through the transition, the new storefront shipped with analytics visibility in place, and experimentation capability was available as part of the operational setup rather than something deferred to a later phase.",
+      },
+    ],
+  },
 ];
 
 export const caseStudyBySlug = new Map<string, CaseStudy>(caseStudies.map((cs) => [cs.slug, cs]));
