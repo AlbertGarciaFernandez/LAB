@@ -22,7 +22,7 @@ test("public navigation links editorial sections to english routes only", () => 
   assert.match(footer, /href="\/insights"[\s\S]*locale="en"/);
   assert.doesNotMatch(header, /href="\/en\/(insights|case-studies)"/);
   assert.doesNotMatch(footer, /href="\/en\/insights"|href: "\/en\/insights"/);
-  assert.match(insightsSection, /href="\/en\/insights"|href=\{`\/en\/insights/);
+  assert.match(insightsSection, /href="\/insights"[\s\S]*locale="en"|href=\{`\/en\/insights/);
   assert.doesNotMatch(insightsSection, /normalizedLocale\}\/insights/);
 });
 

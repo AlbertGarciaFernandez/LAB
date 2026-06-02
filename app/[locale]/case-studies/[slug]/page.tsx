@@ -226,7 +226,7 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
               weekly hours for your team.
             </p>
             <Link
-              href={`/${params.locale}/#contact`}
+              href="#contact"
               className="inline-block rounded-lg bg-hunter-orange px-6 py-3 text-sm font-bold uppercase tracking-widest text-near-black transition-opacity hover:opacity-90"
             >
               Get in touch

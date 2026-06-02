@@ -13,6 +13,16 @@ const nextConfig = {
   },
   redirects: async () => [
     {
+      source: "/ai-automation-consulting-netherlands",
+      destination: "/ai-consulting",
+      permanent: true,
+    },
+    {
+      source: "/:locale(en|es|nl)/ai-automation-consulting-netherlands",
+      destination: "/:locale/ai-consulting",
+      permanent: true,
+    },
+    {
       source: "/dental-clinic-automation-netherlands",
       destination: "/healthcare-automation-netherlands",
       permanent: true,

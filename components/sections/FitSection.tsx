@@ -57,7 +57,7 @@ export default function FitSection() {
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-400">{t("cta.desc")}</p>
           </div>
           <Link
-            href="/#contact"
+            href="#contact"
             className="mt-6 inline-flex rounded-lg bg-hunter-orange px-5 py-3 text-xs font-black uppercase tracking-widest text-near-black transition-colors hover:bg-white md:mt-0"
           >
             {t("cta.button")}

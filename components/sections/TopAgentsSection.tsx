@@ -301,7 +301,7 @@ const TopAgentsSection: React.FC<TopAgentsSectionProps> = ({ useCases }) => {
               <div className="mt-auto space-y-4 border-t border-white/5 pt-6">
                 <p className={`text-sm font-bold ${agent.color}`}>👉 {agent.benefit}</p>
                 <Link
-                  href="/#contact"
+                  href="#contact"
                   className="block translate-y-4 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
                 >
                   <div

@@ -317,7 +317,7 @@ export default function AestheticClinicAutomationContent() {
             className="mb-16 flex flex-col gap-5 sm:flex-row"
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
             >
               {t("Hero.cta.primary")}
@@ -800,7 +800,7 @@ export default function AestheticClinicAutomationContent() {
               </h2>
               <p className="mb-10 text-lg leading-relaxed text-gray-400">{t("CTA.desc")}</p>
               <Link
-                href="/#contact"
+                href="#contact"
                 className="inline-block rounded-full bg-hunter-green px-12 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
               >
                 {t("CTA.button")}

@@ -232,7 +232,7 @@ export default function N8nConsultantContent({
             className="flex flex-col gap-5 sm:flex-row"
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
             >
               {hero.ctaPrimary}
@@ -456,7 +456,7 @@ export default function N8nConsultantContent({
               </h2>
               <p className="mb-10 text-lg leading-relaxed text-gray-400">{cta.desc}</p>
               <Link
-                href="/#contact"
+                href="#contact"
                 className="inline-block rounded-full bg-hunter-green px-12 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
               >
                 {cta.button}

@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-4">
               {[
-                { key: "AIAutomationNL", href: "/ai-automation-consulting-netherlands" },
+                { key: "AIAutomationNL", href: "/ai-consulting" },
                 { key: "HealthcareNL", href: "/healthcare-automation-netherlands" },
                 { key: "AestheticNL", href: "/aesthetic-clinic-automation-netherlands" },
                 {
@@ -230,7 +230,7 @@ const Footer: React.FC = () => {
               </Link>
               <span className="text-gray-600">·</span>
               <Link
-                href="/#contact"
+                href="#contact"
                 className="text-[11px] font-bold uppercase tracking-widest text-hunter-green/80 transition-colors hover:text-hunter-green"
               >
                 {t("Copyright.locationSpain")}

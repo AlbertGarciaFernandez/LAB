@@ -164,7 +164,7 @@ export default function CustomInternalToolsContent() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-purple-600 px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:bg-purple-500"
             >
               {t("Hero.cta")}
@@ -620,7 +620,7 @@ export default function CustomInternalToolsContent() {
             </h2>
             <p className="mb-10 text-lg text-gray-400">{t("CTA.subtitle")}</p>
             <Link
-              href="/#contact"
+              href="#contact"
               className="inline-block rounded-full bg-purple-600 px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:bg-purple-500"
             >
               {t("CTA.button")}

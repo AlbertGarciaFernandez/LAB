@@ -294,7 +294,7 @@ export default function CustomLLMPageContent() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(34,211,238,0.6)]"
             >
               {t("Hero.cta")}
@@ -680,7 +680,7 @@ export default function CustomLLMPageContent() {
             </h2>
             <p className="mb-10 text-lg text-gray-400">{t("CTA.subtitle")}</p>
             <Link
-              href="/#contact"
+              href="#contact"
               className="inline-block rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(34,211,238,0.6)]"
             >
               {t("CTA.button")}

@@ -65,7 +65,7 @@ export default function PackagesSection() {
             <p className="mt-5 text-lg leading-relaxed text-gray-300">{t("subtitle")}</p>
           </div>
           <Link
-            href="/#contact"
+            href="#contact"
             className="inline-flex w-fit rounded-lg bg-hunter-green px-5 py-3 text-xs font-black uppercase tracking-widest text-near-black transition-colors hover:bg-white"
           >
             {t("cta")}

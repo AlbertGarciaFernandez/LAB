@@ -51,7 +51,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
       {
         label: "IT system integration",
@@ -115,7 +115,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
       {
         label: "AI agents and automation",
@@ -179,7 +179,7 @@ export const insights: InsightArticle[] = [
       },
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
     ],
     sections: [
@@ -243,7 +243,7 @@ export const insights: InsightArticle[] = [
       },
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
     ],
     sections: [
@@ -307,7 +307,7 @@ export const insights: InsightArticle[] = [
       },
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
     ],
     sections: [
@@ -359,7 +359,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
       {
         label: "Custom internal tools",
@@ -475,7 +475,7 @@ export const insights: InsightArticle[] = [
       },
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
     ],
     sections: [
@@ -583,7 +583,7 @@ export const insights: InsightArticle[] = [
       },
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
     ],
     sections: [
@@ -791,7 +791,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
       {
         label: "IT system integration",
@@ -843,7 +843,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
       {
         label: "AI agents and automation",
@@ -899,7 +899,7 @@ export const insights: InsightArticle[] = [
       },
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
     ],
     sections: [
@@ -1051,7 +1051,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
       {
         label: "IT system integration",
@@ -1107,7 +1107,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
       {
         label: "IT system integration",
@@ -1163,7 +1163,7 @@ export const insights: InsightArticle[] = [
       },
       {
         label: "AI automation consulting in the Netherlands",
-        href: "/ai-automation-consulting-netherlands",
+        href: "/ai-consulting",
       },
     ],
     sections: [

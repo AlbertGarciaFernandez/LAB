@@ -242,7 +242,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
                   : "Explore AI consulting"}
             </Link>
             <Link
-              href={`/${params.locale}/#contact`}
+              href="#contact"
               className="rounded-lg border border-white/10 px-5 py-3 text-sm font-bold text-white hover:border-hunter-green hover:text-hunter-green"
             >
               {isSpanish

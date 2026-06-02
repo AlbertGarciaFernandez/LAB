@@ -46,7 +46,7 @@ test("insight content includes the Search Console opportunity articles", () => {
   assert.match(source, /relatedServices:/);
   assert.match(source, /publishedAt:/);
   assert.match(source, /modifiedAt:/);
-  assert.match(source, /\/ai-automation-consulting-netherlands/);
+  assert.match(source, /\/ai-consulting/);
   assert.match(source, /\/dental-clinic-automation-netherlands/);
   assert.match(source, /\/software-development-leiden/);
   assert.match(source, /\/react-consulting/);
@@ -70,6 +70,17 @@ test("sitemap includes the English insights hub and article URLs", () => {
   assert.match(sitemap, /from ['"]@\/content\/insights['"]/);
   assert.match(sitemap, /\/en\/insights/);
   assert.match(sitemap, /getSeoLocalePolicy\(`\/insights\/\$\{article\.slug\}`\)/);
+});
+
+test("legacy AI automation URL redirects to the AI consulting page", () => {
+  const nextConfig = readFileSync("next.config.mjs", "utf8");
+  const sitemap = readFileSync("app/sitemap.ts", "utf8");
+
+  assert.match(nextConfig, /source:\s*["']\/ai-automation-consulting-netherlands["']/);
+  assert.match(nextConfig, /source:\s*["']\/:locale\(en\|es\|nl\)\/ai-automation-consulting-netherlands["']/);
+  assert.match(nextConfig, /destination:\s*["']\/ai-consulting["']/);
+  assert.match(nextConfig, /destination:\s*["']\/:locale\/ai-consulting["']/);
+  assert.doesNotMatch(sitemap, /"\/ai-automation-consulting-netherlands"/);
 });
 
 test("locale layout sets metadataBase for absolute social metadata", () => {
@@ -118,10 +129,6 @@ test("AI consulting page makes pricing and positioning visible", () => {
 test("core commercial pages ship distinct CTR-focused metadata", () => {
   const localeLayout = readFileSync("app/[locale]/layout.tsx", "utf8");
   const aiConsultingLayout = readFileSync("app/[locale]/ai-consulting/layout.tsx", "utf8");
-  const aiAutomationPage = readFileSync(
-    "app/[locale]/ai-automation-consulting-netherlands/page.tsx",
-    "utf8"
-  );
   const nextJsPage = readFileSync("app/[locale]/nextjs-development-agency/page.tsx", "utf8");
 
   assert.match(localeLayout, /AI Automation Agency Netherlands \| CodeHunter Lab/);
@@ -131,12 +138,6 @@ test("core commercial pages ship distinct CTR-focused metadata", () => {
   assert.match(
     aiConsultingLayout,
     /AI consulting in the Netherlands for strategy, implementation, and AI systems that ship to production/
-  );
-
-  assert.match(aiAutomationPage, /AI Automation Agency Netherlands \| n8n, WhatsApp & AI Agents/);
-  assert.match(
-    aiAutomationPage,
-    /WhatsApp agents, AI voice bots, n8n workflows, and CRM integrations/
   );
 
   assert.match(nextJsPage, /Next\.js Agency Europe \| App Router, Migration & Performance/);
@@ -174,15 +175,10 @@ test("footer and sitemap expose about without case study urls", () => {
 
 test("commercial pages no longer link to temporary case studies", () => {
   const aiConsultingPage = readFileSync("app/[locale]/ai-consulting/page.tsx", "utf8");
-  const aiAutomationPage = readFileSync(
-    "app/[locale]/ai-automation-consulting-netherlands/PageContent.tsx",
-    "utf8"
-  );
   const nextJsPage = readFileSync("app/[locale]/nextjs-development-agency/PageContent.tsx", "utf8");
 
   assert.doesNotMatch(aiConsultingPage, /\/case-studies/);
   assert.doesNotMatch(aiConsultingPage, /zapier-to-n8n-migration/);
-  assert.doesNotMatch(aiAutomationPage, /zapier-to-n8n-migration/);
   assert.doesNotMatch(nextJsPage, /nextjs-platform-architecture/);
 });
 
@@ -191,10 +187,6 @@ test("service pages use reusable ServiceSchema and keep visible FAQ sections whe
     {
       route: "app/[locale]/ai-consulting/page.tsx",
       serviceName: /AI Consulting Netherlands/,
-    },
-    {
-      route: "app/[locale]/ai-automation-consulting-netherlands/page.tsx",
-      serviceName: /AI Automation Consulting Netherlands/,
     },
     {
       route: "app/[locale]/nextjs-development-agency/page.tsx",
@@ -240,7 +232,6 @@ test("service pages use reusable ServiceSchema and keep visible FAQ sections whe
 
   const faqVisiblePages = [
     "app/[locale]/ai-consulting/PageContent.tsx",
-    "app/[locale]/ai-automation-consulting-netherlands/PageContent.tsx",
     "app/[locale]/nextjs-development-agency/PageContent.tsx",
     "app/[locale]/n8n-consultant-netherlands/PageContent.tsx",
     "app/[locale]/ai-voice-agents-netherlands/PageContent.tsx",

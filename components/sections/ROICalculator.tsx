@@ -162,7 +162,7 @@ const ROICalculator = () => {
           <div className="mt-10 space-y-6 text-center">
             <p className="text-xs font-medium tracking-wide text-gray-500">{t("results.note")}</p>
             <Link
-              href="/#contact"
+              href="#contact"
               className="group flex w-full items-center justify-center gap-3 rounded-xl bg-hunter-green py-5 text-xs font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.2)] transition-all hover:scale-[1.02] hover:bg-white"
             >
               {t("results.cta")}

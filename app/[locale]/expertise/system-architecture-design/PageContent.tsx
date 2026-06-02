@@ -216,7 +216,7 @@ export default function SystemArchitecturePageContent() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-hunter-orange px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(255,122,60,0.4)] transition-all hover:scale-105 hover:bg-white"
             >
               {t("Hero.cta")}
@@ -651,7 +651,7 @@ export default function SystemArchitecturePageContent() {
               </h2>
               <p className="mb-10 text-lg text-gray-400">{t("CTA.subtitle")}</p>
               <Link
-                href="/#contact"
+                href="#contact"
                 className="rounded-full bg-hunter-orange px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(255,122,60,0.4)] transition-all hover:scale-105 hover:bg-white"
               >
                 {t("CTA.button")}

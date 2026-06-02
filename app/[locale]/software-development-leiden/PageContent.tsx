@@ -119,7 +119,7 @@ export default function SoftwareDevelopmentLeidenContent() {
             className="flex flex-col gap-5 sm:flex-row"
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-hunter-orange px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(255,122,60,0.4)] transition-all hover:scale-105 hover:bg-white"
             >
               {t("Hero.cta.coffee")}

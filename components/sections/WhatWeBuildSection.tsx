@@ -18,7 +18,7 @@ const serviceIcons = [RobotIcon, ArrowsClockwiseIcon, ShareNetworkIcon, SquaresF
 
 const serviceHrefs = [
   "/expertise/ai-agents-automation",
-  "/ai-automation-consulting-netherlands",
+  "/ai-consulting",
   "/it-system-integration",
   "/services/custom-internal-tools-development",
   "/expertise/custom-llm-development",

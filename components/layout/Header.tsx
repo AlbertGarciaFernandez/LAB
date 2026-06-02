@@ -153,7 +153,7 @@ const Header: React.FC = () => {
       items: [
         {
           name: t("nav.industries.AIConsultingNL"),
-          href: "/ai-automation-consulting-netherlands",
+          href: "/ai-consulting",
           icon: <GlobeIcon size={16} />,
         },
         {
@@ -473,7 +473,7 @@ const Header: React.FC = () => {
 
             {/* Let's Work Button */}
             <Link
-              href="/#contact"
+              href="#contact"
               className="group relative hidden h-10 overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-105 focus:outline-none md:inline-flex"
             >
               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF7A3C_0%,#0B0B0B_50%,#FF7A3C_100%)] opacity-70" />
@@ -705,7 +705,7 @@ const Header: React.FC = () => {
                 className="w-full max-w-sm"
               >
                 <Link
-                  href="/#contact"
+                  href="#contact"
                   onClick={() => dispatch({ type: "CLOSE_MOBILE" })}
                   className="group relative block w-full overflow-hidden rounded-full p-[1px] transition-transform duration-300 hover:scale-[1.02]"
                 >

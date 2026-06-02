@@ -169,7 +169,7 @@ const IndustriesSection: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Link
-            href="/ai-automation-consulting-netherlands"
+            href="/ai-consulting"
             className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-6 py-2.5 text-sm font-semibold text-white/70 transition-all duration-300 hover:border-white/20 hover:text-white"
           >
             {t("viewAll")}

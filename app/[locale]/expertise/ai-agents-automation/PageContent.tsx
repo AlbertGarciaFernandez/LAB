@@ -188,7 +188,7 @@ export default function AIAgentsPageContent() {
             className="mb-16"
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
             >
               {t("Hero.cta")}
@@ -587,7 +587,7 @@ export default function AIAgentsPageContent() {
             </h2>
             <p className="mb-10 text-lg text-gray-400">{t("CTA.subtitle")}</p>
             <Link
-              href="/#contact"
+              href="#contact"
               className="inline-block rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
             >
               {t("CTA.button")}

@@ -202,7 +202,7 @@ export default function ITSystemIntegrationContent() {
             className="flex flex-col gap-5 sm:flex-row"
           >
             <Link
-              href="/#contact"
+              href="#contact"
               className="rounded-full bg-hunter-orange px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(255,122,60,0.3)] transition-all hover:scale-105 hover:bg-orange-500"
             >
               {t("Hero.cta.primary")}
@@ -755,7 +755,7 @@ export default function ITSystemIntegrationContent() {
                 </h2>
                 <p className="mb-10 text-lg leading-relaxed text-gray-400">{t("CTA.subtitle")}</p>
                 <Link
-                  href="/#contact"
+                  href="#contact"
                   className="inline-block rounded-full bg-hunter-orange px-12 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(255,122,60,0.4)] transition-all hover:scale-105 hover:bg-orange-500"
                 >
                   {t("CTA.button")}

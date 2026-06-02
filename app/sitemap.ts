@@ -15,11 +15,6 @@ const routeMeta: Record<
   "": { lastModified: "2026-05-09", priority: 1.0, changeFrequency: "weekly" },
   "/lab": { lastModified: "2026-05-09", priority: 0.8, changeFrequency: "weekly" },
   "/ai-consulting": { lastModified: "2026-05-09", priority: 0.9, changeFrequency: "weekly" },
-  "/ai-automation-consulting-netherlands": {
-    lastModified: "2026-05-09",
-    priority: 0.9,
-    changeFrequency: "weekly",
-  },
   "/it-system-integration": {
     lastModified: "2026-05-09",
     priority: 0.8,
