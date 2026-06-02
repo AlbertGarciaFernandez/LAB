@@ -4,8 +4,8 @@
 
 import React from "react";
 import { m } from "framer-motion";
-import { ContactForm } from "../ui/ContactForm";
 import { useTranslations } from "next-intl";
+import ContactSection from "./ContactSection";
 
 interface ProcessStepProps {
   step: string;
@@ -139,21 +139,7 @@ const ProcessContactSection: React.FC = () => {
         <div className="mx-auto my-20 h-1 w-1/2 rounded-full bg-surface-dark"></div>
 
         {/* 06.2 Contact / CTA Section (Final Call to Action) */}
-        <div id="contact" className="relative scroll-mt-32">
-          <div className="mb-12 text-center">
-            <h2 className="mb-8 text-5xl font-black uppercase tracking-tighter text-white md:text-7xl">
-              {t("cta.title.text")}{" "}
-              <span className="text-hunter-orange">{t("cta.title.highlight")}</span>
-            </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-xl leading-relaxed text-gray-400">
-              {t("cta.description.part1")}{" "}
-              <span className="font-semibold text-white">{t("cta.description.highlight")}</span>{" "}
-              {t("cta.description.part2")}
-            </p>
-          </div>
-
-          <ContactForm />
-        </div>
+        <ContactSection />
       </div>
     </section>
   );

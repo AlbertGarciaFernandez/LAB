@@ -15,6 +15,96 @@
       "AI voice agents Nederland"
     ]
   },
+  "FloatingContactCta": {
+    "eyebrow": "Neem contact op",
+    "title": "Start het gesprek",
+    "description": "Deel het probleem en wij vertellen je wat de snelste volgende stap is.",
+    "button": "Neem contact op",
+    "closeLabel": "Contactpaneel sluiten"
+  },
+  "ContactForm": {
+    "projectTypes": [
+      "Webapp / Product",
+      "Infrastructuur / DevOps",
+      "AI & automatisering",
+      "Strategisch advies"
+    ],
+    "budgetOptions": [
+      "Onder €5k",
+      "€5k – €15k",
+      "€15k – €30k",
+      "€30k – €60k",
+      "Boven €60k",
+      "Nog niet zeker"
+    ],
+    "full": {
+      "projectTypeStep": "01 / Projecttype",
+      "title": "Boek een gesprek",
+      "description": "Vertel welk type samenwerking je nodig hebt, dan richten wij het gesprek op de snelste route naar ROI."
+    },
+    "compact": {
+      "eyebrow": "Snel contact",
+      "title": "Neem contact op",
+      "description": "Deel een paar details en wij vertellen je wat de beste volgende stap is."
+    },
+    "fields": {
+      "name": "Volledige naam *",
+      "company": "Bedrijf *",
+      "email": "Zakelijk e-mailadres *",
+      "role": "Rol / functie *",
+      "phone": "Telefoon",
+      "budget": "Geschat budget *",
+      "aiGoal": "Wat moet AI als eerste verbeteren? *",
+      "message": "Projectsamenvatting *",
+      "compactMessage": "Waarmee kunnen we helpen? *"
+    },
+    "placeholders": {
+      "name": "Je naam",
+      "company": "Bedrijfsnaam",
+      "email": "jij@bedrijf.nl",
+      "role": "Founder, operations lead, CTO...",
+      "phone": "Optioneel",
+      "budget": "Kies een optie",
+      "aiGoal": "Leadrespons, operationele automatisering, interne tools...",
+      "message": "Beschrijf kort je belangrijkste uitdaging, huidige workflow en hoe succes eruitziet.",
+      "compactMessage": "Deel je uitdaging, timing of het systeem dat je wilt verbeteren."
+    },
+    "errors": {
+      "name": "Naam moet minimaal 2 tekens bevatten.",
+      "company": "Bedrijfsnaam moet minimaal 2 tekens bevatten.",
+      "email": "Vul een geldig e-mailadres in.",
+      "message": "Bericht moet minimaal 10 tekens bevatten.",
+      "role": "Rol moet minimaal 2 tekens bevatten.",
+      "phone": "Telefoonnummer moet minimaal 8 cijfers bevatten.",
+      "budget": "Selecteer een budgetrange.",
+      "aiGoal": "Beschrijf het AI-verbeterdoel in minimaal 10 tekens.",
+      "projectType": "Selecteer een projecttype.",
+      "rateLimit": "Wacht een paar seconden voordat je het opnieuw probeert.",
+      "transmission": "Verzenden is mislukt. Probeer het opnieuw of mail ons rechtstreeks."
+    },
+    "status": {
+      "submitting": "Formulier verzenden...",
+      "retrying": "Verzending opnieuw proberen... poging {attempt} van {max}",
+      "error": "Formulier verzenden is mislukt."
+    },
+    "success": {
+      "title": "Bedankt. We hebben je bericht ontvangen.",
+      "description": "We beoordelen je aanvraag en komen snel bij je terug met de beste volgende stap.",
+      "reset": "Nog een bericht sturen"
+    },
+    "notes": {
+      "compact": "Liever een uitgebreider gesprek? Open het volledige formulier en deel scope, budget en doelen.",
+      "full": "We reageren meestal binnen één werkdag met de duidelijkste volgende stap."
+    },
+    "actions": {
+      "retry": "Nu opnieuw proberen",
+      "openFullForm": "Volledig formulier openen",
+      "retrying": "Opnieuw proberen... ({attempt}/{max})",
+      "sending": "Verzenden...",
+      "send": "Bericht sturen",
+      "book": "Gesprek boeken"
+    }
+  },
   "Header": {
     "nav": {
       "Services": "Diensten",
@@ -34,15 +124,15 @@
       },
       "expertise": {
         "AIAgents": "AI Agents & Automatisering",
-        "CustomLLM": "Custom LLM Ontwikkeling",
+        "CustomLLM": "Maatwerk LLM-ontwikkeling",
         "SystemArch": "Systeemarchitectuur",
         "N8nMigration": "n8n Migratie Consulting"
       },
       "industries": {
         "AIConsultingNL": "AI Consulting Nederland",
-        "DentalNL": "Tandheelkunde Automatisering",
+        "HealthcareNL": "Zorgautomatisering",
         "AestheticNL": "Esthetische Kliniek Automatisering",
-        "AccountingNL": "Administratiekantoor Automatisering",
+        "ProfessionalServicesNL": "Automatisering voor zakelijke dienstverlening",
         "RealEstateNL": "Makelaar Automatisering"
       }
     },
@@ -87,16 +177,16 @@
         "AIAgents": "AI Agents",
         "n8nMigration": "n8n Migratie",
         "SystemArchitecture": "Systeemarchitectuur",
-        "CustomLLMs": "Custom LLMs"
+        "CustomLLMs": "Maatwerk LLMs"
       }
     },
     "Industries": {
       "title": "Industrieën",
       "items": {
         "AIAutomationNL": "AI Automatisering NL",
-        "DentalNL": "Tandheelkunde NL",
+        "HealthcareNL": "Zorgautomatisering",
         "AestheticNL": "Esthetische Kliniek NL",
-        "AccountingNL": "Administratie Automatisering",
+        "ProfessionalServicesNL": "Zakelijke dienstverlening",
         "RealEstateNL": "Makelaar Automatisering"
       }
     },
@@ -121,7 +211,7 @@
       "insights": "Inzichten",
       "about": "Over Ons",
       "locationLeiden": "Leiden, Nederland",
-      "locationSpain": "Spanje / Remote",
+      "locationSpain": "Spanje / Op afstand",
       "developedBy": "Ontwikkeld door"
     },
     "Solutions": {
@@ -175,9 +265,9 @@
         "link": "Maatwerk Interne Tools"
       },
       {
-        "title": "Custom LLM Deployments",
+        "title": "Maatwerk LLM-implementaties",
         "desc": "Private taalmodellen fine-tuned voor jouw domein. Documentclassificatie, respons generatie, kennis ophalen.",
-        "link": "Custom LLM Ontwikkeling"
+        "link": "Maatwerk LLM-ontwikkeling"
       }
     ]
   },
@@ -250,12 +340,12 @@
         "micro": "Intelligente workflows die handmatig werk vervangen.",
         "heading": "Van repetitieve taken naar autonome AI-gedreven flows.",
         "paragraphs": {
-          "0": "Wij architecteren en implementeren intelligente systemen — van custom AI agents en LLM-integraties tot complexe n8n- en Make-automatiseringen — die operationele overhead verminderen en nieuwe mogelijkheden ontsluiten.",
-          "1": "Onze aanpak gaat verder dan simpele scripts. Wij ontwerpen robuuste, veilige en schaalbare automatiseringsframeworks op maat van je business logic, met duidelijke observability en onderhoudbaarheid vanaf dag één."
+          "0": "Wij ontwerpen en implementeren intelligente systemen — van AI-agents op maat en LLM-integraties tot complexe n8n- en Make-automatiseringen — die operationele overhead verminderen en nieuwe mogelijkheden ontsluiten.",
+          "1": "Onze aanpak gaat verder dan simpele scripts. Wij ontwerpen robuuste, veilige en schaalbare automatiseringsframeworks op maat van je bedrijfslogica, met duidelijke observability en onderhoudbaarheid vanaf dag één."
         },
         "bullets": {
-          "0": "Custom AI agents en LLM-integraties (OpenAI, Claude, lokale modellen)",
-          "1": "n8n, Make en custom workflow-automatisering",
+          "0": "AI-agents op maat en LLM-integraties (OpenAI, Claude, lokale modellen)",
+          "1": "n8n, Make en workflow-automatisering op maat",
           "2": "Veilig credential management en audit logging",
           "3": "Observability, error handling en langetermijnonderhoud"
         }
@@ -350,7 +440,7 @@
         "results": {
           "0": "Succesvolle migratie naar SFCC met behoud van UX-kwaliteit.",
           "1": "Implementatie van A/B testing met directe conversieverbeteringen.",
-          "2": "Custom SFCC-templates en responsive design.",
+          "2": "SFCC-templates op maat en responsive design.",
           "3": "Veilige, schaalbare code met geïntegreerde analytics."
         }
       },
@@ -369,27 +459,27 @@
     "cta": "Laten we het over jouw uitdaging hebben"
   },
   "Bio": {
-    "bgText": "HET STUDIO",
+    "bgText": "DE STUDIO",
     "title": {
-      "part1": "HET",
+      "part1": "DE",
       "part2": "STUDIO"
     },
     "description": {
       "p1": {
         "part1": "Wij zijn een",
-        "highlight": "AI consulting studio",
+        "highlight": "AI-consultingstudio",
         "part2": "gericht op engineering, gevestigd in Leiden, Nederland."
       },
       "p2": {
         "part1": "Wij ontwerpen, bouwen en implementeren AI-automatisering die",
         "highlight1": "in productie draait",
         "part2": "— niet in een sandbox. Wij werken met CTO's, founders en",
-        "highlight2": "operations leaders",
+        "highlight2": "operationele leiders",
         "part3": "in heel Europa."
       }
     },
     "stats": {
-      "years": "Jaar Leverend",
+      "years": "Jaar ervaring",
       "yearsValue": "4+",
       "focus": "Kernfocus",
       "focusValue": "AI / Engineering",
@@ -429,7 +519,7 @@
         "description": "Wij bouwen het systeem en koppelen het aan je bestaande stack — CRM, communicatietools, databases. Geen sandbox-deployments. Alles draait tegen echte data vanaf dag één."
       },
       "3": {
-        "title": "Deploy & Overdracht",
+        "title": "Implementatie & overdracht",
         "description": "Wij deployen op je infrastructuur en leveren volledige documentatie. De code is van jou. Doorlopende support beschikbaar als je een langetermijn engineering partner nodig hebt."
       }
     },
@@ -460,6 +550,12 @@
       }
     },
     "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "IndustryMetrics": [
+      { "value": "45%", "label": "lead-naar-boeking conversie" },
+      { "value": "€850", "label": "gemiddelde stijging van klantwaarde" },
+      { "value": "28%", "label": "retentieverbetering" },
+      { "value": "3.2x", "label": "ROAS met advertentietracking" }
+    ],
     "PainPoints": {
       "title": "De verborgen kosten van SaaS workflow-tools",
       "items": [
@@ -486,7 +582,7 @@
         {
           "emoji": "🔌",
           "title": "Ontbrekende integraties dwingen handmatig werk af",
-          "desc": "Je interne tool, niche SaaS of custom API heeft geen Zapier-integratie. Dus iemand in je team overbrugt de kloof elke dag handmatig."
+          "desc": "Je interne tool, niche SaaS of API op maat heeft geen Zapier-integratie. Dus iemand in je team overbrugt de kloof elke dag handmatig."
         },
         {
           "emoji": "📊",
@@ -507,7 +603,7 @@
         },
         {
           "emoji": "🎯",
-          "title": "Custom workflow-architectuur",
+          "title": "Workflow-architectuur op maat",
           "desc": "Wij ontwerpen en bouwen complexe multi-step workflows met conditionele logica, parallelle uitvoering, foutherstel en webhook-eindpunten. Gebouwd voor betrouwbaarheid.",
           "result": "Workflows die meeschalen met je bedrijf."
         },
@@ -519,8 +615,8 @@
         },
         {
           "emoji": "🔗",
-          "title": "Custom API-integraties",
-          "desc": "n8n's HTTP node en custom code blocks laten ons verbinden met elke API — je interne tools, niche SaaS-platforms of legacy systemen.",
+          "title": "API-integraties op maat",
+          "desc": "Met n8n's HTTP node en code blocks op maat kunnen we met elke API verbinden — je interne tools, niche SaaS-platforms of legacy-systemen.",
           "result": "Elk systeem verbonden. Geen handmatig overbruggen."
         },
         {
@@ -576,7 +672,7 @@
         },
         {
           "title": "Complexe logica zonder workarounds",
-          "desc": "Native ondersteuning voor loops, conditionals, foutafhandeling, merge nodes en custom JavaScript. Bouw wat je echt nodig hebt."
+          "desc": "Native ondersteuning voor loops, conditionals, foutafhandeling, merge nodes en JavaScript op maat. Bouw wat je echt nodig hebt."
         },
         {
           "title": "Open source en toekomstbestendig",
@@ -602,7 +698,7 @@
         },
         {
           "q": "Wat als een workflow geen n8n-integratie heeft?",
-          "a": "n8n's HTTP node en custom code blocks laten ons verbinden met elke API. Als het een REST of GraphQL API heeft, kunnen wij het integreren."
+          "a": "Met n8n's HTTP node en code blocks op maat kunnen we met elke API verbinden. Als het een REST- of GraphQL-API heeft, kunnen wij het integreren."
         },
         {
           "q": "Hoe lang duurt een typische migratie?",
@@ -615,11 +711,11 @@
       "title": "Boek je gratis n8n workflow-audit",
       "desc": "Wij beoordelen je huidige Zapier of Make setup, berekenen je werkelijke kosten per taak, en laten je precies zien wat een self-hosted n8n migratie zou inhouden — met een duidelijke ROI-schatting.",
       "button": "Boek gratis workflow-audit",
-      "subtext": "Voor bedrijven in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Email info@codehunterlab.com"
+      "subtext": "Voor bedrijven in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Mail info@codehunterlab.com"
     },
     "SEO": {
       "keywords": "n8n consultant Nederland, migreren van Zapier naar n8n, self-hosted workflow automatisering, n8n expert Amsterdam, workflow automation agency Nederland, n8n migratie consulting, Make naar n8n migratie",
-      "extendedDesc": "CodeHunter Lab levert deskundig n8n consulting en migratiediensten voor bedrijven in heel Nederland. Van Zapier en Make migratie naar self-hosted n8n deployment, custom workflow-architectuur en AVG-compliant data pipelines helpen wij bedrijven automatiseringskosten met 60–80% te verlagen terwijl ze volledige datacontrole krijgen. Gevestigd in Leiden, dienend bedrijven in Amsterdam, Rotterdam, Den Haag, Utrecht en heel Nederland."
+      "extendedDesc": "CodeHunter Lab levert deskundig n8n-advies en migratiediensten voor bedrijven in heel Nederland. Van Zapier- en Make-migratie naar self-hosted n8n, workflow-architectuur op maat en AVG-conforme datapipelines: wij helpen bedrijven hun automatiseringskosten met 60–80% te verlagen terwijl ze volledige datacontrole krijgen. Gevestigd in Leiden, voor bedrijven in Amsterdam, Rotterdam, Den Haag, Utrecht en heel Nederland."
     }
   },
   "AIVoiceAgents": {
@@ -630,7 +726,7 @@
         "highlight": "lekken omzet.",
         "part2": "AI antwoordt 24/7"
       },
-      "description": "CodeHunter Lab bouwt <strong>custom AI spraakagenten</strong> voor bedrijven in Nederland — inkomende gesprekken afhandelen, leads kwalificeren, afspraken inplannen en 24/7 telefonische ondersteuning. Menselijke gesprekken. Geen wachttijd. Geen extra personeel.",
+      "description": "CodeHunter Lab bouwt <strong>AI-spraakagenten op maat</strong> voor bedrijven in Nederland — voor het afhandelen van inkomende gesprekken, het kwalificeren van leads, het inplannen van afspraken en 24/7 telefonische ondersteuning. Menselijke gesprekken. Geen wachttijd. Geen extra personeel.",
       "cta": {
         "primary": "Boek een gratis Voice AI-consult",
         "secondary": "Bekijk wat AI Voice kan"
@@ -751,7 +847,7 @@
           "desc": "AI voice is alleen waardevol als het verbindt met je agenda, CRM en interne tools. Wij bouwen de integraties zodat elk gesprek een actie oplevert."
         },
         {
-          "title": "Menselijke overdracht wanneer het mattered",
+          "title": "Menselijke overdracht wanneer het ertoe doet",
           "desc": "AI behandelt 80% van de gesprekken autonoom. Voor de 20% die een mens nodig heeft — complexe issues, escalaties — draagt de AI naadloos over met volledige context."
         },
         {
@@ -791,11 +887,11 @@
       "title": "Boek je gratis AI Voice-consult",
       "desc": "Wij analyseren je huidige gespreksafhandeling, schatten de omzet die verloren gaat door gemiste oproepen, en laten je precies zien wat een AI spraakagent zou afhandelen — met een duidelijke ROI-projectie.",
       "button": "Boek gratis Voice AI-consult",
-      "subtext": "Voor bedrijven in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Email info@codehunterlab.com"
+      "subtext": "Voor bedrijven in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Mail info@codehunterlab.com"
     },
     "SEO": {
       "keywords": "AI spraakagenten Nederland, AI telefoonassistent Nederland, voice automatisering Amsterdam, AI gespreksafhandeling Nederland, AI receptionist Nederland, conversationele AI telefoonsysteem",
-      "extendedDesc": "CodeHunter Lab bouwt custom AI spraakagent-oplossingen voor bedrijven in heel Nederland. Van 24/7 inkomende gespreksafhandeling en AI lead-kwalificatie tot spraakgebaseerde afspraakplanning en meertalige klantenservice helpen wij bedrijven elk gesprek op te vangen, leads automatisch te kwalificeren en receptie-overhead te verlagen. Gevestigd in Leiden, dienend bedrijven in Amsterdam, Rotterdam, Den Haag, Utrecht en heel Nederland."
+      "extendedDesc": "CodeHunter Lab bouwt AI-spraakagentoplossingen op maat voor bedrijven in heel Nederland. Van 24/7 afhandeling van inkomende gesprekken en AI-leadkwalificatie tot afspraakplanning via spraak en meertalige klantenservice: wij helpen bedrijven elk gesprek op te vangen, leads automatisch te kwalificeren en receptie-overhead te verlagen. Gevestigd in Leiden, voor bedrijven in Amsterdam, Rotterdam, Den Haag, Utrecht en heel Nederland."
     }
   },
   "WhatsAppAutomation": {
@@ -829,7 +925,7 @@
         {
           "emoji": "📊",
           "title": "Geen tracking van WhatsApp-gesprekken",
-          "desc": "Klantvragen, bestellingen, klachten — allemaal happening in WhatsApp zonder CRM-logging, geen analyse, geen follow-upsysteem. Waardevolle klantdata verdwijnt in chat-threads."
+          "desc": "Klantvragen, bestellingen en klachten gebeuren allemaal in WhatsApp, zonder CRM-logging, analyse of follow-upsysteem. Waardevolle klantdata verdwijnt in chatgesprekken."
         },
         {
           "emoji": "🚫",
@@ -855,7 +951,7 @@
         {
           "emoji": "🤖",
           "title": "AI WhatsApp chatbots",
-          "desc": "Custom chatbots die FAQ's behandelen, leads kwalificeren, afspraken boeken en bestellingen verwerken — 24/7, in meerdere talen, met naadloze menselijke overdracht.",
+          "desc": "Chatbots op maat die FAQ's behandelen, leads kwalificeren, afspraken boeken en bestellingen verwerken — 24/7, in meerdere talen, met naadloze menselijke overdracht.",
           "result": "80% van de vragen automatisch opgelost."
         },
         {
@@ -950,7 +1046,7 @@
         },
         {
           "q": "Hoeveel kost WhatsApp Business API?",
-          "a": "Meta chargeert per gesprek (tarieven variëren per land en categorie). In Nederland kosten business-geïnitieerde gesprekken ongeveer €0,05–€0,10 elk."
+          "a": "Meta rekent per gesprek af (tarieven variëren per land en categorie). In Nederland kosten door bedrijven geïnitieerde gesprekken ongeveer €0,05–€0,10 per stuk."
         },
         {
           "q": "Kan de chatbot Nederlands?",
@@ -967,7 +1063,7 @@
       "title": "Boek je gratis WhatsApp-consult",
       "desc": "Wij beoordelen je huidige klantcommunicatie, identificeren de hoogste-impact WhatsApp automatiseringskansen, en laten je precies zien wat een WhatsApp Business API setup zou inhouden — met een duidelijke kosten- en ROI-schatting.",
       "button": "Boek gratis WhatsApp-consult",
-      "subtext": "Voor bedrijven in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Email info@codehunterlab.com"
+      "subtext": "Voor bedrijven in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Mail info@codehunterlab.com"
     },
     "SEO": {
       "keywords": "WhatsApp Business API Nederland, WhatsApp automatisering Amsterdam, WhatsApp chatbot Nederland, WhatsApp CRM integratie Nederland, WhatsApp marketing automatisering NL, WhatsApp klantenservice automatisering",
@@ -1040,7 +1136,7 @@
         "color": "green"
       },
       {
-        "quote": "Wij vervingen een lappendeken van spreadsheets en handmatige processen door een custom intern dashboard. De tool betaalde zichzelf terug in bespaarde admin-uren tijdens de eerste maand.",
+        "quote": "Wij vervingen een lappendeken van spreadsheets en handmatige processen door een intern dashboard op maat. De tool betaalde zichzelf terug in bespaarde admin-uren tijdens de eerste maand.",
         "name": "Emma de Boer",
         "role": "Operations Director",
         "company": "LogiFlow NL",
@@ -1064,8 +1160,8 @@
       {
         "situation": "Je wilt een live systeem",
         "title": "AI Agent Implementatie",
-        "desc": "Deploy een AI-agent in productie gekoppeld aan je tools en escalatieregels.",
-        "href": "/ai-automation-consulting-netherlands",
+        "desc": "Implementeer een AI-agent in productie, gekoppeld aan je tools en escalatieregels.",
+        "href": "/ai-consulting",
         "cta": "Bouw een agent"
       },
       {
@@ -1287,7 +1383,7 @@
       "badge": "Digitale Werkkracht",
       "title": "Automatiseer Sales, Operaties",
       "highlight": "en Marketing met AI.",
-      "description": "Stop met aannemen voor repetitieve taken. Deploy gespecialiseerde AI-agents die 24/7 werken, integreren met je tools en resultaten leveren die schaalbaar zijn.",
+      "description": "Stop met aannemen voor repetitieve taken. Implementeer gespecialiseerde AI-agents die 24/7 werken, integreren met je tools en schaalbare resultaten leveren.",
       "agents": {
         "leo": {
           "role": "AI Sales Agent",
@@ -1300,7 +1396,7 @@
             "Overdracht aan Mens wanneer Nodig"
           ],
           "benefit": "Schaal omzet, geen personeel.",
-          "cta": "Deploy LEO"
+          "cta": "Implementeer LEO"
         },
         "atlas": {
           "role": "AI Virtual Assistant",
@@ -1313,7 +1409,7 @@
             "Foutloze Data-invoer"
           ],
           "benefit": "Elimineer operationele frictie.",
-          "cta": "Deploy ATLAS"
+          "cta": "Implementeer ATLAS"
         },
         "orion": {
           "role": "AI Marketing Director",
@@ -1326,7 +1422,7 @@
             "Concurrentie Monitoring"
           ],
           "benefit": "Marketing dat winst genereert.",
-          "cta": "Deploy ORION"
+          "cta": "Implementeer ORION"
         }
       },
       "bottleneck": {
@@ -1357,7 +1453,7 @@
       },
       "diagram": {
         "title": "Gesynchroniseerd met je Ecosysteem",
-        "capture": "Capture",
+        "capture": "Vastleggen",
         "process": "Verwerkt",
         "optimize": "Optimaliseert",
         "worksWith": "WERKT SAMEN MET:"
@@ -1376,7 +1472,7 @@
         "tag": "Meest Gevraagd",
         "title": "AI-implementatie",
         "desc": "Een AI-systeem geïmplementeerd in je infrastructuur.<br />Volledige integratie + documentatie.<br />Vaste prijs, 4–8 weken. De code is van jou.",
-        "latencyLabel": "SCOPE",
+        "latencyLabel": "BEREIK",
         "latencyValue": "VAST",
         "costLabel": "CODE",
         "costValue": "VAN JOU"
@@ -1410,12 +1506,12 @@
       "recommended": "Beste start",
       "items": [
         {
-          "name": "Fit Check",
+          "name": "Fit-check",
           "price": "Gratis",
           "timeline": "30 minuten",
           "desc": "Voor teams die een direct antwoord nodig hebben voordat ze strategie of ontwikkeling inkopen.",
           "href": "/#contact",
-          "cta": "Check fit",
+          "cta": "Check de fit",
           "points": [
             "Review van een workflow of bottleneck",
             "Eerlijk advies over wel of niet bouwen",
@@ -1441,7 +1537,7 @@
           "price": "Vanaf €8k",
           "timeline": "4–8 weken",
           "desc": "Voor teams die een AI-systeem in productie willen, gekoppeld aan hun echte business stack.",
-          "href": "/ai-automation-consulting-netherlands",
+          "href": "/ai-consulting",
           "cta": "Plan ontwikkeling",
           "points": [
             "Vaste scope en deliveryplan",
@@ -1486,9 +1582,9 @@
         },
         {
           "title": "Workflow- en Operatieautomatisering",
-          "desc": "Automatiseer documentverwerking, agenda's, CRM-synchronisatie en goedkeuringsworkflows in n8n of custom pipelines.",
+          "desc": "Automatiseer documentverwerking, agenda's, CRM-synchronisatie en goedkeuringsworkflows in n8n of pipelines op maat.",
           "label": "AI Automatisering Nederland",
-          "href": "/ai-automation-consulting-netherlands"
+          "href": "/ai-consulting"
         },
         {
           "title": "AI Systeemintegratie",
@@ -1695,7 +1791,7 @@
         },
         {
           "q": "Kunnen jullie AI integreren in mijn bestaande software?",
-          "a": "Ja. Wij zijn gespecialiseerd in hybride AI-ontwikkeling, wat betekent dat wij custom AI-agents kunnen bouwen die communiceren met je bestaande databases en API's."
+          "a": "Ja. Wij zijn gespecialiseerd in hybride AI-ontwikkeling, wat betekent dat wij AI-agents op maat kunnen bouwen die communiceren met je bestaande databases en API's."
         },
         {
           "q": "Ben ik eigenaar van de code na afronding van het project?",
@@ -1944,7 +2040,7 @@
     },
     "Agents": {
       "title": {
-        "part1": "Deploy je",
+        "part1": "Implementeer je",
         "highlight": "Digitale Werkkracht"
       },
       "whatsapp": {
@@ -2176,7 +2272,7 @@
           },
           {
             "q": "Op welke platforms kan de agent draaien?",
-            "a": "WhatsApp Business API, webchat-widgets, voice (inkomend en uitgaand), Slack, email en custom interfaces. Wij bouwen voor het kanaal dat jouw klanten gebruiken."
+            "a": "WhatsApp Business API, webchat-widgets, voice (inkomend en uitgaand), Slack, e-mail en interfaces op maat. Wij bouwen voor het kanaal dat jouw klanten gebruiken."
           },
           {
             "q": "Hoe lang duurt de deployment?",
@@ -2199,7 +2295,7 @@
       },
       "SEO": {
         "title": "AI-agent Ontwikkeling Nederland | 24/7 Automatisering",
-        "description": "Deploy custom AI-agents voor support en verkoop. Top AI-agency in Nederland voor WhatsApp- en Voice-bots.",
+        "description": "Implementeer AI-agents op maat voor support en verkoop. Top AI-agency in Nederland voor WhatsApp- en Voice-bots.",
         "keywords": "ai agent ontwikkeling, digitale werkkracht, whatsapp automatisering bedrijven, klantenservice ai nl"
       }
     },
@@ -2302,7 +2398,7 @@
           },
           {
             "icon": "📧",
-            "title": "Email & Marketing",
+            "title": "E-mail & marketing",
             "desc": "Gedragsgebaseerde email-triggers, lijstsegmentatie, campagnevolging en multi-channel uitzending gecoördineerd in realtime."
           },
           {
@@ -2313,7 +2409,7 @@
           {
             "icon": "🛒",
             "title": "E-commerce Operaties",
-            "desc": "Orderverwerking, voorraadsynchronisatie, klantnotificaties en retourbeheer in Shopify, WooCommerce of custom stores."
+            "desc": "Orderverwerking, voorraadsynchronisatie, klantnotificaties en retourbeheer in Shopify, WooCommerce of webshops op maat."
           },
           {
             "icon": "🧾",
@@ -2465,7 +2561,7 @@
         "cta": "Model Trainen"
       },
       "Features": {
-        "title": "Waarom een Custom LLM Bouwen?",
+        "title": "Waarom een LLM op maat bouwen?",
         "cards": [
           {
             "title": "Data-veiligheid",
@@ -2508,7 +2604,7 @@
         ]
       },
       "UseCases": {
-        "title": "Use Cases Custom LLM",
+        "title": "Use cases voor LLMs op maat",
         "subtitle": "Gespecialiseerde modellen die generieke AI overtreffen in jouw domein.",
         "cases": [
           {
@@ -2600,7 +2696,7 @@
       },
       "migration": {
         "title": "Migratie naar Next.js",
-        "description": "Migreren van Create React App, Gatsby of een custom webpack-setup? Wij beheren de volledige migratie met nul downtime en betere prestaties."
+        "description": "Migreren van Create React App, Gatsby of een webpack-setup op maat? Wij beheren de volledige migratie met nul downtime en betere prestaties."
       },
       "fullstack": {
         "title": "Next.js Full-Stack",
@@ -2667,7 +2763,7 @@
         },
         {
           "q": "Hoe lang duurt een typisch Next.js project?",
-          "a": "Een standaard webapplicatie duurt 6 tot 10 weken van architectuur tot lancering. Complexere platforms met custom backends of e-commerce-integraties kunnen 3 tot 6 maanden duren."
+          "a": "Een standaard webapplicatie duurt 6 tot 10 weken van architectuur tot lancering. Complexere platforms met backends op maat of e-commerce-integraties kunnen 3 tot 6 maanden duren."
         }
       ]
     },
@@ -2963,7 +3059,7 @@
       "title": "Boek Jouw Gratis Audit",
       "desc": "Wij bekijken jouw huidige systemen, identificeren de 3 automatiseringskansen met de hoogste ROI specifiek voor jouw praktijk en geven je een heldere technische roadmap — zonder verplichting.",
       "button": "Boek Gratis Audit",
-      "subtext": "Beschikbaar voor praktijken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Email info@codehunterlab.com"
+      "subtext": "Beschikbaar voor praktijken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Mail info@codehunterlab.com"
     },
     "SEO": {
       "keywords": "gezondheidszorg automatisering, tandartspraktijk automatisering, fysiotherapie automatisering Nederland, tandheelkundige praktijk automatisering, tandarts afspraak herinneringen Nederland, tandheelkundige CRM integratie, tandarts no-show reductie, tandarts patiënt reactivatie systeem, tandarts WhatsApp communicatie",
@@ -3149,7 +3245,7 @@
       "title": "Boek Jouw Gratis Audit",
       "desc": "Wij mappen jouw huidige workflow van ontvangst tot intake, identificeren de hoogste-impact automatiseringskansen en geven je een concreet plan — specifiek voor jouw softwarestack en patiëntvolume.",
       "button": "Boek Gratis Audit",
-      "subtext": "Voor fysiotherapiepraktijken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Email info@codehunterlab.com"
+      "subtext": "Voor fysiotherapiepraktijken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Mail info@codehunterlab.com"
     },
     "SEO": {
       "keywords": "fysiotherapiepraktijk automatisering Nederland, fysiotherapie praktijk automatisering, Zorgdomein integratie, fysiotherapie afspraak herinneringen, fysiotherapie patiënt drop-out preventie, fysiotherapie CRM Nederland",
@@ -3341,7 +3437,7 @@
       "title": "Boek Jouw Gratis Groei-Audit",
       "desc": "Wij bekijken jouw huidige leadmanagement, consultconversie en patiëntretentie-flow — en tonen je precies waar geautomatiseerde systemen de grootste omzetimpact zouden hebben.",
       "button": "Boek Gratis Groei-Audit",
-      "subtext": "Voor esthetische, cosmetische en dermatologische klinieken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Email info@codehunterlab.com"
+      "subtext": "Voor esthetische, cosmetische en dermatologische klinieken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? Mail info@codehunterlab.com"
     },
     "SEO": {
       "keywords": "esthetische kliniek automatisering Nederland, cosmetische kliniek CRM Nederland, esthetische kliniek lead nurturing, dermatologie boekingsautomatisering, cosmetische kliniek marketing ROI, esthetische kliniek WhatsApp automatisering, esthetische kliniek patiëntretentie",
@@ -3539,6 +3635,12 @@
       }
     },
     "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook systemen in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "IndustryMetrics": [
+      { "value": "92%", "label": "van leads beantwoord binnen 5 minuten" },
+      { "value": "3x", "label": "meer afspraken geboekt met directe respons" },
+      { "value": "€2.1M", "label": "gemiddelde jaarlijkse pipeline per adviseur" },
+      { "value": "68%", "label": "tijd bespaard op administratief werk" }
+    ],
     "PainPoints": {
       "title": "De Echte Kosten van een Administratiekantoor Run in 2026",
       "items": [
@@ -4014,7 +4116,7 @@
         },
         {
           "title": "Wij integreren met je bestaande software",
-          "desc": "Of je nu Exact Online, HubSpot, Microsoft 365 of een custom praktijkbeheersysteem gebruikt, wij koppelen het. Geen rip-and-replace. Wij verbeteren wat je al hebt."
+          "desc": "Of je nu Exact Online, HubSpot, Microsoft 365 of een praktijkbeheersysteem op maat gebruikt, wij koppelen het. Geen rip-and-replace. Wij verbeteren wat je al hebt."
         },
         {
           "title": "Wij meten alles",
@@ -4032,7 +4134,7 @@
       "questions": [
         {
           "q": "Werkt dit met ons bestaande praktijkbeheersysteem?",
-          "a": "Ja. Wij integreren met vrijwel elk systeem dat een API heeft — Exact Online, HubSpot, Salesforce Health Cloud, custom systemen, en meer. Tijdens de audit mappen wij je huidige stack en ontwerpen wij koppelingen die werken."
+          "a": "Ja. Wij integreren met vrijwel elk systeem dat een API heeft — Exact Online, HubSpot, Salesforce Health Cloud, systemen op maat en meer. Tijdens de audit mappen wij je huidige stack en ontwerpen wij koppelingen die werken."
         },
         {
           "q": "Zijn patiëntgegevens veilig en AVG-conform?",
@@ -4040,7 +4142,7 @@
         },
         {
           "q": "Hoe lang duurt implementatie?",
-          "a": "Een standaard zorgautomatisering (herinneringen + heractivatie + leadcapture) duurt 4–6 weken van audit tot live. Grotere integraties met custom dashboards kunnen 8–10 weken duren. Wij geven een gedetailleerde tijdlijn tijdens de scope."
+          "a": "Een standaard zorgautomatisering (herinneringen + heractivatie + leadcapture) duurt 4–6 weken van audit tot live. Grotere integraties met dashboards op maat kunnen 8–10 weken duren. Wij geven een gedetailleerde tijdlijn tijdens de scope."
         },
         {
           "q": "Moet ons personeel technische training volgen?",
@@ -4055,7 +4157,7 @@
     "CTA": {
       "label": "Klaar om patiënten te stoppen verliezen aan admin?",
       "title": "Boek Je Gratis Zorgpraktijk Audit",
-      "desc": "Wij reviewen je huidige patiëntenstroom, identificeren de top 3 automatiseringskansen en laten je precies zien hoe een custom systeem eruitziet — met een heldere ROI-schatting.",
+      "desc": "Wij beoordelen je huidige patiëntenstroom, identificeren de top 3 automatiseringskansen en laten je precies zien hoe een systeem op maat eruitziet — met een heldere ROI-schatting.",
       "button": "Boek Gratis Praktijk Audit",
       "subtext": "Voor zorgpraktijken in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? E-mail info@codehunterlab.com"
     },
@@ -4222,7 +4324,7 @@
         },
         {
           "q": "Hoe lang duurt implementatie?",
-          "a": "Een standaard kantoorautomatisering (facturatie + deadline-tracking + onboarding) duurt 5–7 weken van audit tot live. Grotere integraties met custom dashboards duren 8–12 weken. Wij bepalen tijdlijnen precies tijdens discovery."
+          "a": "Een standaard kantoorautomatisering (facturatie + deadline-tracking + onboarding) duurt 5–7 weken van audit tot live. Grotere integraties met dashboards op maat duren 8–12 weken. Wij bepalen tijdlijnen precies tijdens discovery."
         },
         {
           "q": "Moet ons team training volgen?",
@@ -4237,7 +4339,7 @@
     "CTA": {
       "label": "Klaar om je factureerbare uren terug te claimen?",
       "title": "Boek Je Gratis Kantoor Automatisering Audit",
-      "desc": "Wij analyseren je huidige operaties, identificeren de top 3 automatiseringskansen en laten je precies zien hoe een custom systeem eruitziet — met een heldere ROI-schatting en tijdlijn.",
+      "desc": "Wij analyseren je huidige operaties, identificeren de top 3 automatiseringskansen en laten je precies zien hoe een systeem op maat eruitziet — met een heldere ROI-schatting en tijdlijn.",
       "button": "Boek Gratis Kantoor Audit",
       "subtext": "Voor professionele dienstverleners in Nederland. Huidige onboarding-capaciteit: Q2 2026. Vragen? E-mail info@codehunterlab.com"
     },

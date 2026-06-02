@@ -22,6 +22,7 @@ import { m } from "framer-motion";
 import AnimatedSection from "@/components/layout/AnimatedSection";
 import SidebarNav from "@/components/ui/SidebarNav";
 import TopAgentsSection from "@/components/sections/TopAgentsSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -241,7 +242,7 @@ export default function AIConsultingPageContent({
 
               <m.div variants={itemVariants}>
                 <Link
-                  href="/#contact"
+                  href="#contact"
                   className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-10 py-4 font-bold text-near-black"
                 >
                   <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-orange" />
@@ -770,7 +771,7 @@ export default function AIConsultingPageContent({
 
                   <div className="relative z-10 mt-auto w-full space-y-3">
                     <Link
-                      href="/#contact"
+                      href="#contact"
                       className="block w-full rounded-lg bg-hunter-orange py-3 text-xs font-bold uppercase tracking-widest text-near-black transition-colors duration-300 hover:bg-white"
                     >
                       {migration.action.cta1}
@@ -845,7 +846,7 @@ export default function AIConsultingPageContent({
               </p>
               <div className="flex flex-col justify-center gap-3 pt-2 sm:flex-row">
                 <Link
-                  href="/#contact"
+                  href="#contact"
                   className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-3 font-bold text-near-black"
                 >
                   <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-orange" />
@@ -862,6 +863,12 @@ export default function AIConsultingPageContent({
             </div>
           </div>
         </AnimatedSection>
+
+        <section className="border-t border-white/5 px-6 py-24 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <ContactSection className="rounded-[2rem] border border-white/10 bg-surface-dark/20 p-6 md:p-10" />
+          </div>
+        </section>
       </main>
     </div>
   );

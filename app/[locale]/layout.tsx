@@ -7,6 +7,7 @@ import CookieConsent from "@/components/ui/CookieConsent";
 import GoogleAnalyticsConditional from "@/components/analytics/GoogleAnalyticsConditional";
 import LocaleFooterGate from "@/components/layout/LocaleFooterGate";
 import { MotionProvider } from "@/components/providers/MotionProvider";
+import FloatingContactCta from "@/components/ui/FloatingContactCta";
 import { LOCALES, SCHEMA_AVAILABLE_LANGUAGES, normalizeLocale } from "@/utils/constants";
 import { createPageMetadata } from "@/utils/metadata";
 
@@ -84,6 +85,7 @@ export default async function RootLayout({
               <div className="bg-noise" />
               <div id="main-content">{children}</div>
               <LocaleFooterGate />
+              <FloatingContactCta />
               <CookieConsent />
               <GoogleAnalyticsConditional />
             </div>

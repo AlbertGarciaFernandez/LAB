@@ -15,6 +15,96 @@
       "agentes voz AI Países Bajos"
     ]
   },
+  "FloatingContactCta": {
+    "eyebrow": "Hablemos",
+    "title": "Inicia la conversación",
+    "description": "Cuéntanos el problema y te diremos cuál es el siguiente paso más rápido.",
+    "button": "Hablemos",
+    "closeLabel": "Cerrar panel de contacto"
+  },
+  "ContactForm": {
+    "projectTypes": [
+      "Aplicación web / Producto",
+      "Infraestructura / DevOps",
+      "IA y automatización",
+      "Consultoría estratégica"
+    ],
+    "budgetOptions": [
+      "Menos de €5k",
+      "€5k – €15k",
+      "€15k – €30k",
+      "€30k – €60k",
+      "Más de €60k",
+      "Aún no lo sé"
+    ],
+    "full": {
+      "projectTypeStep": "01 / Tipo de proyecto",
+      "title": "Reservar una llamada",
+      "description": "Cuéntanos qué tipo de colaboración necesitas y orientaremos la llamada hacia el camino más rápido para generar ROI."
+    },
+    "compact": {
+      "eyebrow": "Contacto rápido",
+      "title": "Hablemos",
+      "description": "Comparte algunos detalles y te diremos cuál es el mejor siguiente paso."
+    },
+    "fields": {
+      "name": "Nombre completo *",
+      "company": "Empresa *",
+      "email": "Email de trabajo *",
+      "role": "Cargo / puesto *",
+      "phone": "Teléfono",
+      "budget": "Presupuesto aproximado *",
+      "aiGoal": "¿Qué debería mejorar primero la IA? *",
+      "message": "Resumen del proyecto *",
+      "compactMessage": "¿En qué necesitas ayuda? *"
+    },
+    "placeholders": {
+      "name": "Tu nombre",
+      "company": "Nombre de la empresa",
+      "email": "tu@empresa.com",
+      "role": "Founder, responsable de operaciones, CTO...",
+      "phone": "Opcional",
+      "budget": "Selecciona una opción",
+      "aiGoal": "Respuesta a leads, automatización operativa, herramientas internas...",
+      "message": "Describe brevemente tu principal reto, el flujo actual y cómo se vería el éxito.",
+      "compactMessage": "Comparte tu reto, plazos o el sistema que quieres mejorar."
+    },
+    "errors": {
+      "name": "El nombre debe tener al menos 2 caracteres.",
+      "company": "La empresa debe tener al menos 2 caracteres.",
+      "email": "Introduce un email válido.",
+      "message": "El mensaje debe tener al menos 10 caracteres.",
+      "role": "El cargo debe tener al menos 2 caracteres.",
+      "phone": "El teléfono debe tener al menos 8 dígitos.",
+      "budget": "Selecciona un rango de presupuesto.",
+      "aiGoal": "Describe el objetivo de mejora con IA en al menos 10 caracteres.",
+      "projectType": "Selecciona un tipo de proyecto.",
+      "rateLimit": "Espera unos segundos antes de intentarlo de nuevo.",
+      "transmission": "El envío ha fallado. Inténtalo de nuevo o escríbenos directamente por email."
+    },
+    "status": {
+      "submitting": "Enviando formulario...",
+      "retrying": "Reintentando envío... intento {attempt} de {max}",
+      "error": "El envío del formulario ha fallado."
+    },
+    "success": {
+      "title": "Gracias. Hemos recibido tu mensaje.",
+      "description": "Revisaremos tu solicitud y te responderemos pronto con el mejor siguiente paso.",
+      "reset": "Enviar otro mensaje"
+    },
+    "notes": {
+      "compact": "¿Prefieres una conversación más profunda? Abre el formulario completo y comparte alcance, presupuesto y objetivos.",
+      "full": "Normalmente respondemos en un día laborable con el siguiente paso más claro."
+    },
+    "actions": {
+      "retry": "Reintentar ahora",
+      "openFullForm": "Abrir formulario completo",
+      "retrying": "Reintentando... ({attempt}/{max})",
+      "sending": "Enviando...",
+      "send": "Enviar mensaje",
+      "book": "Reservar llamada"
+    }
+  },
   "Header": {
     "nav": {
       "Services": "Servicios",
@@ -40,9 +130,9 @@
       },
       "industries": {
         "AIConsultingNL": "Consultoría IA Países Bajos",
-        "DentalNL": "Automatización Clínica Dental",
+        "HealthcareNL": "Automatización Sanitaria",
         "AestheticNL": "Automatización Clínica Estética",
-        "AccountingNL": "Automatización Despacho Contable",
+        "ProfessionalServicesNL": "Automatización de Servicios Profesionales",
         "RealEstateNL": "Automatización Inmobiliaria"
       }
     },
@@ -96,7 +186,7 @@
         "AIAutomationNL": "Automatización IA NL",
         "HealthcareNL": "Automatización Sanitaria",
         "AestheticNL": "Clínica Estética NL",
-        "AccountingNL": "Automatización Contable",
+        "ProfessionalServicesNL": "Automatización de Servicios Profesionales",
         "RealEstateNL": "Automatización Inmobiliaria"
       }
     },
@@ -680,7 +770,7 @@
           "price": "Desde €8k",
           "timeline": "4–8 semanas",
           "desc": "Para equipos que quieren un sistema IA en producción conectado a su stack real de negocio.",
-          "href": "/ai-automation-consulting-netherlands",
+          "href": "/ai-consulting",
           "cta": "Planear desarrollo",
           "points": [
             "Alcance fijo y plan de entrega",
@@ -727,7 +817,7 @@
           "title": "Automatización de Flujos y Operaciones",
           "desc": "Automatiza procesamiento de documentos, agendas, sincronización de CRM y flujos de aprobación en n8n o pipelines personalizados.",
           "label": "Automatización IA Países Bajos",
-          "href": "/ai-automation-consulting-netherlands"
+          "href": "/ai-consulting"
         },
         {
           "title": "Integración de Sistemas IA",
@@ -817,53 +907,53 @@
     },
     "FAQ": {
       "badge": "FAQ CONSULTORIA IA",
-      "title": "Consultoria IA",
-      "titleHighlight": "FAQ — Paises Bajos",
+      "title": "Consultoría IA",
+      "titleHighlight": "FAQ — Países Bajos",
       "items": [
         {
-          "q": "¿Cuanto cuesta un proyecto de consultoria IA?",
-          "a": "El alcance varia bastante, por eso no publicamos tarifas fijas. Los AI Strategy Sprints suelen estar entre €2.500 y €5.000. Los proyectos de implementacion empiezan en €8.000 y escalan segun la complejidad de integracion. Los acuerdos como partner continuo empiezan desde €5.000/mes y se ajustan a la capacidad de ingenieria necesaria. Damos una estimacion detallada despues de la llamada inicial de estrategia, antes de que te comprometas a nada."
+          "q": "¿Cuánto cuesta un proyecto de consultoría IA?",
+          "a": "El alcance varía bastante, por eso no publicamos tarifas fijas. Los AI Strategy Sprints suelen estar entre €2.500 y €5.000. Los proyectos de implementación empiezan en €8.000 y escalan según la complejidad de integración. Los acuerdos como partner continuo empiezan desde €5.000/mes y se ajustan a la capacidad de ingeniería necesaria. Damos una estimación detallada después de la llamada inicial de estrategia, antes de que te comprometas a nada."
         },
         {
-          "q": "¿Cuanto tarda un proyecto tipico?",
-          "a": "AI Strategy Sprint: 1-2 semanas. Proyectos de implementacion: 4-8 semanas desde la definicion hasta el despliegue, segun cuantos sistemas haya que conectar y su complejidad de integracion. Marcamos plazos realistas en la fase de alcance y no los cambiamos salvo que los requisitos cambien de forma material."
+          "q": "¿Cuánto tarda un proyecto típico?",
+          "a": "AI Strategy Sprint: 1–2 semanas. Proyectos de implementación: 4–8 semanas desde la definición hasta el despliegue, según cuántos sistemas haya que conectar y su complejidad de integración. Marcamos plazos realistas en la fase de alcance y no los cambiamos salvo que los requisitos cambien de forma material."
         },
         {
-          "q": "¿Que necesitais de nosotros para empezar?",
-          "a": "Una descripcion clara del problema que quieres resolver y acceso a los sistemas relevantes: credenciales del CRM, documentacion API o similar. No necesitamos semanas de onboarding. Una discovery call enfocada suele ser suficiente para definir el alcance con precision."
+          "q": "¿Qué necesitáis de nosotros para empezar?",
+          "a": "Una descripción clara del problema que quieres resolver y acceso a los sistemas relevantes: credenciales del CRM, documentación API o similar. No necesitamos semanas de onboarding. Una discovery call enfocada suele ser suficiente para definir el alcance con precisión."
         },
         {
-          "q": "¿Como gestionais nuestros datos y la privacidad?",
-          "a": "El cumplimiento de RGPD es la base, no una opcion. Definimos el tratamiento de datos en la fase de alcance: que datos circulan por el sistema, donde se almacenan y quien tiene acceso. Para sectores sensibles o datos regulados, podemos trabajar con despliegues on-premise o en cloud privada."
+          "q": "¿Cómo gestionáis nuestros datos y la privacidad?",
+          "a": "El cumplimiento del RGPD es la base, no una opción. Definimos el tratamiento de datos en la fase de alcance: qué datos circulan por el sistema, dónde se almacenan y quién tiene acceso. Para sectores sensibles o datos regulados, podemos trabajar con despliegues on-premise o en cloud privada."
         },
         {
           "q": "¿La IA se integra con nuestras herramientas actuales?",
-          "a": "Si. Integrar con tu stack actual es un requisito central, no una caracteristica extra. Tenemos experiencia conectando HubSpot, Salesforce, Pipedrive, WhatsApp Business API, Slack, ERPs comunes y APIs personalizadas. Si lo usas, probablemente ya lo hemos conectado o podemos hacerlo."
+          "a": "Sí. Integrar con tu stack actual es un requisito central, no una característica extra. Tenemos experiencia conectando HubSpot, Salesforce, Pipedrive, WhatsApp Business API, Slack, ERPs comunes y APIs personalizadas. Si lo usas, probablemente ya lo hemos conectado o podemos hacerlo."
         },
         {
-          "q": "¿Trabajais con empresas fuera de los Paises Bajos?",
-          "a": "Si. Estamos en Leiden, pero trabajamos con clientes de toda Europa e internacionales. Todos los proyectos pueden ejecutarse completamente en remoto."
+          "q": "¿Trabajáis con empresas fuera de los Países Bajos?",
+          "a": "Sí. Estamos en Leiden, pero trabajamos con clientes de toda Europa e internacionales. Todos los proyectos pueden ejecutarse completamente en remoto."
         },
         {
-          "q": "¿Que pasa despues del despliegue?",
-          "a": "Los proyectos de implementacion incluyen 30 dias de soporte tras el lanzamiento. Los acuerdos como partner continuo cubren mantenimiento y desarrollo continuo. En proyectos cerrados de una sola vez, entregamos documentacion completa y una sesion de handoff para que tu equipo pueda operar el sistema de forma independiente."
+          "q": "¿Qué pasa después del despliegue?",
+          "a": "Los proyectos de implementación incluyen 30 días de soporte tras el lanzamiento. Los acuerdos como partner continuo cubren mantenimiento y desarrollo continuo. En proyectos cerrados de una sola vez, entregamos documentación completa y una sesión de handoff para que tu equipo pueda operar el sistema de forma independiente."
         },
         {
-          "q": "¿Podeis construir sobre herramientas que ya usamos, como Make o Zapier?",
-          "a": "Si. Migramos con frecuencia a clientes desde Zapier o Make hacia stacks mas robustos y rentables, o ampliamos automatizaciones que ya han empezado. Recomendamos segun tu volumen, presupuesto y capacidad de mantenimiento, no segun lo que nos convenga a nosotros."
+          "q": "¿Podéis construir sobre herramientas que ya usamos, como Make o Zapier?",
+          "a": "Sí. Migramos con frecuencia a clientes desde Zapier o Make hacia stacks más robustos y rentables, o ampliamos automatizaciones que ya han empezado. Recomendamos según tu volumen, presupuesto y capacidad de mantenimiento, no según lo que nos convenga a nosotros."
         },
         {
-          "q": "¿Y si todavia no tenemos claro por que caso de uso de IA empezar?",
-          "a": "Para eso existe exactamente el AI Strategy Sprint. Mapeamos tu operativa, priorizamos oportunidades de automatizacion por ROI y te entregamos una hoja de ruta priorizada. Sales con un plan claro de implementacion, tanto si lo construyes con nosotros como si decides llevarlo in-house."
+          "q": "¿Y si todavía no tenemos claro por qué caso de uso de IA empezar?",
+          "a": "Para eso existe exactamente el AI Strategy Sprint. Mapeamos tu operativa, priorizamos oportunidades de automatización por ROI y te entregamos una hoja de ruta priorizada. Sales con un plan claro de implementación, tanto si lo construyes con nosotros como si decides llevarlo in-house."
         }
       ]
     },
     "FinalCTA": {
       "title": "Reserva una",
       "titleHighlight": "Llamada de Estrategia IA",
-      "description": "Habla con un ingeniero senior, no con ventas. En 30 minutos mapearemos tu oportunidad de automatizacion de mayor impacto y te diremos con honestidad si merece la pena construirla.",
+      "description": "Habla con un ingeniero senior, no con ventas. En 30 minutos mapearemos tu oportunidad de automatización de mayor impacto y te diremos con honestidad si merece la pena construirla.",
       "primary": "Reservar Llamada IA",
-      "secondary": "Escribenos Directamente"
+      "secondary": "Escríbenos directamente"
     }
   },
   "SoftwareLeiden": {
@@ -2821,6 +2911,12 @@
       }
     },
     "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés. Sin embargo, también ofrecemos y creamos sistemas en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "IndustryMetrics": [
+      { "value": "92%", "label": "de leads respondidos en menos de 5 minutos" },
+      { "value": "3x", "label": "más citas agendadas con respuesta inmediata" },
+      { "value": "€2.1M", "label": "pipeline anual medio generado por asesor" },
+      { "value": "68%", "label": "de tiempo ahorrado en tareas administrativas" }
+    ],
     "PainPoints": {
       "title": "El Coste Real de Gestionar un Despacho Contable en 2026",
       "items": [
@@ -3216,7 +3312,7 @@
         "situation": "Quieres un sistema vivo",
         "title": "Implementación de Agente IA",
         "desc": "Despliega un agente IA en producción conectado a tus herramientas y reglas de escalado.",
-        "href": "/ai-automation-consulting-netherlands",
+        "href": "/ai-consulting",
         "cta": "Construir un agente"
       },
       {
@@ -3548,6 +3644,12 @@
       }
     },
     "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "IndustryMetrics": [
+      { "value": "45%", "label": "conversión de lead a reserva" },
+      { "value": "€850", "label": "incremento medio del valor de vida del cliente" },
+      { "value": "28%", "label": "mejora de retención" },
+      { "value": "3.2x", "label": "ROAS con seguimiento de anuncios" }
+    ],
     "PainPoints": {
       "title": "El Coste Oculto de las Herramientas SaaS de Workflow",
       "items": [

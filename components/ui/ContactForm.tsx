@@ -1,17 +1,17 @@
 "use client";
 
-import React, { useState, useRef, useCallback } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { m } from "framer-motion";
 import { Loader2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const projectTypes = [
-  "Web App / Product",
-  "Infrastructure / DevOps",
-  "AI & Automation",
-  "Strategic Consulting",
-];
-
+type ContactFormVariant = "full" | "compact";
 type FormState = "idle" | "submitting" | "retrying" | "success" | "error";
+
+interface ContactFormProps {
+  variant?: ContactFormVariant;
+  onRequestFullForm?: () => void;
+}
 
 interface FieldErrors {
   name?: string;
@@ -25,6 +25,18 @@ interface FieldErrors {
   project_type?: string;
 }
 
+interface ValidationMessages {
+  name: string;
+  company: string;
+  email: string;
+  message: string;
+  role: string;
+  phone: string;
+  budget: string;
+  aiGoal: string;
+  projectType: string;
+}
+
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^[+\-\s\d]*$/;
 const RATE_LIMIT_MS = 5000;
@@ -35,54 +47,64 @@ function getPhoneDigits(phone: string): number {
   return phone.replace(/\D/g, "").length;
 }
 
-function validateForm(formData: FormData, selectedType: string | null): FieldErrors {
+function isCompact(variant: ContactFormVariant) {
+  return variant === "compact";
+}
+
+function validateForm(
+  formData: FormData,
+  selectedType: string | null,
+  variant: ContactFormVariant,
+  messages: ValidationMessages
+): FieldErrors {
   const errors: FieldErrors = {};
+  const compact = isCompact(variant);
 
   const name = formData.get("name") as string | null;
-  if (!name || name.trim().length < 2) {
-    errors.name = "Name must be at least 2 characters.";
+  if (!name || name.trim().length < 2) errors.name = messages.name;
+
+  const company = formData.get("company") as string | null;
+  if (!company || company.trim().length < 2) {
+    errors.company = messages.company;
   }
 
   const email = formData.get("email") as string | null;
   if (!email || !EMAIL_REGEX.test(email.trim())) {
-    errors.email = "Please enter a valid email address.";
-  }
-
-  const company = formData.get("company") as string | null;
-  if (!company || company.trim().length < 2) {
-    errors.company = "Company must be at least 2 characters.";
-  }
-
-  const role = formData.get("role") as string | null;
-  if (!role || role.trim().length < 2) {
-    errors.role = "Role must be at least 2 characters.";
-  }
-
-  const phone = formData.get("phone") as string | null;
-  if (phone && phone.trim()) {
-    const digits = getPhoneDigits(phone);
-    if (!PHONE_REGEX.test(phone.trim()) || digits < 8) {
-      errors.phone = "Phone must have at least 8 digits.";
-    }
-  }
-
-  const budget = formData.get("budget") as string | null;
-  if (!budget) {
-    errors.budget = "Please select a budget range.";
+    errors.email = messages.email;
   }
 
   const message = formData.get("message") as string | null;
   if (!message || message.trim().length < 10) {
-    errors.message = "Message must be at least 10 characters.";
+    errors.message = messages.message;
   }
 
-  const aiGoal = formData.get("ai_goal") as string | null;
-  if (!aiGoal || aiGoal.trim().length < 10) {
-    errors.ai_goal = "Please describe the AI improvement goal in at least 10 characters.";
-  }
+  if (!compact) {
+    const role = formData.get("role") as string | null;
+    if (!role || role.trim().length < 2) {
+      errors.role = messages.role;
+    }
 
-  if (!selectedType) {
-    errors.project_type = "Please select a project type.";
+    const phone = formData.get("phone") as string | null;
+    if (phone && phone.trim()) {
+      const digits = getPhoneDigits(phone);
+      if (!PHONE_REGEX.test(phone.trim()) || digits < 8) {
+        errors.phone = messages.phone;
+      }
+    }
+
+    const budget = formData.get("budget") as string | null;
+    if (!budget) {
+      errors.budget = messages.budget;
+    }
+
+    const aiGoal = formData.get("ai_goal") as string | null;
+    if (!aiGoal || aiGoal.trim().length < 10) {
+      errors.ai_goal = messages.aiGoal;
+    }
+
+    if (!selectedType) {
+      errors.project_type = messages.projectType;
+    }
   }
 
   return errors;
@@ -92,14 +114,15 @@ function scrollToFirstError(errors: FieldErrors): void {
   const fieldIds = [
     "name",
     "company",
+    "email",
     "role",
     "budget",
-    "email",
     "phone",
     "ai_goal",
     "message",
     "project_type",
   ] as const;
+
   for (const id of fieldIds) {
     if (errors[id]) {
       const element = document.getElementById(id);
@@ -112,19 +135,61 @@ function scrollToFirstError(errors: FieldErrors): void {
   }
 }
 
-export const ContactForm: React.FC = () => {
+function FieldLabel({ htmlFor, children }: { htmlFor: string; children: React.ReactNode }) {
+  return (
+    <label
+      htmlFor={htmlFor}
+      className="mb-3 block text-xs font-bold uppercase tracking-[0.2em] text-gray-400"
+    >
+      {children}
+    </label>
+  );
+}
+
+function FieldError({ id, error }: { id: string; error?: string }) {
+  if (!error) return null;
+
+  return (
+    <p id={id} className="mt-2 text-sm text-red-500">
+      {error}
+    </p>
+  );
+}
+
+function inputClass(hasError?: boolean) {
+  return `w-full rounded-2xl border bg-white/[0.03] px-4 py-4 text-base text-white transition-colors placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-hunter-green/50 ${
+    hasError
+      ? "border-red-500/60 focus:border-red-500"
+      : "border-white/10 focus:border-hunter-green"
+  }`;
+}
+
+export const ContactForm: React.FC<ContactFormProps> = ({
+  variant = "full",
+  onRequestFullForm,
+}) => {
+  const t = useTranslations("ContactForm");
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [formState, setFormState] = useState<FormState>("idle");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [retryAttempt, setRetryAttempt] = useState(0);
 
+  const compact = variant === "compact";
+  const projectTypesRaw = t.raw("projectTypes");
+  const projectTypes = Array.isArray(projectTypesRaw) ? (projectTypesRaw as string[]) : [];
+  const budgetOptionsRaw = t.raw("budgetOptions");
+  const budgetOptions = Array.isArray(budgetOptionsRaw) ? (budgetOptionsRaw as string[]) : [];
   const lastSubmitTime = useRef<number>(0);
   const formRef = useRef<HTMLFormElement>(null);
 
   const clearErrors = useCallback(() => {
     setFieldErrors({});
     setSubmitError(null);
+  }, []);
+
+  const clearFieldError = useCallback((field: keyof FieldErrors) => {
+    setFieldErrors((prev) => ({ ...prev, [field]: undefined }));
   }, []);
 
   const submitToServer = useCallback(async (data: Record<string, string>): Promise<boolean> => {
@@ -136,6 +201,7 @@ export const ContactForm: React.FC = () => {
       },
       body: JSON.stringify(data),
     });
+
     return response.ok;
   }, []);
 
@@ -144,7 +210,7 @@ export const ContactForm: React.FC = () => {
 
     const now = Date.now();
     if (now - lastSubmitTime.current < RATE_LIMIT_MS) {
-      setSubmitError("Please wait a few seconds before trying again.");
+      setSubmitError(t("errors.rateLimit"));
       setFormState("idle");
       return;
     }
@@ -153,7 +219,18 @@ export const ContactForm: React.FC = () => {
     clearErrors();
 
     const formData = new FormData(formRef.current);
-    const validationErrors = validateForm(formData, selectedType);
+    const validationMessages: ValidationMessages = {
+      name: t("errors.name"),
+      company: t("errors.company"),
+      email: t("errors.email"),
+      message: t("errors.message"),
+      role: t("errors.role"),
+      phone: t("errors.phone"),
+      budget: t("errors.budget"),
+      aiGoal: t("errors.aiGoal"),
+      projectType: t("errors.projectType"),
+    };
+    const validationErrors = validateForm(formData, selectedType, variant, validationMessages);
 
     if (Object.keys(validationErrors).length > 0) {
       setFieldErrors(validationErrors);
@@ -165,14 +242,14 @@ export const ContactForm: React.FC = () => {
     const data: Record<string, string> = {
       name: (formData.get("name") as string) || "",
       company: (formData.get("company") as string) || "",
-      role: (formData.get("role") as string) || "",
-      budget: (formData.get("budget") as string) || "",
+      role: compact ? "" : (formData.get("role") as string) || "",
+      budget: compact ? "" : (formData.get("budget") as string) || "",
       email: (formData.get("email") as string) || "",
-      phone: (formData.get("phone") as string) || "",
-      ai_goal: (formData.get("ai_goal") as string) || "",
+      phone: compact ? "" : (formData.get("phone") as string) || "",
+      ai_goal: compact ? "" : (formData.get("ai_goal") as string) || "",
       message: (formData.get("message") as string) || "",
-      project_type: selectedType || "Not Specified",
-      _subject: "New Lead from CodeHunter Lab",
+      project_type: compact ? "Quick contact" : selectedType || "Not Specified",
+      _subject: compact ? "Quick Lead from CodeHunter Lab" : "New Lead from CodeHunter Lab",
       _template: "table",
     };
 
@@ -194,12 +271,12 @@ export const ContactForm: React.FC = () => {
           setFormState("submitting");
         } else {
           setFormState("error");
-          setSubmitError("Transmission failed. Please try again or email us directly.");
+          setSubmitError(t("errors.transmission"));
           return;
         }
       }
     }
-  }, [selectedType, clearErrors, submitToServer]);
+  }, [clearErrors, compact, selectedType, submitToServer, t, variant]);
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
@@ -218,21 +295,21 @@ export const ContactForm: React.FC = () => {
   if (formState === "success") {
     return (
       <m.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="mx-auto w-full max-w-2xl rounded-2xl border border-hunter-green/30 bg-surface-dark p-12 text-center"
+        className="mx-auto w-full max-w-3xl rounded-[2rem] border border-hunter-green/30 bg-surface-dark/70 p-8 text-center shadow-[0_24px_80px_-40px_rgba(0,230,162,0.45)] md:p-12"
       >
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-hunter-green/20 text-4xl text-hunter-green">
+        <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-hunter-green/15 text-3xl text-hunter-green">
           ✓
         </div>
-        <h3 className="mb-4 text-3xl font-black uppercase tracking-tight text-white">
-          System Initiated
+        <h3 className="text-2xl font-black tracking-tight text-white md:text-3xl">
+          {t("success.title")}
         </h3>
-        <p className="text-lg text-gray-400">
-          We received your transmission. We&apos;ll be in touch shortly to discuss your{" "}
-          {selectedType || "project"}.
+        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-400">
+          {t("success.description")}
         </p>
         <button
+          type="button"
           onClick={() => {
             setFormState("idle");
             setSelectedType(null);
@@ -240,7 +317,7 @@ export const ContactForm: React.FC = () => {
           }}
           className="mt-8 text-sm text-hunter-green underline underline-offset-4 transition-colors hover:text-white"
         >
-          Send another message
+          {t("success.reset")}
         </button>
       </m.div>
     );
@@ -249,131 +326,133 @@ export const ContactForm: React.FC = () => {
   const isSubmitting = formState === "submitting" || formState === "retrying";
 
   return (
-    <div className="mx-auto mt-16 w-full max-w-4xl">
+    <div className={`mx-auto w-full ${compact ? "max-w-xl" : "max-w-4xl"}`}>
       <div role="status" aria-live="polite" className="sr-only">
-        {formState === "submitting" && "Submitting form..."}
+        {formState === "submitting" && t("status.submitting")}
         {formState === "retrying" &&
-          `Retrying submission... attempt ${retryAttempt} of ${MAX_RETRIES}`}
-        {formState === "error" && "Form submission failed."}
+          t("status.retrying", { attempt: retryAttempt, max: MAX_RETRIES })}
+        {formState === "error" && t("status.error")}
       </div>
 
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-16" noValidate>
-        {/* Project Type Selection */}
-        <div className="space-y-6 text-center">
-          <p className="font-mono text-sm uppercase tracking-widest text-hunter-green">
-            01 / Select Protocol
-          </p>
-          <div
-            className="flex flex-wrap justify-center gap-4"
-            role="radiogroup"
-            aria-required="true"
-            aria-invalid={fieldErrors.project_type ? "true" : "false"}
-            aria-describedby={fieldErrors.project_type ? "project_type-error" : undefined}
-          >
-            {projectTypes.map((type) => (
-              <button
-                key={type}
-                type="button"
-                role="radio"
-                aria-checked={selectedType === type}
-                onClick={() => {
-                  setSelectedType(type);
-                  if (fieldErrors.project_type) {
-                    setFieldErrors((prev) => ({ ...prev, project_type: undefined }));
-                  }
-                }}
-                className={`font-display rounded-full border px-6 py-3 text-sm font-medium backdrop-blur-sm transition-all duration-300 ${
-                  selectedType === type
-                    ? "border-hunter-orange bg-hunter-orange text-near-black shadow-[0_0_20px_rgba(255,122,60,0.3)]"
-                    : "border-white/10 bg-white/5 text-gray-400 hover:border-white/30 hover:text-white"
-                }`}
-              >
-                {type}
-              </button>
-            ))}
-          </div>
-          {fieldErrors.project_type && (
-            <p id="project_type-error" className="text-sm text-red-500">
-              {fieldErrors.project_type}
-            </p>
-          )}
-        </div>
-
-        {/* Inputs */}
-        <div className="space-y-12">
-          <div className="text-center">
-            <p className="font-mono text-sm uppercase tracking-widest text-hunter-green">
-              02 / Input Data
-            </p>
-          </div>
-
-          <div className="grid gap-12 md:grid-cols-2">
-            {/* Full Name */}
-            <div className="group relative">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                required
-                autoComplete="name"
-                aria-required="true"
-                aria-invalid={fieldErrors.name ? "true" : "false"}
-                aria-describedby={fieldErrors.name ? "name-error" : undefined}
-                onChange={() => {
-                  if (fieldErrors.name) {
-                    setFieldErrors((prev) => ({ ...prev, name: undefined }));
-                  }
-                }}
-                className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
-                placeholder=" "
-              />
-              <label
-                htmlFor="name"
-                className="pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-              >
-                Full Name *
-              </label>
-              {fieldErrors.name && (
-                <p id="name-error" className="mt-2 text-sm text-red-500">
-                  {fieldErrors.name}
-                </p>
-              )}
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className={compact ? "space-y-6" : "space-y-10"}
+        noValidate
+      >
+        {!compact ? (
+          <div className="space-y-5 rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 md:p-8">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-hunter-green">
+                {t("full.projectTypeStep")}
+              </p>
+              <h3 className="mt-3 text-2xl font-black tracking-tight text-white">
+                {t("full.title")}
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-400">
+                {t("full.description")}
+              </p>
             </div>
 
-            {/* Company */}
-            <div className="group relative">
-              <input
-                type="text"
-                name="company"
-                id="company"
-                required
-                autoComplete="organization"
-                aria-required="true"
-                aria-invalid={fieldErrors.company ? "true" : "false"}
-                aria-describedby={fieldErrors.company ? "company-error" : undefined}
-                onChange={() => {
-                  if (fieldErrors.company) {
-                    setFieldErrors((prev) => ({ ...prev, company: undefined }));
-                  }
-                }}
-                className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
-                placeholder=" "
-              />
-              <label
-                htmlFor="company"
-                className="pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-              >
-                Company *
-              </label>
-              {fieldErrors.company && (
-                <p id="company-error" className="mt-2 text-sm text-red-500">
-                  {fieldErrors.company}
-                </p>
-              )}
+            <div
+              className="flex flex-wrap gap-3"
+              role="radiogroup"
+              aria-required="true"
+              aria-invalid={fieldErrors.project_type ? "true" : "false"}
+              aria-describedby={fieldErrors.project_type ? "project_type-error" : undefined}
+            >
+              {projectTypes.map((type) => (
+                <button
+                  key={type}
+                  type="button"
+                  role="radio"
+                  aria-checked={selectedType === type}
+                  onClick={() => {
+                    setSelectedType(type);
+                    clearFieldError("project_type");
+                  }}
+                  className={`rounded-full border px-5 py-3 text-sm font-medium transition-all duration-300 ${
+                    selectedType === type
+                      ? "border-hunter-orange bg-hunter-orange text-near-black shadow-[0_0_20px_rgba(255,122,60,0.3)]"
+                      : "border-white/10 bg-white/5 text-gray-300 hover:border-white/30 hover:text-white"
+                  }`}
+                >
+                  {type}
+                </button>
+              ))}
             </div>
+            <FieldError id="project_type-error" error={fieldErrors.project_type} />
+          </div>
+        ) : (
+          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-hunter-green">
+              {t("compact.eyebrow")}
+            </p>
+            <h3 className="mt-3 text-2xl font-black tracking-tight text-white">
+              {t("compact.title")}
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-gray-400">{t("compact.description")}</p>
+          </div>
+        )}
 
-            {/* Role */}
-            <div className="group relative">
+        <div className={`grid gap-5 ${compact ? "" : "md:grid-cols-2"}`}>
+          <div>
+            <FieldLabel htmlFor="name">{t("fields.name")}</FieldLabel>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              autoComplete="name"
+              aria-required="true"
+              aria-invalid={fieldErrors.name ? "true" : "false"}
+              aria-describedby={fieldErrors.name ? "name-error" : undefined}
+              onChange={() => clearFieldError("name")}
+              className={inputClass(!!fieldErrors.name)}
+              placeholder={t("placeholders.name")}
+            />
+            <FieldError id="name-error" error={fieldErrors.name} />
+          </div>
+
+          <div>
+            <FieldLabel htmlFor="company">{t("fields.company")}</FieldLabel>
+            <input
+              type="text"
+              name="company"
+              id="company"
+              required
+              autoComplete="organization"
+              aria-required="true"
+              aria-invalid={fieldErrors.company ? "true" : "false"}
+              aria-describedby={fieldErrors.company ? "company-error" : undefined}
+              onChange={() => clearFieldError("company")}
+              className={inputClass(!!fieldErrors.company)}
+              placeholder={t("placeholders.company")}
+            />
+            <FieldError id="company-error" error={fieldErrors.company} />
+          </div>
+
+          <div>
+            <FieldLabel htmlFor="email">{t("fields.email")}</FieldLabel>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              autoComplete="email"
+              aria-required="true"
+              aria-invalid={fieldErrors.email ? "true" : "false"}
+              aria-describedby={fieldErrors.email ? "email-error" : undefined}
+              onChange={() => clearFieldError("email")}
+              className={inputClass(!!fieldErrors.email)}
+              placeholder={t("placeholders.email")}
+            />
+            <FieldError id="email-error" error={fieldErrors.email} />
+          </div>
+
+          {!compact ? (
+            <div>
+              <FieldLabel htmlFor="role">{t("fields.role")}</FieldLabel>
               <input
                 type="text"
                 name="role"
@@ -382,29 +461,35 @@ export const ContactForm: React.FC = () => {
                 aria-required="true"
                 aria-invalid={fieldErrors.role ? "true" : "false"}
                 aria-describedby={fieldErrors.role ? "role-error" : undefined}
-                onChange={() => {
-                  if (fieldErrors.role) {
-                    setFieldErrors((prev) => ({ ...prev, role: undefined }));
-                  }
-                }}
-                className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
-                placeholder=" "
+                onChange={() => clearFieldError("role")}
+                className={inputClass(!!fieldErrors.role)}
+                placeholder={t("placeholders.role")}
               />
-              <label
-                htmlFor="role"
-                className="pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-              >
-                Role / Title *
-              </label>
-              {fieldErrors.role && (
-                <p id="role-error" className="mt-2 text-sm text-red-500">
-                  {fieldErrors.role}
-                </p>
-              )}
+              <FieldError id="role-error" error={fieldErrors.role} />
             </div>
+          ) : null}
 
-            {/* Budget */}
-            <div className="group relative">
+          {!compact ? (
+            <div>
+              <FieldLabel htmlFor="phone">{t("fields.phone")}</FieldLabel>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                autoComplete="tel"
+                aria-invalid={fieldErrors.phone ? "true" : "false"}
+                aria-describedby={fieldErrors.phone ? "phone-error" : undefined}
+                onChange={() => clearFieldError("phone")}
+                className={inputClass(!!fieldErrors.phone)}
+                placeholder={t("placeholders.phone")}
+              />
+              <FieldError id="phone-error" error={fieldErrors.phone} />
+            </div>
+          ) : null}
+
+          {!compact ? (
+            <div>
+              <FieldLabel htmlFor="budget">{t("fields.budget")}</FieldLabel>
               <select
                 name="budget"
                 id="budget"
@@ -413,166 +498,61 @@ export const ContactForm: React.FC = () => {
                 aria-required="true"
                 aria-invalid={fieldErrors.budget ? "true" : "false"}
                 aria-describedby={fieldErrors.budget ? "budget-error" : undefined}
-                onChange={() => {
-                  if (fieldErrors.budget) {
-                    setFieldErrors((prev) => ({ ...prev, budget: undefined }));
-                  }
-                }}
-                className="peer w-full cursor-pointer appearance-none border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors focus:border-hunter-green focus:outline-none [&>option]:bg-near-black [&>option]:text-white"
+                onChange={() => clearFieldError("budget")}
+                className={inputClass(!!fieldErrors.budget)}
               >
-                <option value="" disabled hidden></option>
-                <option value="< €5k">Under €5k</option>
-                <option value="€5k – €15k">€5k – €15k</option>
-                <option value="€15k – €30k">€15k – €30k</option>
-                <option value="€30k – €60k">€30k – €60k</option>
-                <option value="> €60k">Over €60k</option>
-                <option value="Not sure yet">Not sure yet</option>
+                <option value="" disabled>
+                  {t("placeholders.budget")}
+                </option>
+                {budgetOptions.map((option) => (
+                  <option key={option} value={option} className="bg-near-black text-white">
+                    {option}
+                  </option>
+                ))}
               </select>
-              <label
-                htmlFor="budget"
-                className="pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-              >
-                Approximate Budget *
-              </label>
-              <span className="pointer-events-none absolute right-0 top-4 text-gray-500">▾</span>
-              {fieldErrors.budget && (
-                <p id="budget-error" className="mt-2 text-sm text-red-500">
-                  {fieldErrors.budget}
-                </p>
-              )}
+              <FieldError id="budget-error" error={fieldErrors.budget} />
             </div>
+          ) : null}
 
-            {/* Email */}
-            <div className="group relative">
+          {!compact ? (
+            <div className="md:col-span-2">
+              <FieldLabel htmlFor="ai_goal">{t("fields.aiGoal")}</FieldLabel>
               <input
-                type="email"
-                name="email"
-                id="email"
+                type="text"
+                name="ai_goal"
+                id="ai_goal"
                 required
-                autoComplete="email"
                 aria-required="true"
-                aria-invalid={fieldErrors.email ? "true" : "false"}
-                aria-describedby={fieldErrors.email ? "email-error" : undefined}
-                onChange={() => {
-                  if (fieldErrors.email) {
-                    setFieldErrors((prev) => ({ ...prev, email: undefined }));
-                  }
-                }}
-                className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
-                placeholder=" "
+                aria-invalid={fieldErrors.ai_goal ? "true" : "false"}
+                aria-describedby={fieldErrors.ai_goal ? "ai_goal-error" : undefined}
+                onChange={() => clearFieldError("ai_goal")}
+                className={inputClass(!!fieldErrors.ai_goal)}
+                placeholder={t("placeholders.aiGoal")}
               />
-              <label
-                htmlFor="email"
-                className="pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-              >
-                Corporate Email *
-              </label>
-              {fieldErrors.email && (
-                <p id="email-error" className="mt-2 text-sm text-red-500">
-                  {fieldErrors.email}
-                </p>
-              )}
+              <FieldError id="ai_goal-error" error={fieldErrors.ai_goal} />
             </div>
+          ) : null}
 
-            {/* Phone */}
-            <div className="group relative">
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                autoComplete="tel"
-                aria-invalid={fieldErrors.phone ? "true" : "false"}
-                aria-describedby={fieldErrors.phone ? "phone-error" : undefined}
-                onChange={() => {
-                  if (fieldErrors.phone) {
-                    setFieldErrors((prev) => ({ ...prev, phone: undefined }));
-                  }
-                }}
-                className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
-                placeholder=" "
-              />
-              <label
-                htmlFor="phone"
-                className="peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-gray-400 pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-              >
-                Phone
-              </label>
-              {fieldErrors.phone && (
-                <p id="phone-error" className="mt-2 text-sm text-red-500">
-                  {fieldErrors.phone}
-                </p>
-              )}
-            </div>
-          </div>
-
-          {/* AI Improvement Goal */}
-          <div className="group relative">
-            <input
-              type="text"
-              name="ai_goal"
-              id="ai_goal"
-              required
-              aria-required="true"
-              aria-invalid={fieldErrors.ai_goal ? "true" : "false"}
-              aria-describedby={fieldErrors.ai_goal ? "ai_goal-error" : undefined}
-              onChange={() => {
-                if (fieldErrors.ai_goal) {
-                  setFieldErrors((prev) => ({ ...prev, ai_goal: undefined }));
-                }
-              }}
-              className="peer w-full border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
-              placeholder=" "
-            />
-            <label
-              htmlFor="ai_goal"
-              className="pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-            >
-              What would you like to improve with AI? *
-            </label>
-            {fieldErrors.ai_goal && (
-              <p id="ai_goal-error" className="mt-2 text-sm text-red-500">
-                {fieldErrors.ai_goal}
-              </p>
-            )}
-          </div>
-
-          {/* Mission Brief */}
-          <div className="group relative">
+          <div className={compact ? "" : "md:col-span-2"}>
+            <FieldLabel htmlFor="message">
+              {compact ? t("fields.compactMessage") : t("fields.message")}
+            </FieldLabel>
             <textarea
               name="message"
               id="message"
-              rows={1}
+              rows={compact ? 4 : 5}
               required
               aria-required="true"
               aria-invalid={fieldErrors.message ? "true" : "false"}
               aria-describedby={fieldErrors.message ? "message-error" : undefined}
-              onChange={() => {
-                if (fieldErrors.message) {
-                  setFieldErrors((prev) => ({ ...prev, message: undefined }));
-                }
-              }}
-              className="custom-scrollbar peer max-h-60 w-full resize-none overflow-y-auto border-b border-white/20 bg-transparent py-4 text-xl text-white transition-colors placeholder:text-gray-600 focus:border-hunter-green focus:outline-none"
-              placeholder=" "
-              onInput={(e) => {
-                e.currentTarget.style.height = "auto";
-                e.currentTarget.style.height = e.currentTarget.scrollHeight + "px";
-              }}
-            ></textarea>
-            <label
-              htmlFor="message"
-              className="pointer-events-none absolute left-0 top-4 text-xl text-gray-500 transition-all duration-300 peer-valid:-top-6 peer-valid:text-xs peer-valid:text-gray-400 peer-focus:-top-6 peer-focus:text-xs peer-focus:text-hunter-green"
-            >
-              Briefly describe your main challenges or areas to optimize... *
-            </label>
-            {fieldErrors.message && (
-              <p id="message-error" className="mt-2 text-sm text-red-500">
-                {fieldErrors.message}
-              </p>
-            )}
+              onChange={() => clearFieldError("message")}
+              className={`${inputClass(!!fieldErrors.message)} min-h-[132px] resize-y`}
+              placeholder={compact ? t("placeholders.compactMessage") : t("placeholders.message")}
+            />
+            <FieldError id="message-error" error={fieldErrors.message} />
           </div>
         </div>
 
-        {/* Honeypot antispam */}
         <input
           type="text"
           name="_honey"
@@ -582,54 +562,66 @@ export const ContactForm: React.FC = () => {
           aria-hidden="true"
         />
 
-        {/* Global Error Banner */}
-        {submitError && (
-          <div
-            role="alert"
-            className="rounded-lg border border-red-500/30 bg-red-500/10 p-4 text-center"
-          >
-            <p className="text-red-400">{submitError}</p>
-            {formState === "error" && (
+        {submitError ? (
+          <div role="alert" className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4">
+            <p className="text-sm text-red-400">{submitError}</p>
+            {formState === "error" ? (
               <button
                 type="button"
                 onClick={handleRetry}
                 className="mt-2 text-sm font-medium text-hunter-green underline underline-offset-4 transition-colors hover:text-white"
               >
-                Retry now
+                {t("actions.retry")}
               </button>
-            )}
+            ) : null}
           </div>
-        )}
+        ) : null}
 
-        {/* Submit Button */}
-        <div className="flex justify-center pt-8">
-          <m.button
-            whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
-            whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-            type="submit"
-            disabled={isSubmitting}
-            className="group relative overflow-hidden rounded-full bg-white px-12 py-5 text-xl font-black uppercase tracking-widest text-near-black transition-all hover:bg-hunter-green hover:shadow-[0_0_30px_rgba(0,230,162,0.4)] disabled:cursor-wait disabled:opacity-70"
-          >
-            <span className="relative z-10 flex items-center gap-3">
-              {isSubmitting ? (
-                <>
-                  {formState === "retrying" ? (
-                    `Retrying... (attempt ${retryAttempt}/${MAX_RETRIES})`
-                  ) : (
-                    <>
-                      <Loader2 className="h-5 w-5 animate-spin" />
-                      Transmitting...
-                    </>
-                  )}
-                </>
-              ) : (
-                <>
-                  Initialize Sequence
-                  <span className="transition-transform group-hover:translate-x-1">→</span>
-                </>
-              )}
-            </span>
-          </m.button>
+        <div
+          className={`flex ${compact ? "flex-col" : "flex-col md:flex-row md:items-center md:justify-between"} gap-4`}
+        >
+          <div className="text-sm leading-relaxed text-gray-500">
+            {compact ? t("notes.compact") : t("notes.full")}
+          </div>
+
+          <div className={`flex ${compact ? "flex-col" : "flex-col-reverse sm:flex-row"} gap-3`}>
+            {variant === "compact" && onRequestFullForm ? (
+              <button
+                type="button"
+                onClick={onRequestFullForm}
+                className="rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                {t("actions.openFullForm")}
+              </button>
+            ) : null}
+
+            <m.button
+              whileHover={{ scale: isSubmitting ? 1 : 1.03 }}
+              whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+              type="submit"
+              disabled={isSubmitting}
+              className="rounded-full bg-hunter-green px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-near-black transition-all hover:bg-hunter-orange hover:shadow-[0_0_30px_rgba(255,122,60,0.3)] disabled:cursor-wait disabled:opacity-70"
+            >
+              <span className="flex items-center justify-center gap-3">
+                {isSubmitting ? (
+                  <>
+                    {formState === "retrying" ? (
+                      t("actions.retrying", { attempt: retryAttempt, max: MAX_RETRIES })
+                    ) : (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        {t("actions.sending")}
+                      </>
+                    )}
+                  </>
+                ) : compact ? (
+                  t("actions.send")
+                ) : (
+                  t("actions.book")
+                )}
+              </span>
+            </m.button>
+          </div>
         </div>
       </form>
     </div>

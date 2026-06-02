@@ -15,6 +15,96 @@
       "AI voice agents Netherlands"
     ]
   },
+  "FloatingContactCta": {
+    "eyebrow": "Talk to us",
+    "title": "Start the conversation",
+    "description": "Share the problem and we'll tell you the fastest next step.",
+    "button": "Talk to us",
+    "closeLabel": "Close contact panel"
+  },
+  "ContactForm": {
+    "projectTypes": [
+      "Web App / Product",
+      "Infrastructure / DevOps",
+      "AI & Automation",
+      "Strategic Consulting"
+    ],
+    "budgetOptions": [
+      "Under €5k",
+      "€5k – €15k",
+      "€15k – €30k",
+      "€30k – €60k",
+      "Over €60k",
+      "Not sure yet"
+    ],
+    "full": {
+      "projectTypeStep": "01 / Project type",
+      "title": "Book a Call",
+      "description": "Tell us what kind of engagement you need and we'll shape the call around the fastest path to ROI."
+    },
+    "compact": {
+      "eyebrow": "Quick contact",
+      "title": "Talk to us",
+      "description": "Share a few details and we'll tell you the next best step."
+    },
+    "fields": {
+      "name": "Full name *",
+      "company": "Company *",
+      "email": "Work email *",
+      "role": "Role / title *",
+      "phone": "Phone",
+      "budget": "Approximate budget *",
+      "aiGoal": "What should AI improve first? *",
+      "message": "Project summary *",
+      "compactMessage": "What do you need help with? *"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "company": "Company name",
+      "email": "you@company.com",
+      "role": "Founder, Ops Lead, CTO...",
+      "phone": "Optional",
+      "budget": "Select one",
+      "aiGoal": "Lead response, ops automation, internal tools...",
+      "message": "Briefly describe your main challenge, current workflow, and what success would look like.",
+      "compactMessage": "Share your challenge, timeline, or the system you want to improve."
+    },
+    "errors": {
+      "name": "Name must be at least 2 characters.",
+      "company": "Company must be at least 2 characters.",
+      "email": "Please enter a valid email address.",
+      "message": "Message must be at least 10 characters.",
+      "role": "Role must be at least 2 characters.",
+      "phone": "Phone must have at least 8 digits.",
+      "budget": "Please select a budget range.",
+      "aiGoal": "Please describe the AI improvement goal in at least 10 characters.",
+      "projectType": "Please select a project type.",
+      "rateLimit": "Please wait a few seconds before trying again.",
+      "transmission": "Transmission failed. Please try again or email us directly."
+    },
+    "status": {
+      "submitting": "Submitting form...",
+      "retrying": "Retrying submission... attempt {attempt} of {max}",
+      "error": "Form submission failed."
+    },
+    "success": {
+      "title": "Thanks. We got your message.",
+      "description": "We'll review your request and get back to you shortly with the next best step.",
+      "reset": "Send another message"
+    },
+    "notes": {
+      "compact": "Prefer a deeper discussion? Open the full form and share project scope, budget, and goals.",
+      "full": "We usually reply within one business day with the clearest next step."
+    },
+    "actions": {
+      "retry": "Retry now",
+      "openFullForm": "Open full form",
+      "retrying": "Retrying... ({attempt}/{max})",
+      "sending": "Sending...",
+      "send": "Send message",
+      "book": "Book a Call"
+    }
+  },
   "N8nConsultant": {
     "Hero": {
       "badge": "N8N CONSULTING & MIGRATION :: NETHERLANDS",
@@ -673,7 +763,7 @@
         "situation": "You want a live system",
         "title": "AI Agent Implementation",
         "desc": "Deploy an AI agent in production connected to your tools and escalation rules.",
-        "href": "/ai-automation-consulting-netherlands",
+        "href": "/ai-consulting",
         "cta": "Build an agent"
       },
       {
@@ -923,9 +1013,9 @@
       "title": "Industries",
       "items": {
         "AIAutomationNL": "AI Automation NL",
-        "DentalNL": "Dental Clinic NL",
+        "HealthcareNL": "Healthcare Automation",
         "AestheticNL": "Aesthetic Clinic NL",
-        "AccountingNL": "Accounting Automation",
+        "ProfessionalServicesNL": "Professional Services Automation",
         "RealEstateNL": "Real Estate Automation"
       }
     },
@@ -1447,7 +1537,7 @@
           "price": "From €8k",
           "timeline": "4–8 weeks",
           "desc": "For teams that want an AI system in production connected to their real business stack.",
-          "href": "/ai-automation-consulting-netherlands",
+          "href": "/ai-consulting",
           "cta": "Plan development",
           "points": [
             "Fixed scope and delivery plan",
@@ -1494,7 +1584,7 @@
           "title": "Flow and Operations Automation",
           "desc": "Automate document processing, agendas, CRM sync and approval flows in n8n or custom pipelines.",
           "label": "AI Automation Netherlands",
-          "href": "/ai-automation-consulting-netherlands"
+          "href": "/ai-consulting"
         },
         {
           "title": "AI System Integration",
@@ -3177,6 +3267,12 @@
       }
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "IndustryMetrics": [
+      { "value": "45%", "label": "Lead-to-booking conversion" },
+      { "value": "€850", "label": "Average client lifetime value increase" },
+      { "value": "28%", "label": "Retention improvement" },
+      { "value": "3.2x", "label": "ROAS with ad tracking" }
+    ],
     "PainPoints": {
       "title": "Why Your Marketing Spend Isn't Converting Like It Should",
       "items": [
@@ -3721,6 +3817,12 @@
       }
     },
     "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English. However, we also offer and create systems in Dutch, as we have a specialist who reviews content in that language.",
+    "IndustryMetrics": [
+      { "value": "92%", "label": "of leads responded to within 5 minutes" },
+      { "value": "3x", "label": "more viewings booked with instant response" },
+      { "value": "€2.1M", "label": "average annual pipeline generated per agent" },
+      { "value": "68%", "label": "time saved on administrative tasks" }
+    ],
     "PainPoints": {
       "title": "The Real Cost of Running a Real Estate Agency in 2026",
       "items": [
