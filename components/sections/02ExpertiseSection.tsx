@@ -2,7 +2,7 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AnimatedSection from "../layout/AnimatedSection";
 import { m, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -23,6 +23,7 @@ type Pillar = {
 const ExpertiseSection: React.FC = () => {
   const t = useTranslations("Expertise");
   const [activeId, setActiveId] = useState<PillarId>("automation");
+  const [isMobileDetailOpen, setIsMobileDetailOpen] = useState(false);
 
   const pillars: Pillar[] = [
     {
@@ -122,6 +123,38 @@ const ExpertiseSection: React.FC = () => {
 
   const activePillar = pillars.find((p) => p.id === activeId) ?? pillars[0];
 
+  useEffect(() => {
+    if (!isMobileDetailOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileDetailOpen(false);
+      }
+    };
+
+    const onResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobileDetailOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [isMobileDetailOpen]);
+
+  const handlePillarSelect = (pillarId: PillarId) => {
+    setActiveId(pillarId);
+
+    if (typeof window !== "undefined" && window.innerWidth < 1024) {
+      setIsMobileDetailOpen(true);
+    }
+  };
+
   return (
     <AnimatedSection
       id="expertise"
@@ -160,7 +193,7 @@ const ExpertiseSection: React.FC = () => {
                   pillar={pillar}
                   activeId={activeId}
                   isFirst={isFirst}
-                  onClick={() => setActiveId(pillar.id)}
+                  onClick={() => handlePillarSelect(pillar.id)}
                   index={i}
                   t={t}
                 />
@@ -169,7 +202,7 @@ const ExpertiseSection: React.FC = () => {
           </div>
 
           {/* ACCORDION DETALLE DEL PILLAR ACTIVO */}
-          <div className="mt-4 flex lg:mt-0">
+          <div className="mt-4 hidden lg:mt-0 lg:flex">
             <AnimatePresence mode="wait">
               <m.div
                 key={activePillar.id}
@@ -202,6 +235,67 @@ const ExpertiseSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {isMobileDetailOpen ? (
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[90] bg-near-black/80 px-4 py-6 backdrop-blur-sm lg:hidden"
+            role="dialog"
+            aria-modal="true"
+            data-cta-suppress="true"
+            aria-label={activePillar.heading}
+            onClick={() => setIsMobileDetailOpen(false)}
+          >
+            <m.div
+              initial={{ y: 24, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 24, opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="mx-auto flex max-h-[calc(100vh-3rem)] w-full max-w-xl flex-col overflow-hidden rounded-3xl border border-white/10 bg-surface-dark/95 shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="flex items-start justify-between gap-4 border-b border-white/5 px-5 py-4">
+                <div>
+                  <p className="font-display text-[11px] font-semibold uppercase tracking-[0.25em] text-hunter-green">
+                    {activePillar.indexLabel}
+                  </p>
+                  <h3 className="font-display mt-2 text-2xl font-semibold text-hunter-orange">
+                    {activePillar.heading}
+                  </h3>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setIsMobileDetailOpen(false)}
+                  className="rounded-full border border-white/10 bg-white/5 p-2 text-white transition-colors hover:bg-white/10"
+                  aria-label={t("ui.closeDetail")}
+                >
+                  <span aria-hidden="true" className="block text-lg leading-none">
+                    x
+                  </span>
+                </button>
+              </div>
+
+              <div className="overflow-y-auto px-5 py-5">
+                {activePillar.paragraphs.map((p) => (
+                  <p key={p} className="mt-4 text-base leading-7 text-gray-300 first:mt-0">
+                    {p}
+                  </p>
+                ))}
+
+                <ul className="mt-6 space-y-3 text-base leading-7 text-gray-300">
+                  {activePillar.bullets.map((b) => (
+                    <li key={b}>· {b}</li>
+                  ))}
+                </ul>
+              </div>
+            </m.div>
+          </m.div>
+        ) : null}
+      </AnimatePresence>
     </AnimatedSection>
   );
 };

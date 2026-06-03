@@ -15,6 +15,14 @@
       "agentes de voz IA Países Bajos"
     ]
   },
+  "CookieConsent": {
+    "title": "Valoramos tu privacidad",
+    "description": "Usamos cookies para mejorar tu experiencia, analizar el tráfico y personalizar el contenido. Puedes aceptar todas las cookies o continuar solo con las esenciales.",
+    "close": "Cerrar",
+    "acceptAll": "Aceptar todas",
+    "decline": "Rechazar",
+    "necessaryOnly": "Solo esenciales"
+  },
   "FloatingContactCta": {
     "eyebrow": "Hablemos",
     "title": "Inicia la conversación",
@@ -106,6 +114,15 @@
     }
   },
   "Header": {
+    "brand": {
+      "logoAlt": "Logo de CodeHunter Lab",
+      "name": "CodeHunter",
+      "suffix": "Lab"
+    },
+    "a11y": {
+      "toggleMenu": "Abrir o cerrar menú",
+      "mobileNavigation": "Navegación móvil"
+    },
     "nav": {
       "Services": "Servicios",
       "Expertise": "Especialidades",
@@ -136,12 +153,6 @@
         "RealEstateNL": "Automatización Inmobiliaria"
       }
     },
-    "phaseLabel": "Fase {step}",
-    "outcomeLabel": "Resultado",
-    "outcomeDescription": {
-      "part1": "Una ejecución estructurada y totalmente documentada de la fase",
-      "part2": "."
-    },
     "cta": {
       "AIConsulting": "Consultoría IA",
       "LetsWork": "Hablemos"
@@ -152,6 +163,7 @@
     }
   },
   "Hero": {
+    "logoAlt": "Logo de CodeHunter Lab",
     "subHeader": "Consultoría IA · Automatización IA · Sistemas de Producción",
     "title": {
       "part1": "Consultoría IA y ",
@@ -247,7 +259,12 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "05"
+    "bgNumber": "05",
+    "badge": "Insights",
+    "title": "Notas de campo prácticas sobre automatización con IA.",
+    "subtitle": "Guías sobre agentes de IA, automatización de WhatsApp, estrategia con n8n y sistemas operativos para empresas que están decidiendo qué lanzar después.",
+    "cta": "Ver todos los insights",
+    "readArticle": "Leer artículo"
   },
   "WhatWeBuild": {
     "bgText": "SERVICIOS",
@@ -439,6 +456,7 @@
   "TheLab": {
     "title": "El Lab",
     "subtitle": "Soluciones de ingeniería y liderazgo estratégico con impacto de negocio medible.",
+    "keyResults": "Resultados clave:",
     "projects": {
       "0": {
         "number": "Case Study 01 / Producto IA",
@@ -546,6 +564,13 @@
         "description": "Desplegamos en tu infraestructura y entregamos documentación completa. El código es tuyo. Soporte continuo disponible si necesitas un partner de ingeniería a largo plazo."
       }
     },
+    "phaseLabel": "Fase {step}",
+    "outcomeLabel": "Resultado",
+    "outcomeDescription": {
+      "part1": "Una ejecución estructurada y totalmente documentada de la fase",
+      "part2": "."
+    },
+    "contactBadge": "Reservar llamada",
     "cta": {
       "title": {
         "text": "¿Listo para Construir",
@@ -641,10 +666,14 @@
       }
     },
     "TopAgents": {
+      "bgText": "AGENTES",
       "badge": "Fuerza Laboral Digital",
       "title": "Automatiza ingresos, servicio",
       "highlight": "y operaciones internas.",
       "description": "Usa agentes de IA allí donde el tiempo de respuesta, la consistencia y la carga operativa ya están frenando al negocio. Cada uno resuelve un cuello de botella concreto.",
+      "useCaseDescription": "Cada escenario muestra cómo los agentes llevan la primera señal hasta un resultado cerrado dentro del mismo flujo operativo.",
+      "liveFlowLabel": "Flujo en vivo",
+      "agentInProduction": "Agente en producción",
       "agents": {
         "leo": {
           "role": "Agente de Ventas IA",
@@ -844,8 +873,11 @@
     },
     "WhatWeBuildInline": {
       "badge": "Qué Construimos",
+      "heading": "Sistemas de IA en producción,",
+      "headingAccent": "no demos aisladas.",
       "title": "Cinco sistemas de IA que",
       "highlight": "entregamos en producción",
+      "tagLine": "Cada servicio apunta a un sistema que podemos desplegar, integrar, documentar y entregar.",
       "services": [
         {
           "title": "Agentes de Ventas y Cualificación IA",

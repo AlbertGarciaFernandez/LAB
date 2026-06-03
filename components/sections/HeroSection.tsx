@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
               />
               <Image
                 src="/logo-hntr.svg"
-                alt="CodeHunter Lab Logo"
+                alt={t("logoAlt")}
                 width={80}
                 height={80}
                 className="relative z-10 h-16 w-16 object-contain drop-shadow-[0_0_20px_rgba(0,230,162,0.5)] md:h-20 md:w-20"

@@ -15,6 +15,14 @@
       "AI voice agents Netherlands"
     ]
   },
+  "CookieConsent": {
+    "title": "We value your privacy",
+    "description": "We use cookies to improve your experience, analyse traffic, and personalise content. You can accept all cookies or continue with essentials only.",
+    "close": "Close",
+    "acceptAll": "Accept all",
+    "decline": "Decline",
+    "necessaryOnly": "Necessary only"
+  },
   "FloatingContactCta": {
     "eyebrow": "Talk to us",
     "title": "Start the conversation",
@@ -878,7 +886,12 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "05"
+    "bgNumber": "05",
+    "badge": "Insights",
+    "title": "Practical field notes on AI automation.",
+    "subtitle": "Guides on AI agents, WhatsApp automation, n8n strategy, and operating systems for businesses deciding what to launch next.",
+    "cta": "View all insights",
+    "readArticle": "Read article"
   },
   "WhatWeBuild": {
     "bgText": "SERVICES",
@@ -945,6 +958,15 @@
     ]
   },
   "Header": {
+    "brand": {
+      "logoAlt": "CodeHunter Lab Logo",
+      "name": "CodeHunter",
+      "suffix": "Lab"
+    },
+    "a11y": {
+      "toggleMenu": "Toggle menu",
+      "mobileNavigation": "Mobile navigation"
+    },
     "nav": {
       "Services": "Services",
       "Expertise": "Expertise",
@@ -985,6 +1007,7 @@
     }
   },
   "Hero": {
+    "logoAlt": "CodeHunter Lab Logo",
     "subHeader": "AI Consulting · AI Automation · Production Systems",
     "title": {
       "part1": "AI Consulting & ",
@@ -1204,6 +1227,7 @@
   "TheLab": {
     "title": "The Lab",
     "subtitle": "Engineering solutions and strategic leadership with measurable business impact.",
+    "keyResults": "Key Results:",
     "projects": {
       "0": {
         "number": "Case Study 01 / AI Product",
@@ -1311,6 +1335,13 @@
         "description": "We deploy to your infrastructure and deliver full documentation. The code is yours. Ongoing support available if you need a long-term engineering partner."
       }
     },
+    "phaseLabel": "Phase {step}",
+    "outcomeLabel": "Outcome",
+    "outcomeDescription": {
+      "part1": "A structured and fully documented execution of the",
+      "part2": "phase."
+    },
+    "contactBadge": "Book a call",
     "cta": {
       "title": {
         "text": "Ready to Build",
@@ -1405,11 +1436,15 @@
         "cta": "See where the margin is leaking."
       }
     },
-    "TopAgents": {
-      "badge": "Digital Workforce",
-      "title": "Automate Revenue, Service,",
-      "highlight": "and Internal Operations.",
-      "description": "Use AI agents where response time, consistency, and workload are already hurting the business. Each one is tied to a specific operational bottleneck.",
+  "TopAgents": {
+    "bgText": "AGENTS",
+    "badge": "Digital Workforce",
+    "title": "Automate Revenue, Service,",
+    "highlight": "and Internal Operations.",
+    "description": "Use AI agents where response time, consistency, and workload are already hurting the business. Each one is tied to a specific operational bottleneck.",
+    "useCaseDescription": "Each scenario shows how the agents move from the first signal to a closed outcome inside the same operational flow.",
+    "liveFlowLabel": "Live flow",
+    "agentInProduction": "Agent in production",
       "agents": {
         "leo": {
           "role": "AI Sales Agent",
@@ -1609,8 +1644,11 @@
     },
     "WhatWeBuildInline": {
       "badge": "What We Build",
-      "title": "Five AI Systems We",
-      "highlight": "Deliver in Production",
+      "heading": "AI systems in production,",
+      "headingAccent": "not isolated demos.",
+      "title": "Five AI systems we",
+      "highlight": "Deliver in production",
+      "tagLine": "Each service points to a system we can deploy, integrate, document, and hand off.",
       "services": [
         {
           "title": "AI Sales and Qualification Agents",
@@ -1769,12 +1807,6 @@
         "highlight": "Reimagined."
       },
       "description": "Looking for a <strong>software company in Leiden</strong>? We combine the agility of a local <strong>IT consultant</strong> with Silicon Valley engineering standards. No filler, just code that works.",
-    "phaseLabel": "Phase {step}",
-    "outcomeLabel": "Outcome",
-    "outcomeDescription": {
-      "part1": "A structured and fully documented execution of the",
-      "part2": "phase."
-    },
     "cta": {
         "coffee": "Let's Grab a Coffee",
         "services": "View Expertise"

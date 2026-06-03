@@ -54,22 +54,19 @@ export default function InsightsSection() {
         >
           <div className="max-w-3xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-green">
-              Insights
+              {t("badge")}
             </p>
             <h2 className="text-4xl font-black leading-none tracking-tighter text-white md:text-6xl">
-              Practical AI automation field notes.
+              {t("title")}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-gray-300">
-              Guides on AI agents, WhatsApp automation, n8n strategy, and operational systems for
-              businesses deciding what to ship next.
-            </p>
+            <p className="mt-5 text-lg leading-relaxed text-gray-300">{t("subtitle")}</p>
           </div>
           <Link
             href="/insights"
             locale="en"
             className="inline-flex w-fit items-center justify-center rounded-lg border border-hunter-green/30 px-5 py-3 text-xs font-bold uppercase tracking-widest text-hunter-green transition-colors hover:bg-hunter-green hover:text-near-black"
           >
-            View all insights
+            {t("cta")}
           </Link>
         </m.div>
 
@@ -113,7 +110,7 @@ export default function InsightsSection() {
                   locale="en"
                   className="relative z-10 mt-auto text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
                 >
-                  Read article
+                  {t("readArticle")}
                 </Link>
               </m.article>
             );

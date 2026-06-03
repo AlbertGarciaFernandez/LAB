@@ -10,9 +10,17 @@ interface ProjectCardProps {
   description: string;
   tags: string[];
   results: string[];
+  keyResultsLabel: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ number, title, description, tags, results }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  number,
+  title,
+  description,
+  tags,
+  results,
+  keyResultsLabel,
+}) => (
   <div className="flex flex-col space-y-6 rounded-xl border border-surface-dark bg-surface-dark p-6 shadow-2xl transition duration-300 hover:border-hunter-orange/50 md:p-10 lg:flex-row lg:space-x-10 lg:space-y-0">
     <div className="flex-shrink-0 lg:w-1/4">
       <p className="mb-2 font-mono text-sm tracking-widest text-hunter-orange">{number}</p>
@@ -31,17 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ number, title, description, t
 
     <div className="lg:w-3/4">
       <p className="mb-6 leading-relaxed text-gray-300">{description}</p>
-      {/* "Key Results" could also be translated if needed, but wasn't in the JSON. Assuming it's small enough or implicit. 
-          Actually, let's translate it inline or add it. I'll hardcode "Key Results" for now or check if I added it. 
-          I didn't add "Key Results" to JSON. I will stick to "Key Results:" as it's common enough or add it later.
-          Wait, I should be consistent. "Key Results" is English. 
-          I will assume "Key Results:" is fine or I should have added it.
-          Let's add it to the code as a simple string or use a quick fix if I missed it.
-          I'll just leave it hardcoded "Key Results:" for now to match the specific instructions to use what I extracted. 
-          If I need to be perfect, I'd update JSON. Let's see. 
-          I'll extraction 'Key Results' as a small improvement.
-      */}
-      <h4 className="mb-3 text-lg font-semibold text-hunter-green">Key Results:</h4>
+      <h4 className="mb-3 text-lg font-semibold text-hunter-green">{keyResultsLabel}</h4>
       <ul className="list-disc space-y-2 pl-5 text-gray-400">
         {results.map((result) => (
           <li key={result} className="text-sm">
@@ -68,6 +66,7 @@ const TheLabSection: React.FC = () => {
         t("projects.0.results.2"),
         t("projects.0.results.3"),
       ],
+      keyResultsLabel: t("keyResults"),
     },
     {
       number: t("projects.1.number"),
@@ -87,6 +86,7 @@ const TheLabSection: React.FC = () => {
         t("projects.1.results.2"),
         t("projects.1.results.3"),
       ],
+      keyResultsLabel: t("keyResults"),
     },
     {
       number: t("projects.2.number"),
@@ -94,6 +94,7 @@ const TheLabSection: React.FC = () => {
       description: t("projects.2.description"),
       tags: ["Consulting", "Architecture", "Scaling", "Mentorship"],
       results: [t("projects.2.results.0"), t("projects.2.results.1"), t("projects.2.results.2")],
+      keyResultsLabel: t("keyResults"),
     },
   ];
 

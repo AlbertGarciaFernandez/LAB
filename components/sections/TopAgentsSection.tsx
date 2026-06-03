@@ -193,7 +193,7 @@ const TopAgentsSection: React.FC<TopAgentsSectionProps> = ({ useCases }) => {
       {/* Massive Background Text */}
       <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
-          AGENTS
+          {t("bgText")}
         </h2>
       </div>
 
@@ -342,7 +342,7 @@ const TopAgentsSection: React.FC<TopAgentsSectionProps> = ({ useCases }) => {
               variants={itemVariants}
               className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-400"
             >
-              Each use case transfers the agent from the showcase into a real production workflow.
+              {t("useCaseDescription")}
             </m.p>
           </m.div>
 
@@ -376,7 +376,7 @@ const TopAgentsSection: React.FC<TopAgentsSectionProps> = ({ useCases }) => {
                       <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-gray-500">
                         <span>{uc.number}</span>
                         <span className="h-px flex-1 bg-white/10" />
-                        <span>live flow</span>
+                        <span>{t("liveFlowLabel")}</span>
                       </div>
                     </div>
 
@@ -410,7 +410,7 @@ const TopAgentsSection: React.FC<TopAgentsSectionProps> = ({ useCases }) => {
                         {uc.outcome}
                       </p>
                       <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold text-hunter-green">
-                        Agent in production <ArrowRightIcon size={13} />
+                        {t("agentInProduction")} <ArrowRightIcon size={13} />
                       </div>
                     </div>
                   </div>

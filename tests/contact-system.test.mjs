@@ -55,6 +55,36 @@ test("layout mounts a floating contact CTA using the compact form", () => {
   assert.match(cookie, /fixed bottom-6 left-6/);
 });
 
+test("floating contact CTA starts expanded then cycles back to icon-only", () => {
+  const cta = readFileSync("components/ui/FloatingContactCta.tsx", "utf8");
+
+  assert.match(cta, /const \[isExpanded, setIsExpanded\] = useState\(true\)/);
+  assert.match(cta, /COLLAPSE_AFTER_MS/);
+  assert.match(cta, /REEXPAND_EVERY_MS/);
+  assert.match(cta, /aria-label=\{t\("button"\)\}/);
+});
+
+test("floating contact CTA hides while other modal dialogs are open", () => {
+  const cta = readFileSync("components/ui/FloatingContactCta.tsx", "utf8");
+  const header = readFileSync("components/layout/Header.tsx", "utf8");
+  const expertise = readFileSync("components/sections/02ExpertiseSection.tsx", "utf8");
+
+  assert.match(cta, /querySelector\('\[data-cta-suppress="true"\]'\)/);
+  assert.match(cta, /MutationObserver/);
+  assert.match(header, /data-cta-suppress="true"/);
+  assert.match(expertise, /data-cta-suppress="true"/);
+});
+
+test("compact floating contact form uses unique field ids", () => {
+  const form = readFileSync("components/ui/ContactForm.tsx", "utf8");
+
+  assert.match(form, /const idPrefix = compact \? "floating-contact" : "contact-form"/);
+  assert.match(form, /function fieldId\(id: string\)/);
+  assert.match(form, /scrollToFirstError\(validationErrors, idPrefix\)/);
+  assert.match(form, /htmlFor=\{fieldId\("name"\)\}/);
+  assert.match(form, /id=\{fieldId\("name"\)\}/);
+});
+
 test("contact form visible copy is served from locale messages", () => {
   const form = readFileSync("components/ui/ContactForm.tsx", "utf8");
 

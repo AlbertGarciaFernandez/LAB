@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { m } from "framer-motion";
 import Link from "next/link";
 import { Warning } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 
 export default function Error({
   error,
@@ -12,6 +13,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useTranslations("Error");
+
   useEffect(() => {
     // eslint-disable-next-line no-console
     console.error(error);
@@ -40,7 +43,7 @@ export default function Error({
           transition={{ delay: 0.3, duration: 0.5 }}
           className="mt-8 font-mono text-3xl font-bold text-white md:text-4xl"
         >
-          Something went wrong
+          {t("title")}
         </m.h1>
 
         <m.p
@@ -49,7 +52,7 @@ export default function Error({
           transition={{ delay: 0.4, duration: 0.5 }}
           className="mt-4 max-w-md text-gray-400"
         >
-          {error.message || "An unexpected error occurred. Please try again."}
+          {error.message || t("fallbackMessage")}
         </m.p>
 
         {error.digest && (
@@ -59,7 +62,7 @@ export default function Error({
             transition={{ delay: 0.5 }}
             className="mt-2 font-mono text-xs text-gray-600"
           >
-            Error ID: {error.digest}
+            {t("errorId")} {error.digest}
           </m.p>
         )}
 
@@ -73,14 +76,14 @@ export default function Error({
             onClick={() => reset()}
             className="inline-flex h-12 items-center justify-center rounded-full bg-hunter-green px-8 text-sm font-bold uppercase tracking-[0.2em] text-near-black transition-all hover:bg-hunter-green-dark"
           >
-            Try again
+            {t("tryAgain")}
           </button>
 
           <Link
             href="/"
             className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 px-8 text-sm font-bold uppercase tracking-[0.2em] text-white transition-all hover:border-white/40 hover:bg-white/5"
           >
-            Back to Home
+            {t("backToHome")}
           </Link>
         </m.div>
       </m.div>

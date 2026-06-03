@@ -15,6 +15,14 @@
       "AI voice agents Nederland"
     ]
   },
+  "CookieConsent": {
+    "title": "We waarderen je privacy",
+    "description": "We gebruiken cookies om je ervaring te verbeteren, verkeer te analyseren en content te personaliseren. Je kunt alle cookies accepteren of alleen de essentiële gebruiken.",
+    "close": "Sluiten",
+    "acceptAll": "Alles accepteren",
+    "decline": "Weigeren",
+    "necessaryOnly": "Alleen noodzakelijk"
+  },
   "FloatingContactCta": {
     "eyebrow": "Neem contact op",
     "title": "Start het gesprek",
@@ -106,6 +114,15 @@
     }
   },
   "Header": {
+    "brand": {
+      "logoAlt": "CodeHunter Lab-logo",
+      "name": "CodeHunter",
+      "suffix": "Lab"
+    },
+    "a11y": {
+      "toggleMenu": "Menu openen of sluiten",
+      "mobileNavigation": "Mobiele navigatie"
+    },
     "nav": {
       "Services": "Diensten",
       "Expertise": "Expertise",
@@ -136,12 +153,6 @@
         "RealEstateNL": "Makelaar Automatisering"
       }
     },
-    "phaseLabel": "Fase {step}",
-    "outcomeLabel": "Resultaat",
-    "outcomeDescription": {
-      "part1": "Een gestructureerde en volledig gedocumenteerde uitvoering van de",
-      "part2": "fase."
-    },
     "cta": {
       "AIConsulting": "AI Consulting",
       "LetsWork": "Laten we praten"
@@ -152,6 +163,7 @@
     }
   },
   "Hero": {
+    "logoAlt": "CodeHunter Lab-logo",
     "subHeader": "AI Consulting · AI Automatisering · Productiesystemen",
     "title": {
       "part1": "AI Consulting en ",
@@ -247,7 +259,12 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "05"
+    "bgNumber": "05",
+    "badge": "Insights",
+    "title": "Praktische veldnotities over AI-automatisering.",
+    "subtitle": "Gidsen over AI-agents, WhatsApp-automatisering, n8n-strategie en operationele systemen voor bedrijven die beslissen wat ze hierna gaan bouwen.",
+    "cta": "Bekijk alle insights",
+    "readArticle": "Lees artikel"
   },
   "WhatWeBuild": {
     "bgText": "SERVICES",
@@ -439,6 +456,7 @@
   "TheLab": {
     "title": "The Lab",
     "subtitle": "Engineering-oplossingen en strategisch leiderschap met meetbare business-impact.",
+    "keyResults": "Belangrijkste resultaten:",
     "projects": {
       "0": {
         "number": "Case Study 01 / AI Product",
@@ -546,6 +564,13 @@
         "description": "Wij deployen op je infrastructuur en leveren volledige documentatie. De code is van jou. Doorlopende support beschikbaar als je een langetermijn engineering partner nodig hebt."
       }
     },
+    "phaseLabel": "Fase {step}",
+    "outcomeLabel": "Resultaat",
+    "outcomeDescription": {
+      "part1": "Een gestructureerde en volledig gedocumenteerde uitvoering van de",
+      "part2": "fase."
+    },
+    "contactBadge": "Boek een gesprek",
     "cta": {
       "title": {
         "text": "Klaar om te Bouwen",
@@ -1412,10 +1437,14 @@
       }
     },
     "TopAgents": {
+      "bgText": "AGENTS",
       "badge": "Digitale Werkkracht",
       "title": "Automatiseer omzet, service",
       "highlight": "en interne operaties.",
       "description": "Gebruik AI-agents waar responstijd, consistentie en operationele druk het bedrijf al afremmen. Elke agent is gekoppeld aan een concreet knelpunt.",
+      "useCaseDescription": "Elk scenario laat zien hoe de agents van het eerste signaal tot een afgerond resultaat binnen dezelfde operationele flow komen.",
+      "liveFlowLabel": "Live flow",
+      "agentInProduction": "Agent in productie",
       "agents": {
         "leo": {
           "role": "AI Sales Agent",
@@ -1615,8 +1644,11 @@
     },
     "WhatWeBuildInline": {
       "badge": "Wat Wij Bouwen",
+      "heading": "AI-systemen in productie,",
+      "headingAccent": "geen losse demo's.",
       "title": "Vijf AI-systemen die we",
       "highlight": "in productie opleveren",
+      "tagLine": "Elke service verwijst naar een systeem dat we kunnen deployen, integreren, documenteren en overdragen.",
       "services": [
         {
           "title": "AI Sales- en Kwalificatieagents",

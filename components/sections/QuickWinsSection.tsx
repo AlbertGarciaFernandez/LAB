@@ -44,12 +44,6 @@ const cardVariants = {
   },
 };
 
-const stats = [
-  { value: "6", label: "Live Automations" },
-  { value: "24/7", label: "Always On" },
-  { value: "100%", label: "Ship-Ready" },
-];
-
 function TiltCard({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   const rawX = useMotionValue(0);
@@ -97,6 +91,11 @@ const QuickWinsSection: React.FC = () => {
   const t = useTranslations("QuickWins");
   const cardsRaw = t.raw("cards");
   const cards = Array.isArray(cardsRaw) ? (cardsRaw as { title: string; desc: string }[]) : [];
+  const stats = [
+    { value: "6", label: t("stats.liveAutomations") },
+    { value: "24/7", label: t("stats.alwaysOn") },
+    { value: "100%", label: t("stats.shipReady") },
+  ];
 
   return (
     <section

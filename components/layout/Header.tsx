@@ -300,7 +300,7 @@ const Header: React.FC = () => {
 
               <Image
                 src="/logo-hntr.svg"
-                alt="CodeHunter Lab Logo"
+                alt={t("brand.logoAlt")}
                 width={32}
                 height={32}
                 className="relative z-10 h-7 w-7 object-contain drop-shadow-[0_0_8px_rgba(0,230,162,0.4)]"
@@ -310,10 +310,10 @@ const Header: React.FC = () => {
 
             <div className="flex flex-col justify-center">
               <span className="mb-1 text-xs font-black uppercase leading-none tracking-[0.25em] text-white transition-colors duration-300 group-hover:text-hunter-green">
-                CodeHunter
+                {t("brand.name")}
               </span>
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-hunter-green/80 transition-colors duration-300 group-hover:tracking-[0.4em] group-hover:text-white">
-                Lab
+                {t("brand.suffix")}
               </span>
             </div>
           </Link>
@@ -459,7 +459,9 @@ const Header: React.FC = () => {
           {/* CTAs */}
           <div className="flex items-center gap-2 md:gap-4">
             {/* Language Selector */}
-            <LanguageSelector />
+            <div className="hidden lg:block">
+              <LanguageSelector />
+            </div>
             {/* AI Consulting Button */}
             <Link
               href="/ai-consulting"
@@ -487,7 +489,7 @@ const Header: React.FC = () => {
           <button
             className="relative z-[60] ml-2 p-2 text-white lg:hidden"
             onClick={() => dispatch({ type: "TOGGLE_MOBILE" })}
-            aria-label="Toggle menu"
+            aria-label={t("a11y.toggleMenu")}
             aria-expanded={open}
             aria-controls="mobile-navigation"
           >
@@ -526,7 +528,8 @@ const Header: React.FC = () => {
             id="mobile-navigation"
             role="dialog"
             aria-modal="true"
-            aria-label="Mobile navigation"
+            aria-label={t("a11y.mobileNavigation")}
+            data-cta-suppress="true"
             className="fixed inset-0 z-40 overflow-y-auto bg-near-black md:hidden"
           >
             <div className="flex min-h-full flex-col items-center justify-center space-y-2 px-6 py-28">

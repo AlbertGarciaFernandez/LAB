@@ -95,8 +95,11 @@ export default async function Page({ params }: { params: { locale: string } }) {
 
   const whatWeBuild = {
     badge: t("WhatWeBuildInline.badge"),
+    heading: t("WhatWeBuildInline.heading"),
+    headingAccent: t("WhatWeBuildInline.headingAccent"),
     title: t("WhatWeBuildInline.title"),
     highlight: t("WhatWeBuildInline.highlight"),
+    tagLine: t("WhatWeBuildInline.tagLine"),
     services: t.raw("WhatWeBuildInline.services") as Array<{
       title: string;
       desc: string;

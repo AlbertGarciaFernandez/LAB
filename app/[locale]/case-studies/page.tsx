@@ -7,7 +7,8 @@ import { caseStudies } from "@/content/case-studies";
 import { createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
-const caseStudiesTitle = "Case Studies: AI Automation, Product Engineering, Migrations, and Systems Integration";
+const caseStudiesTitle =
+  "Case Studies: AI Automation, Product Engineering, Migrations, and Systems Integration";
 const caseStudiesDescription =
   "Delivery stories across AI products, internal platforms, ecommerce migrations, and integration-heavy systems work.";
 const caseStudiesKeywords = [

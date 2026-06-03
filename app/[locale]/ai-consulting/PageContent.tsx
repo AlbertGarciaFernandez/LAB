@@ -111,8 +111,11 @@ type ServiceItem = {
 
 type WhatWeBuildProps = {
   badge: string;
+  heading: string;
+  headingAccent: string;
   title: string;
   highlight: string;
+  tagLine: string;
   services: ServiceItem[];
 };
 
@@ -431,12 +434,11 @@ export default function AIConsultingPageContent({
                     {whatWeBuild.badge}
                   </div>
                   <h2 className="text-4xl font-black leading-[0.95] tracking-tighter text-white md:text-6xl">
-                    Production AI systems,
-                    <span className="block text-hunter-green">not isolated demos.</span>
+                    {whatWeBuild.heading}
+                    <span className="block text-hunter-green">{whatWeBuild.headingAccent}</span>
                   </h2>
                   <p className="mt-5 max-w-md text-base leading-relaxed text-gray-400">
-                    {whatWeBuild.title} {whatWeBuild.highlight}. Every service links to a system we
-                    can deploy, integrate, document and hand over.
+                    {whatWeBuild.title} {whatWeBuild.highlight}. {whatWeBuild.tagLine}
                   </p>
                 </div>
 

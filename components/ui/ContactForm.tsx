@@ -110,7 +110,7 @@ function validateForm(
   return errors;
 }
 
-function scrollToFirstError(errors: FieldErrors): void {
+function scrollToFirstError(errors: FieldErrors, idPrefix: string): void {
   const fieldIds = [
     "name",
     "company",
@@ -125,7 +125,7 @@ function scrollToFirstError(errors: FieldErrors): void {
 
   for (const id of fieldIds) {
     if (errors[id]) {
-      const element = document.getElementById(id);
+      const element = document.getElementById(`${idPrefix}-${id}`);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "center" });
         element.focus({ preventScroll: true });
@@ -176,12 +176,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   const [retryAttempt, setRetryAttempt] = useState(0);
 
   const compact = variant === "compact";
+  const idPrefix = compact ? "floating-contact" : "contact-form";
   const projectTypesRaw = t.raw("projectTypes");
   const projectTypes = Array.isArray(projectTypesRaw) ? (projectTypesRaw as string[]) : [];
   const budgetOptionsRaw = t.raw("budgetOptions");
   const budgetOptions = Array.isArray(budgetOptionsRaw) ? (budgetOptionsRaw as string[]) : [];
   const lastSubmitTime = useRef<number>(0);
   const formRef = useRef<HTMLFormElement>(null);
+
+  function fieldId(id: string): string {
+    return `${idPrefix}-${id}`;
+  }
 
   const clearErrors = useCallback(() => {
     setFieldErrors({});
@@ -235,7 +240,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     if (Object.keys(validationErrors).length > 0) {
       setFieldErrors(validationErrors);
       setFormState("idle");
-      scrollToFirstError(validationErrors);
+      scrollToFirstError(validationErrors, idPrefix);
       return;
     }
 
@@ -276,7 +281,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         }
       }
     }
-  }, [clearErrors, compact, selectedType, submitToServer, t, variant]);
+  }, [clearErrors, compact, idPrefix, selectedType, submitToServer, t, variant]);
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
@@ -359,7 +364,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               role="radiogroup"
               aria-required="true"
               aria-invalid={fieldErrors.project_type ? "true" : "false"}
-              aria-describedby={fieldErrors.project_type ? "project_type-error" : undefined}
+              aria-describedby={
+                fieldErrors.project_type ? `${idPrefix}-project_type-error` : undefined
+              }
             >
               {projectTypes.map((type) => (
                 <button
@@ -381,7 +388,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 </button>
               ))}
             </div>
-            <FieldError id="project_type-error" error={fieldErrors.project_type} />
+            <FieldError id={`${idPrefix}-project_type-error`} error={fieldErrors.project_type} />
           </div>
         ) : (
           <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
@@ -397,107 +404,107 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
         <div className={`grid gap-5 ${compact ? "" : "md:grid-cols-2"}`}>
           <div>
-            <FieldLabel htmlFor="name">{t("fields.name")}</FieldLabel>
+            <FieldLabel htmlFor={fieldId("name")}>{t("fields.name")}</FieldLabel>
             <input
               type="text"
               name="name"
-              id="name"
+              id={fieldId("name")}
               required
               autoComplete="name"
               aria-required="true"
               aria-invalid={fieldErrors.name ? "true" : "false"}
-              aria-describedby={fieldErrors.name ? "name-error" : undefined}
+              aria-describedby={fieldErrors.name ? `${idPrefix}-name-error` : undefined}
               onChange={() => clearFieldError("name")}
               className={inputClass(!!fieldErrors.name)}
               placeholder={t("placeholders.name")}
             />
-            <FieldError id="name-error" error={fieldErrors.name} />
+            <FieldError id={`${idPrefix}-name-error`} error={fieldErrors.name} />
           </div>
 
           <div>
-            <FieldLabel htmlFor="company">{t("fields.company")}</FieldLabel>
+            <FieldLabel htmlFor={fieldId("company")}>{t("fields.company")}</FieldLabel>
             <input
               type="text"
               name="company"
-              id="company"
+              id={fieldId("company")}
               required
               autoComplete="organization"
               aria-required="true"
               aria-invalid={fieldErrors.company ? "true" : "false"}
-              aria-describedby={fieldErrors.company ? "company-error" : undefined}
+              aria-describedby={fieldErrors.company ? `${idPrefix}-company-error` : undefined}
               onChange={() => clearFieldError("company")}
               className={inputClass(!!fieldErrors.company)}
               placeholder={t("placeholders.company")}
             />
-            <FieldError id="company-error" error={fieldErrors.company} />
+            <FieldError id={`${idPrefix}-company-error`} error={fieldErrors.company} />
           </div>
 
           <div>
-            <FieldLabel htmlFor="email">{t("fields.email")}</FieldLabel>
+            <FieldLabel htmlFor={fieldId("email")}>{t("fields.email")}</FieldLabel>
             <input
               type="email"
               name="email"
-              id="email"
+              id={fieldId("email")}
               required
               autoComplete="email"
               aria-required="true"
               aria-invalid={fieldErrors.email ? "true" : "false"}
-              aria-describedby={fieldErrors.email ? "email-error" : undefined}
+              aria-describedby={fieldErrors.email ? `${idPrefix}-email-error` : undefined}
               onChange={() => clearFieldError("email")}
               className={inputClass(!!fieldErrors.email)}
               placeholder={t("placeholders.email")}
             />
-            <FieldError id="email-error" error={fieldErrors.email} />
+            <FieldError id={`${idPrefix}-email-error`} error={fieldErrors.email} />
           </div>
 
           {!compact ? (
             <div>
-              <FieldLabel htmlFor="role">{t("fields.role")}</FieldLabel>
+              <FieldLabel htmlFor={fieldId("role")}>{t("fields.role")}</FieldLabel>
               <input
                 type="text"
                 name="role"
-                id="role"
+                id={fieldId("role")}
                 required
                 aria-required="true"
                 aria-invalid={fieldErrors.role ? "true" : "false"}
-                aria-describedby={fieldErrors.role ? "role-error" : undefined}
+                aria-describedby={fieldErrors.role ? `${idPrefix}-role-error` : undefined}
                 onChange={() => clearFieldError("role")}
                 className={inputClass(!!fieldErrors.role)}
                 placeholder={t("placeholders.role")}
               />
-              <FieldError id="role-error" error={fieldErrors.role} />
+              <FieldError id={`${idPrefix}-role-error`} error={fieldErrors.role} />
             </div>
           ) : null}
 
           {!compact ? (
             <div>
-              <FieldLabel htmlFor="phone">{t("fields.phone")}</FieldLabel>
+              <FieldLabel htmlFor={fieldId("phone")}>{t("fields.phone")}</FieldLabel>
               <input
                 type="tel"
                 name="phone"
-                id="phone"
+                id={fieldId("phone")}
                 autoComplete="tel"
                 aria-invalid={fieldErrors.phone ? "true" : "false"}
-                aria-describedby={fieldErrors.phone ? "phone-error" : undefined}
+                aria-describedby={fieldErrors.phone ? `${idPrefix}-phone-error` : undefined}
                 onChange={() => clearFieldError("phone")}
                 className={inputClass(!!fieldErrors.phone)}
                 placeholder={t("placeholders.phone")}
               />
-              <FieldError id="phone-error" error={fieldErrors.phone} />
+              <FieldError id={`${idPrefix}-phone-error`} error={fieldErrors.phone} />
             </div>
           ) : null}
 
           {!compact ? (
             <div>
-              <FieldLabel htmlFor="budget">{t("fields.budget")}</FieldLabel>
+              <FieldLabel htmlFor={fieldId("budget")}>{t("fields.budget")}</FieldLabel>
               <select
                 name="budget"
-                id="budget"
+                id={fieldId("budget")}
                 required
                 defaultValue=""
                 aria-required="true"
                 aria-invalid={fieldErrors.budget ? "true" : "false"}
-                aria-describedby={fieldErrors.budget ? "budget-error" : undefined}
+                aria-describedby={fieldErrors.budget ? `${idPrefix}-budget-error` : undefined}
                 onChange={() => clearFieldError("budget")}
                 className={inputClass(!!fieldErrors.budget)}
               >
@@ -510,46 +517,46 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                   </option>
                 ))}
               </select>
-              <FieldError id="budget-error" error={fieldErrors.budget} />
+              <FieldError id={`${idPrefix}-budget-error`} error={fieldErrors.budget} />
             </div>
           ) : null}
 
           {!compact ? (
             <div className="md:col-span-2">
-              <FieldLabel htmlFor="ai_goal">{t("fields.aiGoal")}</FieldLabel>
+              <FieldLabel htmlFor={fieldId("ai_goal")}>{t("fields.aiGoal")}</FieldLabel>
               <input
                 type="text"
                 name="ai_goal"
-                id="ai_goal"
+                id={fieldId("ai_goal")}
                 required
                 aria-required="true"
                 aria-invalid={fieldErrors.ai_goal ? "true" : "false"}
-                aria-describedby={fieldErrors.ai_goal ? "ai_goal-error" : undefined}
+                aria-describedby={fieldErrors.ai_goal ? `${idPrefix}-ai_goal-error` : undefined}
                 onChange={() => clearFieldError("ai_goal")}
                 className={inputClass(!!fieldErrors.ai_goal)}
                 placeholder={t("placeholders.aiGoal")}
               />
-              <FieldError id="ai_goal-error" error={fieldErrors.ai_goal} />
+              <FieldError id={`${idPrefix}-ai_goal-error`} error={fieldErrors.ai_goal} />
             </div>
           ) : null}
 
           <div className={compact ? "" : "md:col-span-2"}>
-            <FieldLabel htmlFor="message">
+            <FieldLabel htmlFor={fieldId("message")}>
               {compact ? t("fields.compactMessage") : t("fields.message")}
             </FieldLabel>
             <textarea
               name="message"
-              id="message"
+              id={fieldId("message")}
               rows={compact ? 4 : 5}
               required
               aria-required="true"
               aria-invalid={fieldErrors.message ? "true" : "false"}
-              aria-describedby={fieldErrors.message ? "message-error" : undefined}
+              aria-describedby={fieldErrors.message ? `${idPrefix}-message-error` : undefined}
               onChange={() => clearFieldError("message")}
               className={`${inputClass(!!fieldErrors.message)} min-h-[132px] resize-y`}
               placeholder={compact ? t("placeholders.compactMessage") : t("placeholders.message")}
             />
-            <FieldError id="message-error" error={fieldErrors.message} />
+            <FieldError id={`${idPrefix}-message-error`} error={fieldErrors.message} />
           </div>
         </div>
 

@@ -62,9 +62,9 @@ export default function Home({ params }: { params: { locale: string } }) {
   const isSpanish = params.locale === "es";
   const isDutch = params.locale === "nl";
   return (
-    <div className="min-h-screen bg-near-black text-white antialiased">
+    <div className="min-h-screen overflow-x-hidden bg-near-black text-white antialiased">
       <Header />
-      <main>
+      <main className="overflow-x-hidden">
         <BreadcrumbSchema
           items={[
             {
@@ -81,10 +81,7 @@ export default function Home({ params }: { params: { locale: string } }) {
         <InsightsSection />
         <BioSection />
         <ProcessSection />
-        
-            <ContactSection />
-         
-       
+        <ContactSection />
       </main>
     </div>
   );
