@@ -41,9 +41,15 @@ export default function PackagesSection() {
       <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       {/* Massive Background Text */}
-      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.05]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
-          PACKAGES
+          {t("bgText")}
+        </h2>
+      </div>
+
+      <div className="pointer-events-none absolute bottom-4 right-2 overflow-hidden opacity-[0.05] md:bottom-6 md:right-4">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          {t("bgNumber")}
         </h2>
       </div>
 
@@ -84,7 +90,7 @@ export default function PackagesSection() {
               <m.article
                 key={item.name}
                 variants={slideUp}
-                className="group/card relative overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.2)]"
+                className="group/card relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.2)]"
               >
                 {/* Subtle inner glow */}
                 <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover/card:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
@@ -111,9 +117,15 @@ export default function PackagesSection() {
                 )}
                 <Link
                   href={item.href}
-                  className="relative z-10 mt-7 inline-flex text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
+                  className="relative z-10 mt-auto inline-flex items-center gap-2 pt-7 text-xs font-bold uppercase tracking-widest text-hunter-orange transition-colors hover:text-white"
                 >
                   {item.cta ?? t("learnMore")}
+                  <span
+                    aria-hidden="true"
+                    className="text-sm leading-none transition-transform group-hover/card:translate-x-0.5"
+                  >
+                    ↗
+                  </span>
                 </Link>
               </m.article>
             ))}

@@ -30,9 +30,15 @@ const BioSection: React.FC = () => {
       className="relative overflow-hidden bg-near-black px-4 py-24 text-white md:px-8 md:py-40"
     >
       {/* Background massive text decoration */}
-      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.03]">
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.05]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           {t("bgText")}
+        </h2>
+      </div>
+
+      <div className="pointer-events-none absolute bottom-4 right-2 overflow-hidden opacity-[0.05] md:bottom-6 md:right-4">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          {t("bgNumber")}
         </h2>
       </div>
 

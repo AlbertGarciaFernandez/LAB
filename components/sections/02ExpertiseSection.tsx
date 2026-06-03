@@ -125,12 +125,25 @@ const ExpertiseSection: React.FC = () => {
   return (
     <AnimatedSection
       id="expertise"
-      className="bg-near-black px-4 py-20 text-white md:px-8 md:py-32"
+      className="relative overflow-hidden bg-near-black px-4 py-20 text-white md:px-8 md:py-32"
     >
-      <div className="mx-auto max-w-7xl">
-        <h2 className="mb-4 text-center text-5xl font-black uppercase tracking-tighter text-white md:text-7xl">
-          <span className="text-hunter-green">02.</span> {t("title.part1")}
-          <br className="hidden md:block" /> {t("title.part2")}
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.05]">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          {t("bgText")}
+        </h2>
+      </div>
+
+      <div className="pointer-events-none absolute bottom-4 right-2 overflow-hidden opacity-[0.05] md:bottom-6 md:right-4">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          {t("bgNumber")}
+        </h2>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <h2 className="mb-4 text-center text-5xl font-black uppercase tracking-tighter md:text-7xl">
+          <span className="text-white">{t("title.part1")}</span>
+          <br className="hidden md:block" />{" "}
+          <span className="text-hunter-green">{t("title.part2")}</span>
         </h2>
         <p className="mx-auto mb-6 max-w-3xl text-center text-xl text-gray-400">{t("subtitle")}</p>
 
@@ -156,7 +169,7 @@ const ExpertiseSection: React.FC = () => {
           </div>
 
           {/* ACCORDION DETALLE DEL PILLAR ACTIVO */}
-          <div className="mt-4 lg:mt-0">
+          <div className="mt-4 flex lg:mt-0">
             <AnimatePresence mode="wait">
               <m.div
                 key={activePillar.id}
@@ -164,22 +177,22 @@ const ExpertiseSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
-                className="rounded-2xl border border-white/5 bg-surface-dark/80 p-6 md:p-8"
+                className="flex h-full w-full flex-col rounded-2xl border border-white/5 bg-surface-dark/80 p-7 md:p-10 lg:p-12"
               >
                 <p className="font-display text-xs font-semibold uppercase tracking-[0.25em] text-hunter-green">
                   {activePillar.indexLabel}
                 </p>
-                <h3 className="font-display mt-2 text-xl font-semibold text-hunter-orange md:text-2xl">
+                <h3 className="font-display mt-3 text-2xl font-semibold text-hunter-orange md:text-3xl">
                   {activePillar.heading}
                 </h3>
 
                 {activePillar.paragraphs.map((p) => (
-                  <p key={p} className="mt-3 text-sm text-gray-300">
+                  <p key={p} className="mt-4 text-base leading-7 text-gray-300">
                     {p}
                   </p>
                 ))}
 
-                <ul className="mt-4 space-y-1 text-sm text-gray-300">
+                <ul className="mt-6 space-y-2 text-base leading-7 text-gray-300">
                   {activePillar.bullets.map((b) => (
                     <li key={b}>· {b}</li>
                   ))}

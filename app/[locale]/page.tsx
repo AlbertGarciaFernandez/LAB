@@ -7,7 +7,8 @@ import WhatWeBuildSection from "@/components/sections/WhatWeBuildSection";
 import PackagesSection from "@/components/sections/PackagesSection";
 import InsightsSection from "@/components/sections/InsightsSection";
 import BioSection from "@/components/sections/04BioSection";
-import ProcessContactSection from "@/components/sections/06ProcessContactSection";
+import ProcessSection from "@/components/sections/06ProcessSection";
+import ContactSection from "@/components/sections/ContactSection";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { createPageMetadata } from "@/utils/metadata";
 
@@ -79,7 +80,11 @@ export default function Home({ params }: { params: { locale: string } }) {
         <PackagesSection />
         <InsightsSection />
         <BioSection />
-        <ProcessContactSection />
+        <ProcessSection />
+        
+            <ContactSection />
+         
+       
       </main>
     </div>
   );

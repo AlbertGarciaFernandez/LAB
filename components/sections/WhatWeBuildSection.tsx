@@ -52,9 +52,15 @@ const WhatWeBuildSection: React.FC = () => {
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-hunter-green/[0.04] blur-[140px]" />
 
       {/* Massive Background Text */}
-      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.05]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
-          SERVICES
+          {t("bgText")}
+        </h2>
+      </div>
+
+      <div className="pointer-events-none absolute bottom-4 right-2 overflow-hidden opacity-[0.05] md:bottom-6 md:right-4">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          {t("bgNumber")}
         </h2>
       </div>
 

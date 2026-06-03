@@ -36,7 +36,9 @@ test("home and ai-consulting both expose the full contact section", () => {
   const home = readFileSync("app/[locale]/page.tsx", "utf8");
   const aiConsulting = readFileSync("app/[locale]/ai-consulting/PageContent.tsx", "utf8");
 
-  assert.match(home, /ProcessContactSection|ContactSection/);
+  assert.match(home, /ContactSection/);
+  assert.match(home, /ProcessSection/);
+  assert.doesNotMatch(home, /ProcessContactSection/);
   assert.match(aiConsulting, /ContactSection/);
 });
 

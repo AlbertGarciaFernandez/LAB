@@ -673,6 +673,8 @@
     ]
   },
   "TrustProof": {
+    "bgText": "TRUST",
+    "bgNumber": "01",
     "badge": "Proof, not theatre",
     "title": "We work like a product team, not a slide factory.",
     "subtitle": "This is how we work: fixed scope, code you own, a clean production handoff, and senior engineers involved from discovery through deployment.",
@@ -797,6 +799,8 @@
     ]
   },
   "Packages": {
+    "bgText": "PACKAGES",
+    "bgNumber": "04",
     "badge": "Packages",
     "title": "Clear entry points, clear ranges.",
     "subtitle": "These are entry ranges, not mysterious retainers. Exact scope depends on systems, data access and integration complexity.",
@@ -872,7 +876,13 @@
       "button": "Request fit check"
     }
   },
+  "InsightsHome": {
+    "bgText": "INSIGHTS",
+    "bgNumber": "05"
+  },
   "WhatWeBuild": {
+    "bgText": "SERVICES",
+    "bgNumber": "03",
     "badge": "What We Build",
     "title": {
       "part1": "Five Ways We Put",
@@ -1029,6 +1039,10 @@
         "about": "About CodeHunter Lab"
       }
     },
+    "InsightsHome": {
+      "bgText": "INSIGHTS",
+      "bgNumber": "05"
+    },
     "Availability": {
       "nextOpening": "Next availability: {date}",
       "title": "Ready to scale?",
@@ -1065,6 +1079,8 @@
     }
   },
   "Expertise": {
+    "bgText": "EXPERTISE",
+    "bgNumber": "02",
     "title": {
       "part1": "Core Expertise &",
       "part2": "Strategic Pillars"
@@ -1227,6 +1243,7 @@
   },
   "Bio": {
     "bgText": "THE STUDIO",
+    "bgNumber": "06",
     "title": {
       "part1": "THE",
       "part2": "STUDIO"
@@ -1263,6 +1280,10 @@
     "title": "Tech Stack"
   },
   "Process": {
+    "bgText": "PROCESS",
+    "bgNumber": "07",
+    "contactBgText": "CONTACT",
+    "contactBgNumber": "08",
     "title": {
       "prefix": "06.",
       "text": "How We Work"
@@ -1312,6 +1333,11 @@
       },
       "description": "Most AI projects stall after the demo. We help teams turn promising ideas into <strong class='text-white'>production AI systems</strong> with the right architecture, integrations, and delivery discipline to make them stick.",
       "cta": "Book an AI Strategy Call",
+      "calculator": {
+        "title": "ROI Calculator",
+        "heading": "Estimate ROI first",
+        "description": "Jump to the savings calculator before scoping an AI system."
+      },
       "whyUs": {
         "title": {
           "part1": "Execution,",
@@ -1486,6 +1512,7 @@
     },
     "WhoItsFor": {
       "badge": "Who It's For",
+      "intro": "For teams past the AI toy phase.",
       "title": "A Better Fit for Teams",
       "highlight": "Ready to Implement",
       "description": "We work best with founders, CTOs, and operations leaders who already see where AI could help and now need a team that can scope it, build it, and take it live.",
@@ -1497,6 +1524,17 @@
         "You need AI connected to your CRM, ERP, database, or internal tooling",
         "You need senior engineering capacity in the Netherlands or across international teams"
       ]
+    },
+    "Navigation": {
+      "hero": "Hero",
+      "whoItsFor": "Who It's For",
+      "topAgents": "Top Agents",
+      "whatWeBuild": "What We Build",
+      "techCredibility": "Technical Credibility",
+      "roiCalculator": "ROI Calculator",
+      "pricing": "Pricing",
+      "engagementModels": "Engagement Models",
+      "faq": "FAQ"
     },
     "Pricing": {
       "badge": "Pricing",
@@ -1731,7 +1769,13 @@
         "highlight": "Reimagined."
       },
       "description": "Looking for a <strong>software company in Leiden</strong>? We combine the agility of a local <strong>IT consultant</strong> with Silicon Valley engineering standards. No filler, just code that works.",
-      "cta": {
+    "phaseLabel": "Phase {step}",
+    "outcomeLabel": "Outcome",
+    "outcomeDescription": {
+      "part1": "A structured and fully documented execution of the",
+      "part2": "phase."
+    },
+    "cta": {
         "coffee": "Let's Grab a Coffee",
         "services": "View Expertise"
       }

@@ -113,8 +113,8 @@
       "TheLab": "El Lab",
       "Bio": "Biografía",
       "Process": "Proceso",
-      "Insights": "Insights (EN)",
-      "CaseStudies": "Case Studies (EN)",
+      "Insights": "Insights",
+      "CaseStudies": "Case Studies",
       "services": {
         "AIConsulting": "Consultoría IA",
         "ReactConsulting": "Consultoría React",
@@ -135,6 +135,12 @@
         "ProfessionalServicesNL": "Automatización de Servicios Profesionales",
         "RealEstateNL": "Automatización Inmobiliaria"
       }
+    },
+    "phaseLabel": "Fase {step}",
+    "outcomeLabel": "Resultado",
+    "outcomeDescription": {
+      "part1": "Una ejecución estructurada y totalmente documentada de la fase",
+      "part2": "."
     },
     "cta": {
       "AIConsulting": "Consultoría IA",
@@ -200,6 +206,10 @@
         "about": "Sobre CodeHunter Lab"
       }
     },
+    "InsightsHome": {
+      "bgText": "INSIGHTS",
+      "bgNumber": "05"
+    },
     "Availability": {
       "nextOpening": "Próxima Disponibilidad: {date}",
       "title": "¿Listo para escalar?",
@@ -235,7 +245,13 @@
       }
     }
   },
+  "InsightsHome": {
+    "bgText": "INSIGHTS",
+    "bgNumber": "05"
+  },
   "WhatWeBuild": {
+    "bgText": "SERVICIOS",
+    "bgNumber": "03",
     "badge": "Qué Construimos",
     "title": {
       "part1": "Cinco formas en las que ponemos",
@@ -298,6 +314,8 @@
     ]
   },
   "Expertise": {
+    "bgText": "EXPERTISE",
+    "bgNumber": "02",
     "title": {
       "part1": "Especialidades Centrales y",
       "part2": "Pilares Estratégicos"
@@ -460,6 +478,7 @@
   },
   "Bio": {
     "bgText": "EL ESTUDIO",
+    "bgNumber": "06",
     "title": {
       "part1": "EL",
       "part2": "ESTUDIO"
@@ -496,6 +515,10 @@
     "title": "Stack Tecnológico"
   },
   "Process": {
+    "bgText": "PROCESO",
+    "bgNumber": "07",
+    "contactBgText": "CONTACTO",
+    "contactBgNumber": "08",
     "title": {
       "prefix": "06.",
       "text": "Cómo Trabajamos"
@@ -545,6 +568,11 @@
       },
       "description": "La mayoría de proyectos de IA se quedan atascados después de la demo. Ayudamos a los equipos a convertir buenas ideas en <strong class='text-white'>sistemas de IA en producción</strong> con la arquitectura, las integraciones y la disciplina de entrega necesarias para que funcionen de verdad.",
       "cta": "Reservar Llamada de Estrategia IA",
+      "calculator": {
+        "title": "Calculadora ROI",
+        "heading": "Estima el ROI primero",
+        "description": "Ve a la calculadora de ahorro antes de definir el alcance de un sistema de IA."
+      },
       "whyUs": {
         "title": {
           "part1": "Ejecución,",
@@ -719,6 +747,7 @@
     },
     "WhoItsFor": {
       "badge": "Para Quién Es",
+      "intro": "Para equipos que ya han dejado atrás la fase juguete de la IA.",
       "title": "Encaja mejor con equipos",
       "highlight": "listos para implementar",
       "description": "Trabajamos mejor con founders, CTOs y responsables de operaciones que ya ven dónde puede ayudar la IA y ahora necesitan un equipo que lo acote, lo construya y lo ponga en marcha.",
@@ -730,6 +759,17 @@
         "Necesitas IA conectada con tu CRM, ERP, base de datos o herramientas internas",
         "Necesitas capacidad de ingeniería senior en Países Bajos o para equipos internacionales"
       ]
+    },
+    "Navigation": {
+      "hero": "Hero",
+      "whoItsFor": "Para quién es",
+      "topAgents": "Agentes principales",
+      "whatWeBuild": "Qué construimos",
+      "techCredibility": "Credibilidad técnica",
+      "roiCalculator": "Calculadora ROI",
+      "pricing": "Precios",
+      "engagementModels": "Modelos de colaboración",
+      "faq": "FAQ"
     },
     "Pricing": {
       "badge": "Precios",
@@ -3261,6 +3301,8 @@
     }
   },
   "TrustProof": {
+    "bgText": "CONFIANZA",
+    "bgNumber": "01",
     "badge": "Prueba sin teatro",
     "title": "Trabajamos como un equipo de producto, no como una fábrica de presentaciones.",
     "subtitle": "Así es como trabajamos: alcance cerrado, código que pasa a ser tuyo, un handoff limpio a producción y participación de ingenieros senior desde el discovery hasta el despliegue.",
@@ -3346,6 +3388,8 @@
     ]
   },
   "Packages": {
+    "bgText": "PAQUETES",
+    "bgNumber": "04",
     "badge": "Paquetes",
     "title": "Puntos de entrada claros, rangos claros.",
     "subtitle": "Estos son rangos de entrada, no retainers misteriosos. El alcance exacto depende de sistemas, acceso a datos y complejidad de integración.",

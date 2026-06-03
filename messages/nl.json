@@ -113,8 +113,8 @@
       "TheLab": "The Lab",
       "Bio": "Bio",
       "Process": "Proces",
-      "Insights": "Insights (EN)",
-      "CaseStudies": "Case studies (EN)",
+      "Insights": "Insights",
+      "CaseStudies": "Case studies",
       "services": {
         "AIConsulting": "AI Consulting",
         "ReactConsulting": "React Consulting",
@@ -135,6 +135,12 @@
         "ProfessionalServicesNL": "Automatisering voor zakelijke dienstverlening",
         "RealEstateNL": "Makelaar Automatisering"
       }
+    },
+    "phaseLabel": "Fase {step}",
+    "outcomeLabel": "Resultaat",
+    "outcomeDescription": {
+      "part1": "Een gestructureerde en volledig gedocumenteerde uitvoering van de",
+      "part2": "fase."
     },
     "cta": {
       "AIConsulting": "AI Consulting",
@@ -200,6 +206,10 @@
         "about": "Over CodeHunter Lab"
       }
     },
+    "InsightsHome": {
+      "bgText": "INSIGHTS",
+      "bgNumber": "05"
+    },
     "Availability": {
       "nextOpening": "Volgende beschikbaarheid: {date}",
       "title": "Klaar om te schalen?",
@@ -235,7 +245,13 @@
       }
     }
   },
+  "InsightsHome": {
+    "bgText": "INSIGHTS",
+    "bgNumber": "05"
+  },
   "WhatWeBuild": {
+    "bgText": "SERVICES",
+    "bgNumber": "03",
     "badge": "Wat Wij Bouwen",
     "title": {
       "part1": "Vijf manieren waarop we",
@@ -298,6 +314,8 @@
     ]
   },
   "Expertise": {
+    "bgText": "EXPERTISE",
+    "bgNumber": "02",
     "title": {
       "part1": "Kernexpertise &",
       "part2": "Strategische Pilaren"
@@ -460,6 +478,7 @@
   },
   "Bio": {
     "bgText": "DE STUDIO",
+    "bgNumber": "06",
     "title": {
       "part1": "DE",
       "part2": "STUDIO"
@@ -496,6 +515,10 @@
     "title": "Tech Stack"
   },
   "Process": {
+    "bgText": "PROCES",
+    "bgNumber": "07",
+    "contactBgText": "CONTACT",
+    "contactBgNumber": "08",
     "title": {
       "prefix": "06.",
       "text": "Hoe Wij Werken"
@@ -1071,6 +1094,8 @@
     }
   },
   "TrustProof": {
+    "bgText": "VERTROUWEN",
+    "bgNumber": "01",
     "badge": "Bewijs, geen theater",
     "title": "We werken als een productteam, niet als een slidefabriek.",
     "subtitle": "Zo werken we: vaste scope, code die van jou blijft, een nette productie-overdracht en senior engineers van discovery tot deployment.",
@@ -1227,6 +1252,8 @@
     ]
   },
   "Packages": {
+    "bgText": "PAKKETTEN",
+    "bgNumber": "04",
     "badge": "Pakketten",
     "title": "Duidelijke instappunten, duidelijke prijsklassen.",
     "subtitle": "Dit zijn instapranges, geen mysterieuze retainers. Exacte scope hangt af van systemen, data-toegang en integratiecomplexiteit.",
@@ -1312,6 +1339,11 @@
       },
       "description": "De meeste AI-projecten lopen vast na de demo. Wij helpen teams om veelbelovende ideeën om te zetten in <strong class='text-white'>AI-systemen in productie</strong> met de juiste architectuur, integraties en uitvoeringsdiscipline om ze echt werkend te krijgen.",
       "cta": "Boek een AI Strategiegesprek",
+      "calculator": {
+        "title": "ROI-calculator",
+        "heading": "Bereken eerst de ROI",
+        "description": "Ga eerst naar de besparingscalculator voordat je de scope van een AI-systeem bepaalt."
+      },
       "whyUs": {
         "title": {
           "part1": "Uitvoering,",
@@ -1486,6 +1518,7 @@
     },
     "WhoItsFor": {
       "badge": "Voor Wie",
+      "intro": "Voor teams die de AI-speelgoedfase voorbij zijn.",
       "title": "Past het best bij teams",
       "highlight": "die klaar zijn om te implementeren",
       "description": "We werken het best met founders, CTO's en operations-verantwoordelijken die al zien waar AI kan helpen en nu een team nodig hebben dat het afbakent, bouwt en live brengt.",
@@ -1497,6 +1530,17 @@
         "Je hebt AI nodig die koppelt met je CRM, ERP, database of interne tooling",
         "Je hebt senior engineering-capaciteit nodig in Nederland of voor internationale teams"
       ]
+    },
+    "Navigation": {
+      "hero": "Hero",
+      "whoItsFor": "Voor wie",
+      "topAgents": "Top agents",
+      "whatWeBuild": "Wat we bouwen",
+      "techCredibility": "Technische geloofwaardigheid",
+      "roiCalculator": "ROI-calculator",
+      "pricing": "Prijzen",
+      "engagementModels": "Samenwerkingsmodellen",
+      "faq": "FAQ"
     },
     "Pricing": {
       "badge": "Prijzen",

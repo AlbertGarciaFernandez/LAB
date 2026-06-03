@@ -109,7 +109,9 @@ test("homepage includes the commercial trust and packaging sections", () => {
   assert.match(home, /TrustProofSection/);
   assert.match(home, /WhatWeBuildSection/);
   assert.match(home, /PackagesSection/);
-  assert.match(home, /ProcessContactSection/);
+  assert.match(home, /ProcessSection/);
+  assert.match(home, /ContactSection/);
+  assert.doesNotMatch(home, /ProcessContactSection/);
 });
 
 test("AI consulting page makes pricing and positioning visible", () => {

@@ -2,6 +2,7 @@
 
 import { Link } from "@/navigation";
 import { m } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { insights } from "@/content/insights";
 
 const slideUp = {
@@ -19,6 +20,7 @@ const containerVariants = {
 };
 
 export default function InsightsSection() {
+  const t = useTranslations("InsightsHome");
   const featuredSlugs = new Set([
     "ai-agent-consulting",
     "whatsapp-automation-netherlands",
@@ -30,9 +32,15 @@ export default function InsightsSection() {
 
   return (
     <section className="relative overflow-hidden border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
-      <div className="pointer-events-none absolute left-0 top-10 flex w-full justify-center overflow-hidden opacity-[0.03]">
+      <div className="pointer-events-none absolute left-0 top-10 w-full overflow-hidden opacity-[0.05]">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
-          INSIGHTS
+          {t("bgText")}
+        </h2>
+      </div>
+
+      <div className="pointer-events-none absolute bottom-4 right-2 overflow-hidden opacity-[0.05] md:bottom-6 md:right-4">
+        <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
+          {t("bgNumber")}
         </h2>
       </div>
 

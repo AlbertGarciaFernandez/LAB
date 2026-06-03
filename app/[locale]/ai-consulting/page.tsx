@@ -42,6 +42,11 @@ export default async function Page({ params }: { params: { locale: string } }) {
     titleHighlight: t("Hero.title.highlight"),
     description: t.raw("Hero.description") as string,
     cta: t("Hero.cta"),
+    calculator: {
+      title: t("Hero.calculator.title"),
+      heading: t("Hero.calculator.heading"),
+      description: t("Hero.calculator.description"),
+    },
     whyUsTitlePart1: t("Hero.whyUs.title.part1"),
     whyUsTitleHighlight: t("Hero.whyUs.title.highlight"),
     whyUsDescription: t("Hero.whyUs.description"),
@@ -81,6 +86,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
 
   const whoItsFor = {
     badge: t("WhoItsFor.badge"),
+    intro: t("WhoItsFor.intro"),
     title: t("WhoItsFor.title"),
     highlight: t("WhoItsFor.highlight"),
     description: t("WhoItsFor.description"),

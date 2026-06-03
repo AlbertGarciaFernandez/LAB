@@ -1,27 +1,32 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { usePathname } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 type Section = {
   id: string;
   label: string;
 };
 
-const sections: Section[] = [
-  { id: "hero", label: "Hero" },
-  { id: "who-its-for", label: "Who It's For" },
-  { id: "top-agents", label: "Top Agents" },
-  { id: "what-we-build", label: "What We Build" },
-  { id: "tech-credibility", label: "Technical Credibility" },
-  { id: "roi-calculator", label: "ROI Calculator" },
-  { id: "pricing", label: "Pricing" },
-  { id: "migration", label: "Engagement Models" },
-  { id: "faq", label: "FAQ" },
-];
-
 export default function SidebarNav() {
+  const t = useTranslations("AIConsulting.Navigation");
+  const sections = useMemo<Section[]>(
+    () => [
+      { id: "hero", label: t("hero") },
+      { id: "who-its-for", label: t("whoItsFor") },
+      { id: "top-agents", label: t("topAgents") },
+      { id: "what-we-build", label: t("whatWeBuild") },
+      { id: "tech-credibility", label: t("techCredibility") },
+      { id: "roi-calculator", label: t("roiCalculator") },
+      { id: "pricing", label: t("pricing") },
+      { id: "migration", label: t("engagementModels") },
+      { id: "faq", label: t("faq") },
+    ],
+    [t]
+  );
+
   const [activeSection, setActiveSection] = useState("hero");
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   const pathname = usePathname();
@@ -47,7 +52,7 @@ export default function SidebarNav() {
     });
 
     return () => observer.disconnect();
-  }, [pathname]);
+  }, [pathname, sections]);
 
   const handleClick = (id: string) => {
     const el = document.getElementById(id);

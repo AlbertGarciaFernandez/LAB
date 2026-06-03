@@ -50,6 +50,11 @@ type HeroProps = {
   titleHighlight: string;
   description: string;
   cta: string;
+  calculator: {
+    title: string;
+    heading: string;
+    description: string;
+  };
   whyUsTitlePart1: string;
   whyUsTitleHighlight: string;
   whyUsDescription: string;
@@ -90,6 +95,7 @@ type PricingProps = {
 
 type WhoItsForProps = {
   badge: string;
+  intro: string;
   title: string;
   highlight: string;
   description: string;
@@ -333,13 +339,13 @@ export default function AIConsultingPageContent({
                   <div className="relative z-10 flex items-center justify-between gap-5">
                     <div>
                       <div className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.22em] text-hunter-green">
-                        ROI Calculator
+                        {hero.calculator.title}
                       </div>
                       <div className="text-xl font-black leading-tight text-white">
-                        Estimate ROI first
+                        {hero.calculator.heading}
                       </div>
                       <p className="mt-2 max-w-sm text-sm leading-relaxed text-gray-400">
-                        Jump to the savings calculator before scoping an AI system.
+                        {hero.calculator.description}
                       </p>
                     </div>
                     <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-hunter-green text-near-black transition-all group-hover:translate-y-1 group-hover:bg-hunter-orange">
@@ -368,7 +374,7 @@ export default function AIConsultingPageContent({
                     {whoItsFor.badge}
                   </div>
                   <h2 className="text-3xl font-black leading-[0.95] tracking-tighter text-white md:text-5xl">
-                    For teams past the AI toy phase.
+                    {whoItsFor.intro}
                     <span className="block pt-2 text-hunter-green">
                       {whoItsFor.title} {whoItsFor.highlight}
                     </span>
