@@ -49,13 +49,6 @@ const solutionIcons = [
   StarIcon,
 ];
 
-const complianceBadges = [
-  { icon: ShieldCheckIcon, label: "GDPR Compliant" },
-  { icon: LockKeyIcon, label: "HIPAA-Ready" },
-  { icon: KeyIcon, label: "End-to-End Encryption" },
-  { icon: FlagIcon, label: "EU Data Residency" },
-];
-
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -85,6 +78,40 @@ export default function HealthcareAutomationContent() {
   const faqQuestions = t.raw("FAQ.questions") as Array<{ q: string; a: string }>;
   const industryMetrics = t.raw("IndustryMetrics") as Array<{ value: string; label: string }>;
   const labels = getCommonBreadcrumbLabels(locale);
+  const complianceBadges = [
+    {
+      icon: ShieldCheckIcon,
+      label: getLocaleValue(locale, {
+        en: "GDPR Compliant",
+        es: "Cumplimiento RGPD",
+        nl: "AVG-conform",
+      }),
+    },
+    {
+      icon: LockKeyIcon,
+      label: getLocaleValue(locale, {
+        en: "HIPAA-Ready",
+        es: "Preparado para HIPAA",
+        nl: "HIPAA-ready",
+      }),
+    },
+    {
+      icon: KeyIcon,
+      label: getLocaleValue(locale, {
+        en: "End-to-End Encryption",
+        es: "Cifrado de extremo a extremo",
+        nl: "End-to-end-encryptie",
+      }),
+    },
+    {
+      icon: FlagIcon,
+      label: getLocaleValue(locale, {
+        en: "EU Data Residency",
+        es: "Residencia de datos en la UE",
+        nl: "EU-dataresidentie",
+      }),
+    },
+  ];
   const patientJourneyPreviewLabel = getLocaleValue(locale, {
     en: "Patient Journey - 5 Automated Steps",
     es: "Recorrido del paciente - 5 pasos automatizados",
@@ -404,10 +431,18 @@ export default function HealthcareAutomationContent() {
           <div className="mx-auto max-w-5xl px-6">
             <m.div {...fadeUp} transition={{ duration: 0.6 }} className="mb-12 text-center">
               <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-hunter-green">
-                Security & Compliance
+                {getLocaleValue(locale, {
+                  en: "Security & Compliance",
+                  es: "Seguridad y cumplimiento",
+                  nl: "Security & compliance",
+                })}
               </p>
               <h2 className="text-3xl font-black uppercase tracking-tighter text-white md:text-4xl">
-                Built for Healthcare Standards
+                {getLocaleValue(locale, {
+                  en: "Built for Healthcare Standards",
+                  es: "Diseñado para estándares sanitarios",
+                  nl: "Gebouwd voor zorgstandaarden",
+                })}
               </h2>
             </m.div>
             <m.div

@@ -65,12 +65,12 @@ const staggerItem = {
 };
 
 export default function ReactConsultingContent() {
-  const t = useTranslations("ReactConsulting");
   const locale = useLocale();
+  const t = useTranslations("ReactConsulting");
   const labels = getCommonBreadcrumbLabels(locale);
   const breadcrumbLabel = getLocaleValue(locale, {
     en: "React Consulting",
-    es: "Consultoria React",
+    es: "Consultoría React",
     nl: "React Consulting",
   });
 
@@ -407,7 +407,13 @@ export default function ReactConsultingContent() {
                 <GlassCard hoverEffect={false} className="p-8">
                   <div className="mb-6 flex items-center gap-3">
                     <span className="h-3 w-3 rounded-full bg-red-500" />
-                    <h3 className="text-xl font-bold uppercase text-white/70">Before Audit</h3>
+                    <h3 className="text-xl font-bold uppercase text-white/70">
+                      {getLocaleValue(locale, {
+                        en: "Before Audit",
+                        es: "Antes de la auditoría",
+                        nl: "Voor de audit",
+                      })}
+                    </h3>
                   </div>
                   <div className="space-y-5">
                     {lighthouseBefore.map((item) => (
@@ -440,7 +446,13 @@ export default function ReactConsultingContent() {
                 <GlassCard hoverEffect={false} className="border-blue-400/20 bg-blue-400/5 p-8">
                   <div className="mb-6 flex items-center gap-3">
                     <span className="h-3 w-3 rounded-full bg-green-500" />
-                    <h3 className="text-xl font-bold uppercase text-white">After Audit</h3>
+                    <h3 className="text-xl font-bold uppercase text-white">
+                      {getLocaleValue(locale, {
+                        en: "After Audit",
+                        es: "Después de la auditoría",
+                        nl: "Na de audit",
+                      })}
+                    </h3>
                   </div>
                   <div className="space-y-5">
                     {lighthouseAfter.map((item) => (

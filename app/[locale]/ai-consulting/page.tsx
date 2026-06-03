@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import ServiceSchema from "@/components/ui/ServiceSchema";
 import { createPageMetadata } from "@/utils/metadata";
 import { localizedUrl } from "@/utils/metadata";
+import { getLocaleValue } from "../_shared/localeCopy";
 import AIConsultingPageContent from "./PageContent";
 
 export async function generateMetadata({
@@ -13,10 +14,21 @@ export async function generateMetadata({
   return createPageMetadata({
     locale: params.locale,
     path: "/ai-consulting",
-    title: "AI Consulting Netherlands | Strategy, Implementation & ROI",
-    description:
-      "AI consulting for companies ready to ship. Strategy sprints, implementation, and ongoing partnerships. Production systems, not prototypes.",
-    keywords: ["AI consulting Netherlands", "AI automation consulting", "AI agents Netherlands"],
+    title: getLocaleValue(params.locale, {
+      en: "AI Consulting Netherlands | Strategy, Implementation & ROI",
+      es: "Consultoría de IA en Países Bajos | Estrategia, implementación y ROI",
+      nl: "AI consultancy Nederland | Strategie, implementatie en ROI",
+    }),
+    description: getLocaleValue(params.locale, {
+      en: "AI consulting for companies ready to ship. Strategy sprints, implementation, and ongoing partnerships. Production systems, not prototypes.",
+      es: "Consultoría de IA para empresas listas para lanzar. Sprints de estrategia, implementación y colaboración continua. Sistemas en producción, no prototipos.",
+      nl: "AI consultancy voor bedrijven die klaar zijn om live te gaan. Strategische sprints, implementatie en doorlopende samenwerking. Systemen in productie, geen prototypes.",
+    }),
+    keywords: getLocaleValue(params.locale, {
+      en: ["AI consulting Netherlands", "AI automation consulting", "AI agents Netherlands"],
+      es: ["consultoría IA países bajos", "automatización IA", "agentes IA países bajos"],
+      nl: ["AI consultancy nederland", "AI automatisering consultancy", "AI agents nederland"],
+    }),
   });
 }
 
@@ -158,10 +170,22 @@ export default async function Page({ params }: { params: { locale: string } }) {
   return (
     <>
       <ServiceSchema
-        name="AI Consulting Netherlands"
-        description="AI consulting for companies ready to ship strategy, implementation, and production AI systems."
+        name={getLocaleValue(params.locale, {
+          en: "AI Consulting Netherlands",
+          es: "Consultoría de IA en Países Bajos",
+          nl: "AI consultancy Nederland",
+        })}
+        description={getLocaleValue(params.locale, {
+          en: "AI consulting for companies ready to ship strategy, implementation, and production AI systems.",
+          es: "Consultoría de IA para empresas listas para ejecutar estrategia, implementación y sistemas de IA en producción.",
+          nl: "AI consultancy voor bedrijven die klaar zijn voor strategie, implementatie en AI-systemen in productie.",
+        })}
         url={localizedUrl(params.locale, "/ai-consulting")}
-        serviceType="AI Consulting"
+        serviceType={getLocaleValue(params.locale, {
+          en: "AI Consulting",
+          es: "Consultoría de IA",
+          nl: "AI consultancy",
+        })}
       />
       <AIConsultingPageContent
         hero={hero}

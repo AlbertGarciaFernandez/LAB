@@ -19,8 +19,8 @@ import { localizedUrl } from "@/utils/metadata";
 import { getCommonBreadcrumbLabels, getLocaleValue } from "../_shared/localeCopy";
 
 export default function NextJsDevelopmentAgencyContent() {
-  const t = useTranslations("NextJsAgency");
   const locale = useLocale();
+  const t = useTranslations("NextJsAgency");
   const labels = getCommonBreadcrumbLabels(locale);
 
   const breadcrumbJsonLd = {
@@ -364,9 +364,19 @@ export default function NextJsDevelopmentAgencyContent() {
               className="mb-16 text-center"
             >
               <h2 className="mb-4 text-4xl font-black uppercase tracking-tighter md:text-6xl">
-                Rendering Strategies
+                {getLocaleValue(locale, {
+                  en: "Rendering Strategies",
+                  es: "Estrategias de renderizado",
+                  nl: "Renderingstrategieën",
+                })}
               </h2>
-              <p className="text-xl text-gray-400">Choose the right approach for your use case</p>
+              <p className="text-xl text-gray-400">
+                {getLocaleValue(locale, {
+                  en: "Choose the right approach for your use case",
+                  es: "Elige el enfoque adecuado para tu caso de uso",
+                  nl: "Kies de juiste aanpak voor jouw use case",
+                })}
+              </p>
             </m.div>
 
             <div className="grid gap-6 md:grid-cols-4">

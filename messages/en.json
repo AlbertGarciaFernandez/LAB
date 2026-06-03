@@ -113,13 +113,13 @@
         "highlight": "Zapier Per Task.",
         "part2": "Own Your Workflows"
       },
-      "description": "CodeHunter Lab are expert <strong>n8n consultants</strong> in the Netherlands. We migrate your tailored workflows from Zapier and Make to self-hosted n8n — cutting costs by 60–80%, eliminating rate limits, and giving you full data control. No black boxes. No vendor lock-in.",
+      "description": "CodeHunter Lab is an expert <strong>n8n consulting partner</strong> in the Netherlands. We migrate tailored workflows from Zapier and Make to self-hosted n8n — cutting costs by 60-80%, removing rate limits, and giving you full control over your data. No black boxes. No vendor lock-in.",
       "cta": {
         "primary": "Book a Free Workflow Audit",
         "secondary": "See Our Migration Process"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "IndustryMetrics": [
       { "value": "45%", "label": "Lead-to-Booking Conversion" },
       { "value": "€850", "label": "Avg. Client Lifetime Value Increase" },
@@ -302,7 +302,7 @@
         "secondary": "See What AI Voice Can Do"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "PainPoints": {
       "title": "The Real Cost of Missed Calls in 2026",
       "items": [
@@ -478,7 +478,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "PainPoints": {
       "title": "Why Manual WhatsApp Is Costing You",
       "items": [
@@ -674,8 +674,8 @@
   },
   "TrustProof": {
     "badge": "Proof, not theatre",
-    "title": "We build like a product team, not a slide factory.",
-    "subtitle": "This page needed more trust signals, so we make the working model explicit: fixed scope, ownable code, production handoff, and senior engineering from discovery to deployment.",
+    "title": "We work like a product team, not a slide factory.",
+    "subtitle": "This is how we work: fixed scope, code you own, a clean production handoff, and senior engineers involved from discovery through deployment.",
     "metrics": [
       {
         "value": "4+",
@@ -875,35 +875,35 @@
   "WhatWeBuild": {
     "badge": "What We Build",
     "title": {
-      "part1": "Five Ways to Put",
+      "part1": "Five Ways We Put",
       "highlight": "AI to Work"
     },
-    "subtitle": "Every engagement starts with a clear outcome. This is what we actually build.",
+    "subtitle": "Every engagement starts with a concrete business outcome. These are the systems we most often take into production.",
     "cta": "Explore AI Consulting",
     "services": [
       {
         "title": "AI Agents",
-        "desc": "Autonomous agents for sales qualification, customer service and operations — connected to your tools and active 24/7.",
+        "desc": "AI agents for sales qualification, customer service, and operational workflows — connected to your tools and available around the clock.",
         "link": "AI Agents & Automation"
       },
       {
         "title": "Workflow Automation",
-        "desc": "Replace manual processes with automated pipelines. Lead routing, document processing, CRM sync and scheduling.",
+        "desc": "Replace repetitive manual work with automations for lead routing, document processing, reporting, CRM updates, and scheduling.",
         "link": "AI Automation Netherlands"
       },
       {
         "title": "AI System Integration",
-        "desc": "Connect AI to the systems you already use. We manage the integration layer between AI models and your existing stack.",
+        "desc": "Connect AI to the systems you already use through integration layers designed for your real operating environment.",
         "link": "IT System Integration"
       },
       {
         "title": "Internal AI Tools",
-        "desc": "Custom dashboards and admin tools that eliminate repetitive internal work. Built for your team's real workflow.",
+        "desc": "Custom dashboards and internal tools that reduce repetitive admin work and make everyday operational decisions easier.",
         "link": "Custom Internal Tools"
       },
       {
         "title": "Custom LLM Deployments",
-        "desc": "Private language models fine-tuned for your domain. Document classification, response generation, internal knowledge retrieval.",
+        "desc": "Private model deployments for classification, response generation, and internal knowledge workflows where generic tools fall short.",
         "link": "Custom LLM Development"
       }
     ]
@@ -914,22 +914,22 @@
       "part1": "Automation Built for",
       "highlight": "Your Industry"
     },
-    "subtitle": "We have automated operations in service-intensive, regulated industries in the Netherlands.",
+    "subtitle": "We build automation for service-heavy and regulated industries where response time, admin load, and operational consistency matter.",
     "viewAll": "View All Industries",
     "industries": [
       {
         "title": "Accounting & Finance",
-        "desc": "Automate client intake, document processing, tax workflows and compliance reporting. Less admin, same team.",
+        "desc": "Automate client intake, document processing, tax workflows, and compliance reporting. Less admin pressure, without expanding the team.",
         "link": "Accounting Automation"
       },
       {
         "title": "Real Estate",
-        "desc": "Lead qualification, inquiry routing, contract processing and automated client follow-up.",
+        "desc": "Lead qualification, inquiry routing, contract processing, and automated client follow-up for faster response and cleaner handoffs.",
         "link": "Real Estate Automation"
       },
       {
         "title": "Health & Clinics",
-        "desc": "Appointment booking, patient follow-up and admin reduction for dental, aesthetic and physiotherapy clinics.",
+        "desc": "Appointment booking, patient follow-up, and lower admin load for medical, dental, aesthetic, physiotherapy, and veterinary clinics.",
         "link": "Clinic Automation"
       }
     ]
@@ -982,14 +982,14 @@
       "part2": "That Ships to ",
       "highlight2": "Production"
     },
-    "description": "We design, build and deploy AI systems for companies ready to go beyond experiments — connected to your stack, your data and your team's real workflows.",
+    "description": "We design, build, and launch AI systems for companies that need operational results, not more experiments — connected to your stack, your data, and the workflows your team already runs.",
     "cta": {
       "initialize": "Book an AI Strategy Call",
       "caseStudies": "Explore AI Consulting"
     }
   },
   "Footer": {
-    "brandDescription": "Architecting the future of enterprise automation and AI-driven workflows.",
+    "brandDescription": "We design and deliver enterprise automation and AI-driven workflows built for real operations.",
     "Services": {
       "title": "Services",
       "items": {
@@ -1307,21 +1307,21 @@
       "badge": "AI Consulting · Production Systems",
       "title": {
         "part1": "AI Consulting",
-        "part2": "for Companies",
-        "highlight": "Ready for Production."
+        "part2": "for Teams That Need",
+        "highlight": "Production, Not Another Pilot."
       },
-      "description": "Most AI projects fail between proof of concept and production. We close that gap — designing and deploying <strong class='text-white'>AI agents, automated flows and integrations</strong> that run in production, not in a proof of concept.",
+      "description": "Most AI projects stall after the demo. We help teams turn promising ideas into <strong class='text-white'>production AI systems</strong> with the right architecture, integrations, and delivery discipline to make them stick.",
       "cta": "Book an AI Strategy Call",
       "whyUs": {
         "title": {
-          "part1": "Implementation,",
-          "highlight": "Not Just Strategy."
+          "part1": "Execution,",
+          "highlight": "Not Just Advice."
         },
-        "description": "Most consultants deliver a roadmap and leave. We stay until it's in production. Every project ends with a live system in your infrastructure — not a presentation.",
+        "description": "Most consultants stop at the roadmap. We stay through implementation, launch, and handoff so the work ends in a live system your team can actually use.",
         "list": {
-          "0": "Production systems, not sandbox experiments",
-          "1": "Integrated with your existing stack and data",
-          "2": "Clear ROI — estimated before we start, measured after"
+          "0": "Production delivery, not sandbox experiments",
+          "1": "Connected to your existing stack, data, and workflows",
+          "2": "Clear commercial scope before build starts"
         },
         "systemStatus": {
           "label": "System Status",
@@ -1334,60 +1334,60 @@
     },
     "Banner": {
       "badge": "AI Systems · Production Grade",
-      "title": "Your AI Pilot",
-      "highlight": "Never Made It to Production.",
-      "description": "Most companies have AI experiments trapped in a sandbox. We build systems that run in production — connected to your CRM, your data and your team's real workflows.",
+      "title": "Too Many AI Projects",
+      "highlight": "Stop at the Pilot Stage.",
+      "description": "We help teams move from isolated AI experiments to production systems connected to their stack, data, and day-to-day operations.",
       "cta1": "Book an AI Strategy Call",
       "cta2": "Estimate Your ROI",
       "cards": {
         "0": {
-          "title": "AI Systems in Production",
-          "desc": "No demos. Live automation deployed in your infrastructure."
+          "title": "Production delivery",
+          "desc": "Systems that go live inside your real environment, not another internal demo."
         },
         "1": {
-          "title": "Flow Orchestration",
-          "desc": "n8n self-hosted: full data control, unlimited executions, fixed cost."
+          "title": "Integration-first architecture",
+          "desc": "Automations designed around your CRM, internal tools, and operational workflows."
         },
         "2": {
-          "title": "ROI Before You Start",
-          "desc": "Every project begins with a clear cost-benefit analysis."
+          "title": "Commercial scope upfront",
+          "desc": "Clear scope, delivery model, and expected value before implementation starts."
         }
       }
     },
     "ROICalculator": {
       "badge": "Efficiency Audit",
-      "title": "How much is",
-      "highlight": "Inefficiency?",
+      "title": "What is",
+      "highlight": "Inefficiency Costing You?",
       "subtitle": "",
-      "description": "Manual processes are a silent tax on your revenue. Calculate how much capital you burn on tasks an AI Agent would do for a fraction of the cost.",
+      "description": "Manual work drains margin every week. Estimate how much time and money you are spending on repetitive tasks that could be automated.",
       "realityCard": {
-        "title": "The Reality Today",
-        "description": "With rising labour costs, paying specialists to punch in data is not sustainable. Automation is no longer a luxury, it's survival."
+        "title": "What This Looks Like Today",
+        "description": "As labour costs rise, paying skilled people to copy data, chase updates, and handle repetitive admin becomes harder to justify. Automation is no longer optional overhead reduction. It is operational leverage."
       },
       "inputs": {
-        "employees": "Manual Team",
+        "employees": "People doing manual work",
         "employeesUnit": "People",
-        "hours": "Repetitive Hours/Week (per person)",
+        "hours": "Repetitive hours per week (per person)",
         "hoursUnit": "Hours",
-        "rate": "Average Hourly Cost",
+        "rate": "Average hourly cost",
         "rateUnit": "/hour"
       },
       "results": {
-        "monthly": "Monthly Waste",
-        "annual": "Potential Annual Savings",
-        "note": "Capital reinvestable in growth or R&D.",
-        "cta": "Stop the leak. Audit now."
+        "monthly": "Monthly cost of inefficiency",
+        "annual": "Potential annual savings",
+        "note": "Budget you can reinvest in growth, hiring, or product delivery.",
+        "cta": "See where the margin is leaking."
       }
     },
     "TopAgents": {
       "badge": "Digital Workforce",
-      "title": "Automate Sales, Operations",
-      "highlight": "and Marketing with AI.",
-      "description": "Stop hiring for repetitive tasks. Deploy specialised AI Agents that work 24/7, integrate with your tools and deliver results that scale.",
+      "title": "Automate Revenue, Service,",
+      "highlight": "and Internal Operations.",
+      "description": "Use AI agents where response time, consistency, and workload are already hurting the business. Each one is tied to a specific operational bottleneck.",
       "agents": {
         "leo": {
           "role": "AI Sales Agent",
-          "description": "Your elite salesperson who never sleeps. LEO handles leads instantly, qualifies opportunities and closes meetings 24/7.",
+            "description": "For teams losing leads to slow follow-up. LEO replies instantly, qualifies intent, and moves good opportunities to the next step without manual chasing.",
           "capabilities": [
             "Instant Response (Web/WhatsApp)",
             "Smart Qualification",
@@ -1395,12 +1395,12 @@
             "Persistent Follow-up",
             "Handoff to Humans when needed"
           ],
-          "benefit": "Scale revenue, not headcount.",
+            "benefit": "Protect response speed as pipeline volume grows.",
           "cta": "Deploy LEO"
         },
         "atlas": {
           "role": "AI Virtual Assistant",
-          "description": "Your operational backbone. ATLAS orchestrates flows, brings order to administrative chaos and keeps your team focused on what matters.",
+            "description": "For teams buried in admin. ATLAS handles recurring operational work so people can focus on exceptions, approvals, and customer-facing decisions.",
           "capabilities": [
             "Inbox Zero and Calendar on track",
             "Workflow Orchestration",
@@ -1408,12 +1408,12 @@
             "Client Onboarding",
             "Error-free Data Entry"
           ],
-          "benefit": "Eliminate operational friction.",
+            "benefit": "Reduce manual overhead across day-to-day operations.",
           "cta": "Deploy ATLAS"
         },
         "orion": {
           "role": "AI Marketing Director",
-          "description": "Data-driven precision. ORION analyses performance, optimises campaigns and detects growth opportunities invisible to the human eye.",
+            "description": "For teams making decisions with incomplete reporting. ORION helps surface performance patterns, campaign gaps, and commercial opportunities earlier.",
           "capabilities": [
             "Real-time ROI Analysis",
             "Campaign Optimisation",
@@ -1421,18 +1421,18 @@
             "Content Strategy",
             "Competitor Monitoring"
           ],
-          "benefit": "Marketing that drives profit.",
+            "benefit": "Make faster decisions with better commercial visibility.",
           "cta": "Deploy ORION"
         }
       },
       "bottleneck": {
         "badge": "The Problem",
-        "title": "The Bottleneck",
-        "subtitle": "Why scaling manually fails.",
+        "title": "What breaks first",
+        "subtitle": "Manual growth creates predictable bottlenecks.",
         "list": [
-          "Leads going cold in the inbox",
-          "Chaotic agendas",
-          "Marketing in the dark",
+          "Leads cooling off in the inbox",
+          "Unstable scheduling and handoffs",
+          "Marketing decisions made with partial data",
           "Teams on the brink of burnout"
         ],
         "resultLabel": "Result",
@@ -1440,13 +1440,13 @@
       },
       "advantage": {
         "badge": "The Solution",
-        "title": "The Agent Advantage",
-        "subtitle": "Why AI wins.",
+        "title": "Where agents help most",
+        "subtitle": "They remove delay, inconsistency, and repetitive work.",
         "list": [
-          "Immediate response 24/7",
-          "Consistent execution",
-          "Data-driven decisions",
-          "Scale without adding headcount"
+          "Faster response times",
+          "More consistent execution",
+          "Better operational visibility",
+          "Capacity without linear hiring"
         ],
         "resultLabel": "Result",
         "resultValue": "Operational Scale"
@@ -1461,17 +1461,17 @@
     },
     "Migration": {
       "badge": "Engagement Models",
-      "title": "AI Consulting Plans",
-      "highlight": "for Every Stage",
+      "title": "AI Consulting",
+      "highlight": "for Different Delivery Stages",
       "legacy": {
         "title": "AI Strategy Sprint",
-        "desc": "Flow audit + automation opportunity map.<br />Technical architecture proposal.<br />Budget and timeline estimate.<br />Fixed scope, 1–2 weeks.",
+        "desc": "Audit one workflow or business bottleneck.<br />Prioritise the highest-value automation opportunities.<br />Get a technical approach, scope, and rollout recommendation.<br />Fixed scope, 1–2 weeks.",
         "tag": "1–2 Weeks"
       },
       "optimized": {
         "tag": "Most Common",
         "title": "AI Implementation",
-        "desc": "One AI system deployed in your infrastructure.<br />Full integration + documentation.<br />Fixed price, 4–8 weeks. The code is yours.",
+        "desc": "Ship one production AI system in your environment.<br />Includes implementation, integration, testing, and handoff.<br />Fixed scope, 4–8 weeks. The code is yours.",
         "latencyLabel": "SCOPE",
         "latencyValue": "FIXED",
         "costLabel": "CODE",
@@ -1479,69 +1479,69 @@
       },
       "action": {
         "title": "Ongoing AI Partner",
-        "desc": "Your embedded AI engineering team.<br />New automations, maintenance and scale — monthly.<br />Senior engineers, direct access.",
+        "desc": "For teams with recurring implementation needs.<br />Add new automations, improve existing systems, and keep operations stable over time.<br />Senior engineers, direct access.",
         "cta1": "Book a Strategy Call",
         "cta2": "Write to Us Directly"
       }
     },
     "WhoItsFor": {
       "badge": "Who It's For",
-      "title": "AI Consulting Services",
-      "highlight": "for Your Business",
-      "description": "We work with founders, CTOs and operations leaders who have moved past the \"should we try AI?\" phase and need a technical partner that builds and deploys.",
+      "title": "A Better Fit for Teams",
+      "highlight": "Ready to Implement",
+      "description": "We work best with founders, CTOs, and operations leaders who already see where AI could help and now need a team that can scope it, build it, and take it live.",
       "items": [
-        "You have tried AI tools but have not connected them to real operations",
-        "You are spending time on tasks that should run automatically",
-        "You need a partner that builds and deploys, not just advises",
-        "You want to reduce manual workload without hiring for repetitive work",
-        "You need AI that integrates with your CRM, ERP or existing stack",
-        "You operate in the Netherlands or internationally and need senior engineering"
+        "You have tested AI tools, but nothing important is running inside real operations yet",
+        "Your team is still losing time to repetitive work that should already be automated",
+        "You need implementation and deployment, not another advisory-only engagement",
+        "You want to reduce manual workload without hiring for repetitive roles",
+        "You need AI connected to your CRM, ERP, database, or internal tooling",
+        "You need senior engineering capacity in the Netherlands or across international teams"
       ]
     },
     "Pricing": {
       "badge": "Pricing",
       "title": "Clear AI consulting pricing,",
-      "highlight": "with scope behind it.",
-      "subtitle": "Cheaper advisory or chatbot packages might make sense if you only need a workshop or a simple assistant. LAB is positioned for engineering: flow audits, architecture, integrations, deployment, documentation and post-launch support.",
+      "highlight": "with real delivery behind it.",
+      "subtitle": "LAB is priced for engineering work, not light advisory. That means scoping, architecture, integrations, deployment, documentation, and support after launch.",
       "recommended": "Best start",
       "items": [
         {
           "name": "Fit Check",
           "price": "Free",
           "timeline": "30 minutes",
-          "desc": "For teams that need a straight answer before buying strategy or development.",
+          "desc": "For teams that need a fast technical read before paying for a bigger engagement.",
           "href": "/#contact",
           "cta": "Check fit",
           "points": [
-            "Review of one flow or bottleneck",
-            "Honest recommendation on whether to build or not",
-            "Suggested next step if there is a real case"
+            "Review of one flow, bottleneck, or use case",
+            "Clear recommendation on whether the problem is worth solving with AI",
+            "Suggested next step if there is a strong implementation case"
           ]
         },
         {
           "name": "AI Strategy Sprint",
           "price": "€2.5k–€5k",
           "timeline": "1–2 weeks",
-          "desc": "For teams that know AI can help but need a prioritised roadmap before investing in implementation.",
+          "desc": "For teams that know AI can help but need a sharper implementation plan before committing budget.",
           "href": "/#contact",
           "cta": "Define sprint",
           "recommended": true,
           "points": [
-            "Flow audit and opportunity map",
-            "Automation backlog prioritised by ROI",
-            "Architecture, budget and timeline estimate"
+            "Workflow audit and opportunity map",
+            "Prioritised backlog based on value and complexity",
+            "Architecture, budget, and delivery estimate"
           ]
         },
         {
           "name": "AI Implementation",
           "price": "From €8k",
           "timeline": "4–8 weeks",
-          "desc": "For teams that want an AI system in production connected to their real business stack.",
+          "desc": "For teams ready to ship one production AI system connected to their real business environment.",
           "href": "/ai-consulting",
           "cta": "Plan development",
           "points": [
             "Fixed scope and delivery plan",
-            "Integrations with CRM, API, database or flows",
+            "Integrations with CRM, APIs, databases, or internal workflows",
             "Documentation and 30 days of support"
           ]
         },
@@ -1549,58 +1549,58 @@
           "name": "Ongoing AI Partner",
           "price": "From €5k/mo",
           "timeline": "Monthly",
-          "desc": "For companies that want ongoing AI engineering without hiring a full internal team.",
+          "desc": "For companies that need ongoing AI engineering capacity without building a full in-house team.",
           "href": "/#contact",
           "cta": "Discuss scope",
           "points": [
             "New automations and improvements",
-            "Monitoring, fixes and flow changes",
+            "Monitoring, fixes, and flow updates",
             "Quarterly roadmap and ROI review"
           ]
         }
       ],
       "comparison": {
-        "title": "How we compare to cheaper AI consultancies",
-        "desc": "If the goal is a generic audit, training or a basic chatbot, a lower entry price may make sense. LAB should win when the buyer values technical ownership and production systems.",
+        "title": "How this compares to lower-cost AI offers",
+        "desc": "If you only need training, a generic audit, or a simple assistant, a lower entry price may be enough. LAB is a better fit when the priority is technical ownership and production delivery.",
         "points": [
-          "The Strategy Sprint overlaps with premium AI audit pricing because it includes technical architecture and an executable plan.",
-          "Implementation starts higher than a basic chatbot because it includes real integrations, deployment, documentation and support.",
-          "The ongoing partner resembles an external AI department, but is positioned as senior engineering capacity and delivered systems."
+          "The Strategy Sprint is priced above a lightweight audit because it includes technical architecture and an executable delivery plan.",
+          "Implementation starts higher than a basic chatbot project because it includes real integrations, deployment, documentation, and support.",
+          "The ongoing partner offer is closer to embedded senior engineering capacity than outsourced advisory."
         ]
       }
     },
     "WhatWeBuildInline": {
       "badge": "What We Build",
       "title": "Five AI Systems We",
-      "highlight": "Ship to Production",
+      "highlight": "Deliver in Production",
       "services": [
         {
           "title": "AI Sales and Qualification Agents",
-          "desc": "Respond to leads 24/7, qualify according to your criteria, book meetings and hand over with full context.",
+          "desc": "Capture inbound demand, qualify intent, book meetings, and pass the conversation to your team with the right context.",
           "label": "AI Agents & Automation",
           "href": "/expertise/ai-agents-automation"
         },
         {
           "title": "Flow and Operations Automation",
-          "desc": "Automate document processing, agendas, CRM sync and approval flows in n8n or custom pipelines.",
+          "desc": "Reduce repetitive work across reporting, approvals, admin, and internal coordination with production-ready automations.",
           "label": "AI Automation Netherlands",
           "href": "/ai-consulting"
         },
         {
           "title": "AI System Integration",
-          "desc": "Connect AI to your CRM, ERP, databases and communication platforms through proper API integrations.",
+          "desc": "Connect AI to your CRM, ERP, databases, and communication tools through integrations designed for real operations.",
           "label": "IT System Integration",
           "href": "/it-system-integration"
         },
         {
           "title": "Internal AI Tools",
-          "desc": "Custom admin dashboards and tools that eliminate repetitive internal work and data reconciliation.",
+          "desc": "Build internal tools and dashboards that remove repetitive admin work, fragmented reporting, and manual reconciliation.",
           "label": "Custom Internal Tools",
           "href": "/services/custom-internal-tools-development"
         },
         {
           "title": "Custom LLM Deployments",
-          "desc": "Private language models fine-tuned for classification, response generation and internal knowledge retrieval.",
+          "desc": "Deploy private language models for classification, response generation, and internal knowledge workflows where off-the-shelf tools fall short.",
           "label": "Custom LLM Development",
           "href": "/expertise/custom-llm-development"
         }
@@ -1608,9 +1608,9 @@
     },
     "UseCases": {
       "badge": "Use Cases",
-      "title": "What Companies",
+      "title": "What Teams Usually",
       "highlight": "Automate First",
-      "subtitle": "These are the highest-ROI starting points we see across every sector — each goes into production in weeks, not quarters.",
+      "subtitle": "These are the highest-leverage starting points we see across sectors. They solve operational bottlenecks quickly and usually reach production in weeks, not quarters.",
       "labels": {
         "problem": "Problem",
         "solution": "Solution",
@@ -1619,24 +1619,24 @@
       "items": [
         {
           "number": "01",
-          "title": "Qualify Leads Without Hiring",
-          "problem": "Sales teams spend hours chasing unqualified leads and writing follow-up emails that should be automated.",
-          "solution": "An AI agent manages incoming queries 24/7 — qualifies according to your criteria, asks follow-up questions and books meetings for leads that pass the filter.",
-          "outcome": "Qualified meetings booked automatically. Sales only talk to prospects ready to decide."
+          "title": "Qualify Leads Without Adding Headcount",
+          "problem": "Sales teams lose time to slow replies, weak qualification, and follow-up work that should not depend on manual effort.",
+          "solution": "An AI agent handles inbound demand around the clock, asks the right qualifying questions, and routes serious opportunities into the next step automatically.",
+          "outcome": "More qualified meetings, faster response times, and less manual follow-up for the sales team."
         },
         {
           "number": "02",
-          "title": "Eliminate Manual Reports",
-          "problem": "Operations or finance teams spend hours every week pulling data from multiple systems to build the same reports.",
-          "solution": "Automated pipelines collect, transform and deliver structured reports to Slack, email or a dashboard — on schedule, with zero human intervention.",
-          "outcome": "Weekly report hours eliminated. Data is always up to date, never late."
+          "title": "Eliminate Repetitive Reporting Work",
+          "problem": "Operations and finance teams still spend hours every week pulling the same data from multiple systems to build recurring reports.",
+          "solution": "Automated pipelines collect, transform, and deliver structured reporting to Slack, email, or dashboards on a reliable schedule.",
+          "outcome": "Less analyst time lost to repetitive reporting, and more reliable numbers for day-to-day decisions."
         },
         {
           "number": "03",
           "title": "Automate Client Onboarding",
-          "problem": "Every new client triggers a manual sequence of emails, document requests, CRM updates and internal handoffs.",
-          "solution": "An automation triggers on contract close: sends welcome sequences, requests documents, creates project records and notifies the right people automatically.",
-          "outcome": "Onboarding completes in hours instead of days. No lost handoffs, no chasing anyone."
+          "problem": "Each new client still triggers a messy chain of emails, document requests, CRM updates, and internal handoffs.",
+          "solution": "Once a deal closes, automation launches the onboarding sequence, collects the right information, creates records, and alerts the right people automatically.",
+          "outcome": "Faster onboarding, cleaner handoffs, and fewer delays between sale and delivery."
         }
       ]
     },
@@ -2894,7 +2894,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "PainPoints": {
       "title": "The Real Cost of Running a Healthcare Practice in 2026",
       "items": [
@@ -3080,7 +3080,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "PainPoints": {
       "title": "Where Your Clinic Loses Time and Revenue",
       "items": [
@@ -3266,7 +3266,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "IndustryMetrics": [
       { "value": "45%", "label": "Lead-to-booking conversion" },
       { "value": "€850", "label": "Average client lifetime value increase" },
@@ -3458,7 +3458,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "PainPoints": {
       "title": "The Real Cost of Running a Veterinary Clinic in 2026",
       "items": [
@@ -3634,7 +3634,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English. However, we also offer and create systems in Dutch, as we have a specialist who reviews content in that language.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "IndustryMetrics": [
       { "value": "92%", "label": "of leads responded to within 5 minutes" },
       { "value": "3x", "label": "more viewings booked with instant scheduling" },
@@ -3816,7 +3816,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English. However, we also offer and create systems in Dutch, as we have a specialist who reviews content in that language.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "IndustryMetrics": [
       { "value": "92%", "label": "of leads responded to within 5 minutes" },
       { "value": "3x", "label": "more viewings booked with instant response" },
@@ -3990,15 +3990,15 @@
       "title": {
         "part1": "Your Front Desk",
         "highlight": "Is Drowning.",
-        "part2": "Automation Saves Lives."
+        "part2": "Automation Gives Time Back."
       },
-      "description": "CodeHunter Lab builds <strong>automation systems for healthcare practices</strong> in the Netherlands — dental clinics, physiotherapy practices, veterinary clinics, and medical centres. Appointment reminders, patient reactivation, lead-to-booking flows, and practice dashboards. Less admin. More patients. Zero no-shows.",
+      "description": "CodeHunter Lab builds <strong>automation systems for healthcare practices</strong> in the Netherlands — dental clinics, physiotherapy practices, veterinary clinics, and medical centres. Appointment reminders, patient reactivation, lead-to-booking flows, and practice dashboards. Less admin. Faster follow-up. Fewer missed appointments.",
       "cta": {
         "primary": "Book a Free Practice Audit",
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "IndustryMetrics": [
       { "value": "35%", "label": "No-show reduction with automated reminders" },
       { "value": "2 min", "label": "Average response time vs 4-hour manual" },
@@ -4180,7 +4180,7 @@
         "secondary": "See What We Automate"
       }
     },
-    "LanguageNote": "Although we are located in the Netherlands, our main method of communication is English, as our tech team speaks English. However, we also offer and create websites in Dutch, since we have a specialist who proofreads Dutch content.",
+    "LanguageNote": "We work primarily in English and can also support Dutch-language delivery for client-facing content and workflows.",
     "IndustryMetrics": [
       { "value": "85%", "label": "utilization rate achieved after automation" },
       { "value": "€200K", "label": "billable hours recovered annually" },

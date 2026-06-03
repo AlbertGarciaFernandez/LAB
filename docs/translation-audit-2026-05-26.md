@@ -12,6 +12,21 @@ Included in full localization audit:
 - Industry pages
 - Shared metadata for those pages
 
+Locale targets for this scope:
+
+- English source copy for the commercial site
+- Spanish localized as Spain Spanish (`es-ES` tone and phrasing)
+- Dutch localized for the Netherlands (`nl-NL` tone and phrasing)
+
+Approved technical/product terms that may remain in English when appropriate:
+
+- `Next.js`
+- `React`
+- `n8n`
+- `WhatsApp`
+- `CRM`
+- `API`
+
 Excluded from full localization target:
 
 - `/[locale]/insights/**` (English-only editorial)
@@ -37,6 +52,7 @@ Rule:
 - editorial body remains in English
 - locale routes may exist technically
 - they are not treated as fully localized equivalents for SEO
+- localized navigation or notices may reference these sections, but must not imply that translated editorial versions exist
 
 ## Lab Exception
 

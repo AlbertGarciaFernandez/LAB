@@ -99,10 +99,22 @@ export default async function Page({ params }: { params: { locale: string } }) {
   return (
     <>
       <ServiceSchema
-        name="WhatsApp Business Automation Netherlands"
-        description="WhatsApp Business API automation, chatbot workflows, CRM sync, and campaign automation for operations and growth teams."
+        name={getLocaleValue(params.locale, {
+          en: "WhatsApp Business Automation Netherlands",
+          es: "Automatización de WhatsApp Business en Países Bajos",
+          nl: "WhatsApp Business Automatisering Nederland",
+        })}
+        description={getLocaleValue(params.locale, {
+          en: "WhatsApp Business API automation, chatbot workflows, CRM sync, and campaign automation for operations and growth teams.",
+          es: "Automatización con la API de WhatsApp Business, flujos con chatbots, sincronización con CRM y campañas automáticas para equipos de operaciones y crecimiento.",
+          nl: "Automatisering met de WhatsApp Business API, chatbotworkflows, CRM-sync en campagne-automatisering voor operations- en growthteams.",
+        })}
         url={localizedUrl(params.locale, path)}
-        serviceType="WhatsApp Business Automation"
+        serviceType={getLocaleValue(params.locale, {
+          en: "WhatsApp Business Automation",
+          es: "Automatización de WhatsApp Business",
+          nl: "WhatsApp Business Automatisering",
+        })}
       />
       <WhatsAppAutomationContent
         hero={hero}

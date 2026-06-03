@@ -36,7 +36,11 @@ export default function CustomInternalToolsContent() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Custom Internal Tools Development",
+    serviceType: getLocaleValue(locale, {
+      en: "Custom Internal Tools Development",
+      es: "Desarrollo de herramientas internas a medida",
+      nl: "Ontwikkeling van maatwerk interne tools",
+    }),
     provider: {
       "@type": "Organization",
       name: "CodeHunter Lab",
@@ -50,23 +54,74 @@ export default function CustomInternalToolsContent() {
       },
       geoRadius: "50000",
     },
-    description:
-      "Expert developer of custom internal tools, admin panels, and operation dashboards. Scale your business without per-user fees in the Netherlands.",
+    description: getLocaleValue(locale, {
+      en: "Custom internal tools, admin panels, and operations dashboards for companies that want to replace manual work and per-user SaaS costs.",
+      es: "Herramientas internas a medida, paneles de administración y cuadros de mando operativos para empresas que quieren sustituir trabajo manual y licencias SaaS por usuario.",
+      nl: "Maatwerk interne tools, adminpanelen en operationele dashboards voor bedrijven die handmatig werk en SaaS-kosten per gebruiker willen vervangen.",
+    }),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Internal Tools Services",
+      name: getLocaleValue(locale, {
+        en: "Internal Tools Services",
+        es: "Servicios de herramientas internas",
+        nl: "Interne-toolsdiensten",
+      }),
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Admin Panels" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Operation Dashboards" } },
         {
           "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Workflow Automation Tools" },
+          itemOffered: {
+            "@type": "Service",
+            name: getLocaleValue(locale, {
+              en: "Custom Admin Panels",
+              es: "Paneles de administración a medida",
+              nl: "Maatwerk adminpanelen",
+            }),
+          },
         },
         {
           "@type": "Offer",
-          itemOffered: { "@type": "Service", name: "Resource Management Systems" },
+          itemOffered: {
+            "@type": "Service",
+            name: getLocaleValue(locale, {
+              en: "Operations Dashboards",
+              es: "Cuadros de mando operativos",
+              nl: "Operationele dashboards",
+            }),
+          },
         },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Client Portals" } },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: getLocaleValue(locale, {
+              en: "Workflow Automation Tools",
+              es: "Herramientas de automatización de flujos",
+              nl: "Workflow-automatiseringstools",
+            }),
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: getLocaleValue(locale, {
+              en: "Resource Management Systems",
+              es: "Sistemas de gestión de recursos",
+              nl: "Resource-managementsystemen",
+            }),
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: getLocaleValue(locale, {
+              en: "Client Portals",
+              es: "Portales de cliente",
+              nl: "Klantportalen",
+            }),
+          },
+        },
       ],
     },
   };

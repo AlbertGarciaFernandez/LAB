@@ -3,6 +3,7 @@ import ServiceSchema from "@/components/ui/ServiceSchema";
 import { getTranslations } from "next-intl/server";
 import { createPageMetadata } from "@/utils/metadata";
 import { localizedUrl } from "@/utils/metadata";
+import { getLocaleValue } from "../_shared/localeCopy";
 import N8nConsultantContent from "./PageContent";
 
 const path = "/n8n-consultant-netherlands";
@@ -15,21 +16,39 @@ export async function generateMetadata({
   return createPageMetadata({
     locale: params.locale,
     path,
-    title: "n8n Consultant Netherlands | Workflow Automation Experts",
-    description:
-      "Expert n8n consultants in the Netherlands. We design, build, and optimize self-hosted workflow automation — migrating from Zapier and Make to n8n for better performance, lower costs, and full data control.",
-    keywords: [
-      "n8n consultant Netherlands",
-      "n8n workflow automation",
-      "migrate from Zapier to n8n",
-      "self-hosted automation Netherlands",
-      "n8n expert Amsterdam",
-      "workflow automation agency Netherlands",
-      "n8n migration consulting",
-      "Make to n8n migration",
-      "n8n integration services",
-      "custom workflow automation Netherlands",
-    ],
+    title: getLocaleValue(params.locale, {
+      en: "n8n Consultant Netherlands | Workflow Automation Experts",
+      es: "Consultoría n8n en Países Bajos | Expertos en automatización",
+      nl: "n8n consultancy Nederland | Experts in workflow-automatisering",
+    }),
+    description: getLocaleValue(params.locale, {
+      en: "Expert n8n consultants in the Netherlands. We design, build, and optimize self-hosted workflow automation — migrating from Zapier and Make to n8n for better performance, lower costs, and full data control.",
+      es: "Consultoría n8n en Países Bajos. Diseñamos, desarrollamos y optimizamos automatizaciones self-hosted, migrando de Zapier y Make a n8n para ganar rendimiento, reducir costes y controlar los datos.",
+      nl: "n8n consultancy in Nederland. We ontwerpen, bouwen en optimaliseren self-hosted workflow-automatisering en migreren van Zapier en Make naar n8n voor betere performance, lagere kosten en volledige datacontrole.",
+    }),
+    keywords: getLocaleValue(params.locale, {
+      en: [
+        "n8n consultant Netherlands",
+        "n8n workflow automation",
+        "migrate from Zapier to n8n",
+        "self-hosted automation Netherlands",
+        "n8n migration consulting",
+      ],
+      es: [
+        "consultoría n8n países bajos",
+        "automatización n8n",
+        "migración zapier a n8n",
+        "automatización self-hosted",
+        "servicios n8n",
+      ],
+      nl: [
+        "n8n consultancy nederland",
+        "n8n workflow automatisering",
+        "zapier naar n8n migratie",
+        "self-hosted automatisering",
+        "n8n migratie consultancy",
+      ],
+    }),
   });
 }
 
@@ -105,10 +124,22 @@ export default async function Page({ params }: { params: { locale: string } }) {
   return (
     <>
       <ServiceSchema
-        name="n8n Consultant Netherlands"
-        description="n8n consulting and migration services from Zapier and Make to scalable self-hosted automation infrastructure."
+        name={getLocaleValue(params.locale, {
+          en: "n8n Consultant Netherlands",
+          es: "Consultoría n8n en Países Bajos",
+          nl: "n8n consultancy Nederland",
+        })}
+        description={getLocaleValue(params.locale, {
+          en: "n8n consulting and migration services from Zapier and Make to scalable self-hosted automation infrastructure.",
+          es: "Servicios de consultoría y migración a n8n desde Zapier y Make hacia una infraestructura de automatización self-hosted y escalable.",
+          nl: "n8n-consultancy en migratieservices van Zapier en Make naar schaalbare self-hosted automatiseringsinfrastructuur.",
+        })}
         url={localizedUrl(params.locale, path)}
-        serviceType="n8n Consulting"
+        serviceType={getLocaleValue(params.locale, {
+          en: "n8n Consulting",
+          es: "Consultoría n8n",
+          nl: "n8n consultancy",
+        })}
       />
       <N8nConsultantContent
         locale={params.locale}

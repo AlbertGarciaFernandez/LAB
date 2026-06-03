@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "title": "Agencia de Automatización AI en Países Bajos | CodeHunter Lab",
-    "description": "Agencia de automatización AI en los Países Bajos para agentes de IA, flujos de trabajo n8n e integraciones personalizadas. Sistemas en producción, no demos. Con sede en Leiden.",
+    "title": "Agencia de automatización con IA en Países Bajos | CodeHunter Lab",
+    "description": "Agencia de automatización con IA en los Países Bajos para agentes de IA, flujos de trabajo con n8n e integraciones a medida. Sistemas en producción, no demos. Con base en Leiden.",
     "keywords": [
-      "agencia automatización AI Países Bajos",
-      "consultoría automatización AI Países Bajos",
-      "agentes AI Países Bajos",
+      "agencia automatización IA Países Bajos",
+      "consultoría automatización IA Países Bajos",
+      "agentes IA Países Bajos",
       "flujos n8n Países Bajos",
       "agencia automatización flujos Países Bajos",
-      "integración sistemas AI",
-      "integraciones AI personalizadas Países Bajos",
-      "automatización AI Leiden",
+      "integración de sistemas IA",
+      "integraciones IA personalizadas Países Bajos",
+      "automatización IA Leiden",
       "automatización WhatsApp Países Bajos",
-      "agentes voz AI Países Bajos"
+      "agentes de voz IA Países Bajos"
     ]
   },
   "FloatingContactCta": {
@@ -62,7 +62,7 @@
       "name": "Tu nombre",
       "company": "Nombre de la empresa",
       "email": "tu@empresa.com",
-      "role": "Founder, responsable de operaciones, CTO...",
+      "role": "Fundador, responsable de operaciones, CTO...",
       "phone": "Opcional",
       "budget": "Selecciona una opción",
       "aiGoal": "Respuesta a leads, automatización operativa, herramientas internas...",
@@ -113,8 +113,8 @@
       "TheLab": "El Lab",
       "Bio": "Biografía",
       "Process": "Proceso",
-      "Insights": "Ideas",
-      "CaseStudies": "Casos Estudio",
+      "Insights": "Insights (EN)",
+      "CaseStudies": "Case Studies (EN)",
       "services": {
         "AIConsulting": "Consultoría IA",
         "ReactConsulting": "Consultoría React",
@@ -148,19 +148,19 @@
   "Hero": {
     "subHeader": "Consultoría IA · Automatización IA · Sistemas de Producción",
     "title": {
-      "part1": "Consultoría IA & ",
+      "part1": "Consultoría IA y ",
       "highlight1": "Automatización",
-      "part2": "Que Llega a ",
-      "highlight2": "Producción"
+      "part2": "pensadas para ",
+      "highlight2": "producción"
     },
-    "description": "Diseñamos, construimos y desplegamos sistemas IA para empresas listas para ir más allá de los experimentos — conectados a tu stack, tus datos y los flujos reales de tu equipo.",
+    "description": "Diseñamos, construimos y ponemos en marcha sistemas de IA para empresas que necesitan resultados operativos reales, no más experimentos: conectados con tu stack, tus datos y los flujos que tu equipo ya utiliza.",
     "cta": {
       "initialize": "Reservar Llamada de Estrategia IA",
       "caseStudies": "Explorar Consultoría IA"
     }
   },
   "Footer": {
-    "brandDescription": "Arquitectando el futuro de la automatización empresarial y flujos de trabajo con IA.",
+    "brandDescription": "Diseñamos el futuro de la automatización empresarial y de los flujos de trabajo con IA.",
     "Services": {
       "title": "Servicios",
       "items": {
@@ -191,7 +191,7 @@
       }
     },
     "Insights": {
-      "title": "Ideas",
+      "title": "Insights (EN)",
       "items": {
         "automation": "Insights de Automatización IA",
         "n8n": "Consultoría n8n Países Bajos",
@@ -238,35 +238,35 @@
   "WhatWeBuild": {
     "badge": "Qué Construimos",
     "title": {
-      "part1": "Cinco Formas de Poner",
-      "highlight": "la IA a Trabajar"
+      "part1": "Cinco formas en las que ponemos",
+      "highlight": "la IA a trabajar"
     },
-    "subtitle": "Cada proyecto parte de un resultado claro. Esto es lo que construimos.",
+    "subtitle": "Cada colaboración parte de un objetivo de negocio concreto. Estos son los sistemas que más solemos llevar a producción.",
     "cta": "Explorar Consultoría IA",
     "services": [
       {
         "title": "Agentes IA",
-        "desc": "Agentes autónomos para cualificación de leads, atención al cliente y operaciones — conectados a tus herramientas y activos 24/7.",
+        "desc": "Agentes de IA para cualificar leads, atender clientes y ejecutar flujos operativos, conectados con tus herramientas y disponibles 24/7.",
         "link": "Agentes IA & Automatización"
       },
       {
         "title": "Automatización de Flujos",
-        "desc": "Sustituye procesos manuales por pipelines automatizados. Enrutamiento de leads, procesamiento de documentos, sincronización de CRM.",
+        "desc": "Sustituye trabajo repetitivo por automatizaciones para enrutado de leads, procesamiento documental, reporting y actualización de CRM.",
         "link": "Automatización IA Países Bajos"
       },
       {
         "title": "Integración de Sistemas IA",
-        "desc": "Conecta la IA a los sistemas que ya usas. Gestionamos la capa de integración entre modelos IA y tu stack existente.",
+        "desc": "Conecta la IA con los sistemas que ya utilizas mediante integraciones pensadas para tu stack y tu operativa real.",
         "link": "Integración de Sistemas IT"
       },
       {
         "title": "Herramientas Internas con IA",
-        "desc": "Dashboards y herramientas administrativas a medida que eliminan el trabajo interno repetitivo.",
+        "desc": "Dashboards y herramientas internas a medida para reducir trabajo administrativo repetitivo y facilitar decisiones del día a día.",
         "link": "Herramientas Internas"
       },
       {
         "title": "LLMs Personalizados",
-        "desc": "Modelos de lenguaje privados entrenados para tu dominio. Clasificación de documentos, generación de respuestas, base de conocimiento interna.",
+        "desc": "Despliegues de modelos privados para clasificación, generación de respuestas y flujos de conocimiento interno cuando las herramientas genéricas no bastan.",
         "link": "Desarrollo de LLM Personalizado"
       }
     ]
@@ -292,7 +292,7 @@
       },
       {
         "title": "Salud y Clínicas",
-        "desc": "Reserva de citas, seguimiento de pacientes y reducción de carga administrativa para clínicas médicas, dentistas, fisioterapeutas y veterinarios, estéticas y de fisioterapia.",
+        "desc": "Reserva de citas, seguimiento de pacientes y reducción de carga administrativa para clínicas médicas, dentales, estéticas, de fisioterapia y veterinaria.",
         "link": "Automatización de Clínicas"
       }
     ]
@@ -540,21 +540,21 @@
       "badge": "Consultoría IA · Sistemas de Producción",
       "title": {
         "part1": "Consultoría IA",
-        "part2": "para Empresas",
-        "highlight": "Listas para Producción."
+        "part2": "para Equipos que Necesitan",
+        "highlight": "Producción, No Otro Piloto."
       },
-      "description": "La mayoría de proyectos IA fracasan entre la prueba de concepto y la producción. Cerramos esa brecha — diseñando y desplegando <strong class='text-white'>agentes IA, flujos automatizados e integraciones</strong> que corren en producción, no en una prueba de concepto.",
+      "description": "La mayoría de proyectos de IA se quedan atascados después de la demo. Ayudamos a los equipos a convertir buenas ideas en <strong class='text-white'>sistemas de IA en producción</strong> con la arquitectura, las integraciones y la disciplina de entrega necesarias para que funcionen de verdad.",
       "cta": "Reservar Llamada de Estrategia IA",
       "whyUs": {
         "title": {
-          "part1": "Implementación,",
-          "highlight": "No Solo Estrategia."
+          "part1": "Ejecución,",
+          "highlight": "No Solo Consejo."
         },
-        "description": "La mayoría de consultores entregan un roadmap y se van. Nosotros nos quedamos hasta que está en producción. Cada proyecto termina con un sistema vivo en tu infraestructura — no con una presentación.",
+        "description": "La mayoría de consultores se quedan en el roadmap. Nosotros acompañamos la implementación, la puesta en marcha y el handoff para que el trabajo termine en un sistema real que tu equipo pueda usar.",
         "list": {
-          "0": "Sistemas en producción, no experimentos en sandbox",
-          "1": "Integrado con tu stack y datos existentes",
-          "2": "ROI claro — estimado antes de empezar, medido después"
+          "0": "Entrega en producción, no experimentos en sandbox",
+          "1": "Conectado con tu stack, tus datos y tus flujos reales",
+          "2": "Alcance comercial claro antes de empezar a construir"
         },
         "systemStatus": {
           "label": "Estado del Sistema",
@@ -567,60 +567,60 @@
     },
     "Banner": {
       "badge": "Sistemas IA · Nivel Producción",
-      "title": "Tu Piloto de IA",
-      "highlight": "Nunca Llegó a Producción.",
-      "description": "La mayoría de empresas tienen experimentos de IA encerrados en un sandbox. Construimos sistemas que corren en producción — conectados a tu CRM, tus datos y los flujos reales de tu equipo.",
+      "title": "Demasiados proyectos de IA",
+      "highlight": "se quedan en el piloto.",
+      "description": "Ayudamos a los equipos a pasar de experimentos aislados de IA a sistemas en producción conectados con su stack, sus datos y su operativa diaria.",
       "cta1": "Reservar Llamada de Estrategia IA",
       "cta2": "Estimar tu ROI",
       "cards": {
         "0": {
-          "title": "Sistemas IA en Producción",
-          "desc": "No demos. Automatización en vivo desplegada en tu infraestructura."
+          "title": "Entrega en producción",
+          "desc": "Sistemas que salen a producción en tu entorno real, no otra demo interna."
         },
         "1": {
-          "title": "Orquestación de Flujos",
-          "desc": "n8n self-hosted: control total de datos, ejecuciones ilimitadas, coste fijo."
+          "title": "Arquitectura pensada para integrarse",
+          "desc": "Automatizaciones diseñadas alrededor de tu CRM, tus herramientas internas y tus flujos operativos."
         },
         "2": {
-          "title": "ROI Antes de Empezar",
-          "desc": "Cada proyecto comienza con un análisis claro de coste-beneficio."
+          "title": "Alcance comercial claro desde el inicio",
+          "desc": "Alcance, modelo de entrega y valor esperado definidos antes de empezar a implementar."
         }
       }
     },
     "ROICalculator": {
       "badge": "Auditoría de Eficiencia",
-      "title": "¿Cuánto te cuesta la",
-      "highlight": "Ineficiencia?",
+      "title": "¿Cuánto te está costando la",
+      "highlight": "ineficiencia?",
       "subtitle": "",
-      "description": "Los procesos manuales son un impuesto silencioso a tu facturación. Calcula cuánto capital quemas en tareas que un Agente IA haría por una fracción del coste.",
+      "description": "El trabajo manual erosiona el margen cada semana. Estima cuánto tiempo y dinero estás dedicando a tareas repetitivas que podrían automatizarse.",
       "realityCard": {
-        "title": "La Realidad Hoy",
-        "description": "Con costes laborales al alza, pagar a especialistas por picar datos no es sostenible. La automatización ya no es un lujo, es supervivencia."
+        "title": "Cómo se traduce hoy en día",
+        "description": "Con los costes laborales al alza, cada vez cuesta más justificar que perfiles cualificados dediquen horas a copiar datos, perseguir tareas o gestionar trabajo repetitivo. La automatización ya no es solo eficiencia: es capacidad operativa."
       },
       "inputs": {
-        "employees": "Equipo Manual",
+        "employees": "Personas dedicadas a trabajo manual",
         "employeesUnit": "Personas",
-        "hours": "Horas Repetitivas/Semana (por persona)",
+        "hours": "Horas repetitivas por semana (por persona)",
         "hoursUnit": "Horas",
-        "rate": "Coste Hora Promedio",
+        "rate": "Coste medio por hora",
         "rateUnit": "/hora"
       },
       "results": {
-        "monthly": "Desperdicio Mensual",
-        "annual": "Ahorro Anual Potencial",
-        "note": "Capital reinvertible en crecimiento o I+D.",
-        "cta": "Detén la fuga. Audita ahora."
+        "monthly": "Coste mensual de la ineficiencia",
+        "annual": "Ahorro anual potencial",
+        "note": "Presupuesto que puedes reinvertir en crecimiento, equipo o producto.",
+        "cta": "Detecta dónde se te va el margen."
       }
     },
     "TopAgents": {
       "badge": "Fuerza Laboral Digital",
-      "title": "Automatiza Ventas, Operaciones",
-      "highlight": "y Marketing con IA.",
-      "description": "Deja de contratar para tareas repetitivas. Despliega Agentes IA especializados que trabajan 24/7, se integran con tus herramientas y entregan resultados que escalan.",
+      "title": "Automatiza ingresos, servicio",
+      "highlight": "y operaciones internas.",
+      "description": "Usa agentes de IA allí donde el tiempo de respuesta, la consistencia y la carga operativa ya están frenando al negocio. Cada uno resuelve un cuello de botella concreto.",
       "agents": {
         "leo": {
           "role": "Agente de Ventas IA",
-          "description": "Tu comercial de élite que nunca duerme. LEO atiende leads al instante, cualifica oportunidades y cierra reuniones 24/7.",
+            "description": "Para equipos que pierden leads por responder tarde. LEO responde al instante, cualifica la intención y mueve las oportunidades buenas al siguiente paso sin perseguirlas manualmente.",
           "capabilities": [
             "Respuesta Instantánea (Web/WhatsApp)",
             "Cualificación Inteligente",
@@ -628,12 +628,12 @@
             "Seguimiento Persistente",
             "Handoff a Humanos cuando es necesario"
           ],
-          "benefit": "Escala ingresos, no personal.",
+            "benefit": "Protege la velocidad de respuesta cuando crece el pipeline.",
           "cta": "Desplegar LEO"
         },
         "atlas": {
           "role": "Asistente Virtual IA",
-          "description": "Tu columna vertebral operativa. ATLAS orquesta flujos, pone orden en el caos administrativo y mantiene a tu equipo centrado en lo importante.",
+            "description": "Para equipos ahogados en tareas administrativas. ATLAS se encarga del trabajo operativo recurrente para que las personas se centren en excepciones, aprobaciones y decisiones de cliente.",
           "capabilities": [
             "Inbox Zero y Calendario al día",
             "Orquestación de Workflows",
@@ -641,12 +641,12 @@
             "Onboarding de Clientes",
             "Entrada de Datos sin Errores"
           ],
-          "benefit": "Elimina la fricción operativa.",
+            "benefit": "Reduce la carga manual del día a día.",
           "cta": "Desplegar ATLAS"
         },
         "orion": {
           "role": "Director de Marketing IA",
-          "description": "Precisión basada en datos. ORION analiza rendimiento, optimiza campañas y detecta oportunidades de crecimiento invisibles para el ojo humano.",
+            "description": "Para equipos que deciden con reporting incompleto. ORION ayuda a detectar antes patrones de rendimiento, huecos en campañas y oportunidades comerciales.",
           "capabilities": [
             "Análisis de ROI en Tiempo Real",
             "Optimización de Campañas",
@@ -654,18 +654,18 @@
             "Estrategia de Contenido",
             "Monitoreo de Competencia"
           ],
-          "benefit": "Marketing que genera beneficios.",
+            "benefit": "Toma decisiones más rápidas con mejor visibilidad comercial.",
           "cta": "Desplegar ORION"
         }
       },
       "bottleneck": {
         "badge": "El Problema",
-        "title": "El Cuello de Botella",
-        "subtitle": "Por qué escalar a mano falla.",
+        "title": "Lo primero que se rompe",
+        "subtitle": "Crecer de forma manual crea cuellos de botella previsibles.",
         "list": [
-          "Leads enfriándose en el inbox",
-          "Agendas caóticas",
-          "Marketing a ciegas",
+          "Leads que se enfrían en el inbox",
+          "Agendas y handoffs inestables",
+          "Decisiones de marketing con datos parciales",
           "Equipos al límite del agotamiento"
         ],
         "resultLabel": "Resultado",
@@ -673,13 +673,13 @@
       },
       "advantage": {
         "badge": "La Solución",
-        "title": "La Ventaja Agéntica",
-        "subtitle": "Por qué gana la IA.",
+        "title": "Dónde más ayudan los agentes",
+        "subtitle": "Eliminan retrasos, inconsistencias y trabajo repetitivo.",
         "list": [
-          "Respuesta inmediata 24/7",
-          "Ejecución consistente",
-          "Decisiones basadas en datos",
-          "Escala sin aumentar plantilla"
+          "Tiempos de respuesta más rápidos",
+          "Ejecución más consistente",
+          "Mejor visibilidad operativa",
+          "Capacidad sin contratar en la misma proporción"
         ],
         "resultLabel": "Resultado",
         "resultValue": "Escala Operativa"
@@ -694,17 +694,17 @@
     },
     "Migration": {
       "badge": "Modelos de Colaboración",
-      "title": "Planes de Consultoría IA",
-      "highlight": "para Cada Etapa",
+      "title": "Consultoría de IA",
+      "highlight": "para distintas fases de entrega",
       "legacy": {
         "title": "Sprint de Estrategia IA",
-        "desc": "Auditoría de flujos + mapa de oportunidades de automatización.<br />Propuesta de arquitectura técnica.<br />Estimación de presupuesto y plazos.<br />Alcance fijo, 1–2 semanas.",
+        "desc": "Audita un flujo o cuello de botella del negocio.<br />Prioriza las oportunidades de automatización con más valor.<br />Obtén enfoque técnico, alcance y recomendación de despliegue.<br />Alcance fijo, 1–2 semanas.",
         "tag": "1–2 Semanas"
       },
       "optimized": {
         "tag": "Más Común",
         "title": "Implementación IA",
-        "desc": "Un sistema IA desplegado en tu infraestructura.<br />Integración completa + documentación.<br />Precio fijo, 4–8 semanas. El código es tuyo.",
+        "desc": "Lanza un sistema de IA en producción dentro de tu entorno.<br />Incluye implementación, integración, pruebas y handoff.<br />Alcance fijo, 4–8 semanas. El código es tuyo.",
         "latencyLabel": "ALCANCE",
         "latencyValue": "FIJO",
         "costLabel": "CÓDIGO",
@@ -712,69 +712,69 @@
       },
       "action": {
         "title": "Partner IA Continuo",
-        "desc": "Tu equipo de ingeniería IA embebido.<br />Nuevas automatizaciones, mantenimiento y escala — mensualmente.<br />Ingenieros senior, acceso directo.",
+        "desc": "Para equipos con necesidades recurrentes de implementación.<br />Añade nuevas automatizaciones, mejora sistemas existentes y mantén estable la operación con el tiempo.<br />Ingenieros senior, acceso directo.",
         "cta1": "Reservar Llamada de Estrategia",
         "cta2": "Escríbenos Directamente"
       }
     },
     "WhoItsFor": {
       "badge": "Para Quién Es",
-      "title": "Servicios de Consultoría IA",
-      "highlight": "para Tu Negocio",
-      "description": "Trabajamos con fundadores, CTOs y responsables de operaciones que ya superaron la fase de \"¿deberíamos probar IA?\" y necesitan un socio técnico que construya y despliegue.",
+      "title": "Encaja mejor con equipos",
+      "highlight": "listos para implementar",
+      "description": "Trabajamos mejor con founders, CTOs y responsables de operaciones que ya ven dónde puede ayudar la IA y ahora necesitan un equipo que lo acote, lo construya y lo ponga en marcha.",
       "items": [
-        "Has probado herramientas de IA pero no las has conectado a operaciones reales",
-        "Estás dedicando tiempo a tareas que deberían ejecutarse automáticamente",
-        "Necesitas un socio que construya y despliegue, no solo que asesore",
-        "Quieres reducir la carga manual sin contratar para trabajo repetitivo",
-        "Necesitas IA que se integre con tu CRM, ERP o stack existente",
-        "Operas en los Países Bajos o internacionalmente y necesitas ingeniería senior"
+        "Has probado herramientas de IA, pero aún no tienes nada importante funcionando dentro de la operativa real",
+        "Tu equipo sigue perdiendo tiempo en trabajo repetitivo que ya debería estar automatizado",
+        "Necesitas implementación y despliegue, no otra colaboración centrada solo en asesoría",
+        "Quieres reducir carga manual sin contratar para funciones repetitivas",
+        "Necesitas IA conectada con tu CRM, ERP, base de datos o herramientas internas",
+        "Necesitas capacidad de ingeniería senior en Países Bajos o para equipos internacionales"
       ]
     },
     "Pricing": {
       "badge": "Precios",
       "title": "Precios claros de consultoría IA,",
-      "highlight": "con el alcance detrás.",
-      "subtitle": "Los paquetes de asesoría o chatbot más baratos pueden tener sentido si solo necesitas un taller o un asistente sencillo. LAB está posicionado para ingeniería: auditoría de flujos, arquitectura, integraciones, despliegue, documentación y soporte tras el lanzamiento.",
+      "highlight": "con entrega real detrás.",
+      "subtitle": "LAB está pensado para trabajo de ingeniería, no para asesoría ligera. Eso incluye alcance, arquitectura, integraciones, despliegue, documentación y soporte después del lanzamiento.",
       "recommended": "Mejor inicio",
       "items": [
         {
           "name": "Chequeo de Encaje",
           "price": "Gratis",
           "timeline": "30 minutos",
-          "desc": "Para equipos que necesitan una respuesta directa antes de comprar estrategia o desarrollo.",
+          "desc": "Para equipos que necesitan una lectura técnica rápida antes de entrar en una colaboración mayor.",
           "href": "/#contact",
           "cta": "Comprobar encaje",
           "points": [
-            "Revisión de un flujo o cuello de botella",
-            "Recomendación honesta de construir o no construir",
-            "Siguiente paso sugerido si hay un caso real"
+            "Revisión de un flujo, cuello de botella o caso de uso",
+            "Recomendación clara sobre si merece la pena resolverlo con IA",
+            "Siguiente paso sugerido si hay un caso sólido de implementación"
           ]
         },
         {
           "name": "Sprint de Estrategia IA",
           "price": "€2.5k–€5k",
           "timeline": "1–2 semanas",
-          "desc": "Para equipos que saben que la IA puede ayudar pero necesitan una hoja de ruta priorizada antes de invertir en implementación.",
+          "desc": "Para equipos que saben que la IA puede aportar valor, pero necesitan un plan de implementación más afinado antes de comprometer presupuesto.",
           "href": "/#contact",
           "cta": "Definir sprint",
           "recommended": true,
           "points": [
             "Auditoría de flujos y mapa de oportunidades",
-            "Backlog de automatizaciones priorizado por ROI",
-            "Arquitectura, presupuesto y estimación de plazos"
+            "Backlog priorizado por valor y complejidad",
+            "Arquitectura, presupuesto y estimación de entrega"
           ]
         },
         {
           "name": "Implementación IA",
           "price": "Desde €8k",
           "timeline": "4–8 semanas",
-          "desc": "Para equipos que quieren un sistema IA en producción conectado a su stack real de negocio.",
+          "desc": "Para equipos listos para lanzar un sistema de IA en producción conectado a su entorno real de negocio.",
           "href": "/ai-consulting",
           "cta": "Planear desarrollo",
           "points": [
             "Alcance fijo y plan de entrega",
-            "Integraciones con CRM, API, base de datos o flujos",
+            "Integraciones con CRM, APIs, bases de datos o flujos internos",
             "Documentación y 30 días de soporte"
           ]
         },
@@ -782,7 +782,7 @@
           "name": "Partner IA Continuo",
           "price": "Desde €5k/mes",
           "timeline": "Mensual",
-          "desc": "Para empresas que quieren ingeniería IA continua sin contratar un equipo interno completo.",
+          "desc": "Para empresas que necesitan capacidad continua de ingeniería IA sin montar un equipo interno completo.",
           "href": "/#contact",
           "cta": "Hablar del alcance",
           "points": [
@@ -793,47 +793,47 @@
         }
       ],
       "comparison": {
-        "title": "Cómo se compara con consultorías IA más baratas",
-        "desc": "Si el objetivo es una auditoría genérica, formación o un chatbot básico, un precio de entrada más bajo puede tener sentido. LAB debe ganar cuando el comprador valora propiedad técnica y sistemas en producción.",
+        "title": "Cómo se compara frente a ofertas de IA más baratas",
+        "desc": "Si solo necesitas formación, una auditoría genérica o un asistente sencillo, una entrada más barata puede ser suficiente. LAB encaja mejor cuando la prioridad es la propiedad técnica y la entrega en producción.",
         "points": [
-          "El Sprint de Estrategia se solapa con precios de auditoría IA premium porque incluye arquitectura técnica y un plan ejecutable.",
-          "La implementación empieza más alta que un chatbot básico porque incluye integraciones reales, despliegue, documentación y soporte.",
-          "El partner continuo se parece a un departamento IA externo, pero queda posicionado como capacidad senior de ingeniería y sistemas entregados."
+          "El Sprint de Estrategia se sitúa por encima de una auditoría ligera porque incluye arquitectura técnica y un plan de entrega ejecutable.",
+          "La implementación arranca por encima de un proyecto básico de chatbot porque incluye integraciones reales, despliegue, documentación y soporte.",
+          "La opción de partner continuo se parece más a capacidad embebida de ingeniería senior que a asesoría externalizada."
         ]
       }
     },
     "WhatWeBuildInline": {
       "badge": "Qué Construimos",
-      "title": "Cinco Sistemas IA que",
-      "highlight": "Llevamos a Producción",
+      "title": "Cinco sistemas de IA que",
+      "highlight": "entregamos en producción",
       "services": [
         {
           "title": "Agentes de Ventas y Cualificación IA",
-          "desc": "Responden a leads 24/7, cualifican según tus criterios, reservan reuniones y hacen el traspaso con contexto completo.",
+          "desc": "Captan demanda entrante, cualifican la intención, reservan reuniones y entregan el contexto adecuado al equipo comercial.",
           "label": "Agentes y Automatización IA",
           "href": "/expertise/ai-agents-automation"
         },
         {
           "title": "Automatización de Flujos y Operaciones",
-          "desc": "Automatiza procesamiento de documentos, agendas, sincronización de CRM y flujos de aprobación en n8n o pipelines personalizados.",
+          "desc": "Reduce trabajo repetitivo en reporting, aprobaciones, administración y coordinación interna con automatizaciones listas para producción.",
           "label": "Automatización IA Países Bajos",
           "href": "/ai-consulting"
         },
         {
           "title": "Integración de Sistemas IA",
-          "desc": "Conecta IA a tu CRM, ERP, bases de datos y plataformas de comunicación mediante integraciones API correctas.",
+          "desc": "Conecta la IA con tu CRM, ERP, bases de datos y herramientas de comunicación mediante integraciones pensadas para la operativa real.",
           "label": "Integración de Sistemas IT",
           "href": "/it-system-integration"
         },
         {
           "title": "Herramientas Internas con IA",
-          "desc": "Dashboards y herramientas de administración personalizadas que eliminan el trabajo interno repetitivo y la reconciliación de datos.",
+          "desc": "Herramientas internas y dashboards a medida para eliminar trabajo administrativo repetitivo, reporting fragmentado y reconciliaciones manuales.",
           "label": "Herramientas Internas Personalizadas",
           "href": "/services/custom-internal-tools-development"
         },
         {
           "title": "Despliegues LLM Personalizados",
-          "desc": "Modelos de lenguaje privados ajustados para clasificación, generación de respuestas y recuperación de conocimiento interno.",
+          "desc": "Modelos de lenguaje privados para clasificación, generación de respuestas y flujos de conocimiento interno cuando las herramientas genéricas se quedan cortas.",
           "label": "Desarrollo LLM Personalizado",
           "href": "/expertise/custom-llm-development"
         }
@@ -841,9 +841,9 @@
     },
     "UseCases": {
       "badge": "Casos de Uso",
-      "title": "Lo Que las Empresas",
-      "highlight": "Automatizan Primero",
-      "subtitle": "Estos son los puntos de partida con mayor ROI que vemos en todos los sectores — cada uno entra en producción en semanas, no trimestres.",
+      "title": "Lo primero que suelen",
+      "highlight": "automatizar los equipos",
+      "subtitle": "Estos son los puntos de partida con más impacto que vemos en distintos sectores. Resuelven cuellos de botella operativos rápido y suelen llegar a producción en semanas, no en trimestres.",
       "labels": {
         "problem": "Problema",
         "solution": "Solución",
@@ -852,24 +852,24 @@
       "items": [
         {
           "number": "01",
-          "title": "Cualificar Leads Sin Contratar",
-          "problem": "Los comerciales pasan horas persiguiendo leads no cualificados y escribiendo emails de seguimiento que deberían automatizarse.",
-          "solution": "Un agente IA gestiona las consultas entrantes 24/7 — cualifica según tus criterios, hace preguntas de seguimiento y reserva reuniones para los leads que pasan el filtro.",
-          "outcome": "Reuniones cualificadas reservadas automáticamente. Los comerciales solo hablan con prospectos listos para decidir."
+          "title": "Cualificar leads sin ampliar plantilla",
+          "problem": "Los equipos comerciales pierden tiempo entre respuestas lentas, mala cualificación y seguimientos que no deberían depender del esfuerzo manual.",
+          "solution": "Un agente de IA atiende la demanda entrante, hace las preguntas adecuadas y empuja automáticamente las oportunidades serias al siguiente paso.",
+          "outcome": "Más reuniones cualificadas, tiempos de respuesta más rápidos y menos seguimiento manual para ventas."
         },
         {
           "number": "02",
-          "title": "Eliminar Reportes Manuales",
-          "problem": "Los equipos de operaciones o finanzas dedican horas cada semana a extraer datos de múltiples sistemas para construir los mismos informes.",
-          "solution": "Pipelines automatizados recopilan, transforman y entregan informes estructurados a Slack, email o un dashboard — según programa, sin intervención humana.",
-          "outcome": "Horas de trabajo semanal en informes eliminadas. Los datos están siempre actualizados, nunca con retraso."
+          "title": "Eliminar reporting repetitivo",
+          "problem": "Operaciones y finanzas siguen dedicando horas cada semana a sacar los mismos datos de varios sistemas para montar informes recurrentes.",
+          "solution": "Pipelines automatizados recopilan, transforman y entregan reporting estructurado a Slack, email o dashboards con una cadencia fiable.",
+          "outcome": "Menos tiempo analítico perdido en reporting repetitivo y datos más fiables para decidir en el día a día."
         },
         {
           "number": "03",
           "title": "Automatizar la Incorporación de Clientes",
-          "problem": "Cada nuevo cliente desencadena una secuencia manual de emails, solicitudes de documentos, actualizaciones en el CRM y traspasos internos.",
-          "solution": "Una automatización se activa al cerrar el contrato: envía secuencias de bienvenida, solicita documentos, crea registros de proyecto y notifica a las personas correctas automáticamente.",
-          "outcome": "La incorporación se completa en horas en lugar de días. Sin traspasos perdidos, sin perseguir a nadie."
+          "problem": "Cada nuevo cliente sigue activando una cadena caótica de emails, solicitud de documentos, actualizaciones en el CRM y handoffs internos.",
+          "solution": "Cuando se cierra la venta, la automatización lanza el onboarding, recoge la información necesaria, crea registros y avisa automáticamente a las personas adecuadas.",
+          "outcome": "Onboardings más rápidos, handoffs más limpios y menos retrasos entre la venta y la entrega."
         }
       ]
     },
@@ -1213,7 +1213,7 @@
       "steps": [
         {
           "number": "01",
-            "title": "Auditoría del Flujo de Trabajo",
+          "title": "Auditoría del Flujo de Trabajo",
           "desc": "Mapeamos tu proceso actual: qué herramientas usas, dónde se atascan los datos y en qué invierte más tiempo tu equipo. Los puntos de dolor se convierten en el spec."
         },
         {
@@ -2170,7 +2170,7 @@
         "secondary": "Ver Qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "PainPoints": {
       "title": "El Coste Real de Gestionar una Clínica Dental en 2026",
       "items": [
@@ -2356,7 +2356,7 @@
         "secondary": "Ver Qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "PainPoints": {
       "title": "Dónde Tu Clínica Pierde Tiempo e Ingresos",
       "items": [
@@ -2542,7 +2542,7 @@
         "secondary": "Ver Qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "IndustryMetrics": [
       { "value": "45%", "label": "Conversión de lead a reserva" },
       { "value": "€850", "label": "Incremento medio del valor de vida del cliente" },
@@ -2734,7 +2734,7 @@
         "secondary": "Ver qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "PainPoints": {
       "title": "El Coste Real de Gestionar una Clínica Veterinaria en 2026",
       "items": [
@@ -2910,7 +2910,7 @@
         "secondary": "Ver qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés. Sin embargo, también ofrecemos y creamos sistemas en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "IndustryMetrics": [
       { "value": "92%", "label": "de leads respondidos en menos de 5 minutos" },
       { "value": "3x", "label": "más citas agendadas con respuesta inmediata" },
@@ -3092,7 +3092,7 @@
         "secondary": "Ver qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés. Sin embargo, también ofrecemos y creamos sistemas en neerlandés, ya que contamos con un especialista que revisa el contenido en ese idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "IndustryMetrics": [
       { "value": "92%", "label": "de leads respondidos en menos de 5 minutos" },
       { "value": "3x", "label": "más visitas agendadas con respuesta inmediata" },
@@ -3262,8 +3262,8 @@
   },
   "TrustProof": {
     "badge": "Prueba sin teatro",
-    "title": "Construimos como equipo de producto, no como fábrica de slides.",
-    "subtitle": "La página necesitaba más señales de confianza, así que hacemos explícito el modelo de trabajo: alcance cerrado, código propio, traspaso a producción e ingeniería senior desde discovery hasta despliegue.",
+    "title": "Trabajamos como un equipo de producto, no como una fábrica de presentaciones.",
+    "subtitle": "Así es como trabajamos: alcance cerrado, código que pasa a ser tuyo, un handoff limpio a producción y participación de ingenieros senior desde el discovery hasta el despliegue.",
     "metrics": [
       {
         "value": "4+",
@@ -3467,7 +3467,7 @@
         "secondary": "Ver Qué Puede Hacer la Voz IA"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "PainPoints": {
       "title": "El Coste Real de las Llamadas Perdidas en 2026",
       "items": [
@@ -3643,7 +3643,7 @@
         "secondary": "Ver Nuestro Proceso de Migración"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "IndustryMetrics": [
       { "value": "45%", "label": "conversión de lead a reserva" },
       { "value": "€850", "label": "incremento medio del valor de vida del cliente" },
@@ -3826,7 +3826,7 @@
         "secondary": "Ver Qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "PainPoints": {
       "title": "Por Qué el WhatsApp Manual Te Está Costando Dinero",
       "items": [
@@ -4002,7 +4002,7 @@
         "secondary": "Descubre Qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "IndustryMetrics": [
       { "value": "35%", "label": "reducción de no-shows con recordatorios automáticos" },
       { "value": "2 min", "label": "tiempo medio de respuesta frente a 4 horas manual" },
@@ -4184,7 +4184,7 @@
         "secondary": "Descubre Qué Automatizamos"
       }
     },
-    "LanguageNote": "Aunque estamos ubicados en los Países Bajos, nuestro principal método de comunicación es el inglés, ya que nuestro equipo técnico habla inglés. Sin embargo, también ofrecemos y creamos sitios web en neerlandés, ya que contamos con un especialista que revisa el contenido en dicho idioma.",
+    "LanguageNote": "Trabajamos principalmente en inglés y también podemos entregar contenido y flujos orientados al cliente en neerlandés.",
     "IndustryMetrics": [
       { "value": "85%", "label": "de utilización lograda tras automatizar" },
       { "value": "€200K", "label": "horas facturables recuperadas al año" },

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "AI Automatiseringsbureau Nederland | CodeHunter Lab",
-    "description": "AI automatiseringsbureau in Nederland voor AI agents, n8n workflows en maatwerk integraties. Productiesystemen, geen demo's. Gevestigd in Leiden.",
+    "description": "AI-automatiseringsbureau in Nederland voor AI agents, n8n-workflows en maatwerkintegraties. Productiesystemen, geen demo's. Gevestigd in Leiden.",
     "keywords": [
       "AI automatiseringsbureau Nederland",
       "AI automatisering consulting Nederland",
@@ -113,8 +113,8 @@
       "TheLab": "The Lab",
       "Bio": "Bio",
       "Process": "Proces",
-      "Insights": "Inzichten",
-      "CaseStudies": "Casestudy's",
+      "Insights": "Insights (EN)",
+      "CaseStudies": "Case studies (EN)",
       "services": {
         "AIConsulting": "AI Consulting",
         "ReactConsulting": "React Consulting",
@@ -148,19 +148,19 @@
   "Hero": {
     "subHeader": "AI Consulting · AI Automatisering · Productiesystemen",
     "title": {
-      "part1": "AI Consulting & ",
+      "part1": "AI Consulting en ",
       "highlight1": "Automatisering",
-      "part2": "Die Naar ",
-      "highlight2": "Productie Gaat"
+      "part2": "gebouwd voor ",
+      "highlight2": "productie"
     },
-    "description": "Wij ontwerpen, bouwen en implementeren AI-systemen voor bedrijven die klaar zijn om verder te gaan dan experimenten — gekoppeld aan je stack, je data en de echte workflows van je team.",
+    "description": "We ontwerpen, bouwen en lanceren AI-systemen voor bedrijven die echte operationele resultaten nodig hebben, niet nog meer experimenten — gekoppeld aan je stack, je data en de workflows waarmee je team al werkt.",
     "cta": {
       "initialize": "Boek een AI Strategiegesprek",
       "caseStudies": "Ontdek AI Consulting"
     }
   },
   "Footer": {
-    "brandDescription": "Het architectureren van de toekomst van enterprise-automatisering en AI-gedreven workflows.",
+    "brandDescription": "We ontwerpen de toekomst van enterprise-automatisering en AI-gedreven workflows.",
     "Services": {
       "title": "Diensten",
       "items": {
@@ -191,7 +191,7 @@
       }
     },
     "Insights": {
-      "title": "Inzichten",
+      "title": "Insights (EN)",
       "items": {
         "automation": "AI-automatisering Insights",
         "n8n": "n8n Consulting Nederland",
@@ -238,35 +238,35 @@
   "WhatWeBuild": {
     "badge": "Wat Wij Bouwen",
     "title": {
-      "part1": "Vijf Manieren om",
-      "highlight": "AI aan het Werk te Zetten"
+      "part1": "Vijf manieren waarop we",
+      "highlight": "AI laten werken"
     },
-    "subtitle": "Elke engagement begint met een duidelijk resultaat. Dit is wat wij daadwerkelijk bouwen.",
+    "subtitle": "Elke samenwerking begint met een concreet bedrijfsdoel. Dit zijn de systemen die we het vaakst naar productie brengen.",
     "cta": "Ontdek AI Consulting",
     "services": [
       {
         "title": "AI Agents",
-        "desc": "Autonome agents voor sales kwalificatie, klantenservice en operaties — verbonden met jouw tools en 24/7 actief.",
+        "desc": "AI-agents voor leadkwalificatie, klantenservice en operationele workflows, gekoppeld aan je tools en 24/7 beschikbaar.",
         "link": "AI Agents & Automatisering"
       },
       {
         "title": "Workflow Automatisering",
-        "desc": "Vervang handmatige processen door geautomatiseerde pipelines. Lead routing, documentverwerking, CRM sync en planning.",
+        "desc": "Vervang repetitief werk door automatiseringen voor lead routing, documentverwerking, reporting en CRM-updates.",
         "link": "AI Automatisering Nederland"
       },
       {
         "title": "AI Systeemintegratie",
-        "desc": "Verbind AI met de systemen die je al gebruikt. Wij verzorgen de integratielaag tussen AI modellen en jouw bestaande stack.",
+        "desc": "Koppel AI aan de systemen die je al gebruikt met integraties die passen bij je stack en je echte operatie.",
         "link": "IT Systeemintegratie"
       },
       {
         "title": "Interne AI Tools",
-        "desc": "Maatwerk dashboards en admin tools die repetitief intern werk elimineren. Gebouwd voor de echte workflow van jouw team.",
+        "desc": "Maatwerk dashboards en interne tools die repetitief administratief werk verminderen en dagelijkse beslissingen makkelijker maken.",
         "link": "Maatwerk Interne Tools"
       },
       {
         "title": "Maatwerk LLM-implementaties",
-        "desc": "Private taalmodellen fine-tuned voor jouw domein. Documentclassificatie, respons generatie, kennis ophalen.",
+        "desc": "Private modeldeployments voor classificatie, response generation en interne kennisworkflows wanneer standaardtools tekortschieten.",
         "link": "Maatwerk LLM-ontwikkeling"
       }
     ]
@@ -287,12 +287,12 @@
       },
       {
         "title": "Vastgoed",
-        "desc": "Lead kwalificatie, property inquiry routing, contract documentverwerking en geautomatiseerde client follow-up.",
+        "desc": "Leadkwalificatie, routing van woningaanvragen, contractverwerking en geautomatiseerde klantopvolging.",
         "link": "Makelaar Automatisering"
       },
       {
         "title": "Zorg & Klinieken",
-        "desc": "Afspraak booking, patiënt follow-up en admin last reductie voor tandheelkundige, aesthetic en fysiotherapie praktijken.",
+        "desc": "Afspraken, patiëntopvolging en minder administratieve last voor medische, tandheelkundige, esthetische, fysiotherapie- en dierenklinieken.",
         "link": "Kliniek Automatisering"
       }
     ]
@@ -543,13 +543,13 @@
         "highlight": "Zapier per taak.",
         "part2": "Beheer je eigen workflows"
       },
-      "description": "CodeHunter Lab zijn ervaren <strong>n8n consultants</strong> in Nederland. Wij migreren jouw workflows van Zapier en Make naar self-hosted n8n — kosten dalen met 60–80%, geen rate limits meer, en volledige datacontrole. Geen black boxes. Geen vendor lock-in.",
+      "description": "CodeHunter Lab is een ervaren <strong>n8n-consultingpartner</strong> in Nederland. Wij migreren maatwerkworkflows van Zapier en Make naar self-hosted n8n — met 60-80% lagere kosten, zonder rate limits en met volledige controle over je data. Geen black boxes. Geen vendor lock-in.",
       "cta": {
         "primary": "Boek een gratis workflow-audit",
         "secondary": "Bekijk ons migratieproces"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "IndustryMetrics": [
       { "value": "45%", "label": "lead-naar-boeking conversie" },
       { "value": "€850", "label": "gemiddelde stijging van klantwaarde" },
@@ -732,7 +732,7 @@
         "secondary": "Bekijk wat AI Voice kan"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "PainPoints": {
       "title": "De werkelijke kosten van gemiste oproepen in 2026",
       "items": [
@@ -908,7 +908,7 @@
         "secondary": "Bekijk wat wij automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist heeft die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "PainPoints": {
       "title": "Waarom handmatige WhatsApp je geld kost",
       "items": [
@@ -1072,8 +1072,8 @@
   },
   "TrustProof": {
     "badge": "Bewijs, geen theater",
-    "title": "Wij bouwen als productteam, niet als slide-fabriek.",
-    "subtitle": "Deze pagina had meer vertrouwensignalen nodig, dus maken wij het werkmodel expliciet: vaste scope, eigen code, productie-overdracht en senior engineering van discovery tot deployment.",
+    "title": "We werken als een productteam, niet als een slidefabriek.",
+    "subtitle": "Zo werken we: vaste scope, code die van jou blijft, een nette productie-overdracht en senior engineers van discovery tot deployment.",
     "metrics": [
       {
         "value": "4+",
@@ -1307,21 +1307,21 @@
       "badge": "AI Consulting · Productiesystemen",
       "title": {
         "part1": "AI Consulting",
-        "part2": "voor Bedrijven",
-        "highlight": "Klaar voor Productie."
+        "part2": "voor Teams die",
+        "highlight": "Productie Nodig Hebben, Geen Nieuwe Pilot."
       },
-      "description": "De meeste AI-projecten falen tussen proof of concept en productie. Wij sluiten dat gat — door <strong class='text-white'>AI-agents, geautomatiseerde workflows en integraties</strong> te ontwerpen en te deployen die in productie draaien, niet in een proof of concept.",
+      "description": "De meeste AI-projecten lopen vast na de demo. Wij helpen teams om veelbelovende ideeën om te zetten in <strong class='text-white'>AI-systemen in productie</strong> met de juiste architectuur, integraties en uitvoeringsdiscipline om ze echt werkend te krijgen.",
       "cta": "Boek een AI Strategiegesprek",
       "whyUs": {
         "title": {
-          "part1": "Implementatie,",
-          "highlight": "Niet Alleen Strategie."
+          "part1": "Uitvoering,",
+          "highlight": "Niet Alleen Advies."
         },
-        "description": "De meeste consultants leveren een roadmap en vertrekken. Wij blijven tot het in productie is. Elk project eindigt met een live systeem in je infrastructuur — niet met een presentatie.",
+        "description": "De meeste consultants stoppen bij de roadmap. Wij blijven betrokken tijdens implementatie, livegang en overdracht, zodat het werk eindigt in een live systeem dat je team echt kan gebruiken.",
         "list": {
-          "0": "Systemen in productie, geen sandbox-experimenten",
-          "1": "Geïntegreerd met je bestaande stack en data",
-          "2": "Duidelijke ROI — geschat vooraf, gemeten achteraf"
+          "0": "Oplevering in productie, geen sandbox-experimenten",
+          "1": "Verbonden met je bestaande stack, data en workflows",
+          "2": "Duidelijke commerciële scope vóór de bouw start"
         },
         "systemStatus": {
           "label": "Systeemstatus",
@@ -1334,60 +1334,60 @@
     },
     "Banner": {
       "badge": "AI-systemen · Productieniveau",
-      "title": "Je AI-piloot",
-      "highlight": "Kwam Nooit in Productie.",
-      "description": "De meeste bedrijven hebben AI-experimenten opgesloten in een sandbox. Wij bouwen systemen die in productie draaien — gekoppeld aan je CRM, je data en de echte workflows van je team.",
+      "title": "Te veel AI-projecten",
+      "highlight": "blijven hangen in de pilotfase.",
+      "description": "We helpen teams om van losse AI-experimenten naar productiesystemen te gaan die verbonden zijn met hun stack, data en dagelijkse operatie.",
       "cta1": "Boek een AI Strategiegesprek",
       "cta2": "Schat je ROI",
       "cards": {
         "0": {
-          "title": "AI-systemen in Productie",
-          "desc": "Geen demo's. Live automatisering geïmplementeerd in je infrastructuur."
+          "title": "Oplevering in productie",
+          "desc": "Systemen die live gaan in je echte omgeving, niet nóg een interne demo."
         },
         "1": {
-          "title": "Workflow-orkestratie",
-          "desc": "n8n self-hosted: volledige datacontrole, onbeperkte uitvoeringen, vaste kosten."
+          "title": "Architectuur die integreert",
+          "desc": "Automatiseringen ontworpen rond je CRM, interne tools en operationele workflows."
         },
         "2": {
-          "title": "ROI Vóór de Start",
-          "desc": "Elk project begint met een duidelijke kosten-batenanalyse."
+          "title": "Commerciële scope vooraf duidelijk",
+          "desc": "Scope, oplevermodel en verwachte waarde helder voordat de implementatie start."
         }
       }
     },
     "ROICalculator": {
       "badge": "Efficiëntie-audit",
-      "title": "Hoeveel kost je de",
-      "highlight": "Inefficiëntie?",
+      "title": "Wat kost",
+      "highlight": "inefficiëntie je eigenlijk?",
       "subtitle": "",
-      "description": "Handmatige processen zijn een stille belasting op je omzet. Bereken hoeveel kapitaal je verbrandt aan taken die een AI-agent voor een fractie van de kosten zou doen.",
+      "description": "Handmatig werk vreet elke week aan je marge. Schat in hoeveel tijd en geld er opgaat aan repetitieve taken die je kunt automatiseren.",
       "realityCard": {
-        "title": "De Realiteit Vandaag",
-        "description": "Met stijgende arbeidskosten is het betalen van specialisten voor data-invoer niet houdbaar. Automatisering is geen luxe meer, het is overleven."
+        "title": "Hoe dit er vandaag uitziet",
+        "description": "Nu arbeidskosten stijgen, wordt het steeds moeilijker te verantwoorden dat gekwalificeerde mensen uren besteden aan data overtypen, updates najagen en repetitieve administratie. Automatisering is niet alleen efficiëntie, maar operationele slagkracht."
       },
       "inputs": {
-        "employees": "Handmatig Team",
+        "employees": "Mensen die handmatig werk doen",
         "employeesUnit": "Personen",
-        "hours": "Repetitieve Uren/Week (per persoon)",
+        "hours": "Repetitieve uren per week (per persoon)",
         "hoursUnit": "Uren",
-        "rate": "Gemiddelde Uurkosten",
+        "rate": "Gemiddelde uurkosten",
         "rateUnit": "/uur"
       },
       "results": {
-        "monthly": "Maandelijks Verlies",
-        "annual": "Potentiële Jaarlijkse Besparing",
-        "note": "Herinvesteerbaar kapitaal in groei of R&D.",
-        "cta": "Stop het lek. Audit nu."
+        "monthly": "Maandelijkse kosten van inefficiëntie",
+        "annual": "Potentiële jaarlijkse besparing",
+        "note": "Budget dat je opnieuw kunt investeren in groei, mensen of productontwikkeling.",
+        "cta": "Zie waar je marge weglekt."
       }
     },
     "TopAgents": {
       "badge": "Digitale Werkkracht",
-      "title": "Automatiseer Sales, Operaties",
-      "highlight": "en Marketing met AI.",
-      "description": "Stop met aannemen voor repetitieve taken. Implementeer gespecialiseerde AI-agents die 24/7 werken, integreren met je tools en schaalbare resultaten leveren.",
+      "title": "Automatiseer omzet, service",
+      "highlight": "en interne operaties.",
+      "description": "Gebruik AI-agents waar responstijd, consistentie en operationele druk het bedrijf al afremmen. Elke agent is gekoppeld aan een concreet knelpunt.",
       "agents": {
         "leo": {
           "role": "AI Sales Agent",
-          "description": "Je elite verkoper die nooit slaapt. LEO behandelt leads direct, kwalificeert opportunities en sluit meetings 24/7.",
+            "description": "Voor teams die leads verliezen door trage opvolging. LEO reageert direct, kwalificeert intentie en zet goede kansen door naar de volgende stap zonder handmatig najagen.",
           "capabilities": [
             "Directe Respons (Web/WhatsApp)",
             "Slimme Kwalificatie",
@@ -1395,12 +1395,12 @@
             "Aanhoudend Volgen",
             "Overdracht aan Mens wanneer Nodig"
           ],
-          "benefit": "Schaal omzet, geen personeel.",
+            "benefit": "Behoud reactiesnelheid terwijl je pipeline groeit.",
           "cta": "Implementeer LEO"
         },
         "atlas": {
           "role": "AI Virtual Assistant",
-          "description": "Je operationele ruggengraat. ATLAS orkestreert workflows, brengt orde in de administratieve chaos en houdt je team gefocust op wat belangrijk is.",
+            "description": "Voor teams die verdrinken in administratie. ATLAS pakt terugkerend operationeel werk op, zodat mensen zich kunnen richten op uitzonderingen, goedkeuringen en klantbeslissingen.",
           "capabilities": [
             "Inbox Zero en Kalender Bijgewerkt",
             "Workflow-orkestratie",
@@ -1408,12 +1408,12 @@
             "Klant onboarding",
             "Foutloze Data-invoer"
           ],
-          "benefit": "Elimineer operationele frictie.",
+            "benefit": "Verminder de handmatige last van het dagelijkse werk.",
           "cta": "Implementeer ATLAS"
         },
         "orion": {
           "role": "AI Marketing Director",
-          "description": "Data-gedreven precisie. ORION analyseert prestaties, optimaliseert campagnes en detecteert groeikansen die onzichtbaar zijn voor het menselijke oog.",
+            "description": "Voor teams die beslissen op basis van onvolledige rapportage. ORION helpt eerder prestatiepatronen, campagnegaten en commerciële kansen zichtbaar te maken.",
           "capabilities": [
             "Real-time ROI-analyse",
             "Campagne-optimalisatie",
@@ -1421,18 +1421,18 @@
             "Contentstrategie",
             "Concurrentie Monitoring"
           ],
-          "benefit": "Marketing dat winst genereert.",
+            "benefit": "Neem sneller besluiten met beter commercieel inzicht.",
           "cta": "Implementeer ORION"
         }
       },
       "bottleneck": {
         "badge": "Het Probleem",
-        "title": "De Bottleneck",
-        "subtitle": "Waarom handmatig schalen faalt.",
+        "title": "Wat als eerste breekt",
+        "subtitle": "Handmatig groeien creëert voorspelbare knelpunten.",
         "list": [
           "Leads die afkoelen in de inbox",
-          "Chaotische agenda's",
-          "Marketing op gevoel",
+          "Instabiele planning en overdrachten",
+          "Marketingbeslissingen op basis van onvolledige data",
           "Teams op het punt van uitputting"
         ],
         "resultLabel": "Resultaat",
@@ -1440,13 +1440,13 @@
       },
       "advantage": {
         "badge": "De Oplossing",
-        "title": "Het Agenten Voordeel",
-        "subtitle": "Waarom AI wint.",
+        "title": "Waar agents het meeste helpen",
+        "subtitle": "Ze halen vertraging, inconsistentie en repetitief werk weg.",
         "list": [
-          "Directe respons 24/7",
-          "Consistente uitvoering",
-          "Datagedreven beslissingen",
-          "Schaalbaar zonder personeel uit te breiden"
+          "Snellere responstijden",
+          "Consistentere uitvoering",
+          "Beter operationeel inzicht",
+          "Meer capaciteit zonder lineair meer personeel"
         ],
         "resultLabel": "Resultaat",
         "resultValue": "Operationele Schaalbaarheid"
@@ -1461,87 +1461,87 @@
     },
     "Migration": {
       "badge": "Samenwerkingsmodellen",
-      "title": "AI Consulting Plannen",
-      "highlight": "voor Elke Fase",
+      "title": "AI Consulting",
+      "highlight": "voor verschillende opleverfases",
       "legacy": {
         "title": "AI Strategie Sprint",
-        "desc": "Workflow-audit + kaart van automatiseringskansen.<br />Technische architectuurvoorstel.<br />Budget- en tijdsraming.<br />Vaste scope, 1–2 weken.",
+        "desc": "Audit één workflow of bedrijfsbottleneck.<br />Prioriteer de automatiseringskansen met de meeste waarde.<br />Ontvang een technische aanpak, scope en rollout-advies.<br />Vaste scope, 1–2 weken.",
         "tag": "1–2 Weken"
       },
       "optimized": {
         "tag": "Meest Gevraagd",
         "title": "AI-implementatie",
-        "desc": "Een AI-systeem geïmplementeerd in je infrastructuur.<br />Volledige integratie + documentatie.<br />Vaste prijs, 4–8 weken. De code is van jou.",
+        "desc": "Lever één AI-systeem op in productie binnen je eigen omgeving.<br />Inclusief implementatie, integratie, testen en overdracht.<br />Vaste scope, 4–8 weken. De code is van jou.",
         "latencyLabel": "BEREIK",
         "latencyValue": "VAST",
         "costLabel": "CODE",
         "costValue": "VAN JOU"
       },
       "action": {
-        "title": "Doorlopend AI Partner",
-        "desc": "Je embedded AI-engineering team.<br />Nieuwe automatiseringen, onderhoud en schaalbaarheid — maandelijks.<br />Senior engineers, direct contact.",
+        "title": "Doorlopende AI-partner",
+        "desc": "Voor teams met terugkerende implementatiebehoeften.<br />Voeg nieuwe automatiseringen toe, verbeter bestaande systemen en houd de operatie op langere termijn stabiel.<br />Senior engineers, direct contact.",
         "cta1": "Boek een Strategiegesprek",
         "cta2": "Mail ons Direct"
       }
     },
     "WhoItsFor": {
       "badge": "Voor Wie",
-      "title": "AI Consulting Diensten",
-      "highlight": "voor Jouw Bedrijf",
-      "description": "Wij werken met founders, CTO's en operationeel verantwoordelijken die de fase \"zouden we AI moeten proberen?\" voorbij zijn en een technische partner nodig hebben die bouwt en implementeert.",
+      "title": "Past het best bij teams",
+      "highlight": "die klaar zijn om te implementeren",
+      "description": "We werken het best met founders, CTO's en operations-verantwoordelijken die al zien waar AI kan helpen en nu een team nodig hebben dat het afbakent, bouwt en live brengt.",
       "items": [
-        "Je hebt AI-tools geprobeerd maar ze niet gekoppeld aan echte operaties",
-        "Je besteedt tijd aan taken die automatisch zouden moeten verlopen",
-        "Je hebt een partner nodig die bouwt en implementeert, niet alleen adviseert",
-        "Je wilt handmatige belasting verminderen zonder aan te nemen voor repetitief werk",
-        "Je hebt AI nodig die integreert met je CRM, ERP of bestaande stack",
-        "Je opereert in Nederland of internationaal en hebt senior engineering nodig"
+        "Je hebt AI-tools getest, maar nog niets belangrijks draait echt in de operatie",
+        "Je team verliest nog steeds tijd aan repetitief werk dat al geautomatiseerd zou moeten zijn",
+        "Je hebt implementatie en livegang nodig, niet nóg een advisory-only traject",
+        "Je wilt handmatig werk verminderen zonder mensen aan te nemen voor repetitieve rollen",
+        "Je hebt AI nodig die koppelt met je CRM, ERP, database of interne tooling",
+        "Je hebt senior engineering-capaciteit nodig in Nederland of voor internationale teams"
       ]
     },
     "Pricing": {
       "badge": "Prijzen",
       "title": "Duidelijke AI-consulting prijzen,",
-      "highlight": "met de scope erachter.",
-      "subtitle": "De goedkopere advies- of chatbotpakketten kunnen zinvol zijn als je alleen een workshop of een simpele assistent nodig hebt. LAB is gepositioneerd voor engineering: workflow-audits, architectuur, integraties, deployment, documentatie en support na de lancering.",
+      "highlight": "met echte oplevering erachter.",
+      "subtitle": "LAB is geprijsd voor engineeringwerk, niet voor lichte advisering. Dat betekent scope, architectuur, integraties, deployment, documentatie en support na livegang.",
       "recommended": "Beste start",
       "items": [
         {
           "name": "Fit-check",
           "price": "Gratis",
           "timeline": "30 minuten",
-          "desc": "Voor teams die een direct antwoord nodig hebben voordat ze strategie of ontwikkeling inkopen.",
+          "desc": "Voor teams die snel een technische inschatting willen voordat ze een groter traject starten.",
           "href": "/#contact",
           "cta": "Check de fit",
           "points": [
-            "Review van een workflow of bottleneck",
-            "Eerlijk advies over wel of niet bouwen",
-            "Voorgestelde volgende stap als er een echte case is"
+            "Review van één workflow, bottleneck of use case",
+            "Duidelijk advies of het probleem de moeite waard is om met AI op te lossen",
+            "Voorgestelde volgende stap als er een sterke implementatiecase is"
           ]
         },
         {
           "name": "AI Strategie Sprint",
           "price": "€2,5k–€5k",
           "timeline": "1–2 weken",
-          "desc": "Voor teams die weten dat AI kan helpen maar eerst een geprioriteerde roadmap nodig hebben voordat ze in implementatie investeren.",
+          "desc": "Voor teams die weten dat AI kan helpen, maar eerst een scherper implementatieplan nodig hebben voordat budget wordt vrijgemaakt.",
           "href": "/#contact",
           "cta": "Definieer sprint",
           "recommended": true,
           "points": [
-            "Workflow-audit en opportuniteitenkaart",
-            "Automatiseringsbacklog geprioriteerd op ROI",
-            "Architectuur, budget en tijdsraming"
+            "Workflow-audit en kansenkaart",
+            "Backlog geprioriteerd op waarde en complexiteit",
+            "Architectuur, budget en opleverinschatting"
           ]
         },
         {
           "name": "AI-implementatie",
           "price": "Vanaf €8k",
           "timeline": "4–8 weken",
-          "desc": "Voor teams die een AI-systeem in productie willen, gekoppeld aan hun echte business stack.",
+          "desc": "Voor teams die klaar zijn om één AI-systeem in productie te brengen binnen hun echte business-omgeving.",
           "href": "/ai-consulting",
           "cta": "Plan ontwikkeling",
           "points": [
             "Vaste scope en deliveryplan",
-            "Integraties met CRM, API, database of workflows",
+            "Integraties met CRM, API's, databases of interne workflows",
             "Documentatie en 30 dagen support"
           ]
         },
@@ -1549,58 +1549,58 @@
           "name": "Doorlopend AI Partner",
           "price": "Vanaf €5k/mnd",
           "timeline": "Maandelijks",
-          "desc": "Voor bedrijven die doorlopende AI-engineering willen zonder een volledig intern team aan te nemen.",
+          "desc": "Voor bedrijven die doorlopende AI-engineeringcapaciteit nodig hebben zonder een volledig intern team op te bouwen.",
           "href": "/#contact",
           "cta": "Bespreek scope",
           "points": [
             "Nieuwe automatiseringen en verbeteringen",
-            "Monitoring, fixes en workflow-wijzigingen",
+            "Monitoring, fixes en workflow-updates",
             "Kwartalijke roadmap- en ROI-review"
           ]
         }
       ],
       "comparison": {
-        "title": "Hoe verhoudt dit zich tot goedkopere AI-consultancies",
-        "desc": "Als het doel een generieke audit, training of een basis chatbot is, kan een lagere instapprijs zinvol zijn. LAB moet winnen wanneer de koper technisch eigendom en systemen in productie waardeert.",
+        "title": "Hoe dit zich verhoudt tot goedkopere AI-aanbieders",
+        "desc": "Als je alleen training, een generieke audit of een simpele assistent nodig hebt, kan een lagere instapprijs voldoende zijn. LAB past beter wanneer technische eigendom en productie-oplevering centraal staan.",
         "points": [
-          "De Strategie Sprint overlapt met premium AI-auditprijzen omdat het technische architectuur en een uitvoerbaar plan bevat.",
-          "De implementatie begint hoger dan een basis chatbot omdat het echte integraties, deployment, documentatie en support omvat.",
-          "De doorlopende partner lijkt op een extern AI-departement, maar is gepositioneerd als senior engineering-capaciteit en geleverde systemen."
+          "De Strategie Sprint ligt boven een lichte audit omdat er technische architectuur en een uitvoerbaar opleverplan in zitten.",
+          "Implementatie start hoger dan een basis-chatbotproject omdat het echte integraties, deployment, documentatie en support bevat.",
+          "De doorlopende partnerpropositie lijkt meer op embedded senior engineering-capaciteit dan op uitbestede advisory."
         ]
       }
     },
     "WhatWeBuildInline": {
       "badge": "Wat Wij Bouwen",
-      "title": "Vijf AI-systemen die",
-      "highlight": "Wij naar Productie Brengen",
+      "title": "Vijf AI-systemen die we",
+      "highlight": "in productie opleveren",
       "services": [
         {
           "title": "AI Sales- en Kwalificatieagents",
-          "desc": "Reageren op leads 24/7, kwalificeren volgens je criteria, boeken meetings en dragen over met volledige context.",
+          "desc": "Vangen inkomende vraag op, kwalificeren intentie, plannen meetings in en geven de juiste context door aan het salesteam.",
           "label": "AI Agents & Automatisering",
           "href": "/expertise/ai-agents-automation"
         },
         {
           "title": "Workflow- en Operatieautomatisering",
-          "desc": "Automatiseer documentverwerking, agenda's, CRM-synchronisatie en goedkeuringsworkflows in n8n of pipelines op maat.",
+          "desc": "Verminder repetitief werk in reporting, goedkeuringen, administratie en interne coördinatie met automatiseringen die klaar zijn voor productie.",
           "label": "AI Automatisering Nederland",
           "href": "/ai-consulting"
         },
         {
           "title": "AI Systeemintegratie",
-          "desc": "Koppel AI aan je CRM, ERP, databases en communicatieplatforms via correcte API-integraties.",
+          "desc": "Koppel AI aan je CRM, ERP, databases en communicatietools via integraties die zijn ontworpen voor echte operaties.",
           "label": "IT Systeemintegratie",
           "href": "/it-system-integration"
         },
         {
           "title": "Interne Tools met AI",
-          "desc": "Maatwerk dashboards en admin tools die repetitief intern werk en datareconciliatie elimineren.",
+          "desc": "Maatwerk interne tools en dashboards die repetitief administratief werk, versnipperde rapportage en handmatige reconciliatie wegnemen.",
           "label": "Maatwerk Interne Tools",
           "href": "/services/custom-internal-tools-development"
         },
         {
           "title": "Gepersonaliseerde LLM-implementaties",
-          "desc": "Private taalmodellen afgestemd op classificatie, responsgeneratie en interne kennisretrieval.",
+          "desc": "Private taalmodellen voor classificatie, response generation en interne kennisworkflows wanneer standaardtools tekortschieten.",
           "label": "Maatwerk LLM Ontwikkeling",
           "href": "/expertise/custom-llm-development"
         }
@@ -1608,9 +1608,9 @@
     },
     "UseCases": {
       "badge": "Use Cases",
-      "title": "Wat Bedrijven",
-      "highlight": "Eerst Automatiseren",
-      "subtitle": "Dit zijn de startpunten met de hoogste ROI die wij in alle sectoren zien — elk komt in productie in weken, niet in kwartalen.",
+      "title": "Wat teams meestal",
+      "highlight": "als eerste automatiseren",
+      "subtitle": "Dit zijn de startpunten met de meeste hefboomwerking die we in verschillende sectoren zien. Ze lossen operationele knelpunten snel op en gaan meestal in weken live, niet in kwartalen.",
       "labels": {
         "problem": "Probleem",
         "solution": "Oplossing",
@@ -1619,24 +1619,24 @@
       "items": [
         {
           "number": "01",
-          "title": "Leads Kwalificeren zonder Aannemen",
-          "problem": "Verkopers besteden uren aan het achtervolgen van niet-gekwalificeerde leads en het schrijven van follow-up emails die geautomatiseerd zouden moeten zijn.",
-          "solution": "Een AI-agent beheert binnenkomende aanvragen 24/7 — kwalificeert volgens je criteria, stelt vervolgvragen en boekt meetings voor leads die de filter passeren.",
-          "outcome": "Gekwalificeerde meetings automatisch geboekt. Verkopers spreken alleen met prospects die klaar zijn om te beslissen."
+          "title": "Leads kwalificeren zonder extra headcount",
+          "problem": "Salesteams verliezen tijd aan trage reacties, zwakke kwalificatie en opvolging die niet van handmatig werk zou mogen afhangen.",
+          "solution": "Een AI-agent verwerkt inkomende vraag, stelt de juiste kwalificatievragen en duwt serieuze kansen automatisch door naar de volgende stap.",
+          "outcome": "Meer gekwalificeerde meetings, snellere responstijden en minder handmatige opvolging voor sales."
         },
         {
           "number": "02",
-          "title": "Handmatige Rapportages Elimineren",
-          "problem": "Operatie- of financiële teams besteden uren per week aan het extraheren van data uit meerdere systemen om dezelfde rapporten te bouwen.",
-          "solution": "Geautomatiseerde pipelines verzamelen, transformeren en leveren gestructureerde rapporten in Slack, email of een dashboard — volgens schema, zonder menselijke interventie.",
-          "outcome": "Wekelijkse werkuren in rapportages geëlimineerd. Data is altijd up-to-date, nooit vertraagd."
+          "title": "Repetitieve rapportage elimineren",
+          "problem": "Operations- en finance-teams besteden nog steeds uren per week aan het verzamelen van dezelfde data uit meerdere systemen voor terugkerende rapportages.",
+          "solution": "Geautomatiseerde pipelines verzamelen, transformeren en leveren gestructureerde rapportage aan Slack, e-mail of dashboards volgens een betrouwbare cadans.",
+          "outcome": "Minder analistentijd verloren aan repetitieve rapportage en betrouwbaardere cijfers voor dagelijkse beslissingen."
         },
         {
           "number": "03",
           "title": "Klant-onboarding Automatiseren",
-          "problem": "Elke nieuwe klant triggert een handmatige reeks emails, documentverzoeken, CRM-updates en interne overdrachten.",
-          "solution": "Een automatisering wordt geactiveerd bij contractsluiting: stuurt welkomstsequences, vraagt documenten aan, creëert projectrecords en informeert automatisch de juiste personen.",
-          "outcome": "Onboarding wordt voltooid in uren in plaats van dagen. Geen verloren overdrachten, niemand achtervolgen."
+          "problem": "Elke nieuwe klant triggert nog steeds een rommelige keten van e-mails, documentverzoeken, CRM-updates en interne overdrachten.",
+          "solution": "Zodra een deal sluit, start de automatisering het onboardingproces, verzamelt de juiste informatie, maakt records aan en informeert automatisch de juiste mensen.",
+          "outcome": "Snellere onboarding, schonere overdrachten en minder vertraging tussen sales en delivery."
         }
       ]
     },
@@ -2894,7 +2894,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "PainPoints": {
       "title": "De Werkelijke Kosten van het Beheren van een Tandartspraktijk in 2026",
       "items": [
@@ -3080,7 +3080,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "PainPoints": {
       "title": "Waar Jouw Praktijk Tijd en Omzet Verliest",
       "items": [
@@ -3266,7 +3266,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "IndustryMetrics": [
       { "value": "45%", "label": "Lead-naar-boeking conversie" },
       { "value": "€850", "label": "Gemiddelde stijging in klantlevensduurwaarde" },
@@ -3458,7 +3458,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "PainPoints": {
       "title": "De Werkelijke Kosten van het Beheren van een Dierenkliniek in 2026",
       "items": [
@@ -3634,7 +3634,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook systemen in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "IndustryMetrics": [
       { "value": "92%", "label": "van leads beantwoord binnen 5 minuten" },
       { "value": "3x", "label": "meer afspraken geboekt met directe respons" },
@@ -3816,7 +3816,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook systemen in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "IndustryMetrics": [
       { "value": "92%", "label": "van leads beantwoord binnen 5 minuten" },
       { "value": "3x", "label": "meer bezichtigingen geboekt met directe opvolging" },
@@ -3998,7 +3998,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "IndustryMetrics": [
       { "value": "35%", "label": "minder no-shows door automatische reminders" },
       { "value": "2 min", "label": "gemiddelde responstijd versus 4 uur handmatig" },
@@ -4180,7 +4180,7 @@
         "secondary": "Bekijk Wat Wij Automatiseren"
       }
     },
-    "LanguageNote": "Hoewel wij in Nederland gevestigd zijn, is onze primaire communicatietaal Engels, omdat ons techteam Engels spreekt. Wij bieden echter ook websites in het Nederlands aan, omdat wij een specialist hebben die Nederlandse content proefleest.",
+    "LanguageNote": "We werken vooral in het Engels en kunnen ook Nederlandstalige oplevering ondersteunen voor klantgerichte content en workflows.",
     "IndustryMetrics": [
       { "value": "85%", "label": "bezettingsgraad na automatisering" },
       { "value": "€200K", "label": "jaarlijks teruggewonnen declarabele uren" },
