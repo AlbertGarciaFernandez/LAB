@@ -239,7 +239,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "Dental clinic automation Netherlands",
-        href: "/dental-clinic-automation-netherlands",
+        href: "/healthcare-automation-netherlands",
       },
       {
         label: "AI automation consulting in the Netherlands",
@@ -579,7 +579,7 @@ export const insights: InsightArticle[] = [
     relatedServices: [
       {
         label: "Accounting firm automation Netherlands",
-        href: "/accounting-firm-automation-netherlands",
+        href: "/professional-services-automation-netherlands",
       },
       {
         label: "AI automation consulting in the Netherlands",

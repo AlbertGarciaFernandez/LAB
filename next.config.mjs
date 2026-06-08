@@ -28,8 +28,18 @@ const nextConfig = {
       permanent: true,
     },
     {
+      source: "/:locale(en|es|nl)/dental-clinic-automation-netherlands",
+      destination: "/:locale/healthcare-automation-netherlands",
+      permanent: true,
+    },
+    {
       source: "/physiotherapy-clinic-automation-netherlands",
       destination: "/healthcare-automation-netherlands",
+      permanent: true,
+    },
+    {
+      source: "/:locale(en|es|nl)/physiotherapy-clinic-automation-netherlands",
+      destination: "/:locale/healthcare-automation-netherlands",
       permanent: true,
     },
     {
@@ -38,8 +48,18 @@ const nextConfig = {
       permanent: true,
     },
     {
+      source: "/:locale(en|es|nl)/veterinary-clinic-automation-netherlands",
+      destination: "/:locale/healthcare-automation-netherlands",
+      permanent: true,
+    },
+    {
       source: "/accounting-firm-automation-netherlands",
       destination: "/professional-services-automation-netherlands",
+      permanent: true,
+    },
+    {
+      source: "/:locale(en|es|nl)/accounting-firm-automation-netherlands",
+      destination: "/:locale/professional-services-automation-netherlands",
       permanent: true,
     },
   ],

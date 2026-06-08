@@ -102,12 +102,12 @@ Compliance: GDPR-compliant by design
 
 ## Industry Pages (Netherlands)
 
-- [Accounting Firm Automation Netherlands](https://www.codehunterlab.com/en/accounting-firm-automation-netherlands)
+- [Accounting Firm Automation Netherlands](https://www.codehunterlab.com/en/professional-services-automation-netherlands)
 - [Real Estate Automation Netherlands](https://www.codehunterlab.com/en/real-estate-automation-netherlands)
-- [Dental Clinic Automation Netherlands](https://www.codehunterlab.com/en/dental-clinic-automation-netherlands)
+- [Dental Clinic Automation Netherlands](https://www.codehunterlab.com/en/healthcare-automation-netherlands)
 - [Aesthetic Clinic Automation Netherlands](https://www.codehunterlab.com/en/aesthetic-clinic-automation-netherlands)
-- [Physiotherapy Clinic Automation Netherlands](https://www.codehunterlab.com/en/physiotherapy-clinic-automation-netherlands)
-- [Veterinary Clinic Automation Netherlands](https://www.codehunterlab.com/en/veterinary-clinic-automation-netherlands)
+- [Physiotherapy Clinic Automation Netherlands](https://www.codehunterlab.com/en/healthcare-automation-netherlands)
+- [Veterinary Clinic Automation Netherlands](https://www.codehunterlab.com/en/healthcare-automation-netherlands)
 
 ## Contact
 

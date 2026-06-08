@@ -2197,7 +2197,7 @@
           "emoji": "🧾",
           "title": "Accounting Firms",
           "desc": "Automate invoice processing, client intake and financial reporting. Integrates with Exact Online, Twinfield and Moneybird.",
-          "href": "/accounting-firm-automation-netherlands"
+          "href": "/professional-services-automation-netherlands"
         },
         {
           "emoji": "🏠",
@@ -2209,7 +2209,7 @@
           "emoji": "🦷",
           "title": "Dental Clinics",
           "desc": "Reduce no-shows with automatic reminders, optimise patient intake and connect your practice software.",
-          "href": "/dental-clinic-automation-netherlands"
+          "href": "/healthcare-automation-netherlands"
         },
         {
           "emoji": "💆",
@@ -2221,13 +2221,13 @@
           "emoji": "🏃",
           "title": "Physiotherapy Clinics",
           "desc": "Automate referral management, appointment scheduling and patient dropout detection.",
-          "href": "/physiotherapy-clinic-automation-netherlands"
+          "href": "/healthcare-automation-netherlands"
         },
         {
           "emoji": "🐾",
           "title": "Veterinary Clinics",
           "desc": "Reduce no-shows, automate pet owner communication and sync appointments with your clinic software.",
-          "href": "/veterinary-clinic-automation-netherlands"
+          "href": "/healthcare-automation-netherlands"
         }
       ]
     },

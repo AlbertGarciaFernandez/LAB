@@ -47,7 +47,8 @@ test("insight content includes the Search Console opportunity articles", () => {
   assert.match(source, /publishedAt:/);
   assert.match(source, /modifiedAt:/);
   assert.match(source, /\/ai-consulting/);
-  assert.match(source, /\/dental-clinic-automation-netherlands/);
+  assert.match(source, /\/healthcare-automation-netherlands/);
+  assert.match(source, /\/professional-services-automation-netherlands/);
   assert.match(source, /\/software-development-leiden/);
   assert.match(source, /\/react-consulting/);
   assert.match(source, /\/nextjs-development-agency/);
