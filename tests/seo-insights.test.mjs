@@ -254,6 +254,7 @@ test("NL locale is configured in routing, constants, and middleware", () => {
   const middleware = readFileSync("middleware.ts", "utf8");
 
   assert.match(routing, /locales:\s*\[.*"nl".*\]/);
+  assert.match(routing, /alternateLinks:\s*false/);
   assert.match(constants, /LOCALES\s*=\s*\[.*"nl".*\]/);
   assert.match(middleware, /\(en\|es\|nl\)/);
 });

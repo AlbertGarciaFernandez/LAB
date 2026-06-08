@@ -51,16 +51,21 @@ export function createPageMetadata({
   const url = canonicalUrl(normalizedLocale, path);
   const image = imagePath ?? `/${effectiveLocale}/opengraph-image`;
   const alternateLanguages = localizedAlternates(path);
+  const alternates = alternateLanguages
+    ? {
+        canonical: url,
+        languages: alternateLanguages,
+      }
+    : {
+        canonical: url,
+      };
 
   return {
     metadataBase: new URL(BASE_URL),
     title,
     description,
     keywords,
-    alternates: {
-      canonical: url,
-      languages: alternateLanguages,
-    },
+    alternates,
     robots: {
       index: indexable,
       follow: true,

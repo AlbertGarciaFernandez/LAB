@@ -9,6 +9,13 @@ test("metadata helper consults centralized seo locale policy", () => {
   assert.match(source, /getSeoLocalePolicy\(/);
 });
 
+test("metadata helper omits hreflang alternates when seo policy disables them", () => {
+  const source = readFileSync("utils/metadata.ts", "utf8");
+
+  assert.match(source, /const alternates = alternateLanguages/);
+  assert.match(source, /alternates,\s*robots:/s);
+});
+
 test("insight article metadata stops hardcoding en es nl alternates", () => {
   const source = readFileSync("app/[locale]/insights/[slug]/page.tsx", "utf8");
 
