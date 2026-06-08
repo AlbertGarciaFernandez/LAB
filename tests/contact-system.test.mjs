@@ -1,19 +1,9 @@
 import assert from "node:assert/strict";
-import { readdirSync, readFileSync, statSync } from "node:fs";
 import { test } from "node:test";
-
-function collectTsxFiles(dir) {
-  return readdirSync(dir).flatMap((entry) => {
-    const path = `${dir}/${entry}`;
-    if (statSync(path).isDirectory()) {
-      return collectTsxFiles(path);
-    }
-    return path.endsWith(".tsx") ? [path] : [];
-  });
-}
+import { collectTsxFiles, localeMessages, readSource } from "./helpers/source.mjs";
 
 test("contact form supports full and compact variants with full-form escape hatch", () => {
-  const form = readFileSync("components/ui/ContactForm.tsx", "utf8");
+  const form = readSource("components/ui/ContactForm.tsx");
 
   assert.match(form, /type ContactFormVariant = "full" \| "compact"/);
   assert.match(form, /interface ContactFormProps/);
@@ -23,18 +13,25 @@ test("contact form supports full and compact variants with full-form escape hatc
   assert.match(form, /onRequestFullForm/);
 });
 
-test("reusable contact section renders the full form", () => {
-  const section = readFileSync("components/sections/ContactSection.tsx", "utf8");
+test("reusable contact section renders the translated full form", () => {
+  const section = readSource("components/sections/ContactSection.tsx");
+  const messages = localeMessages();
 
+  assert.match(section, /useTranslations\("Process"\)/);
   assert.match(section, /ContactForm/);
   assert.match(section, /variant="full"/);
   assert.match(section, /id="contact"/);
-  assert.match(section, /Book a Call/);
+  assert.match(section, /t\("contactBadge"\)/);
+
+  for (const locale of Object.keys(messages)) {
+    assert.equal(typeof messages[locale].Process.contactBadge, "string");
+    assert.ok(messages[locale].Process.contactBadge.length > 0);
+  }
 });
 
 test("home and ai-consulting both expose the full contact section", () => {
-  const home = readFileSync("app/[locale]/page.tsx", "utf8");
-  const aiConsulting = readFileSync("app/[locale]/ai-consulting/PageContent.tsx", "utf8");
+  const home = readSource("app/[locale]/page.tsx");
+  const aiConsulting = readSource("app/[locale]/ai-consulting/PageContent.tsx");
 
   assert.match(home, /ContactSection/);
   assert.match(home, /ProcessSection/);
@@ -43,9 +40,9 @@ test("home and ai-consulting both expose the full contact section", () => {
 });
 
 test("layout mounts a floating contact CTA using the compact form", () => {
-  const layout = readFileSync("app/[locale]/layout.tsx", "utf8");
-  const cta = readFileSync("components/ui/FloatingContactCta.tsx", "utf8");
-  const cookie = readFileSync("components/ui/CookieConsent.tsx", "utf8");
+  const layout = readSource("app/[locale]/layout.tsx");
+  const cta = readSource("components/ui/FloatingContactCta.tsx");
+  const cookie = readSource("components/ui/CookieConsent.tsx");
 
   assert.match(layout, /FloatingContactCta/);
   assert.match(cta, /useTranslations\("FloatingContactCta"\)/);
@@ -56,7 +53,7 @@ test("layout mounts a floating contact CTA using the compact form", () => {
 });
 
 test("floating contact CTA starts expanded then cycles back to icon-only", () => {
-  const cta = readFileSync("components/ui/FloatingContactCta.tsx", "utf8");
+  const cta = readSource("components/ui/FloatingContactCta.tsx");
 
   assert.match(cta, /const \[isExpanded, setIsExpanded\] = useState\(true\)/);
   assert.match(cta, /COLLAPSE_AFTER_MS/);
@@ -65,9 +62,9 @@ test("floating contact CTA starts expanded then cycles back to icon-only", () =>
 });
 
 test("floating contact CTA hides while other modal dialogs are open", () => {
-  const cta = readFileSync("components/ui/FloatingContactCta.tsx", "utf8");
-  const header = readFileSync("components/layout/Header.tsx", "utf8");
-  const expertise = readFileSync("components/sections/02ExpertiseSection.tsx", "utf8");
+  const cta = readSource("components/ui/FloatingContactCta.tsx");
+  const header = readSource("components/layout/Header.tsx");
+  const expertise = readSource("components/sections/02ExpertiseSection.tsx");
 
   assert.match(cta, /querySelector\('\[data-cta-suppress="true"\]'\)/);
   assert.match(cta, /MutationObserver/);
@@ -76,7 +73,7 @@ test("floating contact CTA hides while other modal dialogs are open", () => {
 });
 
 test("compact floating contact form uses unique field ids", () => {
-  const form = readFileSync("components/ui/ContactForm.tsx", "utf8");
+  const form = readSource("components/ui/ContactForm.tsx");
 
   assert.match(form, /const idPrefix = compact \? "floating-contact" : "contact-form"/);
   assert.match(form, /function fieldId\(id: string\)/);
@@ -86,7 +83,7 @@ test("compact floating contact form uses unique field ids", () => {
 });
 
 test("contact form visible copy is served from locale messages", () => {
-  const form = readFileSync("components/ui/ContactForm.tsx", "utf8");
+  const form = readSource("components/ui/ContactForm.tsx");
 
   assert.match(form, /useTranslations\("ContactForm"\)/);
   assert.doesNotMatch(form, />Book a Call</);
@@ -95,7 +92,7 @@ test("contact form visible copy is served from locale messages", () => {
 });
 
 test("contact hash always resolves to a real form entrypoint", () => {
-  const cta = readFileSync("components/ui/FloatingContactCta.tsx", "utf8");
+  const cta = readSource("components/ui/FloatingContactCta.tsx");
 
   assert.match(cta, /window\.location\.hash === "#contact"/);
   assert.match(cta, /const target = document\.getElementById\("contact"\)/);
@@ -106,7 +103,7 @@ test("contact hash always resolves to a real form entrypoint", () => {
 test("contact links use local hash navigation instead of absolute homepage hashes", () => {
   const files = collectTsxFiles("app/[locale]")
     .concat(collectTsxFiles("components"))
-    .map((file) => ({ file, source: readFileSync(file, "utf8") }));
+    .map((file) => ({ file, source: readSource(file) }));
 
   for (const { file, source } of files) {
     assert.doesNotMatch(source, /href="\/#contact"/, file);

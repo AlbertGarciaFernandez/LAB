@@ -1,23 +1,24 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import { test } from "node:test";
+import { localeMessages, readSource } from "./helpers/source.mjs";
 
-const source = readFileSync("components/sections/PackagesSection.tsx", "utf8");
-const messages = {
-  en: JSON.parse(readFileSync("messages/en.json", "utf8")),
-  es: JSON.parse(readFileSync("messages/es.json", "utf8")),
-  nl: JSON.parse(readFileSync("messages/nl.json", "utf8")),
-};
+const source = readSource("components/sections/PackagesSection.tsx");
+const messages = localeMessages();
 
-test("package card decorative overlay cannot intercept the details link", () => {
-  assert.match(
-    source,
-    /className="[^"]*pointer-events-none[^"]*absolute inset-0 rounded-3xl bg-gradient-to-br/
-  );
+test("package card decorative overlays cannot intercept the details link", () => {
+  const overlays = source.match(/className="[^"]*pointer-events-none[^"]*absolute inset-0[^"]*"/g) ?? [];
+
+  assert.ok(overlays.length >= 2, "Expected decorative overlays to opt out of pointer events");
 });
 
 test("package details link is layered above decorative card elements", () => {
-  assert.match(source, /className="[^"]*relative z-10[^"]*mt-7 inline-flex[^"]*"/);
+  const linkMatch = source.match(/<Link\s+href=\{item\.href\}\s+className="([^"]+)"/);
+  assert.ok(linkMatch, "Expected package details Link with href={item.href}");
+
+  const className = linkMatch[1];
+  for (const requiredClass of ["relative", "z-10", "inline-flex"]) {
+    assert.match(className, new RegExp(`(^|\\s)${requiredClass}(\\s|$)`));
+  }
 });
 
 test("home package cards link to the package explanation sections", () => {

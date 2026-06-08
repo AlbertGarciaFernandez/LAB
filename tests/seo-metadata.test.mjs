@@ -2,18 +2,24 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 
-test("metadata helper consults centralized seo locale policy", () => {
-  const source = readFileSync("utils/metadata.ts", "utf8");
+const metadataSource = readFileSync("utils/metadata.ts", "utf8");
 
-  assert.match(source, /from "@\/utils\/seo-locale"/);
-  assert.match(source, /getSeoLocalePolicy\(/);
+test("metadata helper consults centralized seo locale policy", () => {
+  assert.match(metadataSource, /from "@\/utils\/seo-locale"/);
+  assert.match(metadataSource, /getSeoLocalePolicy\(/);
 });
 
-test("metadata helper omits hreflang alternates when seo policy disables them", () => {
-  const source = readFileSync("utils/metadata.ts", "utf8");
+test("localized alternates return undefined when seo policy disables them", () => {
+  assert.match(metadataSource, /if \(!policy\.allowAlternates\) \{/);
+  assert.match(metadataSource, /return undefined;/);
+});
 
-  assert.match(source, /const alternates = alternateLanguages/);
-  assert.match(source, /alternates,\s*robots:/s);
+test("metadata helper omits languages when localized alternates are undefined", () => {
+  assert.match(metadataSource, /const alternateLanguages = localizedAlternates\(path\);/);
+  assert.match(metadataSource, /const alternates = alternateLanguages\s*\?/);
+  assert.match(metadataSource, /languages: alternateLanguages/);
+  assert.match(metadataSource, /:\s*\{\s*canonical: url,\s*\}/s);
+  assert.match(metadataSource, /alternates,\s*robots:/s);
 });
 
 test("insight article metadata stops hardcoding en es nl alternates", () => {

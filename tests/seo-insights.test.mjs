@@ -84,6 +84,27 @@ test("legacy AI automation URL redirects to the AI consulting page", () => {
   assert.doesNotMatch(sitemap, /"\/ai-automation-consulting-netherlands"/);
 });
 
+test("legacy industry SEO URLs redirect to consolidated localized pages", () => {
+  const nextConfig = readFileSync("next.config.mjs", "utf8");
+
+  const redirects = [
+    ["dental-clinic-automation-netherlands", "healthcare-automation-netherlands"],
+    ["physiotherapy-clinic-automation-netherlands", "healthcare-automation-netherlands"],
+    ["veterinary-clinic-automation-netherlands", "healthcare-automation-netherlands"],
+    ["accounting-firm-automation-netherlands", "professional-services-automation-netherlands"],
+  ];
+
+  for (const [source, destination] of redirects) {
+    assert.match(nextConfig, new RegExp(`source:\\s*["']\\/${source}["']`));
+    assert.match(nextConfig, new RegExp(`destination:\\s*["']\\/${destination}["']`));
+    assert.match(
+      nextConfig,
+      new RegExp(`source:\\s*["']\\/:locale\\(en\\|es\\|nl\\)\\/${source}["']`)
+    );
+    assert.match(nextConfig, new RegExp(`destination:\\s*["']\\/:locale\\/${destination}["']`));
+  }
+});
+
 test("locale layout sets metadataBase for absolute social metadata", () => {
   const layout = readFileSync("app/[locale]/layout.tsx", "utf8");
   const helper = readFileSync("utils/metadata.ts", "utf8");

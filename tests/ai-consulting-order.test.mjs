@@ -1,20 +1,9 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import { test } from "node:test";
+import { assertInOrder, readSource } from "./helpers/source.mjs";
 
-const page = readFileSync("app/[locale]/ai-consulting/PageContent.tsx", "utf8");
-const sidebar = readFileSync("components/ui/SidebarNav.tsx", "utf8");
-
-function assertInOrder(source, markers) {
-  let previous = -1;
-
-  for (const marker of markers) {
-    const current = source.indexOf(marker);
-    assert.notEqual(current, -1, `Missing marker: ${marker}`);
-    assert.ok(current > previous, `Expected ${marker} to appear after previous marker`);
-    previous = current;
-  }
-}
+const page = readSource("app/[locale]/ai-consulting/PageContent.tsx");
+const sidebar = readSource("components/ui/SidebarNav.tsx");
 
 test("AI consulting page sections follow the safer conversion narrative", () => {
   assertInOrder(page, [
@@ -32,7 +21,7 @@ test("AI consulting page sections follow the safer conversion narrative", () => 
 
 test("AI consulting sidebar matches the page section order", () => {
   assert.doesNotMatch(sidebar, /id: "use-cases"/);
-  assert.match(sidebar, /\{ id: "migration", label: "Engagement Models" \}/);
+  assert.match(sidebar, /\{ id: "migration", label: t\("engagementModels"\) \}/);
 
   assertInOrder(sidebar, [
     'id: "hero"',
@@ -49,27 +38,25 @@ test("AI consulting sidebar matches the page section order", () => {
 
 test("AI consulting hero links directly to the ROI calculator", () => {
   assert.match(page, /href="#roi-calculator"/);
-  assert.match(page, /Estimate ROI first/);
+  assert.match(page, /hero\.calculator\.title/);
+  assert.match(page, /hero\.calculator\.heading/);
   assert.doesNotMatch(page, /xl:text-8xl/);
 });
 
-test("AI consulting page uses the approved refreshed section treatments", () => {
-  assert.match(page, /past the AI toy phase/);
-  assert.match(page, /what we build editorial bento/i);
-  assert.match(page, /production standards strip/i);
+test("AI consulting page uses the approved conversion section components", () => {
+  assert.match(page, /whatWeBuild\.services\.map/);
+  assert.match(page, /pricing\.items\.map/);
+  assert.match(page, /ContactSection/);
+  assert.match(page, /id="tech-credibility"/);
+  assert.match(page, /id="roi-calculator"/);
 });
 
-test("agent use cases are vertical and mapped to LEO ATLAS and ORION", () => {
-  const topAgents = readFileSync("components/sections/TopAgentsSection.tsx", "utf8");
+test("agent use cases are mapped to LEO ATLAS and ORION", () => {
+  const topAgents = readSource("components/sections/TopAgentsSection.tsx");
 
   assert.match(topAgents, /agentUseCaseMap/);
   assert.match(topAgents, /agentId: "leo"/);
   assert.match(topAgents, /agentId: "atlas"/);
   assert.match(topAgents, /agentId: "orion"/);
-  assert.match(topAgents, /Vertical agent use case transfer/);
-  assert.match(
-    topAgents,
-    /Repetitive bottleneck\/advantage\/ecosystem block intentionally commented out/
-  );
-  assert.match(topAgents, /\{false && \(/);
+  assert.match(topAgents, /useCases\.items\.map/);
 });
