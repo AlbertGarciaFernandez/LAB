@@ -117,7 +117,7 @@ export default function PackagesSection() {
                 )}
                 <Link
                   href={item.href}
-                  className="relative z-10 mt-auto inline-flex items-center gap-2 pt-7 text-xs font-bold uppercase tracking-widest text-hunter-orange transition-colors hover:text-white"
+                  className="relative z-10 mt-7 inline-flex items-center gap-2 pt-7 text-xs font-bold uppercase tracking-widest text-hunter-orange transition-colors hover:text-white"
                 >
                   {item.cta ?? t("learnMore")}
                   <span

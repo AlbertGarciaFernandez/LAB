@@ -261,10 +261,10 @@
     "bgText": "INSIGHTS",
     "bgNumber": "05",
     "badge": "Insights",
-    "title": "Praktische veldnotities over AI-automatisering.",
-    "subtitle": "Gidsen over AI-agents, WhatsApp-automatisering, n8n-strategie en operationele systemen voor bedrijven die beslissen wat ze hierna gaan bouwen.",
+    "title": "Buyer education voor AI-systemen en operationele automatisering.",
+    "subtitle": "Strategische stukken over AI-agents, WhatsApp-workflows, systeemintegratie en n8n-beslissingen voor bedrijven die echte operaties willen verbeteren.",
     "cta": "Bekijk alle insights",
-    "readArticle": "Lees artikel"
+    "readArticle": "Lees insight"
   },
   "WhatWeBuild": {
     "bgText": "SERVICES",
