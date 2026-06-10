@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import BreadcrumbSchema from "@/components/ui/BreadcrumbSchema";
 import { insightBySlug, insights } from "@/content/insights";
+import { getRelatedInsights } from "@/content/insights-taxonomy";
 import { canonicalUrl, createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
@@ -28,12 +29,13 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     return {};
   }
 
-  const path = `/insights/${article.slug}`;
+  const currentArticle = article!;
+  const path = `/insights/${currentArticle.slug}`;
   const metadata = createPageMetadata({
     locale: params.locale,
     path,
-    title: `${article.title} | CodeHunter Lab`,
-    description: article.description,
+    title: `${currentArticle.title} | CodeHunter Lab`,
+    description: currentArticle.description,
     type: "article",
   });
 
@@ -41,13 +43,13 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     ...metadata,
     openGraph: {
       ...metadata.openGraph,
-      title: `${article.title} | CodeHunter Lab`,
-      description: article.description,
+      title: `${currentArticle.title} | CodeHunter Lab`,
+      description: currentArticle.description,
       url: canonicalUrl(params.locale, path),
       siteName: "CodeHunter Lab",
       type: "article",
-      publishedTime: article.publishedAt,
-      modifiedTime: article.modifiedAt,
+      publishedTime: currentArticle.publishedAt,
+      modifiedTime: currentArticle.modifiedAt,
     },
   };
 }
@@ -63,14 +65,16 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
     notFound();
   }
 
-  const articleUrl = canonicalUrl("en", `/insights/${article.slug}`);
+  const currentArticle = article!;
+  const articleUrl = canonicalUrl("en", `/insights/${currentArticle.slug}`);
+  const relatedInsights = getRelatedInsights(currentArticle.slug, insights);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.title,
-    description: article.description,
-    datePublished: article.publishedAt,
-    dateModified: article.modifiedAt,
+    headline: currentArticle.title,
+    description: currentArticle.description,
+    datePublished: currentArticle.publishedAt,
+    dateModified: currentArticle.modifiedAt,
     mainEntityOfPage: articleUrl,
     author: {
       "@type": "Person",
@@ -90,7 +94,7 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
         url: `${baseUrl}/logo-hntr.svg`,
       },
     },
-    keywords: article.targetQueries,
+    keywords: currentArticle.targetQueries,
   };
 
   return (
@@ -101,7 +105,7 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
           items={[
             { name: "Home", url: `${baseUrl}/en` },
             { name: "Insights", url: `${baseUrl}/en/insights` },
-            { name: article.title, url: articleUrl },
+            { name: currentArticle.title, url: articleUrl },
           ]}
         />
         <script
@@ -120,23 +124,27 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
         <article>
           <header className="mb-12 border-b border-white/10 pb-10">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-green">
-              {article.category}
+              {currentArticle.category}
             </p>
             <h1 className="mb-6 text-4xl font-black leading-none tracking-tighter md:text-6xl">
-              {article.title}
+              {currentArticle.title}
             </h1>
             <p className="mb-6 text-lg leading-relaxed text-gray-300 md:text-xl">
-              {article.description}
+              {currentArticle.description}
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <span>Published {article.publishedAt}</span>
-              <span>Updated {article.modifiedAt}</span>
-              <span>{article.readingTime}</span>
+              <time dateTime={currentArticle.publishedAt}>
+                Published {currentArticle.publishedAt}
+              </time>
+              <time dateTime={currentArticle.modifiedAt}>
+                Updated {currentArticle.modifiedAt}
+              </time>
+              <span>{currentArticle.readingTime}</span>
             </div>
           </header>
 
           <div className="space-y-8">
-            {article.sections.map((section, index) => {
+            {currentArticle.sections.map((section, index) => {
               if (section.type === "heading") {
                 return (
                   <h2
@@ -218,7 +226,7 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
           <section className="mt-14 rounded-lg border border-hunter-green/30 bg-hunter-green/10 p-6">
             <h2 className="mb-4 text-2xl font-black tracking-tight">Related services</h2>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              {article.relatedServices.map((service) => (
+              {currentArticle.relatedServices.map((service) => (
                 <Link
                   key={service.href}
                   href={service.href}
@@ -229,6 +237,36 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
               ))}
             </div>
           </section>
+
+          {relatedInsights.length > 0 ? (
+            <section className="mt-8 rounded-lg border border-white/10 bg-white/[0.03] p-6">
+              <h2 className="mb-4 text-2xl font-black tracking-tight">Related insights</h2>
+              <div className="grid gap-4 md:grid-cols-3">
+                {relatedInsights.map((relatedArticle) => (
+                  <article
+                    key={relatedArticle.slug}
+                    className="rounded-lg border border-white/10 bg-near-black px-4 py-5"
+                  >
+                    <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-hunter-green">
+                      {relatedArticle.category}
+                    </p>
+                    <h3 className="text-lg font-black leading-tight tracking-tight">
+                      <Link
+                        href={`/insights/${relatedArticle.slug}`}
+                        locale="en"
+                        className="hover:text-hunter-green"
+                      >
+                        {relatedArticle.title}
+                      </Link>
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-gray-300">
+                      {relatedArticle.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ) : null}
         </article>
       </main>
     </div>

@@ -100,6 +100,19 @@ const insightsIndexMeta = {
 };
 const insightArticleMeta = { priority: 0.7, changeFrequency: "monthly" as const };
 
+const prioritizedInsightSlugs = new Set([
+  "automation-consultancy-netherlands",
+  "ai-system-integration",
+  "n8n-consultant-netherlands",
+  "n8n-vs-zapier-netherlands",
+  "whatsapp-automation-for-business",
+  "whatsapp-automation-netherlands",
+  "lead-qualification-automation-netherlands",
+  "ai-agent-consulting",
+  "react-consulting-services",
+  "nextjs-consultancy-europe",
+]);
+
 const caseStudiesIndexMeta = {
   lastModified: "2026-06-02",
   priority: 0.7,
@@ -144,7 +157,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  insights.forEach((article) => {
+  insights.filter((article) => prioritizedInsightSlugs.has(article.slug)).forEach((article) => {
     getSeoLocalePolicy(`/insights/${article.slug}`).indexableLocales.forEach((locale) => {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}/insights/${article.slug}`,

@@ -5,6 +5,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function GoogleAnalyticsConditional() {
   const [hasConsent, setHasConsent] = useState(false);
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
@@ -22,7 +23,7 @@ export default function GoogleAnalyticsConditional() {
     return () => window.removeEventListener("cookie-consent-update", handleConsentUpdate);
   }, []);
 
-  if (!hasConsent) return null;
+  if (!hasConsent || !gaId) return null;
 
-  return <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />;
+  return <GoogleAnalytics gaId={gaId} />;
 }

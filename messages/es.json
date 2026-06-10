@@ -261,10 +261,10 @@
     "bgText": "INSIGHTS",
     "bgNumber": "05",
     "badge": "Insights",
-    "title": "Notas de campo prácticas sobre automatización con IA.",
-    "subtitle": "Guías sobre agentes de IA, automatización de WhatsApp, estrategia con n8n y sistemas operativos para empresas que están decidiendo qué lanzar después.",
+    "title": "Educación para compradores sobre sistemas con IA y automatización operativa.",
+    "subtitle": "Lecturas estratégicas sobre agentes de IA, flujos con WhatsApp, integración de sistemas y decisiones con n8n para empresas que quieren mejorar operaciones reales.",
     "cta": "Ver todos los insights",
-    "readArticle": "Leer artículo"
+    "readArticle": "Leer insight"
   },
   "WhatWeBuild": {
     "bgText": "SERVICIOS",

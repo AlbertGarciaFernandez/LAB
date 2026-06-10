@@ -83,7 +83,9 @@ export default async function RootLayout({
           <MotionProvider>
             <div className="min-h-screen bg-near-black font-sans text-white">
               <div className="bg-noise" />
-              <div id="main-content">{children}</div>
+              <div id="main-content" role="main" tabIndex={-1}>
+                {children}
+              </div>
               <LocaleFooterGate />
               <FloatingContactCta />
               <CookieConsent />
@@ -230,14 +232,6 @@ export default async function RootLayout({
                 logo: "https://www.codehunterlab.com/logo-hntr.svg",
               },
               inLanguage: LOCALES,
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: "https://www.codehunterlab.com/en?q={search_term_string}",
-                },
-                "query-input": "required name=search_term_string",
-              },
             }),
           }}
         />
