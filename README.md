@@ -26,159 +26,115 @@
 
 ## What is this?
 
-CodeHunter Lab is a corporate multi-page website + product platform for an AI automation and consultancy agency based in the Netherlands. It includes:
+CodeHunter Lab is a multi-page marketing site plus product/lab surface for an AI automation and software consultancy based in the Netherlands.
 
-- **Homepage** — Hero, services, industries, pricing, testimonials, bio, contact
-- **SEO Landing Pages** — ~15+ industry and service-specific pages (dental, real estate, n8n, React, Next.js, etc.)
-- **Insights / Blog** — ~20 technical articles with schema.org structured data, dynamic metadata, and static generation
-- **Lab Platform** — Product landing page + internal workspace (sidebar, systems, modules, lessons, and resources)
-- **Bilingual** — English / Spanish via `next-intl`
+It includes:
 
-## Tech Stack
+- **Homepage** — positioning, services, industries, pricing, bio, and contact
+- **SEO landing pages** — service and industry pages for commercial acquisition
+- **Insights / blog** — editorial content with metadata and schema
+- **Lab platform** — public lab landing plus private internal app surface
+- **Localized routes** — `en`, `es`, and `nl` via `next-intl`
 
-| Layer     | Technology                             |
-| --------- | -------------------------------------- |
-| Framework | Next.js 14 (App Router)                |
-| Language  | TypeScript 5.5                         |
-| Styling   | Tailwind CSS 3.4                       |
-| Animation | Framer Motion                          |
-| i18n      | next-intl                              |
-| Icons     | Phosphor Icons, Lucide React           |
-| Analytics | Google Analytics (@next/third-parties) |
-| Testing   | Node.js built-in test runner           |
-| Linting   | ESLint + Prettier                      |
+## Tech stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript 5.x
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **i18n:** next-intl
+- **Analytics:** Google Analytics via `@next/third-parties`
+- **Testing:** Node.js built-in test runner
+- **Formatting / linting:** Prettier + ESLint
 
 ## Prerequisites
 
 - **Node.js** `>= 18.17.0`
-- **npm** or **pnpm**
+- **npm**
 
-## Getting Started
+## Getting started
 
 ```bash
-# Clone the repository
 git clone <repo-url>
-cd LAB
-
-# Install dependencies
-npm install
-
-# Start the development server
+cd LAB-codehunterlab
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Available Scripts
+## Verification commands
 
-| Script                 | Description                                  |
-| ---------------------- | -------------------------------------------- |
-| `npm run dev`          | Start the development server with hot reload |
-| `npm run build`        | Build the application for production         |
-| `npm run start`        | Start the production server                  |
-| `npm run lint`         | Run ESLint to check for code issues          |
-| `npm run lint:fix`     | Run ESLint and auto-fix issues               |
-| `npm run format`       | Format all files with Prettier               |
-| `npm run format:check` | Check if files are formatted with Prettier   |
-| `npm test`             | Run the test suite                           |
-
-## Project Structure
-
-```
-LAB/
-|-- app/                          # Next.js App Router
-|   |-- [locale]/                 # i18n routes (en, es)
-|   |   |-- page.tsx              # Homepage
-|   |   |-- layout.tsx            # Root layout with metadata & providers
-|   |   |-- insights/             # Blog / articles
-|   |   |-- lab/                  # Lab platform
-|   |   |-- about/                # About page
-|   |   |-- ai-consulting/        # Service pages
-|   |   |-- ...                   # Other SEO landing pages
-|   |-- robots.ts                 # Dynamic robots.txt
-|   |-- sitemap.ts                # Dynamic sitemap
-|-- components/
-|   |-- layout/                   # Header, Footer
-|   |-- sections/                 # Homepage sections
-|   |-- lab/                      # Lab platform components
-|   |-- ui/                       # Reusable UI components
-|-- content/
-|   |-- insights.ts               # Blog articles data
-|   |-- lab.ts                    # Lab platform mock data
-|-- i18n/                         # next-intl configuration
-|-- messages/                     # Translation files (en.json, es.json)
-|-- tests/                        # Test files
-|-- docs/                         # Documentation (SEO architecture, GEO analysis)
-```
-
-## Adding a New Commercial Page
-
-1. Create a new folder under `app/[locale]/` (e.g., `app/[locale]/my-service/`)
-2. Add a `page.tsx` with the page content
-3. Export `generateMetadata` for SEO
-4. Add JSON-LD structured data if relevant
-5. Add translations to `messages/en.json` and `messages/es.json`
-6. Add the route to navigation in `navigation.ts` and Header/Footer components
-
-## Adding a New Insight Article
-
-1. Open `content/insights.ts`
-2. Append a new `InsightArticle` object to the `insights` array following the existing structure
-3. The article will automatically:
-   - Appear on the insights index page
-   - Generate a static route at `/[locale]/insights/{slug}`
-   - Include schema.org `Article` JSON-LD
-   - Be included in the sitemap
-
-## Adding i18n Translations
-
-1. Open `messages/en.json` and `messages/es.json`
-2. Keep both files in sync — they should have identical key structures
-3. Use `useTranslations()` or `getTranslations()` in components to access translations
-
-## Testing
-
-Tests use the Node.js built-in test runner (`node --test`):
+Run these before pushing changes:
 
 ```bash
+npm run typecheck
+npm run lint
 npm test
+npm run build
 ```
 
-Current test coverage:
+## Available scripts
 
-- Lab platform structure validation
-- SEO metadata, sitemap, and JSON-LD checks
+- `npm run dev` — start the development server
+- `npm run build` — build for production
+- `npm run start` — start the production server
+- `npm run typecheck` — run TypeScript without emitting files
+- `npm run lint` — run ESLint
+- `npm run lint:fix` — run ESLint with autofix
+- `npm run format` — format files with Prettier
+- `npm run format:check` — check formatting
+- `npm test` — run the Node test suite
+
+## Project structure
+
+```text
+LAB-codehunterlab/
+├── app/                  # Next.js App Router routes, metadata, robots, sitemap
+├── components/           # Layout, UI, sections, analytics, lab components
+├── content/              # Editorial and lab content sources
+├── docs/                 # Plans and architecture notes
+├── i18n/                 # next-intl request/routing configuration
+├── messages/             # Locale message files (en, es, nl)
+├── public/               # Static assets
+├── tests/                # Repo-level regression tests
+└── vercel.json           # Headers, redirects, deployment config
+```
+
+## i18n notes
+
+- Keep `messages/en.json`, `messages/es.json`, and `messages/nl.json` structurally aligned.
+- Prefer updating all locales together when adding or renaming keys.
+- Routes are localized under `app/[locale]/...`.
+
+## Testing notes
+
+Current verification relies on:
+
+- structural tests for routes/components
+- SEO metadata and sitemap checks
+- locale and content policy tests
+- contact/navigation regression tests
 
 ## Deployment
 
-This project is optimized for [Vercel](https://vercel.com/):
+This project is designed for Vercel.
 
 ```bash
-# Install Vercel CLI
 npm i -g vercel
-
-# Deploy
-vercel --prod
+vercel
 ```
 
-Or connect your Git repository to Vercel for automatic deployments on push.
+For production deploys, prefer GitHub-connected Vercel deployments plus CI checks from `.github/workflows/ci.yml`.
 
-## Environment Variables
+## Environment variables
 
-Create a `.env.local` file in the project root:
+Create `.env.local` in the repo root as needed:
 
 ```env
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 ```
 
-> Note: Do not commit `.env.local` to version control.
-
 ## License
 
-Private — All rights reserved.
-
-## Author
-
-**Albert Garcia** — [LinkedIn](https://www.linkedin.com/in/albertgarciafernandez/)
-
-Built with purpose at **CodeHunter Lab**.
+Private — all rights reserved.

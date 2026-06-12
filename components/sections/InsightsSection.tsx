@@ -4,6 +4,7 @@ import { Link } from "@/navigation";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { insights } from "@/content/insights";
+import { getHomepageFeaturedInsights } from "@/content/insights-taxonomy";
 
 const slideUp = {
   hidden: { opacity: 0, y: 30 },
@@ -21,14 +22,7 @@ const containerVariants = {
 
 export default function InsightsSection() {
   const t = useTranslations("InsightsHome");
-  const featuredSlugs = new Set([
-    "ai-agent-consulting",
-    "whatsapp-automation-netherlands",
-    "n8n-vs-zapier-netherlands",
-    "ai-system-integration",
-    "ai-automation-to-autonomous-ai-systems",
-  ]);
-  const featuredInsights = insights.filter((article) => featuredSlugs.has(article.slug));
+  const featuredInsights = getHomepageFeaturedInsights(insights);
 
   return (
     <section className="relative overflow-hidden border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">

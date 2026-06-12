@@ -724,56 +724,64 @@ export const insights: InsightArticle[] = [
   },
   {
     slug: "ai-agent-consulting",
-    title: "AI Agent Consulting: When a Company Needs More Than a Chatbot",
-    description:
-      "A practical guide for companies comparing AI agent consulting, workflow automation, and production implementation support.",
-    category: "AI Agents",
-    publishedAt: "2026-04-22",
-    modifiedAt: "2026-04-22",
-    readingTime: "7 min read",
-    targetQueries: ["ai agent consulting", "ai agent consultant", "ai agent implementation"],
-    relatedServices: [
-      {
-        label: "AI consulting",
-        href: "/ai-consulting",
-      },
-      {
-        label: "AI agents and automation",
-        href: "/expertise/ai-agents-automation",
-      },
-    ],
-    sections: [
-      {
-        type: "paragraph",
-        text: "AI agent consulting helps companies move from curiosity about agents to a system that performs useful work in production. The real decision is not whether to add an AI chat interface. The real decision is whether the agent can read the right business context, act safely inside existing systems, and hand work back to humans when needed.",
-      },
-      {
-        type: "heading",
-        text: "An AI agent is only valuable when it can complete a workflow",
-      },
-      {
-        type: "paragraph",
-        text: "Most companies do not need a general-purpose autonomous agent. They need a narrow system that can qualify leads, answer bounded questions, prepare documents, route requests, update a CRM, or trigger the next operational step. A consultant should define the exact workflow first and the model behavior second.",
-      },
-      {
-        type: "list",
-        items: [
-          "Start with one measurable workflow instead of a broad assistant concept.",
-          "Define what data the agent can read and what systems it can write to.",
-          "Design fallback and approval rules before launch.",
-          "Measure outcomes such as response time, hours saved, and conversion quality.",
+        title: "AI Agent Consulting: When a Company Needs More Than a Chatbot",
+        description:
+          "A practical guide for companies comparing AI agent consulting, workflow automation, and production implementation support, with a focus on measurable ROI, rapid integration, and operational impact.",
+        category: "AI Agents",
+        publishedAt: "2026-04-22",
+        modifiedAt: "2026-04-22",
+        readingTime: "7 min read",
+        targetQueries: ["ai agent consulting","ai agent consultant","ai agent implementation"],
+        relatedServices: [
+          {
+            label: "AI consulting",
+            href: "/ai-consulting",
+          },
+          {
+            label: "AI agents and automation",
+            href: "/expertise/ai-agents-automation",
+          },
+          {
+            label: "Workflow Automation Agency Netherlands",
+            href: "/workflow-automation-agency-netherlands",
+          },
+          {
+            label: "System Integrator Netherlands",
+            href: "/system-integrator-netherlands",
+          },
+        ],
+        sections: [
+          {
+            type: "paragraph",
+            text: "AI agent consulting transforms curiosity about intelligent agents into revenue‑generating automation. The critical choice is not merely adding a chat interface but deploying a system that reads business context, executes safely within existing platforms, and hands off work to humans at the right moments—delivering measurable time savings, error reduction, and new revenue streams.",
+          },
+          {
+            type: "heading",
+            text: "An AI agent is only valuable when it can complete a workflow",
+          },
+          {
+            type: "paragraph",
+            text: "Most companies do not need a general-purpose autonomous agent. They need a narrow system that can qualify leads, answer bounded questions, prepare documents, route requests, update a CRM, or trigger the next operational step. A consultant should define the exact workflow first and the model behavior second.",
+          },
+          {
+            type: "list",
+            items: [
+              "Start with one measurable workflow instead of a broad assistant concept.",
+              "Define what data the agent can read and what systems it can write to.",
+              "Design fallback and approval rules before launch.",
+              "Measure outcomes such as response time, hours saved, and conversion quality.",
+            ],
+          },
+          {
+            type: "heading",
+            text: "The implementation work matters more than the demo",
+          },
+          {
+            type: "paragraph",
+            text: "The difficult part of an AI agent project is not the first prompt. It is system integration, evaluation, observability, permissions, and long-term maintenance. Good AI agent consulting closes the gap between a promising proof of concept and a dependable operating system for the team.",
+          },
         ],
       },
-      {
-        type: "heading",
-        text: "The implementation work matters more than the demo",
-      },
-      {
-        type: "paragraph",
-        text: "The difficult part of an AI agent project is not the first prompt. It is system integration, evaluation, observability, permissions, and long-term maintenance. Good AI agent consulting closes the gap between a promising proof of concept and a dependable operating system for the team.",
-      },
-    ],
-  },
   {
     slug: "whatsapp-automation-netherlands",
     title: "WhatsApp Automation Netherlands: Where It Creates Real ROI",

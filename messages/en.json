@@ -886,10 +886,10 @@
     "bgText": "INSIGHTS",
     "bgNumber": "06",
     "badge": "Insights",
-    "title": "Practical field notes on AI automation.",
-    "subtitle": "Guides on AI agents, WhatsApp automation, n8n strategy, and operating systems for businesses deciding what to launch next.",
+    "title": "Buyer education for AI systems and operational automation.",
+    "subtitle": "Strategic reads on AI agents, WhatsApp workflows, system integration, and n8n decisions for businesses improving real operations.",
     "cta": "View all insights",
-    "readArticle": "Read article"
+    "readArticle": "Read insight"
   },
   "WhatWeBuild": {
     "bgText": "SERVICES",
