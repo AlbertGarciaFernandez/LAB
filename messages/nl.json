@@ -1,18 +1,16 @@
 {
   "metadata": {
-    "title": "AI Automatiseringsbureau Nederland | CodeHunter Lab",
-    "description": "AI-automatiseringsbureau in Nederland voor AI agents, n8n-workflows en maatwerkintegraties. Productiesystemen, geen demo's. Gevestigd in Leiden.",
+    "title": "Engineering Studio Nederland | AI-systemen, Merkgedreven Producten en Leiderschap | CodeHunter Lab",
+    "description": "Engineering studio in Nederland voor AI-systemen, merkgedreven digitale producten, training en technisch leiderschap. Productiewerk, geen eindeloze pilots.",
     "keywords": [
-      "AI automatiseringsbureau Nederland",
-      "AI automatisering consulting Nederland",
-      "AI agents Nederland",
-      "n8n workflows Nederland",
-      "workflow automatiseringsbureau Nederland",
-      "AI systeemintegratie",
-      "maatwerk AI integraties Nederland",
-      "AI automatisering Leiden",
-      "WhatsApp automatisering Nederland",
-      "AI voice agents Nederland"
+      "engineering studio Nederland",
+      "AI-systemen Nederland",
+      "merkgedreven producten",
+      "technisch leiderschap",
+      "product design Nederland",
+      "training en adoptie",
+      "digitale producten Nederland",
+      "AI Leiden"
     ]
   },
   "CookieConsent": {
@@ -164,17 +162,17 @@
   },
   "Hero": {
     "logoAlt": "CodeHunter Lab-logo",
-    "subHeader": "AI Consulting · AI Automatisering · Productiesystemen",
+    "subHeader": "Engineering studio · AI-systemen · merkgedreven producten",
     "title": {
-      "part1": "AI Consulting en ",
-      "highlight1": "Automatisering",
-      "part2": "gebouwd voor ",
-      "highlight2": "productie"
+      "part1": "Systemen die ",
+      "highlight1": "presteren",
+      "part2": "en producten die ",
+      "highlight2": "onmiskenbaar van jou aanvoelen"
     },
-    "description": "We ontwerpen, bouwen en lanceren AI-systemen voor bedrijven die echte operationele resultaten nodig hebben, niet nog meer experimenten — gekoppeld aan je stack, je data en de workflows waarmee je team al werkt.",
+    "description": "We zijn niet alleen een AI-studio. We combineren productie-engineering, productsmaak, praktische training en senior technisch leiderschap voor teams die helderheid nodig hebben en systemen die echt shippen.",
     "cta": {
-      "initialize": "Boek een AI Strategiegesprek",
-      "caseStudies": "Ontdek AI Consulting"
+      "initialize": "Boek een strategiesessie",
+      "caseStudies": "Bekijk geselecteerd werk"
     }
   },
   "Footer": {
@@ -220,7 +218,7 @@
     },
     "InsightsHome": {
       "bgText": "INSIGHTS",
-      "bgNumber": "05"
+      "bgNumber": "06"
     },
     "Availability": {
       "nextOpening": "Volgende beschikbaarheid: {date}",
@@ -259,7 +257,7 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "05",
+    "bgNumber": "06",
     "badge": "Insights",
     "title": "Praktische veldnotities over AI-automatisering.",
     "subtitle": "Gidsen over AI-agents, WhatsApp-automatisering, n8n-strategie en operationele systemen voor bedrijven die beslissen wat ze hierna gaan bouwen.",
@@ -269,40 +267,90 @@
   "WhatWeBuild": {
     "bgText": "SERVICES",
     "bgNumber": "03",
-    "badge": "Wat Wij Bouwen",
+    "badge": "Kies je focus",
     "title": {
-      "part1": "Vijf manieren waarop we",
-      "highlight": "AI laten werken"
+      "part1": "Wat we bouwen",
+      "highlight": "met jou"
     },
-    "subtitle": "Elke samenwerking begint met een concreet bedrijfsdoel. Dit zijn de systemen die we het vaakst naar productie brengen.",
-    "cta": "Ontdek AI Consulting",
-    "services": [
-      {
-        "title": "AI Agents",
-        "desc": "AI-agents voor leadkwalificatie, klantenservice en operationele workflows, gekoppeld aan je tools en 24/7 beschikbaar.",
-        "link": "AI Agents & Automatisering"
+    "subtitle": "Start met AI-systemen als je automatisering in productie nodig hebt. Schakel naar studio-support voor productrichting, training, reviews of senior technisch leiderschap.",
+    "modes": {
+      "ai": {
+        "label": "AI-systemen",
+        "default": true,
+        "cta": "Ontdek AI consulting",
+        "ctaHref": "/ai-consulting",
+        "services": [
+          {
+            "title": "AI Agents",
+            "desc": "AI-agents voor leadkwalificatie, klantenservice en operationele workflows, gekoppeld aan je tools en 24/7 beschikbaar.",
+            "link": "AI Agents & Automatisering",
+            "href": "/expertise/ai-agents-automation"
+          },
+          {
+            "title": "Workflow Automatisering",
+            "desc": "Vervang repetitief werk door automatiseringen voor lead routing, documentverwerking, reporting en CRM-updates.",
+            "link": "AI Automatisering Nederland",
+            "href": "/ai-consulting"
+          },
+          {
+            "title": "AI Systeemintegratie",
+            "desc": "Koppel AI aan de systemen die je al gebruikt met integraties die passen bij je stack en je echte operatie.",
+            "link": "IT Systeemintegratie",
+            "href": "/it-system-integration"
+          },
+          {
+            "title": "Interne AI Tools",
+            "desc": "Maatwerk dashboards en interne tools die repetitief administratief werk verminderen en dagelijkse beslissingen makkelijker maken.",
+            "link": "Maatwerk Interne Tools",
+            "href": "/services/custom-internal-tools-development"
+          },
+          {
+            "title": "Maatwerk LLM-implementaties",
+            "desc": "Private modeldeployments voor classificatie, response generation en interne kennisworkflows wanneer standaardtools tekortschieten.",
+            "link": "Maatwerk LLM-ontwikkeling",
+            "href": "/expertise/custom-llm-development"
+          }
+        ]
       },
-      {
-        "title": "Workflow Automatisering",
-        "desc": "Vervang repetitief werk door automatiseringen voor lead routing, documentverwerking, reporting en CRM-updates.",
-        "link": "AI Automatisering Nederland"
-      },
-      {
-        "title": "AI Systeemintegratie",
-        "desc": "Koppel AI aan de systemen die je al gebruikt met integraties die passen bij je stack en je echte operatie.",
-        "link": "IT Systeemintegratie"
-      },
-      {
-        "title": "Interne AI Tools",
-        "desc": "Maatwerk dashboards en interne tools die repetitief administratief werk verminderen en dagelijkse beslissingen makkelijker maken.",
-        "link": "Maatwerk Interne Tools"
-      },
-      {
-        "title": "Maatwerk LLM-implementaties",
-        "desc": "Private modeldeployments voor classificatie, response generation en interne kennisworkflows wanneer standaardtools tekortschieten.",
-        "link": "Maatwerk LLM-ontwikkeling"
+      "studio": {
+        "label": "Studio-support",
+        "default": false,
+        "cta": "Ontdek de studio",
+        "ctaHref": "/case-studies",
+        "services": [
+          {
+            "title": "Merkgedreven productontwerp",
+            "desc": "Digitale producten en interfaces opgebouwd rond je merk, je gebruikers en het niveau van vakmanschap dat je wilt laten voelen.",
+            "link": "Productrichting en design",
+            "href": "/react-consulting"
+          },
+          {
+            "title": "AI-systemen in productie",
+            "desc": "AI-agents, automatiseringen en workflowlagen gebouwd voor echte operatie in plaats van demo-theater.",
+            "link": "AI-systemen & automatisering",
+            "href": "/ai-consulting"
+          },
+          {
+            "title": "Frontend-audits & productreviews",
+            "desc": "We auditen helderheid, performance en visuele consistentie waar product, merk en delivery samenkomen.",
+            "link": "Frontend review",
+            "href": "/nextjs-development-agency"
+          },
+          {
+            "title": "Training & adoptie",
+            "desc": "Praktische workshops die teams helpen nieuwe tools, processen en standaarden met vertrouwen te adopteren.",
+            "link": "Teamtraining",
+            "href": "/about"
+          },
+          {
+            "title": "Technisch leiderschap",
+            "desc": "Senior richting voor product, engineering en delivery wanneer beslissingen scherper oordeel nodig hebben.",
+            "link": "Technisch leiderschap",
+            "href": "/case-studies"
+          }
+        ]
       }
-    ]
+    }
   },
   "IndustriesSection": {
     "badge": "Industrieën",
@@ -504,28 +552,28 @@
     "description": {
       "p1": {
         "part1": "Wij zijn een",
-        "highlight": "AI-consultingstudio",
-        "part2": "gericht op engineering, gevestigd in Leiden, Nederland."
+        "highlight": "engineering studio",
+        "part2": "gevestigd in Leiden, Nederland."
       },
       "p2": {
-        "part1": "Wij ontwerpen, bouwen en implementeren AI-automatisering die",
-        "highlight1": "in productie draait",
-        "part2": "— niet in een sandbox. Wij werken met CTO's, founders en",
-        "highlight2": "operationele leiders",
-        "part3": "in heel Europa."
+        "part1": "Wij ontwerpen, bouwen en leveren production work dat",
+        "highlight1": "in de echte wereld werkt",
+        "part2": "— van AI-systemen tot merkgedreven producten — en wij werken met CTO's, founders en",
+        "highlight2": "product- en operations leaders",
+        "part3": "door heel Europa."
       }
     },
     "stats": {
       "years": "Jaar ervaring",
       "yearsValue": "4+",
       "focus": "Kernfocus",
-      "focusValue": "AI / Engineering",
+      "focusValue": "AI / Product / Leadership",
       "impact": "Bedrijven Bediend",
       "impactValue": "15+"
     },
     "passionCard": {
       "label": "Principe",
-      "quote": "\"Wij adviseren niet alleen. Wij implementeren.\""
+      "quote": "\"Wij adviseren niet alleen. Wij vormen en leveren.\""
     }
   },
   "Stack": {
@@ -1281,30 +1329,30 @@
     "bgNumber": "04",
     "badge": "Pakketten",
     "title": "Duidelijke instappunten, duidelijke prijsklassen.",
-    "subtitle": "Dit zijn instapranges, geen mysterieuze retainers. Exacte scope hangt af van systemen, data-toegang en integratiecomplexiteit.",
+    "subtitle": "Dit zijn instapranges voor strategie, productrichting en builds in productie. Exacte scope hangt af van systemen, data-toegang en integratiecomplexiteit.",
     "cta": "Boek een gesprek",
     "learnMore": "Bekijk details",
     "items": [
       {
-        "name": "AI Strategie Sprint",
+        "name": "Studio Strategie Sprint",
         "price": "€2,5k–€5k",
         "timeline": "1–2 weken",
-        "desc": "Voor als je weet dat AI kan helpen, maar eerst een geprioriteerd roadmap nodig hebt voordat je in ontwikkeling investeert.",
+        "desc": "Voor als je een helder beeld nodig hebt van waar productrichting, AI of technische support de meeste hefboom geven.",
         "href": "/ai-consulting#pricing",
         "cta": "Bekijk sprintscope",
         "points": [
-          "Workflow-audit en opportuniteitenkaart",
-          "Automatiseringsbacklog geprioriteerd op ROI",
-          "Architectuur en implementatieraming"
+          "Product- en workflow-audit",
+          "Geprioriteerde opportuniteitenkaart",
+          "Architectuur- en leveringsinschatting"
         ]
       },
       {
-        "name": "Implementatieproject",
+        "name": "Build in Productie",
         "price": "Vanaf €8k",
         "timeline": "4–8 weken",
-        "desc": "Een AI-systeem, workflow of integratie in productie op je infrastructuur.",
+        "desc": "Eén systeem, productlaag of integratie in productie op je infrastructuur.",
         "href": "/ai-consulting#pricing",
-        "cta": "Bekijk implementatiescope",
+        "cta": "Bekijk buildscope",
         "points": [
           "Vaste scope en duidelijk deliverplan",
           "Full-stack integratie met bestaande tools",
@@ -1312,14 +1360,14 @@
         ]
       },
       {
-        "name": "Doorlopend AI Partner",
+        "name": "Studio Partner",
         "price": "Vanaf €5k/mnd",
         "timeline": "Maandelijks",
-        "desc": "Geïntegreerde engineering-support voor teams die automatisering, onderhoud en continue iteratie willen.",
+        "desc": "Doorlopende ondersteuning voor teams die iteratie, onderhoud, reviews en senior richting willen.",
         "href": "/ai-consulting#migration",
         "cta": "Bekijk partnermodel",
         "points": [
-          "Nieuwe automatiseringen en verbeteringen",
+          "Nieuwe verbeteringen en iteraties",
           "Monitoring, fixes en workflow-wijzigingen",
           "Strategische roadmap-review"
         ]
@@ -1448,7 +1496,7 @@
       "agents": {
         "leo": {
           "role": "AI Sales Agent",
-            "description": "Voor teams die leads verliezen door trage opvolging. LEO reageert direct, kwalificeert intentie en zet goede kansen door naar de volgende stap zonder handmatig najagen.",
+          "description": "Voor teams die leads verliezen door trage opvolging. LEO reageert direct, kwalificeert intentie en zet goede kansen door naar de volgende stap zonder handmatig najagen.",
           "capabilities": [
             "Directe Respons (Web/WhatsApp)",
             "Slimme Kwalificatie",
@@ -1456,12 +1504,12 @@
             "Aanhoudend Volgen",
             "Overdracht aan Mens wanneer Nodig"
           ],
-            "benefit": "Behoud reactiesnelheid terwijl je pipeline groeit.",
+          "benefit": "Behoud reactiesnelheid terwijl je pipeline groeit.",
           "cta": "Implementeer LEO"
         },
         "atlas": {
           "role": "AI Virtual Assistant",
-            "description": "Voor teams die verdrinken in administratie. ATLAS pakt terugkerend operationeel werk op, zodat mensen zich kunnen richten op uitzonderingen, goedkeuringen en klantbeslissingen.",
+          "description": "Voor teams die verdrinken in administratie. ATLAS pakt terugkerend operationeel werk op, zodat mensen zich kunnen richten op uitzonderingen, goedkeuringen en klantbeslissingen.",
           "capabilities": [
             "Inbox Zero en Kalender Bijgewerkt",
             "Workflow-orkestratie",
@@ -1469,12 +1517,12 @@
             "Klant onboarding",
             "Foutloze Data-invoer"
           ],
-            "benefit": "Verminder de handmatige last van het dagelijkse werk.",
+          "benefit": "Verminder de handmatige last van het dagelijkse werk.",
           "cta": "Implementeer ATLAS"
         },
         "orion": {
           "role": "AI Marketing Director",
-            "description": "Voor teams die beslissen op basis van onvolledige rapportage. ORION helpt eerder prestatiepatronen, campagnegaten en commerciële kansen zichtbaar te maken.",
+          "description": "Voor teams die beslissen op basis van onvolledige rapportage. ORION helpt eerder prestatiepatronen, campagnegaten en commerciële kansen zichtbaar te maken.",
           "capabilities": [
             "Real-time ROI-analyse",
             "Campagne-optimalisatie",
@@ -1482,7 +1530,7 @@
             "Contentstrategie",
             "Concurrentie Monitoring"
           ],
-            "benefit": "Neem sneller besluiten met beter commercieel inzicht.",
+          "benefit": "Neem sneller besluiten met beter commercieel inzicht.",
           "cta": "Implementeer ORION"
         }
       },

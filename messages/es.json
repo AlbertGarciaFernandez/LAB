@@ -1,18 +1,16 @@
 {
   "metadata": {
-    "title": "Agencia de automatización con IA en Países Bajos | CodeHunter Lab",
-    "description": "Agencia de automatización con IA en los Países Bajos para agentes de IA, flujos de trabajo con n8n e integraciones a medida. Sistemas en producción, no demos. Con base en Leiden.",
+    "title": "Estudio de Ingeniería en Países Bajos | Sistemas IA, Productos con Identidad y Liderazgo | CodeHunter Lab",
+    "description": "Estudio de ingeniería en Países Bajos para sistemas de IA, productos digitales con identidad, formación práctica y liderazgo técnico. Trabajo en producción, no pilotos eternos.",
     "keywords": [
-      "agencia automatización IA Países Bajos",
-      "consultoría automatización IA Países Bajos",
-      "agentes IA Países Bajos",
-      "flujos n8n Países Bajos",
-      "agencia automatización flujos Países Bajos",
-      "integración de sistemas IA",
-      "integraciones IA personalizadas Países Bajos",
-      "automatización IA Leiden",
-      "automatización WhatsApp Países Bajos",
-      "agentes de voz IA Países Bajos"
+      "estudio de ingeniería Países Bajos",
+      "sistemas IA Países Bajos",
+      "productos con identidad",
+      "liderazgo técnico",
+      "diseño de producto Países Bajos",
+      "formación y adopción",
+      "productos digitales Países Bajos",
+      "IA Leiden"
     ]
   },
   "CookieConsent": {
@@ -164,17 +162,17 @@
   },
   "Hero": {
     "logoAlt": "Logo de CodeHunter Lab",
-    "subHeader": "Consultoría IA · Automatización IA · Sistemas de Producción",
+    "subHeader": "Estudio de ingeniería · sistemas IA · productos con identidad",
     "title": {
-      "part1": "Consultoría IA y ",
-      "highlight1": "Automatización",
-      "part2": "pensadas para ",
-      "highlight2": "producción"
+      "part1": "Sistemas que ",
+      "highlight1": "funcionan",
+      "part2": "y productos que se sienten ",
+      "highlight2": "inequívocamente tuyos"
     },
-    "description": "Diseñamos, construimos y ponemos en marcha sistemas de IA para empresas que necesitan resultados operativos reales, no más experimentos: conectados con tu stack, tus datos y los flujos que tu equipo ya utiliza.",
+    "description": "No somos solo un estudio de IA. Combinamos ingeniería en producción, criterio de producto, formación práctica y liderazgo técnico senior para equipos que necesitan claridad y sistemas que se lanzan de verdad.",
     "cta": {
-      "initialize": "Reservar Llamada de Estrategia IA",
-      "caseStudies": "Explorar Consultoría IA"
+      "initialize": "Reservar llamada estratégica",
+      "caseStudies": "Ver trabajos seleccionados"
     }
   },
   "Footer": {
@@ -220,7 +218,7 @@
     },
     "InsightsHome": {
       "bgText": "INSIGHTS",
-      "bgNumber": "05"
+      "bgNumber": "06"
     },
     "Availability": {
       "nextOpening": "Próxima Disponibilidad: {date}",
@@ -259,7 +257,7 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "05",
+    "bgNumber": "06",
     "badge": "Insights",
     "title": "Notas de campo prácticas sobre automatización con IA.",
     "subtitle": "Guías sobre agentes de IA, automatización de WhatsApp, estrategia con n8n y sistemas operativos para empresas que están decidiendo qué lanzar después.",
@@ -269,40 +267,90 @@
   "WhatWeBuild": {
     "bgText": "SERVICIOS",
     "bgNumber": "03",
-    "badge": "Qué Construimos",
+    "badge": "Elige el foco",
     "title": {
-      "part1": "Cinco formas en las que ponemos",
-      "highlight": "la IA a trabajar"
+      "part1": "Lo que construimos",
+      "highlight": "contigo"
     },
-    "subtitle": "Cada colaboración parte de un objetivo de negocio concreto. Estos son los sistemas que más solemos llevar a producción.",
-    "cta": "Explorar Consultoría IA",
-    "services": [
-      {
-        "title": "Agentes IA",
-        "desc": "Agentes de IA para cualificar leads, atender clientes y ejecutar flujos operativos, conectados con tus herramientas y disponibles 24/7.",
-        "link": "Agentes IA & Automatización"
+    "subtitle": "Empieza por sistemas IA si necesitas automatización en producción. Cambia a soporte de estudio si necesitas dirección de producto, formación, revisiones o liderazgo técnico senior.",
+    "modes": {
+      "ai": {
+        "label": "Sistemas IA",
+        "default": true,
+        "cta": "Explorar consultoría IA",
+        "ctaHref": "/ai-consulting",
+        "services": [
+          {
+            "title": "Agentes IA",
+            "desc": "Agentes de IA para cualificar leads, atender clientes y ejecutar flujos operativos, conectados con tus herramientas y disponibles 24/7.",
+            "link": "Agentes IA & Automatización",
+            "href": "/expertise/ai-agents-automation"
+          },
+          {
+            "title": "Automatización de Flujos",
+            "desc": "Sustituye trabajo repetitivo por automatizaciones para enrutado de leads, procesamiento documental, reporting y actualización de CRM.",
+            "link": "Automatización IA Países Bajos",
+            "href": "/ai-consulting"
+          },
+          {
+            "title": "Integración de Sistemas IA",
+            "desc": "Conecta la IA con los sistemas que ya utilizas mediante integraciones pensadas para tu stack y tu operativa real.",
+            "link": "Integración de Sistemas IT",
+            "href": "/it-system-integration"
+          },
+          {
+            "title": "Herramientas Internas con IA",
+            "desc": "Dashboards y herramientas internas a medida para reducir trabajo administrativo repetitivo y facilitar decisiones del día a día.",
+            "link": "Herramientas Internas",
+            "href": "/services/custom-internal-tools-development"
+          },
+          {
+            "title": "LLMs Personalizados",
+            "desc": "Despliegues de modelos privados para clasificación, generación de respuestas y flujos de conocimiento interno cuando las herramientas genéricas no bastan.",
+            "link": "Desarrollo de LLM Personalizado",
+            "href": "/expertise/custom-llm-development"
+          }
+        ]
       },
-      {
-        "title": "Automatización de Flujos",
-        "desc": "Sustituye trabajo repetitivo por automatizaciones para enrutado de leads, procesamiento documental, reporting y actualización de CRM.",
-        "link": "Automatización IA Países Bajos"
-      },
-      {
-        "title": "Integración de Sistemas IA",
-        "desc": "Conecta la IA con los sistemas que ya utilizas mediante integraciones pensadas para tu stack y tu operativa real.",
-        "link": "Integración de Sistemas IT"
-      },
-      {
-        "title": "Herramientas Internas con IA",
-        "desc": "Dashboards y herramientas internas a medida para reducir trabajo administrativo repetitivo y facilitar decisiones del día a día.",
-        "link": "Herramientas Internas"
-      },
-      {
-        "title": "LLMs Personalizados",
-        "desc": "Despliegues de modelos privados para clasificación, generación de respuestas y flujos de conocimiento interno cuando las herramientas genéricas no bastan.",
-        "link": "Desarrollo de LLM Personalizado"
+      "studio": {
+        "label": "Soporte estudio",
+        "default": false,
+        "cta": "Explorar el estudio",
+        "ctaHref": "/case-studies",
+        "services": [
+          {
+            "title": "Diseño de producto con identidad",
+            "desc": "Productos digitales e interfaces construidos alrededor de tu marca, tus usuarios y el nivel de calidad que quieres que la gente perciba.",
+            "link": "Dirección y diseño de producto",
+            "href": "/react-consulting"
+          },
+          {
+            "title": "Sistemas IA en producción",
+            "desc": "Agentes de IA, automatizaciones y capas de workflow construidas para operaciones reales, no para demos.",
+            "link": "Sistemas IA y automatización",
+            "href": "/ai-consulting"
+          },
+          {
+            "title": "Auditorías de frontend y revisión de producto",
+            "desc": "Auditamos claridad, rendimiento y consistencia visual donde se cruzan producto, marca y entrega.",
+            "link": "Revisión frontend",
+            "href": "/nextjs-development-agency"
+          },
+          {
+            "title": "Formación y adopción",
+            "desc": "Talleres prácticos que ayudan a los equipos a adoptar nuevas herramientas, procesos y estándares con confianza.",
+            "link": "Formación de equipo",
+            "href": "/about"
+          },
+          {
+            "title": "Liderazgo técnico",
+            "desc": "Dirección senior en producto, ingeniería y entrega cuando las decisiones necesitan más criterio.",
+            "link": "Liderazgo técnico",
+            "href": "/case-studies"
+          }
+        ]
       }
-    ]
+    }
   },
   "IndustriesSection": {
     "badge": "Industrias",
@@ -504,14 +552,14 @@
     "description": {
       "p1": {
         "part1": "Somos un",
-        "highlight": "estudio de consultoría IA",
-        "part2": "orientado a la ingeniería, con base en Leiden, Países Bajos."
+        "highlight": "estudio de ingeniería",
+        "part2": "con base en Leiden, Países Bajos."
       },
       "p2": {
-        "part1": "Diseñamos, construimos y desplegamos automatización IA que",
-        "highlight1": "funciona en producción",
-        "part2": "— no en un sandbox. Trabajamos con CTOs, fundadores y",
-        "highlight2": "líderes de operaciones",
+        "part1": "Diseñamos, construimos y desplegamos trabajo en producción que",
+        "highlight1": "funciona en el mundo real",
+        "part2": "— desde sistemas IA hasta productos con identidad — y trabajamos con CTOs, fundadores y",
+        "highlight2": "líderes de producto y operaciones",
         "part3": "en toda Europa."
       }
     },
@@ -519,13 +567,13 @@
       "years": "Años Entregando",
       "yearsValue": "4+",
       "focus": "Enfoque Principal",
-      "focusValue": "IA / Ingeniería",
+      "focusValue": "IA / Producto / Liderazgo",
       "impact": "Empresas Atendidas",
       "impactValue": "15+"
     },
     "passionCard": {
       "label": "Principio",
-      "quote": "\"No solo asesoramos. Desplegamos.\""
+      "quote": "\"No solo asesoramos. Diseñamos y lanzamos.\""
     }
   },
   "Stack": {
@@ -677,7 +725,7 @@
       "agents": {
         "leo": {
           "role": "Agente de Ventas IA",
-            "description": "Para equipos que pierden leads por responder tarde. LEO responde al instante, cualifica la intención y mueve las oportunidades buenas al siguiente paso sin perseguirlas manualmente.",
+          "description": "Para equipos que pierden leads por responder tarde. LEO responde al instante, cualifica la intención y mueve las oportunidades buenas al siguiente paso sin perseguirlas manualmente.",
           "capabilities": [
             "Respuesta Instantánea (Web/WhatsApp)",
             "Cualificación Inteligente",
@@ -685,12 +733,12 @@
             "Seguimiento Persistente",
             "Handoff a Humanos cuando es necesario"
           ],
-            "benefit": "Protege la velocidad de respuesta cuando crece el pipeline.",
+          "benefit": "Protege la velocidad de respuesta cuando crece el pipeline.",
           "cta": "Desplegar LEO"
         },
         "atlas": {
           "role": "Asistente Virtual IA",
-            "description": "Para equipos ahogados en tareas administrativas. ATLAS se encarga del trabajo operativo recurrente para que las personas se centren en excepciones, aprobaciones y decisiones de cliente.",
+          "description": "Para equipos ahogados en tareas administrativas. ATLAS se encarga del trabajo operativo recurrente para que las personas se centren en excepciones, aprobaciones y decisiones de cliente.",
           "capabilities": [
             "Inbox Zero y Calendario al día",
             "Orquestación de Workflows",
@@ -698,12 +746,12 @@
             "Onboarding de Clientes",
             "Entrada de Datos sin Errores"
           ],
-            "benefit": "Reduce la carga manual del día a día.",
+          "benefit": "Reduce la carga manual del día a día.",
           "cta": "Desplegar ATLAS"
         },
         "orion": {
           "role": "Director de Marketing IA",
-            "description": "Para equipos que deciden con reporting incompleto. ORION ayuda a detectar antes patrones de rendimiento, huecos en campañas y oportunidades comerciales.",
+          "description": "Para equipos que deciden con reporting incompleto. ORION ayuda a detectar antes patrones de rendimiento, huecos en campañas y oportunidades comerciales.",
           "capabilities": [
             "Análisis de ROI en Tiempo Real",
             "Optimización de Campañas",
@@ -711,7 +759,7 @@
             "Estrategia de Contenido",
             "Monitoreo de Competencia"
           ],
-            "benefit": "Toma decisiones más rápidas con mejor visibilidad comercial.",
+          "benefit": "Toma decisiones más rápidas con mejor visibilidad comercial.",
           "cta": "Desplegar ORION"
         }
       },
@@ -3424,30 +3472,30 @@
     "bgNumber": "04",
     "badge": "Paquetes",
     "title": "Puntos de entrada claros, rangos claros.",
-    "subtitle": "Estos son rangos de entrada, no retainers misteriosos. El alcance exacto depende de sistemas, acceso a datos y complejidad de integración.",
+    "subtitle": "Estos son rangos de entrada para estrategia, dirección de producto y construcciones en producción. El alcance exacto depende de sistemas, acceso a datos y complejidad de integración.",
     "cta": "Reservar llamada",
     "learnMore": "Ver detalles",
     "items": [
       {
-        "name": "Sprint de Estrategia IA",
+        "name": "Sprint de Estrategia del Estudio",
         "price": "€2.5k–€5k",
         "timeline": "1–2 semanas",
-        "desc": "Para cuando sabes que la IA puede ayudar, pero necesitas un roadmap priorizado antes de invertir en desarrollo.",
+        "desc": "Para cuando necesitas una visión clara de dónde la dirección de producto, la IA o el soporte técnico generan más palanca.",
         "href": "/ai-consulting#pricing",
         "cta": "Ver alcance del sprint",
         "points": [
-          "Auditoría de workflows y mapa de oportunidades",
-          "Backlog de automatización priorizado por ROI",
-          "Arquitectura y estimación de implementación"
+          "Auditoría de producto y workflows",
+          "Mapa de oportunidades priorizado",
+          "Estimación de arquitectura y entrega"
         ]
       },
       {
-        "name": "Proyecto de Implementación",
+        "name": "Construcción en Producción",
         "price": "Desde €8k",
         "timeline": "4–8 semanas",
-        "desc": "Un sistema IA, workflow o integración en producción desplegado en tu infraestructura.",
+        "desc": "Un sistema, capa de producto o integración desplegada en producción sobre tu infraestructura.",
         "href": "/ai-consulting#pricing",
-        "cta": "Ver alcance de implementación",
+        "cta": "Ver alcance de construcción",
         "points": [
           "Alcance fijo y plan de entrega claro",
           "Integración full-stack con herramientas existentes",
@@ -3455,14 +3503,14 @@
         ]
       },
       {
-        "name": "Partner IA Continuo",
+        "name": "Partner del Estudio",
         "price": "Desde €5k/mes",
         "timeline": "Mensual",
-        "desc": "Soporte de ingeniería integrado para equipos que quieren automatización, mantenimiento e iteración continua.",
+        "desc": "Soporte continuo para equipos que quieren iteración, mantenimiento, revisiones y dirección senior.",
         "href": "/ai-consulting#migration",
         "cta": "Ver modelo de partner",
         "points": [
-          "Nuevas automatizaciones y mejoras",
+          "Nuevas mejoras e iteraciones",
           "Monitorización, fixes y cambios de workflow",
           "Revisión estratégica del roadmap"
         ]

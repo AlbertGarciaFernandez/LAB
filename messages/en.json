@@ -1,18 +1,16 @@
 {
   "metadata": {
-    "title": "AI Automation Agency Netherlands | CodeHunter Lab",
-    "description": "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
+    "title": "Engineering Studio Netherlands | AI Systems, Brand-Led Products & Leadership | CodeHunter Lab",
+    "description": "Engineering studio in the Netherlands for AI systems, brand-led digital products, training, and technical leadership. Production work, not endless pilots.",
     "keywords": [
-      "AI automation agency Netherlands",
-      "AI automation consulting Netherlands",
-      "AI agents Netherlands",
-      "n8n workflows Netherlands",
-      "workflow automation agency Netherlands",
-      "AI system integration",
-      "custom AI integrations Netherlands",
-      "AI automation Leiden",
-      "WhatsApp automation Netherlands",
-      "AI voice agents Netherlands"
+      "engineering studio Netherlands",
+      "AI systems Netherlands",
+      "brand-led products",
+      "technical leadership",
+      "product design Netherlands",
+      "training and enablement",
+      "digital products Netherlands",
+      "AI automation Leiden"
     ]
   },
   "CookieConsent": {
@@ -811,30 +809,30 @@
     "bgNumber": "04",
     "badge": "Packages",
     "title": "Clear entry points, clear ranges.",
-    "subtitle": "These are entry ranges, not mysterious retainers. Exact scope depends on systems, data access and integration complexity.",
+    "subtitle": "These are entry ranges for strategy, product direction and production builds. Exact scope depends on systems, data access and integration complexity.",
     "cta": "Book a call",
     "learnMore": "View details",
     "items": [
       {
-        "name": "AI Strategy Sprint",
+        "name": "Studio Strategy Sprint",
         "price": "€2.5k–€5k",
         "timeline": "1–2 weeks",
-        "desc": "For when you know AI can help, but need a prioritised roadmap before investing in development.",
+        "desc": "For when you need a clear view of where product direction, AI, or technical support will create the most leverage.",
         "href": "/ai-consulting#pricing",
         "cta": "View sprint scope",
         "points": [
-          "Workflow audit and opportunity map",
-          "Automation backlog prioritised by ROI",
-          "Architecture and implementation estimate"
+          "Product and workflow audit",
+          "Prioritised opportunity map",
+          "Architecture and delivery estimate"
         ]
       },
       {
-        "name": "Implementation Project",
+        "name": "Production Build",
         "price": "From €8k",
         "timeline": "4–8 weeks",
-        "desc": "One AI system, workflow or integration deployed in production on your infrastructure.",
+        "desc": "One system, product layer, or integration deployed in production on your infrastructure.",
         "href": "/ai-consulting#pricing",
-        "cta": "View implementation scope",
+        "cta": "View build scope",
         "points": [
           "Fixed scope and clear delivery plan",
           "Full-stack integration with existing tools",
@@ -842,14 +840,14 @@
         ]
       },
       {
-        "name": "Ongoing AI Partner",
+        "name": "Studio Partner",
         "price": "From €5k/mo",
         "timeline": "Monthly",
-        "desc": "Integrated engineering support for teams that want automation, maintenance and continuous iteration.",
+        "desc": "Ongoing support for teams that want iteration, maintenance, reviews, and senior direction.",
         "href": "/ai-consulting#migration",
         "cta": "View partner model",
         "points": [
-          "New automations and improvements",
+          "New improvements and iterations",
           "Monitoring, fixes and workflow changes",
           "Strategic roadmap review"
         ]
@@ -886,7 +884,7 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "05",
+    "bgNumber": "06",
     "badge": "Insights",
     "title": "Practical field notes on AI automation.",
     "subtitle": "Guides on AI agents, WhatsApp automation, n8n strategy, and operating systems for businesses deciding what to launch next.",
@@ -896,40 +894,90 @@
   "WhatWeBuild": {
     "bgText": "SERVICES",
     "bgNumber": "03",
-    "badge": "What We Build",
+    "badge": "Choose your focus",
     "title": {
-      "part1": "Five Ways We Put",
-      "highlight": "AI to Work"
+      "part1": "What we build",
+      "highlight": "with you"
     },
-    "subtitle": "Every engagement starts with a concrete business outcome. These are the systems we most often take into production.",
-    "cta": "Explore AI Consulting",
-    "services": [
-      {
-        "title": "AI Agents",
-        "desc": "AI agents for sales qualification, customer service, and operational workflows — connected to your tools and available around the clock.",
-        "link": "AI Agents & Automation"
+    "subtitle": "Start with AI systems if you need automation in production. Switch to studio support if you need product direction, training, reviews, or senior technical leadership.",
+    "modes": {
+      "ai": {
+        "label": "AI systems",
+        "default": true,
+        "cta": "Explore AI consulting",
+        "ctaHref": "/ai-consulting",
+        "services": [
+          {
+            "title": "AI Agents",
+            "desc": "AI agents for sales qualification, customer service, and operational workflows connected to your tools and available around the clock.",
+            "link": "AI Agents & Automation",
+            "href": "/expertise/ai-agents-automation"
+          },
+          {
+            "title": "Workflow Automation",
+            "desc": "Replace repetitive manual work with automations for lead routing, document processing, reporting, CRM updates, and scheduling.",
+            "link": "AI Automation Netherlands",
+            "href": "/ai-consulting"
+          },
+          {
+            "title": "AI System Integration",
+            "desc": "Connect AI to the systems you already use through integration layers designed for your real operating environment.",
+            "link": "IT System Integration",
+            "href": "/it-system-integration"
+          },
+          {
+            "title": "Internal AI Tools",
+            "desc": "Custom dashboards and internal tools that reduce repetitive admin work and make everyday operational decisions easier.",
+            "link": "Custom Internal Tools",
+            "href": "/services/custom-internal-tools-development"
+          },
+          {
+            "title": "Custom LLM Deployments",
+            "desc": "Private model deployments for classification, response generation, and internal knowledge workflows where generic tools fall short.",
+            "link": "Custom LLM Development",
+            "href": "/expertise/custom-llm-development"
+          }
+        ]
       },
-      {
-        "title": "Workflow Automation",
-        "desc": "Replace repetitive manual work with automations for lead routing, document processing, reporting, CRM updates, and scheduling.",
-        "link": "AI Automation Netherlands"
-      },
-      {
-        "title": "AI System Integration",
-        "desc": "Connect AI to the systems you already use through integration layers designed for your real operating environment.",
-        "link": "IT System Integration"
-      },
-      {
-        "title": "Internal AI Tools",
-        "desc": "Custom dashboards and internal tools that reduce repetitive admin work and make everyday operational decisions easier.",
-        "link": "Custom Internal Tools"
-      },
-      {
-        "title": "Custom LLM Deployments",
-        "desc": "Private model deployments for classification, response generation, and internal knowledge workflows where generic tools fall short.",
-        "link": "Custom LLM Development"
+      "studio": {
+        "label": "Studio support",
+        "default": false,
+        "cta": "Explore the studio",
+        "ctaHref": "/case-studies",
+        "services": [
+          {
+            "title": "Brand-Led Product Design",
+            "desc": "Digital products and interfaces shaped around your brand, your users, and the level of craft you want people to feel.",
+            "link": "Product direction and design",
+            "href": "/react-consulting"
+          },
+          {
+            "title": "AI Systems in Production",
+            "desc": "AI agents, automations, and workflow layers built for real operations instead of demo theatre.",
+            "link": "AI systems & automation",
+            "href": "/ai-consulting"
+          },
+          {
+            "title": "Frontend Audits & Product Reviews",
+            "desc": "Audit clarity, performance, and visual consistency where product, brand, and delivery meet.",
+            "link": "Frontend review",
+            "href": "/nextjs-development-agency"
+          },
+          {
+            "title": "Training & Enablement",
+            "desc": "Practical workshops that help teams adopt new tools, processes, and standards with confidence.",
+            "link": "Team training",
+            "href": "/about"
+          },
+          {
+            "title": "Technical Leadership",
+            "desc": "Senior direction across product, engineering, and delivery when decisions need sharper judgment.",
+            "link": "Technical leadership",
+            "href": "/case-studies"
+          }
+        ]
       }
-    ]
+    }
   },
   "IndustriesSection": {
     "badge": "Industries",
@@ -1008,17 +1056,17 @@
   },
   "Hero": {
     "logoAlt": "CodeHunter Lab Logo",
-    "subHeader": "AI Consulting · AI Automation · Production Systems",
+    "subHeader": "Engineering studio · AI systems · brand-led products",
     "title": {
-      "part1": "AI Consulting & ",
-      "highlight1": "Automation",
-      "part2": "That Ships to ",
-      "highlight2": "Production"
+      "part1": "Systems that ",
+      "highlight1": "perform",
+      "part2": "and products that feel ",
+      "highlight2": "unmistakably yours"
     },
-    "description": "We design, build, and launch AI systems for companies that need operational results, not more experiments — connected to your stack, your data, and the workflows your team already runs.",
+    "description": "We are not just an AI shop. We combine production engineering, product taste, practical training, and senior technical leadership for teams that need clarity and systems that actually ship.",
     "cta": {
-      "initialize": "Book an AI Strategy Call",
-      "caseStudies": "Explore AI Consulting"
+      "initialize": "Book a Strategy Call",
+      "caseStudies": "See Selected Work"
     }
   },
   "Footer": {
@@ -1064,7 +1112,7 @@
     },
     "InsightsHome": {
       "bgText": "INSIGHTS",
-      "bgNumber": "05"
+      "bgNumber": "06"
     },
     "Availability": {
       "nextOpening": "Next availability: {date}",
@@ -1275,14 +1323,14 @@
     "description": {
       "p1": {
         "part1": "We are an",
-        "highlight": "AI consulting studio",
-        "part2": "focused on engineering, based in Leiden, Netherlands."
+        "highlight": "engineering studio",
+        "part2": "based in Leiden, Netherlands."
       },
       "p2": {
-        "part1": "We design, build and deploy AI automation that",
-        "highlight1": "runs in production",
-        "part2": "— not in a sandbox. We work with CTOs, founders and",
-        "highlight2": "operations leaders",
+        "part1": "We design, build and deploy production work that",
+        "highlight1": "runs in the real world",
+        "part2": "— from AI systems to brand-led products — and we work with CTOs, founders and",
+        "highlight2": "product and operations leaders",
         "part3": "across Europe."
       }
     },
@@ -1290,13 +1338,13 @@
       "years": "Years Shipping",
       "yearsValue": "4+",
       "focus": "Core Focus",
-      "focusValue": "AI / Engineering",
+      "focusValue": "AI / Product / Leadership",
       "impact": "Companies Served",
       "impactValue": "15+"
     },
     "passionCard": {
       "label": "Principle",
-      "quote": "\"We don't just advise. We deploy.\""
+      "quote": "\"We don't just advise. We shape and ship.\""
     }
   },
   "Stack": {
@@ -1436,19 +1484,19 @@
         "cta": "See where the margin is leaking."
       }
     },
-  "TopAgents": {
-    "bgText": "AGENTS",
-    "badge": "Digital Workforce",
-    "title": "Automate Revenue, Service,",
-    "highlight": "and Internal Operations.",
-    "description": "Use AI agents where response time, consistency, and workload are already hurting the business. Each one is tied to a specific operational bottleneck.",
-    "useCaseDescription": "Each scenario shows how the agents move from the first signal to a closed outcome inside the same operational flow.",
-    "liveFlowLabel": "Live flow",
-    "agentInProduction": "Agent in production",
+    "TopAgents": {
+      "bgText": "AGENTS",
+      "badge": "Digital Workforce",
+      "title": "Automate Revenue, Service,",
+      "highlight": "and Internal Operations.",
+      "description": "Use AI agents where response time, consistency, and workload are already hurting the business. Each one is tied to a specific operational bottleneck.",
+      "useCaseDescription": "Each scenario shows how the agents move from the first signal to a closed outcome inside the same operational flow.",
+      "liveFlowLabel": "Live flow",
+      "agentInProduction": "Agent in production",
       "agents": {
         "leo": {
           "role": "AI Sales Agent",
-            "description": "For teams losing leads to slow follow-up. LEO replies instantly, qualifies intent, and moves good opportunities to the next step without manual chasing.",
+          "description": "For teams losing leads to slow follow-up. LEO replies instantly, qualifies intent, and moves good opportunities to the next step without manual chasing.",
           "capabilities": [
             "Instant Response (Web/WhatsApp)",
             "Smart Qualification",
@@ -1456,12 +1504,12 @@
             "Persistent Follow-up",
             "Handoff to Humans when needed"
           ],
-            "benefit": "Protect response speed as pipeline volume grows.",
+          "benefit": "Protect response speed as pipeline volume grows.",
           "cta": "Deploy LEO"
         },
         "atlas": {
           "role": "AI Virtual Assistant",
-            "description": "For teams buried in admin. ATLAS handles recurring operational work so people can focus on exceptions, approvals, and customer-facing decisions.",
+          "description": "For teams buried in admin. ATLAS handles recurring operational work so people can focus on exceptions, approvals, and customer-facing decisions.",
           "capabilities": [
             "Inbox Zero and Calendar on track",
             "Workflow Orchestration",
@@ -1469,12 +1517,12 @@
             "Client Onboarding",
             "Error-free Data Entry"
           ],
-            "benefit": "Reduce manual overhead across day-to-day operations.",
+          "benefit": "Reduce manual overhead across day-to-day operations.",
           "cta": "Deploy ATLAS"
         },
         "orion": {
           "role": "AI Marketing Director",
-            "description": "For teams making decisions with incomplete reporting. ORION helps surface performance patterns, campaign gaps, and commercial opportunities earlier.",
+          "description": "For teams making decisions with incomplete reporting. ORION helps surface performance patterns, campaign gaps, and commercial opportunities earlier.",
           "capabilities": [
             "Real-time ROI Analysis",
             "Campaign Optimisation",
@@ -1482,7 +1530,7 @@
             "Content Strategy",
             "Competitor Monitoring"
           ],
-            "benefit": "Make faster decisions with better commercial visibility.",
+          "benefit": "Make faster decisions with better commercial visibility.",
           "cta": "Deploy ORION"
         }
       },
@@ -1807,7 +1855,7 @@
         "highlight": "Reimagined."
       },
       "description": "Looking for a <strong>software company in Leiden</strong>? We combine the agility of a local <strong>IT consultant</strong> with Silicon Valley engineering standards. No filler, just code that works.",
-    "cta": {
+      "cta": {
         "coffee": "Let's Grab a Coffee",
         "services": "View Expertise"
       }

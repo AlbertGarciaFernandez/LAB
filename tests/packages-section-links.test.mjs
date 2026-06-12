@@ -34,14 +34,14 @@ test("home package cards link to the package explanation sections", () => {
 test("home package cards use package-specific CTA copy", () => {
   assert.deepEqual(
     messages.en.Packages.items.map((item) => item.cta),
-    ["View sprint scope", "View implementation scope", "View partner model"]
+    ["View sprint scope", "View build scope", "View partner model"]
   );
   assert.deepEqual(
     messages.es.Packages.items.map((item) => item.cta),
-    ["Ver alcance del sprint", "Ver alcance de implementación", "Ver modelo de partner"]
+    ["Ver alcance del sprint", "Ver alcance de construcción", "Ver modelo de partner"]
   );
   assert.deepEqual(
     messages.nl.Packages.items.map((item) => item.cta),
-    ["Bekijk sprintscope", "Bekijk implementatiescope", "Bekijk partnermodel"]
+    ["Bekijk sprintscope", "Bekijk buildscope", "Bekijk partnermodel"]
   );
 });

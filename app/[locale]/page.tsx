@@ -26,34 +26,34 @@ export async function generateMetadata({
     locale: params.locale,
     path: "",
     title: isSpanish
-      ? "Agencia de Automatización AI en Países Bajos | CodeHunter Lab"
+      ? "Estudio de Ingeniería en Países Bajos | Sistemas IA, Productos con Identidad y Liderazgo | CodeHunter Lab"
       : isDutch
-        ? "AI Automatiseringsbureau Nederland | CodeHunter Lab"
-        : "AI Automation Agency Netherlands | CodeHunter Lab",
+        ? "Engineering Studio Nederland | AI-systemen, Merkgedreven Producten en Leiderschap | CodeHunter Lab"
+        : "Engineering Studio Netherlands | AI Systems, Brand-Led Products & Leadership | CodeHunter Lab",
     description: isSpanish
-      ? "Agencia de automatización AI en Países Bajos para agentes AI, flujos n8n e integraciones personalizadas. Sistemas en producción, no demos."
+      ? "Estudio de ingeniería en Países Bajos para sistemas de IA, productos digitales con identidad, formación práctica y liderazgo técnico. Trabajo en producción, no pilotos eternos."
       : isDutch
-        ? "AI automatiseringsbureau in Nederland voor AI agents, n8n workflows en maatwerk integraties. Productiesystemen, geen demo's. Gevestigd in Leiden."
-        : "AI automation agency in the Netherlands for AI agents, n8n workflows, and custom integrations. Production systems, not demos. Based in Leiden.",
+        ? "Engineering studio in Nederland voor AI-systemen, merkgedreven digitale producten, training en technisch leiderschap. Productiewerk, geen eindeloze pilots."
+        : "Engineering studio in the Netherlands for AI systems, brand-led digital products, training, and technical leadership. Production work, not endless pilots.",
     keywords: isSpanish
       ? [
-          "automatización AI Países Bajos",
-          "consultoría AI Países Bajos",
-          "agentes AI",
-          "n8n workflows",
+          "estudio de ingeniería Países Bajos",
+          "sistemas IA Países Bajos",
+          "productos con identidad",
+          "liderazgo técnico",
         ]
       : isDutch
         ? [
-            "AI automatiseringsbureau Nederland",
-            "AI automation consulting Nederland",
-            "AI agents Nederland",
-            "n8n workflows Nederland",
+            "engineering studio Nederland",
+            "AI-systemen Nederland",
+            "merkgedreven producten",
+            "technisch leiderschap",
           ]
         : [
-            "AI automation agency Netherlands",
-            "AI automation consulting Netherlands",
-            "AI agents Netherlands",
-            "n8n workflows Netherlands",
+            "engineering studio Netherlands",
+            "AI systems Netherlands",
+            "brand-led products",
+            "technical leadership",
           ],
   });
 }

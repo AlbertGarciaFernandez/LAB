@@ -1,28 +1,29 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "@/navigation";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
+  SquaresFourIcon,
   RobotIcon,
   ArrowsClockwiseIcon,
-  ShareNetworkIcon,
-  SquaresFourIcon,
   BrainIcon,
+  ShareNetworkIcon,
   ArrowRightIcon,
   ArrowUpRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 
-const serviceIcons = [RobotIcon, ArrowsClockwiseIcon, ShareNetworkIcon, SquaresFourIcon, BrainIcon];
+const serviceIcons = [SquaresFourIcon, RobotIcon, ArrowsClockwiseIcon, BrainIcon, ShareNetworkIcon];
 
-const serviceHrefs = [
-  "/expertise/ai-agents-automation",
-  "/ai-consulting",
-  "/it-system-integration",
-  "/services/custom-internal-tools-development",
-  "/expertise/custom-llm-development",
-];
+const modeKeys = ["ai", "studio"] as const;
+
+type Service = {
+  title: string;
+  desc: string;
+  link: string;
+  href: string;
+};
 
 const containerVariants = {
   hidden: {},
@@ -41,10 +42,9 @@ const cardVariants = {
 
 const WhatWeBuildSection: React.FC = () => {
   const t = useTranslations("WhatWeBuild");
-  const servicesRaw = t.raw("services");
-  const services = Array.isArray(servicesRaw)
-    ? (servicesRaw as { title: string; desc: string; link: string }[])
-    : [];
+  const [activeMode, setActiveMode] = useState<"ai" | "studio">("ai");
+  const servicesRaw = t.raw(`modes.${activeMode}.services`);
+  const services = Array.isArray(servicesRaw) ? (servicesRaw as Service[]) : [];
 
   return (
     <section className="relative overflow-hidden border-b border-white/5 bg-near-black px-4 py-20 text-white md:px-8 md:py-28">
@@ -80,10 +80,32 @@ const WhatWeBuildSection: React.FC = () => {
             {t("title.part1")} <span className="text-hunter-green">{t("title.highlight")}</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">{t("subtitle")}</p>
+          <div className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-2 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-2 sm:grid-cols-2">
+            {modeKeys.map((mode) => {
+              const isActive = mode === activeMode;
+
+              return (
+                <button
+                  key={mode}
+                  type="button"
+                  aria-pressed={isActive}
+                  onClick={() => setActiveMode(mode)}
+                  className={`rounded-xl px-5 py-3 text-sm font-black uppercase tracking-[0.16em] transition-all duration-300 ${
+                    isActive
+                      ? "bg-hunter-green text-near-black shadow-[0_12px_30px_-18px_rgba(0,230,162,0.9)]"
+                      : "text-gray-400 hover:bg-white/[0.04] hover:text-white"
+                  }`}
+                >
+                  {t(`modes.${mode}.label`)}
+                </button>
+              );
+            })}
+          </div>
         </m.div>
 
         {/* Service Cards */}
         <m.div
+          key={activeMode}
           className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6"
           variants={containerVariants}
           initial="hidden"
@@ -92,7 +114,6 @@ const WhatWeBuildSection: React.FC = () => {
         >
           {services.map((service, idx) => {
             const Icon = serviceIcons[idx];
-            const href = serviceHrefs[idx];
             // Bento Box logic: Top 2 span 3 cols (half), Bottom 3 span 2 cols (thirds)
             const bentoClass =
               idx < 2
@@ -104,7 +125,7 @@ const WhatWeBuildSection: React.FC = () => {
             return (
               <m.div key={service.title} variants={cardVariants} className={`h-full ${bentoClass}`}>
                 <Link
-                  href={href}
+                  href={service.href}
                   className="group relative flex h-full flex-col gap-6 rounded-3xl border border-white/[0.05] bg-near-black p-10 shadow-lg shadow-black/50 transition-all duration-500 hover:-translate-y-2 hover:border-hunter-orange/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(255,122,60,0.25)]"
                 >
                   {/* Subtle hover background sweep */}
@@ -152,11 +173,11 @@ const WhatWeBuildSection: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Link
-            href="/ai-consulting"
+            href={t(`modes.${activeMode}.ctaHref`)}
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-8 py-3 font-bold text-near-black"
           >
             <div className="absolute inset-0 h-full w-full bg-hunter-green transition-all duration-300 group-hover:bg-hunter-orange" />
-            <span className="relative z-10">{t("cta")}</span>
+            <span className="relative z-10">{t(`modes.${activeMode}.cta`)}</span>
             <ArrowRightIcon className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </m.div>

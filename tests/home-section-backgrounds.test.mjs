@@ -48,6 +48,45 @@ test("locale messages expose the home background words and numbers", () => {
   }
 });
 
+test("what we build section offers ai and studio service modes", () => {
+  const section = readFileSync("components/sections/WhatWeBuildSection.tsx", "utf8");
+  const home = readFileSync("app/[locale]/page.tsx", "utf8");
+
+  assert.match(section, /useState<"ai" \| "studio">\("ai"\)/);
+  assert.match(section, /t\.raw\(`modes\.\$\{activeMode\}\.services`\)/);
+  assert.match(section, /const modeKeys = \["ai", "studio"\] as const/);
+  assert.match(section, /t\(`modes\.\$\{mode\}\.label`\)/);
+  assert.match(section, /key=\{activeMode\}[\s\S]*initial="hidden"[\s\S]*whileInView="visible"/);
+  assert.doesNotMatch(home, /HowWeSupportTeamsSection/);
+});
+
+test("what we build messages keep five ai cards and five studio cards", () => {
+  for (const file of ["messages/en.json", "messages/es.json", "messages/nl.json"]) {
+    const messages = JSON.parse(readFileSync(file, "utf8"));
+
+    assert.equal(messages.WhatWeBuild.modes.ai.services.length, 5, file);
+    assert.equal(messages.WhatWeBuild.modes.studio.services.length, 5, file);
+    assert.equal(messages.WhatWeBuild.modes.ai.default, true, file);
+    assert.equal(messages.WhatWeBuild.modes.studio.default, false, file);
+  }
+});
+
+test("hero communicates studio values without a separate capabilities badge grid", () => {
+  const hero = readFileSync("components/sections/HeroSection.tsx", "utf8");
+
+  assert.doesNotMatch(hero, /capabilitiesRaw/);
+  assert.doesNotMatch(hero, /capabilitiesLabel/);
+  assert.doesNotMatch(hero, /capabilities\.map/);
+
+  for (const file of ["messages/en.json", "messages/es.json", "messages/nl.json"]) {
+    const messages = JSON.parse(readFileSync(file, "utf8"));
+
+    assert.equal(messages.Hero.capabilitiesLabel, undefined, file);
+    assert.equal(messages.Hero.capabilities, undefined, file);
+    assert.match(messages.Hero.description, /AI|IA|AI-systemen|product|producto|producten|leadership|liderazgo|leiderschap/i);
+  }
+});
+
 test("process section defines a single decorative background number", () => {
   const source = readFileSync("components/sections/06ProcessSection.tsx", "utf8");
   const matches = source.match(/t\("bgNumber"\)/g) ?? [];

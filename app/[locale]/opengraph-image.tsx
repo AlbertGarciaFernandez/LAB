@@ -1,7 +1,5 @@
 import { ImageResponse } from "next/og";
-
-export const runtime = "edge";
-export const alt = "AI Consulting & Automation Agency | CodeHunter Lab";
+export const alt = "Engineering Studio, AI Systems & Brand-Led Products | CodeHunter Lab";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -75,8 +73,8 @@ export default function Image() {
           maxWidth: 800,
         }}
       >
-        AI Consulting & Automation That{" "}
-        <span style={{ color: "#00ff88" }}>Ships to Production.</span>
+        Engineering Studio & AI Systems That{" "}
+        <span style={{ color: "#00ff88" }}>Ship with Presence.</span>
       </div>
 
       {/* Description */}
@@ -89,7 +87,7 @@ export default function Image() {
           marginBottom: 48,
         }}
       >
-        AI Agents · Workflow Automation · System Integration · Leiden, Netherlands
+        AI Systems · Brand-Led Products · Training · Technical Leadership
       </div>
 
       {/* Bottom bar */}
