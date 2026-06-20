@@ -196,55 +196,88 @@ export default function WhatsAppAutomationContent({
         <HeroBackgroundOrnaments />
 
         {/* Hero Section */}
-        <section className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center md:py-32">
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
-          >
-            <ScrambleText text={hero.badge} />
-          </m.div>
+        <section className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
+            <div>
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
+              >
+                <ScrambleText text={hero.badge} />
+              </m.div>
 
-          <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 text-4xl font-black leading-[0.95] tracking-tighter md:text-7xl"
-          >
-            {hero.titlePart1} <br />
-            <span className="text-gradient-enchanted neon-glow-green">{hero.titleHighlight}</span>
-            <br />
-            {hero.titlePart2}
-          </m.h1>
+              <m.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-7xl"
+              >
+                {hero.titlePart1} <br />
+                <span className="text-hunter-green">{hero.titleHighlight}</span>
+                <br />
+                {hero.titlePart2}
+              </m.h1>
 
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl"
-            dangerouslySetInnerHTML={{ __html: hero.description }}
-          />
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-12 max-w-xl text-lg leading-relaxed text-gray-300 md:text-xl"
+                dangerouslySetInnerHTML={{ __html: hero.description }}
+              />
 
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col gap-5 sm:flex-row"
-          >
-            <Link
-              href="#contact"
-              className="rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col gap-5 sm:flex-row"
+              >
+                <Link
+                  href="#contact"
+                  className="rounded-xl bg-hunter-green px-10 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.18)] transition-all hover:-translate-y-1 hover:bg-hunter-orange"
+                >
+                  {hero.ctaPrimary}
+                </Link>
+                <Link
+                  href="#solutions"
+                  className="rounded-xl border border-white/10 bg-white/5 px-10 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
+                >
+                  {hero.ctaSecondary}
+                </Link>
+              </m.div>
+            </div>
+
+            <m.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl"
             >
-              {hero.ctaPrimary}
-            </Link>
-            <Link
-              href="#solutions"
-              className="rounded-full border border-white/10 bg-white/5 px-10 py-5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
-            >
-              {hero.ctaSecondary}
-            </Link>
-          </m.div>
+              <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+                <span className="font-mono text-xs uppercase tracking-[0.3em] text-hunter-green">
+                  WhatsApp Flow
+                </span>
+                <span className="h-2 w-2 rounded-full bg-hunter-green shadow-[0_0_18px_rgba(0,230,162,0.8)]" />
+              </div>
+              <div className="space-y-4">
+                {["Inbound message", "AI routing", "CRM update", "Human handoff"].map(
+                  (step, index) => (
+                    <div
+                      key={step}
+                      className="flex items-center gap-4 rounded-2xl border border-white/10 bg-near-black/70 p-4"
+                    >
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-hunter-green/20 bg-hunter-green/10 font-mono text-xs text-hunter-green">
+                        0{index + 1}
+                      </span>
+                      <span className="text-sm font-semibold text-gray-200">{step}</span>
+                    </div>
+                  )
+                )}
+              </div>
+            </m.div>
+          </div>
         </section>
 
         {/* Language Note */}

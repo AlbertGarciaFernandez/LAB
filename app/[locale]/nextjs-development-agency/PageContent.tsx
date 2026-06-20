@@ -156,7 +156,7 @@ export default function NextJsDevelopmentAgencyContent() {
         <HeroBackgroundOrnaments />
 
         {/* Hero Section with App Router Diagram */}
-        <section className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center md:py-32">
+        <section className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32">
           {/* Animated App Router Diagram Background */}
           <div className="absolute inset-0 -z-10 opacity-20">
             <svg className="h-full w-full" viewBox="0 0 800 600" fill="none">
@@ -220,54 +220,80 @@ export default function NextJsDevelopmentAgencyContent() {
             </svg>
           </div>
 
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
-          >
-            <ScrambleText text={t("Hero.badge")} />
-          </m.div>
+          <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
+            <div>
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
+              >
+                <ScrambleText text={t("Hero.badge")} />
+              </m.div>
 
-          <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-8xl"
-          >
-            {t("Hero.title.part1")} <br />
-            <span className="text-gradient-enchanted neon-glow-green">
-              {t("Hero.title.highlight")}
-            </span>
-          </m.h1>
+              <m.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-7xl"
+              >
+                {t("Hero.title.part1")} <br />
+                <span className="text-hunter-green">{t("Hero.title.highlight")}</span>
+              </m.h1>
 
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-2xl"
-            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
-          />
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-12 max-w-xl text-lg leading-relaxed text-gray-300 md:text-xl"
+                dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+              />
 
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col gap-5 sm:flex-row"
-          >
-            <Link
-              href="#contact"
-              className="rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col gap-5 sm:flex-row"
+              >
+                <Link
+                  href="#contact"
+                  className="rounded-xl bg-hunter-green px-10 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.18)] transition-all hover:-translate-y-1 hover:bg-hunter-orange"
+                >
+                  {t("Hero.cta.primary")}
+                </Link>
+                <Link
+                  href="#services"
+                  className="rounded-xl border border-white/10 bg-white/5 px-10 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-hunter-orange/30 hover:bg-white/10"
+                >
+                  {t("Hero.cta.secondary")}
+                </Link>
+              </m.div>
+            </div>
+
+            <m.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="hidden lg:block"
             >
-              {t("Hero.cta.primary")}
-            </Link>
-            <Link
-              href="#services"
-              className="rounded-full border border-white/10 bg-white/5 px-10 py-5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
-            >
-              {t("Hero.cta.secondary")}
-            </Link>
-          </m.div>
+              <div className="rounded-2xl border border-hunter-green/20 bg-surface-dark/70 p-6 shadow-[0_0_60px_rgba(0,230,162,0.12)] backdrop-blur-md">
+                <div className="mb-4 font-mono text-xs uppercase tracking-[0.22em] text-hunter-green">
+                  App Router System
+                </div>
+                <div className="grid gap-3">
+                  {renderingStrategies.map((strategy) => (
+                    <div
+                      key={strategy.name}
+                      className="flex items-center justify-between rounded-xl border border-white/5 bg-near-black/60 px-4 py-3"
+                    >
+                      <span className="font-black text-white">{strategy.name}</span>
+                      <span className="text-xs text-gray-500">{strategy.whenToUse}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </m.div>
+          </div>
         </section>
 
         {/* Metrics Section */}

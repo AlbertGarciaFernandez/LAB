@@ -29,6 +29,19 @@ test("reusable contact section renders the translated full form", () => {
   }
 });
 
+test("contact section supports page-specific heading copy", () => {
+  const section = readSource("components/sections/ContactSection.tsx");
+  const home = readSource("app/[locale]/page.tsx");
+  const services = readSource("app/[locale]/services/page.tsx");
+  const studioShell = readSource("app/[locale]/_shared/StudioServicePage.tsx");
+
+  assert.match(section, /badge\?: ReactNode/);
+  assert.match(section, /badge \?\? t\("contactBadge"\)/);
+  assert.match(home, /Ready to Build What Comes Next\?/);
+  assert.match(services, /Ready to Build What Comes Next\?/);
+  assert.match(studioShell, /Ready to Build What Comes Next\?/);
+});
+
 test("home and ai-consulting both expose the full contact section", () => {
   const home = readSource("app/[locale]/page.tsx");
   const aiConsulting = readSource("app/[locale]/ai-consulting/PageContent.tsx");

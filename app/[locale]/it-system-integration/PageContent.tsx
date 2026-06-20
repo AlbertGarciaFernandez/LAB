@@ -165,113 +165,117 @@ export default function ITSystemIntegrationContent() {
         <HeroBackgroundOrnaments />
 
         {/* Hero Section */}
-        <section className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center md:py-32">
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 inline-block rounded-full border border-hunter-orange/20 bg-hunter-orange/10 px-4 py-1.5 font-mono text-xs text-hunter-orange backdrop-blur-md md:text-sm"
-          >
-            <ScrambleText text={t("Hero.badge")} />
-          </m.div>
-
-          <m.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-8xl"
-          >
-            {t("Hero.title.part1")} <br />
-            <span className="bg-gradient-to-r from-hunter-orange via-orange-400 to-amber-500 bg-clip-text text-transparent">
-              {t("Hero.title.highlight")}
-            </span>
-          </m.h1>
-
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-2xl"
-            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
-          />
-
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col gap-5 sm:flex-row"
-          >
-            <Link
-              href="#contact"
-              className="rounded-full bg-hunter-orange px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(255,122,60,0.3)] transition-all hover:scale-105 hover:bg-orange-500"
-            >
-              {t("Hero.cta.primary")}
-            </Link>
-            <Link
-              href="#services"
-              className="rounded-full border border-white/10 bg-white/5 px-10 py-5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
-            >
-              {t("Hero.cta.secondary")}
-            </Link>
-          </m.div>
-
-          {/* Workflow Diagram */}
-          <m.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-20 w-full max-w-4xl"
-          >
-            <div className="relative flex flex-col items-center justify-between gap-8 md:flex-row">
-              <div className="absolute left-0 top-1/2 hidden h-[2px] w-full -translate-y-1/2 bg-gradient-to-r from-transparent via-hunter-orange/30 to-transparent md:block" />
-
-              <m.div whileHover={{ y: -5 }} className="relative z-10 w-full md:w-1/3">
-                <GlassCard
-                  className="border-white/5 p-8 text-center transition-colors hover:border-hunter-orange/30"
-                  hoverEffect={true}
-                  glowColor="orange"
-                >
-                  <DatabaseIcon size={40} className="mx-auto mb-4 text-gray-400" />
-                  <h3 className="mb-2 text-xl font-black uppercase tracking-tight">
-                    {t("Diagram.source.title")}
-                  </h3>
-                  <p className="text-sm font-medium text-gray-400">{t("Diagram.source.desc")}</p>
-                </GlassCard>
+        <section className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
+            <div>
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
+              >
+                <ScrambleText text={t("Hero.badge")} />
               </m.div>
+
+              <m.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-7xl"
+              >
+                {t("Hero.title.part1")} <br />
+                <span className="text-hunter-green">{t("Hero.title.highlight")}</span>
+              </m.h1>
+
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-12 max-w-xl text-lg leading-relaxed text-gray-300 md:text-xl"
+                dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+              />
 
               <m.div
-                animate={{ scale: [1, 1.03, 1], rotate: [0, 1, -1, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="relative z-20 w-full md:w-1/3"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col gap-5 sm:flex-row"
               >
-                <GlassCard
-                  className="border-hunter-orange/30 bg-hunter-orange/5 p-8 text-center shadow-[0_0_50px_rgba(255,122,60,0.15)]"
-                  hoverEffect={true}
-                  glowColor="orange"
+                <Link
+                  href="#contact"
+                  className="rounded-xl bg-hunter-green px-10 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.18)] transition-all hover:-translate-y-1 hover:bg-hunter-orange"
                 >
-                  <GearSixIcon size={40} className="mx-auto mb-4 text-hunter-orange" />
-                  <h3 className="mb-2 text-xl font-black uppercase tracking-tight text-hunter-orange">
-                    {t("Diagram.engine.title")}
-                  </h3>
-                  <p className="font-mono text-xs text-orange-200/60">{t("Diagram.engine.desc")}</p>
-                </GlassCard>
-              </m.div>
-
-              <m.div whileHover={{ y: -5 }} className="relative z-10 w-full md:w-1/3">
-                <GlassCard
-                  className="border-white/5 p-8 text-center transition-colors hover:border-hunter-orange/30"
-                  hoverEffect={true}
-                  glowColor="orange"
+                  {t("Hero.cta.primary")}
+                </Link>
+                <Link
+                  href="#services"
+                  className="rounded-xl border border-white/10 bg-white/5 px-10 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
                 >
-                  <FlowArrowIcon size={40} className="mx-auto mb-4 text-gray-400" />
-                  <h3 className="mb-2 text-xl font-black uppercase tracking-tight">
-                    {t("Diagram.outcome.title")}
-                  </h3>
-                  <p className="text-sm font-medium text-gray-400">{t("Diagram.outcome.desc")}</p>
-                </GlassCard>
+                  {t("Hero.cta.secondary")}
+                </Link>
               </m.div>
             </div>
-          </m.div>
+
+            {/* Workflow Diagram */}
+            <m.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="w-full"
+            >
+              <div className="relative flex flex-col items-center justify-between gap-5">
+                <div className="absolute left-1/2 top-0 hidden h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-hunter-green/30 to-transparent md:block" />
+
+                <m.div whileHover={{ y: -5 }} className="relative z-10 w-full md:w-1/3">
+                  <GlassCard
+                    className="border-white/5 p-8 text-center transition-colors hover:border-hunter-green/30"
+                    hoverEffect={true}
+                    glowColor="green"
+                  >
+                    <DatabaseIcon size={40} className="mx-auto mb-4 text-gray-400" />
+                    <h3 className="mb-2 text-xl font-black uppercase tracking-tight">
+                      {t("Diagram.source.title")}
+                    </h3>
+                    <p className="text-sm font-medium text-gray-400">{t("Diagram.source.desc")}</p>
+                  </GlassCard>
+                </m.div>
+
+                <m.div
+                  animate={{ scale: [1, 1.03, 1], rotate: [0, 1, -1, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                  className="relative z-20 w-full md:w-1/3"
+                >
+                  <GlassCard
+                    className="border-hunter-green/30 bg-hunter-green/5 p-8 text-center shadow-[0_0_50px_rgba(0,230,162,0.12)]"
+                    hoverEffect={true}
+                    glowColor="green"
+                  >
+                    <GearSixIcon size={40} className="mx-auto mb-4 text-hunter-green" />
+                    <h3 className="mb-2 text-xl font-black uppercase tracking-tight text-hunter-green">
+                      {t("Diagram.engine.title")}
+                    </h3>
+                    <p className="font-mono text-xs text-emerald-200/60">
+                      {t("Diagram.engine.desc")}
+                    </p>
+                  </GlassCard>
+                </m.div>
+
+                <m.div whileHover={{ y: -5 }} className="relative z-10 w-full md:w-1/3">
+                  <GlassCard
+                    className="border-white/5 p-8 text-center transition-colors hover:border-hunter-green/30"
+                    hoverEffect={true}
+                    glowColor="green"
+                  >
+                    <FlowArrowIcon size={40} className="mx-auto mb-4 text-gray-400" />
+                    <h3 className="mb-2 text-xl font-black uppercase tracking-tight">
+                      {t("Diagram.outcome.title")}
+                    </h3>
+                    <p className="text-sm font-medium text-gray-400">{t("Diagram.outcome.desc")}</p>
+                  </GlassCard>
+                </m.div>
+              </div>
+            </m.div>
+          </div>
         </section>
 
         {/* Metrics Section */}

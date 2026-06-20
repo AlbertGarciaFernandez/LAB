@@ -4,6 +4,7 @@
 
 import React, { useEffect, useState } from "react";
 import AnimatedSection from "../layout/AnimatedSection";
+import { Link } from "@/navigation";
 import { m, AnimatePresence, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -18,6 +19,7 @@ type Pillar = {
   heading: string;
   paragraphs: string[];
   bullets: string[];
+  href: string;
 };
 
 const ExpertiseSection: React.FC = () => {
@@ -34,6 +36,7 @@ const ExpertiseSection: React.FC = () => {
       icon: "{01}",
       heading: t("pillars.automation.heading"),
       paragraphs: [t("pillars.automation.paragraphs.0"), t("pillars.automation.paragraphs.1")],
+      href: "/expertise/ai-agents-automation",
       bullets: [
         t("pillars.automation.bullets.0"),
         t("pillars.automation.bullets.1"),
@@ -50,6 +53,7 @@ const ExpertiseSection: React.FC = () => {
       icon: "{02}",
       heading: t("pillars.frontend.heading"),
       paragraphs: [t("pillars.frontend.paragraphs.0"), t("pillars.frontend.paragraphs.1")],
+      href: "/react-consulting",
       bullets: [
         t("pillars.frontend.bullets.0"),
         t("pillars.frontend.bullets.1"),
@@ -65,6 +69,7 @@ const ExpertiseSection: React.FC = () => {
       icon: "{03}",
       heading: t("pillars.product.heading"),
       paragraphs: [t("pillars.product.paragraphs.0"), t("pillars.product.paragraphs.1")],
+      href: "/product-design-development",
       bullets: [
         t("pillars.product.bullets.0"),
         t("pillars.product.bullets.1"),
@@ -80,6 +85,7 @@ const ExpertiseSection: React.FC = () => {
       icon: "{04}",
       heading: t("pillars.training.heading"),
       paragraphs: [t("pillars.training.paragraphs.0"), t("pillars.training.paragraphs.1")],
+      href: "/training-enablement",
       bullets: [
         t("pillars.training.bullets.0"),
         t("pillars.training.bullets.1"),
@@ -96,6 +102,7 @@ const ExpertiseSection: React.FC = () => {
       icon: "{05}",
       heading: t("pillars.leadership.heading"),
       paragraphs: [t("pillars.leadership.paragraphs.0")],
+      href: "/technical-leadership",
       bullets: [
         t("pillars.leadership.bullets.0"),
         t("pillars.leadership.bullets.1"),
@@ -111,6 +118,7 @@ const ExpertiseSection: React.FC = () => {
       icon: "{06}",
       heading: t("pillars.delivery.heading"),
       paragraphs: [t("pillars.delivery.paragraphs.0"), t("pillars.delivery.paragraphs.1")],
+      href: "/it-system-integration",
       bullets: [
         t("pillars.delivery.bullets.0"),
         t("pillars.delivery.bullets.1"),
@@ -230,6 +238,12 @@ const ExpertiseSection: React.FC = () => {
                     <li key={b}>· {b}</li>
                   ))}
                 </ul>
+                <Link
+                  href={activePillar.href}
+                  className="mt-8 inline-flex w-fit items-center rounded-lg border border-hunter-green/30 bg-hunter-green/10 px-5 py-3 text-xs font-black uppercase tracking-widest text-hunter-green transition-colors hover:bg-hunter-green hover:text-near-black"
+                >
+                  {t("ui.viewService")}
+                </Link>
               </m.div>
             </AnimatePresence>
           </div>
@@ -291,6 +305,13 @@ const ExpertiseSection: React.FC = () => {
                     <li key={b}>· {b}</li>
                   ))}
                 </ul>
+                <Link
+                  href={activePillar.href}
+                  className="mt-7 inline-flex w-fit items-center rounded-lg border border-hunter-green/30 bg-hunter-green/10 px-5 py-3 text-xs font-black uppercase tracking-widest text-hunter-green transition-colors hover:bg-hunter-green hover:text-near-black"
+                  onClick={() => setIsMobileDetailOpen(false)}
+                >
+                  {t("ui.viewService")}
+                </Link>
               </div>
             </m.div>
           </m.div>

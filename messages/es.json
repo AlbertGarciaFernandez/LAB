@@ -135,7 +135,11 @@
         "ReactConsulting": "Consultoría React",
         "NextJS": "Desarrollo Next.js",
         "ITIntegration": "Integración de Sistemas IT",
-        "CustomTools": "Herramientas Internas"
+        "CustomTools": "Herramientas Internas",
+        "ProductDesign": "Diseño de Producto",
+        "FrontendAudit": "Auditoría Frontend",
+        "TrainingEnablement": "Formación y Adopción",
+        "TechnicalLeadership": "Liderazgo Técnico"
       },
       "expertise": {
         "AIAgents": "Agentes IA & Automatización",
@@ -184,7 +188,11 @@
         "ReactConsulting": "Consultoría React",
         "NextJS": "Agencia Next.js",
         "ITIntegration": "Integración IT",
-        "InternalTools": "Herramientas Internas"
+        "InternalTools": "Herramientas Internas",
+        "ProductDesign": "Diseño de Producto",
+        "FrontendAudit": "Auditoría Frontend",
+        "TrainingEnablement": "Formación",
+        "TechnicalLeadership": "Liderazgo Técnico"
       }
     },
     "Expertise": {
@@ -316,13 +324,13 @@
         "label": "Soporte estudio",
         "default": false,
         "cta": "Explorar el estudio",
-        "ctaHref": "/case-studies",
+        "ctaHref": "/services",
         "services": [
           {
             "title": "Diseño de producto con identidad",
             "desc": "Productos digitales e interfaces construidos alrededor de tu marca, tus usuarios y el nivel de calidad que quieres que la gente perciba.",
             "link": "Dirección y diseño de producto",
-            "href": "/react-consulting"
+            "href": "/product-design-development"
           },
           {
             "title": "Sistemas IA en producción",
@@ -334,19 +342,19 @@
             "title": "Auditorías de frontend y revisión de producto",
             "desc": "Auditamos claridad, rendimiento y consistencia visual donde se cruzan producto, marca y entrega.",
             "link": "Revisión frontend",
-            "href": "/nextjs-development-agency"
+            "href": "/frontend-audit-product-review"
           },
           {
             "title": "Formación y adopción",
             "desc": "Talleres prácticos que ayudan a los equipos a adoptar nuevas herramientas, procesos y estándares con confianza.",
             "link": "Formación de equipo",
-            "href": "/about"
+            "href": "/training-enablement"
           },
           {
             "title": "Liderazgo técnico",
             "desc": "Dirección senior en producto, ingeniería y entrega cuando las decisiones necesitan más criterio.",
             "link": "Liderazgo técnico",
-            "href": "/case-studies"
+            "href": "/technical-leadership"
           }
         ]
       }
@@ -498,6 +506,7 @@
     "ui": {
       "selected": "Seleccionado",
       "readMore": "Leer más",
+      "viewService": "Ver servicio relacionado",
       "indexLabel": "{number} · {title}"
     }
   },

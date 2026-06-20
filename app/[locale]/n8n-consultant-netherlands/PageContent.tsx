@@ -195,55 +195,82 @@ export default function N8nConsultantContent({
         <HeroBackgroundOrnaments />
 
         {/* Hero Section */}
-        <section className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center md:py-32">
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
-          >
-            <ScrambleText text={hero.badge} />
-          </m.div>
+        <section className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
+            <div>
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
+              >
+                <ScrambleText text={hero.badge} />
+              </m.div>
 
-          <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 text-4xl font-black leading-[0.95] tracking-tighter md:text-7xl"
-          >
-            {hero.titlePart1} <br />
-            <span className="text-gradient-enchanted neon-glow-green">{hero.titleHighlight}</span>
-            <br />
-            {hero.titlePart2}
-          </m.h1>
+              <m.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8 text-4xl font-black leading-[0.92] tracking-tighter md:text-7xl"
+              >
+                {hero.titlePart1} <br />
+                <span className="text-hunter-green">{hero.titleHighlight}</span>
+                <br />
+                {hero.titlePart2}
+              </m.h1>
 
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl"
-            dangerouslySetInnerHTML={{ __html: hero.description }}
-          />
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-12 max-w-xl text-lg leading-relaxed text-gray-300 md:text-xl"
+                dangerouslySetInnerHTML={{ __html: hero.description }}
+              />
 
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col gap-5 sm:flex-row"
-          >
-            <Link
-              href="#contact"
-              className="rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(0,230,162,0.4)] transition-all hover:scale-105 hover:bg-white"
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col gap-5 sm:flex-row"
+              >
+                <Link
+                  href="#contact"
+                  className="rounded-xl bg-hunter-green px-10 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.18)] transition-all hover:-translate-y-1 hover:bg-hunter-orange"
+                >
+                  {hero.ctaPrimary}
+                </Link>
+                <Link
+                  href="#solutions"
+                  className="rounded-xl border border-white/10 bg-white/5 px-10 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-hunter-orange/30 hover:bg-white/10"
+                >
+                  {hero.ctaSecondary}
+                </Link>
+              </m.div>
+            </div>
+
+            <m.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="hidden lg:block"
             >
-              {hero.ctaPrimary}
-            </Link>
-            <Link
-              href="#solutions"
-              className="rounded-full border border-white/10 bg-white/5 px-10 py-5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
-            >
-              {hero.ctaSecondary}
-            </Link>
-          </m.div>
+              <div className="rounded-2xl border border-hunter-green/20 bg-surface-dark/70 p-6 shadow-[0_0_60px_rgba(0,230,162,0.12)] backdrop-blur-md">
+                <div className="mb-5 font-mono text-xs uppercase tracking-[0.22em] text-hunter-green">
+                  Workflow stack
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  {n8nIntegrations.slice(0, 8).map((integration) => (
+                    <div
+                      key={integration}
+                      className="rounded-xl border border-white/5 bg-near-black/60 px-4 py-3 text-sm font-semibold text-gray-300"
+                    >
+                      {integration}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </m.div>
+          </div>
         </section>
 
         {/* Language Note */}

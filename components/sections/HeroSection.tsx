@@ -8,7 +8,7 @@ import { m } from "framer-motion";
 import Image from "next/image";
 import HeroBackgroundOrnaments from "../HeroBackgroundOrnaments";
 import { ScrambleText } from "../ui/ScrambleText";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 const containerVariants = {
@@ -50,6 +50,7 @@ const slideRightVariants = {
 
 const HeroSection: React.FC = () => {
   const t = useTranslations("Hero");
+  const locale = useLocale();
 
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden bg-near-black px-4 py-20 text-white">
@@ -131,6 +132,7 @@ const HeroSection: React.FC = () => {
 
             <Link
               href="/case-studies"
+              locale={locale === "en" ? undefined : "en"}
               className="group inline-flex items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.02] px-12 py-5 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-hunter-orange/30 hover:bg-hunter-orange/5 hover:text-hunter-orange hover:shadow-[0_15px_30px_-10px_rgba(255,122,60,0.15)]"
             >
               {t("cta.caseStudies")}

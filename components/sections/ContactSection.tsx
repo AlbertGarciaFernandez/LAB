@@ -5,12 +5,14 @@ import { useTranslations } from "next-intl";
 import { ContactForm } from "@/components/ui/ContactForm";
 
 interface ContactSectionProps {
+  badge?: ReactNode;
   title?: ReactNode;
   description?: ReactNode;
   className?: string;
 }
 
 export default function ContactSection({
+  badge,
   title,
   description,
   className = "",
@@ -34,7 +36,7 @@ export default function ContactSection({
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-12 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-hunter-green">
-            {t("contactBadge")}
+            {badge ?? t("contactBadge")}
           </div>
           <h2 className="mb-8 text-5xl font-black uppercase tracking-tighter text-white md:text-7xl">
             {title ?? (

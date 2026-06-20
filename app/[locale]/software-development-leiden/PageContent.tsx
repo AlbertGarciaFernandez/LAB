@@ -84,53 +84,81 @@ export default function SoftwareDevelopmentLeidenContent() {
         <HeroBackgroundOrnaments />
 
         {/* Hero Section */}
-        <section className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center md:py-32">
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 inline-block rounded-full border border-hunter-orange/20 bg-hunter-orange/10 px-4 py-1.5 font-mono text-xs text-hunter-orange backdrop-blur-md md:text-sm"
-          >
-            <ScrambleText text={t("Hero.badge")} />
-          </m.div>
+        <section className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
+            <div>
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
+              >
+                <ScrambleText text={t("Hero.badge")} />
+              </m.div>
 
-          <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-8xl"
-          >
-            {t("Hero.title.part1")} <br />
-            <span className="text-gradient-fire neon-glow-orange">{t("Hero.title.highlight")}</span>
-          </m.h1>
+              <m.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-7xl"
+              >
+                {t("Hero.title.part1")} <br />
+                <span className="text-hunter-green">{t("Hero.title.highlight")}</span>
+              </m.h1>
 
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-2xl"
-            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
-          />
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-12 max-w-xl text-lg leading-relaxed text-gray-300 md:text-xl"
+                dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+              />
 
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col gap-5 sm:flex-row"
-          >
-            <Link
-              href="#contact"
-              className="rounded-full bg-hunter-orange px-10 py-5 text-sm font-black uppercase tracking-widest text-black shadow-[0_0_30px_rgba(255,122,60,0.4)] transition-all hover:scale-105 hover:bg-white"
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col gap-5 sm:flex-row"
+              >
+                <Link
+                  href="#contact"
+                  className="rounded-xl bg-hunter-green px-10 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.18)] transition-all hover:-translate-y-1 hover:bg-hunter-orange"
+                >
+                  {t("Hero.cta.coffee")}
+                </Link>
+                <Link
+                  href="#services"
+                  className="rounded-xl border border-white/10 bg-white/5 px-10 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
+                >
+                  {t("Hero.cta.services")}
+                </Link>
+              </m.div>
+            </div>
+
+            <m.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl"
             >
-              {t("Hero.cta.coffee")}
-            </Link>
-            <Link
-              href="#services"
-              className="rounded-full border border-white/10 bg-white/5 px-10 py-5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
-            >
-              {t("Hero.cta.services")}
-            </Link>
-          </m.div>
+              <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+                <span className="font-mono text-xs uppercase tracking-[0.3em] text-hunter-green">
+                  Studio Stack
+                </span>
+                <span className="h-2 w-2 rounded-full bg-hunter-green shadow-[0_0_18px_rgba(0,230,162,0.8)]" />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {["React", "Next.js", "TypeScript", "Node.js", "Supabase", "n8n"].map((tech) => (
+                  <div
+                    key={tech}
+                    className="rounded-2xl border border-white/10 bg-near-black/70 p-4 font-mono text-sm text-gray-300"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </m.div>
+          </div>
         </section>
 
         {/* Tech Stack Marquee (Visual Readability Boost) */}

@@ -61,6 +61,19 @@ export async function generateMetadata({
 export default function Home({ params }: { params: { locale: string } }) {
   const isSpanish = params.locale === "es";
   const isDutch = params.locale === "nl";
+  const contactCopy = {
+    title: isSpanish
+      ? "¿Listo para construir lo que viene?"
+      : isDutch
+        ? "Klaar om te bouwen wat nu nodig is?"
+        : "Ready to Build What Comes Next?",
+    description: isSpanish
+      ? "Reserva una llamada de 30 minutos. Entenderemos qué necesitas, identificaremos el camino más rápido y te diremos qué merece la pena construir después."
+      : isDutch
+        ? "Plan een gesprek van 30 minuten. We begrijpen wat je nodig hebt, bepalen de snelste route vooruit en vertellen wat het waard is om daarna te bouwen."
+        : "Book a 30-minute call. We'll understand what you need, identify the fastest path forward, and tell you what is worth building next.",
+  };
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-near-black text-white antialiased">
       <Header />
@@ -81,7 +94,7 @@ export default function Home({ params }: { params: { locale: string } }) {
         <InsightsSection />
         <BioSection />
         <ProcessSection />
-        <ContactSection />
+        <ContactSection title={contactCopy.title} description={contactCopy.description} />
       </main>
     </div>
   );

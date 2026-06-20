@@ -943,13 +943,13 @@
         "label": "Studio support",
         "default": false,
         "cta": "Explore the studio",
-        "ctaHref": "/case-studies",
+        "ctaHref": "/services",
         "services": [
           {
             "title": "Brand-Led Product Design",
             "desc": "Digital products and interfaces shaped around your brand, your users, and the level of craft you want people to feel.",
             "link": "Product direction and design",
-            "href": "/react-consulting"
+            "href": "/product-design-development"
           },
           {
             "title": "AI Systems in Production",
@@ -961,19 +961,19 @@
             "title": "Frontend Audits & Product Reviews",
             "desc": "Audit clarity, performance, and visual consistency where product, brand, and delivery meet.",
             "link": "Frontend review",
-            "href": "/nextjs-development-agency"
+            "href": "/frontend-audit-product-review"
           },
           {
             "title": "Training & Enablement",
             "desc": "Practical workshops that help teams adopt new tools, processes, and standards with confidence.",
             "link": "Team training",
-            "href": "/about"
+            "href": "/training-enablement"
           },
           {
             "title": "Technical Leadership",
             "desc": "Senior direction across product, engineering, and delivery when decisions need sharper judgment.",
             "link": "Technical leadership",
-            "href": "/case-studies"
+            "href": "/technical-leadership"
           }
         ]
       }
@@ -1029,7 +1029,11 @@
         "ReactConsulting": "React Consulting",
         "NextJS": "Next.js Development",
         "ITIntegration": "IT System Integration",
-        "CustomTools": "Internal Tools"
+        "CustomTools": "Internal Tools",
+        "ProductDesign": "Product Design",
+        "FrontendAudit": "Frontend Audit",
+        "TrainingEnablement": "Training & Enablement",
+        "TechnicalLeadership": "Technical Leadership"
       },
       "expertise": {
         "AIAgents": "AI Agents & Automation",
@@ -1078,7 +1082,11 @@
         "ReactConsulting": "React Consulting",
         "NextJS": "Next.js Agency",
         "ITIntegration": "IT Integration",
-        "InternalTools": "Internal Tools"
+        "InternalTools": "Internal Tools",
+        "ProductDesign": "Product Design",
+        "FrontendAudit": "Frontend Audit",
+        "TrainingEnablement": "Training",
+        "TechnicalLeadership": "Technical Leadership"
       }
     },
     "Expertise": {
@@ -1269,6 +1277,7 @@
     "ui": {
       "selected": "Selected",
       "readMore": "Read more",
+      "viewService": "View related service",
       "indexLabel": "{number} · {title}"
     }
   },

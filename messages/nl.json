@@ -135,7 +135,11 @@
         "ReactConsulting": "React Consulting",
         "NextJS": "Next.js Ontwikkeling",
         "ITIntegration": "IT Systeemintegratie",
-        "CustomTools": "Interne Tools"
+        "CustomTools": "Interne Tools",
+        "ProductDesign": "Product Design",
+        "FrontendAudit": "Frontend Audit",
+        "TrainingEnablement": "Training & Enablement",
+        "TechnicalLeadership": "Technisch Leiderschap"
       },
       "expertise": {
         "AIAgents": "AI Agents & Automatisering",
@@ -184,7 +188,11 @@
         "ReactConsulting": "React Consulting",
         "NextJS": "Next.js Agency",
         "ITIntegration": "IT Integratie",
-        "InternalTools": "Interne Tools"
+        "InternalTools": "Interne Tools",
+        "ProductDesign": "Product Design",
+        "FrontendAudit": "Frontend Audit",
+        "TrainingEnablement": "Training",
+        "TechnicalLeadership": "Technisch Leiderschap"
       }
     },
     "Expertise": {
@@ -316,13 +324,13 @@
         "label": "Studio-support",
         "default": false,
         "cta": "Ontdek de studio",
-        "ctaHref": "/case-studies",
+        "ctaHref": "/services",
         "services": [
           {
             "title": "Merkgedreven productontwerp",
             "desc": "Digitale producten en interfaces opgebouwd rond je merk, je gebruikers en het niveau van vakmanschap dat je wilt laten voelen.",
             "link": "Productrichting en design",
-            "href": "/react-consulting"
+            "href": "/product-design-development"
           },
           {
             "title": "AI-systemen in productie",
@@ -334,19 +342,19 @@
             "title": "Frontend-audits & productreviews",
             "desc": "We auditen helderheid, performance en visuele consistentie waar product, merk en delivery samenkomen.",
             "link": "Frontend review",
-            "href": "/nextjs-development-agency"
+            "href": "/frontend-audit-product-review"
           },
           {
             "title": "Training & adoptie",
             "desc": "Praktische workshops die teams helpen nieuwe tools, processen en standaarden met vertrouwen te adopteren.",
             "link": "Teamtraining",
-            "href": "/about"
+            "href": "/training-enablement"
           },
           {
             "title": "Technisch leiderschap",
             "desc": "Senior richting voor product, engineering en delivery wanneer beslissingen scherper oordeel nodig hebben.",
             "link": "Technisch leiderschap",
-            "href": "/case-studies"
+            "href": "/technical-leadership"
           }
         ]
       }
@@ -498,6 +506,7 @@
     "ui": {
       "selected": "Geselecteerd",
       "readMore": "Lees meer",
+      "viewService": "Bekijk gerelateerde service",
       "indexLabel": "{number} · {title}"
     }
   },

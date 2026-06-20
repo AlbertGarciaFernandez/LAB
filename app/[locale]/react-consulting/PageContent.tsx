@@ -173,7 +173,7 @@ export default function ReactConsultingContent() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="mb-8 inline-block rounded-full border border-blue-400/20 bg-blue-400/10 px-4 py-1.5 font-mono text-xs text-blue-400 backdrop-blur-md md:text-sm"
+                className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
               >
                 <ScrambleText text={t("Hero.badge")} />
               </m.div>
@@ -185,9 +185,7 @@ export default function ReactConsultingContent() {
                 className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-7xl"
               >
                 {t("Hero.title.part1")} <br />
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                  {t("Hero.title.highlight")}
-                </span>
+                <span className="text-hunter-green">{t("Hero.title.highlight")}</span>
               </m.h1>
 
               <m.p
@@ -206,13 +204,13 @@ export default function ReactConsultingContent() {
               >
                 <Link
                   href="#contact"
-                  className="rounded-full bg-blue-500 px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(96,165,250,0.4)] transition-all hover:scale-105 hover:bg-blue-400"
+                  className="rounded-xl bg-hunter-green px-10 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.18)] transition-all hover:-translate-y-1 hover:bg-hunter-orange"
                 >
                   {t("Hero.cta.primary")}
                 </Link>
                 <Link
                   href="#services"
-                  className="rounded-full border border-white/10 bg-white/5 px-10 py-5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white/10"
+                  className="rounded-xl border border-white/10 bg-white/5 px-10 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-hunter-orange/30 hover:bg-white/10"
                 >
                   {t("Hero.cta.secondary")}
                 </Link>
@@ -225,7 +223,7 @@ export default function ReactConsultingContent() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="hidden lg:block"
             >
-              <div className="rounded-2xl border border-blue-400/20 bg-surface-dark p-6 shadow-[0_0_60px_rgba(96,165,250,0.15)]">
+              <div className="rounded-2xl border border-hunter-green/20 bg-surface-dark p-6 shadow-[0_0_60px_rgba(0,230,162,0.12)]">
                 <div className="mb-4 flex items-center gap-2">
                   <div className="h-3 w-3 rounded-full bg-red-500/60" />
                   <div className="h-3 w-3 rounded-full bg-yellow-500/60" />
@@ -236,20 +234,20 @@ export default function ReactConsultingContent() {
                   <code>
                     <span className="text-indigo-400">import</span>
                     <span className="text-gray-300"> {"{ "}</span>
-                    <span className="text-blue-400">useCallback</span>
+                    <span className="text-hunter-green">useCallback</span>
                     <span className="text-gray-300">{" } "}</span>
                     <span className="text-indigo-400">from</span>
                     <span className="text-green-400"> &apos;react&apos;</span>
                     {"\n\n"}
                     <span className="text-indigo-400">export const</span>
-                    <span className="text-blue-400"> useOptimizedRender</span>
+                    <span className="text-hunter-green"> useOptimizedRender</span>
                     <span className="text-gray-300"> = () =&gt; {"{"}</span>
                     {"\n"}
                     <span className="text-gray-300"> </span>
                     <span className="text-indigo-400">const</span>
-                    <span className="text-blue-400"> metrics</span>
+                    <span className="text-hunter-green"> metrics</span>
                     <span className="text-gray-300"> = </span>
-                    <span className="text-blue-400">useCallback</span>
+                    <span className="text-hunter-green">useCallback</span>
                     <span className="text-gray-300">({"()"}</span>
                     <span className="text-indigo-400"> =&gt;</span>
                     <span className="text-gray-300"> {"{"}</span>
@@ -259,13 +257,13 @@ export default function ReactConsultingContent() {
                     <span className="text-gray-300"> {"{"}</span>
                     {"\n"}
                     <span className="text-gray-300"> </span>
-                    <span className="text-blue-300">lcp</span>
+                    <span className="text-hunter-orange">lcp</span>
                     <span className="text-gray-300">: </span>
                     <span className="text-green-400">&apos;0.8s&apos;</span>
                     <span className="text-gray-300">,</span>
                     {"\n"}
                     <span className="text-gray-300"> </span>
-                    <span className="text-blue-300">score</span>
+                    <span className="text-hunter-orange">score</span>
                     <span className="text-gray-300">: </span>
                     <span className="text-orange-400">98</span>
                     <span className="text-gray-300">,</span>

@@ -183,103 +183,105 @@ export default function CustomInternalToolsContent() {
         <HeroBackgroundOrnaments />
 
         {/* Hero Section */}
-        <section className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center md:py-32">
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 inline-block rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 font-mono text-xs text-purple-400 backdrop-blur-md md:text-sm"
-          >
-            <ScrambleText text={t("Hero.badge")} />
-          </m.div>
+        <section className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
+            <div>
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8 inline-block rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1.5 font-mono text-xs text-hunter-green backdrop-blur-md md:text-sm"
+              >
+                <ScrambleText text={t("Hero.badge")} />
+              </m.div>
 
-          <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-8xl"
-          >
-            {t("Hero.title.part1")} <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-              {t("Hero.title.highlight")}
-            </span>
-          </m.h1>
+              <m.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8 text-4xl font-black leading-[0.9] tracking-tighter md:text-7xl"
+              >
+                {t("Hero.title.part1")} <br />
+                <span className="text-hunter-green">{t("Hero.title.highlight")}</span>
+              </m.h1>
 
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-400 md:text-2xl"
-            dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
-          />
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-12 max-w-xl text-lg leading-relaxed text-gray-300 md:text-xl"
+                dangerouslySetInnerHTML={{ __html: t.raw("Hero.description") }}
+              />
 
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <Link
-              href="#contact"
-              className="rounded-full bg-purple-600 px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:bg-purple-500"
+              <m.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Link
+                  href="#contact"
+                  className="rounded-xl bg-hunter-green px-10 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.18)] transition-all hover:-translate-y-1 hover:bg-hunter-orange"
+                >
+                  {t("Hero.cta")}
+                </Link>
+              </m.div>
+            </div>
+
+            {/* Dashboard Mockup Preview */}
+            <m.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="w-full"
             >
-              {t("Hero.cta")}
-            </Link>
-          </m.div>
-
-          {/* Dashboard Mockup Preview */}
-          <m.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-16 w-full max-w-4xl"
-          >
-            <div className="rounded-2xl border border-purple-500/20 bg-surface-dark/80 p-4 shadow-[0_0_60px_-15px_rgba(168,85,247,0.3)] backdrop-blur-xl">
-              <div className="flex items-center gap-2 border-b border-white/5 pb-3">
-                <div className="h-3 w-3 rounded-full bg-red-500/60" />
-                <div className="h-3 w-3 rounded-full bg-yellow-500/60" />
-                <div className="h-3 w-3 rounded-full bg-green-500/60" />
-                <span className="ml-4 font-mono text-xs text-gray-500">dashboard.internal</span>
-              </div>
-              <div className="grid grid-cols-4 gap-3 p-4">
-                <div className="col-span-1 rounded-lg bg-purple-500/10 p-3">
-                  <div className="mb-2 h-2 w-12 rounded bg-purple-400/40" />
-                  <div className="h-8 w-16 rounded bg-purple-400/60" />
+              <div className="rounded-2xl border border-hunter-green/20 bg-surface-dark/80 p-4 shadow-[0_0_60px_-15px_rgba(0,230,162,0.22)] backdrop-blur-xl">
+                <div className="flex items-center gap-2 border-b border-white/5 pb-3">
+                  <div className="h-3 w-3 rounded-full bg-red-500/60" />
+                  <div className="h-3 w-3 rounded-full bg-yellow-500/60" />
+                  <div className="h-3 w-3 rounded-full bg-green-500/60" />
+                  <span className="ml-4 font-mono text-xs text-gray-500">dashboard.internal</span>
                 </div>
-                <div className="col-span-1 rounded-lg bg-pink-500/10 p-3">
-                  <div className="mb-2 h-2 w-12 rounded bg-pink-400/40" />
-                  <div className="h-8 w-16 rounded bg-pink-400/60" />
-                </div>
-                <div className="col-span-1 rounded-lg bg-blue-500/10 p-3">
-                  <div className="mb-2 h-2 w-12 rounded bg-blue-400/40" />
-                  <div className="h-8 w-16 rounded bg-blue-400/60" />
-                </div>
-                <div className="col-span-1 rounded-lg bg-green-500/10 p-3">
-                  <div className="mb-2 h-2 w-12 rounded bg-green-400/40" />
-                  <div className="h-8 w-16 rounded bg-green-400/60" />
-                </div>
-                <div className="col-span-3 rounded-lg bg-white/5 p-4">
-                  <div className="mb-3 h-2 w-24 rounded bg-white/20" />
-                  <div className="flex h-24 items-end gap-2">
-                    {[40, 65, 45, 80, 55, 70, 90, 60, 75, 85, 50, 95].map((h, i) => (
-                      <m.div
-                        key={i}
-                        initial={{ height: 0 }}
-                        animate={{ height: `${h}%` }}
-                        transition={{ duration: 0.5, delay: 0.8 + i * 0.05 }}
-                        className="flex-1 rounded-t bg-gradient-to-t from-purple-500/60 to-pink-500/60"
-                      />
-                    ))}
+                <div className="grid grid-cols-4 gap-3 p-4">
+                  <div className="col-span-1 rounded-lg bg-hunter-green/10 p-3">
+                    <div className="mb-2 h-2 w-12 rounded bg-hunter-green/40" />
+                    <div className="h-8 w-16 rounded bg-hunter-green/60" />
+                  </div>
+                  <div className="col-span-1 rounded-lg bg-hunter-orange/10 p-3">
+                    <div className="mb-2 h-2 w-12 rounded bg-hunter-orange/40" />
+                    <div className="h-8 w-16 rounded bg-hunter-orange/60" />
+                  </div>
+                  <div className="col-span-1 rounded-lg bg-white/10 p-3">
+                    <div className="mb-2 h-2 w-12 rounded bg-white/30" />
+                    <div className="h-8 w-16 rounded bg-white/40" />
+                  </div>
+                  <div className="col-span-1 rounded-lg bg-green-500/10 p-3">
+                    <div className="mb-2 h-2 w-12 rounded bg-green-400/40" />
+                    <div className="h-8 w-16 rounded bg-green-400/60" />
+                  </div>
+                  <div className="col-span-3 rounded-lg bg-white/5 p-4">
+                    <div className="mb-3 h-2 w-24 rounded bg-white/20" />
+                    <div className="flex h-24 items-end gap-2">
+                      {[40, 65, 45, 80, 55, 70, 90, 60, 75, 85, 50, 95].map((h, i) => (
+                        <m.div
+                          key={i}
+                          initial={{ height: 0 }}
+                          animate={{ height: `${h}%` }}
+                          transition={{ duration: 0.5, delay: 0.8 + i * 0.05 }}
+                          className="flex-1 rounded-t bg-gradient-to-t from-hunter-green/60 to-hunter-orange/60"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="col-span-1 space-y-2 rounded-lg bg-white/5 p-4">
+                    <div className="h-2 w-full rounded bg-white/20" />
+                    <div className="h-2 w-3/4 rounded bg-white/15" />
+                    <div className="h-2 w-1/2 rounded bg-white/10" />
+                    <div className="mt-4 h-16 w-16 rounded-full border-4 border-hunter-green/40" />
                   </div>
                 </div>
-                <div className="col-span-1 space-y-2 rounded-lg bg-white/5 p-4">
-                  <div className="h-2 w-full rounded bg-white/20" />
-                  <div className="h-2 w-3/4 rounded bg-white/15" />
-                  <div className="h-2 w-1/2 rounded bg-white/10" />
-                  <div className="mt-4 h-16 w-16 rounded-full border-4 border-purple-400/40" />
-                </div>
               </div>
-            </div>
-          </m.div>
+            </m.div>
+          </div>
         </section>
 
         {/* Metrics Section */}

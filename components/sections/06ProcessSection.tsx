@@ -37,7 +37,10 @@ const ProcessSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-near-black px-4 py-24 text-white md:px-8 md:py-32">
+    <section
+      id="process-contact"
+      className="relative scroll-mt-32 bg-near-black px-4 py-24 text-white md:px-8 md:py-32"
+    >
       <div className="pointer-events-none absolute -left-8 top-10 w-full overflow-hidden opacity-[0.05] md:-left-12">
         <h2 className="whitespace-nowrap text-[12rem] font-black leading-none text-white md:text-[20rem]">
           {t("bgText")}

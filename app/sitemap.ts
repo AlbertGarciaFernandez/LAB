@@ -30,6 +30,31 @@ const routeMeta: Record<
     priority: 0.8,
     changeFrequency: "monthly",
   },
+  "/services": {
+    lastModified: "2026-06-15",
+    priority: 0.8,
+    changeFrequency: "weekly",
+  },
+  "/product-design-development": {
+    lastModified: "2026-06-15",
+    priority: 0.8,
+    changeFrequency: "monthly",
+  },
+  "/frontend-audit-product-review": {
+    lastModified: "2026-06-15",
+    priority: 0.8,
+    changeFrequency: "monthly",
+  },
+  "/training-enablement": {
+    lastModified: "2026-06-15",
+    priority: 0.8,
+    changeFrequency: "monthly",
+  },
+  "/technical-leadership": {
+    lastModified: "2026-06-15",
+    priority: 0.8,
+    changeFrequency: "monthly",
+  },
   "/expertise/ai-agents-automation": {
     lastModified: "2026-05-09",
     priority: 0.7,
@@ -157,16 +182,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
+  // prettier-ignore
   insights.filter((article) => prioritizedInsightSlugs.has(article.slug)).forEach((article) => {
-    getSeoLocalePolicy(`/insights/${article.slug}`).indexableLocales.forEach((locale) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}/insights/${article.slug}`,
-        lastModified: new Date(article.modifiedAt),
-        changeFrequency: insightArticleMeta.changeFrequency,
-        priority: insightArticleMeta.priority,
+      getSeoLocalePolicy(`/insights/${article.slug}`).indexableLocales.forEach((locale) => {
+        sitemapEntries.push({
+          url: `${baseUrl}/${locale}/insights/${article.slug}`,
+          lastModified: new Date(article.modifiedAt),
+          changeFrequency: insightArticleMeta.changeFrequency,
+          priority: insightArticleMeta.priority,
+        });
       });
     });
-  });
 
   getSeoLocalePolicy("/case-studies").indexableLocales.forEach((locale) => {
     sitemapEntries.push({

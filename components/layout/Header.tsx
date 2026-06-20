@@ -119,6 +119,26 @@ const Header: React.FC = () => {
           href: "/services/custom-internal-tools-development",
           icon: <WrenchIcon size={16} />,
         },
+        {
+          name: t("nav.services.ProductDesign"),
+          href: "/product-design-development",
+          icon: <SparkleIcon size={16} />,
+        },
+        {
+          name: t("nav.services.FrontendAudit"),
+          href: "/frontend-audit-product-review",
+          icon: <AtomIcon size={16} />,
+        },
+        {
+          name: t("nav.services.TrainingEnablement"),
+          href: "/training-enablement",
+          icon: <BrainIcon size={16} />,
+        },
+        {
+          name: t("nav.services.TechnicalLeadership"),
+          href: "/technical-leadership",
+          icon: <TreeStructureIcon size={16} />,
+        },
       ],
     },
     {
@@ -487,6 +507,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Toggle */}
           <button
+            type="button"
             className="relative z-[60] ml-2 p-2 text-white lg:hidden"
             onClick={() => dispatch({ type: "TOGGLE_MOBILE" })}
             aria-label={t("a11y.toggleMenu")}

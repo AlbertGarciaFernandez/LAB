@@ -57,6 +57,10 @@ const Footer: React.FC = () => {
                 { key: "NextJS", href: "/nextjs-development-agency" },
                 { key: "ITIntegration", href: "/it-system-integration" },
                 { key: "InternalTools", href: "/services/custom-internal-tools-development" },
+                { key: "ProductDesign", href: "/product-design-development" },
+                { key: "FrontendAudit", href: "/frontend-audit-product-review" },
+                { key: "TrainingEnablement", href: "/training-enablement" },
+                { key: "TechnicalLeadership", href: "/technical-leadership" },
               ].map((item) => (
                 <li key={item.key}>
                   <Link
