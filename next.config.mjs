@@ -13,8 +13,23 @@ const nextConfig = {
   },
   redirects: async () => [
     {
+      source: "/ai-consulting",
+      destination: "/en/ai-consulting",
+      permanent: true,
+    },
+    {
+      source: "/professional-services-automation-netherlands",
+      destination: "/en/professional-services-automation-netherlands",
+      permanent: true,
+    },
+    {
+      source: "/react-consulting",
+      destination: "/en/react-consulting",
+      permanent: true,
+    },
+    {
       source: "/ai-automation-consulting-netherlands",
-      destination: "/ai-consulting",
+      destination: "/en/ai-consulting",
       permanent: true,
     },
     {
@@ -24,7 +39,7 @@ const nextConfig = {
     },
     {
       source: "/dental-clinic-automation-netherlands",
-      destination: "/healthcare-automation-netherlands",
+      destination: "/en/healthcare-automation-netherlands",
       permanent: true,
     },
     {
@@ -34,7 +49,7 @@ const nextConfig = {
     },
     {
       source: "/physiotherapy-clinic-automation-netherlands",
-      destination: "/healthcare-automation-netherlands",
+      destination: "/en/healthcare-automation-netherlands",
       permanent: true,
     },
     {
@@ -44,7 +59,7 @@ const nextConfig = {
     },
     {
       source: "/veterinary-clinic-automation-netherlands",
-      destination: "/healthcare-automation-netherlands",
+      destination: "/en/healthcare-automation-netherlands",
       permanent: true,
     },
     {
@@ -54,7 +69,7 @@ const nextConfig = {
     },
     {
       source: "/accounting-firm-automation-netherlands",
-      destination: "/professional-services-automation-netherlands",
+      destination: "/en/professional-services-automation-netherlands",
       permanent: true,
     },
     {

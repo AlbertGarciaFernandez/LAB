@@ -78,10 +78,26 @@ test("legacy AI automation URL redirects to the AI consulting page", () => {
   const sitemap = readFileSync("app/sitemap.ts", "utf8");
 
   assert.match(nextConfig, /source:\s*["']\/ai-automation-consulting-netherlands["']/);
-  assert.match(nextConfig, /source:\s*["']\/:locale\(en\|es\|nl\)\/ai-automation-consulting-netherlands["']/);
-  assert.match(nextConfig, /destination:\s*["']\/ai-consulting["']/);
+  assert.match(
+    nextConfig,
+    /source:\s*["']\/:locale\(en\|es\|nl\)\/ai-automation-consulting-netherlands["']/
+  );
+  assert.match(nextConfig, /destination:\s*["']\/en\/ai-consulting["']/);
   assert.match(nextConfig, /destination:\s*["']\/:locale\/ai-consulting["']/);
   assert.doesNotMatch(sitemap, /"\/ai-automation-consulting-netherlands"/);
+});
+
+test("canonical commercial URLs without locale redirect directly to english pages", () => {
+  const nextConfig = readFileSync("next.config.mjs", "utf8");
+
+  for (const route of [
+    "ai-consulting",
+    "professional-services-automation-netherlands",
+    "react-consulting",
+  ]) {
+    assert.match(nextConfig, new RegExp(`source:\\s*["']\\/${route}["']`));
+    assert.match(nextConfig, new RegExp(`destination:\\s*["']\\/en\\/${route}["']`));
+  }
 });
 
 test("legacy industry SEO URLs redirect to consolidated localized pages", () => {
@@ -96,7 +112,7 @@ test("legacy industry SEO URLs redirect to consolidated localized pages", () => 
 
   for (const [source, destination] of redirects) {
     assert.match(nextConfig, new RegExp(`source:\\s*["']\\/${source}["']`));
-    assert.match(nextConfig, new RegExp(`destination:\\s*["']\\/${destination}["']`));
+    assert.match(nextConfig, new RegExp(`destination:\\s*["']\\/en\\/${destination}["']`));
     assert.match(
       nextConfig,
       new RegExp(`source:\\s*["']\\/:locale\\(en\\|es\\|nl\\)\\/${source}["']`)
