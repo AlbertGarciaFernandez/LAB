@@ -8,6 +8,7 @@ interface ProcessStepProps {
   step: string;
   title: string;
   description: string;
+  outcome: string;
 }
 
 const ProcessSection: React.FC = () => {
@@ -18,21 +19,25 @@ const ProcessSection: React.FC = () => {
       step: "01",
       title: t("steps.0.title"),
       description: t("steps.0.description"),
+      outcome: t("outcomes.0"),
     },
     {
       step: "02",
       title: t("steps.1.title"),
       description: t("steps.1.description"),
+      outcome: t("outcomes.1"),
     },
     {
       step: "03",
       title: t("steps.2.title"),
       description: t("steps.2.description"),
+      outcome: t("outcomes.2"),
     },
     {
       step: "04",
       title: t("steps.3.title"),
       description: t("steps.3.description"),
+      outcome: t("outcomes.3"),
     },
   ];
 
@@ -117,11 +122,7 @@ const ProcessSection: React.FC = () => {
                         {t("outcomeLabel")}
                       </div>
                       <div className="mb-4 h-1 w-8 rounded-full bg-hunter-green/30" />
-                      <p className="text-sm leading-relaxed text-gray-400">
-                        {t("outcomeDescription.part1")}{" "}
-                        <strong className="font-semibold text-white">{item.title}</strong>{" "}
-                        {t("outcomeDescription.part2")}
-                      </p>
+                      <p className="text-sm leading-relaxed text-gray-400">{item.outcome}</p>
                     </div>
                   </div>
                 </div>

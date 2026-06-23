@@ -20,6 +20,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { localizedUrl } from "@/utils/metadata";
 import { getCommonBreadcrumbLabels, getLocaleValue } from "../../_shared/localeCopy";
+import ExpertiseHeroProof from "../_components/ExpertiseHeroProof";
 
 const useCaseIcons = [
   TreeStructureIcon,
@@ -76,6 +77,11 @@ export default function SystemArchitecturePageContent() {
   const t = useTranslations("ExpertisePages.SystemArchitecture");
   const locale = useLocale();
   const labels = getCommonBreadcrumbLabels(locale);
+  const heroProof = getLocaleValue(locale, {
+    en: ["Assessment first", "Decision record output", "Delivery guardrails"],
+    es: ["Evaluación inicial", "Decision records como output", "Guardrails de entrega"],
+    nl: ["Eerst assessment", "Decision records als output", "Delivery-guardrails"],
+  });
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -222,6 +228,8 @@ export default function SystemArchitecturePageContent() {
               {t("Hero.cta")}
             </Link>
           </m.div>
+
+          <ExpertiseHeroProof items={heroProof} tone="orange" />
         </section>
 
         <section className="relative z-10 border-t border-white/5 py-24">

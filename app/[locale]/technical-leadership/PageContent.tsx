@@ -1,12 +1,7 @@
 import { Link } from "@/navigation";
 import { StudioServiceShell } from "../_shared/StudioServicePage";
 import { getLocaleValue } from "../_shared/localeCopy";
-import {
-  CheckIcon,
-  CalendarIcon,
-  LightningIcon,
-  TargetIcon,
-} from "@phosphor-icons/react/dist/ssr";
+import { CheckIcon, CalendarIcon, LightningIcon, TargetIcon } from "@phosphor-icons/react/dist/ssr";
 
 interface IconProps {
   className?: string;
@@ -123,10 +118,10 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         badge: "Engagement options",
         title: "Leadership that fits your stage",
         subtitle:
-          "Three formats depending on decision complexity and how long you need the support.",
+          "Starting prices, excl. VAT. Three formats depending on decision complexity and how long you need the support. Final scope depends on company stage, team structure, vendor risk, systems and delivery complexity, so we start with a focused assessment before defining the engagement.",
         decisionSprint: {
           name: "Decision Sprint",
-          price: "From €4,800",
+          price: "From €5,500",
           timeline: "2-3 weeks",
           desc: "For a specific decision that needs to be made before you can move forward.",
           includes: [
@@ -140,7 +135,7 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         },
         ongoing: {
           name: "Ongoing Partnership",
-          price: "€3,200/month",
+          price: "From €4,500/month",
           timeline: "3-month minimum",
           desc: "For founders and teams that need consistent senior judgment.",
           recommended: true,
@@ -155,7 +150,7 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         },
         project: {
           name: "Project Oversight",
-          price: "From €8,500",
+          price: "From €10,000",
           timeline: "Per project",
           desc: "For complex builds that need governance from scoping to delivery.",
           includes: [
@@ -334,10 +329,11 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
       pricing: {
         badge: "Opciones de participación",
         title: "Liderazgo que se adapta a tu etapa",
-        subtitle: "Tres formatos según complejidad de decisiones y duración del soporte necesario.",
+        subtitle:
+          "Precios desde, sin IVA. Tres formatos según complejidad de decisiones y duración del soporte necesario. El alcance final depende de etapa de empresa, estructura del equipo, riesgo de vendors, sistemas y complejidad de entrega; por eso empezamos con una evaluación enfocada antes de definir el engagement.",
         decisionSprint: {
           name: "Decision Sprint",
-          price: "Desde €4.800",
+          price: "Desde €5.500",
           timeline: "2-3 semanas",
           desc: "Para una decisión específica que necesita tomarse antes de avanzar.",
           includes: [
@@ -351,7 +347,7 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         },
         ongoing: {
           name: "Colaboración Continua",
-          price: "€3.200/mes",
+          price: "Desde €4.500/mes",
           timeline: "Mínimo 3 meses",
           desc: "Para founders y equipos que necesitan criterio senior consistente.",
           recommended: true,
@@ -366,7 +362,7 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         },
         project: {
           name: "Supervisión de Proyecto",
-          price: "Desde €8.500",
+          price: "Desde €10.000",
           timeline: "Por proyecto",
           desc: "Para builds complejas que necesitan gobernanza de scoping a entrega.",
           includes: [
@@ -544,10 +540,10 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         badge: "Deelname-opties",
         title: "Leiderschap dat bij je fase past",
         subtitle:
-          "Drie formaten afhankelijk van beslissingscomplexiteit en hoe lang je ondersteuning nodig hebt.",
+          "Prijzen vanaf, excl. btw. Drie formaten afhankelijk van beslissingscomplexiteit en hoe lang je ondersteuning nodig hebt. De uiteindelijke scope hangt af van bedrijfsfase, teamstructuur, vendorrisico, systemen en deliverycomplexiteit; daarom starten we met een gerichte assessment voordat we het traject bepalen.",
         decisionSprint: {
           name: "Decision Sprint",
-          price: "Vanaf €4.800",
+          price: "Vanaf €5.500",
           timeline: "2-3 weken",
           desc: "Voor een specifieke beslissing die moet worden genomen voordat je verder kunt.",
           includes: [
@@ -561,7 +557,7 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         },
         ongoing: {
           name: "Doorlopende Samenwerking",
-          price: "€3.200/maand",
+          price: "Vanaf €4.500/maand",
           timeline: "Minimaal 3 maanden",
           desc: "Voor founders en teams die consistent senior oordeel nodig hebben.",
           recommended: true,
@@ -576,7 +572,7 @@ export default function TechnicalLeadershipContent({ locale }: { locale: string 
         },
         project: {
           name: "Project Oversight",
-          price: "Vanaf €8.500",
+          price: "Vanaf €10.000",
           timeline: "Per project",
           desc: "Voor complexe builds die governance nodig hebben van scoping tot delivery.",
           includes: [

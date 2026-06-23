@@ -99,10 +99,10 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
         badge: "Engagement options",
         title: "Training built around your team",
         subtitle:
-          "Three formats depending on team size, urgency, and how much ongoing support you need.",
+          "Starting prices, excl. VAT. Three formats depending on team size, urgency, and how much ongoing support you need. Final scope depends on company size, workflow complexity, number of teams and adoption risk, so we audit the current process before pricing the program.",
         starter: {
           name: "Workshop",
-          price: "From €2,400",
+          price: "From €2,500 per team",
           timeline: "1 day",
           desc: "A focused practical session for a specific workflow or tool adoption.",
           includes: [
@@ -115,7 +115,7 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
         },
         pro: {
           name: "Enablement Package",
-          price: "From €6,800",
+          price: "From €7,500",
           timeline: "3-4 weeks",
           desc: "Full adoption support for teams implementing a new system or process.",
           recommended: true,
@@ -130,7 +130,7 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
         },
         enterprise: {
           name: "Train-the-Trainer",
-          price: "From €12,000",
+          price: "From €12,500",
           timeline: "6-8 weeks",
           desc: "For organizations that need internal capability to scale adoption independently.",
           includes: [
@@ -285,10 +285,11 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
       pricing: {
         badge: "Opciones de participación",
         title: "Formación construida para tu equipo",
-        subtitle: "Tres formatos según tamaño de equipo, urgencia y soporte continuo necesario.",
+        subtitle:
+          "Precios desde, sin IVA. Tres formatos según tamaño de equipo, urgencia y soporte continuo necesario. El alcance final depende del tamaño de la empresa, complejidad del flujo, número de equipos y riesgo de adopción; por eso auditamos el proceso actual antes de presupuestar el programa.",
         starter: {
           name: "Workshop",
-          price: "Desde €2,400",
+          price: "Desde €2.500 por equipo",
           timeline: "1 día",
           desc: "Sesión práctica enfocada para adoptar una herramienta o flujo específico.",
           includes: [
@@ -301,7 +302,7 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
         },
         pro: {
           name: "Paquete de Adopción",
-          price: "Desde €6,800",
+          price: "Desde €7.500",
           timeline: "3-4 semanas",
           desc: "Soporte completo para equipos implementando un nuevo sistema o proceso.",
           recommended: true,
@@ -316,7 +317,7 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
         },
         enterprise: {
           name: "Formador de Formadores",
-          price: "Desde €12,000",
+          price: "Desde €12.500",
           timeline: "6-8 semanas",
           desc: "Para organizaciones que necesitan capacidad interna para escalar adopción.",
           includes: [
@@ -473,10 +474,11 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
       pricing: {
         badge: "Deelname-opties",
         title: "Training gebouwd voor jouw team",
-        subtitle: "Drie formaten afhankelijk van teamgrootte, urgentie en ondersteuningsbehoefte.",
+        subtitle:
+          "Prijzen vanaf, excl. btw. Drie formaten afhankelijk van teamgrootte, urgentie en ondersteuningsbehoefte. De uiteindelijke scope hangt af van bedrijfsgrootte, workflowcomplexiteit, aantal teams en adoptierisico; daarom auditen we het huidige proces voordat we het programma ramen.",
         starter: {
           name: "Workshop",
-          price: "Vanaf €2.400",
+          price: "Vanaf €2.500 per team",
           timeline: "1 dag",
           desc: "Gerichte praktische sessie voor specifieke tool- of workflowadoptie.",
           includes: [
@@ -489,7 +491,7 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
         },
         pro: {
           name: "Enablement Pakket",
-          price: "Vanaf €6.800",
+          price: "Vanaf €7.500",
           timeline: "3-4 weken",
           desc: "Volledige adoptie-ondersteuning voor teams die een nieuw systeem implementeren.",
           recommended: true,
@@ -504,7 +506,7 @@ export default function TrainingEnablementContent({ locale }: { locale: string }
         },
         enterprise: {
           name: "Train-de-Trainer",
-          price: "Vanaf €12.000",
+          price: "Vanaf €12.500",
           timeline: "6-8 weken",
           desc: "Voor organisaties die interne capaciteit nodig hebben om adoptie te schalen.",
           includes: [

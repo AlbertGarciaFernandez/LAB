@@ -1,626 +1,711 @@
+"use client";
+
 import { Link } from "@/navigation";
 import { StudioServiceShell } from "../_shared/StudioServicePage";
 import { getLocaleValue } from "../_shared/localeCopy";
 import { CheckIcon } from "@phosphor-icons/react/dist/ssr";
+import { m } from "framer-motion";
+import AnimatedSection from "@/components/layout/AnimatedSection";
 
 const path = "/product-design-development";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.11 },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 24, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.72, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const cardReveal = {
+  hidden: { y: 22, opacity: 0, scale: 0.98 },
+  visible: (index: number = 0) => ({
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.55, delay: index * 0.055, ease: [0.16, 1, 0.3, 1] },
+  }),
+};
 
 export default function ProductDesignDevelopmentContent({ locale }: { locale: string }) {
   const copy = getLocaleValue(locale, {
     en: {
-      eyebrow: "Product studio",
-      title: "Brand-led product design",
-      accent: "built to ship.",
+      eyebrow: "Product, brand & frontend studio",
+      title: "Digital products with a point of view",
+      accent: "built to become real.",
       description:
-        "Digital products, portals, and interfaces shaped around your brand, your users, and the operational reality behind the screen.",
-      primaryCta: "Plan the product",
-      secondaryCta: "View services",
-      outcomesTitle: "A product layer that feels clear, ownable, and distinct.",
+        "We shape the product strategy, brand expression, UX/UI system, and production frontend together, so your portal, dashboard, SaaS product, or customer experience feels ownable from the first interaction and solid after launch.",
+      primaryCta: "Shape the product",
+      secondaryCta: "Explore services",
+      labels: {
+        process: "Process",
+        portfolio: "Product examples",
+        deliverables: "Deliverables",
+        whyUs: "Why us",
+        audience: "Best fit",
+        details: "Product depth",
+        faq: "FAQ",
+        canvas: "Product system",
+        promise: "01 / Promise",
+        stack: "Stack",
+        flow: "02 / Flow",
+        handoff: "03 / Launch",
+        identity: "Identity layer",
+        launch: "Build phases",
+        recommended: "Recommended",
+      },
+      outcomesTitle: "A product experience people can understand, remember, and use.",
       outcomes: [
-        "Product flows mapped around the decisions users actually need to make.",
-        "Interface direction that carries brand identity without sacrificing speed or clarity.",
-        "Frontend architecture that can grow beyond the first launch.",
-        "A delivery plan with scope, milestones, and handoff documentation.",
+        "A clear product promise, mapped to the real decisions users need to make.",
+        "A visual direction that carries your brand into the product without turning the interface into decoration.",
+        "A UX/UI system with screens, states, components, and interaction patterns ready for implementation.",
+        "A frontend foundation that can survive the second release, the third feature, and the next team member.",
       ],
-      phases: ["Product framing", "Interface direction", "Production build"],
-      layers: ["Brand system", "User journey", "Interaction model", "Next.js surface"],
-      processTitle: "How the work flows",
+      phases: ["Product strategy", "Brand interface", "Frontend build"],
+      layers: ["Brand rules", "User decisions", "Interaction system", "Next.js product"],
+      processTitle: "From idea to product surface",
       process: [
         {
           number: "01",
-          name: "Discovery & Framing",
-          desc: "We understand the business context, user decisions, operational constraints, and brand direction. No assumptions — just a clear brief.",
+          name: "Product & Brand Framing",
+          desc: "We clarify the business goal, the audience, the brand signal, and the decisions the product needs to support. The result is a focused product brief, not a moodboard with guesses.",
           duration: "3-5 days",
         },
         {
           number: "02",
-          name: "Direction & Architecture",
-          desc: "We define the product's promise, map core user flows, establish the visual system, and set the technical approach.",
+          name: "UX Direction & Architecture",
+          desc: "We map the core journeys, define the information structure, decide what each screen must prove, and set the technical path before high-fidelity design starts.",
           duration: "1-2 weeks",
         },
         {
           number: "03",
-          name: "Interface Design",
-          desc: "High-fidelity direction for the core surfaces — key screens, states, components, and interaction patterns. Design that can actually ship.",
+          name: "Visual Product System",
+          desc: "We turn strategy into high-fidelity screens, states, components, empty states, responsive rules, and interaction details that feel like your brand and behave like a real product.",
           duration: "2-3 weeks",
         },
         {
           number: "04",
-          name: "Production Build",
-          desc: "Frontend implementation with the same rigor as the design. Every state, every edge case, every responsive breakpoint.",
+          name: "Frontend Production",
+          desc: "We build the agreed product surface with the same care as the design: responsive layouts, motion, states, edge cases, accessibility, and maintainable Next.js structure.",
           duration: "3-6 weeks",
         },
         {
           number: "05",
-          name: "Handoff & Launch",
-          desc: "Documentation, asset export, and go-live support. The product is ready to own, iterate, and grow.",
+          name: "Launch & Next Iteration",
+          desc: "We prepare the handoff, launch checklist, implementation notes, and next-build priorities so the product can be owned, extended, and improved after release.",
           duration: "1 week",
         },
       ],
-      portfolioTitle: "What we've built",
+      portfolioTitle: "The kind of product work this fits",
       portfolio: [
         {
           title: "B2B SaaS Operations Dashboard",
-          desc: "Replaced a 12-year-old legacy system with a clean, role-based dashboard for field service teams. Reduced task completion time by 40%.",
+          desc: "A role-based operations dashboard that turned legacy workflows into a cleaner product surface for field teams, managers, and back-office staff.",
           scope: "Full product redesign + Next.js rebuild",
           timeline: "4 months",
         },
         {
           title: "Healthcare Patient Portal",
-          desc: "Built a multilingual patient portal with appointment booking, medical history, and secure messaging. 15,000 active users in first quarter.",
+          desc: "A multilingual patient portal for bookings, medical history, and secure messaging, designed around clarity, trust, and low-friction daily use.",
           scope: "Product design + frontend + n8n backend",
           timeline: "6 months",
         },
         {
           title: "E-commerce Checkout Redesign",
-          desc: "Redesigned checkout for a fashion brand to reduce abandonment. Mobile conversion increased from 34% to 67%.",
+          desc: "A mobile-first checkout redesign for a fashion brand, focused on reducing hesitation, making payment steps obvious, and carrying the brand through purchase.",
           scope: "UX audit + design + implementation",
           timeline: "8 weeks",
         },
         {
           title: "Real Estate Agent CRM",
-          desc: "Built a custom CRM for a Dutch real estate agency with property listings, client tracking, and automated follow-ups.",
+          desc: "A custom CRM for a Dutch real estate team, combining property workflows, client context, and automated follow-ups in one branded internal product.",
           scope: "Full product + backend automation",
           timeline: "5 months",
         },
       ],
-      deliverablesTitle: "What you receive",
+      deliverablesTitle: "What leaves the studio",
       deliverables: [
-        "Product brief and user flow documentation",
-        "Visual design system with component library",
-        "Interactive prototype for key user journeys",
-        "Production-ready Next.js implementation",
-        "Launch checklist and go-live support",
-        "30-day post-launch bugfix window",
+        "Product strategy brief with positioning, priorities, and user decisions",
+        "UX flow documentation for the journeys that matter most",
+        "Brand-led interface system with core screens, states, and components",
+        "Interactive prototype for the highest-risk user paths",
+        "Production-ready Next.js frontend where build is in scope",
+        "Launch checklist, handoff notes, and post-launch support window",
       ],
-      whyUsTitle: "Why product design with us is different",
+      whyUsTitle: "Why this is not just another design handoff",
       whyUs: [
-        "Design and frontend engineering under the same roof — no disconnect between what is designed and what is built.",
-        "Brand-first approach — the visual direction is established before the first screen is designed, not retrofitted after.",
-        "Operational mindset — every interface decision is made with awareness of the system's reality, not just ideal user behavior.",
-        "Frontend architecture built for iteration — the first release doesn't paint you into a corner.",
+        "Strategy, brand, UX/UI, and frontend live in the same conversation, so the product does not lose quality between Figma and production.",
+        "The brand is translated into product behavior before screens are polished, so the interface feels ownable instead of skinned.",
+        "Every flow is designed around real operations: permissions, messy data, edge cases, handoffs, and the people who use the product under pressure.",
+        "The frontend is structured for iteration, so the first release does not become a fragile one-off that slows down the second.",
       ],
       pricing: {
         badge: "Engagement options",
         title: "How we structure the work",
-        subtitle: "Three formats depending on where you are and what you need.",
+        subtitle:
+          "Three ways to work together, depending on how much clarity, design depth, and production support you need. Every full build starts with discovery so scope, risk, and delivery effort are based on the actual product, not a guess.",
         discovery: {
           name: "Discovery & Direction",
-          price: "From €4,500",
+          price: "From €4,800",
           timeline: "2-3 weeks",
-          desc: "For teams that have a product idea but need clarity on direction, user flows, and technical approach before committing to a full build.",
+          desc: "For teams with a strong product idea, but not yet enough clarity on positioning, UX flows, visual direction, scope, or technical path.",
           recommended: true,
           includes: [
-            "Product framing workshop",
-            "User flow mapping",
-            "Visual direction",
+            "Product and brand framing workshop",
+            "Core user decision mapping",
+            "UX flow and information architecture",
+            "Visual direction for the product surface",
             "Technical architecture outline",
-            "Prioritized roadmap",
-            "Stakeholder presentation deck",
+            "Prioritized delivery roadmap",
           ],
-          cta: "Start discovery",
+          cta: "Start with discovery",
         },
         designBuild: {
           name: "Design + Build",
-          price: "From €18,000",
+          price: "From €24,000",
           timeline: "2-4 months",
-          desc: "For products that need full design direction and production implementation.",
+          desc: "For teams that need the product shaped, designed, and built as one coherent release instead of split across disconnected vendors.",
           includes: [
             "Everything in Discovery",
-            "Full interface design",
-            "Interactive prototype",
-            "Next.js production build",
-            "Launch support",
-            "60-day post-launch window",
+            "Full UX/UI system for core surfaces",
+            "Interactive prototype for key journeys",
+            "Production Next.js frontend",
+            "Responsive states, motion, and edge cases",
+            "Launch support and 60-day post-launch window",
           ],
-          cta: "Start design + build",
+          cta: "Plan design + build",
         },
         ongoing: {
           name: "Ongoing Partnership",
-          price: "From €6,000/month",
+          price: "From €6,500/month",
           timeline: "Ongoing",
-          desc: "For teams that need consistent product design and engineering support as the product evolves.",
+          desc: "For teams that already have momentum and need senior product design plus frontend execution as the roadmap evolves.",
           includes: [
-            "Weekly design sessions",
-            "Frontend implementation",
-            "Continuous product improvement",
-            "Priority Slack access",
-            "Monthly roadmap planning",
+            "Weekly product and design sessions",
+            "Frontend implementation capacity",
+            "Continuous UX/UI improvement",
+            "Priority async support",
+            "Monthly product roadmap planning",
           ],
-          cta: "Start partnership",
+          cta: "Discuss partnership",
         },
       },
       audienceTitle: "Best fit",
       audiences: [
         {
-          title: "Founders shaping a new product",
-          desc: "You have a clear business direction, but need the product structure, interface, and first build to feel coherent from day one.",
+          title: "Founders turning an idea into a real product",
+          desc: "You know the business opportunity, but need the product strategy, brand expression, UX, and first frontend to come together with discipline.",
         },
         {
-          title: "Teams replacing a messy tool",
-          desc: "You need a cleaner portal, dashboard, or workflow surface that reduces operational friction instead of creating another internal workaround.",
+          title: "Teams replacing messy internal software",
+          desc: "You need a portal, dashboard, CRM, or workflow surface that removes friction instead of becoming the next workaround people avoid.",
         },
         {
-          title: "Brands that cannot look generic",
-          desc: "You want a product experience that carries the identity of the business without becoming decorative or slow to ship.",
+          title: "Brands that cannot afford to feel generic",
+          desc: "You want the product experience to express the identity of the business while staying fast, usable, accessible, and shippable.",
         },
       ],
       scopeTitle: "What the engagement covers",
       scope: [
-        "Product framing, user journeys, and decision flows before visual design starts.",
-        "A high-signal interface direction with layouts, states, components, and interaction patterns.",
-        "Production-ready frontend implementation in the right level of fidelity for the launch stage.",
-        "Handoff notes, launch priorities, and the next-build roadmap so the product can keep moving.",
+        "Product framing, positioning, user journeys, and decision flows before visual design starts.",
+        "A brand-led UX/UI direction with layouts, states, components, interaction patterns, and responsive behavior.",
+        "Production-ready frontend implementation at the right level of fidelity for the launch stage.",
+        "Handoff notes, launch priorities, and a next-build roadmap so the product keeps moving after release.",
       ],
-      detailTitle: "From idea to shippable surface",
+      detailTitle: "What gets stronger through the work",
       details: [
         {
-          title: "Shape the promise",
-          desc: "We clarify what the product needs to prove, what users need to decide, and where the interface should remove hesitation.",
+          title: "The product promise",
+          desc: "We make the value of the product obvious: what it does, who it is for, why it matters, and where the interface must create confidence.",
         },
         {
-          title: "Design the operating layer",
-          desc: "The visual system, flows, forms, dashboards, empty states, and responsive behavior are designed around real usage.",
+          title: "The operating layer",
+          desc: "Flows, forms, dashboards, permissions, empty states, and responsive behavior are designed around real usage, not a perfect demo path.",
         },
         {
-          title: "Build for the next iteration",
-          desc: "The frontend is structured so the first release does not trap the next one in brittle one-off decisions.",
+          title: "The next iteration",
+          desc: "The frontend is structured so new features, new content, and new user feedback can be absorbed without rebuilding the product from scratch.",
         },
       ],
       faqTitle: "Common questions",
       faqs: [
         {
           q: "Can this start without a finished brand system?",
-          a: "Yes. We can work from a lightweight identity direction and turn it into product rules while the interface takes shape.",
+          a: "Yes. We can start from a lightweight identity direction and translate it into product rules while the interface takes shape. If the brand needs more definition, we make that explicit early.",
         },
         {
           q: "Is this design only, or design plus build?",
-          a: "Both are possible, but the strongest fit is design with implementation judgment so the product direction remains shippable.",
+          a: "Both are possible. The strongest fit is design with implementation judgment, because product decisions stay grounded in what can be built, maintained, and launched.",
         },
         {
           q: "What do we receive at the end?",
-          a: "A clear product direction, key screens and states, implementation work where agreed, and documentation for what should happen next.",
+          a: "A clear product direction, UX flows, key screens and states, component rules, agreed implementation work, and documentation for launch and the next iteration.",
         },
         {
           q: "How do you handle revisions?",
-          a: "Each phase has a defined review cycle. We work in iterations, not open-ended revision loops. Feedback is gathered, prioritized, and incorporated.",
+          a: "Each phase has a defined review cycle. We work in focused iterations, not endless revision loops. Feedback is gathered, prioritized, and tied back to product goals.",
         },
         {
           q: "Can you work with our existing design team?",
-          a: "Yes. We can supplement your team for specific phases or deliverables rather than running the full engagement.",
+          a: "Yes. We can lead the full product track or support your existing team on strategy, UX direction, interface design, frontend implementation, or launch preparation.",
         },
       ],
     },
     es: {
-      eyebrow: "Estudio de producto",
-      title: "Diseño de producto con identidad",
-      accent: "listo para lanzar.",
+      eyebrow: "Estudio de producto, marca y frontend",
+      title: "Productos digitales con criterio propio",
+      accent: "listos para hacerse reales.",
       description:
-        "Productos digitales, portales e interfaces construidos alrededor de tu marca, tus usuarios y la realidad operativa detrás de la pantalla.",
-      primaryCta: "Planificar producto",
-      secondaryCta: "Ver servicios",
-      outcomesTitle: "Una capa de producto clara, propia y diferenciada.",
+        "Definimos la estrategia de producto, la expresión de marca, el sistema UX/UI y el frontend de producción en la misma dirección, para que tu portal, dashboard, SaaS o experiencia digital se sienta propia desde la primera interacción y sólida después del lanzamiento.",
+      primaryCta: "Dar forma al producto",
+      secondaryCta: "Explorar servicios",
+      labels: {
+        process: "Proceso",
+        portfolio: "Ejemplos de producto",
+        deliverables: "Entregables",
+        whyUs: "Por qué nosotros",
+        audience: "Mejor encaje",
+        details: "Profundidad de producto",
+        faq: "FAQ",
+        canvas: "Sistema de producto",
+        promise: "01 / Promesa",
+        stack: "Stack",
+        flow: "02 / Flujo",
+        handoff: "03 / Lanzamiento",
+        identity: "Capa de identidad",
+        launch: "Fases de construcción",
+        recommended: "Recomendado",
+      },
+      outcomesTitle: "Una experiencia de producto que se entiende, se recuerda y se usa.",
       outcomes: [
-        "Flujos definidos alrededor de las decisiones reales del usuario.",
-        "Dirección visual con identidad sin perder velocidad ni claridad.",
-        "Arquitectura frontend preparada para crecer después del lanzamiento.",
-        "Plan de entrega con alcance, hitos y documentación de handoff.",
+        "Una promesa de producto clara, conectada con las decisiones reales que el usuario necesita tomar.",
+        "Una dirección visual que lleva tu marca al producto sin convertir la interfaz en decoración.",
+        "Un sistema UX/UI con pantallas, estados, componentes y patrones de interacción listos para implementar.",
+        "Una base frontend preparada para la segunda versión, la tercera funcionalidad y la siguiente persona que entre al equipo.",
       ],
-      phases: ["Encuadre", "Dirección de interfaz", "Construcción"],
+      phases: ["Estrategia de producto", "Interfaz de marca", "Frontend real"],
       layers: [
-        "Sistema de marca",
-        "Journey de usuario",
-        "Modelo de interacción",
-        "Superficie Next.js",
+        "Reglas de marca",
+        "Decisiones de usuario",
+        "Sistema de interacción",
+        "Producto Next.js",
       ],
-      processTitle: "Cómo fluye el trabajo",
+      processTitle: "De la idea a una superficie de producto",
       process: [
         {
           number: "01",
-          name: "Discovery y Encuadre",
-          desc: "Entendemos el contexto de negocio, las decisiones del usuario, las restricciones operativas y la dirección de marca. Sin suposiciones — solo un brief claro.",
+          name: "Encuadre de Producto y Marca",
+          desc: "Aclaramos el objetivo de negocio, la audiencia, la señal de marca y las decisiones que el producto debe facilitar. El resultado es un brief enfocado, no un moodboard lleno de suposiciones.",
           duration: "3-5 días",
         },
         {
           number: "02",
-          name: "Dirección y Arquitectura",
-          desc: "Definimos la promesa del producto, mapeamos flujos de usuario, establecemos el sistema visual y configuramos el enfoque técnico.",
+          name: "Dirección UX y Arquitectura",
+          desc: "Mapeamos los recorridos clave, definimos la estructura de información, decidimos qué debe resolver cada pantalla y fijamos el camino técnico antes de diseñar en alta fidelidad.",
           duration: "1-2 semanas",
         },
         {
           number: "03",
-          name: "Diseño de Interfaz",
-          desc: "Dirección de alta fidelidad para las superficies core — pantallas clave, estados, componentes y patrones de interacción. Diseño que realmente puede lanzarse.",
+          name: "Sistema Visual de Producto",
+          desc: "Convertimos la estrategia en pantallas, estados, componentes, vacíos, reglas responsive e interacciones que se sienten como tu marca y funcionan como un producto real.",
           duration: "2-3 semanas",
         },
         {
           number: "04",
-          name: "Construcción en Producción",
-          desc: "Implementación frontend con el mismo rigor que el diseño. Cada estado, cada caso límite, cada breakpoint responsive.",
+          name: "Frontend de Producción",
+          desc: "Construimos la superficie acordada con el mismo cuidado que el diseño: responsive, motion, estados, casos límite, accesibilidad y una estructura Next.js mantenible.",
           duration: "3-6 semanas",
         },
         {
           number: "05",
-          name: "Handoff y Lanzamiento",
-          desc: "Documentación, exportación de assets y soporte de go-live. El producto está listo para poseer, iterar y crecer.",
+          name: "Lanzamiento y Siguiente Iteración",
+          desc: "Preparamos documentación, checklist de lanzamiento, notas de implementación y prioridades para que el producto pueda mantenerse, ampliarse y mejorar después de salir.",
           duration: "1 semana",
         },
       ],
-      portfolioTitle: "Lo que hemos construido",
+      portfolioTitle: "El tipo de producto donde encaja este trabajo",
       portfolio: [
         {
-          title: "Dashboard SaaS B2B de Operaciones",
-          desc: "Reemplazamos un sistema legacy de 12 años con un dashboard limpio y basado en roles para equipos de servicio de campo. Reducción del tiempo de completación de tareas en 40%.",
+          title: "Dashboard operativo para SaaS B2B",
+          desc: "Un dashboard por roles que convirtió flujos legacy en una superficie más clara para equipos de campo, managers y back-office.",
           scope: "Rediseño de producto completo + rebuild en Next.js",
           timeline: "4 meses",
         },
         {
-          title: "Portal de Pacientes Healthcare",
-          desc: "Construimos un portal de pacientes multilingüe con reserva de citas, historial médico y mensajería segura. 15.000 usuarios activos en el primer trimestre.",
+          title: "Portal de pacientes en healthcare",
+          desc: "Un portal multilingüe para citas, historial médico y mensajería segura, diseñado alrededor de claridad, confianza y uso diario sin fricción.",
           scope: "Diseño de producto + frontend + backend n8n",
           timeline: "6 meses",
         },
         {
-          title: "Rediseño de Checkout E-commerce",
-          desc: "Rediseñamos checkout para una marca de moda para reducir abandono. Conversión móvil aumentó de 34% a 67%.",
+          title: "Rediseño de checkout e-commerce",
+          desc: "Un checkout mobile-first para una marca de moda, enfocado en reducir dudas, hacer evidentes los pasos de pago y mantener la marca hasta la compra.",
           scope: "Auditoría UX + diseño + implementación",
           timeline: "8 semanas",
         },
         {
-          title: "CRM para Agentes Inmobiliarios",
-          desc: "Construimos un CRM personalizado para una agencia inmobiliaria holandesa con listados de propiedades, seguimiento de clientes y automatizaciones.",
+          title: "CRM para equipo inmobiliario",
+          desc: "Un CRM a medida para una agencia neerlandesa, combinando propiedades, contexto de clientes y seguimientos automatizados en un producto interno con identidad.",
           scope: "Producto completo + automatización backend",
           timeline: "5 meses",
         },
       ],
-      deliverablesTitle: "Qué recibes",
+      deliverablesTitle: "Qué sale del estudio",
       deliverables: [
-        "Brief de producto y documentación de flujos de usuario",
-        "Sistema de diseño visual con librería de componentes",
-        "Prototipo interactivo para journeys clave",
-        "Implementación Next.js lista para producción",
-        "Checklist de lanzamiento y soporte",
-        "30 días de ventana post-lanzamiento para bugs",
+        "Brief estratégico con posicionamiento, prioridades y decisiones de usuario",
+        "Documentación UX de los recorridos más importantes",
+        "Sistema de interfaz con pantallas, estados y componentes guiados por marca",
+        "Prototipo interactivo para los recorridos con más riesgo",
+        "Frontend Next.js listo para producción cuando la construcción entra en alcance",
+        "Checklist de lanzamiento, notas de traspaso y soporte post-lanzamiento",
       ],
-      whyUsTitle: "Por qué el diseño de producto con nosotros es diferente",
+      whyUsTitle: "Por qué esto no es otro handoff de diseño",
       whyUs: [
-        "Diseño e ingeniería frontend bajo el mismo techo — sin desconexión entre lo que se diseña y lo que se construye.",
-        "Enfoque brand-first — la dirección visual se establece antes de diseñar la primera pantalla, no se añade después.",
-        "Mentalidad operativa — cada decisión de interfaz se toma con consciencia de la realidad del sistema, no solo del comportamiento ideal del usuario.",
-        "Arquitectura frontend preparada para iteración — la primera versión no te pinta en un rincón.",
+        "Estrategia, marca, UX/UI y frontend viven en la misma conversación, así que el producto no pierde calidad entre Figma y producción.",
+        "La marca se traduce a comportamiento de producto antes de pulir pantallas, para que la interfaz se sienta propia y no simplemente maquillada.",
+        "Cada flujo se diseña con operaciones reales en mente: permisos, datos imperfectos, estados límite, traspasos y usuarios con presión de tiempo.",
+        "El frontend se estructura para iterar, de modo que la primera versión no se convierta en una pieza frágil que frena la segunda.",
       ],
       pricing: {
         badge: "Opciones de participación",
         title: "Cómo estructuramos el trabajo",
-        subtitle: "Tres formatos dependiendo de dónde estás y qué necesitas.",
+        subtitle:
+          "Tres formas de trabajar según la claridad, profundidad de diseño y soporte de producción que necesitas. Toda construcción completa empieza con discovery para que el alcance, el riesgo y el esfuerzo se basen en el producto real, no en una estimación a ciegas.",
         discovery: {
           name: "Discovery y Dirección",
-          price: "Desde €4.500",
+          price: "Desde €4.800",
           timeline: "2-3 semanas",
-          desc: "Para equipos que tienen una idea de producto pero necesitan claridad en dirección, flujos de usuario y enfoque técnico antes de comprometerse con una build completa.",
+          desc: "Para equipos con una idea fuerte, pero que aún necesitan claridad sobre posicionamiento, flujos UX, dirección visual, alcance y camino técnico.",
           recommended: true,
           includes: [
-            "Workshop de framing de producto",
-            "Mapeo de flujos de usuario",
-            "Dirección visual",
-            "Outline de arquitectura técnica",
-            " roadmap priorizado",
-            "Deck para stakeholders",
+            "Workshop de producto y marca",
+            "Mapeo de decisiones clave del usuario",
+            "Flujos UX y arquitectura de información",
+            "Dirección visual de la superficie de producto",
+            "Esquema de arquitectura técnica",
+            "Roadmap de entrega priorizado",
           ],
-          cta: "Iniciar discovery",
+          cta: "Empezar con discovery",
         },
         designBuild: {
           name: "Diseño + Construcción",
-          price: "Desde €18.000",
+          price: "Desde €24.000",
           timeline: "2-4 meses",
-          desc: "Para productos que necesitan dirección de diseño completa e implementación en producción.",
+          desc: "Para equipos que necesitan dar forma, diseñar y construir el producto como una sola versión coherente, no dividirlo entre proveedores desconectados.",
           includes: [
             "Todo lo de Discovery",
-            "Diseño de interfaz completo",
-            "Prototipo interactivo",
-            "Build en producción con Next.js",
-            "Soporte de lanzamiento",
-            "Ventana de 60 días post-lanzamiento",
+            "Sistema UX/UI completo para superficies clave",
+            "Prototipo interactivo de recorridos principales",
+            "Frontend de producción en Next.js",
+            "Responsive, motion, estados y casos límite",
+            "Soporte de lanzamiento y 60 días post-lanzamiento",
           ],
-          cta: "Iniciar diseño + construcción",
+          cta: "Planificar diseño + build",
         },
         ongoing: {
           name: "Colaboración Continua",
-          price: "Desde €6.000/mes",
+          price: "Desde €6.500/mes",
           timeline: "Continuo",
-          desc: "Para equipos que necesitan soporte consistente de diseño e ingeniería de producto a medida que el producto evoluciona.",
+          desc: "Para equipos que ya tienen tracción y necesitan diseño de producto senior más ejecución frontend a medida que evoluciona la hoja de ruta.",
           includes: [
-            "Sesiones semanales de diseño",
-            "Implementación frontend",
-            "Mejora continua de producto",
-            "Acceso prioritario a Slack",
-            "Planificación mensual de roadmap",
+            "Sesiones semanales de producto y diseño",
+            "Capacidad de implementación frontend",
+            "Mejora continua de UX/UI",
+            "Soporte asíncrono prioritario",
+            "Planificación mensual de hoja de ruta de producto",
           ],
-          cta: "Iniciar colaboración",
+          cta: "Hablar de colaboración",
         },
       },
       audienceTitle: "Para quién encaja",
       audiences: [
         {
-          title: "Founders creando un producto nuevo",
-          desc: "Tienes una dirección de negocio clara, pero necesitas estructura de producto, interfaz y primera versión coherentes desde el primer día.",
+          title: "Founders convirtiendo una idea en producto real",
+          desc: "Ves la oportunidad de negocio, pero necesitas que estrategia, marca, UX y primer frontend avancen con criterio desde el primer día.",
         },
         {
-          title: "Equipos reemplazando una herramienta confusa",
-          desc: "Necesitas un portal, dashboard o flujo más claro que reduzca fricción operativa en vez de crear otro parche interno.",
+          title: "Equipos reemplazando software interno confuso",
+          desc: "Necesitas un portal, dashboard, CRM o flujo operativo que elimine fricción en vez de convertirse en otro parche que nadie quiere usar.",
         },
         {
           title: "Marcas que no pueden parecer genéricas",
-          desc: "Quieres una experiencia de producto con identidad propia sin convertirla en algo decorativo o lento de lanzar.",
+          desc: "Quieres que la experiencia de producto exprese la identidad del negocio sin dejar de ser rápida, usable, accesible y lanzable.",
         },
       ],
       scopeTitle: "Qué cubre el trabajo",
       scope: [
-        "Encuadre de producto, journeys y flujos de decisión antes de diseñar pantallas.",
-        "Dirección de interfaz con layouts, estados, componentes y patrones de interacción.",
-        "Implementación frontend lista para producción en el nivel de fidelidad adecuado para el lanzamiento.",
-        "Notas de handoff, prioridades de lanzamiento y roadmap para la siguiente iteración.",
+        "Encuadre de producto, posicionamiento, recorridos de usuario y flujos de decisión antes de diseñar pantallas.",
+        "Dirección UX/UI guiada por marca con layouts, estados, componentes, patrones de interacción y responsive.",
+        "Implementación frontend lista para producción en el nivel de fidelidad adecuado para la etapa de lanzamiento.",
+        "Notas de traspaso, prioridades de lanzamiento y hoja de ruta para que el producto siga avanzando después de salir.",
       ],
-      detailTitle: "De idea a superficie lanzable",
+      detailTitle: "Lo que se vuelve más fuerte durante el trabajo",
       details: [
         {
-          title: "Definir la promesa",
-          desc: "Aclaramos qué debe demostrar el producto, qué decisiones toma el usuario y dónde la interfaz debe eliminar dudas.",
+          title: "La promesa del producto",
+          desc: "Hacemos evidente el valor del producto: qué hace, para quién es, por qué importa y dónde la interfaz debe generar confianza.",
         },
         {
-          title: "Diseñar la capa operativa",
-          desc: "Sistema visual, flujos, formularios, dashboards, estados vacíos y responsive se diseñan alrededor del uso real.",
+          title: "La capa operativa",
+          desc: "Flujos, formularios, dashboards, permisos, estados vacíos y responsive se diseñan alrededor del uso real, no de un recorrido demo perfecto.",
         },
         {
-          title: "Construir para iterar",
-          desc: "El frontend se estructura para que la primera versión no bloquee la siguiente con decisiones frágiles.",
+          title: "La siguiente iteración",
+          desc: "El frontend se estructura para absorber nuevas funciones, nuevo contenido y feedback de usuarios sin rehacer el producto desde cero.",
         },
       ],
       faqTitle: "Preguntas frecuentes",
       faqs: [
         {
           q: "¿Podemos empezar sin un sistema de marca completo?",
-          a: "Sí. Podemos partir de una dirección ligera de identidad y convertirla en reglas de producto mientras la interfaz toma forma.",
+          a: "Sí. Podemos partir de una dirección ligera de identidad y convertirla en reglas de producto mientras la interfaz toma forma. Si la marca necesita más definición, lo dejamos claro desde el principio.",
         },
         {
           q: "¿Es solo diseño o diseño más desarrollo?",
-          a: "Ambos son posibles, pero el mejor encaje es diseño con criterio de implementación para mantener la dirección lanzable.",
+          a: "Ambos son posibles. El mejor encaje es diseño con criterio de implementación, porque las decisiones de producto se mantienen conectadas con lo que se puede construir, mantener y lanzar.",
         },
         {
           q: "¿Qué recibimos al final?",
-          a: "Dirección de producto clara, pantallas y estados clave, implementación donde se acuerde y documentación para el siguiente paso.",
+          a: "Dirección de producto clara, flujos UX, pantallas y estados clave, reglas de componentes, implementación acordada y documentación para el lanzamiento y la siguiente iteración.",
         },
         {
           q: "¿Cómo manejáis las revisiones?",
-          a: "Cada fase tiene un ciclo de revisión definido. Trabajamos en iteraciones, no en bucles de revisión abiertos. El feedback se recoge, prioriza e incorpora.",
+          a: "Cada fase tiene un ciclo de revisión definido. Trabajamos en iteraciones enfocadas, no en bucles infinitos de cambios. El feedback se recoge, se prioriza y se conecta con los objetivos del producto.",
         },
         {
           q: "¿Podéis trabajar con nuestro equipo de diseño existente?",
-          a: "Sí. Podemos complementar tu equipo para fases o entregas específicas en lugar de ejecutar el engagement completo.",
+          a: "Sí. Podemos liderar el track completo de producto o apoyar a tu equipo en estrategia, dirección UX, diseño de interfaz, frontend o preparación de lanzamiento.",
         },
       ],
     },
     nl: {
-      eyebrow: "Productstudio",
-      title: "Merkgedreven productontwerp",
-      accent: "klaar om te shippen.",
+      eyebrow: "Studio voor product, merk en frontend",
+      title: "Digitale producten met een eigen gezicht",
+      accent: "gebouwd om echt te worden.",
       description:
-        "Digitale producten, portals en interfaces opgebouwd rond je merk, je gebruikers en de operationele realiteit achter het scherm.",
-      primaryCta: "Plan het product",
+        "We brengen productstrategie, merkexpressie, UX/UI en productieklare frontend samen, zodat je portal, dashboard, SaaS-product of digitale ervaring vanaf de eerste interactie herkenbaar voelt en na lancering stevig blijft staan.",
+      primaryCta: "Vorm het product",
       secondaryCta: "Bekijk services",
-      outcomesTitle: "Een productlaag die helder, eigen en onderscheidend voelt.",
+      labels: {
+        process: "Proces",
+        portfolio: "Productvoorbeelden",
+        deliverables: "Deliverables",
+        whyUs: "Waarom wij",
+        audience: "Beste fit",
+        details: "Productdiepte",
+        faq: "FAQ",
+        canvas: "Productsysteem",
+        promise: "01 / Belofte",
+        stack: "Stack",
+        flow: "02 / Flow",
+        handoff: "03 / Launch",
+        identity: "Identiteitslaag",
+        launch: "Buildfases",
+        recommended: "Aanbevolen",
+      },
+      outcomesTitle: "Een productervaring die mensen begrijpen, onthouden en gebruiken.",
       outcomes: [
-        "Productflows rond beslissingen die gebruikers echt moeten nemen.",
-        "Interfacerichting met merkidentiteit zonder snelheid te verliezen.",
-        "Frontendarchitectuur die na de eerste lancering kan doorgroeien.",
-        "Een deliveryplan met scope, mijlpalen en overdrachtsdocumentatie.",
+        "Een scherpe productbelofte, gekoppeld aan de echte beslissingen die gebruikers moeten nemen.",
+        "Een visuele richting die je merk in het product brengt zonder de interface decoratief te maken.",
+        "Een UX/UI-systeem met schermen, states, componenten en interactiepatronen die klaar zijn voor implementatie.",
+        "Een frontendbasis die de tweede release, de derde feature en het volgende teamlid aankan.",
       ],
-      phases: ["Productkader", "Interfacerichting", "Productiebouw"],
-      layers: ["Merksysteem", "User journey", "Interactiemodel", "Next.js surface"],
-      processTitle: "Hoe het werk stroomt",
+      phases: ["Productstrategie", "Merkinterface", "Frontend build"],
+      layers: ["Merkregels", "Gebruikersbeslissingen", "Interactiesysteem", "Next.js product"],
+      processTitle: "Van idee naar productsurface",
       process: [
         {
           number: "01",
-          name: "Discovery & Framing",
-          desc: "We begrijpen de businesscontext, gebruikersbeslissingen, operationele beperkingen en merkrichting. Geen aannames — alleen een duidelijk brief.",
+          name: "Product- en Merkframing",
+          desc: "We verduidelijken het businessdoel, de doelgroep, het merksignaal en de beslissingen die het product moet ondersteunen. Het resultaat is een scherpe productbrief, geen moodboard vol aannames.",
           duration: "3-5 dagen",
         },
         {
           number: "02",
-          name: "Richting & Architectuur",
-          desc: "We definiëren de belofte van het product, mapen kerngebruikersstromen, stellen het visuele systeem in en bepalen de technische aanpak.",
+          name: "UX-richting & Architectuur",
+          desc: "We brengen de kernreizen in kaart, bepalen de informatiestructuur, beslissen wat elk scherm moet bewijzen en leggen de technische route vast voordat high-fidelity design start.",
           duration: "1-2 weken",
         },
         {
           number: "03",
-          name: "Interface Design",
-          desc: "High-fidelity richting voor de kernoppervlakken — belangrijke schermen, states, componenten en interactiepatronen. Design dat echt kan shippen.",
+          name: "Visueel Productsysteem",
+          desc: "We vertalen strategie naar schermen, states, componenten, lege toestanden, responsive regels en interactiedetails die voelen als je merk en werken als een echt product.",
           duration: "2-3 weken",
         },
         {
           number: "04",
-          name: "Productie Build",
-          desc: "Frontend implementatie met dezelfde strengheid als het design. Elke state, elk edge case, elk responsive breakpoint.",
+          name: "Productieklare Frontend",
+          desc: "We bouwen de afgesproken productsurface met dezelfde zorg als het ontwerp: responsive layouts, motion, states, edge cases, toegankelijkheid en een onderhoudbare Next.js-structuur.",
           duration: "3-6 weken",
         },
         {
           number: "05",
-          name: "Handoff & Lancering",
-          desc: "Documentatie, asset-export en go-live ondersteuning. Het product is klaar om te bezitten, te itereren en te groeien.",
+          name: "Lancering & Volgende Iteratie",
+          desc: "We bereiden overdracht, launchchecklist, implementatienotities en prioriteiten voor de volgende build voor, zodat het product na release kan worden beheerd, uitgebreid en verbeterd.",
           duration: "1 week",
         },
       ],
-      portfolioTitle: "Wat we gebouwd hebben",
+      portfolioTitle: "Het soort productwerk waarvoor dit past",
       portfolio: [
         {
-          title: "B2B SaaS Operaties Dashboard",
-          desc: "Verving een 12 jaar oud legacy-systeem met een clean, role-based dashboard voor fieldserviceteams. Taakcompletion tijd met 40% verminderd.",
+          title: "Operationeel dashboard voor B2B SaaS",
+          desc: "Een rolgebaseerd dashboard dat legacy-workflows vertaalde naar een duidelijkere productsurface voor buitenteams, managers en backoffice.",
           scope: "Volledig product redesign + Next.js rebuild",
           timeline: "4 maanden",
         },
         {
-          title: "Healthcare Patiënt Portal",
-          desc: "Bouwide een meertalige patiëntportal met afsprakenboeking, medische geschiedenis en beveiligde messaging. 15.000 actieve gebruikers in eerste kwartaal.",
+          title: "Patiëntenportaal voor healthcare",
+          desc: "Een meertalig portaal voor afspraken, medische geschiedenis en beveiligde berichten, ontworpen rond duidelijkheid, vertrouwen en frictieloos dagelijks gebruik.",
           scope: "Product design + frontend + n8n backend",
           timeline: "6 maanden",
         },
         {
-          title: "E-commerce Checkout Redesign",
-          desc: "Redesignde checkout voor een модемmerk om abandoned carts te verminderen. Mobiele conversie steeg van 34% naar 67%.",
+          title: "E-commerce checkout redesign",
+          desc: "Een mobile-first checkout voor een modemerk, gericht op minder twijfel, duidelijke betaalstappen en een merkervaring die doorloopt tot aankoop.",
           scope: "UX audit + design + implementatie",
           timeline: "8 weken",
         },
         {
-          title: "Real Estate Agent CRM",
-          desc: "Bouwide een op maat CRM voor een Nederlands makelaarskantoor met property listings, klanttracking en geautomatiseerde follow-ups.",
+          title: "CRM voor een vastgoedteam",
+          desc: "Een CRM op maat voor een Nederlands makelaarsteam, waarin vastgoedflows, klantcontext en geautomatiseerde opvolging samenkomen in één herkenbaar intern product.",
           scope: "Volledig product + backend automatisering",
           timeline: "5 maanden",
         },
       ],
-      deliverablesTitle: "Wat je ontvangt",
+      deliverablesTitle: "Wat de studio oplevert",
       deliverables: [
-        "Product brief en user flow documentatie",
-        "Visueel designsysteem met componentenbibliotheek",
-        "Interactief prototype voor belangrijke gebruikersreizen",
-        "Productieklare Next.js implementatie",
-        "Lancering checklist en ondersteuning",
-        "30 dagen post-lancering bugfix venster",
+        "Strategische productbrief met positionering, prioriteiten en gebruikersbeslissingen",
+        "UX-documentatie voor de belangrijkste gebruikersreizen",
+        "Merkgedreven interfacesysteem met schermen, states en componenten",
+        "Interactief prototype voor de meest risicovolle gebruikerspaden",
+        "Productieklare Next.js-frontend wanneer build binnen scope valt",
+        "Launchchecklist, overdrachtsnotities en post-launch supportvenster",
       ],
-      whyUsTitle: "Waarom productontwerp met ons anders is",
+      whyUsTitle: "Waarom dit geen gewone designhandoff is",
       whyUs: [
-        "Design en frontend engineering onder één dak — geen disconnectie tussen wat ontworpen en wat gebouwd wordt.",
-        "Brand-first aanpak — de visuele richting wordt vastgesteld vóór het eerste scherm wordt ontworpen, niet achteraf toegevoegd.",
-        "Operationele mindset — elke interface-beslissing wordt genomen met bewustzijn van de realiteit van het systeem, niet alleen van ideaal gebruikersgedrag.",
-        "Frontend architectuur gebouwd voor iteratie — de eerste release tekent je niet in een hoek.",
+        "Strategie, merk, UX/UI en frontend zitten in hetzelfde gesprek, zodat het product geen kwaliteit verliest tussen Figma en productie.",
+        "Het merk wordt vertaald naar productgedrag voordat schermen worden gepolijst, waardoor de interface eigen voelt in plaats van alleen gestyled.",
+        "Elke flow wordt ontworpen voor echte operatie: rechten, rommelige data, edge cases, overdrachten en gebruikers die onder tijdsdruk werken.",
+        "De frontend wordt opgezet voor iteratie, zodat de eerste release geen fragiele one-off wordt die de tweede release vertraagt.",
       ],
       pricing: {
         badge: "Deelname-opties",
         title: "Hoe we het werk structureren",
-        subtitle: "Drie formaten afhankelijk van waar je bent en wat je nodig hebt.",
+        subtitle:
+          "Drie manieren om samen te werken, afhankelijk van hoeveel helderheid, ontwerpdiepte en productiesupport je nodig hebt. Elke volledige build start met discovery, zodat scope, risico en effort gebaseerd zijn op het echte product in plaats van op giswerk.",
         discovery: {
           name: "Discovery & Richting",
-          price: "Vanaf €4.500",
+          price: "Vanaf €4.800",
           timeline: "2-3 weken",
-          desc: "Voor teams die een productidee hebben maar duidelijkheid nodig hebben over richting, gebruikersstromen en technische aanpak voordat ze zich committeren aan een volledige build.",
+          desc: "Voor teams met een sterk productidee, maar nog onvoldoende helderheid over positionering, UX-flows, visuele richting, scope of technische route.",
           recommended: true,
           includes: [
-            "Product framing workshop",
-            "User flow mapping",
-            "Visuele richting",
-            "Technische architectuur outline",
-            "Geprioriteerde roadmap",
-            "Stakeholder presentatiedeck",
+            "Workshop voor product- en merkframing",
+            "Mapping van belangrijke gebruikersbeslissingen",
+            "UX-flows en informatiearchitectuur",
+            "Visuele richting voor de productsurface",
+            "Technisch architectuuroverzicht",
+            "Geprioriteerde deliveryroadmap",
           ],
-          cta: "Start discovery",
+          cta: "Start met discovery",
         },
         designBuild: {
           name: "Design + Build",
-          price: "Vanaf €18.000",
+          price: "Vanaf €24.000",
           timeline: "2-4 maanden",
-          desc: "Voor producten die volledige ontwerprijding en productie-implementatie nodig hebben.",
+          desc: "Voor teams die het product als één coherente release willen vormen, ontwerpen en bouwen, in plaats van het te verdelen over losstaande partijen.",
           includes: [
             "Alles van Discovery",
-            "Volledige interface design",
-            "Interactief prototype",
-            "Next.js productie build",
-            "Lancering ondersteuning",
-            "60 dagen post-lancering venster",
+            "Volledig UX/UI-systeem voor kernsurfaces",
+            "Interactief prototype voor belangrijke journeys",
+            "Productieklare Next.js-frontend",
+            "Responsive states, motion en edge cases",
+            "Launchsupport en 60 dagen post-launch venster",
           ],
-          cta: "Start design + build",
+          cta: "Plan design + build",
         },
         ongoing: {
           name: "Doorlopende Samenwerking",
-          price: "Vanaf €6.000/maand",
+          price: "Vanaf €6.500/maand",
           timeline: "Doorlopend",
-          desc: "Voor teams die consistent productontwerp en engineering ondersteuning nodig hebben terwijl het product evolueert.",
+          desc: "Voor teams die al momentum hebben en senior productdesign plus frontenduitvoering nodig hebben terwijl de roadmap evolueert.",
           includes: [
-            "Wekelijkse design sessies",
-            "Frontend implementatie",
-            "Continu product improvement",
-            "Prioriteit Slack access",
-            "Maandelijkse roadmap planning",
+            "Wekelijkse product- en designsessies",
+            "Frontendimplementatiecapaciteit",
+            "Doorlopende UX/UI-verbetering",
+            "Prioritaire asynchrone support",
+            "Maandelijkse productroadmap-planning",
           ],
-          cta: "Start samenwerking",
+          cta: "Bespreek samenwerking",
         },
       },
       audienceTitle: "Beste fit",
       audiences: [
         {
-          title: "Founders die een nieuw product vormen",
-          desc: "Je hebt een duidelijke businessrichting, maar hebt productstructuur, interface en eerste build nodig die vanaf dag een kloppen.",
+          title: "Founders die een idee omzetten in een echt product",
+          desc: "Je ziet de businesskans, maar hebt productstrategie, merkexpressie, UX en eerste frontend nodig die vanaf dag één met discipline samenkomen.",
         },
         {
-          title: "Teams die een rommelige tool vervangen",
-          desc: "Je hebt een helderder portal, dashboard of workflowsurface nodig die operationele frictie vermindert.",
+          title: "Teams die rommelige interne software vervangen",
+          desc: "Je hebt een portal, dashboard, CRM of workflow nodig die frictie wegneemt in plaats van de volgende workaround te worden die niemand graag gebruikt.",
         },
         {
-          title: "Merken die niet generiek mogen ogen",
-          desc: "Je wilt een productervaring met eigen identiteit zonder dat die decoratief of traag te shippen wordt.",
+          title: "Merken die niet generiek mogen voelen",
+          desc: "Je wilt dat de productervaring de identiteit van het bedrijf draagt, terwijl die snel, bruikbaar, toegankelijk en lanceerbaar blijft.",
         },
       ],
       scopeTitle: "Wat de samenwerking dekt",
       scope: [
-        "Productkader, user journeys en beslisflows voordat visueel ontwerp start.",
-        "Interfacerichting met layouts, states, componenten en interactiepatronen.",
-        "Productieklare frontendimplementatie op het juiste detailniveau voor de lancering.",
-        "Handoff-notities, launchprioriteiten en roadmap voor de volgende iteratie.",
+        "Productframing, positionering, user journeys en beslisflows voordat visueel ontwerp start.",
+        "Merkgedreven UX/UI-richting met layouts, states, componenten, interactiepatronen en responsive gedrag.",
+        "Productieklare frontendimplementatie op het juiste detailniveau voor de lanceringsfase.",
+        "Overdrachtsnotities, launchprioriteiten en een roadmap voor de volgende iteratie na release.",
       ],
-      detailTitle: "Van idee naar shippable surface",
+      detailTitle: "Wat sterker wordt tijdens het werk",
       details: [
         {
-          title: "De belofte scherpstellen",
-          desc: "We verduidelijken wat het product moet bewijzen, welke beslissingen gebruikers nemen en waar de interface twijfel wegneemt.",
+          title: "De productbelofte",
+          desc: "We maken de waarde van het product duidelijk: wat het doet, voor wie het is, waarom het ertoe doet en waar de interface vertrouwen moet geven.",
         },
         {
-          title: "De operationele laag ontwerpen",
-          desc: "Visueel systeem, flows, formulieren, dashboards, empty states en responsive gedrag worden rond echt gebruik ontworpen.",
+          title: "De operationele laag",
+          desc: "Flows, formulieren, dashboards, rechten, lege toestanden en responsive gedrag worden ontworpen rond echt gebruik, niet rond een perfecte demo-route.",
         },
         {
-          title: "Bouwen voor de volgende iteratie",
-          desc: "De frontend wordt zo opgezet dat de eerste release de volgende niet blokkeert met breekbare keuzes.",
+          title: "De volgende iteratie",
+          desc: "De frontend wordt zo opgezet dat nieuwe features, nieuwe content en gebruikersfeedback kunnen worden opgenomen zonder het product opnieuw te bouwen.",
         },
       ],
       faqTitle: "Veelgestelde vragen",
       faqs: [
         {
           q: "Kunnen we starten zonder compleet merksysteem?",
-          a: "Ja. We kunnen vanuit een lichte identiteitsrichting werken en die vertalen naar productregels terwijl de interface vorm krijgt.",
+          a: "Ja. We kunnen starten vanuit een lichte identiteitsrichting en die vertalen naar productregels terwijl de interface vorm krijgt. Als het merk meer definitie nodig heeft, maken we dat vroeg expliciet.",
         },
         {
           q: "Is dit alleen design, of design plus build?",
-          a: "Beide kan, maar de sterkste fit is design met implementatieoordeel zodat de productrichting shippable blijft.",
+          a: "Beide kan. De sterkste fit is design met implementatieoordeel, omdat productkeuzes dan verbonden blijven met wat gebouwd, onderhouden en gelanceerd kan worden.",
         },
         {
           q: "Wat ontvangen we aan het einde?",
-          a: "Een duidelijke productrichting, belangrijke schermen en states, afgesproken implementatiewerk en documentatie voor de volgende stap.",
+          a: "Een duidelijke productrichting, UX-flows, belangrijke schermen en states, componentregels, afgesproken implementatiewerk en documentatie voor launch en de volgende iteratie.",
         },
         {
           q: "Hoe gaan jullie om met revisies?",
-          a: "Elke fase heeft een gedefinieerde reviewcyclus. We werken in iteraties, niet in open-ended revisielussen. Feedback wordt verzameld, geprioriteerd en verwerkt.",
+          a: "Elke fase heeft een duidelijke reviewcyclus. We werken in gerichte iteraties, niet in eindeloze revisierondes. Feedback wordt verzameld, geprioriteerd en gekoppeld aan productdoelen.",
         },
         {
           q: "Kunnen jullie met ons bestaande designteam werken?",
-          a: "Ja. We kunnen je team aanvullen voor specifieke fases of deliverables in plaats van de volledige engagement te draaien.",
+          a: "Ja. We kunnen het volledige producttraject leiden of je team ondersteunen bij strategie, UX-richting, interface design, frontendimplementatie of launchvoorbereiding.",
         },
       ],
     },
@@ -628,120 +713,194 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
 
   return (
     <StudioServiceShell locale={locale} path={path} breadcrumbName={copy.title}>
-      <section className="relative px-6 py-20 lg:px-8 lg:py-28">
-        <div className="pointer-events-none absolute left-0 top-20 h-[540px] w-[540px] rounded-full bg-hunter-green/[0.07] blur-[150px]" />
-        <div className="pointer-events-none absolute right-0 top-40 h-[420px] w-[420px] rounded-full bg-hunter-orange/[0.08] blur-[130px]" />
+      <section className="relative overflow-hidden px-6 py-20 lg:px-8 lg:py-28">
+        <div className="pointer-events-none absolute left-1/2 top-0 h-px w-[86vw] -translate-x-1/2 bg-gradient-to-r from-transparent via-hunter-green/40 to-transparent" />
+        <div className="pointer-events-none absolute -left-24 top-20 h-[620px] w-[620px] rounded-full bg-hunter-green/[0.09] blur-[150px]" />
+        <div className="pointer-events-none absolute -right-20 top-40 h-[520px] w-[520px] rounded-full bg-hunter-orange/[0.1] blur-[140px]" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-near-black via-near-black/70 to-transparent" />
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <div>
-            <p className="mb-5 inline-flex rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-hunter-green">
+          <m.div initial="hidden" animate="visible" variants={containerVariants}>
+            <m.p
+              variants={itemVariants}
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-hunter-green/20 bg-hunter-green/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-hunter-green shadow-[0_0_40px_rgba(0,230,162,0.08)]"
+            >
+              <span className="h-2 w-2 animate-pulse rounded-full bg-hunter-green shadow-[0_0_12px_rgba(0,230,162,0.8)]" />
               {copy.eyebrow}
-            </p>
-            <h1 className="max-w-4xl text-5xl font-black leading-[0.9] tracking-tighter md:text-7xl">
-              {copy.title} <span className="text-hunter-orange">{copy.accent}</span>
-            </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl">
+            </m.p>
+            <m.h1
+              variants={itemVariants}
+              className="max-w-4xl text-5xl font-black leading-[0.88] tracking-tighter text-white md:text-7xl xl:text-8xl"
+            >
+              {copy.title}{" "}
+              <span className="bg-gradient-to-r from-hunter-green via-white to-hunter-orange bg-clip-text text-transparent">
+                {copy.accent}
+              </span>
+            </m.h1>
+            <m.p
+              variants={itemVariants}
+              className="mt-7 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl"
+            >
               {copy.description}
-            </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            </m.p>
+            <m.div variants={itemVariants} className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-xl bg-hunter-green px-8 py-4 text-sm font-black uppercase tracking-widest text-near-black transition-colors hover:bg-white"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl px-8 py-4 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_20px_60px_-28px_rgba(0,230,162,0.85)] transition-transform duration-300 hover:-translate-y-1"
               >
-                {copy.primaryCta}
+                <span className="absolute inset-0 bg-hunter-green transition-colors duration-300 group-hover:bg-white" />
+                <span className="relative z-10">{copy.primaryCta}</span>
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-8 py-4 text-sm font-bold text-white transition-colors hover:border-hunter-orange/40 hover:text-hunter-orange"
+                className="group inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-hunter-orange/40 hover:bg-hunter-orange/5 hover:text-hunter-orange"
               >
                 {copy.secondaryCta}
               </Link>
-            </div>
-          </div>
-          <ProductCanvas layers={copy.layers} />
+            </m.div>
+            <m.div variants={itemVariants} className="mt-10 grid max-w-xl grid-cols-3 gap-3">
+              {copy.phases.map((phase, index) => (
+                <div
+                  key={phase}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 backdrop-blur-md"
+                >
+                  <div className="font-mono text-[10px] font-black text-hunter-green">
+                    0{index + 1}
+                  </div>
+                  <div className="mt-2 text-xs font-bold leading-tight text-white/80">{phase}</div>
+                </div>
+              ))}
+            </m.div>
+          </m.div>
+          <m.div
+            initial={{ opacity: 0, x: 28, scale: 0.98 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <ProductCanvas layers={copy.layers} labels={copy.labels} />
+          </m.div>
         </div>
       </section>
 
-      <section className="px-6 py-20 lg:px-8">
+      <AnimatedSection className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <IdentityLayer outcomesTitle={copy.outcomesTitle} outcomes={copy.outcomes} />
-          <LaunchBoard phases={copy.phases} />
+          <IdentityLayer
+            label={copy.labels.identity}
+            outcomesTitle={copy.outcomesTitle}
+            outcomes={copy.outcomes}
+          />
+          <LaunchBoard label={copy.labels.launch} phases={copy.phases} />
         </div>
-      </section>
+      </AnimatedSection>
 
-      <ProcessSection title={copy.processTitle} items={copy.process} />
-      <PortfolioSection title={copy.portfolioTitle} items={copy.portfolio} />
-      <DeliverablesSection title={copy.deliverablesTitle} items={copy.deliverables} />
-      <WhyUsSection title={copy.whyUsTitle} items={copy.whyUs} />
-      <PricingSection pricing={copy.pricing} />
+      <ProcessSection label={copy.labels.process} title={copy.processTitle} items={copy.process} />
+      <PortfolioSection
+        label={copy.labels.portfolio}
+        title={copy.portfolioTitle}
+        items={copy.portfolio}
+      />
+      <DeliverablesSection
+        label={copy.labels.deliverables}
+        title={copy.deliverablesTitle}
+        items={copy.deliverables}
+      />
+      <WhyUsSection label={copy.labels.whyUs} title={copy.whyUsTitle} items={copy.whyUs} />
+      <PricingSection pricing={copy.pricing} recommendedLabel={copy.labels.recommended} />
 
-      <AudienceFit title={copy.audienceTitle} items={copy.audiences} />
+      <AudienceFit label={copy.labels.audience} title={copy.audienceTitle} items={copy.audiences} />
       <EngagementScope title={copy.scopeTitle} items={copy.scope} />
-      <DeliveryDetail title={copy.detailTitle} items={copy.details} />
-      <DecisionFaq title={copy.faqTitle} items={copy.faqs} />
+      <DeliveryDetail label={copy.labels.details} title={copy.detailTitle} items={copy.details} />
+      <DecisionFaq label={copy.labels.faq} title={copy.faqTitle} items={copy.faqs} />
     </StudioServiceShell>
   );
 }
 
 function ProcessSection({
+  label,
   title,
   items,
 }: {
+  label: string;
   title: string;
   items: Array<{ number: string; name: string; desc: string; duration: string }>;
 }) {
   return (
-    <section className="border-y border-white/5 bg-surface-dark/20 px-6 py-20 lg:px-8">
+    <AnimatedSection className="border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-green">
-          Process
+          {label}
         </p>
         <h2 className="mt-4 max-w-4xl text-4xl font-black leading-none tracking-tighter md:text-5xl">
           {title}
         </h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-5">
-          {items.map((item) => (
-            <article
+        <div className="mt-12 grid gap-5 md:grid-cols-5">
+          {items.map((item, index) => (
+            <m.article
               key={item.number}
-              className="relative rounded-3xl border border-white/10 bg-near-black p-6"
+              custom={index}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              whileHover={{ y: -8 }}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-near-black p-6 transition-colors duration-300 hover:border-hunter-green/40"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-hunter-green/30 bg-hunter-green/10 font-mono text-sm font-black text-hunter-green">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-hunter-green/10 via-transparent to-hunter-orange/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-hunter-green/10 blur-2xl" />
+              <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-hunter-green/30 bg-hunter-green/10 font-mono text-sm font-black text-hunter-green">
                 {item.number}
               </div>
-              <h3 className="mt-4 text-lg font-black text-white">{item.name}</h3>
-              <p className="mt-2 text-sm text-gray-400">{item.desc}</p>
-              <p className="mt-4 font-mono text-xs text-hunter-orange">{item.duration}</p>
-            </article>
+              <h3 className="relative z-10 mt-4 text-lg font-black text-white transition-colors group-hover:text-hunter-green">
+                {item.name}
+              </h3>
+              <p className="relative z-10 mt-2 text-sm leading-relaxed text-gray-400">
+                {item.desc}
+              </p>
+              <p className="relative z-10 mt-4 font-mono text-xs text-hunter-orange">
+                {item.duration}
+              </p>
+            </m.article>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
 function PortfolioSection({
+  label,
   title,
   items,
 }: {
+  label: string;
   title: string;
   items: Array<{ title: string; desc: string; scope: string; timeline: string }>;
 }) {
   return (
-    <section className="px-6 py-20 lg:px-8">
+    <AnimatedSection className="px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-orange">
-          Portfolio
+          {label}
         </p>
         <h2 className="mt-4 max-w-4xl text-4xl font-black leading-none tracking-tighter md:text-5xl">
           {title}
         </h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {items.map((item) => (
-            <article
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {items.map((item, index) => (
+            <m.article
               key={item.title}
-              className="rounded-3xl border border-white/10 bg-near-black p-8"
+              custom={index}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              whileHover={{ y: -8 }}
+              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-near-black p-8 transition-colors duration-300 hover:border-hunter-orange/40"
             >
-              <h3 className="text-xl font-black text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-400">{item.desc}</p>
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(0,230,162,0.12),transparent_32%),radial-gradient(circle_at_85%_80%,rgba(255,122,60,0.12),transparent_35%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <h3 className="relative z-10 text-xl font-black text-white">{item.title}</h3>
+              <p className="relative z-10 mt-3 text-sm leading-relaxed text-gray-400">
+                {item.desc}
+              </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <span className="rounded-full border border-hunter-green/30 bg-hunter-green/10 px-3 py-1 font-mono text-xs text-hunter-green">
                   {item.scope}
@@ -750,66 +909,95 @@ function PortfolioSection({
                   {item.timeline}
                 </span>
               </div>
-            </article>
+            </m.article>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
-function DeliverablesSection({ title, items }: { title: string; items: string[] }) {
+function DeliverablesSection({
+  label,
+  title,
+  items,
+}: {
+  label: string;
+  title: string;
+  items: string[];
+}) {
   return (
-    <section className="border-y border-white/5 bg-surface-dark/20 px-6 py-20 lg:px-8">
+    <AnimatedSection className="border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
-          <div>
-            <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-green">
-              Deliverables
-            </p>
-            <h2 className="mt-4 text-4xl font-black leading-none tracking-tighter md:text-5xl">
-              {title}
-            </h2>
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-near-black p-8 shadow-2xl shadow-black/30 md:p-10 lg:p-12">
+          <div className="pointer-events-none absolute -left-20 top-1/3 h-72 w-72 rounded-full bg-hunter-green/10 blur-[90px]" />
+          <div className="pointer-events-none absolute right-8 top-8 hidden font-mono text-8xl font-black text-white/[0.025] lg:block">
+            SHIP
           </div>
-          <ul className="space-y-4">
-            {items.map((item) => (
-              <li key={item} className="flex items-start gap-4 text-sm text-gray-300">
-                <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-hunter-green" />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
+            <div>
+              <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-green">
+                {label}
+              </p>
+              <h2 className="mt-4 text-4xl font-black leading-none tracking-tighter md:text-5xl">
+                {title}
+              </h2>
+            </div>
+            <ul className="space-y-4">
+              {items.map((item, index) => (
+                <m.li
+                  key={item}
+                  custom={index}
+                  variants={cardReveal}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-gray-300"
+                >
+                  <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-hunter-green" />
+                  {item}
+                </m.li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
-function WhyUsSection({ title, items }: { title: string; items: string[] }) {
+function WhyUsSection({ label, title, items }: { label: string; title: string; items: string[] }) {
   return (
-    <section className="px-6 py-20 lg:px-8">
+    <AnimatedSection className="px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-orange">
-          Why Us
+          {label}
         </p>
         <h2 className="mt-4 max-w-4xl text-4xl font-black leading-none tracking-tighter md:text-5xl">
           {title}
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {items.map((item, idx) => (
-            <article
-              key={idx}
-              className="flex items-start gap-4 rounded-3xl border border-white/10 bg-white/[0.03] p-6"
+            <m.article
+              key={item}
+              custom={idx}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              whileHover={{ y: -6 }}
+              className="group relative flex items-start gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-colors duration-300 hover:border-hunter-green/40 hover:bg-hunter-green/[0.04]"
             >
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-hunter-green/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-hunter-green/10 font-mono text-sm font-black text-hunter-green">
                 {String(idx + 1).padStart(2, "0")}
               </div>
-              <p className="text-sm leading-relaxed text-gray-300">{item}</p>
-            </article>
+              <p className="relative z-10 text-sm leading-relaxed text-gray-300">{item}</p>
+            </m.article>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
@@ -825,6 +1013,7 @@ type PricingPlan = {
 
 function PricingSection({
   pricing,
+  recommendedLabel,
 }: {
   pricing: {
     badge: string;
@@ -834,9 +1023,10 @@ function PricingSection({
     designBuild: PricingPlan;
     ongoing: PricingPlan;
   };
+  recommendedLabel: string;
 }) {
   return (
-    <section className="border-y border-white/5 bg-surface-dark/20 px-6 py-20 lg:px-8">
+    <AnimatedSection className="border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-orange">
@@ -846,21 +1036,30 @@ function PricingSection({
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">{pricing.subtitle}</p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {[pricing.discovery, pricing.designBuild, pricing.ongoing].map((plan) => (
-            <article
+          {[pricing.discovery, pricing.designBuild, pricing.ongoing].map((plan, index) => (
+            <m.article
               key={plan.name}
+              custom={index}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              whileHover={{ y: plan.recommended ? -10 : -6 }}
               className={`relative flex flex-col rounded-3xl border p-8 ${
                 plan.recommended
-                  ? "border-hunter-green/50 bg-hunter-green/[0.05]"
-                  : "border-white/10 bg-white/[0.02]"
+                  ? "overflow-hidden border-hunter-green/50 bg-hunter-green/[0.06] shadow-[0_28px_90px_-52px_rgba(0,230,162,0.9)]"
+                  : "border-white/10 bg-white/[0.02] transition-colors hover:border-hunter-orange/35"
               }`}
             >
               {plan.recommended && (
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,230,162,0.18),transparent_34%),radial-gradient(circle_at_100%_80%,rgba(255,122,60,0.14),transparent_30%)]" />
+              )}
+              {plan.recommended && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-hunter-green/30 bg-hunter-green/10 px-4 py-1 font-mono text-xs font-black text-hunter-green">
-                  Recommended
+                  {recommendedLabel}
                 </div>
               )}
-              <div className="text-center">
+              <div className="relative z-10 text-center">
                 <h3 className="text-xl font-black text-white">{plan.name}</h3>
                 <div className="mt-4 text-3xl font-black text-hunter-green">{plan.price}</div>
                 <p className="mt-2 font-mono text-xs uppercase tracking-wider text-gray-500">
@@ -868,7 +1067,7 @@ function PricingSection({
                 </p>
                 <p className="mt-4 text-sm text-gray-400">{plan.desc}</p>
               </div>
-              <ul className="mt-8 flex-1 space-y-3">
+              <ul className="relative z-10 mt-8 flex-1 space-y-3">
                 {plan.includes.map((point: string) => (
                   <li key={point} className="flex items-start gap-3 text-sm text-gray-300">
                     <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-hunter-green" />
@@ -886,204 +1085,305 @@ function PricingSection({
               >
                 {plan.cta}
               </Link>
-            </article>
+            </m.article>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
 function AudienceFit({
+  label,
   title,
   items,
 }: {
+  label: string;
   title: string;
   items: Array<{ title: string; desc: string }>;
 }) {
   return (
-    <section className="border-y border-white/5 bg-surface-dark/20 px-6 py-20 lg:px-8">
+    <AnimatedSection className="border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-green">
-          AudienceFit
+          {label}
         </p>
         <h2 className="mt-4 text-4xl font-black tracking-tighter md:text-5xl">{title}</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {items.map((item) => (
-            <article
+          {items.map((item, index) => (
+            <m.article
               key={item.title}
-              className="rounded-3xl border border-white/10 bg-near-black p-7"
+              custom={index}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              whileHover={{ y: -7 }}
+              className="group rounded-3xl border border-white/10 bg-near-black p-7 transition-colors duration-300 hover:border-hunter-green/40 hover:bg-hunter-green/[0.035]"
             >
-              <h3 className="text-2xl font-black tracking-tight text-white">{item.title}</h3>
+              <h3 className="text-2xl font-black tracking-tight text-white transition-colors group-hover:text-hunter-green">
+                {item.title}
+              </h3>
               <p className="mt-4 text-sm leading-relaxed text-gray-400">{item.desc}</p>
-            </article>
+            </m.article>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
 function EngagementScope({ title, items }: { title: string; items: string[] }) {
   return (
-    <section className="px-6 py-20 lg:px-8">
+    <AnimatedSection className="px-6 py-24 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
         <h2 className="text-4xl font-black leading-none tracking-tighter md:text-5xl">{title}</h2>
         <div className="grid gap-4 md:grid-cols-2">
-          {items.map((item) => (
-            <div
+          {items.map((item, index) => (
+            <m.div
               key={item}
-              className="rounded-3xl border border-hunter-green/20 bg-hunter-green/[0.05] p-6"
+              custom={index}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              className="rounded-3xl border border-hunter-green/20 bg-hunter-green/[0.05] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
             >
               <p className="text-sm leading-relaxed text-gray-300">{item}</p>
-            </div>
+            </m.div>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
 function DeliveryDetail({
+  label,
   title,
   items,
 }: {
+  label: string;
   title: string;
   items: Array<{ title: string; desc: string }>;
 }) {
   return (
-    <section className="border-y border-white/5 bg-surface-dark/20 px-6 py-20 lg:px-8">
+    <AnimatedSection className="border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-orange">
-          DeliveryDetail
+          {label}
         </p>
         <h2 className="mt-4 max-w-4xl text-4xl font-black leading-none tracking-tighter md:text-5xl">
           {title}
         </h2>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {items.map((item) => (
-            <article
+          {items.map((item, index) => (
+            <m.article
               key={item.title}
-              className="rounded-3xl border border-white/10 bg-white/[0.03] p-7"
+              custom={index}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              whileHover={{ y: -7 }}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-colors duration-300 hover:border-hunter-orange/35"
             >
-              <h3 className="text-2xl font-black tracking-tight text-white">{item.title}</h3>
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-hunter-orange/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+              <h3 className="text-2xl font-black tracking-tight text-white transition-colors group-hover:text-hunter-orange">
+                {item.title}
+              </h3>
               <p className="mt-4 text-sm leading-relaxed text-gray-400">{item.desc}</p>
-            </article>
+            </m.article>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
-function DecisionFaq({ title, items }: { title: string; items: Array<{ q: string; a: string }> }) {
+function DecisionFaq({
+  label,
+  title,
+  items,
+}: {
+  label: string;
+  title: string;
+  items: Array<{ q: string; a: string }>;
+}) {
   return (
-    <section className="px-6 py-20 lg:px-8">
+    <AnimatedSection className="px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-green">
-          DecisionFaq
+          {label}
         </p>
         <h2 className="mt-4 text-4xl font-black tracking-tighter md:text-5xl">{title}</h2>
         <div className="mt-10 grid gap-4">
-          {items.map((item) => (
-            <article key={item.q} className="rounded-3xl border border-white/10 bg-near-black p-6">
+          {items.map((item, index) => (
+            <m.article
+              key={item.q}
+              custom={index}
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              className="rounded-3xl border border-white/10 bg-near-black p-6 transition-colors duration-300 hover:border-hunter-green/35"
+            >
               <h3 className="text-xl font-black tracking-tight text-white">{item.q}</h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-400">{item.a}</p>
-            </article>
+            </m.article>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
-function ProductCanvas({ layers }: { layers: string[] }) {
+type ProductPageLabels = {
+  canvas: string;
+  promise: string;
+  stack: string;
+  flow: string;
+  handoff: string;
+  identity: string;
+  launch: string;
+};
+
+function ProductCanvas({ layers, labels }: { layers: string[]; labels: ProductPageLabels }) {
   return (
-    <div className="relative min-h-[520px] overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#080808] p-6 shadow-2xl shadow-black/50">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,230,162,0.14),transparent_28%),radial-gradient(circle_at_80%_68%,rgba(255,122,60,0.16),transparent_32%)]" />
+    <div className="group relative min-h-[520px] overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#060706] p-6 shadow-2xl shadow-black/50">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.06)_0_1px,transparent_1px_100%)] bg-[length:28px_28px] opacity-[0.08]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,230,162,0.18),transparent_28%),radial-gradient(circle_at_80%_68%,rgba(255,122,60,0.18),transparent_32%)]" />
+      <div className="absolute left-0 top-24 h-px w-full bg-gradient-to-r from-transparent via-hunter-green/40 to-transparent" />
       <div className="absolute left-8 top-8 text-[10px] font-black uppercase tracking-[0.28em] text-hunter-green/70">
-        ProductCanvas
+        {labels.canvas}
       </div>
+      <m.div
+        className="absolute right-8 top-8 h-12 w-12 rounded-full border border-hunter-orange/30 bg-hunter-orange/10"
+        animate={{ y: [0, 10, 0], rotate: [0, 8, 0] }}
+        transition={{ duration: 5.5, ease: "easeInOut", repeat: Infinity }}
+      />
       <div className="relative mt-16 grid h-[390px] grid-cols-6 grid-rows-6 gap-3">
-        <div className="col-span-4 row-span-3 rounded-3xl border border-hunter-green/30 bg-hunter-green/[0.08] p-5">
-          <p className="font-mono text-xs text-hunter-green">01 / PROMISE</p>
+        <m.div
+          className="col-span-4 row-span-3 rounded-3xl border border-hunter-green/30 bg-hunter-green/[0.08] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.28 }}
+        >
+          <p className="font-mono text-xs text-hunter-green">{labels.promise}</p>
           <div className="mt-8 h-3 w-4/5 rounded-full bg-white/80" />
           <div className="mt-4 h-3 w-2/3 rounded-full bg-white/30" />
-        </div>
-        <div className="col-span-2 row-span-4 rounded-3xl border border-white/10 bg-white/[0.04] p-5">
-          <p className="font-mono text-xs text-hunter-orange">STACK</p>
+        </m.div>
+        <m.div
+          className="col-span-2 row-span-4 rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-md"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.28 }}
+        >
+          <p className="font-mono text-xs text-hunter-orange">{labels.stack}</p>
           <div className="mt-6 space-y-3">
-            {layers.map((layer) => (
-              <div
+            {layers.map((layer, index) => (
+              <m.div
                 key={layer}
+                initial={{ opacity: 0, x: 12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: 0.45 + index * 0.08 }}
                 className="rounded-xl border border-white/10 bg-near-black px-3 py-2 text-xs text-gray-300"
               >
                 {layer}
-              </div>
+              </m.div>
             ))}
           </div>
-        </div>
-        <div className="col-span-3 row-span-3 rounded-3xl border border-hunter-orange/30 bg-hunter-orange/[0.08] p-5">
-          <p className="font-mono text-xs text-hunter-orange">02 / FLOW</p>
+        </m.div>
+        <m.div
+          className="col-span-3 row-span-3 rounded-3xl border border-hunter-orange/30 bg-hunter-orange/[0.08] p-5"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.28 }}
+        >
+          <p className="font-mono text-xs text-hunter-orange">{labels.flow}</p>
           <div className="mt-8 grid grid-cols-3 gap-2">
             <div className="h-20 rounded-2xl bg-white/10" />
             <div className="h-20 rounded-2xl bg-hunter-green/20" />
             <div className="h-20 rounded-2xl bg-white/10" />
           </div>
-        </div>
-        <div className="col-span-3 row-span-2 rounded-3xl border border-white/10 bg-white/[0.03] p-5">
-          <p className="font-mono text-xs text-white/50">03 / HANDOFF</p>
+        </m.div>
+        <m.div
+          className="col-span-3 row-span-2 rounded-3xl border border-white/10 bg-white/[0.03] p-5"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.28 }}
+        >
+          <p className="font-mono text-xs text-white/50">{labels.handoff}</p>
           <div className="mt-6 h-2 w-full rounded-full bg-white/10">
-            <div className="h-full w-2/3 rounded-full bg-hunter-green" />
+            <m.div
+              className="h-full rounded-full bg-hunter-green"
+              initial={{ width: "18%" }}
+              animate={{ width: "68%" }}
+              transition={{ duration: 1.4, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            />
           </div>
-        </div>
+        </m.div>
       </div>
     </div>
   );
 }
 
-function IdentityLayer({ outcomesTitle, outcomes }: { outcomesTitle: string; outcomes: string[] }) {
+function IdentityLayer({
+  label,
+  outcomesTitle,
+  outcomes,
+}: {
+  label: string;
+  outcomesTitle: string;
+  outcomes: string[];
+}) {
   return (
-    <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
-      <p className="text-xs font-black uppercase tracking-[0.24em] text-hunter-orange">
-        IdentityLayer
-      </p>
+    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
+      <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-hunter-orange/10 blur-[70px]" />
+      <p className="text-xs font-black uppercase tracking-[0.24em] text-hunter-orange">{label}</p>
       <h2 className="mt-4 text-4xl font-black leading-none tracking-tighter md:text-5xl">
         {outcomesTitle}
       </h2>
       <div className="mt-8 grid gap-3">
-        {outcomes.map((outcome) => (
-          <div
+        {outcomes.map((outcome, index) => (
+          <m.div
             key={outcome}
+            custom={index}
+            variants={cardReveal}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             className="rounded-2xl border border-white/10 bg-near-black p-5 text-sm leading-relaxed text-gray-300"
           >
             {outcome}
-          </div>
+          </m.div>
         ))}
       </div>
     </div>
   );
 }
 
-function LaunchBoard({ phases }: { phases: string[] }) {
+function LaunchBoard({ label, phases }: { label: string; phases: string[] }) {
   return (
     <div className="grid gap-5">
       {phases.map((phase, index) => (
-        <article
+        <m.article
           key={phase}
+          custom={index}
+          variants={cardReveal}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          whileHover={{ x: 8 }}
           className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-near-black p-7 transition-colors hover:border-hunter-green/40"
         >
           <div className="absolute right-6 top-4 font-mono text-7xl font-black text-white/[0.03]">
             0{index + 1}
           </div>
           <p className="font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-green">
-            LaunchBoard
+            {label}
           </p>
           <h3 className="mt-6 text-3xl font-black tracking-tight text-white group-hover:text-hunter-green">
             {phase}
           </h3>
           <div className="mt-6 h-px bg-gradient-to-r from-hunter-green/60 via-white/10 to-transparent" />
-        </article>
+        </m.article>
       ))}
     </div>
   );

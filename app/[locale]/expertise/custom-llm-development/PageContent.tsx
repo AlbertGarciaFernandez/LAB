@@ -22,6 +22,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { localizedUrl } from "@/utils/metadata";
 import { getCommonBreadcrumbLabels, getLocaleValue } from "../../_shared/localeCopy";
+import ExpertiseHeroProof from "../_components/ExpertiseHeroProof";
 
 const useCaseIcons = [FileTextIcon, BrainIcon, HeadsetIcon, ScalesIcon, FirstAidKitIcon, CodeIcon];
 
@@ -179,6 +180,11 @@ export default function CustomLLMPageContent() {
   const t = useTranslations("ExpertisePages.CustomLLMs");
   const locale = useLocale();
   const labels = getCommonBreadcrumbLabels(locale);
+  const heroProof = getLocaleValue(locale, {
+    en: ["Use-case fit first", "Private deployment options", "Cost + latency model"],
+    es: ["Encaje de caso primero", "Opciones de despliegue privado", "Modelo coste + latencia"],
+    nl: ["Eerst use-case fit", "Private deployment-opties", "Kosten + latency-model"],
+  });
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -300,6 +306,8 @@ export default function CustomLLMPageContent() {
               {t("Hero.cta")}
             </Link>
           </m.div>
+
+          <ExpertiseHeroProof items={heroProof} tone="cyan" />
 
           <NeuralNetworkViz />
         </section>

@@ -1,12 +1,7 @@
 import { Link } from "@/navigation";
 import { StudioServiceShell } from "../_shared/StudioServicePage";
 import { getLocaleValue } from "../_shared/localeCopy";
-import {
-  CheckIcon,
-  CodeIcon,
-  PaletteIcon,
-  LightningIcon,
-} from "@phosphor-icons/react/dist/ssr";
+import { CheckIcon, CodeIcon, PaletteIcon, LightningIcon } from "@phosphor-icons/react/dist/ssr";
 
 interface IconProps {
   className?: string;
@@ -157,7 +152,7 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
         badge: "Audit options",
         title: "Choose your audit depth",
         subtitle:
-          "Three formats depending on what you need to learn and what decisions you're making.",
+          "Starting prices, excl. VAT. Three formats depending on what you need to learn and what decisions you're making. Final scope depends on product maturity, code access, funnel complexity and team needs, so the audit defines the right depth before implementation.",
         productReview: {
           name: "Product Review",
           price: "From €1,800",
@@ -176,7 +171,7 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
         },
         frontendAudit: {
           name: "Frontend Audit",
-          price: "From €3,600",
+          price: "From €3,900",
           timeline: "1-2 weeks",
           desc: "For engineering teams preparing for refactor, rebuild, or vendor evaluation.",
           includes: [
@@ -191,7 +186,7 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
         },
         conversionAudit: {
           name: "Conversion Audit",
-          price: "From €2,400",
+          price: "From €2,500",
           timeline: "1 week",
           desc: "For products with measurable funnels that aren't converting.",
           includes: [
@@ -407,7 +402,8 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
       pricing: {
         badge: "Opciones de auditoría",
         title: "Elige la profundidad de tu auditoría",
-        subtitle: "Tres formatos según qué necesitas aprender y qué decisiones estás tomando.",
+        subtitle:
+          "Precios desde, sin IVA. Tres formatos según qué necesitas aprender y qué decisiones estás tomando. El alcance final depende de madurez del producto, acceso al código, complejidad del funnel y necesidades del equipo; por eso la auditoría define la profundidad antes de implementar.",
         productReview: {
           name: "Revisión de Producto",
           price: "Desde €1.800",
@@ -426,7 +422,7 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
         },
         frontendAudit: {
           name: "Auditoría Frontend",
-          price: "Desde €3.600",
+          price: "Desde €3.900",
           timeline: "1-2 semanas",
           desc: "Para equipos de ingeniería preparando refactor, rebuild o evaluación de vendor.",
           includes: [
@@ -441,7 +437,7 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
         },
         conversionAudit: {
           name: "Auditoría de Conversión",
-          price: "Desde €2.400",
+          price: "Desde €2.500",
           timeline: "1 semana",
           desc: "Para productos con funnels medibles que no están convirtiendo.",
           includes: [
@@ -652,7 +648,8 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
       pricing: {
         badge: "Audit-opties",
         title: "Kies je audit-diepte",
-        subtitle: "Drie formaten afhankelijk van wat je wilt leren en welke beslissingen je neemt.",
+        subtitle:
+          "Prijzen vanaf, excl. btw. Drie formaten afhankelijk van wat je wilt leren en welke beslissingen je neemt. De uiteindelijke scope hangt af van productvolwassenheid, code-toegang, funnelcomplexiteit en teambehoefte; daarom bepaalt de audit de juiste diepte voor implementatie.",
         productReview: {
           name: "Productreview",
           price: "Vanaf €1.800",
@@ -671,7 +668,7 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
         },
         frontendAudit: {
           name: "Frontend Audit",
-          price: "Vanaf €3.600",
+          price: "Vanaf €3.900",
           timeline: "1-2 weken",
           desc: "Voor engineeringteams die zich voorbereiden op refactor, herbouw of vendor-evaluatie.",
           includes: [
@@ -686,7 +683,7 @@ export default function FrontendAuditProductReviewContent({ locale }: { locale: 
         },
         conversionAudit: {
           name: "Conversie Audit",
-          price: "Vanaf €2.400",
+          price: "Vanaf €2.500",
           timeline: "1 week",
           desc: "Voor producten met meetbare funnels die niet converteren.",
           includes: [

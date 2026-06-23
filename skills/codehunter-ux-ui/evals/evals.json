@@ -1,0 +1,33 @@
+{
+  "skill_name": "codehunter-ux-ui",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Revisa la home de CodeHunter Lab y dime qué cambiarías para que el hero y los paquetes conviertan mejor sin perder el estilo visual actual.",
+      "expected_output": "A project-specific UX/UI review that references the home structure, preserves the dark CodeHunter visual language, and prioritizes hero clarity, trust, packages, CTAs, and mobile readability.",
+      "files": [
+        "app/[locale]/page.tsx",
+        "components/sections/HeroSection.tsx",
+        "components/sections/PackagesSection.tsx",
+        "messages/es.json"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Mejora la sección de pricing de ai-consulting para que se entienda que el precio depende de empresa, proyecto, integraciones y auditoría inicial.",
+      "expected_output": "Edits or recommendations focused on AI consulting pricing copy across locales, keeping starting prices/excl. VAT framing and preserving the existing pricing card UI.",
+      "files": [
+        "app/[locale]/ai-consulting/PageContent.tsx",
+        "messages/en.json",
+        "messages/es.json",
+        "messages/nl.json"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Dale más polish UI a ai-consulting, sobre todo hero, who it's for y ROI CTA, pero sin convertirlo en un SaaS genérico.",
+      "expected_output": "A restrained implementation plan or code edits that reuse hunter-green/hunter-orange, dark cards, editorial hierarchy, existing motion patterns, and conversion-focused section logic.",
+      "files": ["app/[locale]/ai-consulting/PageContent.tsx", "tailwind.config.ts"]
+    }
+  ]
+}

@@ -21,6 +21,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { localizedUrl } from "@/utils/metadata";
 import { getCommonBreadcrumbLabels, getLocaleValue } from "../../_shared/localeCopy";
+import ExpertiseHeroProof from "../_components/ExpertiseHeroProof";
 
 const useCaseIcons = [
   UsersIcon,
@@ -149,6 +150,11 @@ export default function N8nMigrationPageContent() {
   const t = useTranslations("ExpertisePages.n8nMigration");
   const locale = useLocale();
   const labels = getCommonBreadcrumbLabels(locale);
+  const heroProof = getLocaleValue(locale, {
+    en: ["Workflow audit first", "Zero-downtime migration", "Ownership after handoff"],
+    es: ["Auditoría del flujo primero", "Migración sin downtime", "Propiedad tras handoff"],
+    nl: ["Eerst workflow-audit", "Migratie zonder downtime", "Eigenaarschap na handoff"],
+  });
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -291,6 +297,8 @@ export default function N8nMigrationPageContent() {
               {t("Hero.cta")}
             </Link>
           </m.div>
+
+          <ExpertiseHeroProof items={heroProof} tone="orange" />
         </section>
 
         {/* Metrics Section */}

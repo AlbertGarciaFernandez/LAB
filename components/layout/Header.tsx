@@ -9,14 +9,12 @@ import { useTranslations, useLocale } from "next-intl";
 import {
   LightningIcon,
   AtomIcon,
-  StackIcon,
   PlugsConnectedIcon,
   WrenchIcon,
   RobotIcon,
   BrainIcon,
   TreeStructureIcon,
   ArrowsClockwiseIcon,
-  GlobeIcon,
   SparkleIcon,
   HeartbeatIcon,
   ChartBarIcon,
@@ -100,14 +98,14 @@ const Header: React.FC = () => {
           icon: <LightningIcon size={16} />,
         },
         {
-          name: t("nav.services.ReactConsulting"),
-          href: "/react-consulting",
-          icon: <AtomIcon size={16} />,
+          name: t("nav.expertise.AIAgents"),
+          href: "/expertise/ai-agents-automation",
+          icon: <RobotIcon size={16} />,
         },
         {
-          name: t("nav.services.NextJS"),
-          href: "/nextjs-development-agency",
-          icon: <StackIcon size={16} />,
+          name: t("nav.services.ReactConsulting"),
+          href: "/product-design-development",
+          icon: <AtomIcon size={16} />,
         },
         {
           name: t("nav.services.ITIntegration"),
@@ -118,16 +116,6 @@ const Header: React.FC = () => {
           name: t("nav.services.CustomTools"),
           href: "/services/custom-internal-tools-development",
           icon: <WrenchIcon size={16} />,
-        },
-        {
-          name: t("nav.services.ProductDesign"),
-          href: "/product-design-development",
-          icon: <SparkleIcon size={16} />,
-        },
-        {
-          name: t("nav.services.FrontendAudit"),
-          href: "/frontend-audit-product-review",
-          icon: <AtomIcon size={16} />,
         },
         {
           name: t("nav.services.TrainingEnablement"),
@@ -171,11 +159,6 @@ const Header: React.FC = () => {
       name: t("nav.Industries"),
       key: "industries",
       items: [
-        {
-          name: t("nav.industries.AIConsultingNL"),
-          href: "/ai-consulting",
-          icon: <GlobeIcon size={16} />,
-        },
         {
           name: t("nav.industries.HealthcareNL"),
           href: "/healthcare-automation-netherlands",

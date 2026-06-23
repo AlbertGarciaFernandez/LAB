@@ -138,6 +138,13 @@ const HeroSection: React.FC = () => {
               {t("cta.caseStudies")}
             </Link>
           </m.div>
+
+          <m.p
+            className="mx-auto max-w-2xl text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 md:text-sm"
+            variants={itemVariants}
+          >
+            {t("ctaNote")}
+          </m.p>
         </m.div>
       </div>
     </section>

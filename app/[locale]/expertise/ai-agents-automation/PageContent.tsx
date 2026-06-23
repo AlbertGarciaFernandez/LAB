@@ -25,6 +25,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { localizedUrl } from "@/utils/metadata";
 import { getCommonBreadcrumbLabels, getLocaleValue } from "../../_shared/localeCopy";
+import ExpertiseHeroProof from "../_components/ExpertiseHeroProof";
 
 const useCaseIcons = [
   TargetIcon,
@@ -79,6 +80,11 @@ export default function AIAgentsPageContent() {
   const t = useTranslations("ExpertisePages.AIAgents");
   const locale = useLocale();
   const labels = getCommonBreadcrumbLabels(locale);
+  const heroProof = getLocaleValue(locale, {
+    en: ["Workflow audit first", "CRM + channel integration", "Production handoff"],
+    es: ["Auditoría del flujo primero", "Integración CRM + canales", "Handoff de producción"],
+    nl: ["Eerst workflow-audit", "CRM + kanaalintegratie", "Productie-handoff"],
+  });
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -185,7 +191,7 @@ export default function AIAgentsPageContent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-16"
+            className="mb-8"
           >
             <Link
               href="#contact"
@@ -195,12 +201,14 @@ export default function AIAgentsPageContent() {
             </Link>
           </m.div>
 
+          <ExpertiseHeroProof items={heroProof} tone="green" />
+
           {/* Animated Chat Flow */}
           <m.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-full max-w-2xl"
+            className="mt-16 w-full max-w-2xl"
           >
             <div className="rounded-2xl border border-white/10 bg-surface-dark/80 p-6 backdrop-blur-xl">
               <div className="space-y-4">

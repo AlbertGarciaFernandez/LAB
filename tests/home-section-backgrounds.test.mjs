@@ -124,12 +124,14 @@ test("process and contact push decorative backgrounds to the edges", () => {
   assert.match(contactSource, /relative z-10 mx-auto max-w-7xl/);
 });
 
-test("studio, process, and contact use the approved background numbering", () => {
+test("fit, studio, insights, process, and contact use the approved background numbering", () => {
   for (const file of ["messages/en.json", "messages/es.json", "messages/nl.json"]) {
     const source = readFileSync(file, "utf8");
 
-    assert.match(source, /"Bio"[\s\S]*"bgNumber": "06"/, file);
-    assert.match(source, /"Process"[\s\S]*"bgNumber": "07"/, file);
-    assert.match(source, /"Process"[\s\S]*"contactBgNumber": "08"/, file);
+    assert.match(source, /"Fit"[\s\S]*"bgNumber": "05"/, file);
+    assert.match(source, /"Process"[\s\S]*"bgNumber": "06"/, file);
+    assert.match(source, /"Bio"[\s\S]*"bgNumber": "07"/, file);
+    assert.match(source, /"InsightsHome"[\s\S]*"bgNumber": "08"/, file);
+    assert.match(source, /"Process"[\s\S]*"contactBgNumber": "09"/, file);
   }
 });

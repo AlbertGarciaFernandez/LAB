@@ -53,12 +53,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               {[
                 { key: "AIConsulting", href: "/ai-consulting" },
-                { key: "ReactConsulting", href: "/react-consulting" },
-                { key: "NextJS", href: "/nextjs-development-agency" },
+                { key: "ReactConsulting", href: "/product-design-development" },
                 { key: "ITIntegration", href: "/it-system-integration" },
                 { key: "InternalTools", href: "/services/custom-internal-tools-development" },
-                { key: "ProductDesign", href: "/product-design-development" },
-                { key: "FrontendAudit", href: "/frontend-audit-product-review" },
                 { key: "TrainingEnablement", href: "/training-enablement" },
                 { key: "TechnicalLeadership", href: "/technical-leadership" },
               ].map((item) => (
@@ -113,7 +110,6 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-4">
               {[
-                { key: "AIAutomationNL", href: "/ai-consulting" },
                 { key: "HealthcareNL", href: "/healthcare-automation-netherlands" },
                 { key: "AestheticNL", href: "/aesthetic-clinic-automation-netherlands" },
                 {

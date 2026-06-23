@@ -160,10 +160,10 @@ test("AI consulting page makes pricing and positioning visible", () => {
   assert.match(aiConsultingPage, /AIConsultingPricingSection/);
   assert.match(enMessages, /"Pricing"/);
   assert.match(enMessages, /"€2\.5k–€5k"/);
-  assert.match(enMessages, /"From €8k"/);
+  assert.match(enMessages, /"From €9\.5k"/);
   assert.match(esMessages, /"Pricing"/);
-  assert.match(esMessages, /"€2\.5k–€5k"/);
-  assert.match(esMessages, /"Desde €8k"/);
+  assert.match(esMessages, /"€2\.500–€5\.000"/);
+  assert.match(esMessages, /"Desde €9\.500"/);
 });
 
 test("core commercial pages ship distinct CTR-focused metadata", () => {
