@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustProofSection from "@/components/sections/TrustProofSection";
+import StartHereSection from "@/components/sections/StartHereSection";
 import ExpertiseSection from "@/components/sections/02ExpertiseSection";
 import WhatWeBuildSection from "@/components/sections/WhatWeBuildSection";
 import PackagesSection from "@/components/sections/PackagesSection";
+import FitSection from "@/components/sections/FitSection";
 import InsightsSection from "@/components/sections/InsightsSection";
 import BioSection from "@/components/sections/04BioSection";
 import ProcessSection from "@/components/sections/06ProcessSection";
@@ -88,12 +90,14 @@ export default function Home({ params }: { params: { locale: string } }) {
         />
         <HeroSection />
         <TrustProofSection />
+        <StartHereSection />
         <ExpertiseSection />
         <WhatWeBuildSection />
         <PackagesSection />
-        <InsightsSection />
-        <BioSection />
+        <FitSection />
         <ProcessSection />
+        <BioSection />
+        <InsightsSection />
         <ContactSection title={contactCopy.title} description={contactCopy.description} />
       </main>
     </div>

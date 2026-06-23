@@ -22,7 +22,7 @@ const containerVariants = {
 
 export default function InsightsSection() {
   const t = useTranslations("InsightsHome");
-  const featuredInsights = getHomepageFeaturedInsights(insights);
+  const featuredInsights = getHomepageFeaturedInsights(insights).slice(0, 3);
 
   return (
     <section className="relative overflow-hidden border-y border-white/5 bg-surface-dark/20 px-6 py-24 lg:px-8">
@@ -65,50 +65,41 @@ export default function InsightsSection() {
         </m.div>
 
         <m.div
-          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6"
+          className="grid grid-cols-1 gap-5 md:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {featuredInsights.map((article, idx) => {
-            const bentoClass =
-              idx < 2
-                ? "lg:col-span-3 sm:col-span-2"
-                : idx === 4
-                  ? "lg:col-span-2 sm:col-span-2"
-                  : "lg:col-span-2 sm:col-span-1";
+          {featuredInsights.map((article) => (
+            <m.article
+              key={article.slug}
+              variants={slideUp}
+              className="group/card relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.25)]"
+            >
+              <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover/card:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
 
-            return (
-              <m.article
-                key={article.slug}
-                variants={slideUp}
-                className={`group/card relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.05] bg-near-black p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-hunter-green/40 hover:bg-[#0B0B0B] hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.25)] ${bentoClass}`}
-              >
-                <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] transition-shadow duration-500 group-hover/card:shadow-[inset_0_1px_0_0_rgba(0,230,162,0.2)]" />
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-hunter-green/5 to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
-
-                <p className="relative z-10 mb-4 text-[11px] font-bold uppercase tracking-widest text-hunter-green">
-                  {article.category}
-                </p>
-                <h3 className="relative z-10 mb-4 text-2xl font-black leading-tight tracking-tight text-white transition-all duration-500 group-hover/card:text-hunter-green group-hover/card:drop-shadow-[0_0_12px_rgba(0,230,162,0.5)]">
-                  <Link href={`/insights/${article.slug}`} locale="en">
-                    {article.title}
-                  </Link>
-                </h3>
-                <p className="relative z-10 mb-6 flex-1 text-sm leading-relaxed text-gray-400">
-                  {article.description}
-                </p>
-                <Link
-                  href={`/insights/${article.slug}`}
-                  locale="en"
-                  className="relative z-10 mt-auto text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
-                >
-                  {t("readArticle")}
+              <p className="relative z-10 mb-4 text-[11px] font-bold uppercase tracking-widest text-hunter-green">
+                {article.category}
+              </p>
+              <h3 className="relative z-10 mb-4 text-2xl font-black leading-tight tracking-tight text-white transition-all duration-500 group-hover/card:text-hunter-green group-hover/card:drop-shadow-[0_0_12px_rgba(0,230,162,0.5)]">
+                <Link href={`/insights/${article.slug}`} locale="en">
+                  {article.title}
                 </Link>
-              </m.article>
-            );
-          })}
+              </h3>
+              <p className="relative z-10 mb-6 flex-1 text-sm leading-relaxed text-gray-400">
+                {article.description}
+              </p>
+              <Link
+                href={`/insights/${article.slug}`}
+                locale="en"
+                className="relative z-10 mt-auto text-xs font-bold uppercase tracking-widest text-hunter-orange hover:text-white"
+              >
+                {t("readArticle")}
+              </Link>
+            </m.article>
+          ))}
         </m.div>
       </m.div>
     </section>

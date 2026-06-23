@@ -686,19 +686,19 @@
     "subtitle": "This is how we work: fixed scope, code you own, a clean production handoff, and senior engineers involved from discovery through deployment.",
     "metrics": [
       {
-        "value": "4+",
-        "label": "Years shipping",
-        "note": "Web apps, automations, integrations and AI systems in production."
-      },
-      {
         "value": "15+",
         "label": "Companies served",
-        "note": "From local operators to SaaS and ecommerce teams."
+        "note": "Apps, automations and integrations delivered for SaaS, ecommerce and operations teams."
       },
       {
         "value": "30d",
-        "label": "Support included",
-        "note": "Implementation projects include post-launch support and handoff."
+        "label": "Post-launch support",
+        "note": "Handoff, documentation and support included after deployment."
+      },
+      {
+        "value": "Live",
+        "label": "Production, not demos",
+        "note": "Systems connected to CRM, WhatsApp, databases, APIs and reporting."
       }
     ],
     "proof": [
@@ -809,7 +809,7 @@
     "bgNumber": "04",
     "badge": "Packages",
     "title": "Clear entry points, clear ranges.",
-    "subtitle": "These are entry ranges for strategy, product direction and production builds. Exact scope depends on systems, data access and integration complexity.",
+    "subtitle": "Starting prices, excl. VAT. These are entry ranges for strategy, product direction and production builds. Exact scope depends on the company, project maturity, systems, data access and integration complexity, which is why we start with an audit or focused diagnosis.",
     "cta": "Book a call",
     "learnMore": "View details",
     "items": [
@@ -828,7 +828,7 @@
       },
       {
         "name": "Production Build",
-        "price": "From €8k",
+        "price": "From €9.5k",
         "timeline": "4–8 weeks",
         "desc": "One system, product layer, or integration deployed in production on your infrastructure.",
         "href": "/ai-consulting#pricing",
@@ -841,7 +841,7 @@
       },
       {
         "name": "Studio Partner",
-        "price": "From €5k/mo",
+        "price": "From €5.5k/mo",
         "timeline": "Monthly",
         "desc": "Ongoing support for teams that want iteration, maintenance, reviews, and senior direction.",
         "href": "/ai-consulting#migration",
@@ -855,13 +855,15 @@
     ]
   },
   "Fit": {
+    "bgText": "FIT",
+    "bgNumber": "05",
     "badge": "Fit",
     "title": "We are not the right partner for every AI idea.",
-    "subtitle": "The best projects have a clear workflow, a real owner and enough repetition to make automation worth maintaining.",
+    "subtitle": "The best projects have a clear workflow, a real owner and enough repetition to make automation worth maintaining — especially when CRM, ERP, data or custom internal tools are involved.",
     "good": {
       "title": "We fit if...",
       "items": [
-        "You want a production system connected to real tools.",
+        "You want a production system connected to CRM, ERP, data sources or custom internal tools.",
         "You can name the workflow, owner and outcome you want to improve.",
         "You care about documentation, handoff and maintainability.",
         "You want an honest scope before building."
@@ -878,13 +880,13 @@
     },
     "cta": {
       "title": "Not sure if your project fits?",
-      "desc": "Send us the workflow. We will tell you if it is worth automating, what the first version should include and where the risk is.",
+      "desc": "Send us the workflow, system map or CRM/ERP bottleneck. We will tell you if it is worth automating, what the first version should include and where the risk is.",
       "button": "Request fit check"
     }
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "06",
+    "bgNumber": "08",
     "badge": "Insights",
     "title": "Buyer education for AI systems and operational automation.",
     "subtitle": "Strategic reads on AI agents, WhatsApp workflows, system integration, and n8n decisions for businesses improving real operations.",
@@ -1017,7 +1019,7 @@
     },
     "nav": {
       "Services": "Services",
-      "Expertise": "Expertise",
+      "Expertise": "Capabilities",
       "Industries": "Industries",
       "TheLab": "The Lab",
       "Bio": "Bio",
@@ -1026,8 +1028,8 @@
       "CaseStudies": "Case Studies",
       "services": {
         "AIConsulting": "AI Consulting",
-        "ReactConsulting": "React Consulting",
-        "NextJS": "Next.js Development",
+        "ReactConsulting": "Digital Product & Frontend",
+        "NextJS": "Next.js & React",
         "ITIntegration": "IT System Integration",
         "CustomTools": "Internal Tools",
         "ProductDesign": "Product Design",
@@ -1036,13 +1038,12 @@
         "TechnicalLeadership": "Technical Leadership"
       },
       "expertise": {
-        "AIAgents": "AI Agents & Automation",
+        "AIAgents": "AI Automation & Agents",
         "CustomLLM": "Custom LLM Development",
         "SystemArch": "System Architecture",
         "N8nMigration": "n8n Migration Consulting"
       },
       "industries": {
-        "AIConsultingNL": "AI Consulting Netherlands",
         "HealthcareNL": "Healthcare & Medical Automation",
         "AestheticNL": "Aesthetic Clinic Automation",
         "ProfessionalServicesNL": "Professional Services Automation",
@@ -1071,7 +1072,8 @@
     "cta": {
       "initialize": "Book a Strategy Call",
       "caseStudies": "See Selected Work"
-    }
+    },
+    "ctaNote": "30 min · No commitment · Response within 24h · We'll tell you if it is not worth building"
   },
   "Footer": {
     "brandDescription": "We design and deliver enterprise automation and AI-driven workflows built for real operations.",
@@ -1079,7 +1081,7 @@
       "title": "Services",
       "items": {
         "AIConsulting": "AI Consulting",
-        "ReactConsulting": "React Consulting",
+        "ReactConsulting": "Digital Product & Frontend",
         "NextJS": "Next.js Agency",
         "ITIntegration": "IT Integration",
         "InternalTools": "Internal Tools",
@@ -1090,7 +1092,7 @@
       }
     },
     "Expertise": {
-      "title": "Expertise",
+      "title": "Capabilities",
       "items": {
         "AIAgents": "AI Agents",
         "n8nMigration": "n8n Migration",
@@ -1324,30 +1326,30 @@
   },
   "Bio": {
     "bgText": "THE STUDIO",
-    "bgNumber": "06",
+    "bgNumber": "07",
     "title": {
       "part1": "THE",
       "part2": "STUDIO"
     },
     "description": {
       "p1": {
-        "part1": "We are an",
-        "highlight": "engineering studio",
-        "part2": "based in Leiden, Netherlands."
+        "part1": "We are CodeHunter Lab,",
+        "highlight": "a small engineering studio",
+        "part2": "in Leiden."
       },
       "p2": {
-        "part1": "We design, build and deploy production work that",
-        "highlight1": "runs in the real world",
-        "part2": "— from AI systems to brand-led products — and we work with CTOs, founders and",
-        "highlight2": "product and operations leaders",
-        "part3": "across Europe."
+        "part1": "We work closely with founders, CTOs and operations teams who need to turn difficult ideas into real systems. We care about",
+        "highlight1": "judgment, clarity and craft",
+        "part2": " as much as technology, and we prefer",
+        "highlight2": "a few projects done properly",
+        "part3": "to a pile of demos with no continuity."
       }
     },
     "stats": {
       "years": "Years Shipping",
       "yearsValue": "4+",
-      "focus": "Core Focus",
-      "focusValue": "AI / Product / Leadership",
+      "focus": "Base",
+      "focusValue": "Leiden / Spain / Remote",
       "impact": "Companies Served",
       "impactValue": "15+"
     },
@@ -1362,9 +1364,9 @@
   },
   "Process": {
     "bgText": "PROCESS",
-    "bgNumber": "07",
+    "bgNumber": "06",
     "contactBgText": "CONTACT",
-    "contactBgNumber": "08",
+    "contactBgNumber": "09",
     "title": {
       "prefix": "06.",
       "text": "How We Work"
@@ -1391,6 +1393,12 @@
         "title": "Deploy & Handoff",
         "description": "We deploy to your infrastructure and deliver full documentation. The code is yours. Ongoing support available if you need a long-term engineering partner."
       }
+    },
+    "outcomes": {
+      "0": "Initial opportunity map with risks and recommended next steps.",
+      "1": "Delivery roadmap with scope, integrations, timeline and acceptance criteria.",
+      "2": "System connected to your real tools and validated against existing workflows.",
+      "3": "Deployment, documentation, handoff and post-launch support."
     },
     "phaseLabel": "Phase {step}",
     "outcomeLabel": "Outcome",
@@ -1632,7 +1640,7 @@
       "badge": "Pricing",
       "title": "Clear AI consulting pricing,",
       "highlight": "with real delivery behind it.",
-      "subtitle": "LAB is priced for engineering work, not light advisory. That means scoping, architecture, integrations, deployment, documentation, and support after launch.",
+      "subtitle": "Starting prices, excl. VAT. LAB is priced for engineering work, not light advisory. Final pricing depends on the company, project maturity, systems, data access, integrations and support needs, so we start with a fit check or audit before estimating the real scope.",
       "recommended": "Best start",
       "items": [
         {
@@ -1664,7 +1672,7 @@
         },
         {
           "name": "AI Implementation",
-          "price": "From €8k",
+          "price": "From €9.5k",
           "timeline": "4–8 weeks",
           "desc": "For teams ready to ship one production AI system connected to their real business environment.",
           "href": "/ai-consulting",
@@ -1677,7 +1685,7 @@
         },
         {
           "name": "Ongoing AI Partner",
-          "price": "From €5k/mo",
+          "price": "From €5.5k/mo",
           "timeline": "Monthly",
           "desc": "For companies that need ongoing AI engineering capacity without building a full in-house team.",
           "href": "/#contact",
@@ -1812,7 +1820,7 @@
       "items": [
         {
           "q": "What does an AI consulting engagement cost?",
-          "a": "Scope varies significantly, so we don't publish fixed rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €8,000 and scale with integration complexity. Ongoing Partner engagements start from €5,000/month and are scoped around the amount of engineering capacity required. We provide a detailed estimate after the initial strategy call — before you commit to anything."
+          "a": "Scope varies significantly by company, project maturity, systems, data access and integration complexity, so we do not publish fixed project rates. AI Strategy Sprints typically range from €2,500–€5,000. Implementation Projects start at €9,500 and scale with integration complexity. Ongoing Partner engagements start from €5,500/month and are scoped around the amount of engineering capacity required. We provide a detailed estimate after the initial fit check or audit — before you commit to anything."
         },
         {
           "q": "How long does a typical project take?",

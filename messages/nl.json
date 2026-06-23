@@ -123,7 +123,7 @@
     },
     "nav": {
       "Services": "Diensten",
-      "Expertise": "Expertise",
+      "Expertise": "Capaciteiten",
       "Industries": "Industrieën",
       "TheLab": "The Lab",
       "Bio": "Bio",
@@ -132,8 +132,8 @@
       "CaseStudies": "Case studies",
       "services": {
         "AIConsulting": "AI Consulting",
-        "ReactConsulting": "React Consulting",
-        "NextJS": "Next.js Ontwikkeling",
+        "ReactConsulting": "Digitaal Product & Frontend",
+        "NextJS": "Next.js & React",
         "ITIntegration": "IT Systeemintegratie",
         "CustomTools": "Interne Tools",
         "ProductDesign": "Product Design",
@@ -142,13 +142,12 @@
         "TechnicalLeadership": "Technisch Leiderschap"
       },
       "expertise": {
-        "AIAgents": "AI Agents & Automatisering",
+        "AIAgents": "AI Automatisering & Agents",
         "CustomLLM": "Maatwerk LLM-ontwikkeling",
         "SystemArch": "Systeemarchitectuur",
         "N8nMigration": "n8n Migratie Consulting"
       },
       "industries": {
-        "AIConsultingNL": "AI Consulting Nederland",
         "HealthcareNL": "Zorgautomatisering",
         "AestheticNL": "Esthetische Kliniek Automatisering",
         "ProfessionalServicesNL": "Automatisering voor zakelijke dienstverlening",
@@ -177,7 +176,8 @@
     "cta": {
       "initialize": "Boek een strategiesessie",
       "caseStudies": "Bekijk geselecteerd werk"
-    }
+    },
+    "ctaNote": "30 min · Vrijblijvend · Reactie binnen 24u · We zeggen het als bouwen niet zinvol is"
   },
   "Footer": {
     "brandDescription": "We ontwerpen de toekomst van enterprise-automatisering en AI-gedreven workflows.",
@@ -185,7 +185,7 @@
       "title": "Diensten",
       "items": {
         "AIConsulting": "AI Consulting",
-        "ReactConsulting": "React Consulting",
+        "ReactConsulting": "Digitaal Product & Frontend",
         "NextJS": "Next.js Agency",
         "ITIntegration": "IT Integratie",
         "InternalTools": "Interne Tools",
@@ -196,7 +196,7 @@
       }
     },
     "Expertise": {
-      "title": "Expertise",
+      "title": "Capaciteiten",
       "items": {
         "AIAgents": "AI Agents",
         "n8nMigration": "n8n Migratie",
@@ -265,7 +265,7 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "06",
+    "bgNumber": "08",
     "badge": "Insights",
     "title": "Buyer education voor AI-systemen en operationele automatisering.",
     "subtitle": "Strategische stukken over AI-agents, WhatsApp-workflows, systeemintegratie en n8n-beslissingen voor bedrijven die echte operaties willen verbeteren.",
@@ -553,30 +553,30 @@
   },
   "Bio": {
     "bgText": "DE STUDIO",
-    "bgNumber": "06",
+    "bgNumber": "07",
     "title": {
       "part1": "DE",
       "part2": "STUDIO"
     },
     "description": {
       "p1": {
-        "part1": "Wij zijn een",
-        "highlight": "engineering studio",
-        "part2": "gevestigd in Leiden, Nederland."
+        "part1": "Wij zijn CodeHunter Lab,",
+        "highlight": "een kleine engineering studio",
+        "part2": "in Leiden."
       },
       "p2": {
-        "part1": "Wij ontwerpen, bouwen en leveren production work dat",
-        "highlight1": "in de echte wereld werkt",
-        "part2": "— van AI-systemen tot merkgedreven producten — en wij werken met CTO's, founders en",
-        "highlight2": "product- en operations leaders",
-        "part3": "door heel Europa."
+        "part1": "Wij werken dicht op founders, CTO's en operations teams die moeilijke ideeën naar echte systemen willen brengen. We geven om",
+        "highlight1": "oordeel, helderheid en vakmanschap",
+        "part2": " net zoveel als om technologie, en we kiezen liever voor",
+        "highlight2": "een paar projecten die goed worden gedaan",
+        "part3": "dan voor een stapel demo's zonder vervolg."
       }
     },
     "stats": {
       "years": "Jaar ervaring",
       "yearsValue": "4+",
-      "focus": "Kernfocus",
-      "focusValue": "AI / Product / Leadership",
+      "focus": "Basis",
+      "focusValue": "Leiden / Spanje / Remote",
       "impact": "Bedrijven Bediend",
       "impactValue": "15+"
     },
@@ -591,9 +591,9 @@
   },
   "Process": {
     "bgText": "PROCES",
-    "bgNumber": "07",
+    "bgNumber": "06",
     "contactBgText": "CONTACT",
-    "contactBgNumber": "08",
+    "contactBgNumber": "09",
     "title": {
       "prefix": "06.",
       "text": "Hoe Wij Werken"
@@ -620,6 +620,12 @@
         "title": "Implementatie & overdracht",
         "description": "Wij deployen op je infrastructuur en leveren volledige documentatie. De code is van jou. Doorlopende support beschikbaar als je een langetermijn engineering partner nodig hebt."
       }
+    },
+    "outcomes": {
+      "0": "Eerste kansenkaart met risico's en aanbevolen vervolgstappen.",
+      "1": "Delivery-roadmap met scope, integraties, tijdlijn en acceptatiecriteria.",
+      "2": "Systeem gekoppeld aan je echte tools en gevalideerd op bestaande workflows.",
+      "3": "Deployment, documentatie, overdracht en post-launch support."
     },
     "phaseLabel": "Fase {step}",
     "outcomeLabel": "Resultaat",
@@ -1183,19 +1189,19 @@
     "subtitle": "Zo werken we: vaste scope, code die van jou blijft, een nette productie-overdracht en senior engineers van discovery tot deployment.",
     "metrics": [
       {
-        "value": "4+",
-        "label": "Jaar leverend",
-        "note": "Webapps, automatiseringen, integraties en AI-systemen in productie."
-      },
-      {
         "value": "15+",
         "label": "Bedrijven bediend",
-        "note": "Van lokale operators tot SaaS- en ecommerce-teams."
+        "note": "Apps, automatiseringen en integraties geleverd voor SaaS, ecommerce en operations teams."
       },
       {
         "value": "30d",
-        "label": "Support inbegrepen",
-        "note": "Implementatieprojecten inclusief post-launch support en overdracht."
+        "label": "Post-launch support",
+        "note": "Overdracht, documentatie en support inbegrepen na deployment."
+      },
+      {
+        "value": "Live",
+        "label": "Productie, geen demo's",
+        "note": "Systemen gekoppeld aan CRM, WhatsApp, databases, API's en rapportages."
       }
     ],
     "proof": [
@@ -1338,7 +1344,7 @@
     "bgNumber": "04",
     "badge": "Pakketten",
     "title": "Duidelijke instappunten, duidelijke prijsklassen.",
-    "subtitle": "Dit zijn instapranges voor strategie, productrichting en builds in productie. Exacte scope hangt af van systemen, data-toegang en integratiecomplexiteit.",
+    "subtitle": "Prijzen vanaf, excl. btw. Dit zijn instapranges voor strategie, productrichting en builds in productie. Exacte scope hangt af van het bedrijf, projectvolwassenheid, systemen, datatoegang en integratiecomplexiteit; daarom starten we met een audit of gerichte diagnose.",
     "cta": "Boek een gesprek",
     "learnMore": "Bekijk details",
     "items": [
@@ -1357,7 +1363,7 @@
       },
       {
         "name": "Build in Productie",
-        "price": "Vanaf €8k",
+        "price": "Vanaf €9,5k",
         "timeline": "4–8 weken",
         "desc": "Eén systeem, productlaag of integratie in productie op je infrastructuur.",
         "href": "/ai-consulting#pricing",
@@ -1370,7 +1376,7 @@
       },
       {
         "name": "Studio Partner",
-        "price": "Vanaf €5k/mnd",
+        "price": "Vanaf €5,5k/mnd",
         "timeline": "Maandelijks",
         "desc": "Doorlopende ondersteuning voor teams die iteratie, onderhoud, reviews en senior richting willen.",
         "href": "/ai-consulting#migration",
@@ -1384,13 +1390,15 @@
     ]
   },
   "Fit": {
-    "badge": "Encaje",
+    "bgText": "FIT",
+    "bgNumber": "05",
+    "badge": "Fit",
     "title": "Wij zijn niet de juiste partner voor elk AI-idee.",
-    "subtitle": "De beste projecten hebben een duidelijke workflow, een echte eigenaar en voldoende herhaling om automatisering onderhouden waard te maken.",
+    "subtitle": "De beste projecten hebben een duidelijke workflow, een echte eigenaar en voldoende herhaling om automatisering onderhouden waard te maken — zeker wanneer CRM, ERP, data of interne tools op maat betrokken zijn.",
     "good": {
       "title": "Wij passen als...",
       "items": [
-        "Je wilt een productiesysteem gekoppeld aan echte tools.",
+        "Je wilt een productiesysteem gekoppeld aan CRM, ERP, databronnen of interne tools op maat.",
         "Je kunt de workflow, eigenaar en gewenste uitkomst benoemen.",
         "Je geeft om documentatie, overdracht en onderhoudbaarheid.",
         "Je wilt een eerlijke scope voordat je bouwt."
@@ -1407,7 +1415,7 @@
     },
     "cta": {
       "title": "Weet je niet zeker of je project past?",
-      "desc": "Stuur ons de workflow. Wij vertellen je of het de moeite waard is om te automatiseren, wat de eerste versie moet bevatten en waar het risico zit.",
+      "desc": "Stuur ons de workflow, systeemkaart of CRM/ERP-knelpunt. Wij vertellen je of het de moeite waard is om te automatiseren, wat de eerste versie moet bevatten en waar het risico zit.",
       "button": "Vraag fit check aan"
     }
   },
@@ -1632,7 +1640,7 @@
       "badge": "Prijzen",
       "title": "Duidelijke AI-consulting prijzen,",
       "highlight": "met echte oplevering erachter.",
-      "subtitle": "LAB is geprijsd voor engineeringwerk, niet voor lichte advisering. Dat betekent scope, architectuur, integraties, deployment, documentatie en support na livegang.",
+      "subtitle": "Prijzen vanaf, excl. btw. LAB is geprijsd voor engineeringwerk, niet voor lichte advisering. De uiteindelijke prijs hangt af van het bedrijf, projectvolwassenheid, systemen, datatoegang, integraties en benodigde support; daarom starten we met een fit-check of audit voordat we de echte scope inschatten.",
       "recommended": "Beste start",
       "items": [
         {
@@ -1664,7 +1672,7 @@
         },
         {
           "name": "AI-implementatie",
-          "price": "Vanaf €8k",
+          "price": "Vanaf €9,5k",
           "timeline": "4–8 weken",
           "desc": "Voor teams die klaar zijn om één AI-systeem in productie te brengen binnen hun echte business-omgeving.",
           "href": "/ai-consulting",
@@ -1677,7 +1685,7 @@
         },
         {
           "name": "Doorlopend AI Partner",
-          "price": "Vanaf €5k/mnd",
+          "price": "Vanaf €5,5k/mnd",
           "timeline": "Maandelijks",
           "desc": "Voor bedrijven die doorlopende AI-engineeringcapaciteit nodig hebben zonder een volledig intern team op te bouwen.",
           "href": "/#contact",
@@ -1812,7 +1820,7 @@
       "items": [
         {
           "q": "Wat kost een AI consulting traject?",
-          "a": "De scope varieert sterk, daarom publiceren we geen vaste tarieven. AI Strategy Sprints liggen meestal tussen €2.500 en €5.000. Implementatieprojecten starten vanaf €8.000 en schalen mee met de integratiecomplexiteit. Doorlopende partnertrajecten starten vanaf €5.000 per maand en worden afgestemd op de benodigde engineeringcapaciteit. We geven een gedetailleerde raming na het eerste strategiegesprek, voordat je ergens aan vastzit."
+          "a": "De scope varieert sterk per bedrijf, projectvolwassenheid, systemen, datatoegang en integratiecomplexiteit, daarom publiceren we geen vaste projecttarieven. AI Strategy Sprints liggen meestal tussen €2.500 en €5.000. Implementatieprojecten starten vanaf €9.500 en schalen mee met de integratiecomplexiteit. Doorlopende partnertrajecten starten vanaf €5.500 per maand en worden afgestemd op de benodigde engineeringcapaciteit. We geven een gedetailleerde raming na de eerste fit-check of audit, voordat je ergens aan vastzit."
         },
         {
           "q": "Hoe lang duurt een typisch project?",

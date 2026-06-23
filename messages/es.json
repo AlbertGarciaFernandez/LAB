@@ -123,7 +123,7 @@
     },
     "nav": {
       "Services": "Servicios",
-      "Expertise": "Especialidades",
+      "Expertise": "Capacidades",
       "Industries": "Industrias",
       "TheLab": "El Lab",
       "Bio": "Biografía",
@@ -132,8 +132,8 @@
       "CaseStudies": "Case Studies",
       "services": {
         "AIConsulting": "Consultoría IA",
-        "ReactConsulting": "Consultoría React",
-        "NextJS": "Desarrollo Next.js",
+        "ReactConsulting": "Producto Digital & Frontend",
+        "NextJS": "Next.js y React",
         "ITIntegration": "Integración de Sistemas IT",
         "CustomTools": "Herramientas Internas",
         "ProductDesign": "Diseño de Producto",
@@ -142,13 +142,12 @@
         "TechnicalLeadership": "Liderazgo Técnico"
       },
       "expertise": {
-        "AIAgents": "Agentes IA & Automatización",
+        "AIAgents": "Automatización IA & Agentes",
         "CustomLLM": "Desarrollo LLM Personalizado",
         "SystemArch": "Arquitectura de Sistemas",
         "N8nMigration": "Consultoría Migración n8n"
       },
       "industries": {
-        "AIConsultingNL": "Consultoría IA Países Bajos",
         "HealthcareNL": "Automatización Sanitaria",
         "AestheticNL": "Automatización Clínica Estética",
         "ProfessionalServicesNL": "Automatización de Servicios Profesionales",
@@ -177,7 +176,8 @@
     "cta": {
       "initialize": "Reservar llamada estratégica",
       "caseStudies": "Ver trabajos seleccionados"
-    }
+    },
+    "ctaNote": "30 min · Sin compromiso · Respuesta en 24 h · Te diremos si no merece la pena construirlo"
   },
   "Footer": {
     "brandDescription": "Diseñamos el futuro de la automatización empresarial y de los flujos de trabajo con IA.",
@@ -185,7 +185,7 @@
       "title": "Servicios",
       "items": {
         "AIConsulting": "Consultoría IA",
-        "ReactConsulting": "Consultoría React",
+        "ReactConsulting": "Producto Digital & Frontend",
         "NextJS": "Agencia Next.js",
         "ITIntegration": "Integración IT",
         "InternalTools": "Herramientas Internas",
@@ -196,9 +196,9 @@
       }
     },
     "Expertise": {
-      "title": "Especialidades",
+      "title": "Capacidades",
       "items": {
-        "AIAgents": "Agentes IA",
+        "AIAgents": "Agentes IA & Automatización",
         "n8nMigration": "Migración n8n",
         "SystemArchitecture": "Arquitectura de Sistemas",
         "CustomLLMs": "LLMs Personalizados"
@@ -265,7 +265,7 @@
   },
   "InsightsHome": {
     "bgText": "INSIGHTS",
-    "bgNumber": "06",
+    "bgNumber": "08",
     "badge": "Insights",
     "title": "Educación para compradores sobre sistemas con IA y automatización operativa.",
     "subtitle": "Lecturas estratégicas sobre agentes de IA, flujos con WhatsApp, integración de sistemas y decisiones con n8n para empresas que quieren mejorar operaciones reales.",
@@ -553,30 +553,30 @@
   },
   "Bio": {
     "bgText": "EL ESTUDIO",
-    "bgNumber": "06",
+    "bgNumber": "07",
     "title": {
       "part1": "EL",
       "part2": "ESTUDIO"
     },
     "description": {
       "p1": {
-        "part1": "Somos un",
-        "highlight": "estudio de ingeniería",
-        "part2": "con base en Leiden, Países Bajos."
+        "part1": "Somos CodeHunter Lab,",
+        "highlight": "un pequeño estudio de ingeniería",
+        "part2": "en Leiden."
       },
       "p2": {
-        "part1": "Diseñamos, construimos y desplegamos trabajo en producción que",
-        "highlight1": "funciona en el mundo real",
-        "part2": "— desde sistemas IA hasta productos con identidad — y trabajamos con CTOs, fundadores y",
-        "highlight2": "líderes de producto y operaciones",
-        "part3": "en toda Europa."
+        "part1": "Trabajamos cerca de founders, CTOs y equipos de operaciones que necesitan convertir ideas difíciles en sistemas reales. Nos importan",
+        "highlight1": "el criterio, la claridad y la calidad del trabajo",
+        "part2": " tanto como la tecnología, y preferimos",
+        "highlight2": "pocos proyectos bien llevados",
+        "part3": "a muchas demos sin continuidad."
       }
     },
     "stats": {
       "years": "Años Entregando",
       "yearsValue": "4+",
-      "focus": "Enfoque Principal",
-      "focusValue": "IA / Producto / Liderazgo",
+      "focus": "Base",
+      "focusValue": "Leiden / España / Remoto",
       "impact": "Empresas Atendidas",
       "impactValue": "15+"
     },
@@ -591,9 +591,9 @@
   },
   "Process": {
     "bgText": "PROCESO",
-    "bgNumber": "07",
+    "bgNumber": "06",
     "contactBgText": "CONTACTO",
-    "contactBgNumber": "08",
+    "contactBgNumber": "09",
     "title": {
       "prefix": "06.",
       "text": "Cómo Trabajamos"
@@ -620,6 +620,12 @@
         "title": "Despliegue y Traspaso",
         "description": "Desplegamos en tu infraestructura y entregamos documentación completa. El código es tuyo. Soporte continuo disponible si necesitas un partner de ingeniería a largo plazo."
       }
+    },
+    "outcomes": {
+      "0": "Mapa inicial de oportunidades, riesgos y próximos pasos recomendados.",
+      "1": "Roadmap de entrega con alcance, integraciones, calendario y criterios de aceptación.",
+      "2": "Sistema conectado a tus herramientas reales y validado contra flujos existentes.",
+      "3": "Despliegue, documentación, handoff y soporte post-lanzamiento."
     },
     "phaseLabel": "Fase {step}",
     "outcomeLabel": "Resultado",
@@ -861,7 +867,7 @@
       "badge": "Precios",
       "title": "Precios claros de consultoría IA,",
       "highlight": "con entrega real detrás.",
-      "subtitle": "LAB está pensado para trabajo de ingeniería, no para asesoría ligera. Eso incluye alcance, arquitectura, integraciones, despliegue, documentación y soporte después del lanzamiento.",
+      "subtitle": "Precios desde, sin IVA. LAB está pensado para trabajo de ingeniería, no para asesoría ligera. El precio final depende de la empresa, madurez del proyecto, sistemas, acceso a datos, integraciones y soporte necesario; por eso empezamos con un chequeo de encaje o auditoría antes de estimar el alcance real.",
       "recommended": "Mejor inicio",
       "items": [
         {
@@ -879,7 +885,7 @@
         },
         {
           "name": "Sprint de Estrategia IA",
-          "price": "€2.5k–€5k",
+          "price": "€2.500–€5.000",
           "timeline": "1–2 semanas",
           "desc": "Para equipos que saben que la IA puede aportar valor, pero necesitan un plan de implementación más afinado antes de comprometer presupuesto.",
           "href": "/#contact",
@@ -893,7 +899,7 @@
         },
         {
           "name": "Implementación IA",
-          "price": "Desde €8k",
+          "price": "Desde €9.500",
           "timeline": "4–8 semanas",
           "desc": "Para equipos listos para lanzar un sistema de IA en producción conectado a su entorno real de negocio.",
           "href": "/ai-consulting",
@@ -906,7 +912,7 @@
         },
         {
           "name": "Partner IA Continuo",
-          "price": "Desde €5k/mes",
+          "price": "Desde €5.500/mes",
           "timeline": "Mensual",
           "desc": "Para empresas que necesitan capacidad continua de ingeniería IA sin montar un equipo interno completo.",
           "href": "/#contact",
@@ -1041,7 +1047,7 @@
       "items": [
         {
           "q": "¿Cuánto cuesta un proyecto de consultoría IA?",
-          "a": "El alcance varía bastante, por eso no publicamos tarifas fijas. Los AI Strategy Sprints suelen estar entre €2.500 y €5.000. Los proyectos de implementación empiezan en €8.000 y escalan según la complejidad de integración. Los acuerdos como partner continuo empiezan desde €5.000/mes y se ajustan a la capacidad de ingeniería necesaria. Damos una estimación detallada después de la llamada inicial de estrategia, antes de que te comprometas a nada."
+          "a": "El alcance varía bastante según la empresa, madurez del proyecto, sistemas, acceso a datos y complejidad de integración, por eso no publicamos tarifas fijas de proyecto. Los AI Strategy Sprints suelen estar entre €2.500 y €5.000. Los proyectos de implementación empiezan en €9.500 y escalan según la complejidad de integración. Los acuerdos como partner continuo empiezan desde €5.500/mes y se ajustan a la capacidad de ingeniería necesaria. Damos una estimación detallada después del chequeo de encaje o auditoría inicial, antes de que te comprometas a nada."
         },
         {
           "q": "¿Cuánto tarda un proyecto típico?",
@@ -3397,19 +3403,19 @@
     "subtitle": "Así es como trabajamos: alcance cerrado, código que pasa a ser tuyo, un handoff limpio a producción y participación de ingenieros senior desde el discovery hasta el despliegue.",
     "metrics": [
       {
-        "value": "4+",
-        "label": "Años entregando",
-        "note": "Apps web, automatizaciones, integraciones y sistemas IA en producción."
-      },
-      {
         "value": "15+",
         "label": "Empresas atendidas",
-        "note": "Desde operadores locales hasta equipos SaaS y ecommerce."
+        "note": "Apps, automatizaciones e integraciones entregadas para SaaS, ecommerce y operaciones."
       },
       {
         "value": "30d",
-        "label": "Soporte incluido",
-        "note": "Los proyectos de implementación incluyen soporte post-lanzamiento y handoff."
+        "label": "Soporte post-lanzamiento",
+        "note": "Handoff, documentación y soporte incluidos después del despliegue."
+      },
+      {
+        "value": "Live",
+        "label": "Producción, no demos",
+        "note": "Sistemas conectados a CRM, WhatsApp, bases de datos, APIs e informes."
       }
     ],
     "proof": [
@@ -3481,13 +3487,13 @@
     "bgNumber": "04",
     "badge": "Paquetes",
     "title": "Puntos de entrada claros, rangos claros.",
-    "subtitle": "Estos son rangos de entrada para estrategia, dirección de producto y construcciones en producción. El alcance exacto depende de sistemas, acceso a datos y complejidad de integración.",
+    "subtitle": "Precios desde, sin IVA. Estos son rangos de entrada para estrategia, dirección de producto y construcciones en producción. El alcance exacto depende de la empresa, madurez del proyecto, sistemas, acceso a datos y complejidad de integración; por eso empezamos con una auditoría o diagnóstico enfocado.",
     "cta": "Reservar llamada",
     "learnMore": "Ver detalles",
     "items": [
       {
         "name": "Sprint de Estrategia del Estudio",
-        "price": "€2.5k–€5k",
+        "price": "€2.500–€5.000",
         "timeline": "1–2 semanas",
         "desc": "Para cuando necesitas una visión clara de dónde la dirección de producto, la IA o el soporte técnico generan más palanca.",
         "href": "/ai-consulting#pricing",
@@ -3500,7 +3506,7 @@
       },
       {
         "name": "Construcción en Producción",
-        "price": "Desde €8k",
+        "price": "Desde €9.500",
         "timeline": "4–8 semanas",
         "desc": "Un sistema, capa de producto o integración desplegada en producción sobre tu infraestructura.",
         "href": "/ai-consulting#pricing",
@@ -3513,7 +3519,7 @@
       },
       {
         "name": "Partner del Estudio",
-        "price": "Desde €5k/mes",
+        "price": "Desde €5.500/mes",
         "timeline": "Mensual",
         "desc": "Soporte continuo para equipos que quieren iteración, mantenimiento, revisiones y dirección senior.",
         "href": "/ai-consulting#migration",
@@ -3527,13 +3533,15 @@
     ]
   },
   "Fit": {
+    "bgText": "ENCAJE",
+    "bgNumber": "05",
     "badge": "Encaje",
     "title": "No somos el partner adecuado para cualquier idea IA.",
-    "subtitle": "Los mejores proyectos tienen un workflow claro, un responsable real y suficiente repetición para que valga la pena mantener la automatización.",
+    "subtitle": "Los mejores proyectos tienen un workflow claro, un responsable real y suficiente repetición para que valga la pena mantener la automatización, especialmente cuando entran CRM, ERP, datos o herramientas internas a medida.",
     "good": {
       "title": "Encajamos si...",
       "items": [
-        "Quieres un sistema en producción conectado a herramientas reales.",
+        "Quieres un sistema en producción conectado a CRM, ERP, fuentes de datos o herramientas internas a medida.",
         "Puedes nombrar el workflow, responsable y resultado que quieres mejorar.",
         "Te importa la documentación, el traspaso y la mantenibilidad.",
         "Quieres un alcance honesto antes de construir."
@@ -3550,7 +3558,7 @@
     },
     "cta": {
       "title": "¿No sabes si tu proyecto encaja?",
-      "desc": "Envíanos el workflow. Te diremos si merece la pena automatizarlo, qué debería incluir la primera versión y dónde está el riesgo.",
+      "desc": "Envíanos el workflow, mapa de sistemas o cuello de botella en CRM/ERP. Te diremos si merece la pena automatizarlo, qué debería incluir la primera versión y dónde está el riesgo.",
       "button": "Pedir fit check"
     }
   },
