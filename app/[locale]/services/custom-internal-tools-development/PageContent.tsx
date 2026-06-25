@@ -7,6 +7,7 @@ import { Link } from "@/navigation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { m } from "framer-motion";
 import Header from "@/components/layout/Header";
+import ContactSection from "@/components/sections/ContactSection";
 import {
   ChartBarIcon,
   LockKeyIcon,
@@ -55,9 +56,9 @@ export default function CustomInternalToolsContent() {
       geoRadius: "50000",
     },
     description: getLocaleValue(locale, {
-      en: "Custom internal tools, admin panels, and operations dashboards for companies that want to replace manual work and per-user SaaS costs.",
-      es: "Herramientas internas a medida, paneles de administración y cuadros de mando operativos para empresas que quieren sustituir trabajo manual y licencias SaaS por usuario.",
-      nl: "Maatwerk interne tools, adminpanelen en operationele dashboards voor bedrijven die handmatig werk en SaaS-kosten per gebruiker willen vervangen.",
+      en: "Custom ERP/CRM platforms, internal tools, admin panels, mobile workflows, and AI-ready operations dashboards for companies replacing manual work and disconnected SaaS.",
+      es: "Plataformas ERP/CRM a medida, herramientas internas, paneles, flujos móviles y dashboards preparados para IA para empresas que sustituyen trabajo manual y SaaS desconectado.",
+      nl: "Maatwerk ERP/CRM-platforms, interne tools, adminpanelen, mobiele workflows en AI-ready dashboards voor bedrijven die handwerk en losse SaaS vervangen.",
     }),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -72,9 +73,9 @@ export default function CustomInternalToolsContent() {
           itemOffered: {
             "@type": "Service",
             name: getLocaleValue(locale, {
-              en: "Custom Admin Panels",
-              es: "Paneles de administración a medida",
-              nl: "Maatwerk adminpanelen",
+              en: "Custom ERP/CRM Platforms",
+              es: "Plataformas ERP/CRM a medida",
+              nl: "Maatwerk ERP/CRM-platforms",
             }),
           },
         },
@@ -297,7 +298,7 @@ export default function CustomInternalToolsContent() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="text-center"
                 >
-                  <div className="mb-2 text-4xl font-black text-purple-400 md:text-5xl">
+                  <div className="mb-2 text-4xl font-black text-hunter-green md:text-5xl">
                     {metric.value}
                     <span className="text-lg font-normal text-gray-500">{metric.suffix}</span>
                   </div>
@@ -307,6 +308,16 @@ export default function CustomInternalToolsContent() {
             </div>
           </div>
         </section>
+
+        <OperatingSystemSection
+          title={t("OperatingSystem.title")}
+          subtitle={t("OperatingSystem.subtitle")}
+          items={t.raw("OperatingSystem.items") as string[]}
+          aiLayer={{
+            title: t("OperatingSystem.aiLayer.title"),
+            desc: t("OperatingSystem.aiLayer.desc"),
+          }}
+        />
 
         {/* Excel → App Transformation Visual */}
         <section className="relative z-10 py-32">
@@ -381,8 +392,8 @@ export default function CustomInternalToolsContent() {
                 className="hidden md:block"
               >
                 <div className="flex flex-col items-center gap-2">
-                  <ArrowsClockwiseIcon size={48} className="animate-spin-slow text-purple-400" />
-                  <span className="font-mono text-xs text-purple-400">Transform</span>
+                  <ArrowsClockwiseIcon size={48} className="animate-spin-slow text-hunter-orange" />
+                  <span className="font-mono text-xs text-hunter-orange">Transform</span>
                 </div>
               </m.div>
 
@@ -396,20 +407,20 @@ export default function CustomInternalToolsContent() {
                 <GlassCard
                   hoverEffect
                   glowColor="none"
-                  className="border-purple-500/30 bg-purple-900/10 p-6 hover:shadow-[0_25px_50px_-12px_rgba(168,85,247,0.25)]"
+                  className="border-hunter-green/30 bg-hunter-green/[0.06] p-6 hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.25)]"
                 >
                   <div className="mb-4 flex items-center gap-2">
-                    <ChartBarIcon size={24} className="text-purple-400" />
-                    <span className="font-mono text-sm text-purple-400">
+                    <ChartBarIcon size={24} className="text-hunter-green" />
+                    <span className="font-mono text-sm text-hunter-green">
                       After: Modern Dashboard
                     </span>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
-                    <div className="rounded-lg bg-purple-500/20 p-3">
+                    <div className="rounded-lg bg-hunter-green/10 p-3">
                       <div className="text-xs text-gray-400">Revenue</div>
                       <div className="text-lg font-bold text-white">€124K</div>
                     </div>
-                    <div className="rounded-lg bg-pink-500/20 p-3">
+                    <div className="rounded-lg bg-hunter-orange/10 p-3">
                       <div className="text-xs text-gray-400">Growth</div>
                       <div className="text-lg font-bold text-white">+23%</div>
                     </div>
@@ -418,7 +429,7 @@ export default function CustomInternalToolsContent() {
                     {[30, 50, 40, 70, 60, 80, 90].map((h, i) => (
                       <div
                         key={i}
-                        className="flex-1 rounded-t bg-gradient-to-t from-purple-500 to-pink-500"
+                        className="flex-1 rounded-t bg-gradient-to-t from-hunter-green to-hunter-orange"
                         style={{ height: `${h}%` }}
                       />
                     ))}
@@ -446,9 +457,9 @@ export default function CustomInternalToolsContent() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-xl border border-purple-500/20 bg-purple-500/5 p-4 text-center"
+                  className="rounded-xl border border-hunter-green/20 bg-hunter-green/[0.04] p-4 text-center"
                 >
-                  <div className="text-2xl font-black text-purple-400">{stat.value}</div>
+                  <div className="text-2xl font-black text-hunter-green">{stat.value}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
@@ -498,10 +509,10 @@ export default function CustomInternalToolsContent() {
                   <GlassCard
                     hoverEffect
                     glowColor="none"
-                    className="h-full p-10 hover:shadow-[0_25px_50px_-12px_rgba(168,85,247,0.25)]"
+                    className="h-full p-10 hover:shadow-[0_25px_50px_-12px_rgba(0,230,162,0.22)]"
                   >
                     <div className="mb-8">
-                      <tool.icon size={48} className="text-purple-400" />
+                      <tool.icon size={48} className="text-hunter-green" />
                     </div>
                     <h3 className="mb-4 text-3xl font-black uppercase tracking-tight">
                       {tool.title}
@@ -532,12 +543,12 @@ export default function CustomInternalToolsContent() {
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
-                { icon: DatabaseIcon, name: t("Categories.inventory"), color: "purple" },
-                { icon: CalendarIcon, name: t("Categories.scheduling"), color: "pink" },
-                { icon: ChartBarIcon, name: t("Categories.reporting"), color: "blue" },
-                { icon: LockKeyIcon, name: t("Categories.access"), color: "green" },
-                { icon: FileTextIcon, name: t("Categories.documents"), color: "orange" },
-                { icon: ArrowsClockwiseIcon, name: t("Categories.workflows"), color: "cyan" },
+                { icon: DatabaseIcon, name: t("Categories.inventory") },
+                { icon: CalendarIcon, name: t("Categories.scheduling") },
+                { icon: ChartBarIcon, name: t("Categories.reporting") },
+                { icon: LockKeyIcon, name: t("Categories.access") },
+                { icon: FileTextIcon, name: t("Categories.documents") },
+                { icon: ArrowsClockwiseIcon, name: t("Categories.workflows") },
               ].map((cat, idx) => (
                 <m.div
                   key={cat.name}
@@ -549,11 +560,11 @@ export default function CustomInternalToolsContent() {
                   <GlassCard
                     hoverEffect
                     glowColor="none"
-                    className="p-6 hover:shadow-[0_25px_50px_-12px_rgba(168,85,247,0.2)]"
+                    className="group p-6 hover:shadow-[0_25px_50px_-12px_rgba(255,122,60,0.18)]"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10">
-                        <cat.icon size={24} className="text-purple-400" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-hunter-green/10 transition-colors group-hover:bg-hunter-orange/10">
+                        <cat.icon size={24} className="text-hunter-green" />
                       </div>
                       <span className="text-lg font-bold text-white">{cat.name}</span>
                     </div>
@@ -570,7 +581,7 @@ export default function CustomInternalToolsContent() {
             {[...techStack, ...techStack].map((tech, idx) => (
               <span key={idx} className="font-mono text-sm text-gray-500">
                 {tech}
-                <span className="ml-8 text-purple-400">•</span>
+                <span className="ml-8 text-hunter-orange">•</span>
               </span>
             ))}
           </div>
@@ -601,9 +612,9 @@ export default function CustomInternalToolsContent() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="flex gap-6 rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-colors hover:border-purple-500/20"
+                    className="flex gap-6 rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-colors hover:border-hunter-orange/20"
                   >
-                    <span className="shrink-0 font-mono text-4xl font-black text-purple-400/30">
+                    <span className="shrink-0 font-mono text-4xl font-black text-hunter-green/30">
                       {step.number}
                     </span>
                     <div>
@@ -641,15 +652,15 @@ export default function CustomInternalToolsContent() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
                 >
-                  <details className="group rounded-2xl border border-white/5 bg-white/[0.02] transition-colors hover:border-purple-500/20">
+                  <details className="group rounded-2xl border border-white/5 bg-white/[0.02] transition-colors hover:border-hunter-orange/20">
                     <summary className="flex cursor-pointer items-center justify-between p-6 text-lg font-bold text-white [&::-webkit-details-marker]:hidden">
                       <span className="flex items-center gap-4">
-                        <span className="text-purple-400 transition-transform group-open:rotate-90">
+                        <span className="text-hunter-green transition-transform group-open:rotate-90">
                           →
                         </span>
                         {item.q}
                       </span>
-                      <span className="text-2xl text-purple-400 transition-transform group-open:rotate-45">
+                      <span className="text-2xl text-hunter-orange transition-transform group-open:rotate-45">
                         +
                       </span>
                     </summary>
@@ -678,12 +689,14 @@ export default function CustomInternalToolsContent() {
             <p className="mb-10 text-lg text-gray-400">{t("CTA.subtitle")}</p>
             <Link
               href="#contact"
-              className="inline-block rounded-full bg-purple-600 px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:bg-purple-500"
+              className="inline-block rounded-full bg-hunter-green px-10 py-5 text-sm font-black uppercase tracking-widest text-near-black shadow-[0_0_30px_rgba(0,230,162,0.22)] transition-all hover:scale-105 hover:bg-hunter-orange"
             >
               {t("CTA.button")}
             </Link>
           </m.div>
         </section>
+
+        <ContactSection className="border-t border-white/5 bg-surface-dark/10" />
 
         {/* SEO Footer */}
         <footer className="relative z-10 border-t border-white/5 bg-black/40 py-12">
@@ -695,5 +708,124 @@ export default function CustomInternalToolsContent() {
         </footer>
       </main>
     </>
+  );
+}
+
+function OperatingSystemSection({
+  title,
+  subtitle,
+  items,
+  aiLayer,
+}: {
+  title: string;
+  subtitle: string;
+  items: string[];
+  aiLayer: { title: string; desc: string };
+}) {
+  return (
+    <section className="relative z-10 overflow-hidden border-b border-white/5 bg-near-black py-28">
+      <div className="pointer-events-none absolute -left-24 top-16 h-72 w-72 rounded-full bg-hunter-green/[0.05] blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-16 h-80 w-80 rounded-full bg-hunter-orange/[0.05] blur-3xl" />
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <m.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="lg:sticky lg:top-28"
+        >
+          <p className="mb-4 font-mono text-xs font-black uppercase tracking-[0.24em] text-hunter-green">
+            ERP / CRM / AI
+          </p>
+          <h2 className="text-4xl font-black uppercase leading-none tracking-tighter md:text-6xl">
+            {title}
+          </h2>
+          <p className="mt-6 text-lg leading-relaxed text-gray-400">{subtitle}</p>
+          <SystemMapVisual />
+        </m.div>
+
+        <div className="space-y-5">
+          <div className="grid gap-4 md:grid-cols-2">
+            {items.map((item, index) => (
+              <m.div
+                key={item}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+                data-erp-crm-capability
+              >
+                <GlassCard
+                  hoverEffect
+                  glowColor="none"
+                  className="group h-full border-hunter-green/10 bg-white/[0.025] p-6 transition-colors hover:border-hunter-orange/25"
+                >
+                  <div className="mb-5 flex items-center justify-between gap-4">
+                    <div className="font-mono text-xs font-black text-hunter-green/70 transition-colors group-hover:text-hunter-orange">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div className="h-px flex-1 bg-gradient-to-r from-hunter-green/40 to-transparent opacity-60 transition-colors group-hover:from-hunter-orange/50" />
+                  </div>
+                  <p className="text-sm leading-relaxed text-gray-300">{item}</p>
+                </GlassCard>
+              </m.div>
+            ))}
+          </div>
+
+          <m.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.18 }}
+            className="relative overflow-hidden rounded-3xl border border-hunter-orange/25 bg-hunter-orange/[0.06] p-8 shadow-[0_30px_90px_-60px_rgba(0,230,162,0.85)]"
+          >
+            <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-hunter-orange/70 to-transparent" />
+            <div className="mb-3 font-mono text-xs font-black uppercase tracking-[0.22em] text-hunter-orange">
+              {aiLayer.title}
+            </div>
+            <p className="text-lg leading-relaxed text-gray-300">{aiLayer.desc}</p>
+          </m.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SystemMapVisual() {
+  const nodes = ["CRM", "Docs", "Calendar", "Staff", "Invoices"];
+
+  return (
+    <div
+      aria-hidden="true"
+      className="mt-10 rounded-3xl border border-hunter-green/20 bg-surface-dark/50 p-5 shadow-[0_30px_90px_-60px_rgba(0,230,162,0.85)]"
+    >
+      <div className="mb-4 flex items-center justify-between border-b border-white/5 pb-4">
+        <span className="font-mono text-[10px] font-black uppercase tracking-[0.24em] text-hunter-green">
+          OPERATING LAYER
+        </span>
+        <span className="rounded-full border border-hunter-green/20 px-2 py-1 font-mono text-[10px] text-hunter-green/70">
+          LIVE
+        </span>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+        {nodes.map((node, index) => (
+          <div
+            key={node}
+            className={`rounded-2xl border border-white/[0.06] bg-white/[0.035] p-3 ${index === 0 ? "sm:col-span-2" : ""}`}
+          >
+            <div className="mb-2 h-1.5 w-10 rounded-full bg-hunter-green/50" />
+            <div className="font-mono text-xs font-black text-white">{node}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-4 rounded-2xl border border-hunter-orange/25 bg-hunter-orange/[0.07] p-4">
+        <div className="mb-2 font-mono text-[10px] font-black uppercase tracking-[0.22em] text-hunter-orange">
+          AI COMMAND LAYER
+        </div>
+        <div className="h-1.5 rounded-full bg-gradient-to-r from-hunter-orange via-hunter-green to-transparent" />
+      </div>
+    </div>
   );
 }

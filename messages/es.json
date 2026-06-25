@@ -175,7 +175,7 @@
     "description": "No somos solo un estudio de IA. Combinamos ingeniería en producción, criterio de producto, formación práctica y liderazgo técnico senior para equipos que necesitan claridad y sistemas que se lanzan de verdad.",
     "cta": {
       "initialize": "Reservar llamada estratégica",
-      "caseStudies": "Ver trabajos seleccionados"
+      "caseStudies": "Explorar estudio de producto"
     },
     "ctaNote": "30 min · Sin compromiso · Respuesta en 24 h · Te diremos si no merece la pena construirlo"
   },
@@ -307,9 +307,9 @@
             "href": "/it-system-integration"
           },
           {
-            "title": "Herramientas Internas con IA",
-            "desc": "Dashboards y herramientas internas a medida para reducir trabajo administrativo repetitivo y facilitar decisiones del día a día.",
-            "link": "Herramientas Internas",
+            "title": "ERP/CRM + Herramientas Internas con IA",
+            "desc": "Capas ERP/CRM, dashboards y herramientas internas a medida que estructuran la operación antes de que la IA la pueda consultar y automatizar.",
+            "link": "Plataforma ERP/CRM a medida",
             "href": "/services/custom-internal-tools-development"
           },
           {
@@ -961,9 +961,9 @@
           "href": "/it-system-integration"
         },
         {
-          "title": "Herramientas Internas con IA",
-          "desc": "Herramientas internas y dashboards a medida para eliminar trabajo administrativo repetitivo, reporting fragmentado y reconciliaciones manuales.",
-          "label": "Herramientas Internas Personalizadas",
+          "title": "ERP/CRM + Herramientas Internas con IA",
+          "desc": "A veces el primer paso de IA es arquitectura de software: un ERP/CRM a medida, herramienta interna o capa operativa que estructura clientes, documentos, calendario, personal, tareas y facturas antes de poner IA encima.",
+          "label": "Plataforma ERP/CRM a medida",
           "href": "/services/custom-internal-tools-development"
         },
         {
@@ -1297,19 +1297,19 @@
   },
   "InternalTools": {
     "Hero": {
-      "badge": "DESARROLLO DE HERRAMIENTAS INTERNAS",
+      "badge": "ERP/CRM A MEDIDA & PLATAFORMA OPERATIVA",
       "title": {
-        "part1": "Tu Negocio,",
-        "highlight": "A Tu Manera"
+        "part1": "Tu Operación,",
+        "highlight": "Un Solo Sistema"
       },
-      "description": "El software estándar nunca encaja perfecto. Creamos <strong>herramientas internas a medida</strong> que se adaptan exactamente a tus flujos. Escapa del <strong>caos de las hojas de cálculo</strong>.",
+      "description": "Antes de automatizar con IA, muchas empresas necesitan una capa de software real. Construimos plataformas ERP/CRM a medida para clientes, documentación, calendario, proveedores, presupuestos, personal, tareas, facturación y comunicación interna — y después añadimos una capa de IA encima para preguntar y activar trabajo desde un solo lugar.",
       "cta": "Empezar a Crear"
     },
     "Comparison": {
-      "title": "¿Por qué a Medida vs Low-Code?",
+      "title": "¿Por qué ERP/CRM a medida vs Low-Code?",
       "recommended": "Recomendado",
       "custom": {
-        "title": "Desarrollo a Medida (Nuestro Método)",
+        "title": "Plataforma operativa propia",
         "points": [
           "Sin cuotas mensuales por usuario",
           "UI/UX totalmente flexible",
@@ -1328,7 +1328,7 @@
       }
     },
     "Tools": {
-      "title": "Qué Construimos",
+      "title": "Qué Puede Incluir La Plataforma",
       "dashboards": {
         "title": "Dashboards Operativos",
         "desc": "Visualización en tiempo real de KPIs, inventario y lógica. Controla la salud de tu negocio de un vistazo."
@@ -1342,9 +1342,44 @@
         "desc": "Planificadores drag-and-drop adaptados a la estructura y turnos de tu equipo específico."
       }
     },
+    "Metrics": {
+      "timeSaved": "Ahorro típico de tiempo administrativo",
+      "costReduction": "Reducción potencial de software y operación",
+      "licensingFees": "Cuotas por usuario de plataformas",
+      "deliveryTime": "Primera versión operativa"
+    },
+    "Transformation": {
+      "title": "Del caos de hojas de cálculo a plataforma operativa",
+      "subtitle": "Convertimos archivos frágiles, datos duplicados y herramientas desconectadas en un sistema propio desde el que tu equipo puede operar."
+    },
+    "Categories": {
+      "title": "Módulos operativos que podemos conectar",
+      "subtitle": "Empezamos por los flujos que generan más fricción y ampliamos la plataforma alrededor del uso real.",
+      "inventory": "Inventario y activos",
+      "scheduling": "Agenda y reservas",
+      "reporting": "Reporting y previsión",
+      "access": "Permisos y trazabilidad",
+      "documents": "Documentos y aprobaciones",
+      "workflows": "Automatización de flujos"
+    },
+    "OperatingSystem": {
+      "title": "Primero el sistema operativo, después la IA",
+      "subtitle": "Muchas empresas no necesitan empezar con un chatbot. Necesitan estructurar su lógica de negocio, datos y operación diaria en software que el equipo pueda usar de verdad.",
+      "items": [
+        "Fichas de clientes, historial, documentación y estado en una capa CRM consultable.",
+        "Calendarios, reservas, coordinación con proveedores y comunicación interna conectados al mismo flujo.",
+        "Presupuestos, aprobaciones, facturación y traspaso de ventas a entrega sin duplicar datos.",
+        "Personal, tareas, fichaje, control horario y acceso desde app móvil para equipos fuera de oficina.",
+        "Permisos, trazabilidad, dashboards y datos operativos preparados para automatización."
+      ],
+      "aiLayer": {
+        "title": "Capa de IA encima",
+        "desc": "Cuando la base ERP/CRM está estructurada, el equipo puede preguntar a la capa de IA: ¿qué pasó con este cliente? ¿qué facturas están bloqueadas? ¿quién está disponible mañana? ¿qué documentación falta del proveedor? El modelo funciona porque el sistema de debajo está limpio."
+      }
+    },
     "Process": {
-      "title": "Cómo Construimos tu Herramienta",
-      "subtitle": "Desde la auditoría del flujo de trabajo hasta la herramienta en producción — sin sorpresas ni complejidad innecesaria.",
+      "title": "Cómo Construimos Tu Plataforma Operativa",
+      "subtitle": "Desde la auditoría de flujos hasta la base ERP/CRM y una operación preparada para IA — sin sorpresas ni complejidad innecesaria.",
       "steps": [
         {
           "number": "01",
@@ -1369,8 +1404,8 @@
       ]
     },
     "FAQ": {
-      "title": "FAQ de Herramientas Internas",
-      "subtitle": "Deja de pelear con tu software. Empieza a construir lo que necesitas.",
+      "title": "FAQ de ERP/CRM a Medida",
+      "subtitle": "Deja de pelear con software desconectado. Construye la capa operativa que necesitas.",
       "questions": [
         {
           "q": "¿Por qué construir una herramienta interna a medida en lugar de usar Retool o Appsmith?",
@@ -1383,13 +1418,13 @@
       ]
     },
     "CTA": {
-      "title": "¿Listo para Reemplazar tus Hojas de Cálculo?",
-      "subtitle": "Sesión de alcance gratuita. Mapeamos tu flujo de trabajo, proponemos una solución y estimamos plazos y costes. Sin compromiso.",
-      "button": "Reservar Llamada de Alcance Gratuita"
+      "title": "¿Listo para construir tu plataforma operativa?",
+      "subtitle": "Sesión de alcance gratuita. Mapeamos tus flujos, identificamos la base ERP/CRM y definimos dónde encaja la IA. Sin compromiso.",
+      "button": "Reservar llamada de plataforma"
     },
     "SEO": {
-      "description": "CodeHunter Lab construye herramientas internas a medida, paneles de administración y portales de operaciones para empresas en los Países Bajos. Reemplazamos hojas de cálculo y plataformas low-code caras con software personalizado que posees completamente — sin tarifas por usuario, sin dependencia del proveedor. Con sede en Leiden.",
-      "keywords": "herramientas internas a medida países bajos, desarrollador herramientas internas leiden, desarrollo panel administración, reemplazar retool appsmith, maatwerk software ontwikkeling"
+      "description": "CodeHunter Lab construye plataformas ERP/CRM a medida, herramientas internas, paneles de administración y portales operativos para empresas en los Países Bajos. Reemplazamos hojas de cálculo y SaaS desconectado con software propio para clientes, documentación, calendario, proveedores, presupuestos, personal, facturación, app móvil y una capa de IA encima.",
+      "keywords": "ERP CRM a medida países bajos, herramientas internas a medida países bajos, desarrollador herramientas internas leiden, desarrollo panel administración, reemplazar retool appsmith, maatwerk software ontwikkeling"
     }
   },
   "AIAutomationNL": {
@@ -3468,10 +3503,10 @@
       },
       {
         "situation": "Operas con hojas de cálculo",
-        "title": "Herramientas Internas",
-        "desc": "Sustituye tareas repetidas en spreadsheets por dashboards, portales y flujos de aprobación.",
+        "title": "Plataforma ERP/CRM a medida",
+        "desc": "Sustituye operaciones en spreadsheets por una capa ERP/CRM propia para clientes, documentos, personal, presupuestos, facturas y flujos preparados para IA.",
         "href": "/services/custom-internal-tools-development",
-        "cta": "Construir herramienta"
+        "cta": "Construir plataforma"
       },
       {
         "situation": "Tu producto va lento",

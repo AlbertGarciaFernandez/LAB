@@ -246,7 +246,7 @@ test("service pages use reusable ServiceSchema and keep visible FAQ sections whe
     },
     {
       route: "app/[locale]/services/custom-internal-tools-development/page.tsx",
-      serviceName: /Custom Internal Tools Development/,
+      serviceName: /Custom ERP\/CRM and Internal Tools Development/,
     },
     {
       route: "app/[locale]/n8n-consultant-netherlands/page.tsx",

@@ -175,7 +175,7 @@
     "description": "We zijn niet alleen een AI-studio. We combineren productie-engineering, productsmaak, praktische training en senior technisch leiderschap voor teams die helderheid nodig hebben en systemen die echt shippen.",
     "cta": {
       "initialize": "Boek een strategiesessie",
-      "caseStudies": "Bekijk geselecteerd werk"
+      "caseStudies": "Bekijk productstudio"
     },
     "ctaNote": "30 min · Vrijblijvend · Reactie binnen 24u · We zeggen het als bouwen niet zinvol is"
   },
@@ -307,9 +307,9 @@
             "href": "/it-system-integration"
           },
           {
-            "title": "Interne AI Tools",
-            "desc": "Maatwerk dashboards en interne tools die repetitief administratief werk verminderen en dagelijkse beslissingen makkelijker maken.",
-            "link": "Maatwerk Interne Tools",
+            "title": "ERP/CRM + Interne AI-tools",
+            "desc": "Maatwerk ERP/CRM-lagen, dashboards en interne tools die de operatie structureren voordat AI die kan bevragen en automatiseren.",
+            "link": "Maatwerk ERP/CRM-platform",
             "href": "/services/custom-internal-tools-development"
           },
           {
@@ -1734,9 +1734,9 @@
           "href": "/it-system-integration"
         },
         {
-          "title": "Interne Tools met AI",
-          "desc": "Maatwerk interne tools en dashboards die repetitief administratief werk, versnipperde rapportage en handmatige reconciliatie wegnemen.",
-          "label": "Maatwerk Interne Tools",
+          "title": "ERP/CRM + Interne AI-tools",
+          "desc": "Soms is de eerste AI-stap softwarearchitectuur: een maatwerk ERP/CRM, interne tool of operationele laag die klanten, documenten, agenda, personeel, taken en facturen structureert voordat AI erbovenop komt.",
+          "label": "Maatwerk ERP/CRM-platform",
           "href": "/services/custom-internal-tools-development"
         },
         {
@@ -2070,19 +2070,19 @@
   },
   "InternalTools": {
     "Hero": {
-      "badge": "ONTWIKKELING INTERNE TOOLS",
+      "badge": "MAATWERK ERP/CRM & OPERATIEPLATFORM",
       "title": {
-        "part1": "Jouw Bedrijf,",
-        "highlight": "Op Jouw Manier"
+        "part1": "Jouw Operatie,",
+        "highlight": "Eén Systeem"
       },
-      "description": "Standaardsoftware past nooit perfect. Wij bouwen <strong>maatwerk interne tools</strong> die precies aansluiten bij jouw workflows. Ontsnap aan de <strong>chaos van spreadsheets</strong>.",
+      "description": "Voordat AI het bedrijf kan automatiseren, heeft de operatie vaak eerst een echte softwarelaag nodig. Wij bouwen maatwerk ERP/CRM-platforms voor klanten, documenten, agenda, leveranciers, offertes, personeel, taken, facturatie en interne communicatie — en voegen daarna een AI-laag toe zodat teams vragen kunnen stellen en werk vanuit één plek kunnen starten.",
       "cta": "Begin met Bouwen"
     },
     "Comparison": {
-      "title": "Waarom Maatwerk vs Low-Code?",
+      "title": "Waarom Maatwerk ERP/CRM vs Low-Code?",
       "recommended": "Aanbevolen",
       "custom": {
-        "title": "Maatwerk Ontwikkeling (Onze Methode)",
+        "title": "Eigen operatieplatform",
         "points": [
           "Geen maandelijkse kosten per gebruiker",
           "Volledig flexibele UI/UX",
@@ -2101,7 +2101,7 @@
       }
     },
     "Tools": {
-      "title": "Wat Wij Bouwen",
+      "title": "Wat Het Platform Kan Bevatten",
       "dashboards": {
         "title": "Operationele Dashboards",
         "desc": "Realtime visualisatie van KPI's, voorraad en bedrijfslogica. Controleer de gezondheid van je bedrijf in één oogopslag."
@@ -2115,9 +2115,44 @@
         "desc": "Drag-and-drop planners aangepast aan de structuur en ploegen van jouw specifieke team."
       }
     },
+    "Metrics": {
+      "timeSaved": "Typische besparing op administratietijd",
+      "costReduction": "Potentiële software- en operatiebesparing",
+      "licensingFees": "Platformkosten per gebruiker",
+      "deliveryTime": "Eerste operationele versie"
+    },
+    "Transformation": {
+      "title": "Van spreadsheetchaos naar operatieplatform",
+      "subtitle": "We zetten kwetsbare bestanden, dubbele data en losse tools om in één eigen systeem waarmee je team echt kan werken."
+    },
+    "Categories": {
+      "title": "Operationele modules die we kunnen koppelen",
+      "subtitle": "Begin met de workflows die de meeste frictie veroorzaken en breid het platform uit rond echt gebruik.",
+      "inventory": "Voorraad en assets",
+      "scheduling": "Planning en boekingen",
+      "reporting": "Rapportage en forecasting",
+      "access": "Rechten en audit trails",
+      "documents": "Documenten en goedkeuringen",
+      "workflows": "Workflowautomatisering"
+    },
+    "OperatingSystem": {
+      "title": "Eerst het besturingssysteem, daarna de AI",
+      "subtitle": "Veel bedrijven hebben niet eerst een chatbot nodig. Ze moeten hun bedrijfslogica, data en dagelijkse operatie structureren in software die het team echt kan gebruiken.",
+      "items": [
+        "Klantdossiers, historie, documentatie en status in één doorzoekbare CRM-laag.",
+        "Agenda's, boekingen, leverancierscoördinatie en interne communicatie gekoppeld aan dezelfde workflow.",
+        "Offertes, budgetten, goedkeuringen, facturatie en overdracht van sales naar delivery zonder dubbele invoer.",
+        "Personeel, taken, urenregistratie, aanwezigheid en mobiele app-toegang voor mensen buiten kantoor.",
+        "Rechten, audit trails, dashboards en operationele data klaar voor automatisering."
+      ],
+      "aiLayer": {
+        "title": "AI-laag erbovenop",
+        "desc": "Zodra de ERP/CRM-basis gestructureerd is, kan het team de AI-laag vragen: wat is er met deze klant gebeurd? Welke facturen zijn geblokkeerd? Wie is morgen beschikbaar? Welke leveranciersdocumenten ontbreken? Het model werkt omdat het systeem eronder schoon is."
+      }
+    },
     "Process": {
-      "title": "Hoe Wij Jouw Tool Bouwen",
-      "subtitle": "Van workflow-audit tot tool in productie — zonder verrassingen of bloat.",
+      "title": "Hoe Wij Jouw Operatieplatform Bouwen",
+      "subtitle": "Van workflow-audit tot ERP/CRM-basis en AI-ready operatie — zonder verrassingen of bloat.",
       "steps": [
         {
           "number": "01",
@@ -2142,8 +2177,8 @@
       ]
     },
     "FAQ": {
-      "title": "FAQ Interne Tools",
-      "subtitle": "Stop met vechten tegen je software. Begin met bouwen wat je nodig hebt.",
+      "title": "FAQ Maatwerk ERP/CRM",
+      "subtitle": "Stop met vechten tegen losse software. Bouw de operationele laag die je nodig hebt.",
       "questions": [
         {
           "q": "Waarom een maatwerk interne tool bouwen in plaats van Retool of Appsmith gebruiken?",
@@ -2156,13 +2191,13 @@
       ]
     },
     "CTA": {
-      "title": "Klaar om je Spreadsheets te Vervangen?",
-      "subtitle": "Gratis scoping-sessie. Wij mappen je workflow, stellen een oplossing voor en schatten tijdlijnen en kosten. Zonder verplichting.",
-      "button": "Gratis Scoping-gesprek Boeken"
+      "title": "Klaar om je operatieplatform te bouwen?",
+      "subtitle": "Gratis scoping-sessie. Wij mappen je workflows, bepalen de ERP/CRM-basis en definiëren waar AI thuishoort. Zonder verplichting.",
+      "button": "Boek een platform-scopegesprek"
     },
     "SEO": {
-      "description": "CodeHunter Lab bouwt maatwerk interne tools, admin-panelen en operatieportalen voor bedrijven in Nederland. Wij vervangen spreadsheets en dure low-code platforms door volledig eigen software — zonder kosten per gebruiker, zonder leveranciersafhankelijkheid. Gevestigd in Leiden.",
-      "keywords": "maatwerk interne tools nederland, interne tools ontwikkelaar leiden, admin-paneel ontwikkeling, retool appsmith vervangen, maatwerk software ontwikkeling"
+      "description": "CodeHunter Lab bouwt maatwerk ERP/CRM-platforms, interne tools, admin-dashboards en operatieportalen voor bedrijven in Nederland. Wij vervangen spreadsheets en losse SaaS door eigen software voor klanten, documenten, agenda, leveranciers, offertes, personeel, facturatie, mobiele toegang en een AI-laag erbovenop.",
+      "keywords": "maatwerk ERP CRM Nederland, maatwerk interne tools nederland, interne tools ontwikkelaar leiden, admin-paneel ontwikkeling, retool appsmith vervangen, maatwerk software ontwikkeling"
     }
   },
   "AIAutomationNL": {

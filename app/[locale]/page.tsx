@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustProofSection from "@/components/sections/TrustProofSection";
-import StartHereSection from "@/components/sections/StartHereSection";
 import ExpertiseSection from "@/components/sections/02ExpertiseSection";
 import WhatWeBuildSection from "@/components/sections/WhatWeBuildSection";
 import PackagesSection from "@/components/sections/PackagesSection";
@@ -90,7 +89,6 @@ export default function Home({ params }: { params: { locale: string } }) {
         />
         <HeroSection />
         <TrustProofSection />
-        <StartHereSection />
         <ExpertiseSection />
         <WhatWeBuildSection />
         <PackagesSection />

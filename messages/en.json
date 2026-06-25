@@ -790,10 +790,10 @@
       },
       {
         "situation": "You run on spreadsheets",
-        "title": "Internal Tools",
-        "desc": "Replace repetitive spreadsheet tasks with dashboards, portals and approval flows.",
+        "title": "Custom ERP/CRM Platform",
+        "desc": "Replace spreadsheet operations with an owned ERP/CRM layer for clients, documents, staff, quotes, invoices and AI-ready workflows.",
         "href": "/services/custom-internal-tools-development",
-        "cta": "Build a tool"
+        "cta": "Build the platform"
       },
       {
         "situation": "Your product is slow",
@@ -928,9 +928,9 @@
             "href": "/it-system-integration"
           },
           {
-            "title": "Internal AI Tools",
-            "desc": "Custom dashboards and internal tools that reduce repetitive admin work and make everyday operational decisions easier.",
-            "link": "Custom Internal Tools",
+            "title": "ERP/CRM + Internal AI Tools",
+            "desc": "Custom ERP/CRM layers, dashboards and internal tools that structure operations before AI makes them easier to query and automate.",
+            "link": "Custom ERP/CRM Platform",
             "href": "/services/custom-internal-tools-development"
           },
           {
@@ -1071,7 +1071,7 @@
     "description": "We are not just an AI shop. We combine production engineering, product taste, practical training, and senior technical leadership for teams that need clarity and systems that actually ship.",
     "cta": {
       "initialize": "Book a Strategy Call",
-      "caseStudies": "See Selected Work"
+      "caseStudies": "Explore Product Studio"
     },
     "ctaNote": "30 min · No commitment · Response within 24h · We'll tell you if it is not worth building"
   },
@@ -1734,9 +1734,9 @@
           "href": "/it-system-integration"
         },
         {
-          "title": "Internal AI Tools",
-          "desc": "Build internal tools and dashboards that remove repetitive admin work, fragmented reporting, and manual reconciliation.",
-          "label": "Custom Internal Tools",
+          "title": "ERP/CRM + Internal AI Tools",
+          "desc": "Sometimes the first AI step is software architecture: a custom ERP/CRM, internal tool or operating layer that structures clients, documents, calendar, staff, tasks and invoices before AI sits on top.",
+          "label": "Custom ERP/CRM Platform",
           "href": "/services/custom-internal-tools-development"
         },
         {
@@ -2070,19 +2070,19 @@
   },
   "InternalTools": {
     "Hero": {
-      "badge": "CUSTOM INTERNAL TOOLS DEVELOPMENT",
+      "badge": "CUSTOM ERP/CRM & OPERATIONS PLATFORM",
       "title": {
-        "part1": "Your Business,",
-        "highlight": "Your Way"
+        "part1": "Your Operations,",
+        "highlight": "One System"
       },
-      "description": "Off-the-shelf software never fits perfectly. We build <strong>custom internal tools</strong> that map exactly to your workflows. Escape the <strong>spreadsheet chaos</strong>.",
+      "description": "Before AI can automate the business, the operation often needs a real software layer. We build custom ERP/CRM platforms for clients, documents, calendar, suppliers, quotes, staff, tasks, invoicing and internal communication — then add an AI layer on top so teams can ask questions and trigger work from one place.",
       "cta": "Start Building"
     },
     "Comparison": {
-      "title": "Why Custom vs Low-Code?",
+      "title": "Why Custom ERP/CRM vs Low-Code?",
       "recommended": "Recommended",
       "custom": {
-        "title": "Custom Development (Our Method)",
+        "title": "Owned Operating Platform",
         "points": [
           "No per-user monthly fees",
           "Fully flexible UI/UX",
@@ -2101,7 +2101,7 @@
       }
     },
     "Tools": {
-      "title": "What We Build",
+      "title": "What The Platform Can Include",
       "dashboards": {
         "title": "Operational Dashboards",
         "desc": "Real-time visualisation of KPIs, inventory and logic. Monitor the health of your business at a glance."
@@ -2115,9 +2115,44 @@
         "desc": "Drag-and-drop planners tailored to your team's specific structure and shifts."
       }
     },
+    "Metrics": {
+      "timeSaved": "Typical admin time saved",
+      "costReduction": "Potential software and ops reduction",
+      "licensingFees": "Per-user platform fees",
+      "deliveryTime": "First operational version"
+    },
+    "Transformation": {
+      "title": "From spreadsheet chaos to operating platform",
+      "subtitle": "We turn fragile files, duplicated data and disconnected tools into one owned system your team can actually run from."
+    },
+    "Categories": {
+      "title": "Operational modules we can connect",
+      "subtitle": "Start with the workflows that create the most friction, then expand the platform around real usage.",
+      "inventory": "Inventory and assets",
+      "scheduling": "Scheduling and bookings",
+      "reporting": "Reporting and forecasting",
+      "access": "Permissions and audit trails",
+      "documents": "Documents and approvals",
+      "workflows": "Workflow automation"
+    },
+    "OperatingSystem": {
+      "title": "First the operating system, then the AI",
+      "subtitle": "Many companies do not need a chatbot first. They need their business logic, records and daily operations structured into software the team can actually use.",
+      "items": [
+        "Client records, history, documentation and status in one searchable CRM layer.",
+        "Calendars, bookings, supplier coordination and internal communication connected to the same workflow.",
+        "Quotes, budgets, approvals, invoicing and handoff from sales to delivery without duplicate entry.",
+        "Staff, tasks, time tracking, attendance and mobile app access for people working away from a desk.",
+        "Permissions, audit trails, reporting dashboards and operational data ready for automation."
+      ],
+      "aiLayer": {
+        "title": "AI layer on top",
+        "desc": "Once the ERP/CRM foundation is structured, teams can ask the AI layer: What happened with this client? Which invoices are blocked? Who is available tomorrow? What supplier documents are missing? The model works because the system underneath is clean."
+      }
+    },
     "Process": {
-      "title": "How We Build Your Tool",
-      "subtitle": "From workflow audit to production tool — no surprises, no bloat.",
+      "title": "How We Build Your Operating Platform",
+      "subtitle": "From workflow audit to ERP/CRM foundation and AI-ready operations — no surprises, no bloat.",
       "steps": [
         {
           "number": "01",
@@ -2142,8 +2177,8 @@
       ]
     },
     "FAQ": {
-      "title": "Internal Tools FAQ",
-      "subtitle": "Stop fighting your software. Start building what you need.",
+      "title": "Custom ERP/CRM FAQ",
+      "subtitle": "Stop fighting disconnected software. Start building the operating layer you need.",
       "questions": [
         {
           "q": "Why build a custom internal tool instead of using Retool or Appsmith?",
@@ -2156,13 +2191,13 @@
       ]
     },
     "CTA": {
-      "title": "Ready to Replace Your Spreadsheets?",
-      "subtitle": "Free scoping session. We map your workflow, propose a solution and estimate timelines and costs. No commitment.",
-      "button": "Book a Free Scoping Call"
+      "title": "Ready to Build Your Operating Platform?",
+      "subtitle": "Free scoping session. We map your workflows, identify the ERP/CRM foundation, and define where AI belongs. No commitment.",
+      "button": "Book a Platform Scoping Call"
     },
     "SEO": {
-      "description": "CodeHunter Lab builds custom internal tools, admin dashboards and operations portals for businesses in the Netherlands. We replace spreadsheets and expensive low-code platforms with fully owned custom software — no per-user fees, no vendor dependency. Based in Leiden.",
-      "keywords": "custom internal tools Netherlands, internal tools developer Leiden, admin panel development, replace retool appsmith, maatwerk software ontwikkeling"
+      "description": "CodeHunter Lab builds custom ERP/CRM platforms, internal tools, admin dashboards and operations portals for businesses in the Netherlands. We replace spreadsheets and disconnected SaaS with owned software for clients, documents, calendar, suppliers, quotes, staff, invoicing, mobile access and an AI layer on top.",
+      "keywords": "custom ERP CRM Netherlands, custom internal tools Netherlands, internal tools developer Leiden, admin panel development, replace retool appsmith, maatwerk software ontwikkeling"
     }
   },
   "AIAutomationNL": {

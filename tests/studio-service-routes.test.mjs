@@ -102,3 +102,60 @@ test("process navigation anchor exists on the process section", () => {
 
   assert.match(source, /id="process-contact"/);
 });
+
+test("custom internal tools page presents ERP CRM operations platforms with AI layer", () => {
+  const source = readSource(
+    "app/[locale]/services/custom-internal-tools-development/PageContent.tsx"
+  );
+  const page = readSource("app/[locale]/services/custom-internal-tools-development/page.tsx");
+  const servicesHub = readSource("app/[locale]/services/page.tsx");
+  const en = messages.en.InternalTools;
+
+  assert.match(source, /OperatingSystemSection/);
+  assert.match(page, /ERP\/CRM/i);
+  assert.match(servicesHub, /custom ERP\/CRM/i);
+  assert.match(en.Hero.description, /ERP\/CRM/i);
+  assert.match(en.Hero.description, /AI layer/i);
+  assert.match(en.OperatingSystem.title, /operating system/i);
+  assert.match(en.OperatingSystem.items.join(" "), /client records/i);
+  assert.match(en.OperatingSystem.items.join(" "), /staff/i);
+  assert.match(en.OperatingSystem.items.join(" "), /mobile/i);
+  assert.match(en.OperatingSystem.items.join(" "), /quotes/i);
+  assert.match(en.OperatingSystem.aiLayer.desc, /ask/i);
+  assert.match(en.SEO.description, /ERP\/CRM/i);
+});
+
+test("custom internal tools operating system section uses the CodeHunter UX system map", () => {
+  const source = readSource(
+    "app/[locale]/services/custom-internal-tools-development/PageContent.tsx"
+  );
+
+  assert.match(source, /SystemMapVisual/);
+  assert.match(source, /OPERATING LAYER/);
+  assert.match(source, /AI COMMAND LAYER/);
+  assert.match(source, /data-erp-crm-capability/);
+  assert.match(source, /border-hunter-green\/20/);
+  assert.match(source, /shadow-\[0_30px_90px_-60px_rgba\(0,230,162,0\.85\)\]/);
+});
+
+test("custom internal tools page has complete locale copy for rendered sections", () => {
+  for (const [locale, localeMessages] of Object.entries(messages)) {
+    const internalTools = localeMessages.InternalTools;
+
+    assert.ok(internalTools.Metrics, `${locale} should define InternalTools.Metrics`);
+    assert.ok(internalTools.Transformation, `${locale} should define InternalTools.Transformation`);
+    assert.ok(internalTools.Categories, `${locale} should define InternalTools.Categories`);
+    assert.equal(typeof internalTools.Transformation.title, "string");
+    assert.equal(typeof internalTools.Transformation.subtitle, "string");
+  }
+});
+
+test("custom internal tools page uses hunter green and orange instead of purple accents", () => {
+  const source = readSource(
+    "app/[locale]/services/custom-internal-tools-development/PageContent.tsx"
+  );
+
+  assert.doesNotMatch(source, /purple/);
+  assert.match(source, /hunter-green/);
+  assert.match(source, /hunter-orange/);
+});

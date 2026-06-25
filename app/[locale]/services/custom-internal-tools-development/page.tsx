@@ -16,18 +16,19 @@ export async function generateMetadata({
     locale: params.locale,
     path,
     title: getLocaleValue(params.locale, {
-      en: "Custom Internal Tools Development | CodeHunter Lab",
-      es: "Desarrollo de herramientas internas a medida | CodeHunter Lab",
-      nl: "Maatwerk interne tools ontwikkelen | CodeHunter Lab",
+      en: "Custom ERP/CRM and Internal Tools Development | CodeHunter Lab",
+      es: "ERP/CRM a medida y herramientas internas | CodeHunter Lab",
+      nl: "Maatwerk ERP/CRM en interne tools | CodeHunter Lab",
     }),
     description: getLocaleValue(params.locale, {
-      en: "Custom internal tools, admin panels, and operations dashboards for companies that want to replace manual work and per-user SaaS costs.",
-      es: "Herramientas internas a medida, paneles de administración y cuadros de mando operativos para empresas que quieren sustituir trabajo manual y licencias SaaS por usuario.",
-      nl: "Maatwerk interne tools, adminpanelen en operationele dashboards voor bedrijven die handmatig werk en SaaS-kosten per gebruiker willen vervangen.",
+      en: "Custom ERP/CRM platforms, internal tools, admin panels, mobile workflows, and AI-ready operations dashboards for companies replacing manual work and disconnected SaaS.",
+      es: "Plataformas ERP/CRM a medida, herramientas internas, paneles, flujos móviles y dashboards preparados para IA para empresas que sustituyen trabajo manual y SaaS desconectado.",
+      nl: "Maatwerk ERP/CRM-platforms, interne tools, adminpanelen, mobiele workflows en AI-ready dashboards voor bedrijven die handwerk en losse SaaS vervangen.",
     }),
     keywords: getLocaleValue(params.locale, {
       en: [
         "build internal tools for business",
+        "custom ERP CRM development",
         "custom admin panel development",
         "workflow automation consulting",
         "replace excel with app",
@@ -35,6 +36,7 @@ export async function generateMetadata({
       ],
       es: [
         "herramientas internas a medida",
+        "desarrollo ERP CRM a medida",
         "desarrollo panel de administración",
         "consultoría automatización de procesos",
         "sustituir excel por aplicación",
@@ -42,6 +44,7 @@ export async function generateMetadata({
       ],
       nl: [
         "maatwerk interne tools",
+        "maatwerk ERP CRM ontwikkeling",
         "adminpaneel ontwikkeling",
         "workflow automatisering consultancy",
         "excel vervangen door app",
@@ -53,15 +56,15 @@ export async function generateMetadata({
 
 export default function Page({ params }: { params: { locale: string } }) {
   const serviceName = getLocaleValue(params.locale, {
-    en: "Custom Internal Tools Development",
-    es: "Desarrollo de herramientas internas a medida",
-    nl: "Ontwikkeling van maatwerk interne tools",
+    en: "Custom ERP/CRM and Internal Tools Development",
+    es: "ERP/CRM a medida y herramientas internas",
+    nl: "Maatwerk ERP/CRM en interne tools",
   });
 
   const serviceDescription = getLocaleValue(params.locale, {
-    en: "Bespoke internal tools, admin dashboards, and workflow systems to replace manual operations and reduce software overhead.",
-    es: "Herramientas internas a medida, paneles de administración y sistemas de trabajo para sustituir tareas manuales y reducir la carga de software.",
-    nl: "Maatwerk interne tools, admin-dashboards en workflowsystemen om handmatig werk te vervangen en software-overhead te verlagen.",
+    en: "Bespoke ERP/CRM platforms, internal tools, mobile workflows, and AI-ready operations systems to replace manual operations and disconnected software.",
+    es: "Plataformas ERP/CRM a medida, herramientas internas, flujos móviles y sistemas operativos preparados para IA para sustituir tareas manuales y software desconectado.",
+    nl: "Maatwerk ERP/CRM-platforms, interne tools, mobiele workflows en AI-ready operationele systemen om handwerk en losse software te vervangen.",
   });
 
   return (

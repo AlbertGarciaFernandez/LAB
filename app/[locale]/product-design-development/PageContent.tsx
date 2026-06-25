@@ -1047,7 +1047,7 @@ function PricingSection({
               whileHover={{ y: plan.recommended ? -10 : -6 }}
               className={`relative flex flex-col rounded-3xl border p-8 ${
                 plan.recommended
-                  ? "overflow-hidden border-hunter-green/50 bg-hunter-green/[0.06] shadow-[0_28px_90px_-52px_rgba(0,230,162,0.9)]"
+                  ? "border-hunter-green/50 bg-hunter-green/[0.06] pt-12 shadow-[0_28px_90px_-52px_rgba(0,230,162,0.9)]"
                   : "border-white/10 bg-white/[0.02] transition-colors hover:border-hunter-orange/35"
               }`}
             >
@@ -1055,7 +1055,7 @@ function PricingSection({
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,230,162,0.18),transparent_34%),radial-gradient(circle_at_100%_80%,rgba(255,122,60,0.14),transparent_30%)]" />
               )}
               {plan.recommended && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-hunter-green/30 bg-hunter-green/10 px-4 py-1 font-mono text-xs font-black text-hunter-green">
+                <div className="absolute left-1/2 top-5 z-20 -translate-x-1/2 whitespace-nowrap rounded-full border border-hunter-green/30 bg-near-black px-4 py-1 font-mono text-xs font-black text-hunter-green shadow-[0_0_24px_rgba(0,230,162,0.18)]">
                   {recommendedLabel}
                 </div>
               )}

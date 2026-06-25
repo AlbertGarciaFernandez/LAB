@@ -51,6 +51,13 @@ test("AI consulting page uses the approved conversion section components", () =>
   assert.match(page, /id="roi-calculator"/);
 });
 
+test("AI consulting copy explains when software architecture comes before AI", () => {
+  const messages = readSource("messages/en.json");
+
+  assert.match(messages, /Sometimes the first AI step is software architecture/);
+  assert.match(messages, /custom ERP\/CRM/i);
+});
+
 test("agent use cases are mapped to LEO ATLAS and ORION", () => {
   const topAgents = readSource("components/sections/TopAgentsSection.tsx");
 

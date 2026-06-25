@@ -52,6 +52,13 @@ test("home and ai-consulting both expose the full contact section", () => {
   assert.match(aiConsulting, /ContactSection/);
 });
 
+test("custom internal tools contact CTAs resolve to the real contact section", () => {
+  const page = readSource("app/[locale]/services/custom-internal-tools-development/PageContent.tsx");
+
+  assert.match(page, /href="#contact"/);
+  assert.match(page, /ContactSection/);
+});
+
 test("layout mounts a floating contact CTA using the compact form", () => {
   const layout = readSource("app/[locale]/layout.tsx");
   const cta = readSource("components/ui/FloatingContactCta.tsx");

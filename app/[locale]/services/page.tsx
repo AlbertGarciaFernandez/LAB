@@ -193,9 +193,9 @@ export default function ServicesPage({ params }: { params: { locale: string } })
     {
       label: copy({ en: "Internal Tools", es: "Herramientas Internas", nl: "Interne Tools" }),
       desc: copy({
-        en: "Dashboards, portals and approval flows that replace spreadsheet operations.",
-        es: "Dashboards, portales y aprobaciones que sustituyen operaciones en hojas de cálculo.",
-        nl: "Dashboards, portals en goedkeuringsflows die spreadsheet-operaties vervangen.",
+        en: "Custom ERP/CRM, mobile workflows and AI-ready operating layers that replace spreadsheet operations.",
+        es: "ERP/CRM a medida, flujos móviles y capas operativas listas para IA que sustituyen operaciones en hojas de cálculo.",
+        nl: "Maatwerk ERP/CRM, mobiele workflows en AI-ready operationele lagen die spreadsheet-operaties vervangen.",
       }),
       href: "/services/custom-internal-tools-development",
     },

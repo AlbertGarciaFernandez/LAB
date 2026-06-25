@@ -131,7 +131,7 @@ const HeroSection: React.FC = () => {
             </Link>
 
             <Link
-              href="/case-studies"
+              href="/product-design-development"
               locale={locale === "en" ? undefined : "en"}
               className="group inline-flex items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.02] px-12 py-5 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-hunter-orange/30 hover:bg-hunter-orange/5 hover:text-hunter-orange hover:shadow-[0_15px_30px_-10px_rgba(255,122,60,0.15)]"
             >
