@@ -11,80 +11,36 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { SUITE_PRODUCTS, type SuiteProduct } from "@/lib/suite/registry";
 import { cn } from "@/lib/utils";
 
-interface Product {
-  id: string;
-  name: string;
-  shortName: string;
-  colorClass: string;
-  href?: string;
-  status: "live" | "soon";
-}
+const colorClassMap: Record<string, string> = {
+  blue: "bg-blue-500",
+  purple: "bg-purple-500",
+  green: "bg-green-500",
+  orange: "bg-orange-500",
+  pink: "bg-pink-500",
+  cyan: "bg-cyan-500",
+  amber: "bg-amber-500",
+};
 
 interface ProductSwitcherProps {
   locale: string;
   collapsed?: boolean;
 }
 
+function getProductHref(product: SuiteProduct, locale: string) {
+  return product.href ? `/${locale}${product.href}` : undefined;
+}
+
 export default function ProductSwitcher({ locale, collapsed = false }: ProductSwitcherProps) {
   const pathname = usePathname();
 
-  const products: Product[] = [
-    {
-      id: "crm",
-      name: "HunterCRM",
-      shortName: "CRM",
-      colorClass: "bg-blue-500",
-      href: `/${locale}/suite/crm`,
-      status: "live",
-    },
-    {
-      id: "erp",
-      name: "HunterERP",
-      shortName: "ERP",
-      colorClass: "bg-purple-500",
-      status: "soon",
-    },
-    {
-      id: "desk",
-      name: "HunterDesk",
-      shortName: "Desk",
-      colorClass: "bg-green-500",
-      status: "soon",
-    },
-    {
-      id: "bookings",
-      name: "HunterBookings",
-      shortName: "Bookings",
-      colorClass: "bg-orange-500",
-      status: "soon",
-    },
-    {
-      id: "flow",
-      name: "HunterFlow",
-      shortName: "Flow",
-      colorClass: "bg-pink-500",
-      status: "soon",
-    },
-    {
-      id: "analytics",
-      name: "HunterAnalytics",
-      shortName: "Analytics",
-      colorClass: "bg-cyan-500",
-      status: "soon",
-    },
-    {
-      id: "ai",
-      name: "HunterAI",
-      shortName: "AI",
-      colorClass: "bg-indigo-500",
-      status: "soon",
-    },
-  ];
-
   const currentProduct =
-    products.find((p) => (p.href ? pathname.startsWith(p.href) : false)) ?? products[0];
+    SUITE_PRODUCTS.find((product) => {
+      const href = getProductHref(product, locale);
+      return href ? pathname.startsWith(href) : false;
+    }) ?? SUITE_PRODUCTS[0];
 
   return (
     <DropdownMenu>
@@ -97,7 +53,12 @@ export default function ProductSwitcher({ locale, collapsed = false }: ProductSw
           )}
           aria-label="Switch product"
         >
-          <span className={cn("h-2.5 w-2.5 rounded-full", currentProduct.colorClass)} />
+          <span
+            className={cn(
+              "h-2.5 w-2.5 rounded-full",
+              colorClassMap[currentProduct.color] ?? colorClassMap.blue
+            )}
+          />
           {!collapsed && (
             <>
               <span className="truncate">{currentProduct.name}</span>
@@ -107,11 +68,14 @@ export default function ProductSwitcher({ locale, collapsed = false }: ProductSw
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="w-56">
-        {products.map((product) => {
+        {SUITE_PRODUCTS.map((product) => {
           const isLive = product.status === "live";
+          const href = getProductHref(product, locale);
+          const colorClass = colorClassMap[product.color] ?? colorClassMap.blue;
+
           const content = (
             <>
-              <span className={cn("h-2.5 w-2.5 rounded-full", product.colorClass)} />
+              <span className={cn("h-2.5 w-2.5 rounded-full", colorClass)} />
               <span className="flex-1 truncate text-sm">{product.name}</span>
               <span
                 className={cn(
@@ -124,9 +88,9 @@ export default function ProductSwitcher({ locale, collapsed = false }: ProductSw
             </>
           );
 
-          return isLive && product.href ? (
+          return isLive && href ? (
             <DropdownMenuItem key={product.id} asChild className="cursor-pointer">
-              <Link href={product.href}>{content}</Link>
+              <Link href={href}>{content}</Link>
             </DropdownMenuItem>
           ) : (
             <DropdownMenuItem key={product.id} disabled className="opacity-70">

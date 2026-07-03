@@ -1,3 +1,5 @@
+import ProductPlaceholder from "@/components/suite/product-placeholder";
+
 export default function BookingsPage({ params }: { params: { locale: string } }) {
-  return <div className="p-8">Bookings ({params.locale})</div>;
+  return <ProductPlaceholder slug="bookings" locale={params.locale} />;
 }

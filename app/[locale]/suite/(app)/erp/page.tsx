@@ -1,3 +1,5 @@
+import ProductPlaceholder from "@/components/suite/product-placeholder";
+
 export default function ErpPage({ params }: { params: { locale: string } }) {
-  return <div className="p-8">ERP ({params.locale})</div>;
+  return <ProductPlaceholder slug="erp" locale={params.locale} />;
 }

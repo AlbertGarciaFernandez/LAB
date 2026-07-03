@@ -4,10 +4,10 @@ import Link from "next/link";
 import { m } from "framer-motion";
 import {
   Users,
-  Boxes,
-  Headset,
+  Building2,
+  Headphones,
   CalendarCheck,
-  GitBranch,
+  Workflow,
   BarChart3,
   Sparkles,
   ArrowRight,
@@ -16,57 +16,57 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { suiteProducts } from "@/content/suite/products";
-import type { SuiteProduct } from "@/content/suite/products";
+import { SUITE_PRODUCTS } from "@/lib/suite/registry";
+import type { SuiteProduct } from "@/lib/suite/registry";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Users,
-  Boxes,
-  Headset,
+  Building2,
+  Headphones,
   CalendarCheck,
-  GitBranch,
+  Workflow,
   BarChart3,
   Sparkles,
 };
 
 const colorStyles: Record<string, { text: string; bg: string; border: string; glow: string }> = {
-  "hunter-green": {
-    text: "text-hunter-green",
-    bg: "bg-hunter-green/10",
-    border: "border-hunter-green/20",
-    glow: "shadow-hunter-green/20",
-  },
-  "blue-500": {
+  blue: {
     text: "text-blue-500",
     bg: "bg-blue-500/10",
     border: "border-blue-500/20",
     glow: "shadow-blue-500/20",
   },
-  "violet-500": {
-    text: "text-violet-500",
-    bg: "bg-violet-500/10",
-    border: "border-violet-500/20",
-    glow: "shadow-violet-500/20",
+  purple: {
+    text: "text-purple-500",
+    bg: "bg-purple-500/10",
+    border: "border-purple-500/20",
+    glow: "shadow-purple-500/20",
   },
-  "hunter-orange": {
-    text: "text-hunter-orange",
-    bg: "bg-hunter-orange/10",
-    border: "border-hunter-orange/20",
-    glow: "shadow-hunter-orange/20",
+  green: {
+    text: "text-green-500",
+    bg: "bg-green-500/10",
+    border: "border-green-500/20",
+    glow: "shadow-green-500/20",
   },
-  "cyan-500": {
+  orange: {
+    text: "text-orange-500",
+    bg: "bg-orange-500/10",
+    border: "border-orange-500/20",
+    glow: "shadow-orange-500/20",
+  },
+  pink: {
+    text: "text-pink-500",
+    bg: "bg-pink-500/10",
+    border: "border-pink-500/20",
+    glow: "shadow-pink-500/20",
+  },
+  cyan: {
     text: "text-cyan-500",
     bg: "bg-cyan-500/10",
     border: "border-cyan-500/20",
     glow: "shadow-cyan-500/20",
   },
-  "emerald-500": {
-    text: "text-emerald-500",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
-    glow: "shadow-emerald-500/20",
-  },
-  "amber-400": {
+  amber: {
     text: "text-amber-400",
     bg: "bg-amber-400/10",
     border: "border-amber-400/20",
@@ -264,7 +264,7 @@ export default function SuitePage() {
             viewport={{ once: true, margin: "-50px" }}
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {suiteProducts.map((product) => (
+            {SUITE_PRODUCTS.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </m.div>
