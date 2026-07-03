@@ -41,6 +41,7 @@ The immediate problem is that several tests are failing because they assert old 
 ### Task 1: Add Shared Test Helpers
 
 **Files:**
+
 - Create: `tests/helpers/source.mjs`
 - Modify: none
 - Test: `node --test tests/helpers/source.mjs` is not needed because helper has no tests; verify by using it in later tasks.
@@ -92,7 +93,10 @@ export function assertClassContains(source, elementPattern, requiredClasses) {
 
   const className = match[1];
   for (const classToken of requiredClasses) {
-    assert.match(className, new RegExp(`(^|\\s)${classToken.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`));
+    assert.match(
+      className,
+      new RegExp(`(^|\\s)${classToken.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`)
+    );
   }
 }
 
@@ -123,6 +127,7 @@ git commit -m "test: add shared source test helpers"
 ### Task 2: Stabilize Contact System Tests
 
 **Files:**
+
 - Modify: `tests/contact-system.test.mjs`
 - Test: `tests/contact-system.test.mjs`
 
@@ -182,6 +187,7 @@ git commit -m "test: stabilize contact system assertions"
 ### Task 3: Stabilize Package Section Link Tests
 
 **Files:**
+
 - Modify: `tests/packages-section-links.test.mjs`
 - Test: `tests/packages-section-links.test.mjs`
 
@@ -220,7 +226,8 @@ Replace `package card decorative overlay cannot intercept the details link` with
 
 ```js
 test("package card decorative overlays cannot intercept the details link", () => {
-  const overlays = source.match(/className="[^"]*pointer-events-none[^"]*absolute inset-0[^"]*"/g) ?? [];
+  const overlays =
+    source.match(/className="[^"]*pointer-events-none[^"]*absolute inset-0[^"]*"/g) ?? [];
 
   assert.ok(overlays.length >= 2, "Expected decorative overlays to opt out of pointer events");
 });
@@ -244,6 +251,7 @@ git commit -m "test: stabilize package link layering checks"
 ### Task 4: Stabilize AI Consulting Order Tests
 
 **Files:**
+
 - Modify: `tests/ai-consulting-order.test.mjs`
 - Test: `tests/ai-consulting-order.test.mjs`
 
@@ -310,6 +318,7 @@ git commit -m "test: stabilize ai consulting section assertions"
 ### Task 5: Strengthen SEO Locale Policy Tests
 
 **Files:**
+
 - Modify: `tests/seo-locale-policy.test.mjs`
 - Test: `tests/seo-locale-policy.test.mjs`
 
@@ -326,9 +335,24 @@ const source = readFileSync("utils/seo-locale.ts", "utf8");
 
 const policyCases = [
   { path: "/insights", canonicalLocale: "en", indexableLocales: ["en"], allowAlternates: false },
-  { path: "/insights/example", canonicalLocale: "en", indexableLocales: ["en"], allowAlternates: false },
-  { path: "/case-studies", canonicalLocale: "en", indexableLocales: ["en"], allowAlternates: false },
-  { path: "/case-studies/example", canonicalLocale: "en", indexableLocales: ["en"], allowAlternates: false },
+  {
+    path: "/insights/example",
+    canonicalLocale: "en",
+    indexableLocales: ["en"],
+    allowAlternates: false,
+  },
+  {
+    path: "/case-studies",
+    canonicalLocale: "en",
+    indexableLocales: ["en"],
+    allowAlternates: false,
+  },
+  {
+    path: "/case-studies/example",
+    canonicalLocale: "en",
+    indexableLocales: ["en"],
+    allowAlternates: false,
+  },
   { path: "/lab", canonicalLocale: "en", indexableLocales: ["en"], allowAlternates: false },
 ];
 
@@ -342,7 +366,10 @@ test("seo locale policy disables alternates for english-canonical sections", () 
     assert.match(source, new RegExp(`path\\.startsWith\\("${route.replace("/", "\\/")}"\\)`));
   }
 
-  assert.match(source, /return \{ canonicalLocale: "en", indexableLocales: \["en"\], allowAlternates: false \}/);
+  assert.match(
+    source,
+    /return \{ canonicalLocale: "en", indexableLocales: \["en"\], allowAlternates: false \}/
+  );
 });
 
 test("seo locale policy keeps alternates enabled for commercial routes", () => {
@@ -377,6 +404,7 @@ git commit -m "test: document seo locale policy contracts"
 ### Task 6: Strengthen Metadata Alternates Tests
 
 **Files:**
+
 - Modify: `tests/seo-metadata.test.mjs`
 - Test: `tests/seo-metadata.test.mjs`
 
@@ -439,6 +467,7 @@ git commit -m "test: strengthen metadata alternates coverage"
 ### Task 7: Add Redirect Coverage for Legacy SEO URLs
 
 **Files:**
+
 - Modify: `tests/seo-insights.test.mjs`
 - Test: `tests/seo-insights.test.mjs`
 
@@ -460,7 +489,10 @@ test("legacy industry SEO URLs redirect to consolidated localized pages", () => 
   for (const [source, destination] of redirects) {
     assert.match(nextConfig, new RegExp(`source:\\s*["']\\/${source}["']`));
     assert.match(nextConfig, new RegExp(`destination:\\s*["']\\/${destination}["']`));
-    assert.match(nextConfig, new RegExp(`source:\\s*["']\\/:locale\\(en\\|es\\|nl\\)\\/${source}["']`));
+    assert.match(
+      nextConfig,
+      new RegExp(`source:\\s*["']\\/:locale\\(en\\|es\\|nl\\)\\/${source}["']`)
+    );
     assert.match(nextConfig, new RegExp(`destination:\\s*["']\\/:locale\\/${destination}["']`));
   }
 });
@@ -484,6 +516,7 @@ git commit -m "test: cover localized legacy seo redirects"
 ### Task 8: Add Final Suite Health Check
 
 **Files:**
+
 - Modify: none unless previous tasks expose unrelated failures.
 - Test: full test and build suite.
 

@@ -24,6 +24,7 @@
 ### Task 1: Add a failing test for the new slugs
 
 **Files:**
+
 - Modify: `tests/english-only-editorial-routes.test.mjs`
 - Test: `tests/english-only-editorial-routes.test.mjs`
 
@@ -53,6 +54,7 @@ The failure should be an `assert.match` failure for the missing slug patterns, n
 ### Task 2: Add the AI productivity app case study
 
 **Files:**
+
 - Modify: `content/case-studies.ts`
 - Test: `tests/english-only-editorial-routes.test.mjs`
 
@@ -157,6 +159,7 @@ type CaseStudy = {
 ### Task 3: Add the Basic-Fit migration case study
 
 **Files:**
+
 - Modify: `content/case-studies.ts`
 - Test: `tests/english-only-editorial-routes.test.mjs`
 
@@ -249,6 +252,7 @@ No additional code should be needed if both new entries have unique slugs.
 ### Task 4: Verify the tests go green
 
 **Files:**
+
 - Test: `tests/english-only-editorial-routes.test.mjs`
 - Test: `tests/sitemap-locale-policy.test.mjs`
 

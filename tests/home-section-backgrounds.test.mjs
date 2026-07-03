@@ -83,7 +83,10 @@ test("hero communicates studio values without a separate capabilities badge grid
 
     assert.equal(messages.Hero.capabilitiesLabel, undefined, file);
     assert.equal(messages.Hero.capabilities, undefined, file);
-    assert.match(messages.Hero.description, /AI|IA|AI-systemen|product|producto|producten|leadership|liderazgo|leiderschap/i);
+    assert.match(
+      messages.Hero.description,
+      /AI|IA|AI-systemen|product|producto|producten|leadership|liderazgo|leiderschap/i
+    );
   }
 });
 
@@ -106,7 +109,10 @@ test("process and contact backgrounds are not clipped by overflow-hidden contain
   const contactSource = readFileSync("components/sections/ContactSection.tsx", "utf8");
 
   assert.doesNotMatch(processSource, /section className="[^"]*overflow-hidden/);
-  assert.doesNotMatch(contactSource, /className={`relative scroll-mt-32 overflow-hidden \$\{className\}`\.trim\(\)}/);
+  assert.doesNotMatch(
+    contactSource,
+    /className={`relative scroll-mt-32 overflow-hidden \$\{className\}`\.trim\(\)}/
+  );
 });
 
 test("process and contact push decorative backgrounds to the edges", () => {

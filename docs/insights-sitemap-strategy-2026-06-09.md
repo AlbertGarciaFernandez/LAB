@@ -1,6 +1,7 @@
 # Insights sitemap strategy — CodeHunterLab — 2026-06-09
 
 ## Objetivo
+
 Mantener `insights` como palanca real de tráfico y autoridad SEO **sin borrar contenido**. La idea no es eliminar artículos, sino decidir:
 
 1. qué artículos empujar activamente desde el sitemap,
@@ -8,25 +9,30 @@ Mantener `insights` como palanca real de tráfico y autoridad SEO **sin borrar c
 3. cuáles revisar/reescribir antes de volver a empujarlos.
 
 ## Regla operativa
+
 - **Mantener en sitemap**: piezas alineadas con el foco comercial de CodeHunterLab y/o con señal ya existente.
 - **Mantener publicadas pero fuera del sitemap**: piezas válidas, útiles para cluster temático e internal linking, pero aún sin señal suficiente.
 - **Revisar / reescribir**: piezas con posible canibalización, posicionamiento ambiguo o señal técnica/semántica que conviene corregir antes de empujarlas.
 
 ## Lo importante: no se borran páginas
+
 Quitar una URL del sitemap **no elimina la página**.
 La página puede seguir:
+
 - publicada,
 - con `200`,
 - con `index, follow`,
 - enlazada desde `/en/insights`, landings y artículos relacionados.
 
 ## Datos usados
+
 - Search Console 90 días
 - URL Inspection
 - sitemap live
 - estrategia comercial del sitio (AI consulting, automation, integrations, n8n, WhatsApp, React/Next)
 
 ## Resumen de clasificación
+
 - **Mantener en sitemap ahora**: 10
 - **Mantener publicadas fuera del sitemap**: 7
 - **Revisar / reescribir antes de empujar**: 4
@@ -78,7 +84,9 @@ Estas son las piezas que conviene empujar activamente porque refuerzan el posici
     - Útil para captación técnica y autoridad de stack.
 
 ### Nota
+
 Además de estas URLs, **también debe seguir en sitemap el hub**:
+
 - `/en/insights`
 
 Aunque no forma parte del array `insights`, estratégicamente debe permanecer como página hub indexable y enlazadora.
@@ -141,6 +149,7 @@ Aquí no recomiendo borrar. Recomiendo **mejorar posicionamiento, ángulo o can�
 ## Recomendación de fase 1 para insights
 
 ### En sitemap
+
 - `/en/insights`
 - `/en/insights/automation-consultancy-netherlands`
 - `/en/insights/ai-system-integration`
@@ -154,6 +163,7 @@ Aquí no recomiendo borrar. Recomiendo **mejorar posicionamiento, ángulo o can�
 - `/en/insights/nextjs-consultancy-europe`
 
 ### Publicadas pero fuera del sitemap
+
 - `/en/insights/workflow-automation-agency-netherlands`
 - `/en/insights/conversational-ai-consultant-netherlands`
 - `/en/insights/crm-integration-services-netherlands`
@@ -163,6 +173,7 @@ Aquí no recomiendo borrar. Recomiendo **mejorar posicionamiento, ángulo o can�
 - `/en/insights/app-developer-leiden`
 
 ### Revisar antes de empujar
+
 - `/en/insights/make-vs-n8n-netherlands`
 - `/en/insights/ai-consultants-netherlands`
 - `/en/insights/ai-voice-agent-netherlands`
@@ -171,15 +182,18 @@ Aquí no recomiendo borrar. Recomiendo **mejorar posicionamiento, ángulo o can�
 ---
 
 ## Cuándo pasar a fase 2
+
 Revisar en **3–4 semanas** tras consolidar fase 1.
 
 Subir a sitemap artículos del grupo “publicadas pero fuera del sitemap” cuando cumplan al menos una de estas:
+
 - ganan impresiones en GSC aunque sea por enlaces internos,
 - empiezan a salir como `Rastreada` o `Enviada e indexada`,
 - refuerzan una landing/service page que ya esté creciendo,
 - reciben mejoras de copy, internal linking o actualización de contenido.
 
 ## Siguiente paso técnico recomendado
+
 1. Mantener `/en/insights` como hub activo.
 2. Reducir el sitemap de insights a la selección anterior.
 3. Añadir mejor internal linking desde:

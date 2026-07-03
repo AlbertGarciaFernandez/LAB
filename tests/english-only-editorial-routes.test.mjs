@@ -107,8 +107,14 @@ test("case studies page includes trust proof metrics and delivery guarantees", (
 test("case studies page copy reflects the broader mix of work on the index", () => {
   const caseStudiesIndex = readFileSync("app/[locale]/case-studies/page.tsx", "utf8");
 
-  assert.match(caseStudiesIndex, /AI automation, product engineering, migrations, and systems integration/);
-  assert.match(caseStudiesIndex, /Delivery stories across AI products, internal platforms, ecommerce migrations, and integration-heavy systems work/);
+  assert.match(
+    caseStudiesIndex,
+    /AI automation, product engineering, migrations, and systems integration/
+  );
+  assert.match(
+    caseStudiesIndex,
+    /Delivery stories across AI products, internal platforms, ecommerce migrations, and integration-heavy systems work/
+  );
   assert.match(caseStudiesIndex, /AI automation case studies/);
   assert.match(caseStudiesIndex, /software migration case studies/);
   assert.match(caseStudiesIndex, /systems integration projects/);

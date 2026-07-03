@@ -1,22 +1,26 @@
 # SEO sitemap triage — CodeHunterLab — 2026-06-09
 
 ## Resumen
+
 - URLs evaluadas desde sitemap: 85
 - Mantener: 19
 - Diferir / vigilar: 27
 - Quitar temporalmente del sitemap: 39
 
 ## Criterio usado
+
 - **Mantener**: URL ya indexada (`PASS`) o con demanda clara en Search Console.
 - **Diferir**: URL válida pero aún inmadura, editorial o con señal canónica dudosa.
 - **Quitar temporalmente**: URL con `200` pero sin indexación ni demanda suficiente, especialmente variantes ES/NL o páginas core débiles.
 
 ## Conteo por locale
+
 - `en`: keep=13, defer=26, remove=8
 - `es`: keep=3, defer=0, remove=16
 - `nl`: keep=3, defer=1, remove=15
 
 ## Mantener
+
 - `/en/react-consulting` — 90d impr=507; 90d clicks=1; PASS / Enviada e indexada — indexed
 - `/en/ai-consulting` — 90d impr=322; 90d clicks=0; PASS / Enviada e indexada — indexed
 - `/en` — 90d impr=136; 90d clicks=6; PASS / Enviada e indexada — indexed
@@ -38,6 +42,7 @@
 - `/nl/aesthetic-clinic-automation-netherlands` — 90d impr=0; 90d clicks=0; PASS / Enviada e indexada — indexed
 
 ## Diferir / vigilar
+
 - `/en/insights/make-vs-n8n-netherlands` — 90d impr=2; 90d clicks=0; NEUTRAL / Duplicada: Google ha elegido una versión canónica diferente a la del usuario; google canonical=https://www.codehunterlab.com/insights/make-vs-n8n-netherlands — EN editorial page discovered but still immature; canonical mismatch
 - `/en/about` — 90d impr=0; 90d clicks=0; NEUTRAL / Descubierta: actualmente sin indexar — important section page but not yet indexed
 - `/en/case-studies` — 90d impr=0; 90d clicks=0; NEUTRAL / Google no reconoce esta URL — important section page but not yet indexed
@@ -67,6 +72,7 @@
 - `/nl` — 90d impr=0; 90d clicks=0; NEUTRAL / Descubierta: actualmente sin indexar — manual review
 
 ## Quitar temporalmente
+
 - `/en/expertise/custom-llm-development` — 90d impr=19; 90d clicks=0; NEUTRAL / Rastreada: actualmente sin indexar — EN page with low demand and no indexation yet
 - `/es/expertise/ai-agents-automation` — 90d impr=14; 90d clicks=0; NEUTRAL / Rastreada: actualmente sin indexar — localized variant with low demand and no indexation yet
 - `/en/expertise/n8n-migration-consulting` — 90d impr=13; 90d clicks=0; NEUTRAL / Rastreada: actualmente sin indexar — EN page with low demand and no indexation yet

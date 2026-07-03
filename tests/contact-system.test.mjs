@@ -53,7 +53,9 @@ test("home and ai-consulting both expose the full contact section", () => {
 });
 
 test("custom internal tools contact CTAs resolve to the real contact section", () => {
-  const page = readSource("app/[locale]/services/custom-internal-tools-development/PageContent.tsx");
+  const page = readSource(
+    "app/[locale]/services/custom-internal-tools-development/PageContent.tsx"
+  );
 
   assert.match(page, /href="#contact"/);
   assert.match(page, /ContactSection/);

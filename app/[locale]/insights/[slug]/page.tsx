@@ -136,9 +136,7 @@ export default function InsightArticlePage({ params }: { params: PageParams }) {
               <time dateTime={currentArticle.publishedAt}>
                 Published {currentArticle.publishedAt}
               </time>
-              <time dateTime={currentArticle.modifiedAt}>
-                Updated {currentArticle.modifiedAt}
-              </time>
+              <time dateTime={currentArticle.modifiedAt}>Updated {currentArticle.modifiedAt}</time>
               <span>{currentArticle.readingTime}</span>
             </div>
           </header>

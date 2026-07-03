@@ -36,10 +36,7 @@ export const hubFeaturedInsightSlugs = [
   "whatsapp-automation-for-business",
 ] as const;
 
-export const insightClusterMeta: Record<
-  InsightCluster,
-  { title: string; description: string }
-> = {
+export const insightClusterMeta: Record<InsightCluster, { title: string; description: string }> = {
   strategy: {
     title: "AI consulting & strategy",
     description:
@@ -209,7 +206,9 @@ const homepageFeaturedInsightSlugSet = new Set<string>(homepageFeaturedInsightSl
 const hubFeaturedInsightSlugSet = new Set<string>(hubFeaturedInsightSlugs);
 
 function sortByEditorialPriority(left: InsightArticle, right: InsightArticle) {
-  const strategicDelta = Number(strategicInsightSlugSet.has(right.slug)) - Number(strategicInsightSlugSet.has(left.slug));
+  const strategicDelta =
+    Number(strategicInsightSlugSet.has(right.slug)) -
+    Number(strategicInsightSlugSet.has(left.slug));
   if (strategicDelta !== 0) {
     return strategicDelta;
   }
@@ -227,19 +226,27 @@ export function getOrderedInsights(articles: InsightArticle[]) {
 }
 
 export function getHomepageFeaturedInsights(articles: InsightArticle[]) {
-  return getOrderedInsights(articles).filter((article) => homepageFeaturedInsightSlugSet.has(article.slug));
+  return getOrderedInsights(articles).filter((article) =>
+    homepageFeaturedInsightSlugSet.has(article.slug)
+  );
 }
 
 export function getHubFeaturedInsights(articles: InsightArticle[]) {
-  return getOrderedInsights(articles).filter((article) => hubFeaturedInsightSlugSet.has(article.slug));
+  return getOrderedInsights(articles).filter((article) =>
+    hubFeaturedInsightSlugSet.has(article.slug)
+  );
 }
 
 export function getStrategicInsights(articles: InsightArticle[]) {
-  return getOrderedInsights(articles).filter((article) => strategicInsightSlugSet.has(article.slug));
+  return getOrderedInsights(articles).filter((article) =>
+    strategicInsightSlugSet.has(article.slug)
+  );
 }
 
 export function getSupportingInsights(articles: InsightArticle[]) {
-  return getOrderedInsights(articles).filter((article) => !strategicInsightSlugSet.has(article.slug));
+  return getOrderedInsights(articles).filter(
+    (article) => !strategicInsightSlugSet.has(article.slug)
+  );
 }
 
 export function getClusterForInsight(slug: string): InsightCluster {

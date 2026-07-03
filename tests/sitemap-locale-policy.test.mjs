@@ -19,10 +19,16 @@ test("sitemap no longer publishes spanish and dutch insights variants by default
 test("sitemap applies seo locale policy to core, about, and case study routes", () => {
   const source = readFileSync("app/sitemap.ts", "utf8");
 
-  assert.match(source, /Object\.entries\(routeMeta\)[\s\S]*getSeoLocalePolicy\(route\)\.indexableLocales/);
+  assert.match(
+    source,
+    /Object\.entries\(routeMeta\)[\s\S]*getSeoLocalePolicy\(route\)\.indexableLocales/
+  );
   assert.match(source, /getSeoLocalePolicy\("\/about"\)\.indexableLocales/);
   assert.match(source, /getSeoLocalePolicy\("\/case-studies"\)\.indexableLocales/);
-  assert.match(source, /getSeoLocalePolicy\(`\/case-studies\/\$\{study\.slug\}`\)\.indexableLocales/);
+  assert.match(
+    source,
+    /getSeoLocalePolicy\(`\/case-studies\/\$\{study\.slug\}`\)\.indexableLocales/
+  );
 });
 
 test("case studies index lastModified matches the latest collection update", () => {

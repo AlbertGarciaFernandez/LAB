@@ -16,8 +16,14 @@ test("sitemap publishes only the prioritized english insights slugs", () => {
   assert.match(source, /"ai-agent-consulting"/);
   assert.match(source, /"react-consulting-services"/);
   assert.match(source, /"nextjs-consultancy-europe"/);
-  assert.match(source, /insights\.filter\(\(article\) => prioritizedInsightSlugs\.has\(article\.slug\)\)\.forEach/);
+  assert.match(
+    source,
+    /insights\.filter\(\(article\) => prioritizedInsightSlugs\.has\(article\.slug\)\)\.forEach/
+  );
 
-  assert.doesNotMatch(source, /"workflow-automation-agency-netherlands"[\s\S]*prioritizedInsightSlugs/);
+  assert.doesNotMatch(
+    source,
+    /"workflow-automation-agency-netherlands"[\s\S]*prioritizedInsightSlugs/
+  );
   assert.doesNotMatch(source, /"make-vs-n8n-netherlands"[\s\S]*prioritizedInsightSlugs/);
 });

@@ -40,7 +40,10 @@ test("homepage insights section consumes taxonomy-driven featured insights", () 
   assert.doesNotMatch(section, /const featuredSlugs = new Set/);
 
   assert.match(enMessages, /Buyer education for AI systems and operational automation\./);
-  assert.match(enMessages, /Strategic reads on AI agents, WhatsApp workflows, system integration, and n8n decisions/);
+  assert.match(
+    enMessages,
+    /Strategic reads on AI agents, WhatsApp workflows, system integration, and n8n decisions/
+  );
 });
 
 test("insights hub exposes featured, strategic clusters, and supporting reads", () => {
@@ -61,8 +64,14 @@ test("insight article pages render related insights and semantic time tags", () 
 
   assert.match(articlePage, /getRelatedInsights\(currentArticle\.slug, insights\)/);
   assert.match(articlePage, /Related insights/);
-  assert.match(articlePage, /<time dateTime=\{currentArticle\.publishedAt\}>[\s\S]*Published \{currentArticle\.publishedAt\}[\s\S]*<\/time>/);
-  assert.match(articlePage, /<time dateTime=\{currentArticle\.modifiedAt\}>[\s\S]*Updated \{currentArticle\.modifiedAt\}[\s\S]*<\/time>/);
+  assert.match(
+    articlePage,
+    /<time dateTime=\{currentArticle\.publishedAt\}>[\s\S]*Published \{currentArticle\.publishedAt\}[\s\S]*<\/time>/
+  );
+  assert.match(
+    articlePage,
+    /<time dateTime=\{currentArticle\.modifiedAt\}>[\s\S]*Updated \{currentArticle\.modifiedAt\}[\s\S]*<\/time>/
+  );
 
   assert.match(taxonomy, /export const relatedInsightSlugs: Record<string, string\[]> = \{/);
   assert.match(taxonomy, /"ai-system-integration": \[/);

@@ -104,8 +104,8 @@ export default function InsightsPage({ params }: { params: { locale: string } })
               Strategic reads tied to CodeHunter Lab’s core service clusters.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-gray-200">
-              These are the insights most closely aligned with consulting, automation,
-              integration, n8n migration, WhatsApp workflows, and production-ready delivery.
+              These are the insights most closely aligned with consulting, automation, integration,
+              n8n migration, WhatsApp workflows, and production-ready delivery.
             </p>
           </div>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -155,17 +155,25 @@ export default function InsightsPage({ params }: { params: { locale: string } })
                 <p className="mt-3 text-sm leading-relaxed text-gray-300">{meta.description}</p>
                 <div className="mt-6 space-y-4">
                   {articles.map((article) => (
-                    <article key={article.slug} className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0">
+                    <article
+                      key={article.slug}
+                      className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0"
+                    >
                       <div className="mb-2 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-gray-400">
                         <span className="text-hunter-green">{article.category}</span>
                         <time dateTime={article.modifiedAt}>Updated {article.modifiedAt}</time>
                       </div>
                       <h4 className="text-lg font-black leading-tight tracking-tight">
-                        <Link href={`/en/insights/${article.slug}`} className="hover:text-hunter-green">
+                        <Link
+                          href={`/en/insights/${article.slug}`}
+                          className="hover:text-hunter-green"
+                        >
                           {article.title}
                         </Link>
                       </h4>
-                      <p className="mt-2 text-sm leading-relaxed text-gray-300">{article.description}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-gray-300">
+                        {article.description}
+                      </p>
                     </article>
                   ))}
                 </div>

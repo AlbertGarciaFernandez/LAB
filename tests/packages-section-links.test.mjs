@@ -6,7 +6,8 @@ const source = readSource("components/sections/PackagesSection.tsx");
 const messages = localeMessages();
 
 test("package card decorative overlays cannot intercept the details link", () => {
-  const overlays = source.match(/className="[^"]*pointer-events-none[^"]*absolute inset-0[^"]*"/g) ?? [];
+  const overlays =
+    source.match(/className="[^"]*pointer-events-none[^"]*absolute inset-0[^"]*"/g) ?? [];
 
   assert.ok(overlays.length >= 2, "Expected decorative overlays to opt out of pointer events");
 });

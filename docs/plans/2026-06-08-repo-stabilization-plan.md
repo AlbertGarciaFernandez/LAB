@@ -17,12 +17,15 @@
 **Objective:** Make TypeScript validation runnable independently from lint/build.
 
 **Files:**
+
 - Modify: `package.json`
 
 **Change:**
+
 - Add `"typecheck": "tsc --noEmit"` under `scripts`.
 
 **Verification:**
+
 - Run: `npm run typecheck`
 - Expected: command exists and either passes or reports real TS issues.
 
@@ -36,10 +39,12 @@
 **Objective:** Make lint/build/test reproducible in this clone.
 
 **Files:**
+
 - No source changes expected
 - Uses: `package-lock.json`
 
 **Commands:**
+
 - `npm ci`
 - `npm test`
 - `npm run lint`
@@ -47,6 +52,7 @@
 - `npm run typecheck`
 
 **Verification:**
+
 - Save the exact failure baseline before code changes.
 
 **Risk:** Low to medium (dependency resolution may expose more issues).
@@ -59,9 +65,11 @@
 **Objective:** Prevent merges/deploys with broken quality gates.
 
 **Files:**
+
 - Create: `.github/workflows/ci.yml`
 
 **Suggested workflow steps:**
+
 - checkout
 - setup-node
 - `npm ci`
@@ -71,6 +79,7 @@
 - `npm run build`
 
 **Verification:**
+
 - Validate workflow YAML.
 - Push branch and confirm GitHub Actions runs.
 
@@ -84,14 +93,17 @@
 **Objective:** Align docs with actual repo behavior.
 
 **Files:**
+
 - Modify: `README.md`
 
 **Required updates:**
+
 - Replace “Bilingual — English / Spanish” with current locale scope.
 - Update clone/setup path examples so they match the real repo name/folder.
 - Document the verification commands (`npm ci`, `npm run typecheck`, `npm run lint`, `npm test`, `npm run build`).
 
 **Verification:**
+
 - Read the updated README top-to-bottom as a new contributor.
 
 **Risk:** Low.
@@ -106,18 +118,22 @@
 **Objective:** Remove version skew that can create subtle runtime/build issues.
 
 **Files:**
+
 - Modify: `package.json`
 - Possibly update: `package-lock.json`
 
 **Known mismatch to resolve:**
+
 - `next: ^14.2.35`
 - `@next/third-parties: ^16.1.6`
 
 **Approach:**
+
 - Pick a supported compatible version strategy.
 - Prefer matching the major expected by the installed Next version, unless there is a deliberate upgrade plan.
 
 **Verification:**
+
 - `npm ci`
 - `npm run build`
 - `npm run lint`
@@ -133,20 +149,24 @@
 **Objective:** Stop serving contradictory robots rules.
 
 **Files:**
+
 - Modify: `app/robots.ts`
 - Modify or remove: `public/robots.txt`
 - Verify related expectations in: `tests/lab-platform.test.mjs`
 
 **Current drift:**
+
 - `app/robots.ts` blocks `/dashboard` and `/en|es|nl/lab/app`
 - `public/robots.txt` blocks `/api/`, `/_next/`, `/admin/`
 
 **Approach:**
+
 - Decide whether `app/robots.ts` is canonical.
 - Mirror all intentional disallow rules there.
 - Remove `public/robots.txt` if redundant, or make it exactly match.
 
 **Verification:**
+
 - Confirm generated `/robots.txt` content in local/prod preview.
 - Run affected tests.
 
@@ -160,16 +180,20 @@
 **Objective:** Avoid unsafe assumptions in analytics bootstrap.
 
 **Files:**
+
 - Modify: `components/analytics/GoogleAnalyticsConditional.tsx`
 
 **Current issue:**
+
 - Uses `process.env.NEXT_PUBLIC_GA_ID!`
 
 **Approach:**
+
 - Gate rendering on both consent and a present GA ID.
 - Optionally log a development warning when consent exists but the env is absent.
 
 **Verification:**
+
 - Test with and without `NEXT_PUBLIC_GA_ID`.
 - Confirm no runtime crash and no GA render when missing.
 
@@ -185,21 +209,25 @@
 **Objective:** Remove direct client coupling to FormSubmit and centralize validation.
 
 **Files:**
+
 - Modify: `components/ui/ContactForm.tsx`
 - Create: `app/api/contact/route.ts`
 - Modify: `vercel.json`
 - Optionally document envs in: `README.md`
 
 **Current issue:**
+
 - Client fetches `https://formsubmit.co/ajax/fdcaf086cf2933714fd96d0622e5525b` directly.
 
 **Approach:**
+
 - Post to `/api/contact` from the client.
 - Validate/sanitize payload server-side.
 - Keep external provider secret/config in env where possible.
 - Revisit CSP after removing direct browser dependency on `formsubmit.co`.
 
 **Verification:**
+
 - Submit form successfully in dev/preview.
 - Confirm graceful error path.
 - Re-run contact-related tests.
@@ -214,16 +242,20 @@
 **Objective:** Ensure structured data matches reality.
 
 **Files:**
+
 - Modify: `app/[locale]/layout.tsx`
 
 **Current issue:**
+
 - Publishes `SearchAction` with `urlTemplate: https://www.codehunterlab.com/en?q={search_term_string}`.
 
 **Approach:**
+
 - If no search experience exists, remove `potentialAction`.
 - If search is intended, implement a real route and query handling first.
 
 **Verification:**
+
 - Validate structured data with a schema checker.
 
 **Risk:** Low.
@@ -236,16 +268,20 @@
 **Objective:** Improve keyboard/screen-reader navigation.
 
 **Files:**
+
 - Modify: `app/[locale]/layout.tsx`
 - Potentially adjust page wrappers under: `app/[locale]/**/page.tsx`
 
 **Current issue:**
+
 - `href="#main-content"` targets a `div`, not the main landmark.
 
 **Approach:**
+
 - Make the real top-level `<main>` the target, or introduce a consistent main landmark wrapper.
 
 **Verification:**
+
 - Tab from page load and activate skip link.
 - Confirm focus lands on the main landmark.
 
@@ -261,6 +297,7 @@
 **Objective:** Restore trust in the current test suite.
 
 **Files:**
+
 - Modify as needed based on each failure cluster:
   - `components/ui/SidebarNav.tsx`
   - `app/[locale]/ai-consulting/PageContent.tsx`
@@ -270,16 +307,19 @@
   - `tests/lab-platform.test.mjs`
 
 **Known failure clusters:**
+
 - AI consulting page/sidebar/content drift
 - Contact section copy/contract drift
 - Package CTA class contract drift
 - TypeScript package missing for tests that import/transpile TS
 
 **Approach:**
+
 - Resolve dependency/setup problems first.
 - Then fix one test file at a time with small commits.
 
 **Verification:**
+
 - Run targeted tests per file, then full `npm test`.
 
 **Risk:** Medium.
@@ -294,17 +334,20 @@
 **Objective:** Reduce bundle complexity and maintenance cost.
 
 **Files (high-value starting points):**
+
 - `app/[locale]/ai-consulting/PageContent.tsx`
 - `app/[locale]/nextjs-development-agency/PageContent.tsx`
 - `app/[locale]/professional-services-automation-netherlands/PageContent.tsx`
 - `components/layout/Header.tsx`
 
 **Approach:**
+
 - Extract visual sections/components first without changing behavior.
 - Move static data/config into typed helpers.
 - Keep interactive islands small.
 
 **Verification:**
+
 - Snapshot/manual UI review.
 - `npm run build`
 - `npm test`
@@ -319,6 +362,7 @@
 **Objective:** Make content structure safer and easier to refactor.
 
 **Files:**
+
 - Multiple `app/[locale]/**/*.tsx`
 - Multiple `components/**/*.tsx`
 - `messages/en.json`
@@ -327,11 +371,13 @@
 - `i18n/request.ts`
 
 **Approach:**
+
 - Introduce typed helper functions or schema validation around recurring content blocks.
 - Remove `locale as any` in `i18n/request.ts` if possible.
 - Convert highest-churn sections first.
 
 **Verification:**
+
 - `npm run typecheck`
 - `npm test`
 
