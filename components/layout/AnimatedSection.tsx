@@ -17,7 +17,7 @@ export default function AnimatedSection({ id, children, className = "" }: Props)
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`bg-background border-b border-white/5 ${className}`}
+      className={`border-b border-white/5 bg-near-black ${className}`}
     >
       {children}
     </m.section>
