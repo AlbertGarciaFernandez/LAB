@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { format, formatDistanceToNow, parseISO } from "date-fns";
 import { Mail, MailOpen, PenLine, Send } from "lucide-react";
 
@@ -87,7 +87,7 @@ export default function EmailsPage() {
   };
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
@@ -250,6 +250,6 @@ export default function EmailsPage() {
           </SheetFooter>
         </SheetContent>
       </Sheet>
-    </motion.div>
+    </m.div>
   );
 }

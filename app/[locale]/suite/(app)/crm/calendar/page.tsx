@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { format, isSameMonth, isToday, parseISO } from "date-fns";
 import { CalendarDays, Plus } from "lucide-react";
 import type { CalendarDay } from "react-day-picker";
@@ -111,7 +111,7 @@ export default function CalendarPage() {
   }, [eventsByDate]);
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
@@ -192,6 +192,6 @@ export default function CalendarPage() {
           </div>
         </div>
       )}
-    </motion.div>
+    </m.div>
   );
 }

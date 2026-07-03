@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { format, isBefore, isSameDay, parseISO } from "date-fns";
 import { Plus } from "lucide-react";
 
@@ -145,7 +145,7 @@ export default function TasksPage() {
   ];
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
@@ -190,6 +190,6 @@ export default function TasksPage() {
       />
 
       <TaskModal open={modalOpen} onOpenChange={setModalOpen} onSave={handleSave} />
-    </motion.div>
+    </m.div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   CalendarDays,
   CheckCircle2,
@@ -219,7 +219,7 @@ export default function CrmDashboardPage() {
 
   return (
     <div className="space-y-6 p-4 md:p-6">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
@@ -241,23 +241,23 @@ export default function CrmDashboardPage() {
             </Select>
           }
         />
-      </motion.div>
+      </m.div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {statCards.map((card, index) => (
-          <motion.div
+          <m.div
             key={card.label}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
           >
             <StatCard label={card.label} value={card.value} change={card.change} icon={card.icon} />
-          </motion.div>
+          </m.div>
         ))}
       </div>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.5 }}
@@ -270,9 +270,9 @@ export default function CrmDashboardPage() {
               <RevenueChart data={data.revenueChartData} />
             </CardContent>
           </Card>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.6 }}
@@ -285,11 +285,11 @@ export default function CrmDashboardPage() {
               <PipelineChart data={data.pipelineChartData} />
             </CardContent>
           </Card>
-        </motion.div>
+        </m.div>
       </div>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.7 }}
@@ -302,9 +302,9 @@ export default function CrmDashboardPage() {
               <ActivityFeed activities={data.activities} users={data.users} limit={6} />
             </CardContent>
           </Card>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.8 }}
@@ -339,7 +339,7 @@ export default function CrmDashboardPage() {
               </ul>
             </CardContent>
           </Card>
-        </motion.div>
+        </m.div>
       </div>
     </div>
   );

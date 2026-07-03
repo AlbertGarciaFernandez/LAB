@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -132,7 +132,7 @@ export default function CompaniesPage() {
   ];
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
@@ -223,6 +223,6 @@ export default function CompaniesPage() {
         company={editingCompany}
         onSave={handleSave}
       />
-    </motion.div>
+    </m.div>
   );
 }

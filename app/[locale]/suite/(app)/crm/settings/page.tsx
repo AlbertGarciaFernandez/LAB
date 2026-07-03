@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Bell,
   Calendar,
@@ -180,7 +180,7 @@ export default function SettingsPage() {
   ];
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
@@ -466,6 +466,6 @@ export default function SettingsPage() {
           </Card>
         </TabsContent>
       </Tabs>
-    </motion.div>
+    </m.div>
   );
 }
