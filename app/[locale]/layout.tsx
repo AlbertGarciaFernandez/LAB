@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { GeistSans, GeistMono } from "geist/font";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import CookieConsent from "@/components/ui/CookieConsent";
@@ -13,6 +14,8 @@ import { createPageMetadata } from "@/utils/metadata";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
+const geistSans = GeistSans;
+const geistMono = GeistMono;
 
 export const viewport = {
   themeColor: "#0B0B0B",
@@ -66,7 +69,10 @@ export default async function RootLayout({
   const normalizedLocale = normalizeLocale(locale);
 
   return (
-    <html lang={normalizedLocale} className={`${sans.variable} ${mono.variable}`}>
+    <html
+      lang={normalizedLocale}
+      className={`${sans.variable} ${mono.variable} ${geistSans.variable} ${geistMono.variable}`}
+    >
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
