@@ -2,6 +2,8 @@
 
 import { createContext, useContext, useState, ReactNode } from "react";
 
+import { cn } from "@/lib/utils";
+
 export type Theme = "dark" | "light" | "system";
 
 interface ThemeContextValue {
@@ -25,7 +27,17 @@ export function ThemeProvider({ children, defaultTheme = "dark" }: ThemeProvider
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={isDark ? "dark" : ""}>{children}</div>
+      <div
+        className={cn("min-h-screen bg-background text-foreground", isDark ? "dark" : "")}
+        style={
+          {
+            "--font-sans": "var(--font-geist-sans)",
+            "--font-mono": "var(--font-geist-mono)",
+          } as React.CSSProperties
+        }
+      >
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 }
