@@ -165,7 +165,7 @@ test("lab data helpers return localized content and rich runtime shapes", async 
 
 test("package test script runs the full mjs test suite", () => {
   const pkg = readFileSync("package.json", "utf8");
-  assert.match(pkg, /"test": "node --test tests\/\*\.test\.mjs"/);
+  assert.match(pkg, /"test": "node --test 'tests\/\*\*\/\*\.test\.mjs'"/);
 });
 
 test("lab landing page uses the dedicated public marketing stack", () => {

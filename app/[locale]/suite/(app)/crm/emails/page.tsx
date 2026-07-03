@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
+import { EmptyState } from "@/components/suite/ui/EmptyState";
 import { PageHeader } from "@/components/suite/ui/PageHeader";
 import { getEmails, markEmailRead } from "@/lib/suite/data/crm";
 import type { Email } from "@/lib/suite/types/crm";
@@ -112,7 +113,12 @@ export default function EmailsPage() {
         <div className="grid flex-1 gap-4 overflow-hidden lg:grid-cols-3">
           <div className="flex flex-col gap-2 overflow-y-auto rounded-xl border border-border bg-card lg:col-span-1">
             {emails.length === 0 ? (
-              <div className="p-6 text-center text-sm text-muted-foreground">No emails found.</div>
+              <EmptyState
+                icon={<Mail className="h-6 w-6" />}
+                title="No emails found"
+                description="Your inbox is empty. Compose a new email to get started."
+                action={{ label: "Compose", onClick: () => setComposeOpen(true) }}
+              />
             ) : (
               emails.map((email) => (
                 <button

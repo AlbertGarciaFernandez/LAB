@@ -3,12 +3,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { format, formatDistanceToNow, parseISO } from "date-fns";
-import { Phone, Send } from "lucide-react";
+import { MessageCircle, Phone, Send } from "lucide-react";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { EmptyState } from "@/components/suite/ui/EmptyState";
 import { PageHeader } from "@/components/suite/ui/PageHeader";
 import { addWhatsAppMessage, getWhatsAppChats } from "@/lib/suite/data/crm";
 import type { WhatsAppChat } from "@/lib/suite/types/crm";
@@ -115,7 +116,11 @@ export default function WhatsappPage() {
         <div className="grid flex-1 gap-4 overflow-hidden lg:grid-cols-3">
           <div className="flex flex-col gap-2 overflow-y-auto rounded-xl border border-border bg-card lg:col-span-1">
             {chats.length === 0 ? (
-              <div className="p-6 text-center text-sm text-muted-foreground">No chats found.</div>
+              <EmptyState
+                icon={<MessageCircle className="h-6 w-6" />}
+                title="No chats found"
+                description="Your WhatsApp inbox is empty. Start a conversation to begin messaging."
+              />
             ) : (
               chats.map((chat) => (
                 <button

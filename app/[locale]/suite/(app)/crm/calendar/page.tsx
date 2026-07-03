@@ -3,12 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { format, isSameMonth, isToday, parseISO } from "date-fns";
-import { Plus } from "lucide-react";
+import { CalendarDays, Plus } from "lucide-react";
 import type { CalendarDay } from "react-day-picker";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, CalendarDayButton } from "@/components/ui/calendar";
+import { EmptyState } from "@/components/suite/ui/EmptyState";
 import { PageHeader } from "@/components/suite/ui/PageHeader";
 import { getCalendarEvents } from "@/lib/suite/data/crm";
 import type { CalendarEvent, EventType } from "@/lib/suite/types/crm";
@@ -152,7 +153,11 @@ export default function CalendarPage() {
               Upcoming events for {format(currentMonth, "MMMM yyyy")}
             </h2>
             {upcomingEvents.length === 0 ? (
-              <p className="text-sm text-muted-foreground">No events this month.</p>
+              <EmptyState
+                icon={<CalendarDays className="h-6 w-6" />}
+                title="No events this month"
+                description="Your calendar is clear. Add an event to get started."
+              />
             ) : (
               <div className="grid gap-3">
                 {upcomingEvents.map((event) => (
