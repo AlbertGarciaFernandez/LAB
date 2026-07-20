@@ -12,11 +12,11 @@ const routeMeta: Record<
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   }
 > = {
-  "": { lastModified: "2026-05-09", priority: 1.0, changeFrequency: "weekly" },
-  "/lab": { lastModified: "2026-05-09", priority: 0.8, changeFrequency: "weekly" },
-  "/ai-consulting": { lastModified: "2026-05-09", priority: 0.9, changeFrequency: "weekly" },
+  "": { lastModified: "2026-07-20", priority: 1.0, changeFrequency: "weekly" },
+  "/lab": { lastModified: "2026-07-20", priority: 0.8, changeFrequency: "weekly" },
+  "/ai-consulting": { lastModified: "2026-07-20", priority: 0.9, changeFrequency: "weekly" },
   "/it-system-integration": {
-    lastModified: "2026-05-09",
+    lastModified: "2026-07-20",
     priority: 0.8,
     changeFrequency: "weekly",
   },
@@ -80,7 +80,7 @@ const routeMeta: Record<
     priority: 0.9,
     changeFrequency: "weekly",
   },
-  "/react-consulting": { lastModified: "2026-05-09", priority: 0.9, changeFrequency: "weekly" },
+  "/react-consulting": { lastModified: "2026-07-20", priority: 0.9, changeFrequency: "weekly" },
   "/healthcare-automation-netherlands": {
     lastModified: "2026-06-01",
     priority: 0.9,

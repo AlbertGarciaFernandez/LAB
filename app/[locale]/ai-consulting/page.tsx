@@ -20,14 +20,32 @@ export async function generateMetadata({
       nl: "AI consultancy Nederland | Strategie, implementatie en ROI",
     }),
     description: getLocaleValue(params.locale, {
-      en: "AI consulting for companies ready to ship. Strategy sprints, implementation, and ongoing partnerships. Production systems, not prototypes.",
-      es: "Consultoría de IA para empresas listas para lanzar. Sprints de estrategia, implementación y colaboración continua. Sistemas en producción, no prototipos.",
-      nl: "AI consultancy voor bedrijven die klaar zijn om live te gaan. Strategische sprints, implementatie en doorlopende samenwerking. Systemen in productie, geen prototypes.",
+      en: "AI consulting for companies ready to ship in Leiden, Amsterdam, Rotterdam and remote teams. Strategy sprints, implementation, and ongoing partnerships. Production systems, not prototypes.",
+      es: "Consultoría de IA para empresas en Leiden, Amsterdam y Rotterdam listas para lanzar. Sprints de estrategia, implementación y colaboración continua. Sistemas en producción, no prototipos.",
+      nl: "AI consultancy voor bedrijven in Leiden, Amsterdam en Rotterdam die klaar zijn om live te gaan. Strategische sprints, implementatie en doorlopende samenwerking. Systemen in productie, geen prototypes.",
     }),
     keywords: getLocaleValue(params.locale, {
-      en: ["AI consulting Netherlands", "AI automation consulting", "AI agents Netherlands"],
-      es: ["consultoría IA países bajos", "automatización IA", "agentes IA países bajos"],
-      nl: ["AI consultancy nederland", "AI automatisering consultancy", "AI agents nederland"],
+      en: [
+        "AI consulting Netherlands",
+        "AI consulting Leiden",
+        "AI consultancy Amsterdam",
+        "AI automation Rotterdam",
+        "AI agents Netherlands",
+      ],
+      es: [
+        "consultoría IA países bajos",
+        "consultoría de IA Netherlands",
+        "consultoría IA Leiden",
+        "automatización IA Amsterdam",
+        "agentes IA Rotterdam",
+      ],
+      nl: [
+        "AI consultancy nederland",
+        "AI consultancy Leiden",
+        "AI consultancy Amsterdam",
+        "AI automatisering Rotterdam",
+        "AI agents nederland",
+      ],
     }),
   });
 }

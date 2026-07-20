@@ -21,7 +21,7 @@ export async function generateMetadata({
       nl: "React-consultancy Nederland | Audit en architectuur",
     }),
     description: getLocaleValue(params.locale, {
-      en: "Senior React consulting in the Netherlands for codebase audits, frontend architecture, performance fixes, migrations, and team support.",
+      en: "Senior React consulting in the Netherlands for codebase audits, frontend architecture, performance fixes, migrations, and team support in Leiden, Amsterdam, Rotterdam and remote teams.",
       es: "Consultoría React senior en Países Bajos para auditorías de código, arquitectura frontend, mejoras de rendimiento, migraciones y soporte al equipo.",
       nl: "Senior React-consultancy in Nederland voor codebase-audits, frontendarchitectuur, performanceverbeteringen, migraties en teamondersteuning.",
     }),
@@ -35,6 +35,8 @@ export async function generateMetadata({
         "senior React developer Leiden",
         "React performance consulting",
         "frontend architecture Netherlands",
+        "React consultant Amsterdam",
+        "React consultant Rotterdam",
       ],
       es: [
         "consultoría React Países Bajos",
@@ -66,7 +68,7 @@ export default function Page({ params }: { params: { locale: string } }) {
       <ServiceSchema
         name={serviceName}
         description={getLocaleValue(params.locale, {
-          en: "Senior React consulting for architecture, performance optimization, migrations, and codebase modernization.",
+          en: "Senior React consulting for architecture, performance optimization, migrations, and codebase modernization for Dutch product teams.",
           es: "Consultoría React senior para arquitectura, optimización del rendimiento, migraciones y modernización de código.",
           nl: "Senior React-consultancy voor architectuur, performance-optimalisatie, migraties en modernisering van de codebase.",
         })}

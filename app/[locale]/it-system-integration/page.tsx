@@ -28,6 +28,9 @@ export async function generateMetadata({
     keywords: getLocaleValue(params.locale, {
       en: [
         "IT consultant Netherlands",
+        "IT integration Leiden",
+        "IT system integration Amsterdam",
+        "software integration Rotterdam",
         "software integration company",
         "API integration services",
         "CRM integration",
@@ -36,6 +39,10 @@ export async function generateMetadata({
       ],
       es: [
         "consultoría integración IT",
+        "integración de sistemas Netherlands",
+        "integración IT Leiden",
+        "integración API Amsterdam",
+        "integración CRM Rotterdam",
         "empresa integración software",
         "integración API",
         "integración CRM",
@@ -44,6 +51,9 @@ export async function generateMetadata({
       ],
       nl: [
         "IT consultant Nederland",
+        "IT systeemintegratie Amsterdam",
+        "IT integratie Leiden",
+        "software integratie Rotterdam",
         "software integratie bedrijf",
         "API integratie services",
         "CRM integratie",
