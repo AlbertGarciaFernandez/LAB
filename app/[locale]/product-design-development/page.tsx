@@ -15,12 +15,12 @@ export async function generateMetadata({
     locale: params.locale,
     path,
     title: getLocaleValue(params.locale, {
-      en: "Product Design Development | Brand-Led Digital Products",
+      en: "Digital Product Strategy, Discovery & Development | CodeHunter Lab",
       es: "Diseño y desarrollo de producto digital | CodeHunter Lab",
       nl: "Product design development | Merkgedreven digitale producten",
     }),
     description: getLocaleValue(params.locale, {
-      en: "Brand-led product design and development for digital products, portals, and interfaces that need identity, clarity, and production-grade execution.",
+      en: "CodeHunter Lab helps teams define, validate and build customer-facing digital products through product strategy, discovery, UX, experimentation, AI and senior engineering.",
       es: "Diseño y desarrollo de producto digital con identidad para interfaces, portales y productos que necesitan claridad y ejecución en producción.",
       nl: "Merkgedreven product design en development voor digitale producten, portals en interfaces die identiteit, helderheid en productie-executie nodig hebben.",
     }),
@@ -34,7 +34,7 @@ export async function generateMetadata({
 
 export default function Page({ params }: { params: { locale: string } }) {
   const name = getLocaleValue(params.locale, {
-    en: "Product Design Development",
+    en: "Digital Product Strategy, Discovery & Development",
     es: "Diseño y desarrollo de producto digital",
     nl: "Product design development",
   });
@@ -44,7 +44,7 @@ export default function Page({ params }: { params: { locale: string } }) {
       <ServiceSchema
         name={name}
         description={getLocaleValue(params.locale, {
-          en: "Brand-led product design and production frontend delivery for digital products and interfaces.",
+          en: "Product strategy, discovery, UX, experimentation and production frontend delivery for customer-facing digital products.",
           es: "Diseño de producto con identidad y entrega frontend para productos e interfaces digitales.",
           nl: "Merkgedreven productontwerp en frontend delivery voor digitale producten en interfaces.",
         })}

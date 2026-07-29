@@ -7,12 +7,12 @@ import { caseStudies } from "@/content/case-studies";
 import { createPageMetadata } from "@/utils/metadata";
 
 const baseUrl = "https://www.codehunterlab.com";
-const caseStudiesTitle =
-  "Case Studies: AI Automation, Product Engineering, Migrations, and Systems Integration";
+const caseStudiesTitle = "Product decisions, systems shipped and measurable outcomes";
 const caseStudiesDescription =
-  "Delivery stories across AI products, internal platforms, ecommerce migrations, and integration-heavy systems work.";
+  "Selected work across customer-facing products, operational platforms and AI-enabled experiences. Each case study explains the customer problem, the evidence considered, the product and technical decisions made, and the outcome after launch.";
 const caseStudiesKeywords = [
   "AI automation case studies",
+  "product discovery case studies",
   "product engineering case studies",
   "software migration case studies",
   "systems integration projects",
@@ -87,7 +87,7 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
     },
     hasPart: caseStudies.map((cs) => ({
       "@type": "Article",
-      headline: `${cs.industry} — ${cs.solution}`,
+      headline: cs.title ?? `${cs.industry} — ${cs.solution}`,
       url: `${baseUrl}/en/case-studies/${cs.slug}`,
       datePublished: cs.publishedAt,
       dateModified: cs.modifiedAt,
@@ -111,14 +111,15 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
 
         <section className="max-w-3xl">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-hunter-green">
-            Client work
+            Product work
           </p>
           <h1 className="mb-6 text-5xl font-black leading-none tracking-tighter md:text-7xl">
-            AI automation, product engineering, migrations, and systems integration.
+            Product decisions, systems shipped and measurable outcomes.
           </h1>
           <p className="text-lg leading-relaxed text-gray-300 md:text-xl">
-            Delivery stories across AI products, internal platforms, ecommerce migrations, and
-            integration-heavy systems work.
+            Selected work across customer-facing products, operational platforms and AI-enabled
+            experiences. Each case study explains the customer problem, the evidence considered, the
+            product and technical decisions made, and the outcome after launch.
           </p>
         </section>
 
@@ -175,18 +176,31 @@ export default function CaseStudiesPage({ params }: { params: { locale: string }
               className="rounded-lg border border-white/10 bg-white/[0.03] p-7 transition-colors hover:border-hunter-green/40"
             >
               <div className="mb-5 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-widest text-gray-400">
-                <span className="text-hunter-green">{cs.industry}</span>
+                <span className="text-hunter-green">{cs.productType ?? cs.industry}</span>
                 <span>{cs.location}</span>
-                <span>{cs.clientSize}</span>
+                <span>{cs.status ?? cs.timeline}</span>
               </div>
 
               <h2 className="mb-3 text-2xl font-black leading-tight tracking-tight">
                 <Link href={`/en/case-studies/${cs.slug}`} className="hover:text-hunter-green">
-                  {cs.solution}
+                  {cs.title ?? cs.solution}
                 </Link>
               </h2>
 
-              <p className="mb-6 text-sm leading-relaxed text-gray-300">{cs.problem}</p>
+              <p className="mb-5 text-sm leading-relaxed text-gray-300">
+                {cs.subtitle ?? cs.problem}
+              </p>
+
+              <div className="mb-6 flex flex-wrap gap-2">
+                {cs.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gray-400"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
               <div className="mb-6 grid grid-cols-3 gap-3">
                 {cs.metrics.map((metric) => (

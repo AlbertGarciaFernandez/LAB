@@ -134,17 +134,17 @@ export default function WhatsappPage() {
                   <Avatar className="h-10 w-10 shrink-0">
                     <AvatarFallback>{getInitials(chat.contactName)}</AvatarFallback>
                   </Avatar>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center justify-between gap-2">
+                  <span className="block min-w-0 flex-1">
+                    <span className="flex items-center justify-between gap-2">
                       <span className="truncate font-medium">{chat.contactName}</span>
                       <span className="shrink-0 text-xs text-muted-foreground">
                         {formatDistanceToNow(parseISO(chat.lastMessageAt), { addSuffix: true })}
                       </span>
-                    </div>
-                    <p className="line-clamp-1 text-sm text-muted-foreground">
+                    </span>
+                    <span className="line-clamp-1 block text-sm text-muted-foreground">
                       {lastMessagePreview(chat)}
-                    </p>
-                  </div>
+                    </span>
+                  </span>
                   {chat.unreadCount > 0 && (
                     <Badge variant="default" className="ml-2 shrink-0">
                       {chat.unreadCount}

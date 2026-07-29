@@ -111,6 +111,27 @@
       "book": "Reservar llamada"
     }
   },
+  "SuiteLogin": {
+    "title": "Te damos la bienvenida",
+    "subtitle": "Inicia sesión en tu espacio de Hunter Suite",
+    "fields": {
+      "email": "Email",
+      "password": "Contraseña"
+    },
+    "errors": {
+      "emailRequired": "Introduce tu email.",
+      "passwordRequired": "Introduce tu contraseña.",
+      "invalidCredentials": "Email o contraseña incorrectos.",
+      "generic": "Algo ha salido mal. Inténtalo de nuevo."
+    },
+    "actions": {
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña",
+      "signingIn": "Iniciando sesión...",
+      "signIn": "Iniciar sesión"
+    },
+    "demoHint": "Prueba {email} / {password}"
+  },
   "Header": {
     "brand": {
       "logoAlt": "Logo de CodeHunter Lab",

@@ -111,6 +111,27 @@
       "book": "Gesprek boeken"
     }
   },
+  "SuiteLogin": {
+    "title": "Welkom terug",
+    "subtitle": "Log in op je Hunter Suite-workspace",
+    "fields": {
+      "email": "E-mail",
+      "password": "Wachtwoord"
+    },
+    "errors": {
+      "emailRequired": "Vul je e-mailadres in.",
+      "passwordRequired": "Vul je wachtwoord in.",
+      "invalidCredentials": "E-mailadres of wachtwoord is onjuist.",
+      "generic": "Er is iets misgegaan. Probeer het opnieuw."
+    },
+    "actions": {
+      "showPassword": "Wachtwoord tonen",
+      "hidePassword": "Wachtwoord verbergen",
+      "signingIn": "Inloggen...",
+      "signIn": "Inloggen"
+    },
+    "demoHint": "Probeer {email} / {password}"
+  },
   "Header": {
     "brand": {
       "logoAlt": "CodeHunter Lab-logo",

@@ -96,14 +96,14 @@ export default function CalendarPage() {
         >
           <span>{day.date.getDate()}</span>
           {dayEvents.length > 0 && (
-            <div className="mt-0.5 flex gap-0.5">
+            <span className="mt-0.5 flex gap-0.5">
               {dayEvents.slice(0, 3).map((event) => (
                 <span
                   key={event.id}
                   className={cn("h-1.5 w-1.5 rounded-full", eventTypeStyles[event.type])}
                 />
               ))}
-            </div>
+            </span>
           )}
         </CalendarDayButton>
       );

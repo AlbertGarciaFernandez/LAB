@@ -29,11 +29,13 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
   }
 
   const path = `/case-studies/${study.slug}`;
+  const title = study.title ?? `${study.industry} Case Study`;
+  const description = study.subtitle ?? study.solution;
   const metadata = createPageMetadata({
     locale: params.locale,
     path,
-    title: `${study.industry} Case Study | CodeHunter Lab`,
-    description: study.solution,
+    title: `${title} | CodeHunter Lab`,
+    description,
     type: "article",
   });
 
@@ -41,8 +43,8 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     ...metadata,
     openGraph: {
       ...metadata.openGraph,
-      title: `${study.industry} Case Study | CodeHunter Lab`,
-      description: study.solution,
+      title: `${title} | CodeHunter Lab`,
+      description,
       url: canonicalUrl(params.locale, path),
       siteName: "CodeHunter Lab",
       type: "article",
@@ -67,8 +69,8 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${study.industry} Case Study`,
-    description: study.solution,
+    headline: study.title ?? `${study.industry} Case Study`,
+    description: study.subtitle ?? study.solution,
     datePublished: study.publishedAt,
     dateModified: study.modifiedAt,
     mainEntityOfPage: studyUrl,
@@ -101,7 +103,7 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
           items={[
             { name: "Home", url: `${baseUrl}/en` },
             { name: "Case Studies", url: `${baseUrl}/en/case-studies` },
-            { name: study.solution, url: studyUrl },
+            { name: study.title ?? study.solution, url: studyUrl },
           ]}
         />
         <script
@@ -123,14 +125,30 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
               {study.industry} · {study.location}
             </p>
             <h1 className="mb-6 text-4xl font-black leading-none tracking-tighter md:text-6xl">
-              {study.solution}
+              {study.title ?? study.solution}
             </h1>
-            <p className="mb-6 text-lg leading-relaxed text-gray-300 md:text-xl">{study.problem}</p>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <span>Client size: {study.clientSize}</span>
+            <p className="mb-6 text-lg leading-relaxed text-gray-300 md:text-xl">
+              {study.subtitle ?? study.problem}
+            </p>
+            <div className="grid gap-3 text-sm text-gray-400 sm:grid-cols-2">
+              {study.productType ? <span>Product type: {study.productType}</span> : null}
+              {study.role ? <span>My role: {study.role}</span> : null}
+              {study.team ? <span>Team: {study.team}</span> : null}
+              {study.status ? <span>Status: {study.status}</span> : null}
+              <span>Context: {study.clientSize}</span>
               <span>Timeline: {study.timeline}</span>
               <span>Year: {study.year}</span>
               <span>Published {study.publishedAt}</span>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {study.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gray-400"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </header>
 
@@ -162,6 +180,15 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
             <h2 className="mb-4 text-2xl font-black tracking-tight">The solution</h2>
             <p className="text-lg leading-relaxed text-gray-300">{study.solution}</p>
           </section>
+
+          {study.disclaimer ? (
+            <section className="mb-12 rounded-lg border border-white/10 bg-white/[0.03] p-5">
+              <h2 className="mb-2 text-sm font-black uppercase tracking-widest text-hunter-green">
+                Measurement context
+              </h2>
+              <p className="text-sm leading-relaxed text-gray-300">{study.disclaimer}</p>
+            </section>
+          ) : null}
 
           {/* Technologies used */}
           <section className="mb-12">
@@ -219,17 +246,17 @@ export default function CaseStudyPage({ params }: { params: PageParams }) {
           {/* CTA to contact */}
           <section className="mt-14 rounded-lg border border-hunter-orange/30 bg-hunter-orange/10 p-6">
             <h2 className="mb-3 text-2xl font-black tracking-tight">
-              Something similar in your business?
+              {study.cta?.title ?? "Something similar in your business?"}
             </h2>
             <p className="mb-6 text-gray-300">
-              Let&apos;s talk about how AI automation can reduce operational costs and reclaim
-              weekly hours for your team.
+              {study.cta?.text ??
+                "Let's talk about how product thinking and senior engineering can improve an important customer or operational journey."}
             </p>
             <Link
-              href="#contact"
+              href="/en#contact"
               className="inline-block rounded-lg bg-hunter-orange px-6 py-3 text-sm font-bold uppercase tracking-widest text-near-black transition-opacity hover:opacity-90"
             >
-              Get in touch
+              {study.cta?.label ?? "Get in touch"}
             </Link>
           </section>
         </article>

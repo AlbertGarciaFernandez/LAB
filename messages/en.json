@@ -111,6 +111,27 @@
       "book": "Book a Call"
     }
   },
+  "SuiteLogin": {
+    "title": "Welcome back",
+    "subtitle": "Sign in to your Hunter Suite workspace",
+    "fields": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "errors": {
+      "emailRequired": "Please enter your email.",
+      "passwordRequired": "Please enter your password.",
+      "invalidCredentials": "Invalid email or password.",
+      "generic": "Something went wrong. Please try again."
+    },
+    "actions": {
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "signingIn": "Signing in...",
+      "signIn": "Sign in"
+    },
+    "demoHint": "Try {email} / {password}"
+  },
   "N8nConsultant": {
     "Hero": {
       "badge": "N8N CONSULTING & MIGRATION :: NETHERLANDS",

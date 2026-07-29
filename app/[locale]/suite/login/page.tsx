@@ -1,11 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import LoginForm from "@/components/suite/login/LoginForm";
 
 export default function LoginPage() {
+  const t = useTranslations("SuiteLogin");
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-surface to-background px-4 py-12 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.12),transparent_40%)]" />
@@ -25,9 +28,9 @@ export default function LoginPage() {
           </div>
           <div className="space-y-1">
             <CardTitle className="text-2xl font-semibold tracking-tight text-text">
-              Welcome back
+              {t("title")}
             </CardTitle>
-            <p className="text-sm text-text-muted">Sign in to your Hunter Suite workspace</p>
+            <p className="text-sm text-text-muted">{t("subtitle")}</p>
           </div>
         </CardHeader>
         <CardContent>

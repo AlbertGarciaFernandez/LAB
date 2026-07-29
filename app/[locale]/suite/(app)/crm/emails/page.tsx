@@ -129,8 +129,8 @@ export default function EmailsPage() {
                     selectedId === email.id && "bg-accent"
                   )}
                 >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-2">
+                  <span className="flex items-start justify-between gap-2">
+                    <span className="flex items-center gap-2">
                       {!email.readAt ? (
                         <Mail className="h-4 w-4 shrink-0 text-primary" />
                       ) : (
@@ -139,13 +139,17 @@ export default function EmailsPage() {
                       <span className={cn("font-medium", !email.readAt && "font-semibold")}>
                         {email.from.name}
                       </span>
-                    </div>
+                    </span>
                     <span className="shrink-0 text-xs text-muted-foreground">
                       {formatDate(email.sentAt)}
                     </span>
-                  </div>
-                  <p className={cn("text-sm", !email.readAt && "font-medium")}>{email.subject}</p>
-                  <p className="line-clamp-1 text-xs text-muted-foreground">{email.body}</p>
+                  </span>
+                  <span className={cn("block text-sm", !email.readAt && "font-medium")}>
+                    {email.subject}
+                  </span>
+                  <span className="line-clamp-1 block text-xs text-muted-foreground">
+                    {email.body}
+                  </span>
                 </button>
               ))
             )}
