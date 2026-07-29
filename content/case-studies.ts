@@ -14,6 +14,13 @@ export type CaseStudySection =
 
 export type CaseStudy = {
   slug: string;
+  title?: string;
+  subtitle?: string;
+  productType?: string;
+  role?: string;
+  team?: string;
+  status?: string;
+  tags: string[];
   industry: string;
   location: string;
   clientSize: string;
@@ -25,277 +32,473 @@ export type CaseStudy = {
   year: string;
   publishedAt: string;
   modifiedAt: string;
+  disclaimer?: string;
+  cta?: {
+    title: string;
+    text: string;
+    label: string;
+  };
   sections: CaseStudySection[];
 };
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "dental-clinic-whatsapp-automation",
-    industry: "Dental Clinic",
-    location: "Netherlands",
-    clientSize: "3 locations, 12 staff",
-    problem: "High no-show rate, manual appointment reminders, front desk overwhelmed",
-    solution: "WhatsApp automation with n8n, connected to practice management system",
+    slug: "basic-fit-sfcc-migration",
+    title: "Transforming a high-volume digital membership journey",
+    subtitle:
+      "How a cross-functional product and engineering team migrated a European fitness platform while improving conversion, engagement and customer experience.",
+    productType: "Customer-facing ecommerce and membership platform",
+    role: "Frontend Developer working across product, UX and engineering",
+    team: "Product managers, designers, engineers and business stakeholders",
+    status: "Launched as part of a wider cross-functional programme",
+    tags: ["Consumer Product", "Ecommerce", "Experimentation", "Cross-functional Delivery"],
+    industry: "E-commerce / Fitness",
+    location: "Europe",
+    clientSize: "Multi-market fitness ecommerce team",
+    problem:
+      "Customers needed to understand membership options, compare plans and complete registration with as little friction as possible during a high-risk platform migration.",
+    solution:
+      "A multi-country Salesforce Commerce Cloud migration focused on reusable customer journeys, responsive frontend implementation, analytics visibility and A/B testing readiness.",
     metrics: [
-      { label: "No-show reduction", value: "35%" },
-      { label: "Hours saved/week", value: "12" },
-      { label: "Patient recall increase", value: "28%" },
+      { label: "Conversion improvement", value: "20-40%" },
+      { label: "Cart abandonment", value: "-25%" },
+      { label: "Click-through rate", value: "+40%" },
     ],
-    technologies: ["n8n", "WhatsApp Business API", "Make"],
-    timeline: "4 weeks",
+    technologies: ["Salesforce Commerce Cloud", "React", "JavaScript", "APIs", "A/B Testing"],
+    timeline: "Multi-phase migration",
     year: "2025",
-    publishedAt: "2026-05-08",
-    modifiedAt: "2026-05-08",
+    publishedAt: "2026-01-15",
+    modifiedAt: "2026-07-28",
+    disclaimer:
+      "These outcomes were achieved by the wider cross-functional team. My contribution focused on customer-facing implementation, technical quality and iterative improvement of the experience.",
+    cta: {
+      title: "Need to modernise a customer-facing platform without losing product momentum?",
+      text: "We help teams connect product strategy, customer experience and engineering delivery throughout complex digital transformations.",
+      label: "Discuss your product transformation",
+    },
     sections: [
       {
         type: "paragraph",
-        text: "A multi-location dental clinic in the Netherlands was losing revenue to no-shows and spending excessive front-desk hours on manual appointment reminders. Staff were calling patients one by one, leaving voicemails, and chasing confirmations through a mix of email and personal WhatsApp messages.",
+        text: "Basic-Fit was undertaking a major migration of its customer-facing digital platform to Salesforce Commerce Cloud. The challenge was not simply to replace the underlying technology. The new platform needed to preserve business-critical membership journeys, support multiple European markets and create a stronger foundation for continuous product optimisation.",
       },
-      {
-        type: "heading",
-        text: "Problem statement",
-      },
+      { type: "heading", text: "Customer problem" },
       {
         type: "paragraph",
-        text: "The clinic's no-show rate had climbed to nearly 18%, and the front desk was spending over 15 hours per week on reminder calls. Recall campaigns for checkups and hygiene appointments were inconsistent, meaning patients simply forgot to book their next visit. The practice management system held all appointment data, but no automated communication was connected to it.",
+        text: "Customers needed to understand membership options, compare plans and complete registration with as little friction as possible. Any confusion, performance issue or interruption across this journey could affect conversion, abandonment and customer trust.",
       },
+      { type: "heading", text: "My contribution" },
       {
         type: "list",
         items: [
-          "18% no-show rate across three locations.",
-          "Front desk spending 15+ hours/week on manual reminders.",
-          "Inconsistent patient recall leading to gaps in the schedule.",
-          "No integration between the practice system and messaging channels.",
+          "Contributed to implementation and optimisation of critical membership journeys.",
+          "Identified UX and technical friction within customer-facing flows.",
+          "Evaluated implementation trade-offs with product and engineering stakeholders.",
+          "Supported reusable frontend architecture across markets and experiences.",
+          "Improved performance, accessibility and interface consistency.",
         ],
       },
-      {
-        type: "heading",
-        text: "Solution",
-      },
-      {
-        type: "paragraph",
-        text: "We built an n8n workflow that reads appointment data from the clinic's practice management system and triggers personalized WhatsApp messages at scheduled intervals: 48 hours and 24 hours before appointments for reminders, and monthly recall sequences for overdue checkups. Patients can confirm, reschedule, or request a callback directly in WhatsApp. Unclear replies are routed to the front desk via Slack instead of forcing an AI guess.",
-      },
+      { type: "heading", text: "Product and technical decisions" },
       {
         type: "list",
         items: [
-          "n8n workflow syncing with the practice management API every 15 minutes.",
-          "WhatsApp Business API for reliable, template-based messaging.",
-          "Make as a secondary integration bridge for non-API tools.",
-          "Slack alerts for staff when a patient reply needs human review.",
+          "Protect the critical customer journey: prioritise plan exploration, registration and conversion flows.",
+          "Build for reuse across markets: shared components reduced inconsistency and supported regional rollout.",
+          "Balance migration with improvement: preserve continuity while improving areas where evidence showed friction.",
+          "Connect engineering decisions to customer outcomes: performance, accessibility and frontend architecture were treated as product concerns.",
         ],
       },
+      { type: "heading", text: "Journey before and after" },
       {
-        type: "heading",
-        text: "Results and impact",
+        type: "paragraph",
+        text: "Before: legacy platform -> fragmented patterns -> inconsistent country experiences -> technical limitations -> difficult optimisation.",
       },
       {
         type: "paragraph",
-        text: "Within eight weeks of deployment, the clinic's no-show rate dropped by 35%. Front-desk reminder work fell from 15 hours per week to under 3. Automated recall campaigns increased the number of patients booking their next appointment by 28%. The staff now focuses on in-clinic patient experience instead of repetitive outbound calls.",
+        text: "After: reusable customer journeys -> shared design and frontend patterns -> scalable regional rollout -> improved measurement -> continuous optimisation.",
       },
-    ],
-  },
-  {
-    slug: "accounting-firm-document-automation",
-    industry: "Accounting",
-    location: "Netherlands",
-    clientSize: "8 accountants, 400+ clients",
-    problem: "Manual document intake, chasing clients for missing files, inconsistent onboarding",
-    solution: "Automated document classification, client portal, missing-document reminders",
-    metrics: [
-      { label: "Document processing time", value: "-60%" },
-      { label: "Client response rate", value: "+45%" },
-      { label: "Onboarding time", value: "-50%" },
-    ],
-    technologies: ["n8n", "Google Drive API", "Zapier"],
-    timeline: "6 weeks",
-    year: "2025",
-    publishedAt: "2026-05-08",
-    modifiedAt: "2026-05-08",
-    sections: [
+      { type: "heading", text: "Selected outcomes" },
       {
         type: "paragraph",
-        text: "A mid-sized accounting firm in the Netherlands was drowning in manual document intake. Every month, hundreds of clients sent files via email, Dropbox links, and physical scans. The team spent days sorting, renaming, and chasing missing documents before they could begin any actual accounting work.",
+        text: "The wider programme contributed to measurable improvements across important digital indicators, including conversion, cart abandonment, bounce rate, engagement and click-through rate.",
       },
-      {
-        type: "heading",
-        text: "Problem statement",
-      },
+      { type: "heading", text: "What I learned" },
       {
         type: "paragraph",
-        text: "Client onboarding was inconsistent: some clients received checklists by email, others by WhatsApp, and many received nothing at all. Missing documents were tracked in spreadsheets that were always out of date. The result was delayed month-end closings, frustrated accountants, and clients who felt the firm was disorganized.",
-      },
-      {
-        type: "list",
-        items: [
-          "Document intake spread across email, cloud links, and scans.",
-          "Manual classification and renaming consumed 2–3 days per month.",
-          "Missing-document tracking in spreadsheets was unreliable.",
-          "Onboarding experience varied wildly depending on which accountant handled it.",
-        ],
-      },
-      {
-        type: "heading",
-        text: "Solution",
-      },
-      {
-        type: "paragraph",
-        text: "We designed an automated intake pipeline using n8n and the Google Drive API. Clients now upload documents to a dedicated folder per engagement. An n8n workflow classifies each file by type, renames it according to a standard convention, and checks it against a required-document list. If anything is missing, the client receives an automatic reminder via email after 24 hours and again after 72 hours. For simple one-off automations connecting non-API tools, Zapier acts as a bridge.",
-      },
-      {
-        type: "list",
-        items: [
-          "Google Drive shared folders per client with automated subfolder creation.",
-          "n8n workflow classifying invoices, bank statements, and payroll documents.",
-          "Missing-document detection with scheduled reminder sequences.",
-          "Dashboard view for accountants showing intake status per client.",
-        ],
-      },
-      {
-        type: "heading",
-        text: "Results and impact",
-      },
-      {
-        type: "paragraph",
-        text: "Document processing time dropped by 60%, from roughly 2.5 days per month to under one day. The automated reminder sequence increased client response rates for missing files by 45%. New client onboarding time was cut in half because the checklist, folder setup, and first reminder are now triggered automatically when a client signs the engagement letter.",
+        text: "Large migrations succeed when they are treated as product transformations rather than infrastructure replacements. Alignment between customer needs, business goals, design decisions and technical constraints was as important as delivering the new platform itself.",
       },
     ],
   },
   {
     slug: "ai-productivity-app-accelerator",
+    title: "Defining and launching an AI productivity product from zero to one",
+    subtitle:
+      "From an ambiguous productivity problem to a focused MVP, measurable user journeys and a production-ready AI architecture.",
+    productType: "Zero-to-one AI productivity product",
+    role: "Product strategy, discovery and technical leadership",
+    team: "Founders, product design and engineering",
+    status: "MVP direction and production delivery support",
+    tags: ["0-to-1 Product", "AI/LLMs", "Product Discovery", "MVP"],
     industry: "SaaS / AI Product",
     location: "Europe (remote product team)",
     clientSize: "2 founders, 1 designer, 4 engineers",
     problem:
-      "An AI productivity app needed a frontend that could support weekly releases, a safer way to ship OpenAI-powered features, and clearer product-to-engineering handoff as the roadmap expanded.",
+      "A broad AI productivity idea needed to become a specific, repeatable workflow where AI could create measurable user value.",
     solution:
-      "Frontend and product acceleration work covering Next.js architecture, OpenAI-powered feature integration, test coverage for critical user flows, and tighter roadmap coordination between founders and engineering.",
+      "A focused MVP around converting unstructured information into clear, editable action output, with explicit AI states, measurement and production-ready implementation patterns.",
     metrics: [
-      { label: "Release cadence supported", value: "Weekly" },
-      { label: "Core AI flows covered", value: "Jest smoke tests" },
-      { label: "Performance checks", value: "Lighthouse + CWV reviews" },
+      { label: "Product stage", value: "0-to-1" },
+      { label: "Core workflow", value: "Focused MVP" },
+      { label: "Release model", value: "Weekly" },
     ],
     technologies: ["React", "Next.js", "TypeScript", "OpenAI", "Jest", "Lighthouse"],
     timeline: "Ongoing support across 3 release cycles",
     year: "2025",
-    publishedAt: "2026-06-02",
-    modifiedAt: "2026-06-02",
+    publishedAt: "2026-02-12",
+    modifiedAt: "2026-07-28",
+    cta: {
+      title: "Exploring an AI product opportunity?",
+      text: "We help teams identify the right workflow, define a focused MVP and build AI capabilities around measurable customer value.",
+      label: "Discuss your AI product",
+    },
     sections: [
+      { type: "heading", text: "The opportunity" },
       {
         type: "paragraph",
-        text: "An AI productivity product was moving fast, but the delivery model was starting to strain. The team was shipping new interface flows and OpenAI-assisted features in parallel, without a strong frontend structure for reuse, testing, or performance review.",
+        text: "The initial idea was broad: use generative AI to help users work more effectively. Before selecting features or technology, the challenge was to identify a specific recurring problem where AI could provide meaningful value rather than becoming an additional chatbot without a clear purpose.",
       },
-      {
-        type: "heading",
-        text: "Problem statement",
-      },
-      {
-        type: "paragraph",
-        text: "The main challenge was operational rather than conceptual: the product needed to keep releasing every week, while AI-driven UI states, prompt handling, and asynchronous loading patterns were making the frontend harder to reason about. Founders also needed engineering work translated into clear delivery decisions instead of a backlog full of loosely defined experiments.",
-      },
+      { type: "heading", text: "Product discovery" },
       {
         type: "list",
         items: [
-          "UI patterns were being repeated across onboarding, workspace, and assistant flows.",
-          "AI features needed predictable loading, fallback, and error states in the product UI.",
-          "Performance checks were needed before new flows could be treated as production-ready.",
-          "Roadmap discussions needed clearer translation into engineering scope and release order.",
+          "Which users experience the problem most frequently?",
+          "What part of their workflow creates the greatest friction?",
+          "Which actions should AI perform and which should remain under user control?",
+          "What evidence would demonstrate that the product was genuinely useful?",
+          "Which capabilities were essential for the first version?",
         ],
       },
-      {
-        type: "heading",
-        text: "Solution",
-      },
+      { type: "heading", text: "Product hypothesis" },
       {
         type: "paragraph",
-        text: "We reworked the frontend around clearer React, Next.js, and TypeScript patterns so shared UI and state handling could be reused instead of rebuilt per feature. On the AI side, we integrated OpenAI-powered personalisation flows with explicit loading, retry, and fallback handling, then added a lightweight quality loop using Jest smoke tests and Lighthouse reviews before releases.",
+        text: "We believe that helping users convert unstructured information into a clear, editable action plan will reduce time-to-completion and increase repeated use of the product.",
       },
+      { type: "heading", text: "MVP scope" },
       {
         type: "list",
         items: [
-          "Shared frontend patterns in React, Next.js, and TypeScript for repeated product surfaces.",
-          "OpenAI integration for personalisation features with defined loading and fallback states.",
-          "Jest smoke tests around key assistant and onboarding flows before release.",
-          "Lighthouse and Core Web Vitals review as part of release readiness checks.",
-          "Regular roadmap translation between founders, product decisions, and engineering scope.",
+          "Included one clearly defined core workflow, structured AI output, editing, confirmation, fallback states, usage measurement and feedback capture.",
+          "Postponed broad tool collections, autonomous irreversible actions, complex collaboration, extensive integrations and enterprise permissions.",
         ],
       },
+      { type: "heading", text: "AI product trade-offs" },
       {
-        type: "heading",
-        text: "Results and impact",
+        type: "list",
+        items: [
+          "Accuracy vs cost and latency.",
+          "Automation vs user control.",
+          "Personalisation vs privacy risk.",
+          "Flexible prompts vs predictable output.",
+          "Safety controls vs interaction friction.",
+        ],
       },
+      { type: "heading", text: "Success framework" },
+      {
+        type: "list",
+        items: [
+          "Activation: users completing the core workflow.",
+          "Time to first value and repeated weekly usage.",
+          "Percentage of AI output accepted or edited.",
+          "Task completion time, user-reported usefulness and cost per completed workflow.",
+        ],
+      },
+      { type: "heading", text: "What I learned" },
       {
         type: "paragraph",
-        text: "The engagement gave the team a steadier delivery setup rather than a headline metric. Shared frontend patterns reduced one-off implementation work across new surfaces, AI features shipped with explicit UX behavior for slow or failed responses, and releases had a repeatable check for test coverage and performance before going live. Just as importantly, roadmap conversations became more concrete because product priorities were being converted into scoped engineering work for the next release cycle instead of staying at the idea level.",
+        text: "The hardest part of building an AI product is usually not connecting the model. It is defining the right level of automation, designing for uncertainty and identifying an outcome users value enough to repeat.",
       },
     ],
   },
   {
-    slug: "basic-fit-sfcc-migration",
-    industry: "E-commerce / Fitness",
-    location: "Europe",
-    clientSize: "Multi-market fitness ecommerce team",
+    slug: "music-event-discovery-concept",
+    title: "From Mood to Dancefloor",
+    subtitle:
+      "Designing a consumer music event discovery concept that helps people choose what to attend based on mood, atmosphere, social context and practical constraints.",
+    productType: "Consumer event discovery concept",
+    role: "Product strategy, discovery and technical product leadership",
+    team: "Independent concept",
+    status: "Independent product exploration",
+    tags: ["Consumer Discovery", "Music Events", "Mobile UX", "Decision Support"],
+    industry: "Music Event Product Concept",
+    location: "Independent",
+    clientSize: "Concept exploration",
     problem:
-      "A high-risk ecommerce migration to Salesforce Commerce Cloud had to preserve UX quality while improving performance, SEO, and conversion opportunities across multiple markets.",
+      "People often want a specific kind of night out before they know which artist, venue or promoter can provide it.",
     solution:
-      "Led a multi-country Salesforce Commerce Cloud migration with custom templates, responsive implementation, A/B testing support, and integrated analytics.",
+      "An intent-to-decision product concept that helps users express the experience they want, evaluate trustworthy event options, coordinate with friends and move to an official ticket source without manipulative urgency.",
     metrics: [
-      { label: "Platform rollout", value: "Multi-country SFCC migration" },
-      { label: "Implementation scope", value: "Custom templates + responsive frontend" },
-      { label: "Post-launch readiness", value: "Analytics + A/B testing in place" },
+      { label: "Core journey", value: "Intent to decision" },
+      { label: "Decision model", value: "Social" },
+      { label: "MVP scope", value: "Focused" },
     ],
-    technologies: ["Salesforce Commerce Cloud", "A/B Testing", "Analytics", "Responsive Design"],
-    timeline: "Multi-phase migration",
-    year: "2025",
-    publishedAt: "2026-06-02",
-    modifiedAt: "2026-06-02",
+    technologies: ["Mobile UX", "Recommendation systems", "Event data", "Product analytics"],
+    timeline: "Product concept",
+    year: "2026",
+    publishedAt: "2026-03-18",
+    modifiedAt: "2026-07-29",
+    disclaimer:
+      "Independent product exploration created to demonstrate product strategy, discovery and mobile product thinking. It is not affiliated with any ticketing platform, venue or event organiser.",
     sections: [
+      { type: "heading", text: "The opportunity" },
       {
         type: "paragraph",
-        text: "Basic-Fit needed to move a revenue-critical ecommerce flow onto Salesforce Commerce Cloud while keeping the customer journey stable across markets. Because the migration affected multiple country sites, the work had to protect navigation, merchandising, responsive behaviour, and conversion paths while the platform underneath was being replaced.",
+        text: "People do not always begin their search for an event with a specific artist, club or festival in mind. Often they start with a broader intention: I want to dance this Saturday, I want something queer-friendly, I want techno but not something too hard, I need something under EUR30, or I want somewhere close to home.",
       },
-      {
-        type: "heading",
-        text: "Problem statement",
-      },
+      { type: "heading", text: "Product challenge" },
       {
         type: "paragraph",
-        text: "This was not just a replatforming exercise. The SFCC build had to carry over working customer journeys, avoid unnecessary SEO disruption, and give internal teams a platform they could keep optimising after go-live. That required controlled rollout coordination, custom implementation work inside SFCC, and measurement coverage strong enough to compare behaviour before and after launch.",
+        text: "How might we help people find a music event that fits the night they want to have? The challenge is to make discovery feel personal and useful without forcing users through a long questionnaire or an overwhelming collection of filters.",
       },
+      { type: "heading", text: "Intent-to-decision journey" },
       {
         type: "list",
         items: [
-          "Migration scope covered multiple country storefronts on a live commerce operation.",
-          "Core UX patterns had to remain intact through the platform transition.",
-          "SEO and performance could not be treated as a post-migration cleanup task.",
-          "Analytics and experimentation needed to be available from the first production phase.",
+          "Intent: the user starts with a desired feeling, social context or experience rather than a specific event.",
+          "Exploration: the user sees events, venues, artists and promoters that may match that intention.",
+          "Evaluation: the user checks whether an event fits their music taste, atmosphere, price, location, timing and audience expectations.",
+          "Coordination: the user shares options and aligns with friends without needing a full social network.",
+          "Commitment: the user saves an event, joins a waiting list, adds it to a calendar or opens the official ticket source.",
         ],
       },
-      {
-        type: "heading",
-        text: "Solution",
-      },
-      {
-        type: "paragraph",
-        text: "We led the SFCC migration with a practical focus on rollout control and frontend quality. The delivery included custom Salesforce Commerce Cloud templates, responsive implementation for key commerce journeys, analytics instrumentation, and A/B testing support so the team could monitor behaviour closely and continue optimising once traffic moved onto the new stack.",
-      },
+      { type: "heading", text: "Research questions" },
       {
         type: "list",
         items: [
-          "Migration coordination across a live multi-market ecommerce transition.",
-          "Custom SFCC template implementation for the new storefront experience.",
-          "Responsive frontend work to preserve consistency across device types.",
-          "Analytics integration to validate post-launch behaviour and performance.",
-          "A/B testing support so optimisation work could continue on the new platform.",
+          "How do people decide which event to attend when they do not know the lineup?",
+          "Which factors create confidence or hesitation?",
+          "How important are genre, atmosphere, crowd, venue and promoter?",
+          "When do users browse alone and when do they decide with friends?",
+          "How do users assess whether an event feels welcoming, safe and worth the price?",
         ],
       },
+      { type: "heading", text: "Product principles" },
       {
-        type: "heading",
-        text: "Results and impact",
+        type: "list",
+        items: [
+          "Start with experience, not inventory: understand what the user wants to feel or do before showing a large catalogue.",
+          "Explain recommendations: users should understand why an event appears and be able to correct the system.",
+          "Preserve user control: personalisation should assist discovery without hiding alternatives.",
+          "Support social decision-making: sharing and lightweight coordination should not require a public feed.",
+          "Measure confident decisions: time spent browsing is not automatically a positive signal.",
+        ],
+      },
+      { type: "heading", text: "MVP scope" },
+      {
+        type: "list",
+        items: [
+          "Included intent-based entry, event recommendations, recommendation explanations, event detail pages, saved options, shareable event picks, official ticket-source links and basic product analytics.",
+          "Excluded public social feeds, direct messaging, user-generated reviews, full community profiles, in-app ticket marketplace, dynamic ticket pricing, gamification and complex loyalty programmes.",
+        ],
+      },
+      { type: "heading", text: "Experimentation plan" },
+      {
+        type: "list",
+        items: [
+          "Intent-led entry: compare genre-first discovery with mood-and-context entry using relevant event detail opens as the primary metric.",
+          "Recommendation explanations: compare recommendations with and without contextual explanations using engagement, saves and user-reported trust.",
+          "Event comparison: test whether side-by-side evaluation improves progression to an official ticket source.",
+          "Shared event picks: test whether lightweight voting improves group decisions without requiring a messaging product.",
+          "Availability reminders: test user-controlled reminders with opt-out, complaint and notification fatigue as guardrails.",
+        ],
+      },
+      { type: "heading", text: "Product and technical trade-offs" },
+      {
+        type: "list",
+        items: [
+          "Personalisation versus privacy: behavioural and location data can improve relevance, but users need consent, controls and explanations.",
+          "Exploration versus decision speed: showing more events may increase discovery while making it harder to choose.",
+          "Commercial ranking versus user trust: sponsored visibility should be disclosed and should not silently override relevance.",
+          "Social usefulness versus infrastructure: group coordination can create value, but public feeds and messaging add moderation before the core problem is validated.",
+          "Recommendation accuracy versus cold-start friction: more onboarding questions may improve relevance but reduce activation.",
+        ],
+      },
+      { type: "heading", text: "Trust, safety and inclusion" },
+      {
+        type: "paragraph",
+        text: "Music event decisions involve more than genre and price. Users may care about accessibility, venue policies, community focus, safer-space information, age restrictions, facilities, late-night transport and official ticket sources. The product should avoid unverified safety claims and attribute information to organisers where possible.",
+      },
+      { type: "heading", text: "What this exploration demonstrates" },
+      {
+        type: "paragraph",
+        text: "This concept demonstrates how an ambiguous customer intention can become a defined product opportunity, a mobile-native decision journey, a prioritised MVP, product hypotheses, controlled experiments, success metrics and visible technical and commercial trade-offs.",
+      },
+    ],
+  },
+  {
+    slug: "accounting-firm-document-automation",
+    title: "Redesigning document intake for an accounting firm",
+    subtitle:
+      "How we reduced repetitive administration by turning fragmented document handling into a measurable, human-supervised workflow.",
+    productType: "Internal operational platform",
+    role: "Product discovery, workflow design and technical delivery",
+    team: "Accounting stakeholders and delivery team",
+    status: "Workflow redesign and automation delivery",
+    tags: ["Internal Product", "Workflow Discovery", "Human-in-the-loop", "Systems Integration"],
+    industry: "Accounting",
+    location: "Netherlands",
+    clientSize: "8 accountants, 400+ clients",
+    problem:
+      "The accounting team received invoices, receipts and supporting documents through disconnected channels, creating slow and inconsistent work for staff and clients.",
+    solution:
+      "A centralised document intake workflow with classification, client matching, confidence checks, human exception handling and audit logging.",
+    metrics: [
+      { label: "Document handling", value: "Reduced" },
+      { label: "Exception flow", value: "Visible" },
+      { label: "Review model", value: "Human-led" },
+    ],
+    technologies: ["n8n", "Google Drive API", "Zapier", "Document classification"],
+    timeline: "6 weeks",
+    year: "2025",
+    publishedAt: "2026-04-09",
+    modifiedAt: "2026-07-28",
+    cta: {
+      title: "Is document handling slowing down your team?",
+      text: "We help organisations redesign document journeys, automate predictable work and preserve human control where professional judgement matters.",
+      label: "Discuss your workflow",
+    },
+    sections: [
+      { type: "heading", text: "Context" },
+      {
+        type: "paragraph",
+        text: "Employees needed to download, identify, rename, classify and associate each document with the correct client before beginning the accounting work itself. The result was a slow and inconsistent experience for both staff and clients.",
+      },
+      { type: "heading", text: "Discovery" },
+      {
+        type: "list",
+        items: [
+          "Mapped where documents entered the process.",
+          "Separated steps requiring professional judgement from predictable repetitive decisions.",
+          "Identified where incorrect or incomplete documents created delays.",
+          "Clarified how exceptions should be escalated and which system should remain the source of truth.",
+        ],
+      },
+      { type: "heading", text: "Product opportunity" },
+      {
+        type: "paragraph",
+        text: "How might we reduce repetitive document handling while preserving review, traceability and professional control?",
+      },
+      { type: "heading", text: "MVP scope" },
+      {
+        type: "list",
+        items: [
+          "Centralised document intake, document type classification and defined field extraction.",
+          "Matching documents to client records and detecting missing or low-confidence information.",
+          "Human review for exceptions and audit logging of automated and manual actions.",
+          "Advanced analysis and autonomous accounting decisions were excluded from the first release.",
+        ],
+      },
+      { type: "heading", text: "Key product decisions" },
+      {
+        type: "list",
+        items: [
+          "Automate predictable work, not professional judgement.",
+          "Make uncertainty visible instead of silently accepting low-confidence results.",
+          "Treat the exception queue as a primary product experience.",
+          "Preserve the existing accounting system as the source of truth.",
+        ],
+      },
+      { type: "heading", text: "Journey before and after" },
+      {
+        type: "paragraph",
+        text: "Before: client email or upload -> manual download -> manual renaming -> manual classification -> client matching -> missing-information follow-up -> accounting review.",
       },
       {
         type: "paragraph",
-        text: "The migration delivered a working SFCC foundation without forcing the business to pause optimisation work after launch. Customer-facing journeys were preserved through the transition, the new storefront shipped with analytics visibility in place, and experimentation capability was available as part of the operational setup rather than something deferred to a later phase.",
+        text: "After: centralised intake -> automated classification -> field extraction -> client matching -> confidence check -> human exception queue -> accounting review.",
+      },
+      { type: "heading", text: "What I learned" },
+      {
+        type: "paragraph",
+        text: "Operational automation creates value when it improves the complete human workflow, including exceptions, corrections and accountability. Automating only the ideal path would have moved the bottleneck rather than removing it.",
+      },
+    ],
+  },
+  {
+    slug: "dental-clinic-whatsapp-automation",
+    title: "Reducing appointment friction across a multi-location patient journey",
+    subtitle:
+      "How we redesigned appointment reminders, confirmation and recall workflows for a three-location healthcare provider.",
+    productType: "Customer-facing healthcare communication product",
+    role: "Product strategy, discovery, technical leadership and delivery",
+    team: "Client stakeholders, operations staff and engineering",
+    status: "Launched and measured",
+    tags: [
+      "Customer Journey",
+      "Operational Product",
+      "Conversational Automation",
+      "Human Escalation",
+    ],
+    industry: "Dental Clinic",
+    location: "Netherlands",
+    clientSize: "3 locations, 12 staff",
+    problem:
+      "Patients received inconsistent appointment communication while front-desk staff managed confirmations, reminders and recall journeys across fragmented channels.",
+    solution:
+      "A WhatsApp-based reminder and recall workflow connected to appointment records, with clear patient options and human escalation for ambiguous situations.",
+    metrics: [
+      { label: "No-show reduction", value: "35%" },
+      { label: "Hours recovered/week", value: "12" },
+      { label: "Recall bookings", value: "+28%" },
+    ],
+    technologies: ["n8n", "WhatsApp Business API", "Make", "Practice management API"],
+    timeline: "4 weeks",
+    year: "2025",
+    publishedAt: "2026-05-08",
+    modifiedAt: "2026-07-28",
+    disclaimer: "Baseline, measurement period and source should be verified before republication.",
+    sections: [
+      { type: "heading", text: "Context" },
+      {
+        type: "paragraph",
+        text: "The organisation operated three locations with twelve staff members and relied heavily on manual calls, emails and personal WhatsApp messages to manage appointments. Patients had limited options to respond and staff lacked a consistent view of appointment status.",
+      },
+      { type: "heading", text: "Discovery and evidence" },
+      {
+        type: "list",
+        items: [
+          "Appointment no-show rate close to 18%.",
+          "More than 15 staff hours per week spent on reminder calls.",
+          "Inconsistent recall communication for overdue check-ups.",
+          "Limited visibility into whether a patient confirmed, requested help or ignored a reminder.",
+        ],
+      },
+      { type: "heading", text: "Product opportunity" },
+      {
+        type: "paragraph",
+        text: "How might we help patients confirm, reschedule or request assistance without creating another communication channel for the front-desk team to manage?",
+      },
+      { type: "heading", text: "Key product decisions" },
+      {
+        type: "list",
+        items: [
+          "Use WhatsApp because it was already familiar to patients and required no additional application or account.",
+          "Keep humans in ambiguous situations instead of generating unreliable automated responses.",
+          "Start with appointment reminders and overdue recall journeys before expanding scope.",
+          "Connect communication to the practice management platform as the source of truth.",
+        ],
+      },
+      { type: "heading", text: "Journey before and after" },
+      {
+        type: "paragraph",
+        text: "Before: appointment scheduled -> manual call -> voicemail -> email -> manual follow-up -> spreadsheet or system update.",
+      },
+      {
+        type: "paragraph",
+        text: "After: appointment scheduled -> automated reminder -> patient confirms, reschedules or requests support -> record updated or exception routed to staff.",
+      },
+      { type: "heading", text: "What we learned" },
+      {
+        type: "paragraph",
+        text: "The greatest value did not come from automating every patient interaction. It came from separating predictable interactions from situations where human judgement remained necessary.",
       },
     ],
   },

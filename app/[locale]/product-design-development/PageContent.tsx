@@ -39,12 +39,12 @@ const cardReveal = {
 export default function ProductDesignDevelopmentContent({ locale }: { locale: string }) {
   const copy = getLocaleValue(locale, {
     en: {
-      eyebrow: "Product, brand & frontend studio",
-      title: "Digital products with a point of view",
-      accent: "built to become real.",
+      eyebrow: "Product strategy · Discovery · UX · Experimentation · Engineering",
+      title: "From customer problem to production-ready digital product",
+      accent: "with measurable product direction.",
       description:
-        "We shape the product strategy, brand expression, UX/UI system, and production frontend together, so your portal, dashboard, SaaS product, or customer experience feels ownable from the first interaction and solid after launch.",
-      primaryCta: "Shape the product",
+        "We help teams discover, validate and build customer-facing digital products. From early product strategy and user journeys to experimentation, engineering and launch, we turn ambiguous opportunities into measurable customer experiences.",
+      primaryCta: "Explore our product approach",
       secondaryCta: "Explore services",
       labels: {
         process: "Process",
@@ -63,73 +63,77 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         launch: "Build phases",
         recommended: "Recommended",
       },
-      outcomesTitle: "A product experience people can understand, remember, and use.",
+      outcomesTitle: "Product strategy connected to frontend delivery",
       outcomes: [
-        "A clear product promise, mapped to the real decisions users need to make.",
-        "A visual direction that carries your brand into the product without turning the interface into decoration.",
-        "A UX/UI system with screens, states, components, and interaction patterns ready for implementation.",
-        "A frontend foundation that can survive the second release, the third feature, and the next team member.",
+        "CodeHunter Lab helps teams turn product opportunities into usable, production-ready digital experiences.",
+        "Strategy, UX and frontend execution are treated as one connected process, so decisions do not get lost between discovery, interface design and implementation.",
+        "This is especially useful for teams building new products, replacing fragmented internal tools or improving customer-facing journeys where clarity, usability and technical feasibility need to move together.",
+        "Selected outcomes from wider cross-functional product and engineering programmes are described with context in each case study.",
       ],
-      phases: ["Product strategy", "Brand interface", "Frontend build"],
-      layers: ["Brand rules", "User decisions", "Interaction system", "Next.js product"],
-      processTitle: "From idea to product surface",
+      phases: ["Product strategy", "Discovery", "UX", "Experimentation", "Engineering"],
+      layers: ["Customer problem", "Product evidence", "User journey", "Measurable launch"],
+      processTitle: "Our product approach",
       process: [
         {
           number: "01",
-          name: "Product & Brand Framing",
-          desc: "We clarify the business goal, the audience, the brand signal, and the decisions the product needs to support. The result is a focused product brief, not a moodboard with guesses.",
+          name: "Understand",
+          desc: "We begin with the customer, the business objective and the existing evidence. We review user feedback, analytics, workflows and technical constraints to understand where the real opportunity exists.",
           duration: "3-5 days",
         },
         {
           number: "02",
-          name: "UX Direction & Architecture",
-          desc: "We map the core journeys, define the information structure, decide what each screen must prove, and set the technical path before high-fidelity design starts.",
+          name: "Frame",
+          desc: "We translate broad or ambiguous goals into a defined customer problem, target audience, hypotheses and expected outcomes.",
           duration: "1-2 weeks",
         },
         {
           number: "03",
-          name: "Visual Product System",
-          desc: "We turn strategy into high-fidelity screens, states, components, empty states, responsive rules, and interaction details that feel like your brand and behave like a real product.",
+          name: "Prioritise",
+          desc: "We evaluate opportunities based on customer value, business impact, confidence, complexity and technical feasibility. The result is a focused roadmap rather than an unstructured feature list.",
           duration: "2-3 weeks",
         },
         {
           number: "04",
-          name: "Frontend Production",
-          desc: "We build the agreed product surface with the same care as the design: responsive layouts, motion, states, edge cases, accessibility, and maintainable Next.js structure.",
+          name: "Validate",
+          desc: "We test the riskiest assumptions through research, prototypes, technical discovery or controlled experiments before committing to a larger implementation.",
           duration: "3-6 weeks",
         },
         {
           number: "05",
-          name: "Launch & Next Iteration",
-          desc: "We prepare the handoff, launch checklist, implementation notes, and next-build priorities so the product can be owned, extended, and improved after release.",
+          name: "Deliver, measure and iterate",
+          desc: "Product, design and engineering work together through delivery. After launch, we evaluate adoption, engagement, conversion and qualitative feedback to decide whether to improve, expand or stop an initiative.",
           duration: "1 week",
         },
       ],
-      portfolioTitle: "The kind of product work this fits",
+      portfolioTitle: "Selected product work",
       portfolio: [
         {
-          title: "B2B SaaS Operations Dashboard",
-          desc: "A role-based operations dashboard that turned legacy workflows into a cleaner product surface for field teams, managers, and back-office staff.",
-          scope: "Full product redesign + Next.js rebuild",
-          timeline: "4 months",
+          title: "Basic-Fit customer journey transformation",
+          desc: "A high-volume consumer membership journey showing product, UX, experimentation and cross-functional delivery across a major ecommerce migration.",
+          scope: "Consumer Product · Ecommerce",
+          timeline: "Case study",
+          href: "/case-studies/basic-fit-sfcc-migration",
         },
         {
-          title: "Healthcare Patient Portal",
-          desc: "A multilingual patient portal for bookings, medical history, and secure messaging, designed around clarity, trust, and low-friction daily use.",
-          scope: "Product design + frontend + n8n backend",
-          timeline: "6 months",
+          title: "Zero-to-one AI productivity product",
+          desc: "A focused AI product case covering discovery, MVP definition, user control, model trade-offs and production delivery.",
+          scope: "0-to-1 Product · AI/LLMs",
+          timeline: "Case study",
+          href: "/case-studies/ai-productivity-app-accelerator",
         },
         {
-          title: "E-commerce Checkout Redesign",
-          desc: "A mobile-first checkout redesign for a fashion brand, focused on reducing hesitation, making payment steps obvious, and carrying the brand through purchase.",
-          scope: "UX audit + design + implementation",
-          timeline: "8 weeks",
+          title: "Music event discovery concept",
+          desc: "An independent consumer product exploration about helping people choose music events based on mood, atmosphere, social context and practical constraints.",
+          scope: "Consumer Discovery · Music Events",
+          timeline: "Concept",
+          href: "/case-studies/music-event-discovery-concept",
         },
         {
-          title: "Real Estate Agent CRM",
-          desc: "A custom CRM for a Dutch real estate team, combining property workflows, client context, and automated follow-ups in one branded internal product.",
-          scope: "Full product + backend automation",
-          timeline: "5 months",
+          title: "Document intake workflow redesign",
+          desc: "An operational product case showing workflow discovery, human-in-the-loop automation, exception handling and system integration.",
+          scope: "Internal Product · Workflow Discovery",
+          timeline: "Case study",
+          href: "/case-studies/accounting-firm-document-automation",
         },
       ],
       deliverablesTitle: "What leaves the studio",
@@ -138,7 +142,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         "UX flow documentation for the journeys that matter most",
         "Brand-led interface system with core screens, states, and components",
         "Interactive prototype for the highest-risk user paths",
-        "Production-ready Next.js frontend where build is in scope",
+        "Production-ready frontend direction built into product decisions from the start",
         "Launch checklist, handoff notes, and post-launch support window",
       ],
       whyUsTitle: "Why this is not just another design handoff",
@@ -173,12 +177,12 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
           name: "Design + Build",
           price: "From €24,000",
           timeline: "2-4 months",
-          desc: "For teams that need the product shaped, designed, and built as one coherent release instead of split across disconnected vendors.",
+          desc: "For teams that need the product shaped, designed and built as one coherent release, with frontend decisions informing the experience from the first phase.",
           includes: [
             "Everything in Discovery",
             "Full UX/UI system for core surfaces",
             "Interactive prototype for key journeys",
-            "Production Next.js frontend",
+            "Production Next.js frontend connected to the UX system",
             "Responsive states, motion, and edge cases",
             "Launch support and 60-day post-launch window",
           ],
@@ -188,10 +192,10 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
           name: "Ongoing Partnership",
           price: "From €6,500/month",
           timeline: "Ongoing",
-          desc: "For teams that already have momentum and need senior product design plus frontend execution as the roadmap evolves.",
+          desc: "For teams that already have momentum and need product design and frontend execution to evolve together as the roadmap changes.",
           includes: [
             "Weekly product and design sessions",
-            "Frontend implementation capacity",
+            "Frontend implementation connected to roadmap decisions",
             "Continuous UX/UI improvement",
             "Priority async support",
             "Monthly product roadmap planning",
@@ -203,7 +207,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
       audiences: [
         {
           title: "Founders turning an idea into a real product",
-          desc: "You know the business opportunity, but need the product strategy, brand expression, UX, and first frontend to come together with discipline.",
+          desc: "You know the business opportunity, but need product strategy, brand expression, UX and the first production frontend to come together with discipline.",
         },
         {
           title: "Teams replacing messy internal software",
@@ -218,7 +222,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
       scope: [
         "Product framing, positioning, user journeys, and decision flows before visual design starts.",
         "A brand-led UX/UI direction with layouts, states, components, interaction patterns, and responsive behavior.",
-        "Production-ready frontend implementation at the right level of fidelity for the launch stage.",
+        "Production-ready frontend implementation shaped by the product strategy, UX decisions and launch priorities.",
         "Handoff notes, launch priorities, and a next-build roadmap so the product keeps moving after release.",
       ],
       detailTitle: "What gets stronger through the work",
@@ -244,7 +248,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         },
         {
           q: "Is this design only, or design plus build?",
-          a: "Both are possible. The strongest fit is design with implementation judgment, because product decisions stay grounded in what can be built, maintained, and launched.",
+          a: "Both are possible. The strongest fit is product design with frontend judgment from the start, because decisions stay grounded in what can be built, maintained and launched.",
         },
         {
           q: "What do we receive at the end?",
@@ -256,7 +260,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         },
         {
           q: "Can you work with our existing design team?",
-          a: "Yes. We can lead the full product track or support your existing team on strategy, UX direction, interface design, frontend implementation, or launch preparation.",
+          a: "Yes. We can lead the full product track or support your existing team by connecting strategy, UX direction, interface design, frontend implementation and launch preparation.",
         },
       ],
     },
@@ -365,7 +369,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         "Documentación UX de los recorridos más importantes",
         "Sistema de interfaz con pantallas, estados y componentes guiados por marca",
         "Prototipo interactivo para los recorridos con más riesgo",
-        "Frontend Next.js listo para producción cuando la construcción entra en alcance",
+        "Dirección frontend lista para producción integrada en las decisiones de producto desde el inicio",
         "Checklist de lanzamiento, notas de traspaso y soporte post-lanzamiento",
       ],
       whyUsTitle: "Por qué esto no es otro handoff de diseño",
@@ -400,7 +404,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
           name: "Diseño + Construcción",
           price: "Desde €24.000",
           timeline: "2-4 meses",
-          desc: "Para equipos que necesitan dar forma, diseñar y construir el producto como una sola versión coherente, no dividirlo entre proveedores desconectados.",
+          desc: "Para equipos que necesitan dar forma, diseñar y construir el producto como una sola versión coherente, con decisiones frontend presentes desde la primera fase.",
           includes: [
             "Todo lo de Discovery",
             "Sistema UX/UI completo para superficies clave",
@@ -415,10 +419,10 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
           name: "Colaboración Continua",
           price: "Desde €6.500/mes",
           timeline: "Continuo",
-          desc: "Para equipos que ya tienen tracción y necesitan diseño de producto senior más ejecución frontend a medida que evoluciona la hoja de ruta.",
+          desc: "Para equipos que ya tienen tracción y necesitan que diseño de producto y ejecución frontend evolucionen juntos a medida que cambia la hoja de ruta.",
           includes: [
             "Sesiones semanales de producto y diseño",
-            "Capacidad de implementación frontend",
+            "Implementación frontend conectada con decisiones de roadmap",
             "Mejora continua de UX/UI",
             "Soporte asíncrono prioritario",
             "Planificación mensual de hoja de ruta de producto",
@@ -430,7 +434,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
       audiences: [
         {
           title: "Founders convirtiendo una idea en producto real",
-          desc: "Ves la oportunidad de negocio, pero necesitas que estrategia, marca, UX y primer frontend avancen con criterio desde el primer día.",
+          desc: "Ves la oportunidad de negocio, pero necesitas que estrategia, marca, UX y primer frontend de producción avancen con criterio desde el primer día.",
         },
         {
           title: "Equipos reemplazando software interno confuso",
@@ -445,7 +449,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
       scope: [
         "Encuadre de producto, posicionamiento, recorridos de usuario y flujos de decisión antes de diseñar pantallas.",
         "Dirección UX/UI guiada por marca con layouts, estados, componentes, patrones de interacción y responsive.",
-        "Implementación frontend lista para producción en el nivel de fidelidad adecuado para la etapa de lanzamiento.",
+        "Implementación frontend lista para producción, guiada por la estrategia de producto, las decisiones UX y las prioridades de lanzamiento.",
         "Notas de traspaso, prioridades de lanzamiento y hoja de ruta para que el producto siga avanzando después de salir.",
       ],
       detailTitle: "Lo que se vuelve más fuerte durante el trabajo",
@@ -471,7 +475,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         },
         {
           q: "¿Es solo diseño o diseño más desarrollo?",
-          a: "Ambos son posibles. El mejor encaje es diseño con criterio de implementación, porque las decisiones de producto se mantienen conectadas con lo que se puede construir, mantener y lanzar.",
+          a: "Ambos son posibles. El mejor encaje es diseño de producto con criterio frontend desde el inicio, porque las decisiones se mantienen conectadas con lo que se puede construir, mantener y lanzar.",
         },
         {
           q: "¿Qué recibimos al final?",
@@ -483,7 +487,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         },
         {
           q: "¿Podéis trabajar con nuestro equipo de diseño existente?",
-          a: "Sí. Podemos liderar el track completo de producto o apoyar a tu equipo en estrategia, dirección UX, diseño de interfaz, frontend o preparación de lanzamiento.",
+          a: "Sí. Podemos liderar el track completo de producto o apoyar a tu equipo conectando estrategia, dirección UX, diseño de interfaz, frontend y preparación de lanzamiento.",
         },
       ],
     },
@@ -587,7 +591,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         "UX-documentatie voor de belangrijkste gebruikersreizen",
         "Merkgedreven interfacesysteem met schermen, states en componenten",
         "Interactief prototype voor de meest risicovolle gebruikerspaden",
-        "Productieklare Next.js-frontend wanneer build binnen scope valt",
+        "Productieklare frontendrichting die vanaf het begin in productbeslissingen zit",
         "Launchchecklist, overdrachtsnotities en post-launch supportvenster",
       ],
       whyUsTitle: "Waarom dit geen gewone designhandoff is",
@@ -622,7 +626,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
           name: "Design + Build",
           price: "Vanaf €24.000",
           timeline: "2-4 maanden",
-          desc: "Voor teams die het product als één coherente release willen vormen, ontwerpen en bouwen, in plaats van het te verdelen over losstaande partijen.",
+          desc: "Voor teams die het product als één coherente release willen vormen, ontwerpen en bouwen, met frontendbeslissingen vanaf de eerste fase in het productproces.",
           includes: [
             "Alles van Discovery",
             "Volledig UX/UI-systeem voor kernsurfaces",
@@ -637,10 +641,10 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
           name: "Doorlopende Samenwerking",
           price: "Vanaf €6.500/maand",
           timeline: "Doorlopend",
-          desc: "Voor teams die al momentum hebben en senior productdesign plus frontenduitvoering nodig hebben terwijl de roadmap evolueert.",
+          desc: "Voor teams die al momentum hebben en productdesign plus frontenduitvoering samen willen laten evolueren terwijl de roadmap verandert.",
           includes: [
             "Wekelijkse product- en designsessies",
-            "Frontendimplementatiecapaciteit",
+            "Frontendimplementatie verbonden met roadmapbeslissingen",
             "Doorlopende UX/UI-verbetering",
             "Prioritaire asynchrone support",
             "Maandelijkse productroadmap-planning",
@@ -652,7 +656,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
       audiences: [
         {
           title: "Founders die een idee omzetten in een echt product",
-          desc: "Je ziet de businesskans, maar hebt productstrategie, merkexpressie, UX en eerste frontend nodig die vanaf dag één met discipline samenkomen.",
+          desc: "Je ziet de businesskans, maar hebt productstrategie, merkexpressie, UX en de eerste productiefrontend nodig die vanaf dag één met discipline samenkomen.",
         },
         {
           title: "Teams die rommelige interne software vervangen",
@@ -667,7 +671,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
       scope: [
         "Productframing, positionering, user journeys en beslisflows voordat visueel ontwerp start.",
         "Merkgedreven UX/UI-richting met layouts, states, componenten, interactiepatronen en responsive gedrag.",
-        "Productieklare frontendimplementatie op het juiste detailniveau voor de lanceringsfase.",
+        "Productieklare frontendimplementatie, gevormd door productstrategie, UX-beslissingen en launchprioriteiten.",
         "Overdrachtsnotities, launchprioriteiten en een roadmap voor de volgende iteratie na release.",
       ],
       detailTitle: "Wat sterker wordt tijdens het werk",
@@ -693,7 +697,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         },
         {
           q: "Is dit alleen design, of design plus build?",
-          a: "Beide kan. De sterkste fit is design met implementatieoordeel, omdat productkeuzes dan verbonden blijven met wat gebouwd, onderhouden en gelanceerd kan worden.",
+          a: "Beide kan. De sterkste fit is productdesign met frontend-oordeel vanaf het begin, omdat beslissingen verbonden blijven met wat gebouwd, onderhouden en gelanceerd kan worden.",
         },
         {
           q: "Wat ontvangen we aan het einde?",
@@ -705,7 +709,7 @@ export default function ProductDesignDevelopmentContent({ locale }: { locale: st
         },
         {
           q: "Kunnen jullie met ons bestaande designteam werken?",
-          a: "Ja. We kunnen het volledige producttraject leiden of je team ondersteunen bij strategie, UX-richting, interface design, frontendimplementatie of launchvoorbereiding.",
+          a: "Ja. We kunnen het volledige producttraject leiden of je team ondersteunen door strategie, UX-richting, interface design, frontendimplementatie en launchvoorbereiding te verbinden.",
         },
       ],
     },
@@ -873,7 +877,7 @@ function PortfolioSection({
 }: {
   label: string;
   title: string;
-  items: Array<{ title: string; desc: string; scope: string; timeline: string }>;
+  items: Array<{ title: string; desc: string; scope: string; timeline: string; href?: string }>;
 }) {
   return (
     <AnimatedSection className="px-6 py-24 lg:px-8">
@@ -897,7 +901,19 @@ function PortfolioSection({
               className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-near-black p-8 transition-colors duration-300 hover:border-hunter-orange/40"
             >
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(0,230,162,0.12),transparent_32%),radial-gradient(circle_at_85%_80%,rgba(255,122,60,0.12),transparent_35%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <h3 className="relative z-10 text-xl font-black text-white">{item.title}</h3>
+              <h3 className="relative z-10 text-xl font-black text-white">
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    locale="en"
+                    className="transition-colors hover:text-hunter-orange"
+                  >
+                    {item.title}
+                  </Link>
+                ) : (
+                  item.title
+                )}
+              </h3>
               <p className="relative z-10 mt-3 text-sm leading-relaxed text-gray-400">
                 {item.desc}
               </p>
@@ -909,6 +925,15 @@ function PortfolioSection({
                   {item.timeline}
                 </span>
               </div>
+              {item.href ? (
+                <Link
+                  href={item.href}
+                  locale="en"
+                  className="relative z-10 mt-6 inline-flex text-xs font-black uppercase tracking-widest text-hunter-orange transition-colors hover:text-white"
+                >
+                  Read product case
+                </Link>
+              ) : null}
             </m.article>
           ))}
         </div>
